@@ -30,7 +30,7 @@ An **element** is an HTML component _eg. paragraph, heading, table, list etc_
 
 **Tags**, mark the opening and closing of an element.  They contain elements that indicate their purpose
 
-<tagname> some content </tagname>
+`<tagname> some content </tagname>`
 
 Example
 ```html
@@ -78,7 +78,7 @@ The **body** contains what is visible to the user.
 
 Let’s start by defining the basic structure of our website.
 
-``
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -88,7 +88,7 @@ Let’s start by defining the basic structure of our website.
 
   </body>
 </html>
-``
+```
 
 ## Element: Heading
 
@@ -147,7 +147,7 @@ To achieve that we must use the `<br/>` tag.
 
 ## Formatting text
 
-We can also **emphasise** or make text *important*
+We can also **emphasise** or make text *important*.
 For emphasis we use `<strong>` and for importance `<em>`
 
 Let's emphasise some of the content of our paragraph
