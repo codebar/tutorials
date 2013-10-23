@@ -1,3 +1,7 @@
+---
+title: Document Center
+---
+
 # HTML - Lesson 1
 
 ### What is HTML?
