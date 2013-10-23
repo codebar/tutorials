@@ -275,7 +275,7 @@ Add that underneath the ordered list we defined previously.
 Add a small rhyme to your page, wrapped with quotes using ASCII code.
 
 ```html
-</div>
+<div>
   <p>
     <strong>
       <em>
