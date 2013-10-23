@@ -135,7 +135,7 @@ Add the following to your page, after the title
 </p>
 ```
 
-### Line break <br/>
+### Line break `<br/>`
 As you've noticed, despite the new lines there are no line breaks in our paragraph.
 To achieve that we must use the `<br/>` tag.
 
