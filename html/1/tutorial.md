@@ -18,11 +18,11 @@ CSS: presentation
 _The styling of a website, is not part of the HTML_
 
 
-## Today we’ll be focusing on fundamental HTML concepts
+### Today we’ll be focusing on fundamental HTML concepts
 
 _We will be building this [example page](http://codebar.github.io/tutorial/html/1/tutorial/example.html "I love owls")_
 
-## But before we start...
+#### But before we start...
 
 ### HTML element anatomy
 
@@ -32,7 +32,6 @@ An **element** is an HTML component _eg. paragraph, heading, table, list etc_
 
 `<tagname> some content </tagname>`
 
-Example
 ```html
    <p>I am a paragraph</p>
    <h1>I am a heading</h1>
@@ -74,7 +73,7 @@ The **head** is where information like the page title, stylesheets, scripts and 
 The **body** contains what is visible to the user.
 
 
-# Let's get started!
+## Let's get started!
 
 Let’s start by defining the basic structure of our website.
 
@@ -90,7 +89,7 @@ Let’s start by defining the basic structure of our website.
 </html>
 ```
 
-## Element: Heading
+### Element: Heading
 
 Headings come in a number of sizes
 
@@ -111,13 +110,13 @@ Add a heading to your page
 
 > Don't forget to save your changes before refreshing the browser!
 
-## Nesting elements
+### Nesting elements
 
 Elements can be nested inside each other. For example, by putting the `<h1>` inside the body tags you are nesting a heading inside the `<body>` of a page.
 
 > You must always close any element that you open. The first element you open, you close last!
 
-## Element: Paragraph <p>
+### Element: Paragraph <p>
 
 Putting content into a `<p>` will make it look like a paragraph structure. This helps make the content of a page easier to read.
 
@@ -132,7 +131,7 @@ Add the following to your page, after the title
   </p>
 ```
 
-## Line break <br/>
+### Line break <br/>
 As you've noticed, despite the new lines there are no line breaks in our paragraph.
 To achieve that we must use the `<br/>` tag.
 
@@ -145,7 +144,7 @@ To achieve that we must use the `<br/>` tag.
   </p>
 ```
 
-## Formatting text
+### Formatting text
 
 We can also **emphasise** or make text *important*.
 For emphasis we use `<strong>` and for importance `<em>`
@@ -161,7 +160,7 @@ Let's emphasise some of the content of our paragraph
   </p>
 ```
 
-## Element: Link `<a>`
+### Element: Link `<a>`
 
 The most important attribute of a link is **href**, which indicates the path or url that is accessed through it.
 
@@ -172,7 +171,7 @@ Let's add a link to the bottom of our paragraph
   <a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
 ```
 
-## Element: Div `<div>`
+### Element: Div `<div>`
 
 Div stands for _division_. It creates sections in an HTML document.
 We can use a div to contain out paragraph.
@@ -193,7 +192,7 @@ Wrap your paragraph in a div and add a heading to it
 </div>
 ```
 
-## Element: List `<li>`
+### Element: List `<li>`
 
 There are two types of lists, **ordered** and **unordered**.
 An unordered list `<ul>` is defined with bullets whilst an ordered list `<ol>` uses a sequence.
@@ -210,7 +209,7 @@ Let's list the reasons we like owls so much under the main heading of the page (
   </ol>
 ```
 
-## Element: Image `<img>`
+### Element: Image `<img>`
 
 So far we've learned a lot about how to add text to our page. But how about some media?
 
@@ -244,7 +243,7 @@ Do this underneath  `<h2>Why do I like owls so much?</h2>`
 
 So a list can not only contain text, but other elements as well.
 
-## Adding a link on multiple elements
+### Adding a link on multiple elements
 
 Links can contain not just text, but images or even a number of elements within.
 
@@ -265,7 +264,7 @@ Add that underneath the ordered list we defined previously.
 
 > Click any of the images. Can you get to the link's page?
 
-## ASCII and more formatting
+### ASCII and more formatting
 
 **ASCII** code is a way to represent text in ways that all computers can understand.
 [Here](http://htmlandcssbook.com/extras/html-escape-codes/) is a list with codes, their representation and HTML number.
@@ -289,7 +288,7 @@ Add a small rhyme to your page, wrapped with quotes using ASCII code.
 
 > Have you noticed how the character `&#34;A` renders on the page?
 
-## mailto links `<a>`
+### mailto links `<a>`
 
 Links can also be used to open up a user's email client and share content.
 The difference between links and mailto links, is the content defined in the **href** attribute.
