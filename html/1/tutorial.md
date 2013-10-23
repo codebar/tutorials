@@ -157,8 +157,8 @@ Let's emphasise some of the content of our paragraph
 
 ```html
 <p>
-  Most birds of prey sport eyes on the sides of their heads,</br>
-  but the stereoscopic nature of</br>
+  Most birds of prey sport eyes on the sides of their heads,<br/>
+  but the stereoscopic nature of<br/>
   the owl's forward-facing <strong>eyes permits the greater<br/>
   sense of depth perception</strong> necessary for low-light hunting.
 </p>
@@ -186,8 +186,8 @@ Wrap your paragraph in a div and add a heading to it
 <div>
   <h3>Owls</h3>
   <p>
-    Most birds of prey sport eyes on the sides of their heads,</br>
-    but the stereoscopic nature of</br>
+    Most birds of prey sport eyes on the sides of their heads,<br/>
+    but the stereoscopic nature of<br/>
     the owl's forward-facing <strong>eyes permits the greater<br/>
     sense of depth perception</strong> necessary for low-light hunting.
     <br/>
