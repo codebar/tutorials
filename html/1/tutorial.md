@@ -290,7 +290,7 @@ Add a small rhyme to your page, wrapped with quotes using ASCII code.
 
 **small** is another html formatting element you can use.
 
-> Have you noticed how the character `&#34;A` renders on the page?
+> Have you noticed how the character `&#34;` renders on the page?
 
 ### mailto links `<a>`
 
