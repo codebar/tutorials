@@ -32,7 +32,7 @@ You can change the color, position, dimensions and presentation of different ele
 
 ### Anatomy of a CSS element
 
-```html
+```css
 body {
   color: hotpink;
 }
@@ -44,7 +44,7 @@ body {
 
 **hotpink** value
 
-```html
+```css
 selector {
   property: value;
 }
@@ -52,7 +52,7 @@ selector {
 
 A group of properties for the given selector can be defined within the curly braces
 
-```html
+```css
 body {
   color: hotpink;
   font-size: 12px;
@@ -82,7 +82,7 @@ Include the styling described below, within the style tag we defined.
 
 Let's set the font that we want our page to use
 
-```html
+```css
 body {
    font-family: Helvetica, Arial, sans-serif;
 }
@@ -92,7 +92,7 @@ As we have selected the **body** element, this change will apply to everything n
 
 Let's also remove the bullet from the lists that we have defined
 
-```html
+```css
 ul {
    list-style: none;
 }
@@ -100,7 +100,7 @@ ul {
 
 and change the appearance of the links on our page
 
-```html
+```css
 a {
    color: #a369d5;
    text-decoration: none;
@@ -126,7 +126,7 @@ A useful resource for figuring out color codes is [http://0to255.com](http://0to
 
 A class selector selects all elements that use the specified class.
 
-```html
+```css
 .pictures {
    margin: 10px auto;
    width: 900px;
@@ -135,7 +135,7 @@ A class selector selects all elements that use the specified class.
 
 **margin** is the area surrounding an element. The above definition is a _shorthand_ version of
 
-```html
+```css
 margin-top: 10px;
 margin-bottom: 10px;
 margin-right: auto;
@@ -151,7 +151,7 @@ _margin: (top bottom) (left right)_
 
 Selects the element with the id logo.
 
-```html
+```css
 #logo {
    margin: 0 auto 30px 30px;
    width: 200px;
@@ -164,7 +164,7 @@ Selects the element with the id logo.
 
 Selects all list elements that are nested within a **class** pictures
 
-```html
+```css
 .pictures li {
    display: inline;
    margin: 3px;
@@ -212,7 +212,7 @@ Stylesheets _cascade_ to all elements until they are changed.
 
 First let's reset the margin and border of all of the images.
 
-```html
+```css
 img {
   margin: 0;
   border: 0;
@@ -221,7 +221,7 @@ img {
 
 We can change the the styling of some of these images by defining a more specific selector, which will superseed the `img` selector we just defined
 
-```html
+```css
 .bigimg img {
   margin: 15px 2px;
   width: 439px;
@@ -240,7 +240,7 @@ So far we have explained some selectors and presented others with more self expl
 
 Let's extend the body selector so that our page looks a bit less cramped
 
-```html
+```css
 body {
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.3;
@@ -251,7 +251,7 @@ body {
 
 In the HTML page you will notice a div element with the id **main**. Let's use this selector to center that container
 
-```html
+```css
 #main {
   width: 900px;
   margin: 0 auto 40px;
@@ -262,7 +262,7 @@ To achieve centering of a container, we must define its width. If you remove the
 
 We have also used another type of _shorthand_ to define the margin. The long version looks like this
 
-```html
+```css
 margin-top: 0;
 margin-bottom: 40px;
 margin-right: auto;
@@ -278,7 +278,7 @@ margin-left: auto;
 
 ### Floating elements
 
-```html
+```css
 .right-box {
   float: right;
 }
@@ -288,7 +288,7 @@ margin-left: auto;
 
 Sometimes to make the design of our page look nicer, we might add empty elements, similar to `<div id="top-line"></div>`
 
-```html
+```css
 #top-line {
   width: 100%;
   height: 5px;
@@ -300,7 +300,7 @@ Sometimes to make the design of our page look nicer, we might add empty elements
 
 Let's also style the bottom of our page in a similar way
 
-```html
+```css
 #bottom-line {
   width: 100%;
   height: 5px;
@@ -313,7 +313,7 @@ Let's also style the bottom of our page in a similar way
 
 When we want to ensure that an element's apeararance changes consistently through our pages, it's better to use element selectors to make sure that we don't need to redefine the style and that it is applied to all elements of that type.
 
-```html
+```css
 h1 {
   font-size: 39px;
   color: #2d183d;
@@ -366,7 +366,7 @@ ol li {
 
 ### A bit more styling
 
-```html
+```css
 #the-quote{
   border-bottom: 1px solid #f6f4f8;
   border-top: 1px solid #f6f4f8;
@@ -392,7 +392,7 @@ ol li {
 
 ### More cascading selectors
 
-```html
+```css
 .pictures li img {
   border: 2px solid #b9b1bf;
 }
@@ -406,7 +406,7 @@ ol li {
 
 ### Some extra touches
 
-```html
+```css
 .bigimg{
   display: inline;
 }
@@ -420,7 +420,7 @@ A psedo class is a keyword added to a selector that specifies a special state of
 
 Let's add the code below to make sure we only apply a margin to the _first li element_ within the pictures class.
 
-```html
+```css
 .pictures li:first-child {
   margin-left: 5px;
 }
@@ -435,7 +435,7 @@ To try and avoid browser inconsistencies - _you've propably seen pages look quit
 
 Let's apply this to the elements used within our page
 
-```html
+```css
 html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
   margin: 0;
   padding: 0;
