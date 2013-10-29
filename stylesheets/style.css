@@ -1,0 +1,14 @@
+.entry-title {
+  color: #652f93;
+  font-size: 2.5em;
+}
+
+footer {
+  text-align: center;
+}
+
+#main {
+  width: 80%;
+  min-width: 680px;
+  margin: 0 auto;
+}

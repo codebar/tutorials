@@ -1,0 +1,5 @@
+safe: true
+lsi: false
+pygments: true
+future: true
+markdown: redcarpet
