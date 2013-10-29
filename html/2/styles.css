@@ -12,12 +12,12 @@ ul {
 }
 /* now start with styling your own way */
 
-body{
+body {
 	font-family: Helvetica, Arial, sans-serif;
 	line-height: 1.3;
 }
 
-#top-line{
+#top-line {
 	width: 100%;
 	height: 5px;
 	background-color: #2d183d;
@@ -25,25 +25,25 @@ body{
 	margin-bottom: 10px;
 }
 
-#bottom-line{
+#bottom-line {
 	width: 100%;
 	height: 5px;
 	background-color: #2d183d;
 	border-top: 3px solid #eedffb;
 }
 
-#logo{
+#logo {
 	margin: 0 auto 30px;
 	width: 200px;
 }
 
-#main{
+#main {
 	width:900px;
 	margin: 0 auto 40px;
 	padding: 0;
 }
 
-h1{
+h1 {
 	font-size: 39px;
 	color: #2d183d;
 	text-align: center;
@@ -52,7 +52,7 @@ h1{
 	padding: 20px 0;
 }
 
-h2{
+h2 {
 	font-size: 28px;
 	margin: 15px 0;
 	color: #663095;
@@ -61,98 +61,94 @@ h2{
 	text-align: center;
 }
 
-h3{
+h3 {
 	font-size: 21px;
 	margin-bottom: 10px;
 }
 
-.pictures li{
+.pictures li {
 	display: inline;
 	margin: 3px;
 }
 
 .pictures li:first-child {
-  margin-left: 5px;
+	margin-left: 5px;
 }
 
-.pictures li img{
+.pictures li img {
 	border: 2px solid #b9b1bf;
 }
 
-.pictures{
+.pictures {
 	margin: 10px auto;
-    width: 900px;
+	width: 900px;
 }
-
 
 ol{
 	margin: 14px 0;
 }
 
-ol li{
+ol li {
 	background-color: #F6F4F8;
-    color: #663095;
-    font-size: 16px;
-    font-weight: 400;
-    margin: 10px 30px 10px 40px;
-    padding: 6px 20px;
-    border-radius: 9px;
+	color: #663095;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 10px 30px 10px 40px;
+	padding: 6px 20px;
+	border-radius: 9px;
 }
 
-.bigimg{
+.bigimg {
 	display: inline;
 }
 
-.bigimg img{
+.bigimg img {
 	margin: 15px 2px;
-    width: 439px;
-    border: 2px solid #b9b1bf;
+	width: 439px;
+	border: 2px solid #b9b1bf;
 }
 
-a{
+a {
 	color: #a369d5;
 	text-decoration: none;
 	border-bottom: 1px dotted #a369d5;
 }
 
-h4{
-    color: #6D6A6A;
-    font-size: 19px;
-    padding: 27px 25px 15px;
-}
-
-#the-quote{
-	border-bottom: 1px solid #f6f4f8;
-    border-top: 1px solid #f6f4f8;
-    margin: 40px auto;
-    width: 90%;
-}
-
-small{
+h4 {
 	color: #6D6A6A;
-    display: block;
-    font-size: 15px;
-    margin: 0 30px 10px;
-    text-align: right;
+	font-size: 19px;
+	padding: 27px 25px 15px;
 }
 
-.right-box{
+#the-quote {
+	border-bottom: 1px solid #f6f4f8;
+	border-top: 1px solid #f6f4f8;
+	margin: 40px auto;
+	width: 90%;
+}
+
+small {
+	color: #6D6A6A;
+	display: block;
+	font-size: 15px;
+	margin: 0 30px 10px;
+	text-align: right;
+}
+
+.right-box {
 	float: right;
 }
 
-#links{
+#links {
 	margin: 10px 15px 0 0;
 }
 
 #links li {
 	margin: 0 7px;
 	font-size: 18px;
+	display: inline;
 }
 
-#text-block{
+#text-block {
 	height: 370px;
-}
-
-#links li{
-	display: inline;	
 }
