@@ -3,14 +3,12 @@ layout: page
 title: HTML Lesson 1
 ---
 
-# HTML - Lesson 1
-
-### What is HTML?
+## What is HTML?
 
 HTML is the code that allows us to build websites
 
 
-### What it stands for
+### What does it stand for?
 
 **H**yper **T**ext **M**arkup **L**anguage
 
@@ -18,16 +16,17 @@ HTML is the code that allows us to build websites
 ### What makes a website
 
 HTML: structure of a website
+
 CSS: presentation
 
 _The styling of a website, is not part of the HTML_
 
 
-### Today we’ll be focusing on fundamental HTML concepts
+### Today we will be focusing on fundamental HTML concepts
 
-_We will be building this [example page](http://codebar.github.io/tutorials/html/1/example.html "I love owls")_
+We will be building this [example page](http://codebar.github.io/tutorials/html/1/example.html "I love owls")
 
-#### But before we start...
+## But before we start...
 
 ### HTML element anatomy
 
@@ -79,7 +78,7 @@ The **body** contains what is visible to the user.
 
 ## Let's get started!
 
-Let’s start by defining the basic structure of our website.
+Let's start by defining the basic structure of our website.
 
 ```html
 <!DOCTYPE html>
@@ -323,4 +322,6 @@ Add a share on twitter link along with your other sharing links.
 <a href="http://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on twitter</a>
 ```
 
-the end
+---
+
+This ends our first lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
