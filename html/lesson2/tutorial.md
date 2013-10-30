@@ -429,9 +429,9 @@ Let's add the code below to make sure we only apply a margin to the _first li el
 > What happens when you remove _:first-child_ from your selector?
 
 
-### Bonus - Reseting styles
+### Bonus - Resetting styles
 
-To try and avoid browser inconsistencies - _you've propably seen pages look quite different when loading them on different browsers already_ - a common technique used is **CSS reseting**
+To try and avoid browser inconsistencies - _you've propably seen pages look quite different when loading them on different browsers already_ - a common technique used is **CSS resetting**
 
 Let's apply this to the elements used within our page
 
