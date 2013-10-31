@@ -319,7 +319,7 @@ The difference between links and mailto links, is the content defined in the **h
 Add a share on twitter link along with your other sharing links.
 
 ```html
-<a href="http://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on twitter</a>
+<a href="http://twitter.com/home?status=I love owls! via @by_codebar">Share your love of owls on twitter</a>
 ```
 
 ---
