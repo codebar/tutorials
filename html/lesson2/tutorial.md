@@ -153,7 +153,7 @@ Selects the element with the id logo.
 
 ```css
 #logo {
-   margin: 0 auto 30px 30px;
+   margin: 0 auto 30px;
    width: 200px;
 }
 ```
