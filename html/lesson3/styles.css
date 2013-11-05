@@ -110,5 +110,21 @@ a:hover {
 }
 
 .highlight {
-  color: highlight;
+  color: #4C4066;
+}
+
+.poem span {
+  font-style: italic;
+  color: #4C4066;
+}
+
+.quote {
+  border: 1px solid #E7E6E6;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #FDFDFC;
+}
+
+.center {
+  text-align: center;
 }
