@@ -108,3 +108,7 @@ a {
 a:hover {
   color: #a26cd2
 }
+
+.highlight {
+  color: highlight;
+}
