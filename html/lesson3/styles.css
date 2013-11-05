@@ -106,12 +106,15 @@ a {
   color: #b0afc0;
 }
 
+.main a{
+  color: #7a3cb7;
+}
 a:hover {
   color: #a26cd2
 }
 
 .highlight {
-  color: #4C4066;
+  color: #4c61a9;
 }
 
 .poem span {
@@ -121,15 +124,15 @@ a:hover {
 
 .quote {
   border: 1px solid #E7E6E6;
-padding: 20px 27px;
-border-radius: 6px;
-background-color: #FDFDFC;
-    color: #4C4066;
-    margin-top: 40px;
-    margin-bottom: 40px;
+  padding: 20px 27px;
+  border-radius: 6px;
+  background-color: #FDFDFC;
+  color: #4C4066;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .center {
   text-align: center;
-  margin: 90px auto 70px;
+  margin: 90px 0 70px;
 }
