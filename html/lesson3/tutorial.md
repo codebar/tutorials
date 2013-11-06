@@ -481,7 +481,7 @@ A poem about Ada
 
 ```html
 <p>
- Charles Babbage wrote the following poem of me
+ Charles Babbage wrote the following poem about me
  <br/>
  <span>
    Forget this world and all its troubles and if<br/>
