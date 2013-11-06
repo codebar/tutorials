@@ -397,7 +397,7 @@ Here, we will define the text we want to display about **Ada Lovelace**, using p
 ```html
 <p>My name is August Ada King. I'm the Countess of Lovelace.</p>
 
-<p>I am a mathematician and a writer. People know me from my work on Charle's Babbage's early mechanical general-purpose computer, the Analytical engine. I wrote the first algorithm intended to be processed by a machine. In other words, I am the world's first programmer.</p>
+<p>I am a mathematician and a writer. People know me from my work on Charles Babbage's early mechanical general-purpose computer, the Analytical engine. I wrote the first algorithm intended to be processed by a machine. In other words, I am the world's first programmer.</p>
 
 <p>My mother, Anne Isabella Byron, was a great help to me as she helped me by promoting my interest in mathematics and logic, but I also never forgot about my dad, who moved to Greece when I was just an infant to help out in the civil war.</p>
 ```
