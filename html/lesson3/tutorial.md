@@ -354,7 +354,7 @@ We only want to change the border color when hovering over the link. To avoid re
 
 ## Almost there..
 
-The sidebar i now almost perfect. Tweak a couple of other properties so that the list description is aligned with the other elements and emphasized
+The sidebar is now almost perfect. Tweak a couple of other properties so that the list description is aligned with the other elements and emphasized
 
 ```css
 .sidebar b {
