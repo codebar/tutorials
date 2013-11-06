@@ -58,11 +58,11 @@ We will separate our page in three different areas. The **header**, where our he
 
 > Did you remember to insert these tags within the <body> of your page?
 
-> Inspect your page. Can you see the title and the elements we just added?
+> Inspect the page. Can you see the title and the elements we just added?
 
 ## Inline vs block elements
 
-In css there are two types of ways to display elements: _block_, and _inline_
+In CSS there are two types of ways to display elements: _block_, and _inline_
 
 ### block elements
 
@@ -80,16 +80,16 @@ Elements that appear on the same line
 
 Some inline elements are `<img>, <a>, <em>, <strong>`
 
-#### To tweak elements and turn them from block, to inline, or the other way around you can use the `display` css property with `inline` or `block`
+#### To tweak elements and turn them from block, to inline, or the other way around you can use the `display` CSS property with `inline` or `block`
 
 
 ## Setting up the `<header>` content
 
 ### Structure
 
-We will develop our page from the top down. You can always come back and tweak things later if you want to.
+We will develop the page from the top down. You can always come back and tweak things later if you want to.
 
-Start by adding an image wrapped in a `<div>` element
+Add an image wrapped in a `<div>` element
 
 ```html
 <div>
@@ -97,7 +97,7 @@ Start by adding an image wrapped in a `<div>` element
 </div>
 ```
 
-Let's move on to add a title, underneath the `<div>` wrapping the image, within the `<header>` element
+Add the heading `<h2>`, underneath the `<div>` wrapping the image, within the `<header>` element
 
 ```html
 <div>
@@ -105,13 +105,13 @@ Let's move on to add a title, underneath the `<div>` wrapping the image, within 
 </div>
 ```
 
-> Load your page. Have a look at how the elements are rendered.
+> Load the page. Have a look at how the elements are rendered using the inspector
 
 ### Presentation
 
 Let's use what we just learned and make the image an inline element.
 
-But first, to be able to manipulate the `<div>` surrounding the image, we need to be able to access it from out stylesheet. Set a class names `my-picture` on that element.
+Before you can manipulate the `<div>` surrounding the image, you must be able to access it from the stylesheet. Set a class names `my-picture` on that element.
 
 ```html
 <div class="my-picture">
@@ -127,7 +127,7 @@ Add the relevant style in your `style.css`
 }
 ```
 
-> Have a look at your page. You can see through the inspector that the image is now set to inline
+> Have a look at the page. Inspect the image, and have a look at its CSS properties
 
 ####Making this work
 
@@ -138,7 +138,7 @@ Make the `div` element surrounding the heading inline. Start by adding a class `
  <h1> Hi, I'm Ada Lovelace</h1>
 </div>
 ```
-and then the relevant csss
+and then the relevant CSS
 
 ```css
 .title {
@@ -146,16 +146,17 @@ and then the relevant csss
 }
 ```
 
-`inline-block` is another display attribute. The reason we need to use this, insted of `inline` to make this work is because the `div` with the class `title` contains a block element, `<h1>`, that takes over and expands across the end of the line.
+`inline-block` is another display attribute. You must user this, insted of `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h1>`, that takes over and expands across the end of the line.
 
-> Switch `inline-block` to `inline` and have a look with firebug
+> Using firebug, change `inline-block` to `inline` and notice how they render
 
-Let's adjust the alignment of the `.title` as well
+Adjust the alignment of the `.title`
+
 ```css
 vertical-align: top;
 ```
 
-and make our picture a bit smaller
+and make the picture a bit smaller
 
 ```css
 .my-picture img {
@@ -167,15 +168,15 @@ and make our picture a bit smaller
 
 ### What is the box model?
 
-An element, can be considered as a box. The box model tells browsers how the element and its attribtues relate to each other.
+An element, can be visualised as a box. The box model tells browsers how the element and its attribtues relate to each other.
 
 Characteristics that define the box model are `padding`, `margin`, `border`, `height` and `width`.
 
-**<span style="color: LightSkyBlue;">blue</span>**, is where `height` and `width` are defined. You don't always need to set this properties, as they will by default be set as the relevant sizing dimensions of the inner content.
+**<span style="color: LightSkyBlue;">blue</span>** is where `height` and `width` are defined. These properties don't always need to be set, as they will by default be set using relevant sizing dimensions of the inner content.
 
-**<span style="color: mediumpurple;">purple</span>** is the `padding`; the space between the content and the `border`. The padding also adds to the total width of the box, so if you set `padding: 10px;` and `width: 20px;` your element will be 30px long.
+**<span style="color: mediumpurple;">purple</span>** show the `padding`, the space between the content and the `border`. The padding also adds to the total width of the box, so if you set `padding: 10px;` and `width: 20px;` your element will be **30px** long.
 
-**black** is the `border` - `border` is the edge around the box. It's _thickness_, _style_ and _color_ can be defined.
+**black** is the `border` , the edge around the box. Its _thickness_, _style_ and _color_ can be defined.
 
 **<span style="color: gold;'">yellow</span>** is the `margin`, the transparent area around the box, separating it from other elements.
 
@@ -186,7 +187,7 @@ _only the bottom margin is visible in our example. `padding`, `margin` and `bord
 
 ### Styling the header
 
-Our page is gradually starting to come together. Let's make the header a bit more distinct by setting a background color and aligning its contents in the center of the page.
+The page is gradually starting to come together. Make `<header>` a bit more distinct by setting a background color and aligning its contents in its center.
 
 ```css
 header {
@@ -197,7 +198,7 @@ header {
 
 ### Applying box properties to header
 
-Expand the styling of the header so that it's viewably separated with a border and tweak the height and padding
+Expand the styling of the header so that it has a border and tweak the height and padding
 
 ```css
   border-bottom: 1px solid #e7e6e6;
@@ -214,9 +215,9 @@ _border: `thickness` `style` `color`;_
 
 ## Setting up the sidebar
 
-Along with `width` and `height` we can also set `min-width`, `max-width`, `min-height` and `max-height`. These properties tend to be used to ensure that when the page is resized, it won't allow for it to be smaller or bigger than the specified property.
+Along with `width` and `height`, `min-width`, `max-width`, `min-height` and `max-height` can be set. These properties tend to be used to ensure that when the page is resized, the browser won't allow for it to be smaller or bigger than the specified property value.
 
-Let's add some content to our page. Add the following content inside  the `div` in out html file
+Let's add some content! Add the following  inside  the `div` in the html file
 
 ```html
 <div>
@@ -230,7 +231,7 @@ Let's add some content to our page. Add the following content inside  the `div` 
 
 ### Styling
 
-Add a class to the div we just added to the page, so we can change its styling without impacting other elements.
+Add a class `sidebar` to the div we just defined, so we can change its styling without impacting other elements.
 
 ```html
 <div class="sidebar">
@@ -238,7 +239,7 @@ Add a class to the div we just added to the page, so we can change its styling w
   ...
 ```
 
-Start by adding a background color so we can clearly see the container
+Begin by adding a background color so we can clearly see the container
 
 ```css
 .sidebar {
@@ -246,7 +247,7 @@ Start by adding a background color so we can clearly see the container
 }
 ```
 
-We want the sidebar to not take over the entire width of the page
+Restrict the width of the sidebar
 
 ```css
 width: 30%;
@@ -254,7 +255,7 @@ min-width: 300px;
 max-width: 320px;
 ```
 
-Also, let's make it an inline-block and set some of its box properties
+Make it an inline-block and set some of its box properties
 
 ```css
 display: inline-block;
@@ -267,15 +268,15 @@ margin-left: 20px;
 ###padding and margin
 Padding and margin, can be set in a number of different ways
 
-`padding: top right bottom left;`
+`padding: top right bottom left;` e.g. _padding: 10px 20px 30px 5px;_
 
-`padding: top right/left bottom;`
+`padding: top right/left bottom;` e.g. _padding: 10px 20px 5px;_
 
-`padding: top/bottom right/left;`
+`padding: top/bottom right/left;` e.g. _padding: 5px 15px;_
 
-`padding: all;`
+`padding: all;` e.g. _padding: 20px_
 
-Alternatively, we can only set the side we want `padding-right: 20px`
+Alternatively, you can only set the side you want `padding-right: 20px`
 
 _this also applies to the margin_
 
@@ -287,6 +288,7 @@ Specify a class `.social-media` in the `ul` element
 <ul class="social-media">
   <li><a href="https://www.facebook.com/augusta.ada.lovelace">facebook</a> </li>
 ```
+
 Remove the list bullets and change the default margin and padding of the **u**nordered **l**ist
 
 ```css
@@ -297,7 +299,7 @@ ul.social-media {
 }
 ```
 
-Add a bottom border, to give the effect of a line to the individual list items and tweak its dimensions
+Add a bottom border, to give the effect of a line, to the individual list items and tweak its dimensions
 
 ```
 .social-media li {
@@ -307,12 +309,12 @@ Add a bottom border, to give the effect of a line to the individual list items a
 }
 ```
 
-> Tweak the properties and refresh the page.
+> Tweak the properties using the inspector
 > What happens when you remove the width or increase the padding?
 
 ## Pseudo classes
 
-A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes we can specidy different styling for different states of a link
+A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes, we can specidy different styling for different states of a link
 
 ```css
 a:link
@@ -321,12 +323,12 @@ a:hover
 a:active
 ```
 
-Order is **very** important. Always use the order descibed above if you want to style differently for all of the aboce states.
+Order is **very** important. Always use the order descibed above if you want to apply differente styling for all of the states described above.
 The most commonly used pseudo class for links, that we will also be using today it `a:hover`
 
 ## Styling links
 
-We only want links who are within out list to be affected, so we will specifically style `li a`
+We only want links who are within the list to be affected, so we will specifically style `.social-media li a`
 
 ```css
 .social-media li a {
@@ -352,7 +354,7 @@ We only want to change the border color when hovering over the link. To avoid re
 
 ## Almost there..
 
-Our sidebar now looks almost perfect. Let's tweak a couple of small things so that the list description is aligned with the other elements and emphasized
+The sidebar i now almost perfect. Tweak a couple of other properties so that the list description is aligned with the other elements and emphasized
 
 ```css
 .sidebar b {
@@ -380,7 +382,7 @@ box-shadow: 0 1px 1px 1px rgba(237, 235, 232, 0.4);
 You've done a great job so far! The sidebar is done and you know about box properties.
 Time to add some content to the page.
 
-Start by adding a div, wit the class main after the element wit the class `.sidebar`
+Add a div, with the class main after `.sidebar`
 
 ```html
 <div class="main">
@@ -388,7 +390,7 @@ Start by adding a div, wit the class main after the element wit the class `.side
 </div>
 ```
 
-In here, we will define the text we want to display about **Ada Lovelace**, using paragraphs to make the content easier to read.
+Here, we will define the text we want to display about **Ada Lovelace**, using paragraphs to make the content easier to read.
 
 ### First, a little bit about her
 
@@ -422,21 +424,21 @@ Add a bit more space around the main container and set the vertical alignment.
 
 > Try removing `vertical-align`. What happens?
 
-### Let's focus on the content now
+### Now, focus on the content
 
-First, add a link so that anyone coming to your page can easily find out more about Charles Babbage. In the second paragraph, wrap his name in a link as shown below.
+Add a link so that anyone coming to the page can easily find out more about Charles Babbage. In the second paragraph, wrap his name in a link as shown below.
 
 ```html
 <a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charle's Babbage's </a>
 ```
 
-Ada was the world's first programmer. We want that content to stand out. Add a span around it and set a class highlight, so the intention is obvious and other people working on the code of the page can easily understand it.
+Ada was the world's first programmer. We want that content to stand out. Add a span around and specify a class `highlight`, so the intention is obvious and other people working on the code of the page can easily understand it.
 
 ```html
 <span class="highlight">I am the world's first programmer</span>
 ```
 
-Set the styling for the highlight class
+Set the style for the highlight class
 ```css
 .highlight {
   color: #4c61a9;
