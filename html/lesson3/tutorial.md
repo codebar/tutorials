@@ -62,7 +62,7 @@ We will separate our page in three different areas. The **header**, where our he
 
 ## Inline vs block elements
 
-In CSS there are two types of ways to display elements: _block_, and _inline_
+In CSS there are diferent ways to [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display "display CSS") elements, most common ones are: _block_, and _inline_
 
 ### block elements
 
@@ -78,7 +78,7 @@ Elements that appear on the same line
 
 ![](assets/images/span-inline.png)
 
-Some inline elements are `<img>, <a>, <em>, <strong>`
+Some inline elements are `<img>, <a>, <em>, <strong>, <span>`
 
 #### To tweak elements and turn them from block, to inline, or the other way around you can use the `display` CSS property with `inline` or `block`
 
