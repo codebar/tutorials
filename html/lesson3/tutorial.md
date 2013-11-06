@@ -429,7 +429,7 @@ Add a bit more space around the main container and set the vertical alignment.
 Add a link so that anyone coming to the page can easily find out more about Charles Babbage. In the second paragraph, wrap his name in a link as shown below.
 
 ```html
-<a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charle's Babbage's </a>
+<a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage's </a>
 ```
 
 Ada was the world's first programmer. We want that content to stand out. Add a span around and specify a class `highlight`, so the intention is obvious and other people working on the code of the page can easily understand it.
