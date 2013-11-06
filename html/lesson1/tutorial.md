@@ -24,7 +24,7 @@ _The styling of a website, is not part of the HTML_
 
 ### Today we will be focusing on fundamental HTML concepts
 
-We will be building this [example page](http://codebar.github.io/tutorials/html/1/example.html "I love owls")
+We will be building this [example page](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
 
 ## But before we start...
 
