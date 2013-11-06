@@ -1,2 +1,2 @@
-View the tutorials [here](https://codebar.github.io/tutorials)
+View the tutorials [here](http://codebar.github.io/tutorials)
 

@@ -42,7 +42,7 @@ Let's begin from the head of our page and set the title like we learned in the f
 
 ### Structuring content
 
-We will separate our page in three different areas. The **header**, where our title and picture, the head of our page, will be, the **container** where we will be specifying the main content, and the **footer**.
+We will separate our page in three different areas. The **header**, where our heading and picture, the top of our page, will be, the **container** where we will be specifying the main content, and the **footer**.
 
 ```html
 <header>
