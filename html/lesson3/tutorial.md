@@ -146,7 +146,7 @@ and then the relevant CSS
 }
 ```
 
-`inline-block` is another display attribute. You must user this, insted of `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h2>`, that takes over and expands across the end of the line.
+`inline-block` is another display attribute. You must use this, instead of `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h2>`, that takes over and expands across the end of the line.
 
 > Using firebug, change `inline-block` to `inline` and notice how they render
 
@@ -354,7 +354,7 @@ We only want to change the border color when hovering over the link. To avoid re
 
 ## Almost there..
 
-The sidebar i now almost perfect. Tweak a couple of other properties so that the list description is aligned with the other elements and emphasized
+The sidebar is now almost perfect. Tweak a couple of other properties so that the list description is aligned with the other elements and emphasized
 
 ```css
 .sidebar b {
@@ -397,7 +397,7 @@ Here, we will define the text we want to display about **Ada Lovelace**, using p
 ```html
 <p>My name is August Ada King. I'm the Countess of Lovelace.</p>
 
-<p>I am a mathematician and a writer. People know me from my work on Charle's Babbage's early mechanical general-purpose computer, the Analytical engine. I wrote the first algorithm intended to be processed by a machine. In other words, I am the world's first programmer.</p>
+<p>I am a mathematician and a writer. People know me from my work on Charles Babbage's early mechanical general-purpose computer, the Analytical engine. I wrote the first algorithm intended to be processed by a machine. In other words, I am the world's first programmer.</p>
 
 <p>My mother, Anne Isabella Byron, was a great help to me as she helped me by promoting my interest in mathematics and logic, but I also never forgot about my dad, who moved to Greece when I was just an infant to help out in the civil war.</p>
 ```
@@ -481,7 +481,7 @@ A poem about Ada
 
 ```html
 <p>
- Charles Babbage wrote the following poem of me
+ Charles Babbage wrote the following poem about me
  <br/>
  <span>
    Forget this world and all its troubles and if<br/>
