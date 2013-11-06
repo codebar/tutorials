@@ -146,7 +146,7 @@ and then the relevant CSS
 }
 ```
 
-`inline-block` is another display attribute. You must user this, insted of `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h2>`, that takes over and expands across the end of the line.
+`inline-block` is another display attribute. You must use this, instead of `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h2>`, that takes over and expands across the end of the line.
 
 > Using firebug, change `inline-block` to `inline` and notice how they render
 
