@@ -87,11 +87,8 @@ h2 {
   margin-top:0;
 }
 
-a {
-  color: #b0afc0;
-}
 
-.main a {
+a {
   color: #7a3cb7;
 }
 
@@ -103,7 +100,7 @@ a:hover {
   color: #4c61a9;
 }
 
-.poem span {
+.poem {
   font-style: italic;
   color: #4C4066;
 }
@@ -116,18 +113,19 @@ a:hover {
   color: #4C4066;
   margin-top: 40px;
   margin-bottom: 40px;
+  font-style: italic;
 }
 
-.center {
+.google-doodle {
   text-align: center;
   margin-top: 90px;
   margin-bottom: 70px;
 }
 
 footer {
-  width: 97%;
   height: 60px;
-  padding: 19px 0 0 30px;
+  padding-top: 20px;
+  padding-left: 30px;
   background-color: #1f1430;
   border-top: 1px solid #eeeeee;
   margin-top: 20px;
@@ -136,4 +134,8 @@ footer {
 footer p {
   color: #b0afc0;
   font-size: 14px;
+}
+
+footer a {
+  color: #b0afc0;
 }

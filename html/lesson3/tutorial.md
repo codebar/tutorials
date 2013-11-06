@@ -12,7 +12,7 @@ In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**a
 
 ### Today we will be building a styled website from scratch
 
-The page we will be building will look similar to this [example page]( http://codebar.github.io/tutorials/html/3/example.html "Ada Lovelace")
+The page we will be building will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace")
 
 We will also be explaining in more detail elements that we mentioned in our previous lesson.
 
@@ -22,7 +22,7 @@ We will also be explaining in more detail elements that we mentioned in our prev
 
 Download the files required to start with this tutorial from [here](https://gist.github.com/despo/7328342/download)
 
-### Inspectors
+### Development Tools - Inspectors
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and Javascript.
 
@@ -40,7 +40,7 @@ Let's begin from the head of our page and set the title like we learned in the f
 <title>Ada Lovelace</title>
 ```
 
-## Structuring content
+### Structuring content
 
 We will separate our page in three different areas. The **header**, where our title and picture, the head of our page, will be, the **container** where we will be specifying the main content, and the **footer**.
 
@@ -212,7 +212,7 @@ Expand the styling of the header so that it's viewably separated with a border a
 
 _border: `thickness` `style` `color`;_
 
-## Setting up the main container
+## Setting up the sidebar
 
 Along with `width` and `height` we can also set `min-width`, `max-width`, `min-height` and `max-height`. These properties tend to be used to ensure that when the page is resized, it won't allow for it to be smaller or bigger than the specified property.
 
@@ -375,3 +375,209 @@ box-shadow: 0 1px 1px 1px rgba(237, 235, 232, 0.4);
 **box-shadow** creates a drop shadow effect allowing us to specify color, size, blur and offset
 
 
+## Setting up the main container
+
+You've done a great job so far! The sidebar is done and you know about box properties.
+Time to add some content to the page.
+
+Start by adding a div, wit the class main after the element wit the class `.sidebar`
+
+```html
+<div class="main">
+
+</div>
+```
+
+In here, we will define the text we want to display about **Ada Lovelace**, using paragraphs to make the content easier to read.
+
+### First, a little bit about her
+
+```html
+<p>My name is August Ada King. I'm the Countess of Lovelace.</p>
+
+<p>I am a mathematician and a writer. People know me from my work on Charle's Babbage's early mechanical general-purpose computer, the Analytical engine. I wrote the first algorithm intended to be processed by a machine. In other words, I am the world's first programmer.</p>
+
+<p>My mother, Anne Isabella Byron, was a great help to me as she helped me by promoting my interest in mathematics and logic, but I also never forgot about my dad, who moved to Greece when I was just an infant to help out in the civil war.</p>
+```
+
+Now that the content is there, we can see that again, we need to tweak the element to display as an inline block and set its width to make sure it appears next to the siedbar.
+
+```css
+.main {
+  display: inline-block;
+  width: 55%;
+}
+```
+
+> Are the sidebar and container displayed next to each other? What happens when you tweak the width?
+
+
+Add a bit more space around the main container and set the vertical alignment.
+
+```css
+  margin-left: 70px;
+  padding-top: 60px;
+  vertical-align: top;
+```
+
+> Try removing `vertical-align`. What happens?
+
+### Let's focus on the content now
+
+First, add a link so that anyone coming to your page can easily find out more about Charles Babbage. In the second paragraph, wrap his name in a link as shown below.
+
+```html
+<a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charle's Babbage's </a>
+```
+
+Ada was the world's first programmer. We want that content to stand out. Add a span around it and set a class highlight, so the intention is obvious and other people working on the code of the page can easily understand it.
+
+```html
+<span class="highlight">I am the world's first programmer</span>
+```
+
+Set the styling for the highlight class
+```css
+.highlight {
+  color: #4c61a9;
+}
+```
+
+### More content
+
+```html
+<p>&#34;I do not believe that my father was such a poet as I shall be an Analyst; for with me the two go together indissolubly.&#34;</p>
+
+<p>Throughout my life, mathematics have been my primary interest. I always question even basic assumptions by integrating poetry, another great love of mine, and science. I also have a keen interest in scientific developments and trends of my era like phrenology and mesmerism.</p>
+```
+
+The first paragraph is a quote; style it so it looks like a quote.
+
+But first, add the css class
+
+```html
+<p class="quote">&#34;I do not believe....</p>
+```
+
+and then the styling
+
+```css
+.quote {
+  border: 1px solid #E7E6E6;
+  padding: 20px 27px;
+  border-radius: 6px;
+  background-color: #FDFDFC;
+  color: #4C4066;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+```
+
+> Tweak the properties. Explain to your coach what each property does.
+
+A poem about Ada
+
+```html
+<p>
+ Charles Babbage wrote the following poem of me
+ <br/>
+ <span>
+   Forget this world and all its troubles and if<br/>
+   possible its multitudinous Charlatans-every thing<br/>
+   in short but the Enchantress of Numbers.
+ </span>
+</p>
+```
+
+> Why do we need a line break (`<br/>`) before the span? What happens when we remove the line break?
+
+Make the poem look different than the rest of the text. Add a css class `poem` to the span element and add styling
+
+```css
+.poem {
+  font-style: italic;
+  color: #4C4066;
+}
+```
+
+### Some more information about Ada
+```html
+<p>The computer language <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)">Ada</a>, was named after me. The Defense Military standard for the language, MIL-STD-1815 was also given the year of my birth.</p>
+
+<p>These days, the British Computer Society runs an annual competitions for women students of computer science in my name. Also, the annual conference for women undergraduates is named after me. Google also dedicated its <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">Google doodle</a> to me, on the 197th anniversary of my birth. </p>
+
+<p>
+ <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">
+  <img src="http://www.google.com/logos/2012/ada_lovelaces_197th_birthday-991005-hp.jpg" />
+ </a>
+</p>
+```
+
+That looks great but we can tweak the position of the doodle so its aligned in the middle and there is a bit more space between it and the page.
+
+Add the class `google-doodle` in the last paragraph and set its styling.
+
+```css
+.google-doodle {
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 70px;
+}
+```
+
+### Styling links
+
+Previously, we specified the styling for link elements included within the sidebar. Now we can set a default link style that will be applied to all remaining elements.
+
+```css
+a {
+  color: #7a3cb7;
+}
+
+a:hover {
+  color: #a26cd2
+}
+```
+
+## Setting up the footer
+To complete our page, we will be adding some content and styling the footer
+
+Within the footer, add an attribution to yourself and link to your twitter, facebook or any other place you want to.
+
+```html
+<p>Made by <a href="...">[your name]</a></p>
+```
+
+and add the final styling touches for the footer elements
+
+```css
+footer {
+  height: 60px;
+  padding-top: 20px;
+  padding-left: 30px;
+  background-color: #1f1430;
+  border-top: 1px solid #eeeeee;
+  margin-top: 20px;
+}
+
+footer p {
+  color: #b0afc0;
+  font-size: 14px;
+}
+
+footer a {
+  color: #b0afc0;
+}
+```
+
+> Do you have any questions?
+
+### Bonus - Inspector
+
+Have a look at the [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace"). The heading and body of the page have some differences from the page we just created.
+
+Use the inspector to have a look at `<body>` and `<h2>` and apply these changes to your page.
+
+-----
+
+This ends our third lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
