@@ -62,7 +62,7 @@ We will separate our page in three different areas. The **header**, where our he
 
 ## Inline vs block elements
 
-In CSS there are diferent ways to [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display "display CSS") elements, most common ones are: _block_, and _inline_
+In CSS there are different ways to [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display "display CSS") elements, most common ones are: _block_, and _inline_
 
 ### block elements
 
