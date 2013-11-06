@@ -26,6 +26,10 @@ We will be styling [this page](https://github.com/codebar/tutorials/blob/master/
 
 ## But before we start...
 
+### Required files
+
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download)
+
 ### What can I do with CSS?
 
 You can change the color, position, dimensions and presentation of different elements
@@ -338,7 +342,7 @@ h4 {
   padding: 27px 25px 15px;
 }
 
-small{
+small {
   color: #6D6A6A;
   font-size: 15px;
   margin: 0 30px 10px;
@@ -384,7 +388,7 @@ ol li {
   display: inline;
 }
 
-#text-block{
+#text-block {
   height: 370px;
 }
 
