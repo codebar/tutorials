@@ -20,7 +20,7 @@ We will also be explaining in more detail elements that we mentioned in our prev
 
 ### Required files
 
-Download the files required to being working through the tutorial from [here](https://gist.github.com/despo/7328342/download)
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7328342/download)
 
 ### Development Tools - Inspectors
 
@@ -56,7 +56,7 @@ We will separate our page in three different areas. The **header**, where our he
 </footer>
 ```
 
-> Did you remember to insert these tags within the <body> of your page?
+> Did you remember to insert these tags within the `<body>` tags of your page?
 
 > Inspect the page. Can you see the title and the elements we just added?
 
