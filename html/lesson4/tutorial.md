@@ -255,7 +255,7 @@ Style the container
 
 ```css
 #content {
-  padding-top: 150px
+  padding-top: 150px;
   background-color: #e8e8e8;
   padding: 30px 40px;
 }
