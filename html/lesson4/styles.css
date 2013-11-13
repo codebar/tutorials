@@ -46,12 +46,11 @@ header {
 }
 
 .beginning {
-  position: relative;
+  float: left;
 }
 
 .end-of-line {
   float: right;
-  padding: 20px;
 }
 
 #container {
@@ -70,7 +69,6 @@ ul {
 }
 
 .image-container{
-  float: left;
   height: 200px;
   padding: 10px;
   position: relative;
@@ -97,7 +95,6 @@ footer {
   border-top: 1px solid #eeeeee;
   margin-top: 20px;
   width: 100%;
-  clear: both;
 }
 
 footer p {
