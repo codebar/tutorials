@@ -8,12 +8,13 @@ footer: true
 
 ### Recap
 
-In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets. **HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements and pseudo clases.
+In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets.
+**HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements and pseudo clases.
 
 
-### Today we will be building a website and learning more about CSS layouts and formatting
+### Today we will be building a website and learn more about CSS layouts and formatting
 
-The page we will be building will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
+The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
 
 ## But before we start...
 
@@ -50,9 +51,7 @@ Set the title that will be displayed on the browser's bar
 
 > Did you remember to place the **title** and **stylesheet** in the body of your page?
 
-## Overview
-
-### `<header>`
+## Header
 
 Add a header element in the `<body>` of the page
 
@@ -98,9 +97,9 @@ header {
 Set a css class `portrait` to the `<div>` wrapping the image
 
 ```html
-  <div class="portrait">
-    <img src="gracehopper.jpg"/>
-    ...
+<div class="portrait">
+  <img src="gracehopper.jpg"/>
+  ...
 ```
 
 and a css class `title` to the `<div>` wrapping the heading
@@ -160,7 +159,8 @@ Color the `<h1>` so it stands out and its not the same like the other text on th
 
 ## Adding a toolbar
 
-Add some of the resources we used to find out more information about Grace. Add this inside the header, at the bottom.
+Add some of the resources we used to find out more information about Grace. 
+This should be placed before the header closing tag.
 
 ```html
 <div>
@@ -174,6 +174,8 @@ Add some of the resources we used to find out more information about Grace. Add 
 ```
 
 Add an id `resources` to the outer `<div>`
+
+### Styling the toolbar
 
 First let's remove the bullet from the list of links
 
@@ -259,11 +261,19 @@ Style the container
 }
 ```
 
+> Before moving forward, spend 5 minutes reading the content. **Grace Hopper** was an amazing woman and her contributions to Computer Science and our world, invaludable.
+
 ## Floating elements
 
 Floating elements still keeps the in the normal flow, but as far to the left or right of their container element. Other elements, like paragraphs or lists, wrap around them.
 
 To ensure an element `floats` you must always specify its width, or else its likely to take over the width of the page and not appear floated.
+
+###Box floating left
+![](assets/images/float-left.png)
+
+###Box floating right
+![](assets/images/float-right.png)
 
 ### Floating properties
 
@@ -382,7 +392,7 @@ position: relative;
 Since we have a width set on the container divs, we can tweak the width of the caption so it takes over the entire bottom of the picture. Add the following to `.caption`
 
 ```css
-  width: 73%;
+width: 73%;
 ```
 
 Excellent! We have now managed to use `absolute` and `relative` positioning to do some cool things!
@@ -395,7 +405,6 @@ Before we do some more cool things, let's add a footer to our page
 <footer>
   <p>Made by <a href="http://codebar.io">codebar.io</a></p>
 </footer>
-
 ```
 
 and style it
@@ -429,6 +438,7 @@ But we are not quite done yet. The page looks great, but we can do a bit more wi
 When having a `fixed` position, an element is relative to the viewport of the browser window. As the viewport does not change when the window is scrolled the element always appears to be at the same place. Let's try this out.
 
 Extend `.header` and set its position to fixed
+
 ```css
 position: fixed;
 ```
@@ -446,9 +456,10 @@ And reposition the '#content' so it doesn't hide underneath the header. Change t
 ```css
 padding: 150px 30px 40px;
 ```
+
 > Do you remember the padding shortcuts we disussed in the previous lessson? What does the above describe? Can you explain that to your coach?
 
-There is still one small problem with out page. You can view this better if you resize your browser window to 1/3 of the page and try scrolling. The images now appear on top of the header. This is due to removing the elements out of the normal flow of the page.
+There is still one small problem with out page. You can view this better if you resize your browser window to fit one third of your screen and scroll down. The images now appear on top of the header. This is due to removing the element from of the normal flow of the page.
 
 ### z-index
 
@@ -472,7 +483,8 @@ Before we finish the lesson, ensure that we have a minimum width set on the page
 min-width: 570px;
 ```
 
-Let's also increase the line height, so that our content is clearer to read
+Let's also increase the line height, so that the text of the page is easier to read.
+
 ```css
 line-height: 23px;
 ```
