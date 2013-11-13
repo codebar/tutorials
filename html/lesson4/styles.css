@@ -7,13 +7,24 @@ body {
 
 header {
   background-color: #fdfdfc;
-  text-align: center;
   border-bottom: 1px solid #e7e6e6;
-  padding-top: 14px;
+  padding: 14px 0;
+  text-align: center;
   height: 100px;
   position: fixed;
   width: 100%;
   z-index: 99;
+}
+
+.portrait {
+  display: inline-block;
+  margin-left: 50px;
+  padding-bottom: 10px;
+}
+
+.portrait img {
+  border-radius: 50px;
+  height: 85px;
 }
 
 .title {
@@ -22,6 +33,10 @@ header {
   margin-bottom: 0px;
   padding-bottom: 0;
   vertical-align: top;
+}
+
+.title h1 {
+  color: #3D5167;
 }
 
 #navigation {
@@ -40,9 +55,8 @@ header {
   color: #e7e7e7;
 }
 
-.my-picture {
-  height: 60px;
-  display: inline-block;
+#navigation li a:hover {
+  border-bottom: 1px solid;
 }
 
 .beginning {
@@ -91,9 +105,8 @@ ul {
 footer {
   height: 60px;
   padding-top: 20px;
-  background-color: #1f1430;
+  background-color: #3D5167;
   border-top: 1px solid #eeeeee;
-  margin-top: 20px;
   width: 100%;
 }
 
