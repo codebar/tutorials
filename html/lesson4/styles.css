@@ -27,7 +27,7 @@ header {
 #navigation {
   top: -20px;
   margin-top: -20px;
- background-color: #3D5167;
+  background-color: #3D5167;
 
 }
 
@@ -47,7 +47,7 @@ header {
 }
 
 .beginning {
-position: relative;
+  position: relative;
 }
 
 .end-of-line {
@@ -72,10 +72,10 @@ ul {
 
 .image-container{
   float: left;
-    height: 200px;
-    padding: 10px;
-    position: relative;
-    width: 200px;
+  height: 200px;
+  padding: 10px;
+  position: relative;
+  width: 200px;
 }
 
 .clear {
@@ -83,12 +83,12 @@ ul {
 }
 
 .caption {  
-background-color: rgba(250, 250, 250, 0.8);
-    bottom: 10px;
-    left: 10px;
-    padding: 5px 10px;
-    position: absolute;
-    width: 73%;
+  background-color: rgba(250, 250, 250, 0.8);
+  bottom: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  position: absolute;
+  width: 73%;
 
 }
 
