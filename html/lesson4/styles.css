@@ -28,7 +28,6 @@ header {
   top: -20px;
   margin-top: -20px;
   background-color: #3D5167;
-
 }
 
 #navigation li {
@@ -82,14 +81,13 @@ ul {
   clear: both;
 }
 
-.caption {  
+.caption {
   background-color: rgba(250, 250, 250, 0.8);
   bottom: 10px;
   left: 10px;
   padding: 5px 10px;
   position: absolute;
   width: 73%;
-
 }
 
 footer {
