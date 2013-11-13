@@ -13,6 +13,7 @@ header {
   height: 100px;
   position: fixed;
   width: 100%;
+  z-index: 99;
 }
 
 .title {
@@ -46,12 +47,12 @@ header {
 }
 
 .beginning {
-  float: left;
-  padding: 10px;
+position: relative;
 }
 
 .end-of-line {
   float: right;
+  padding: 20px;
 }
 
 #container {
@@ -69,8 +70,26 @@ ul {
   padding: 30px 40px;
 }
 
+.image-container{
+  float: left;
+    height: 200px;
+    padding: 10px;
+    position: relative;
+    width: 200px;
+}
+
 .clear {
   clear: both;
+}
+
+.caption {  
+background-color: rgba(250, 250, 250, 0.8);
+    bottom: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    position: absolute;
+    width: 73%;
+
 }
 
 footer {
@@ -92,3 +111,5 @@ footer p {
 footer a {
   color: #b0afc0;
 }
+
+
