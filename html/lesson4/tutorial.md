@@ -49,7 +49,7 @@ Set the title that will be displayed on the browser's bar
 <title>Grace Hopper</title>
 ```
 
-> Did you remember to place the **title** and **stylesheet** in the body of your page?
+> Did you remember to place the **title** and **stylesheet** in the head of your page?
 
 ## Header
 
