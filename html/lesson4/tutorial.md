@@ -196,14 +196,16 @@ and make the elements inline so they sit next to each other
 }
 ```
 
-The text is now really hard to see. Change its color and make it underline when you hover your mouse over it.
-
 ```css
 #resources li a {
   text-decoration: none;
   color: #e7e7e7;
 }
+```
 
+The text is now really hard to see. Change its color and make it underline when you hover your mouse over it.
+
+```css
 #resources li a:hover {
   border-bottom: 1px solid;
 }
