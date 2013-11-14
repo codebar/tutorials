@@ -448,7 +448,7 @@ position: fixed;
 Fix this by setting the width
 
 ```css
-width: 100%
+width: 100%;
 ```
 
 And reposition the '#content' so it doesn't hide underneath the header. Change the padding property to have a padding-top
