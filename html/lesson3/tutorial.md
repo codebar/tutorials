@@ -448,23 +448,21 @@ Set the style for the highlight class
 ### More content
 
 ```html
-<p>&#34;I do not believe that my father was such a poet as I shall be an Analyst; for with me the two go together indissolubly.&#34;</p>
+<blockquote>&ldquo;I do not believe that my father was such a poet as I shall be an Analyst; for with me the two go together indissolubly.&rdquo;</blockquote>
 
 <p>Throughout my life, mathematics have been my primary interest. I always question even basic assumptions by integrating poetry, another great love of mine, and science. I also have a keen interest in scientific developments and trends of my era like phrenology and mesmerism.</p>
 ```
 
-The first paragraph is a quote; style it so it looks like a quote.
-
-But first, add the css class
+Being the first paragraph a quote, so we can use `<blockquote>`, as it's more appropiate than a p tag.
 
 ```html
-<p class="quote">&#34;I do not believe....</p>
+<blockquote>&ldquo;I do not believe....</blockquote>
 ```
 
 and then the styling
 
 ```css
-.quote {
+blockquote {
   border: 1px solid #E7E6E6;
   padding: 20px 27px;
   border-radius: 6px;

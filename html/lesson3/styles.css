@@ -105,7 +105,7 @@ a:hover {
   color: #4C4066;
 }
 
-.quote {
+blockquote {
   border: 1px solid #E7E6E6;
   padding: 20px 27px;
   border-radius: 6px;
