@@ -196,6 +196,8 @@ and make the elements inline so they sit next to each other
 }
 ```
 
+The text is now really hard to see. Change the color of the link...
+
 ```css
 #resources li a {
   text-decoration: none;
@@ -203,7 +205,7 @@ and make the elements inline so they sit next to each other
 }
 ```
 
-The text is now really hard to see. Change its color and make it underline when you hover your mouse over it.
+... and make it underline when you hover your mouse over it.
 
 ```css
 #resources li a:hover {
@@ -211,7 +213,7 @@ The text is now really hard to see. Change its color and make it underline when 
 }
 ```
 
-> Do you remember what **:hover** does? Have a quick look in the previous tutorial in pseudo classes to refresh your memory.
+> Do you remember what **:hover** does? Have a quick look at **Pseudo classes** in the [previous tutorial](http://codebar.github.io/tutorials/html/lesson3/tutorial.html) to refresh your memory.
 
 ## Content
 
@@ -279,12 +281,15 @@ To ensure an element `floats` you must always specify its width, or else its lik
 
 ### Floating properties
 
-**float: right** Float to the right of the page
-**float: left** Float to the left of the page
-**float: inherit** Inherit the value of the parent element
-**float: none** Don't float!
+`float: right` Float to the right of the page
 
-Make the two images in the '#container' float
+`float: left` Float to the left of the page
+
+`float: inherit` Inherit the value of the parent element
+
+`float: none` Don't float!
+
+Make the two images in the `#container` float
 
 Add a css class to the first image's wrapper
 
