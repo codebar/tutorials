@@ -338,7 +338,7 @@ Increase the `line-height` of all other pargraphs. We can do this with another v
 The **not** selector, finds all elements who don't match the specified description, in our case, all paragraphs that don't have a class `about`
 
 ```css
-p.not(.about) {
+p:not(.about) {
   line-height: 1.3em;
 }
 ```
