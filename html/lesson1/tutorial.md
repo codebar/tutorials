@@ -5,7 +5,9 @@ title: HTML Lesson 1
 
 ## What is HTML?
 
-HTML is a language used to build websites.
+**HTML** is the language used to build websites.
+
+It defines the structure of the website, so anything related to the content of the page itself: text, images, videos.
 
 
 ### What does it stand for?
@@ -15,9 +17,10 @@ HTML is a language used to build websites.
 
 ### What makes a website
 
-HTML: it defines the structure of the website, so anything related to the content of the page itself: text, images, videos.
+HTML: structure of a website
 
-CSS: it defines the visual representation of the content, so for example colour, margins, borders, backgrounds, position in the page.
+CSS: presentation
+
 
 _The styling of a website is not part of the HTML._
 

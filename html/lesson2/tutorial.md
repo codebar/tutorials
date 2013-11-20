@@ -6,7 +6,9 @@ footer: true
 
 ## What is CSS?
 
-CSS is what defines the presentation of a website
+**CSS** is the language used to style websites.
+
+ It defines the visual representation of the content, so for example colour, margins, borders, backgrounds, position in the page.
 
 ### What does it stand for?
 
