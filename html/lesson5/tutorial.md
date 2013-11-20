@@ -70,7 +70,7 @@ Style the wrapper
 
 Try tweaking the style.
 
-> Remove the `max-width` and relod the page
+> Remove the `max-width` and reload the page
 
 
 > Remove the `min-width` and try resizing the page
@@ -81,7 +81,7 @@ Try tweaking the style.
 
 ## Text shadow
 
-Text shadow, adds a drop shadow to the header. This only works with CSS3 compatible browsers, so unless you are using a really [old browser](http://caniuse.com/css-textshadow] or IE9, you should be able to see the results.
+Text shadow, adds a drop shadow to the header. This only works with CSS3 compatible browsers, so unless you are using a really [old browser](http://caniuse.com/css-textshadow) or IE9, you should be able to see the results.
 
 `text-shadow: horizontal-shadow vertical-shadow blur color`
 
