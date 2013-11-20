@@ -61,7 +61,7 @@ Add a header element in the `<body>` of the page
     <img src="gracehopper.jpg"/>
   </div>
   <div>
-    <h2>Grace Hopper</h2>
+    <h1>Grace Hopper</h1>
   </div>
 </header>
 ```
@@ -106,7 +106,7 @@ and a css class `title` to the `<div>` wrapping the heading
 
 ```html
 <div class="title">
-  <h2>Grace Hopper</h2>
+  <h1>Grace Hopper</h1>
   ...
 ```
 
