@@ -1,0 +1,127 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  border-top: 5px solid #4c4066;
+  margin: 0;
+  padding: 10px 150px;
+  font-size: 12px;
+  color: #666666;
+}
+
+header {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align:center;
+  height: 60px;
+  font-style:bold;
+  font-size: 30px;
+  padding-top: 35px;
+  vertical-align: middle;
+  background-color: #FDFDFC;
+}
+
+nav {
+  text-align:center;
+  height: 30px;
+  font-style:bold;
+  color: white;
+  font-size: 1.5em;
+  padding-top: 10px;
+  vertical-align: middle;
+  background-color: #FDFDFC;
+  border-bottom: 1px solid #E7E6E6;
+}
+
+article {
+  width: 65%;
+  padding: 10px;
+  color: #333333;
+  font-size: 1.2em;
+  border: 1px solid white;
+}
+
+section {
+  padding: 10px;
+  display: inline-block;
+  font-style:bold;
+}
+
+figure {
+  margin: 0;
+  border-bottom: 1px dotted #0098D8;
+  padding-bottom: 4px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+
+aside {
+  margin-top: 20px;
+  width: 200px;
+  float: right;
+  height: 130px;
+  font-style:bold;
+  color: white;
+  vertical-align: middle;
+  border: 1px solid #E7E6E6;
+  background-color: #FDFDFC;
+  border-radius: 20px;
+  position: fixed;
+  right: 150px;
+}
+
+aside nav {
+  text-align: left;
+  border: none;
+  background: none;
+}
+
+nav li {
+  padding-bottom: 10px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #7A3CB7;
+  width: 20%;
+  margin: 0 0px;
+}
+
+a:hover {
+  border-bottom: 1px dashed #7A3CB7;
+}
+
+blockquote {
+  font-style: italic;
+ }
+
+ h1 {
+   color: #333333;
+ }
+
+ #other-resources figure {
+   display: inline-block;
+ }
+
+ #other-resources a {
+   font-size: 1.5em;
+ }
+
+ footer {
+  height: 60px;
+  font-style:bold;
+  font-size: 1.2em;
+  padding-top: 35px;
+  vertical-align: middle;
+  background-color: gray;
+  border: 1px solid white;
+  background-color: #FDFDFC;
+}
+
+#women-programmers figure:hover {
+  transform: rotate(20deg);
+}
