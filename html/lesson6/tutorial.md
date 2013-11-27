@@ -12,7 +12,7 @@ In the last lesson, we briefly introducted **HTML5** and **CSS3** with more focu
 
 ### Today we will be focusing more on HTML5
 
-The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson6/example.html "Women in Programming")
+The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson6/index.html "Women in Programming")
 
 ## But before we start...
 
