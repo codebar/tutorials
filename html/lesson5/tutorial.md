@@ -19,6 +19,7 @@ The page we will build will look similar to this [example page](http://codebar.g
 
 ### Required files
 
+
 Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7565600/download)
 
 ## Getting started
