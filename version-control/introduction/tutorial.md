@@ -50,12 +50,16 @@ We will be using **git**.
 ### Why Git?
 There are a number of reasons we chose git. To name some
 - A lot of learning resources
+
 - Does not require you to be connected to the internet to use
+
 - All your tracked changes stay on your machine until you are happy with them, and want to make them part of your codebase.
+
 - Will tell you if someone has made changes since you last pushed code and urge you to update first and resolve issues
+
 - Github and online collaboration. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to it.
 
-Some of the project who use git are:
+Some popular project using git:
 
 - Android
 
