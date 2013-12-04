@@ -131,5 +131,8 @@ Now that you have the Github client setup on your machine, we will spend sometim
 10. Repeat the process to list the rest of the tutorials you have worked on on the page as well.
 
 ## Bonus
-This is your personal page. Use what we learned in the previous lessons to style it, and make it look pretty.
+This is your personal page. Use what we learned in the previous lessons to style it, and make it look pretty, and what we learned today to commit and publish your changes.
 
+-----
+
+This ends our _Introduction to Version Control and git_ lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
