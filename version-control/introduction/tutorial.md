@@ -13,7 +13,7 @@ Google docs, for example, keeps a revision history of any document you create an
 
 Have a look [at this Google document](https://docs.google.com/document/d/10kHJKXHLa-V8G6vVQoDiS6cTPvJoXnj_-SDvfQdziFk/edit?usp=sharing).
 
-- Select to see the revision history
+- Select to see the revision history (you must be logged in with your Google account to do that!)
 
 ![](images/see_revision_history.png)
 
