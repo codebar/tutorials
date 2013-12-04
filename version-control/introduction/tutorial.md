@@ -30,7 +30,7 @@ Wikipedia also holds a history of all changes.
 
 ![](images/wikipedia-view-history.png)
 
-- Try and have a look at the first revision of the page, by going back. It's dated back to 2007!
+- Try and have a look at the first revision of the page, by going back. It's dated back to 2005!
 - Click **curr**, that will show you the [differences between the first and the latest entry](http://en.wikipedia.org/w/index.php?title=Women_in_computing&diff=583521812&oldid=19298328)
 
 ![](images/wikipedia-diff.png)
