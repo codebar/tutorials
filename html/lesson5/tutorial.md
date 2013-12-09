@@ -228,11 +228,11 @@ You can also set different properties for your backgrounds, by defining them in 
 
 #### Let's try this out.
 
-First lets set two background images, the first positioned on the right, the second one we will just let flow into place.
+First lets set two background images, the first positioned on the right and the second on the left.
 
 ```
 background: url('assets/images/background-right.jpg') right top no-repeat,
-            url('assets/images/background-left.jpg') no-repeat;
+            url('assets/images/background-left.jpg') left no-repeat;
 ```
 
 By default, a background image repeats itself to fill in the container. We don't want that, that's where the **no-repeat** property we specified comes into place.
