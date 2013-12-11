@@ -349,7 +349,7 @@ Absolute positioned elements are also outside the normal flow. They are offset f
 
 Despite what element an **absolute** positioned element is wrapped in, the element that is considered it's container is the first that has a position set other than **static**. If there is no such element, the outer `<html>` is considered its container.
 
-Its position is determined by the offset values in the properis `top`, `bottom`, `left` and `right`
+Its position is determined by the offset values in the properties `top`, `bottom`, `left` and `right`
 
 ### Using absolute and relative positioning
 
