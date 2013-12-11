@@ -445,7 +445,7 @@ But we are not quite done yet. The page looks great, but we can do a bit more wi
 ### Fixed position
 When having a `fixed` position, an element is relative to the viewport of the browser window. As the viewport does not change when the window is scrolled the element always appears to be at the same place. Let's try this out.
 
-Extend `.header` and set its position to fixed
+Extend `header` and set its position to fixed
 
 ```css
 position: fixed;
