@@ -289,7 +289,7 @@ To ensure an element `floats` you must always specify its width, or else its lik
 
 `float: none` Don't float!
 
-Make the two images in the `#container` float
+Make the two images in the `#content` float
 
 Add a css class to the first image's wrapper
 
