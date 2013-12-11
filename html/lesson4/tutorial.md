@@ -265,7 +265,7 @@ Style the container
 }
 ```
 
-> Before moving forward, spend 5 minutes reading the content. **Grace Hopper** was an amazing woman and her contributions to Computer Science and our world, invaludable.
+> Before moving forward, spend 5 minutes reading the content. **Grace Hopper** was an amazing woman and her contributions to Computer Science and our world, invaluable.
 
 ## Floating elements
 
