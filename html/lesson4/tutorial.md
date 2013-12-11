@@ -247,6 +247,7 @@ Let's add the main content. Paste underneath the header. We will tweak things as
   </p>
   <p>
   Some of her greatest achievements, were creating the term <b>debug</b>, a term used today to mean fixing the coding errors in a program, by taking a moth out of the Mark I, developing the first compiler, which paved the path to modern computer languages, and creating Flow-Matic, a computer language that recognized 20 English phrases, and interpreted them into machine code.
+  </p>
   <p>
   Grace also wrote the first compiler, which enabled a programmer to use words instead of arithmetic, a startling concept for those days. A compiler is now essential in programming languages, and shortens the time it takes to program into days or hours rather then months.
   <br/>
@@ -265,7 +266,7 @@ Style the container
 }
 ```
 
-> Before moving forward, spend 5 minutes reading the content. **Grace Hopper** was an amazing woman and her contributions to Computer Science and our world, invaludable.
+> Before moving forward, spend 5 minutes reading the content. **Grace Hopper** was an amazing woman and her contributions to Computer Science and our world, invaluable.
 
 ## Floating elements
 
@@ -289,7 +290,7 @@ To ensure an element `floats` you must always specify its width, or else its lik
 
 `float: none` Don't float!
 
-Make the two images in the `#container` float
+Make the two images in the `#content` float
 
 Add a css class to the first image's wrapper
 
@@ -348,7 +349,7 @@ Absolute positioned elements are also outside the normal flow. They are offset f
 
 Despite what element an **absolute** positioned element is wrapped in, the element that is considered it's container is the first that has a position set other than **static**. If there is no such element, the outer `<html>` is considered its container.
 
-It's position is determined by the offset values in the properis `top`, `bottom`, `left` and `right`
+Its position is determined by the offset values in the properties `top`, `bottom`, `left` and `right`
 
 ### Using absolute and relative positioning
 
@@ -444,7 +445,7 @@ But we are not quite done yet. The page looks great, but we can do a bit more wi
 ### Fixed position
 When having a `fixed` position, an element is relative to the viewport of the browser window. As the viewport does not change when the window is scrolled the element always appears to be at the same place. Let's try this out.
 
-Extend `.header` and set its position to fixed
+Extend `header` and set its position to fixed
 
 ```css
 position: fixed;
