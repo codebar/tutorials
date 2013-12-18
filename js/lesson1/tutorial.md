@@ -5,7 +5,7 @@ title: JavaScript Lesson 1
 
 ## What is JavaScript?
 
-**JavaScript** is a language that allows for interaction with the user, controls the content of the browser, and alter the displayed document content.
+**JavaScript** is a language that allows for interaction with the user, controlling the content of the browser, and altering the displayed document content.
 
 Some common usages around the web is
 
@@ -37,7 +37,7 @@ Some common usages around the web is
 
 Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/0b674ec9d5ae9cb09704/download)
 
-## Let's try our some JavaScript!
+## Let's try out some JavaScript!
 
 We'll start by just outputting some content on our browsr's inspector console.
 To keep track of what we do, you should write the code in the `script.js`
@@ -72,7 +72,7 @@ Try them out one by one!
 - **strings** - group of characters, it must always be in quotes
 
 ```js
-var name = "Codebar"
+var name = "Codebar";
 
 console.log(name + "is amazing!"); // this is an expression
 ```
@@ -108,8 +108,8 @@ That's great! We can combine strings together and add up numbers.
 var codebarIsAwesome = true;
 var weatherIsAmazing = false;
 
-console.log("Is Codebar AWESOME? " + codebarIsAwesome)
-console.log("Is the weather in London amazing? " + weatherIsAmazing)
+console.log("Is Codebar AWESOME? " + codebarIsAwesome);
+console.log("Is the weather in London amazing? " + weatherIsAmazing);
 ```
 
 - **undefined variables**
@@ -196,8 +196,8 @@ Conditions work with a number of evaluated statements. Some of the comparisons w
 #### Equality `==`
 
 ```js
-var apples = "apples"
-var oranges = "oranges"
+var apples = "apples";
+var oranges = "oranges";
 
 if (apples == oranges) {
   console.log("Apples and Oranges are the same thing!");
@@ -234,21 +234,22 @@ if (pizzas > students) {
 
 #### Less than `<`
 
+```js
 if (coaches < students) {
-console.log("We have less coaches than students.");
-};
-
+  console.log("We have less coaches than students.");
+}
+```
 
 ### If Else statements
 
 An **if else** statement enables us to run alternative actions when our condition is not true
 
 ```js
-if(people > pizzas) {
+if (people > pizzas) {
   console.log("We have more people than pizzas. That's not very good :/");
 } else {
   console.log("We have waaay too much pizza. That can never be bad! :)");
-};
+}
 
 ```
 
@@ -301,8 +302,8 @@ Let's write an improved version of this that shows a small dialog with the messa
 
 ```js
 function popupHello() {
-  alert("Hello "+name);
-};
+  alert("Hello " + name);
+}
 ```
 
 Now that you fixed the problem, call the function from you browser's console!
@@ -317,7 +318,7 @@ Let's try writing a function with multiple arguments.
 ```js
 function whatIAmDoingToday(coach, place) {
  console.log("Today, I am at " + place + " and I am learning a bit of JavaScript with the help of " + coach);
-};
+}
 ```
 
 
@@ -330,7 +331,7 @@ Create a function that adds two numbers together
 ```js
 function addNumbers(x, y) {
   x + y;
-};
+}
 ```
 > Try to run this. Not what you expected is it?
 
@@ -354,7 +355,7 @@ When we declare variable within a function, they are not visible outside it.
 function subtractNumbers(x,y) {
   var result = x-y;
   return result;
-};
+}
 
 subtractNumbers(10,3);
 console.log(result);
@@ -367,7 +368,7 @@ var result;
 function subtractNumbers(x,y) {
   result = x-y;
   return result;
-};
+}
 
 subtractNumbers(10,3);
 console.log(result);
