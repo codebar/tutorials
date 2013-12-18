@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   background: url('assets/images/background-right.jpg') right top no-repeat,
-  url('assets/images/background-left.jpg') no-repeat;
+  url('assets/images/background-left.jpg') left no-repeat;
   background-size: 420px auto, auto 900px;
   background-attachment: fixed, fixed;
 }
