@@ -9,7 +9,7 @@ In our previous lesson we briefly introduced JavaScript, variables.  This time w
 
 ### Required files
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/0b674ec9d5ae9cb09704/download)
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/d46495ce986d1624af45/download)
 
 You should use **lesson2.html** and **script.js** to write the exercises in for the first part of the tutorial, and **london.html** and **london-script.js** for doing the DOM exercises.
 
