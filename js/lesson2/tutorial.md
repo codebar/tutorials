@@ -32,7 +32,7 @@ We can use this to add all numbers between 1 and 10
 ```js
 var total = 0;
 for(var i = 1; i <= 10; i++) {
-  total = total + x;
+  total = total + i;
 }
 console.log("Total: " + total);
 ```
