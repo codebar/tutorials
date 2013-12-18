@@ -17,7 +17,7 @@ You should use **lesson2.html** and **script.js** to write the exercises in for 
 
 A loop is used to execute a set of statements until a condition is met.
 
-#### The `for` loop
+####The `for` loop
 
 The **for** loop is based on a counter. It is used to execute the same code a specified number of times.
 
@@ -41,7 +41,7 @@ console.log("Total: " + total);
 
 > `i++` increments the value of i at the end of the loop.
 
-#### The **while** loop
+####The **while** loop
 
 The **while** loop unlike the **for** loop, is not necessarily based on a counter, but gets evaluated while the condition is not met.
 
@@ -59,7 +59,7 @@ console.log("Total: " + total);
 > `x++` increments the value of x after the execution of the line, whilst `++x` before. What do you expect the result to be if you change `x++` to `++x`. Try it out!
 
 
-## Arrays
+##Arrays
 
 An array is a data structure. It can hold elements of the same or different types (e.g. strings, numbers, booleans). In an array each element can be accessed using the **index**.
 
@@ -145,7 +145,7 @@ while (fruits) {
 
 > Can you understand how this loop works? Try to explain it to your coach.
 
-#### The `do` loop
+####The `do` loop
 
 A while loop can also be represented using what we call as a `do` block.
 Let's use this to output the vegs in the array.
@@ -164,7 +164,7 @@ do {
 } while (vegs)
 ```
 
-## Objects
+##Objects
 
 ### So what are objects?
 In JavaScript, **everything** is an object. Even **strings**, **numbers** and **booleans** that we mentioned in the previous lesson are.
@@ -177,7 +177,7 @@ console.log(message.length);  // using length property
 console.log(message.toUpperCase());  // using toUpperCase() method
 ```
 
-### Creating our own objects
+###Creating our own objects
 
 Here is the basic template for creating an object with some properties
 
@@ -229,7 +229,7 @@ for (var i=0; i < london.olympics.length; i++) {
 
 ## DOM
 
-### What is DOM?
+###What is DOM?
 **DOM** stands for **D**ocument **O**bject **M**odel.
 
 When the HTML is loaded on our page, the browser generates its DOM. This enables us to access and interact with HTML elements using JavaScript.
