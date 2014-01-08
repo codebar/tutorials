@@ -370,7 +370,7 @@ $(document).on('mouseenter', selector,  function(){
   2. Retrieve the color of the box and update the preview box.
 2. When the mouse leaves
   1. Set the color of the preview box back to how it was.
-3. You will notice that this break the behavior of the **click** function. To resolve this, set the value of preview color after updateing the preview box.
+3. This breaks the behavior of the **click** function. Fix it!
 
 ## Publish to github
 
