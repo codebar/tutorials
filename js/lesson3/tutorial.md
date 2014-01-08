@@ -105,7 +105,7 @@ With JQuery we can achieve this by applying event listeners to the document of t
 ```js
 $(document).on('click','.done', function() {
  alert("Click event");
-}
+});
 ```
 
 **Handling events**
@@ -113,7 +113,7 @@ $(document).on('click','.done', function() {
 ```javascript
 $(document).on(event, selector, function() {
   // code to be executed when event occurs
-}
+});
 ```
 
 Using the `on()` method, means that the click event will work even if we add new items to the DOM dynamically.
@@ -142,7 +142,11 @@ Download the files required to begin working through the example [here](https://
 git clone https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
 ```
 
-Move the files under your github page folder, in a new directory `wishlist`. Also, try to commit each task you complete e.g. ability to add an item to the list or label items as **Pending**. To do that, you can use the **Github Client** or alternatively **git** on the command line `git commit -m "message"`.
+Move the files under your github page folder, in a new directory `wishlist`. Also, try to commit each task you complete e.g. ability to add an item to the list or label items as **Pending**. To do that, you can use the **Github Client** or alternatively **git** on the command line:
+
+```bash
+git commit -m "message"
+```
 
 
 ## Functionality
@@ -161,7 +165,7 @@ function addToList(item) {
 
 }
 ```
-In the `index.html` file, we already have an `<ol>` component, so we want to add each new item, as a list item. We can do that by constructing the html we need `"<li>" + item "<\li>"` and adding it to the list using `append()`.
+In the `index.html` file, we already have an `<ol>` component, so we want to add each new item, as a list item. We can do that by constructing the html we need `"<li>" + item + "</li>"` and adding it to the list using `append()`.
 
 We can get the ordered list using the element tag and the id `$("ol#items")`
 
@@ -272,7 +276,7 @@ function setPreviewColor(color) {
 ```javascript
  $(document).on('click change', '#color', function() {
 
- }
+ });
 ```
 
 Handle the `keydown keyup` and `keypress` events of the `#color` input. Pass the value of the input field to the `setPreviewColor(color)` functions.
@@ -328,7 +332,7 @@ We can iterate through the array using JQuery's `each()` function.
 ```javascript
 $.each(array, function(index, element) {
   // do something
-})
+});
 ```
 
 **index** is the position of the element in the array, and **element**, in our case will be the color.
@@ -336,23 +340,23 @@ $.each(array, function(index, element) {
 
 Iterate through the colors array in `$(document).ready()` and call `addBox(color)` to create color boxes for each of the colors.
 
-####Getting a random element
+#### Getting a random element
 
 We can also initialise the preview box by selecting a random element from the colors list.
 
 To get a random number we can use `Math.random()`, which will give us a random number between 0 and 1. We then have to apply `Math.floor()` to round down to the closest number.
 
 ```javascript
-random_position = Math.floor(Math.random()*colors.length)
+random_position = Math.floor( Math.random() * colors.length )
 ```
 
 > Use the `array[index]` notation to retrieve the colors at the random position.
 
 Set `.preview`'s background color, to the random color code.
 
-##Bonus
+## Bonus
 
-###Retrict number of displayed boxes
+### Retrict number of displayed boxes
 
 We only want to be able to add 16 colors to our favorite list. To do that, we can update the code handling the **click** event and check that the length of `$("#colors .item")` is **equal** than 16. If it's not, remove the last element.
 
@@ -362,7 +366,7 @@ This way, when the list is full, we remove a box and add another one.
 
 Similar to the first exercise, set the focus back to the `#color` input field when a color is added to the favorites list.
 
-###Change preview box on mouse over
+### Change preview box on mouse over
 
 Do that by handling the **mouseenter** and **mouseleave** events.
 
