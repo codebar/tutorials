@@ -136,7 +136,11 @@ Make a note of this. You should **always** use it or else your bindings won't wo
 
 Using JQuery and JavaScript functions, we will build a small todo list.
 
-Download the files required to begin working through the example [here](https://gist.github.com/despo/309f684b7a6e002aaf1f) or alternatively get a [checkout](https://gist.github.com/309f684b7a6e002aaf1f.git) using git.
+Download the files required to begin working through the example [here](https://gist.github.com/despo/309f684b7a6e002aaf1f) or alternatively checkout with git.
+
+```bash
+git checkout https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
+```
 
 Move the files under your github page folder, in a new directory `wishlist`. Also, try to commit each task you complete e.g. ability to add an item to the list or label items as **Pending**. To do that, you can use the **Github Client** or alternatively **git** on the command line `git commit -m "message"`.
 
@@ -203,7 +207,7 @@ parent_node = $(this).parent();
 > Use `remove()` to remove an element from the DOM
 
 
-###  Showing the total task count
+###Show the total task count
 
 Let's create a function to update the displayed task total
 
@@ -222,6 +226,7 @@ Write the total `Pending: " + pending + " Completed: " + completed` in the eleme
 ###Bonus
 
 Update the displayed totals by calling `updateTotal()`
+
 1. after adding an item to the list
 2. when changing the state of an item from **Pending** to **Done**
 
@@ -235,7 +240,11 @@ Have a look at our [**Wish List**](../../examples/wishlist/index.html).
 
 # Exercise 2: Build a colorpicker
 
-[Download the files](https://gist.github.com/despo/ab21d29aa1ea8fbbbb0e/download) required to begin working through the example or alternatively get a [checkout](https://gist.github.com/ab21d29aa1ea8fbbbb0e.git) using git.
+[Download the files](https://gist.github.com/despo/ab21d29aa1ea8fbbbb0e/download) required to begin working through the example or alternatively get a checkout.
+
+```bash
+https://gist.github.com/ab21d29aa1ea8fbbbb0e.git
+```
 
 Move the files under your github page folder, in a  directory colorpicker.
 Don't forget to commit each task you complete! That way it will be easier to retrace your steps if something goes wrong!
