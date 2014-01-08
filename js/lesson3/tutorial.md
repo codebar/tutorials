@@ -61,14 +61,14 @@ var heading = $('h1');
 heading.css('color', 'red');
 ```
 
-##value()
+##val()
 
 To set and get the text in an input field, you can use `val()`. Similar to `attr()` and `css()` you can use the function without any parameters to retrieve the value, and `val(value)` to update the value.
 
 To empty an input field, you can set value to an empty string.
 
 ```javascript
-.value("");
+.val("");
 
 ```
 
