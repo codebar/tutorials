@@ -61,14 +61,14 @@ var heading = $('h1');
 heading.css('color', 'red');
 ```
 
-##value()
+##val()
 
 To set and get the text in an input field, you can use `val()`. Similar to `attr()` and `css()` you can use the function without any parameters to retrieve the value, and `val(value)` to update the value.
 
 To empty an input field, you can set value to an empty string.
 
 ```javascript
-.value("");
+.val("");
 
 ```
 
@@ -139,7 +139,7 @@ Using JQuery and JavaScript functions, we will build a small todo list.
 Download the files required to begin working through the example [here](https://gist.github.com/despo/309f684b7a6e002aaf1f) or alternatively checkout with git.
 
 ```bash
-git checkout https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
+git clone https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
 ```
 
 Move the files under your github page folder, in a new directory `wishlist`. Also, try to commit each task you complete e.g. ability to add an item to the list or label items as **Pending**. To do that, you can use the **Github Client** or alternatively **git** on the command line `git commit -m "message"`.
