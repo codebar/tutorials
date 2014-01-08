@@ -1,4 +1,5 @@
 /* Exercise 1: Wish list */
+var wishes = [ "learn how to use JQuery", "build a website", "go to Japan" ]
 
 function addToList(item) {
   $('ol#items').append("<li>" + item + "<span class='label pending'>Pending</span></li>");
@@ -14,6 +15,10 @@ function updateTotal() {
 }
 
 $(document).ready(function(){
+  $.each(wishes, function(index, element) {
+    addToList(element);
+  });
+  updateTotal();
 
   $(document).on('click','#add-to-list',function(){
     item = $("#item").val();

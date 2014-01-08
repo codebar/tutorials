@@ -26,11 +26,11 @@ Selectors are simplified in JQuery. You can access elements by element type, id 
 For example, to retrieve all paragraph elements you can use this selector `$("p")` or to retrieve all elements with a specific id `$("#message")` instead of using `getElementByTag('p')` or `getElementById('message')`.
 
 ```javascript
- $("p")                // all paragraph elemenets
- $("#container")       // an element with the ID container
- $(".total")           // elements with the class total
- $("ol#items")         // ordered list elements with the ID items
- $("ol#items li")      // list elements, within an ordered list with the id colors
+$("p")                // all paragraph elemenets
+$("#container")       // an element with the ID container
+$(".total")           // elements with the class total
+$("ol#items")         // ordered list elements with the ID items
+$("ol#items li")      // list elements, within an ordered list with the id colors
 ```
 
 You can also use CSS3 selectors
