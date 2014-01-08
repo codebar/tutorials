@@ -1,0 +1,94 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  border-top: 5px solid #4c4066;
+  margin: 0px auto;
+  font-size: 14px;
+  color: #666666;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #e5e2e0;
+}
+
+#logo {
+  position: relative;
+  top: -2px;
+}
+
+h1 {
+  color: #3b3b3b;
+  font-size: 3em;
+}
+
+#container {
+  width: 1040px;
+  margin: 0px auto;
+  min-height: 750px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  font-size: 1.4em;
+}
+
+input[type='text'] {
+  height: 1.9em;
+  font-size: 2em;
+  width: 400px;
+  padding: 5px;
+}
+
+ol#items {
+  padding-left: 10px;
+  margin-left: 25px;
+  font-size: 2em;
+}
+
+ol#items li {
+  padding: 10px 2px 5px;
+  border-bottom: 2px solid #E5E2E0;
+}
+
+.label {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #333333;
+  font-size: 0.5em;
+  float: right;
+}
+
+.label.pending {
+  background-color: #d95a6a;
+}
+
+.label.success {
+  background-color: #2a8930;
+}
+
+.total {
+  float: right;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+footer {
+  padding-bottom: 10px;
+  border-bottom: 5px solid #4c4066;
+  position: absolute;
+  width: 100%;
+}
+
+footer #content {
+  width: 1040px;
+  margin: 0px auto;
+}
