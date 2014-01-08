@@ -1,6 +1,6 @@
 ---
 layout: page
-title: JavaScript Lesson 2
+title: Beginning JavaScript
 ---
 
 In our previous lesson we briefly introduced JavaScript, variables.  This time we will be explaining Loops, Arrays, Objects and DOM.

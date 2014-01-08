@@ -1,7 +1,8 @@
 ---
 layout: page
-title: JavaScript Lesson 3
+title: Introduction to JQuery
 ---
+
 
 So far, we've learned the basic of Javascript. From variables, to understanding Objects, functions and how to manipulate the **D**ocument **O**bject **M**odel.
 

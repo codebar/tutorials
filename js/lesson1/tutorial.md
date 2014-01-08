@@ -1,6 +1,6 @@
 ---
 layout: page
-title: JavaScript Lesson 1
+title: Introduction to JavaScript
 ---
 
 ## What is JavaScript?
