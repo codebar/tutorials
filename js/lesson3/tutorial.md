@@ -326,7 +326,7 @@ $.each(array, function(index, element) {
 
 Iterate through the colors array in `$(document).ready()` and call `addBox(color)` to create color boxes for each of the colors.
 
-#### Getting a random element
+####Getting a random element
 
 We can also initialise the preview box by selecting a random element from the colors list.
 
@@ -352,7 +352,26 @@ This way, when the list is full, we remove a box and add another one.
 
 Similar to the first exercise, set the focus back to the `#color` input field when a color is added to the favorites list.
 
-### Publish to github
+###Change preview box on mouse over
+
+Do that by handling the **mouseenter** and **mouseleave** events.
+
+```javascript
+$(document).on('mouseenter', selector,  function(){
+ // do something
+}).on('mouseleave', selector, function() {
+ // do something else
+});
+```
+
+1. When the mouse is on top of the color box
+  1. Store the current background-color of the `.preview` box to a `previewColor` variable that you should initialise outside your function.
+  2. Retrieve the color of the box and update the preview box.
+2. When the mouse leaves
+  1. Set the color of the preview box back to how it was.
+3. You will notice that this break the behavior of the **click** function. To resolve this, set the value of preview color after updateing the preview box.
+
+## Publish to github
 
 Link to the colopicker from `index` and push your changes to github.
 Compare your colorpicker with [ours](../../examples/colorpicker/index.html).

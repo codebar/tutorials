@@ -36,5 +36,15 @@ $(document).ready(function(){
 
   $(document).on('click','.item', function(){
     setPreviewColor($(this).css('background-color'));
-  })
+    previewColor = $('.preview').css('background-color');
+  });
+
+  var previewColor;
+  $(document).on('mouseenter', '.item',  function(){
+    previewColor = $('.preview').css('background-color');
+
+    setPreviewColor($(this).css('background-color'));
+  }).on('mouseleave', '.item', function() {
+    setPreviewColor(previewColor);
+  });
 });
