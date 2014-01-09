@@ -227,7 +227,7 @@ if (people > pizzas) {
   console.log("We have more people than pizzas!");
 };
 
-if (pizzas > students) {
+if (students > pizzas) {
   console.log("But we have more students than pizzas! Let's not give the coaches any food.");
 };
 ```
