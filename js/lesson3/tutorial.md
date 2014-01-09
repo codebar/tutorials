@@ -43,7 +43,7 @@ $("li:odd");           // all odd numbered list items
 $("li:first-child");   // the first child in a list
 ```
 
-## Accessing attributes `atts()`
+##Accessing attributes `atts()`
 
 Using the `attr()` method you can retrieve any element attribute.
 
@@ -52,7 +52,7 @@ $('#logo').attr('width')
 $('#logo').attr('width', 300)
 ```
 
-## Changing css attributes
+##Changing css attributes
 
 You can get and set the css properties of an item by using the `css()` action.
 
@@ -90,7 +90,7 @@ $('#container').replaceWith("<div>I love JQuery!</div>")
 
 > Check the html of the page using the inspector.
 
-## Handling Events
+##Handling Events
 
 Events is what happens when you interact with a website. Some events that you can capture are a **change** in an input field, a mouse **click** or even **focus** on an element. You can find a [all the events here](http://api.jquery.com/category/events/)
 
@@ -105,7 +105,7 @@ With JQuery we can achieve this by applying event listeners to the document of t
 ```js
 $(document).on('click','.done', function() {
  alert("Click event");
-}
+});
 ```
 
 **Handling events**
@@ -113,14 +113,14 @@ $(document).on('click','.done', function() {
 ```javascript
 $(document).on(event, selector, function() {
   // code to be executed when event occurs
-}
+});
 ```
 
 Using the `on()` method, means that the click event will work even if we add new items to the DOM dynamically.
 
 > `$(this)` is the element that we have triggerred the event from.
 
-## Waiting for the page to load
+##Waiting for the page to load
 
 ```js
 $(document).ready(function() {
@@ -132,7 +132,7 @@ $(document).ready(function() {
 
 Make a note of this. You should **always** use it or else your bindings won't work and the functions will run when you are loading the page.
 
-# Exercise 1: Build a wish list
+#Exercise 1: Build a wish list
 
 Using JQuery and JavaScript functions, we will build a small todo list.
 
@@ -142,10 +142,14 @@ Download the files required to begin working through the example [here](https://
 git clone https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
 ```
 
-Move the files under your github page folder, in a new directory `wishlist`. Also, try to commit each task you complete e.g. ability to add an item to the list or label items as **Pending**. To do that, you can use the **Github Client** or alternatively **git** on the command line `git commit -m "message"`.
+Move the files under your github page folder, in a new directory `wishlist`. Also, try to commit each task you complete e.g. ability to add an item to the list or label items as **Pending**. To do that, you can use the **Github Client** or alternatively **git** on the command line:
+
+```bash
+git commit -m "message"
+```
 
 
-## Functionality
+##Functionality
 - add wishes to the list by clicking the Add button
 - label added items as **Pending**
 - allow to set items to completed by **clicking** on the label and change the label to **Done**
@@ -161,7 +165,7 @@ function addToList(item) {
 
 }
 ```
-In the `index.html` file, we already have an `<ol>` component, so we want to add each new item, as a list item. We can do that by constructing the html we need `"<li>" + item "<\li>"` and adding it to the list using `append()`.
+In the `index.html` file, we already have an `<ol>` component, so we want to add each new item, as a list item. We can do that by constructing the html we need `"<li>" + item + "</li>"` and adding it to the list using `append()`.
 
 We can get the ordered list using the element tag and the id `$("ol#items")`
 
@@ -179,7 +183,7 @@ After adding the item to the list
 1. Empty the text field
 2. Use `focus()` to place the cursor back to the textfield
 
-### Label items
+###Label items
 
 To label items, update update the html of the list item being added to the list, so it includes a label.
 
@@ -189,7 +193,7 @@ Refresh the page and run `addToList("build a website")` again.
 
 ![](assets/images/build-a-website.png)
 
-### Setting items to complete
+###Setting items to complete
 
 When we click on the Pending label, we wanto set items to complete. We will do that by adding a css class `.complete` to the list item (use `$('#colors .item')`, **append** a new label `<span class='label success'>Done!</span>` and **remove** the item we've just clicked so that we can't triger the event again.
 
@@ -230,7 +234,7 @@ Update the displayed totals by calling `updateTotal()`
 1. after adding an item to the list
 2. when changing the state of an item from **Pending** to **Done**
 
-### Pushing to github page
+###Pushing to github page
 
 Link to wishlist/index.html from the `index.html` of your github page. Push your changes to the _github-pages_ branch and check you can access the project from the internet.
 Access the wish list at **http://`<username>`.github.io/`<project>`/wishlist/index.html**
@@ -238,7 +242,7 @@ Access the wish list at **http://`<username>`.github.io/`<project>`/wishlist/ind
 Have a look at our [**Wish List**](../../examples/wishlist/index.html).
 
 
-# Exercise 2: Build a colorpicker
+#Exercise 2: Build a colorpicker
 
 [Download the files](https://gist.github.com/despo/ab21d29aa1ea8fbbbb0e/download) required to begin working through the example or alternatively get a checkout.
 
@@ -249,7 +253,7 @@ https://gist.github.com/ab21d29aa1ea8fbbbb0e.git
 Move the files under your github page folder, in a  directory colorpicker.
 Don't forget to commit each task you complete! That way it will be easier to retrace your steps if something goes wrong!
 
-## Functionality
+##Functionality
 - set background color of `.preview`
 - change the background color when we apply **keypress**, **keydown** and **keyup** events to the text
 - restrict favorites list colors to 16
@@ -272,19 +276,19 @@ function setPreviewColor(color) {
 ```javascript
  $(document).on('click change', '#color', function() {
 
- }
+ });
 ```
 
 Handle the `keydown keyup` and `keypress` events of the `#color` input. Pass the value of the input field to the `setPreviewColor(color)` functions.
 
-### Set the color value
+###Set the color value
 
 Extend `previewColor()` to also set the value of `.color-code` to the `background-color` of the `.preview` div.
 As the color code is converted to *rgb* when set, that is the value the we will be displaying.
 
 ![](assets/images/color-codes.png)
 
-## Add colors to favorites list
+##Add colors to favorites list
 
 Retrieve the color from the input field and add a box to the start of the `#colors` div every time the **Add to favorites** button is pressed, by handling the **click** event.
 
@@ -292,7 +296,7 @@ Retrieve the color from the input field and add a box to the start of the `#colo
 "<div class='item' style='background-color: " + color + ";'><div>"
 ```
 
-### Create a function that adds the box to `#colors`
+###Create a function that adds the box to `#colors`
 
 ```javascript
 function addBox(color) {
@@ -304,7 +308,7 @@ function addBox(color) {
 
 > Run `addBox('FF0033')` from the console to make sure your code works.
 
-#### Bind the function to the **click** event.
+####Bind the function to the **click** event.
 
 1. First retrieve the value from the `#color` field using `val()`
 2. Add a box with that color
@@ -315,7 +319,7 @@ Try it out by writing a new color code in RGB, hex or humanly readable format (e
 > Did you remember to wrap the bound event in a `$(document).ready() {   });` block?
 
 
-## Setting up data
+##Setting up data
 
 Pick 10 color codes you like and store them in an array.
 
@@ -328,7 +332,7 @@ We can iterate through the array using JQuery's `each()` function.
 ```javascript
 $.each(array, function(index, element) {
   // do something
-})
+});
 ```
 
 **index** is the position of the element in the array, and **element**, in our case will be the color.
@@ -343,7 +347,7 @@ We can also initialise the preview box by selecting a random element from the co
 To get a random number we can use `Math.random()`, which will give us a random number between 0 and 1. We then have to apply `Math.floor()` to round down to the closest number.
 
 ```javascript
-random_position = Math.floor(Math.random()*colors.length)
+random_position = Math.floor( Math.random() * colors.length )
 ```
 
 > Use the `array[index]` notation to retrieve the colors at the random position.
@@ -358,7 +362,7 @@ We only want to be able to add 16 colors to our favorite list. To do that, we ca
 
 This way, when the list is full, we remove a box and add another one.
 
-### Set focus
+###Set focus
 
 Similar to the first exercise, set the focus back to the `#color` input field when a color is added to the favorites list.
 
@@ -381,7 +385,7 @@ $(document).on('mouseenter', selector,  function(){
   1. Set the color of the preview box back to how it was.
 3. This breaks the behavior of the **click** function. Fix it!
 
-## Publish to github
+##Publish to github
 
 Link to the colopicker from `index` and push your changes to github.
 Compare your colorpicker with [ours](../../examples/colorpicker/index.html).
