@@ -1,0 +1,68 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  border-top: 5px solid #4c4066;
+  margin: 0px auto;
+  font-size: 14px;
+  color: #666666;
+  font-size: 16px;
+}
+
+header {
+  text-align: center;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #e5e2e0;
+}
+
+#logo {
+  position: relative;
+  top: -2px;
+}
+
+#container {
+  width: 1040px;
+  margin: 0px auto;
+  min-height: 750px;
+  text-align: center;
+}
+
+input[type='text'] {
+  height: 2.2em;
+  font-size: 2em;
+  width: 50%;
+  padding: 5px;
+}
+
+.information, .avatar {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.information {
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.search {
+  text-align: center;
+  margin: 50px auto;
+}
+
+h2 {
+  padding: 5px;
+}
+
+.profile {
+  height: 130px;
+  width: 150px;
+  padding: 90px 30px 0;
+  display: block;
+  background-color: purple;
+  text-decoration: none;
+  color: white;
+  font-width: bold;
+}
+
+.profile:hover {
+  background-color: #b300b3;
+}
