@@ -66,3 +66,15 @@ h2 {
 .profile:hover {
   background-color: #b300b3;
 }
+
+footer {
+  padding-bottom: 10px;
+  border-bottom: 5px solid #4c4066;
+  position: absolute;
+  width: 100%;
+}
+
+footer #content {
+  width: 1040px;
+  margin: 0px auto;
+}
