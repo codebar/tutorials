@@ -394,4 +394,4 @@ Compare your colorpicker with [ours](../../examples/colorpicker/index.html).
 
 
 ---
-This ends our **Introduction to JQuery**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **Introduction to JQuery** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

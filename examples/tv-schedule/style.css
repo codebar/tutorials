@@ -1,0 +1,110 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  border-top: 5px solid #4c4066;
+  margin: 0px auto;
+  font-size: 14px;
+  color: #666666;
+  font-size: 16px;
+}
+
+header {
+  text-align: center;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #e5e2e0;
+}
+
+#logo {
+  position: relative;
+  top: -2px;
+}
+
+#container {
+  width: 1040px;
+  margin: 0px auto;
+  min-height: 750px;
+}
+
+input[type='text'] {
+  height: 2.2em;
+  font-size: 2em;
+  width: 400px;
+  padding: 5px;
+}
+
+.information, .avatar {
+  vertical-align: top;
+  display: inline-block;
+  width: 40%;
+}
+
+.search {
+  text-align: center;
+  margin: 50px auto;
+}
+
+h2 {
+  color: #A26CD2;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+#genres li {
+  padding: 10px;
+  margin: 5px;
+  background-color: #5E5A6B;
+  color: #ffffff;;
+  border-radius: 5px;
+}
+
+#genres li.active {
+  background-color: purple;
+}
+
+#programmes li {
+  width: 45%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #FDFDFD;
+  border-radius: 5px;
+  box-shadow: 0px -1px 1px 2px #dbdbdb;
+  vertical-align: top;
+}
+
+.service {
+  background-color: #A26CD2;
+  padding: 5px;
+  float: right;
+  border-radius: 5px;
+  color: black;
+}
+
+.spinner {
+  width: 100%;
+  margin-top: 200px;
+  text-align: center;
+}
+
+.no-programmes {
+  margin-top: 100px;
+  text-align: center;
+}
+
+footer {
+  padding-bottom: 10px;
+  border-bottom: 5px solid #4c4066;
+  position: absolute;
+  width: 100%;
+}
+
+footer #content {
+  width: 1040px;
+  margin: 0px auto;
+}
