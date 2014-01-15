@@ -43,7 +43,7 @@ $("li:odd");           // all odd numbered list items
 $("li:first-child");   // the first child in a list
 ```
 
-##Accessing attributes `atts()`
+##Accessing attributes `attr()`
 
 Using the `attr()` method you can retrieve any element attribute.
 
