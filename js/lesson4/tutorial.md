@@ -137,7 +137,9 @@ $(document).ready(function(){
 
 ###Handling a failed request
 
-To get started,, let's make sure we handle any requests that have failed. So, any requests that don't return `200` status.
+First, let's make sure we handle any requests that have failed.
+
+> Have a look in the status codes. There is only one response code for a succesfuly request, anything else should be classed as a failure.
 
 When we have a failing request, we want to change the `html` of `$("#profile h2")` to `No such user: <username>`
 
@@ -163,7 +165,7 @@ The `showUser(user)` function should:
 
 *You can read more about [Gravatar Image Requests](http://uk.gravatar.com/site/implement/images/).
 
-Don't forget to call `showUser()` from the function handling the keypress!
+> Don't forget to call `showUser()` from the function handling the keypress!
 
 ##Publish to github
 
@@ -208,10 +210,14 @@ $.ajax({
 
 For the second exercise, we will build an application that retrieves tomorrow's TV schedule for each genre using BBC's api.
 
-What we will be doing
+###What we will be doing:
+
 1. Retrieve and render available genres using `http://www.bbc.co.uk/tv/programmes/genres.json`
+
 2. Write a function that retrieves tomorrow's TV schedule using a genre `http://www.bbc.co.uk/tv/programmes/genres/<genre>/schedules/tomorrow.json`
+
 3. Write a function that displays each programme
+
 4. **Bonus** Retrieve all upcoming episodes of a programme
 
 ## Retrieving and displaying all available genres
