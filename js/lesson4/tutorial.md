@@ -26,14 +26,14 @@ As part of the response, a request gives back a **status code**. You can use thi
 
 | Status code | Message | Description |
 | ------------| ------- | ------------ |
-|  200        |   OK    | Succesful request |
+|  200        |   OK    | Successful request |
 |  304        |   Not modified    | The page has not been modified since we last retrieved data |
 |  400        |   Bad Request | The server did no understand the request |
 |  404        |   Not Found | The server could not find the requested resource |
 
 ###HTTP Verbs
 
-HTTP Verbs are the actions performed when the server receices a request.
+HTTP Verbs are the actions performed when the server receives a request.
 
 | Verb | Description |
 | ---- | ----------- |
@@ -139,13 +139,13 @@ $(document).ready(function(){
 
 First, let's make sure we handle any requests that have failed.
 
-> Have a look in the status codes. There is only one response code for a succesfuly request, anything else should be classed as a failure.
+> Have a look in the status codes. There is only one response code for a successfully request, anything else should be classed as a failure.
 
 When we have a failing request, we want to change the `html` of `$("#profile h2")` to `No such user: <username>`
 
 Try this out using username: `iamcodebar` (or if someone registered this, make up a random string)
 
-###Handling a succesful request
+###Handling a successful request
 
 When the request is succesful, we want to call another function that will handle displaying the information on the page. Let's do that in a showUser() function.
 
@@ -178,7 +178,7 @@ Here is a link to our [Github User Finder](../../examples/github-user-finder/ind
 ##Request using JQuery
 
 AJAX requests can also be handled using JQuery using the `ajax()` method.
-Things are a bit easier when using JQuery as we can create different code blocks that handle succesful or failed requests.
+Things are a bit easier when using JQuery as we can create different code blocks that handle successful or failed requests.
 
 ```js
 $.ajax({
@@ -208,7 +208,7 @@ $.ajax({
 
 [Download](https://gist.github.com/despo/05cab2f0b38bc02318e7) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
 
-For the second exercise, we will build an application that retrieves tomorrow's TV schedule for each genre using BBC's api.
+For the second exercise, we will build an application that retrieves tomorrow's TV schedule for each genre using BBC's API.
 
 ###What we will be doing:
 
@@ -231,13 +231,13 @@ function retrieveGenres() {
 ```
 > Try logging the resulted data and have a look in the console to see and explore the created objects
 
-> `<key>` is the genre format we need to retrieve results from the api
+> `<key>` is the genre format we need to retrieve results from the API
 
 > You can use `<title>` to display a humanly readable format of the Genre
 
 As you can see from the console, the resulting objects are returned inside an Array. We want to iterate over the list using the `$.each( )` function and add each item to the `#genres` list, as a **list item**. As we need to have access to the `key` as well, we can set that as the list item's `id`.
 
-Now that we have all the available genres, we can move on to making calls to the api using the genre to retrieve tomorro's schedule!!
+Now that we have all the available genres, we can move on to making calls to the API using the genre to retrieve tomorrow's schedule!!
 
 ##Retrieve schedule
 
@@ -321,7 +321,7 @@ To make this a bit easier, this is how you can access the values we need:
 * `item.duration`
 * `item.service.title`
 
-It would be easier to use string concatanation to construct the html, before appending each tiem to the list.
+It would be easier to use string concatenation to construct the html, before appending each item to the list.
 Also, to make your code easier to read, try constructing the html in a method that you pass the response object.
 
 ```javascript
@@ -346,16 +346,16 @@ Handle a `click` event on `#genres li` and make a call to `getTomorrowsSchedule(
 
 ###Improving our function
 
-To make the genre we have just clicked active, we also want to add the css class `active` to the element that the event has been triggerred from.  Don't forget to remove the class `active` from any other `#genres li` items.
+To make the genre we have just clicked active, we also want to add the css class `active` to the element that the event has been triggered from.  Don't forget to remove the class `active` from any other `#genres li` items.
 
 > Did you remember to commit your changes?
 
 ### Using `beforeSend`
 
-Every time we issue a call to the api, we want to clear the `#programmes` list. We can do that using `empty()`.
+Every time we issue a call to the API, we want to clear the `#programmes` list. We can do that using `empty()`.
 Also, as some of the requests take a while, we want to display a spinning image `<div class='spinner'><img src='spinner.gif' /></div>`.
 
-> Don't forget to remove the spinner, when the request is completed succesfuly.
+> Don't forget to remove the spinner, when the request is completed successfully.
 
 ##Bonus: Retrieving all upcoming episodes of a programme
 
