@@ -252,7 +252,7 @@ function getTomorrowsSchedule(genre) {
 The response you get back should look similar to this, with multiple objects in the broadcasts array.
 
 ```json
-
+{
    "broadcasts":[
       {
          "is_repeat":false,
