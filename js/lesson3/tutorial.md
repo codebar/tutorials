@@ -68,7 +68,7 @@ To set and get the text in an input field, you can use `val()`. Similar to `attr
 To empty an input field, you can set value to an empty string.
 
 ```javascript
-.val("");
+$('input').val("");
 
 ```
 
@@ -80,7 +80,7 @@ There are many diffrent ways you can add content. You can use **append** to add 
 $('#container').append("<div>I love JQuery!</div>")
 ```
 
-You can also use `replace()` to substitute an element entirely with some new content.
+You can also use `replaceWith()` to substitute an element entirely with some new content.
 
 Try this out in your browser.
 
@@ -185,7 +185,7 @@ After adding the item to the list
 
 ###Label items
 
-To label items, update update the html of the list item being added to the list, so it includes a label.
+To label items, update the html of the list item being added to the list, so it includes a label.
 
 `<span class='label pending'>Pending</span>`
 
@@ -195,15 +195,15 @@ Refresh the page and run `addToList("build a website")` again.
 
 ###Setting items to complete
 
-When we click on the Pending label, we wanto set items to complete. We will do that by adding a css class `.complete` to the list item (use `$('#colors .item')`, **append** a new label `<span class='label success'>Done!</span>` and **remove** the item we've just clicked so that we can't triger the event again.
+When we click on the Pending label, we want to set items to complete. We will do that by adding a css class `.complete` to the list item (use `addClass()`), **append** a new label `<span class='label success'>Done!</span>` and **remove** the item we've just clicked so that we can't triger the event again.
 
-> Use `this()` to access the element that the event was triggered from.
+> Use `$(this)` to access the element that the event was triggered from.
 
 First of all, bind a **click** event to the span we've added using its class with the `on()` function. As `<li>` is the parent node of the <span> element, we can access it using `parent()` (which is equivalent to `parentNode`
 that we've used in the previous lesson).
 
 ``` js
-parent_node = $(this).parent();
+var parent_node = $(this).parent();
 ```
 
 > Use `attr()` to set the class attribute to `completed` or alternatively `addClass()`
