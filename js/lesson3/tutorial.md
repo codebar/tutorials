@@ -356,7 +356,7 @@ Set `.preview`'s background color, to the random color code.
 
 ##Bonus
 
-###Retrict number of displayed boxes
+###Restrict number of displayed boxes
 
 We only want to be able to add 16 colors to our favorite list. To do that, we can update the code handling the **click** event and check that the length of `$("#colors .item")` is **equal** than 16. If it's not, remove the last element.
 
