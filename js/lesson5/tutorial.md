@@ -37,6 +37,8 @@ $.ajax({
 
 ##Exercise - Hangman!
 
+![](assets/images/hangman.png)
+
 [Download](https://gist.github.com/despo/c76a7bd0bef66713a9ac/download) the exercise files or clone them directly from github `git clone https://gist.github.com/c76a7bd0bef66713a9ac.git`
 
 ###API
