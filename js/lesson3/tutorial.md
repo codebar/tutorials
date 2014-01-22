@@ -283,7 +283,7 @@ Handle the `keydown keyup` and `keypress` events of the `#color` input. Pass the
 
 ###Set the color value
 
-Extend `previewColor()` to also set the value of `.color-code` to the `background-color` of the `.preview` div.
+Extend `setPreviewColor()` to also set the value of `.color-code` to the `background-color` of the `.preview` div.
 As the color code is converted to *rgb* when set, that is the value the we will be displaying.
 
 ![](assets/images/color-codes.png)
