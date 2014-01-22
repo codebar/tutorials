@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>codebar.io - Hangman</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <header>
+    <img id="logo" src='https://raw.github.com/codebar/planner/master/app/assets/images/logo.png' width='200' />
+    </header>
+    <div id="container">
+      <div class="board">
+        <div class="hangman-word"> </div>
+        <div class="remaining-guesses">
+          <span class="remaining">7</span> guesses left
+        </div>
+
+        <div class="console">
+          <input type="hidden" class="token"> </input>
+          <input type="text" maxlength=1 class="letter"> </input>
+          <button id="guess">Guess</button>
+        </div>
+        <div class="attempts"></div>
+        <button id="new-game">Start a new game</button>
+      </div>
+      <br/>
+
+    </div>
+    <footer>
+    <div id="content"> by <a href="http://codebar.io">codebar</a> </div>
+    </footer>
+  </body>
+</html>
+

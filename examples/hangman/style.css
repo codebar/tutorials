@@ -1,0 +1,110 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  border-top: 5px solid #4c4066;
+  margin: 0px auto;
+  font-size: 14px;
+  color: #666666;
+  font-size: 16px;
+}
+
+header {
+  text-align: center;
+  background-color: #fdfdfd;
+  border-bottom: 1px solid #e5e2e0;
+}
+
+#logo {
+  position: relative;
+  top: -2px;
+}
+
+input.error {
+  border: 2px solid #da5754;
+}
+
+span.error {
+  color: #da5754;
+}
+
+.remaining-guesses {
+  padding-top: 30px;
+  font-size: 1.5em;
+}
+
+#container {
+  width: 1040px;
+  margin: 0px auto;
+  margin-top: 100px;
+  min-height: 750px;
+}
+
+input[type='text'] {
+  height: 2.2em;
+  font-size: 2em;
+  width: 80px;
+  text-align: center;
+  padding: 5px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  font-size: 1.4em;
+}
+
+.correct {
+  color: '#08a932';
+}
+
+.wrong {
+  color: #da5754;
+}
+
+.attempts {
+  font-size: 2em;
+  margin-top: 50px;
+  min-height: 50px;
+}
+
+#new-game {
+  padding: 20px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.attempts span:not(:last-child):after {
+  color: black;
+  content: ", ";
+}
+
+.console {
+  width: 200px;
+  margin: 100px auto 50px;
+}
+
+.hangman-word {
+  text-align: center;
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-weight: bold;
+  color: #b5b5b5;
+}
+
+.board {
+  margin: 20px;
+  text-align: center;
+}
+
+footer {
+  padding-bottom: 10px;
+  border-bottom: 5px solid #4c4066;
+  position: absolute;
+  width: 100%;
+}
+
+footer #content {
+  width: 1040px;
+  margin: 0px auto;
+}
