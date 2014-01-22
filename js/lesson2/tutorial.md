@@ -289,7 +289,7 @@ and add a link that triggers the function
 An easier way of interacting with the DOM is by retrieving elements using their tag.
 
 ```js
-document.getElementByTag("h1");
+document.getElementsByTagName("h1");
 ```
 
 That's not very easy though, as it's likely that you will have multiple paragraphs, divs, links or other elements.
