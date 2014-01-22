@@ -193,23 +193,23 @@ if (!codebarIsAwesome) {
 
 Conditions work with a number of evaluated statements. Some of the comparisons we can use are
 
-#### Equality `==`
+#### Equality `===`
 
 ```js
 var apples = "apples";
 var oranges = "oranges";
 
-if (apples == oranges) {
+if (apples === oranges) {
   console.log("Apples and Oranges are the same thing!");
 }
 ```
 
 This should not output anything, **apples** and **oranges** are not the same thing!
 
-#### Inequality `!=`
+#### Inequality `!==`
 
 ```js
-if (apples != oranges) {
+if (apples !== oranges) {
   console.log("Apples are not Oranges!");
 }
 ```
