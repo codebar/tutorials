@@ -314,7 +314,7 @@ Add a bottom border, to give the effect of a line, to the individual list items 
 
 ## Pseudo classes
 
-A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes, we can specidy different styling for different states of a link
+A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes, we can specify different styling for different states of a link
 
 ```css
 a:link
