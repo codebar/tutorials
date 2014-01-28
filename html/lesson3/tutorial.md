@@ -324,7 +324,7 @@ a:active
 ```
 
 Order is **very** important. Always use the order descibed above if you want to apply differente styling for all of the states described above.
-The most commonly used pseudo class for links, that we will also be using today it `a:hover`
+The most commonly used pseudo class for links, that we will also be using today is `a:hover`
 
 ## Styling links
 
