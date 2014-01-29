@@ -68,7 +68,7 @@ Now let's add another rectangle, but this time only its outline.
 context.strokeRect(400, 100, 50, 100);
 ```
 
-**Bonus** Add a new rectangle outline with dimensions **120x150**at the bottom right of the screen, with **line width** 1
+**Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the screen, with **line width** 1
 
 ### Reseting canvas
 
@@ -93,7 +93,7 @@ context.lineTo(400,500);
 
 This won't do anything until we call the `stroke()`, which deals with the painting.
 
-We can also draw a line joining up multiple paths. Let's create a rectange with corners at (0, 0), (0, 200), (200, 300) and (200, 0).
+You can also draw an join multiple paths together. Let's create a rectange with corners at (0, 0), (0, 200), (200, 300) and (200, 0).
 
 ```javascript
 context.beginPath();
@@ -112,7 +112,7 @@ context.stroke();
 
 ## Drawing circles
 
-We can also create circles using `arc(x, y, radius, staging_angle, endingAngle, counterClockwise)`
+To draw circles, you can use the `arc` method. `arc(x, y, radius, staging_angle, endingAngle, counterClockwise)`
 
 ```javascript
 context.beginPath();
