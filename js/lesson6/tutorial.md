@@ -184,7 +184,7 @@ We have already created the functions to draw the individual parts, so you shoul
 
 > Don't forget `beginPath()` and `stroke()` before and after drawing elements.
 
-Here is our version of [Hangman in Canvas](../../examples/canvas-hangman/index.html).
+Here is our version of [Hangman in Canvas](../../examples/hangman-canvas/index.html).
 
 ##Bonus
 
