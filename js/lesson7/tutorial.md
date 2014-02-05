@@ -121,7 +121,7 @@ kms = miles * 1.609
 
 > Can you think of any other unit conversions you would find handy? Can you implement them?
 
-## Homework
+##Homework
  Build an HTML page for your converter.
 
 # Test matchers
