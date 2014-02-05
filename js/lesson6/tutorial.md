@@ -68,11 +68,11 @@ Now let's add another rectangle, but this time only its outline.
 context.strokeRect(400, 100, 50, 100);
 ```
 
-**Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the screen, with **line width** 1
+**Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the screen. The **line width** of the rectangle should be 1.
 
 ### Reseting canvas
 
-To reset the canvas, all you have to do is sets its width. You don't even need to change the value so you can just do
+Canvas does not have a reset function, but you can reset it by setting its width. You don't even need to change the value of the width so you can do:
 
 ```javascript
 canvas.width = canvas.width;
@@ -80,11 +80,11 @@ canvas.width = canvas.width;
 
 **Exercise**
 
-Create a reset() function that reset the canvas, and call it when the Reset button is being clicked.
+Reset the canvas when the Reset button is clicked, by calling a reset() function.
 
 ### Drawing paths
 
-Let's draw a line going from the middle left to the bottom right corner of the canvas.
+Draw a line going from the middle left to the bottom right corner of the canvas.
 
 ```javascript
 context.moveTo(0,300);
@@ -93,7 +93,7 @@ context.lineTo(400,500);
 
 This won't do anything until we call the `stroke()`, which deals with the painting.
 
-You can also draw an join multiple paths together. Let's create a rectange with corners at (0, 0), (0, 200), (200, 300) and (200, 0).
+You can also draw an join multiple paths together. Try this out by creating a rectange with corners at (0, 0), (0, 200), (200, 300) and (200, 0).
 
 ```javascript
 context.beginPath();
