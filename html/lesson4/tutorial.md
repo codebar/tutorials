@@ -9,7 +9,7 @@ footer: true
 ### Recap
 
 In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets.
-**HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements and pseudo clases.
+**HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements and pseudo classes.
 
 
 ### Today we will be building a website and learn more about CSS layouts and formatting
