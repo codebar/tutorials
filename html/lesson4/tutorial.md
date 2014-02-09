@@ -9,7 +9,7 @@ footer: true
 ### Recap
 
 In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets.
-**HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements and pseudo classes.
+**HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements and pseudo clases.
 
 
 ### Today we will be building a website and learn more about CSS layouts and formatting
@@ -467,7 +467,7 @@ padding: 150px 30px 40px;
 
 > Do you remember the padding shortcuts we disussed in the previous lessson? What does the above describe? Can you explain that to your coach?
 
-There is still one small problem with out page. You can view this better if you resize your browser window to fit one third of your screen and scroll down. The images now appear on top of the header. This is due to removing the element from of the normal flow of the page.
+There is still one small problem with our page. You can view this better if you resize your browser window to fit one third of your screen and scroll down. The images now appear on top of the header. This is due to removing the element from of the normal flow of the page.
 
 ### z-index
 
