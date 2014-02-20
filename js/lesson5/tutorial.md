@@ -52,43 +52,39 @@ $.ajax({
 
 1. Create a new game
 
-     1. Issue **POST** request
+    1. Issue **POST** request
 
-     2. Update the displayed string on the page and store the token
+    2. Update the displayed string on the page and store the token
+        - Use the hidden field with the class `token`
 
-	- Use the hidden field with the class `token`
-
-     3. Don't allow the user to start a new game, hide the **New game** bubtton
+    3. Don't allow the user to start a new game, hide the **New game** bubtton
 
 2. Interact with the API to try out different guesses
 
-     1. Issue **PUT** request
+    1. Issue **PUT** request
+        - Use `data.correct` to check if the response was successful or not
 
-	- Use `data.correct` to check if the response was successful or not
+    2. Update the displayed word
 
-     2. Update the displayed word
+    3. Update the stored token
 
-     3. Update the stored token
-
-     4. Update remaining attempts and display all guesses
-
-	- If an attempt is not succesful, appent it to the `$('.attempts')` using a span with the class `wrong`
-
-	- You can then find out how many wrong attempts there wer using `$('.wrong').length+1;`
+    4. Update remaining attempts and display all guesses
+        - If an attempt is not succesful, appent it to the `$('.attempts')` using a span with the class `wrong`
+        - You can then find out how many wrong attempts there wer using `$('.wrong').length+1;`
 
 3. On the 7th failure, retrieve the solution using the **GET** request
 
-     1. Display the solution, hide the input field and allow a user to start a new game
+    1. Display the solution, hide the input field and allow a user to start a new game
 
 4. **Bonus** don't process letters, guesses that have already been attempted or empty space 
-	
-     1. You can use JQuery's `$.isNumeric(character))` to check if a letter is a number
 
-     2. `trim()` removes all space around a string. You can apply `trim()` and check for the length to make sure the guess is one character long
+    1. You can use JQuery's `$.isNumeric(character))` to check if a letter is a number
 
-     3. All the attempted guesses are already in `.attempts`. You can use `indexOf(character)` to check if it's contained in a string.
+    2. `trim()` removes all space around a string. You can apply `trim()` and check for the length to make sure the guess is one character long
 
-     4. Add the class `error` to the letter field when the character is not allowed.
+    3. All the attempted guesses are already in `.attempts`. You can use `indexOf(character)` to check if it's contained in a string.
+
+    4. Add the class `error` to the letter field when the character is not allowed.
 
 ### Other help
 
