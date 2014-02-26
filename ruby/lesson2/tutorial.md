@@ -45,7 +45,7 @@ To get all the numbers from 1 up to 5, excluding 5.
 (1...5).to_a
 ```
 
-> `to_a` converts a range to an integer
+> `to_a` converts a range to an array
 
 ### `Random.rand()`
 
