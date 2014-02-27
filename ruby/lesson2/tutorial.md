@@ -123,7 +123,7 @@ To get the number of seconds that it takes to run the game we can store the time
 
 > Try outputting `Time.now` the the irb
 
-First create and assign the time to a variable `start`. Then, subtract `start - Time.now` and output that.
+First create and assign the time to a variable `start`. Then, subtract `Time.now - start` and output that.
 
 ```ruby
 puts "Total time #{duration} seconds
@@ -137,7 +137,7 @@ puts "#{duration/turns} seconds per problem"
 
 ### Bonus
 
-At the beginning of the game askfor the number of turns. If return is pressed default to 0.
+At the beginning of the game ask for the number of turns. If return is pressed default to 0.
 
 > To dyanmically load a value you can use the `||=` operant.
 
