@@ -79,7 +79,7 @@ In this exercise we want to generate two random numbers x and y using `Random.ra
 ```ruby
 print "#{x} + #{y} = "
 
-answer = gets.chomp()
+answer = gets.chomp().to_i
 ```
 
 if the answer is correct, output `Right!`. If the answer is incorrect, output `Wrong :(`.
