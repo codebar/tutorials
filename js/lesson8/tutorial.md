@@ -57,7 +57,7 @@ localStorage.getItem("name");
 
 ## Effects
 
-Everyone likes effects. Have a look at [JQuery's effects](http://api.jquery.com/category/effects/). 
+Everyone likes effects. Have a look at [JQuery's effects](http://api.jquery.com/category/effects/).
 
 ## Tracking who visited your website
 
@@ -71,7 +71,7 @@ Another important thing is to remember to commit your changes often and keep thi
 
 This way, if something goes wrong and things stop working you can always revert your local changes and start over again.
 
-When working with someone else it's also nice to do your work in branches so you can open pull requests and the other person can have a look at your changes before they are merged into the main repository. We briefly discussed creating branches in the [introduction to version control tutorial](http://codebar.github.io/tutorials/version-control/introduction/tutorial.html). Try to give your branches meaninful names and when they are merged into the main **master** branch, don't forget to update your local copy.
+When working with someone else it's also nice to do your work in branches so you can open pull requests and the other person can have a look at your changes before they are merged into the main repository. We briefly discussed creating branches in the [introduction to version control tutorial](http://codebar.github.io/tutorials/version-control/introduction/tutorial.html). Try to give your branches meaningful names and when they are merged into the main **master** branch, don't forget to update your local copy.
 
 ## Useful APIs
 
@@ -79,7 +79,7 @@ In our previous tutorials we briefly introduced the [github](http://developer.gi
 
 Some popular API's that you may find useful
 
-- [Google Maps](https://developers.google.com/maps/) Get directions, map images, places of interst and a lot more information about places.
+- [Google Maps](https://developers.google.com/maps/) Get directions, map images, places of interest and a lot more information about places.
 
 - [twilio](http://www.twilio.com/docs/api/rest) Initiate calls and send text messages.
 

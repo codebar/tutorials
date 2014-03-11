@@ -60,13 +60,13 @@ Update the head of the page to include the files.
 ```
 
 
-## Converting Farheneit to Celcius
+## Converting Fahrenheit to Celsius
 
 Now, open the SpecRunner in your browser. You will notice that the one test we have is failing.
 
 When we are writing code, it's ok to write a test that is failing before making it work. This way, instead of focusing on getting things to work, we focus on what we want to achieve and then gradually work around that.
 
-We have already added a method that will be handling the conversion of Farheneit to Celcius. We also know that the formula is
+We have already added a method that will be handling the conversion of Fahrenheit to Celsius. We also know that the formula is
 
 ```javascript
 farheneit = (celcius - 32)/1.8
@@ -86,13 +86,13 @@ return farheneit.toFixed(1);
 
 > When you have a test passing, it's the right time to commit your code to git.
 
-> Add another test using a different value for the temperature. Verify the result using google search `X fahrenheit to celsius`
+> Add another test using a different value for the temperature. Verify the result using google search `X Fahrenheit to Celsius`
 
 
 ## Converting Celcius to Farheneit
 
 Not that we have that working, let's add another function that converts **celcius** to **farheneit** instead.
-First, don't forget to add your test and the expected solution. (You can use google to figure out the result)
+First, don't forget to add your test and the expected solution. (You can use Google to figure out the result)
 
 To reverse the result we can use this formula:
 
@@ -102,7 +102,7 @@ celcius = farheneit * 1.8 + 32
 
 ## Converting other units
 
-Now, add the tests and implement the conversion between the following units. DOn't forget to commit first, after you write each of your tests and then when you get the test passing.
+Now, add the tests and implement the conversion between the following units. Don't forget to commit first, after you write each of your tests and then when you get the test passing.
 
 1. Pounds to kilos (Weight)
 ```
