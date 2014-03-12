@@ -28,7 +28,7 @@ class Color
 end
 ```
 
-The name must be defined in camel case. **CamcelCase** is a way of writing compound words or phrases such that each word begins with a capital letter e.g. ColorCode, EmailAddress etc.
+The name must be defined in camel case. **CamelCase** is a way of writing compound words or phrases such that each word begins with a capital letter e.g. ColorCode, EmailAddress etc.
 
 ## Creating an instance of a class
 
