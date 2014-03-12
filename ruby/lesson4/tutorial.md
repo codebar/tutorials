@@ -9,6 +9,7 @@ There won't be any sample files for the examples today as you should already kno
 
 Don't forget to commit regularly and try to type out the examples as much as possible instead of copy pasting!
 
+If you are going through the tutorial yourself and need any help, [join the chat](https://gitter.im/codebar/tutorials) but remember to first go through our [code of conduct](http://codebar.io/code-of-conduct) as we do not tolerate any bad behavior.
 
 # What is Object Oriented Programming?
 
