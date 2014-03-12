@@ -34,7 +34,7 @@ The name must be defined in camel case. **CamelCase** is a way of writing compou
 
 To create an object, we call the **new** method on its class. If you want to pass information to the object, then you can write an `initialize` method, which Ruby will call whenever you call the classes' `new` method. Any parameters defined for the `initialize` method need to be passed to `new`.
 
-The `initialize` method is often called a **constructor**, as it helps *construct* new objects.
+The `initialize` method is often called a **contructor**, as it helps *construct* new objects.
 
 ```ruby
 class Color
@@ -49,7 +49,7 @@ color1 = Color.new("purple", "#8824a4")
 color2 = Color.new("blue", "#4c6fcc")
 ```
 
-Sometimes you'll hear objects referred to as **instances** of a particular class. This just means that the object is an instance of a particular class; an object called `ruby` could be an instance of the class `language`.
+Sometimes you'll hear objects referred to as **instances** of a particular class. This just means that the class was used as the blueprint to create the object.
 
 ## Instance variables and methods
 
