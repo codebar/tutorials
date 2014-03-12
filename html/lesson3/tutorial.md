@@ -24,7 +24,7 @@ Download the files required to begin working through the tutorial from [here](ht
 
 ### Development Tools - Inspectors
 
-Inspectors are development tools that help you view, edit and debug CSS, HTML and Javascript.
+Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
 A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a build in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
 
@@ -168,7 +168,7 @@ and make the picture a bit smaller
 
 ### What is the box model?
 
-An element, can be visualised as a box. The box model tells browsers how the element and its attribtues relate to each other.
+An element, can be visualised as a box. The box model tells browsers how the element and its attributes relate to each other.
 
 Characteristics that define the box model are `padding`, `margin`, `border`, `height` and `width`.
 
@@ -323,7 +323,7 @@ a:hover
 a:active
 ```
 
-Order is **very** important. Always use the order descibed above if you want to apply differente styling for all of the states described above.
+Order is **very** important. Always use the order described above if you want to apply different styling for all of the states described above.
 The most commonly used pseudo class for links, that we will also be using today is `a:hover`
 
 ## Styling links
@@ -366,7 +366,7 @@ The sidebar is now almost perfect. Tweak a couple of other properties so that th
 
 ## Before we continue, some other nice to know box properties...
 
-Add these to the `.sidebar` css
+Add these to the `.sidebar` CSS
 
 ```css
 border-radius: 6px;
@@ -402,7 +402,7 @@ Here, we will define the text we want to display about **Ada Lovelace**, using p
 <p>My mother, Anne Isabella Byron, was a great help to me as she helped me by promoting my interest in mathematics and logic, but I also never forgot about my dad, who moved to Greece when I was just an infant to help out in the civil war.</p>
 ```
 
-Now that the content is there, we can see that again, we need to tweak the element to display as an inline block and set its width to make sure it appears next to the siedbar.
+Now that the content is there, we can see that again, we need to tweak the element to display as an inline block and set its width to make sure it appears next to the sidebar.
 
 ```css
 .main {
@@ -453,7 +453,7 @@ Set the style for the highlight class
 <p>Throughout my life, mathematics have been my primary interest. I always question even basic assumptions by integrating poetry, another great love of mine, and science. I also have a keen interest in scientific developments and trends of my era like phrenology and mesmerism.</p>
 ```
 
-Being the first paragraph a quote, so we can use `<blockquote>`, as it's more appropiate than a p tag.
+Being the first paragraph a quote, so we can use `<blockquote>`, as it's more appropriate than a p tag.
 
 ```html
 <blockquote>&ldquo;I do not believe....</blockquote>
@@ -491,7 +491,7 @@ A poem about Ada
 
 > Why do we need a line break (`<br/>`) before the span? What happens when we remove the line break?
 
-Make the poem look different than the rest of the text. Add a css class `poem` to the span element and add styling
+Make the poem look different than the rest of the text. Add a CSS class `poem` to the span element and add styling
 
 ```css
 .poem {
@@ -542,7 +542,7 @@ a:hover {
 ## Setting up the footer
 To complete our page, we will be adding some content and styling the footer
 
-Within the footer, add an attribution to yourself and link to your twitter, facebook or any other place you want to.
+Within the footer, add an attribution to yourself and link to your twitter, Facebook or any other place you want to.
 
 ```html
 <p>Made by <a href="...">[your name]</a></p>

@@ -80,7 +80,7 @@ To get the first item `animals[0]`, the second `animals[1]` etc.
 
 ### Properties -  `length`
 
-The the `length` property returns the size of the Array
+The `length` property returns the size of the Array
 
 ```js
 animals.length
@@ -254,7 +254,7 @@ When the HTML is loaded on our page, the browser generates its DOM. This enables
 
 ### Interacting with DOM
 
-The **DOM** has is repesented by **nodes**. Each node has different properties, and they are connected like a tree, as we can see in the diagram above.
+The **DOM** has is represented by **nodes**. Each node has different properties, and they are connected like a tree, as we can see in the diagram above.
 
 Let's try interacting with the DOM of our page by getting the parent node of the body.
 
@@ -264,7 +264,7 @@ Let's try interacting with the DOM of our page by getting the parent node of the
 console.log(document.body.parentNode);
 ```
 
-To get around this issue, we will be wrapping our called in functions trigerred by the interface.
+To get around this issue, we will be wrapping our called in functions triggered by the interface.
 
 Write a function that lists all DOM children elements.
 
@@ -354,7 +354,7 @@ function displayPopulation() {
 
 Create functions that load all the individual information we have stored about London. If you are having trouble ask for help from your coach.
 
-> When you are done with this, try creating one main function that does the calls. Use the javascript `onload()` event on the body, similar to how we used the `onclick()` event previously, to add the information to the page.
+> When you are done with this, try creating one main function that does the calls. Use the JavaScript `onload()` event on the body, similar to how we used the `onclick()` event previously, to add the information to the page.
 
 
 ### Bonus

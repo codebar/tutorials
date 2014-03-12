@@ -203,7 +203,7 @@ This method of using CSS, by defining it within our HTML page is called **embedd
 
 A better way to define CSS, is to include it within a separate stylesheet. This is easier to maintain and can be reused across several pages.
 
-To achieve this, let's move our css outside of the head of the page and into a new file that we will link through the head.
+To achieve this, let's move our CSS outside of the head of the page and into a new file that we will link through the head.
 
 ```html
 <head>
@@ -225,7 +225,7 @@ img {
 }
 ```
 
-We can change the the styling of some of these images by defining a more specific selector, which will superseed the `img` selector we just defined
+We can change the styling of some of these images by defining a more specific selector, which will supersede the `img` selector we just defined
 
 ```css
 .bigimg img {

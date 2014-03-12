@@ -54,7 +54,7 @@ Some elements are standalone, as they cannot contain anything else <tagname/>
 ### DOCTYPE and HTML tags
 
 The doctype is the first thing that must be defined in an HTML page.
-It tells the browser which version of HTML the the page is using.
+It tells the browser which version of HTML the page is using.
 
 ```html
 <!DOCTYPE html>
@@ -168,7 +168,7 @@ Let's emphasise some of the content of our paragraph
 
 ### Element: Link `<a>`
 
-The most important attribute of a link is **href**, which indicates the path or url that is accessed through it.
+The most important attribute of a link is **href**, which indicates the path or URL that is accessed through it.
 
 Let's add a link to the bottom of our paragraph
 

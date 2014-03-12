@@ -38,7 +38,7 @@ Also, set a title for your page
 <h1>Anita Borg</h1>
 ```
 
-Before we continue any futher, format the existing content of the html file to use paragraphs `<p>`
+Before we continue any further, format the existing content of the html file to use paragraphs `<p>`
 
 > Do you remember how to do that? Ask your coach to help you out if you are having any problems.
 
@@ -220,7 +220,7 @@ To set a background you can use
 to set multiple backgrounds, you simple need to specify them separating them by commas
 `background: url(path/to/image), url(path/to/other/image), ...`
 
-You can also set different properties for your backgrounds, by defining them in a similar comma seperated way.
+You can also set different properties for your backgrounds, by defining them in a similar comma separated way.
 
 `background-size: first_image_size, second_image_size, ...;`
 
@@ -326,15 +326,15 @@ p.about {
 
 ### What is an em
 
-The name of an `em` doesn't really stand for anything. It was originaly used to describe that it was equal to the **M** character as it was commonly casted as the full-width of the square "block which are used in printing presses.
+The name of an `em` doesn't really stand for anything. It was originally used to describe that it was equal to the **M** character as it was commonly casted as the full-width of the square "block which are used in printing presses.
 
-By using `em` insteaf of `px` to set the font-size, we are keeping it relative to the default font size. So 0.9em is 0.9 times the size that would have otherwise applied to that container.
+By using `em` instead of `px` to set the font-size, we are keeping it relative to the default font size. So 0.9em is 0.9 times the size that would have otherwise applied to that container.
 
 > Change the height using the inspector to 2em. Can you notice the change?
 
 ### Not selector
 
-Increase the `line-height` of all other pargraphs. We can do this with another very smart selector, The  **not** selector.
+Increase the `line-height` of all other paragraphs. We can do this with another very smart selector, The  **not** selector.
 
 The **not** selector, finds all elements who don't match the specified description, in our case, all paragraphs that don't have a class `about`
 
@@ -388,7 +388,7 @@ So here is how we will be reseting the list styling. We don't want to only speci
 }
 ```
 
-Making it preetier
+Making it prettier
 
 ```css
 .achievements li {

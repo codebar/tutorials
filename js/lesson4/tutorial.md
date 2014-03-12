@@ -1,4 +1,4 @@
----
+--
 layout: page
 title: HTTP Requests, AJAX and APIs
 ---
@@ -8,7 +8,7 @@ Today, we will be explaining HTTP Requests, using AJAX and APIs.
 
 ## Before we start...
 
-Don't forget to move the files for the exercises under your github page folder. Commit each task you complete! If you are having trouble with this, ask your coach to help you out.
+Don't forget to move the files for the exercises under your Github page folder. Commit each task you complete! If you are having trouble with this, ask your coach to help you out.
 
 #HTTP Requests
 
@@ -51,7 +51,7 @@ AJAX is a way of updating websites asynchronously, without having to reload them
 ##Request using JavaScript
 
 Using JavaScript, we can perform an AJAX request using `XMLHttpRequest`.
-The `open()` method specified the type of request, the url and if the request can be handled asynchronously or not.
+The `open()` method specified the type of request, the URL and if the request can be handled asynchronously or not.
 
  `xmlhttp.open(<request verb>, url, <async:true|false>);`
 
@@ -80,11 +80,11 @@ JSON.parse(response)
 
 ##Exercise 1 - Retrieve GitHub user information
 
-[Download](https://gist.github.com/despo/7af30cfe957f3cfc2a9f/download) the exercise files or clone them directly from github `git clone https://gist.github.com/despo/7af30cfe957f3cfc2a9f`
+[Download](https://gist.github.com/despo/7af30cfe957f3cfc2a9f/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/despo/7af30cfe957f3cfc2a9f`
 
-Using the example above, we'll build a small application that gives us back information about a github user.
+Using the example above, we'll build a small application that gives us back information about a Github user.
 
-The url structure for the request is `https://api.github.com/users/<username>` and here is a partial response to get you started
+The URL structure for the request is `https://api.github.com/users/<username>` and here is a partial response to get you started
 
 ```json
 {
@@ -157,19 +157,19 @@ function showUser(user) {
 
 The `showUser(user)` function should:
 
-1. Display the user's github id in `#profile h2` - `<user login> + " is GitHub user #" + <user id>`
+1. Display the user's Github id in `#profile h2` - `<user login> + " is GitHub user #" + <user id>`
 
-2. Add a link to the user's github profile in `#profile .information`. The link should have a class `profile`
+2. Add a link to the user's Github profile in `#profile .information`. The link should have a class `profile`
 
-3. Add an image in `#profile .avatar`. To do that, you can use the `gravatar_id` in this url template `<img src="https://gravatar.com/avatar/<gravatar_id>?s=220" />`
+3. Add an image in `#profile .avatar`. To do that, you can use the `gravatar_id` in this URL template `<img src="https://gravatar.com/avatar/<gravatar_id>?s=220" />`
 
 *You can read more about [Gravatar Image Requests](http://uk.gravatar.com/site/implement/images/).
 
 > Don't forget to call `showUser()` from the function handling the keypress!
 
-##Publish to github
+##Publish to Github
 
-Link to your Github User Finder from `index` and push your changes to github.
+Link to your Github User Finder from `index` and push your changes to Github.
 
 **Link to your app** http://`<username>`.github.io/`<project>`/github-user-finder/index.html
 
@@ -346,7 +346,7 @@ Handle a `click` event on `#genres li` and make a call to `getTomorrowsSchedule(
 
 ###Improving our function
 
-To make the genre we have just clicked active, we also want to add the css class `active` to the element that the event has been triggered from.  Don't forget to remove the class `active` from any other `#genres li` items.
+To make the genre we have just clicked active, we also want to add the CSS class `active` to the element that the event has been triggered from.  Don't forget to remove the class `active` from any other `#genres li` items.
 
 > Did you remember to commit your changes?
 
@@ -359,7 +359,7 @@ Also, as some of the requests take a while, we want to display a spinning image 
 
 ##Bonus: Retrieving all upcoming episodes of a programme
 
-To get back all the upcoming shows for an episode, we need to utilise the programme pid, that we can retrieve from the response using `episode.programme.programme.pid`. The url for the request is `http://www.bbc.co.uk/programmes/<pid>/episodes/upcoming.json`
+To get back all the upcoming shows for an episode, we need to utilise the programme pid, that we can retrieve from the response using `episode.programme.programme.pid`. The URL for the request is `http://www.bbc.co.uk/programmes/<pid>/episodes/upcoming.json`
 
 > **Hint:** The programme `pid` is only available if `episode.programme.position` is set.
 

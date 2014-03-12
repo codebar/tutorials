@@ -13,7 +13,7 @@ To get help outside our sessions, [join the codebar channel](https://gitter.im/c
 
 # Things to help you get started
 
-There is an abundance of resources out there that can help you out, but all you need to get started is an idea. Overthinking and overengineering what you want to do, can make things a lot harder for you so always remember to keep things simple and evolve the project gradually.
+There is an abundance of resources out there that can help you out, but all you need to get started is an idea. Over-thinking and over-engineering what you want to do, can make things a lot harder for you so always remember to keep things simple and evolve the project gradually.
 
 ## Building your interface
 
@@ -28,7 +28,7 @@ However, using pen and paper is probably the easiest way, so try and choose what
 
 ## Tracking your tasks
 
-It's important to keep organised and remember what you intend to build. Try and make a list of your tasks. You can keep track using [github's issues](https://github.com/blog/831-issues-2-0-the-next-generation) or applications like [trello](https://trello.com/) or [pivotal tracker](http://www.pivotaltracker.com/). You can use all these tools for free and it's an easy and efficient way of not just remembering everything but also of communicating to others that may be interested in helping you out what it is that you want to achieve.
+It's important to keep organised and remember what you intend to build. Try and make a list of your tasks. You can keep track using [Github's issues](https://github.com/blog/831-issues-2-0-the-next-generation) or applications like [trello](https://trello.com/) or [pivotal tracker](http://www.pivotaltracker.com/). You can use all these tools for free and it's an easy and efficient way of not just remembering everything but also of communicating to others that may be interested in helping you out what it is that you want to achieve.
 
 ## Storing data
 
@@ -57,7 +57,7 @@ localStorage.getItem("name");
 
 ## Effects
 
-Everyone likes effects. Have a look at [JQuery's effects](http://api.jquery.com/category/effects/). 
+Everyone likes effects. Have a look at [JQuery's effects](http://api.jquery.com/category/effects/).
 
 ## Tracking who visited your website
 
@@ -71,15 +71,15 @@ Another important thing is to remember to commit your changes often and keep thi
 
 This way, if something goes wrong and things stop working you can always revert your local changes and start over again.
 
-When working with someone else it's also nice to do your work in branches so you can open pull requests and the other person can have a look at your changes before they are merged into the main repository. We briefly discussed creating branches in the [introduction to version control tutorial](http://codebar.github.io/tutorials/version-control/introduction/tutorial.html). Try to give your branches meaninful names and when they are merged into the main **master** branch, don't forget to update your local copy.
+When working with someone else it's also nice to do your work in branches so you can open pull requests and the other person can have a look at your changes before they are merged into the main repository. We briefly discussed creating branches in the [introduction to version control tutorial](http://codebar.github.io/tutorials/version-control/introduction/tutorial.html). Try to give your branches meaningful names and when they are merged into the main **master** branch, don't forget to update your local copy.
 
 ## Useful APIs
 
-In our previous tutorials we briefly introduced the [github](http://developer.github.com/v3/) and [BBC](http://www.bbc.co.uk/developer/technology/apis.html) APIs. Most services that you have encountered are likely to have an API available, so just try googling for it.
+In our previous tutorials we briefly introduced the [Github](http://developer.github.com/v3/) and [BBC](http://www.bbc.co.uk/developer/technology/apis.html) APIs. Most services that you have encountered are likely to have an API available, so just try searching google for it.
 
 Some popular API's that you may find useful
 
-- [Google Maps](https://developers.google.com/maps/) Get directions, map images, places of interst and a lot more information about places.
+- [Google Maps](https://developers.google.com/maps/) Get directions, map images, places of interest and a lot more information about places.
 
 - [twilio](http://www.twilio.com/docs/api/rest) Initiate calls and send text messages.
 

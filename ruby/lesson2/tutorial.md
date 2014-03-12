@@ -59,7 +59,7 @@ Random.rand(5..10)
 
 In this exercise we'll create a small game to help us practise math.
 
-[Download the files](https://gist.github.com/despo/d790a4fd1844da7d85ce/download) to get started. If you are having any trouble you can get the files directly [from github](https://gist.github.com/despo/d790a4fd1844da7d85ce).
+[Download the files](https://gist.github.com/despo/d790a4fd1844da7d85ce/download) to get started. If you are having any trouble you can get the files directly [from Github](https://gist.github.com/despo/d790a4fd1844da7d85ce).
 
 
 To execute the file you must first change its permissions from the command line (to make it executable).
@@ -123,7 +123,7 @@ puts "Rights #{correct}; Wrongs #{wrong}; Score #{score}%"
 
 To get the number of seconds that it takes to run the game we can store the timestamp at the beginning of the game and then subtract it at the end. To do that, we can use `Time.now`
 
-> Try outputting `Time.now` the the irb
+> Try outputting `Time.now` in the irb
 
 First create and assign the time to a variable `start`. Then, subtract `Time.now - start` and output that.
 
@@ -141,7 +141,7 @@ puts "#{duration/turns} seconds per problem"
 
 At the beginning of the game ask for the number of turns. If return is pressed default to 0.
 
-> To dyanmically load a value you can use the `||=` operant.
+> To dynamically load a value you can use the `||=` operant.
 
 ```ruby
 # here the number will get assigned to 1 as its value is nil
@@ -163,7 +163,7 @@ To open an existing file we use
 File.open(filename, mode)
 ```
 
-The **mode** inticates if the file will be opened for **r**eading or **w**riting.
+The **mode** indicates if the file will be opened for **r**eading or **w**riting.
 
 #### Writing to a file
 

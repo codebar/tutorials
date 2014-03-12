@@ -55,7 +55,7 @@ Before we move on to drawing, let's try and understand how canvas is laid out.
 
 The upper left corned for the canvas is (0,0) and the lower right (400,500), as our canvas is 400x500.
 
-Let's place a rectangle 100 px away from the top left corner of the canvas.
+Let's place a rectangle 100px away from the top left corner of the canvas.
 
 ```
 context.fillRect(100, 100, 50, 100);
@@ -93,7 +93,7 @@ context.lineTo(400,500);
 
 This won't do anything until we call the `stroke()`, which deals with the painting.
 
-You can also draw an join multiple paths together. Try this out by creating a rectange with corners at (0, 0), (0, 200), (200, 300) and (200, 0).
+You can also draw an join multiple paths together. Try this out by creating a rectangle with corners at (0, 0), (0, 200), (200, 300) and (200, 0).
 
 ```javascript
 context.beginPath();
@@ -128,7 +128,7 @@ To fill in the circle, or any other joined elements, we use the `fill()` method 
 
 ##Transformations
 
-In canvas, we can also use transofrmations on the current matrix.
+In canvas, we can also use transformations on the current matrix.
 
 ###`rotate()`
 
@@ -173,7 +173,7 @@ context.scale(2,2);
 
 ![](assets/images/canvas-hangman.png)
 
-[Download](https://gist.github.com/despo/0dc7c874efa544475d66/download) the required files for this exercise or clone them directly from github `git clone https://gist.github.com/despo/0dc7c874efa544475d66.git`
+[Download](https://gist.github.com/despo/0dc7c874efa544475d66/download) the required files for this exercise or clone them directly from Github `git clone https://gist.github.com/despo/0dc7c874efa544475d66.git`
 
 Using what we've learned today, draw Hangman in Canvas.
 

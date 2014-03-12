@@ -39,7 +39,7 @@ Download the files required to begin working through the tutorial from [here](ht
 
 ## Let's try out some JavaScript!
 
-We'll start by just outputting some content on our browsr's inspector console.
+We'll start by just outputting some content on our browser's inspector console.
 To keep track of what we do, you should write the code in the `script.js`
 
 First open up your HTML page and the **inspector**.
@@ -89,7 +89,7 @@ var pi = 3.14;
 console.log("The value of pi: " + pi);
 ```
 
-Now let's output the current year, and autocalculate the value of the next year using **addition**
+Now let's output the current year, and auto-calculate the value of the next year using **addition**
 
 ```js
 var year = 2013;
@@ -124,7 +124,7 @@ console.log("What kind of variable am I? " + iDontHaveAValue);
 ### Operations
 The are are a number of operations you can apply, just like when using math.
 
-Let's section the output by outputing a title
+Let's section the output by outputting a title
 
 ```js
 console.log("Operations");
@@ -166,7 +166,7 @@ console.log("Division: x/y=" + division);
 ```
 
 ### The if statement
-In Javascript we can write conditions to control what we output
+In JavaScript we can write conditions to control what we output
 
 Let's try this out.
 
@@ -257,7 +257,7 @@ if (people > pizzas) {
 
 ## Functions
 
-Functions are a major part of every programming language. They enable us to create meaningul snippets of code that we can rerun without having to define the same things again.
+Functions are a major part of every programming language. They enable us to create meaningful snippets of code that we can rerun without having to define the same things again.
 
 Let's write a small function that prompts someone accessing our page with a message.
 
@@ -312,7 +312,7 @@ Now that you fixed the problem, call the function from you browser's console!
 
 ### Multiple arguments
 
-So far we've tried out functions with no and one argument. But noone limits how many we can use.
+So far we've tried out functions with no and one argument. But no one limits how many we can use.
 Let's try writing a function with multiple arguments.
 
 ```js
@@ -324,7 +324,7 @@ function whatIAmDoingToday(coach, place) {
 
 ### Returning values
 
-Besides outputing, which is nice when learning as it makes it easier to see the result, we can also `return` values.
+Besides outputting, which is nice when learning as it makes it easier to see the result, we can also `return` values.
 
 Create a function that adds two numbers together
 

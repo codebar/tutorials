@@ -94,7 +94,7 @@ header {
 }
 ```
 
-Set a css class `portrait` to the `<div>` wrapping the image
+Set a CSS class `portrait` to the `<div>` wrapping the image
 
 ```html
 <div class="portrait">
@@ -102,7 +102,7 @@ Set a css class `portrait` to the `<div>` wrapping the image
   ...
 ```
 
-and a css class `title` to the `<div>` wrapping the heading
+and a CSS class `title` to the `<div>` wrapping the heading
 
 ```html
 <div class="title">
@@ -118,7 +118,7 @@ Make the `portrait` and the `title` inline elements
 }
 ```
 
-> Did you know that you can define common styles for different css classes by comma separating them?
+> Did you know that you can define common styles for different CSS classes by comma separating them?
 
 
 Make the portrait image round, and restrict its height
@@ -292,7 +292,7 @@ To ensure an element `floats` you must always specify its width, or else its lik
 
 Make the two images in the `#content` float
 
-Add a css class to the first image's wrapper
+Add a CSS class to the first image's wrapper
 
 ```html
 <div class="start-of-line">
@@ -309,7 +309,7 @@ And float the element to the left
 }
 ```
 
-Add a css class to the second image's wrapper
+Add a CSS class to the second image's wrapper
 
 ```html
 <div class="end-of-line">
@@ -325,7 +325,7 @@ And float the element to the right
 }
 ```
 
-Add space around the images so there is some separatin between them and the text
+Add space around the images so there is some separation between them and the text
 
 ```css
 .start-of-line, .end-of-line {
@@ -353,7 +353,7 @@ Its position is determined by the offset values in the properties `top`, `bottom
 
 ### Using absolute and relative positioning
 
-Add a css class `caption` to the description of each of the images
+Add a CSS class `caption` to the description of each of the images
 
 ```html
  <span class="caption">The Mark I</span>
@@ -437,7 +437,7 @@ footer a {
 }
 ```
 
-> Do you understand all the css properties we have just applied to the footer and containing elements? Is there something you don't quite remember? Ask your coach to explain.
+> Do you understand all the CSS properties we have just applied to the footer and containing elements? Is there something you don't quite remember? Ask your coach to explain.
 
 
 But we are not quite done yet. The page looks great, but we can do a bit more with it. First let's try and understand another positioning, 'fixed'
@@ -465,16 +465,16 @@ And reposition the '#content' so it doesn't hide underneath the header. Change t
 padding: 150px 30px 40px;
 ```
 
-> Do you remember the padding shortcuts we disussed in the previous lessson? What does the above describe? Can you explain that to your coach?
+> Do you remember the padding shortcuts we discussed in the previous lesson? What does the above describe? Can you explain that to your coach?
 
 There is still one small problem with our page. You can view this better if you resize your browser window to fit one third of your screen and scroll down. The images now appear on top of the header. This is due to removing the element from of the normal flow of the page.
 
 ### z-index
 
-This can be fixed by changin the `z-index`, who defines the order of overlapping.
+This can be fixed by changing the `z-index`, who defines the order of overlapping.
 The element with the highest `z-index` appears on top.
 
-Extend the css for the `header`
+Extend the CSS for the `header`
 
 ```
 z-index: 99;
@@ -499,5 +499,3 @@ line-height: 23px;
 
 -----
 This ends our fourth and last lesson in introducing HTML and CSS. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
-
-
