@@ -243,7 +243,7 @@ end
 
 > [to_s](http://ruby-doc.org/core-2.1.1/Object.html#method-i-to_s) stands for **to string** and returns a String representation of the Object.
 
-# Exercise 3: Storing Members
+# Exercise 3: Codebar Workshops and Members
 
 Codebar has two different type of Members; Students and Coaches.
 Each member has the following attributes:
