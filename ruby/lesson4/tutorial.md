@@ -5,11 +5,11 @@ title: Object Oriented Ruby and Inheritance
 
 # Before we start
 
-There won't be any sample files for the examples today as you should already know how to create a new Ruby file yourself. Before you begin, remember to create a new directory in your Github project or a new repository where you can store your exercises.
+There are no sample files for this tutorial as you should already know how to create a new Ruby file yourself. Before you begin, remember to create a new directory in your Github project or a new repository where you can store your exercises and practice code.
 
-Don't forget to commit regularly and try to type out the examples as much as possible instead of copy pasting!
+Don't forget to commit to git regularly and also try to **type** out the examples as much as possible instead of copy pasting!
 
-If you are going through the tutorial yourself and need any help, [join the chat](https://gitter.im/codebar/tutorials) but remember to first go through our [code of conduct](http://codebar.io/code-of-conduct) as we do not tolerate any bad behavior.
+If you are going through the tutorial on your own time and need any help, [join the chat](https://gitter.im/codebar/tutorials) but first read our [Code of Conduct](http://codebar.io/code-of-conduct) as we do not tolerate any inappropriate behavior.
 
 # What is Object Oriented Programming?
 
@@ -17,9 +17,9 @@ Object Oriented Programming is a way of programming where different concepts as 
 
 ## What is a class?
 
-A class is simply a way of representing an object. It enables us to  package up data and ways of manipulating them.
+A class is a way of representing an object. It enables us to package up data and ways of manipulating them.
 
-To define a class we need to specify the keyword **class** followed by the name we want to name out class, and the keyword **end** to close the definition.
+To define a class we need to specify the keyword **class** followed by the name we want to name our class, and the keyword **end** to close the definition.
 
 ```ruby
 # defining a Color class
@@ -28,11 +28,11 @@ class Color
 end
 ```
 
-The name must be defined in camel case format. **CamcelCase** is a way of writing compound words or phrases such that each word begins with a capital letter e.g. ColorCode, EmailAddress etc.
+The name must be defined in camel case. **CamcelCase** is a way of writing compound words or phrases such that each word begins with a capital letter e.g. ColorCode, EmailAddress etc.
 
 ## Defining a class
 
-To create a new instance of an object, we use the keyword **new**. To specify parameters when defining a new class we can do so by defining a **contructor**. In Ruby, a constructor is specified using the `initialize` method.
+To create a new instance of an object, we use the keyword **new**. To specify parameters when defining a new class we can do so by defining a **constructor**. In Ruby, a constructor is specified using the `initialize` method.
 
 ```ruby
 class Color
@@ -89,16 +89,15 @@ puts "The hexcode of #{color.name} is #{color.hexcode}"
 
 ## Privacy
 
-By default, any method you define in Ruby is public. This means that anyone can call any of its methods with the exception of `initialize` which is always private and can be accessed through calling `new`.
+By default, any method you define in Ruby (and most other languages too) is public. This means that anyone can call any of its methods with the exception of `initialize` which is always private and can be accessed through calling `new`.
 
-Besides **public** there is also a way to define **private** and **protected**  and methods.
+Besides **public** you can also have **private** and **protected**  methods.
 
 - **public** can be called by anyone
-- **private** can only be accessed from within the class
-- **protected** can only be invoked by objects of the class and the defining subclasses
+- **private** can only be called from within the class
+- **protected** can only be called by objects of the class and the defining subclasses
 
-
-Let's try this in the Color class by adding the `protected` keyword before defining the methods we want to protect, in our case, the `update_hexcode` method..
+Let's try this out in the Color class by adding the `protected` keyword before defining the methods we want to protect, in our case, `update_hexcode` method.
 
 ```ruby
 class Color
@@ -116,7 +115,7 @@ color = Color.new("purple", "#8824a4")
 color.update_hexcode("#9427b2")
 ```
 
-This should now throw a `NoMethodError`
+This should now throw a `NoMethodError`. Change **protected** to **private** and run the code again.
 
 Let's now put into practise what we have learned so far.
 
@@ -134,8 +133,6 @@ Create a `to_s` method, that returns the Celsius temperature formatted e.g. 16 &
 
 Create a script that prompts you to fill in the temperature for each day of the week (Monday - Sunday) and for the inputs 16, 17 18, 18, 21, 16, 19 prints out the following output:
 
-> If you don't remember how to create a script, you can look at the sample file for the first exercise of the [second Ruby tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html) on Github, and read the instructions of the first Exercise.
-
 ```html
 Mon | 16°C  | 61°F
 Tue | 17°C  | 63°F
@@ -146,8 +143,11 @@ Fri | 21°C  | 70°F
 Sat | 16°C  | 61°F
 Sun | 19°C  | 66°F
 ```
+> If you don't remember how to create a script, you can look at the sample file for the first exercise of the [second Ruby tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html) on Github, and read the instructions of the first Exercise.
 
-> You can store each created Celsius object in a Hash and iterate over the collection to print the results e.g. temperatures[:mon] = Celsius.new(temperate) and use [each_pair](http://www.ruby-doc.org/core-1.9.3/Hash.html)
+
+
+> Hint: You can store each created Celsius object in a Hash and iterate over the collection to print the results e.g. temperatures[:mon] = Celsius.new(temperate) and use [each_pair](http://www.ruby-doc.org/core-1.9.3/Hash.html)
 
 
 # Exercise 2: Tutorials
@@ -182,9 +182,11 @@ tutorial3.is_harder_than?(tutorial2)
 # true
 ```
 
+> Hint: To compare the difficulty levels you can create a Hash with the difficulty levels and an Integer value assigned to each that you can use for comparison.
+
 ## Inheritance
 
-Inheritance is a way for a class to get features from another parent class. It can make creating a program much simpler.
+Inheritance is a way for a class to get features from another parent class. It can make creating a program much easier to implement when there is common shared functionality between different objects.
 
 In the example below, we create a Person class and a SuperHero class. As not all people have special powers, we can use SuperHero for those with special powers and Person for anyone else.
 
@@ -209,20 +211,19 @@ class SuperHero < Person
 end
 ```
 
-**Person** in this case is our **base** class and **SuperHero** the subclass.
+**Person** in this case is our **base** class and **SuperHero** the **subclass**.
 
 **super** sends a message to the parent class asking it to call the method with the same name.
 
 
 ### is_a?(Class)
 
-You can check if the class or one of the superclasses (base) of an object is of a specific type by using `is_a`
-
-Try this out. Before running this discuss it with your coach. What do you expect the result to be?
+With [`is_a?`](http://ruby-doc.org/core-2.1.1/Object.html#method-i-is_a-3F) you can check if the class or one of the superclasses (base) of an object is of a specific type.
+Try this out. Before running the code in the example below, discuss it with your coach. What do you expect the result to be?
 
 ```ruby
 emily = Person.new("Emily", 28)
-jean_grey = SuperHero.new("Jean Grey", 51, "Telekinsis")
+jean_grey = SuperHero.new("Jean Grey", 51, "Telekinesis")
 
 emily.is_a?(Person)
 jean_grey.is_a?(Person)
@@ -233,11 +234,11 @@ jean_grey.is_a?(SuperHero)
 
 ### Overriding methods
 
-Overriding methods is a way you can change the functionality of a method defined in the superclass that you don't want your Class that inherits from it to have. For our superheroes example, we want the `to_s` method to return a different string that includes the super power, instead of the same string as a normal person.
+By overriding methods, you can change the behavior of a method defined in the Superclass. For our superheroes example, we want the `to_s` method to return a different String than its base class including the super power.
 
 ```ruby
 def to_s
-  "#{@name} is #{age} years old and has the superpower #{power}"
+  "#{@name} is #{age} years old and has the superpower #{superpower}"
 end
 ```
 
@@ -245,19 +246,10 @@ end
 
 # Exercise 3: Codebar Workshops and Members
 
-Codebar has two different type of Members; Students and Coaches.
-Each member has the following attributes:
+Codebar has two different types of Members; Students and Coaches.
+All members have the attribute `full_name`.
 
-- full_name
-
-Additionally, each Student also has:
-
-- about (why they want to learn)
-
-and each Coach has:
-
-- a bio
-- skills (You can store the skills as an array of Strings)
+Additionally, each Student also has an `about` attribute with information about why they want to learn programming, and each Coach has  a `bio` and `skills`.
 
 Codebar also has Workshops. A workshop has:
 
@@ -266,7 +258,7 @@ Codebar also has Workshops. A workshop has:
 - coaches and
 - students
 
-Create an `add_participant` method that has a `member` attribute. If the member is a Coach, then it get added to the `coaches` list. If a member is a student, it gets added to the `students` list.
+Create an `add_participant` method that accepts a `member` attribute. If the Member is a Coach, add them to the `coaches` list. If a Member is a Student, add them to the `students` list.
 
 Create another method `print_details` that outputs the details of the workshop.
 
@@ -287,7 +279,7 @@ workshop.add_participant(jane)
 workshop.add_participant(lena)
 workshop.add_participant(vicky)
 workshop.add_participant(nicole)
-work.print_details
+workshop.print_details
 #
 # Workshop - 12/03/2014 - Venue: Shutl
 #
@@ -300,8 +292,15 @@ work.print_details
 #    I want to help people learn coding.
 # 2. Nicole McMillan - Ruby
 #    I have been programming for 5 years in Ruby and want to spread the love
+#
 
 ```
+
+## Bonus
+
+The `print_details` method does a number of different things, like printing out: workshop details, the list of Students and the list of Coaches.
+
+Create a method to print the workshop details, a method to print out the students and one to print out the coaches. Call these from `print_details` instead of having all the code there. Also, make sure that these methods cannot be invoked from outside the class.
 
 ---
 This ends our **Object Oriented Ruby and Inheritance** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
