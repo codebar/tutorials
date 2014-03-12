@@ -17,7 +17,7 @@ Object Oriented Programming is a way of programming where concepts are represent
 
 ## What is a class?
 
-A class is a way of representing an object, a blueprint for describing how it should look and behave. It enables us to package up data, and the ways in which it can be changed.
+A class is a way of representing an object, a blueprint for describing how it should look and behave. It enables us to package up data, and define the ways in which it can be changed.
 
 To define a class we need to specify the keyword **class**, followed by the name we want our class to be known by, then the keyword **end** to close the definition.
 
