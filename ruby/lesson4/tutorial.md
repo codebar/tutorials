@@ -5,21 +5,21 @@ title: Object Oriented Ruby and Inheritance
 
 # Before we start
 
-There are no sample files for this tutorial as you should already know how to create a new Ruby file yourself. Before you begin, remember to create a new directory in your Github project or a new repository where you can store your exercises and practice code.
+There are no sample files for this tutorial as you should already know how to create a new Ruby file yourself. Before you begin, remember to create a new directory in your Github project or a new repository where you can store your exercises and try out code.
 
-Don't forget to commit to git regularly and also try to **type** out the examples as much as possible instead of copy pasting!
+Don't forget to commit to git regularly and also try to **type** out the examples as much as possible instead of copy &amp; pasting!
 
-If you are going through the tutorial on your own time and need any help, [join the chat](https://gitter.im/codebar/tutorials) but first read our [Code of Conduct](http://codebar.io/code-of-conduct) as we do not tolerate any inappropriate behavior.
+If you are going through the tutorial in your own time and need any help then [join the chatroom](https://gitter.im/codebar/tutorials), but first read our [Code of Conduct](http://codebar.io/code-of-conduct) as we will not tolerate any inappropriate behavior.
 
 # What is Object Oriented Programming?
 
-Object Oriented Programming is a way of programming where different concepts as represented as **objects** and different functionality of those objects is called **methods**. In Ruby, an object is defined by a **class** and everything is an object; Strings, Integers, even true and false.
+Object Oriented Programming is a way of programming where concepts are represented as **objects**, and the functionality of those objects are called **methods**. In Ruby, an object is defined by a **class** and everything is an object; Strings, Integers, even true and false.
 
 ## What is a class?
 
-A class is a way of representing an object. It enables us to package up data and ways of manipulating them.
+A class is a way of representing an object, a blueprint for describing how it should look and behave. It enables us to package up data, and define the ways in which it can be changed.
 
-To define a class we need to specify the keyword **class** followed by the name we want to name our class, and the keyword **end** to close the definition.
+To define a class we need to specify the keyword **class**, followed by the name we want our class to be known by, then the keyword **end** to close the definition.
 
 ```ruby
 # defining a Color class
@@ -30,16 +30,18 @@ end
 
 The name must be defined in camel case. **CamcelCase** is a way of writing compound words or phrases such that each word begins with a capital letter e.g. ColorCode, EmailAddress etc.
 
-## Defining a class
+## Creating an instance of a class
 
-To create a new instance of an object, we use the keyword **new**. To specify parameters when defining a new class we can do so by defining a **constructor**. In Ruby, a constructor is specified using the `initialize` method.
+To create an object, we call the **new** method on its class. If you want to pass information to the object, then you can write an `initialize` method, which Ruby will call whenever you call the classes' `new` method. Any parameters defined for the `initialize` method need to passed to `new`.
+
+The `initialize` method is often called a **contructor**, as it helps *construct* new objects.
 
 ```ruby
 class Color
 
   def initialize(name, hexcode)
-    @name = name
-    @hexcode = hexcode
+    # Do cool things with name and hexcode
+    puts "The color #{name} has hexcode #{hexcode}"
   end
 end
 
@@ -47,14 +49,19 @@ color1 = Color.new("purple", "#8824a4")
 color2 = Color.new("blue", "#4c6fcc")
 ```
 
-## Variables and methods
+Sometimes you'll hear objects referred to as **instances** of a particular class. This just means that the class was used as the blueprint to create the object.
 
-To define attributes for a class, we use instance variables. Instance variable are defined using the **@** operator. They cannot be accessed outside the class unless we expose them through methods.
+## Instance variables and methods
+
+To define attributes for a class, we use instance variables. Instance variables are defined and used in the same way as normal variables, but their name must start with the **@** symbol, and they cannot be accessed outside of the object unless exposed via methods.
 
 ```ruby
 class Color
 
-   ...
+  def initialize(name, hexcode)
+    @name    = name
+    @hexcode = hexcode
+  end
 
   def name
     @name
@@ -69,7 +76,7 @@ color = Color.new("purple", "#8824a4")
 puts "The hexcode of #{color.name} is #{color.hexcode}"
 ```
 
-We can also define the value of different attributes via methods (called setter methods)
+We can also change the values of attributes via methods (often called setter methods):
 
 ```ruby
 class Color
@@ -89,7 +96,7 @@ puts "The hexcode of #{color.name} is #{color.hexcode}"
 
 ## Privacy
 
-By default, any method you define in Ruby (and most other languages too) is public. This means that anyone can call any of its methods with the exception of `initialize` which is always private and can be accessed through calling `new`.
+By default, any method you define in Ruby (and most other languages too) is public. This means that anything outside of the object can call any of the methods, with the exception of `initialize` which is always private and can only be called by `new`.
 
 Besides **public** you can also have **private** and **protected**  methods.
 
@@ -121,7 +128,7 @@ Let's now put into practise what we have learned so far.
 
 # Exercise 1: Celsius to Fahrenheit
 
-Create a Celsius class, that takes as a parameter the temperature.
+Create a Celsius class, that takes the temperature as a parameter.
 
 > Remember to use the `initialize` method
 
@@ -158,7 +165,7 @@ In this exercise we want to create an object for the codebar tutorials. Each obj
 - type
 - difficulty
 
-The difficulty of each tutorial must be defined by a symbol, and the available values are :easy, :medium, :hard, :advanced and :expert.
+The difficulty of each tutorial must be defined by a symbol, and the available values are `:easy`, `:medium`, `:hard`, `:advanced` and `:expert`.
 
 In the `Tutorial` class create a method called `is_harder_than?` that takes in another `tutorial` as a parameter and returns `true` if parent tutorial's difficulty level is higher than the tutorial passed in a parameter and `false` if the difficulty level is lower. This only happens if the tutorial types are the same. Alternatively, it outputs `You cannot compare a Ruby with a JavaScript tutorial` where _Ruby_ and _JavaScript_ are the types of the given tutorials.
 
@@ -186,9 +193,9 @@ tutorial3.is_harder_than?(tutorial2)
 
 ## Inheritance
 
-Inheritance is a way for a class to get features from another parent class. It can make creating a program much easier to implement when there is common shared functionality between different objects.
+Inheritance is a way for a class to get features from another parent class. It can make creating a program much easier to implement when functionality needs to be shared between objects.
 
-In the example below, we create a Person class and a SuperHero class. As not all people have special powers, we can use SuperHero for those with special powers and Person for anyone else.
+In the example below, we create a `Person` class and a `SuperHero` class. As not all people have superpowers, we can use `SuperHero` for those with superpowers and Person for anyone else.
 
 ```ruby
 class Person
@@ -218,7 +225,7 @@ end
 
 ### is_a?(Class)
 
-With [`is_a?`](http://ruby-doc.org/core-2.1.1/Object.html#method-i-is_a-3F) you can check if the class or one of the superclasses (base) of an object is of a specific type.
+With [`is_a?`](http://ruby-doc.org/core-2.1.1/Object.html#method-i-is_a-3F) you can check if the class or one of the superclasses (base) of an object.
 Try this out. Before running the code in the example below, discuss it with your coach. What do you expect the result to be?
 
 ```ruby
@@ -234,7 +241,7 @@ jean_grey.is_a?(SuperHero)
 
 ### Overriding methods
 
-By overriding methods, you can change the behavior of a method defined in the Superclass. For our superheroes example, we want the `to_s` method to return a different String than its base class including the super power.
+By overriding methods, you can change the behavior of a method defined in the superclass. For our superheroes example, we want the `to_s` method to return a different `String` than its base class, including the superpower.
 
 ```ruby
 def to_s
