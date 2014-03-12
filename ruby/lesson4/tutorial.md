@@ -40,8 +40,8 @@ The `initialize` method is often called a **contructor**, as it helps *construct
 class Color
 
   def initialize(name, hexcode)
-    @name = name
-    @hexcode = hexcode
+    # Do cool things with name and hexcode
+    puts "The color #{name} has hexcode #{hexcode}"
   end
 end
 
@@ -51,14 +51,17 @@ color2 = Color.new("blue", "#4c6fcc")
 
 Sometimes you'll hear objects referred to as **instances** of a particular class. This just means that the class was used as the blueprint to create the object.
 
-## Variables and methods
+## Instance variables and methods
 
-To define attributes for a class, we use instance variables. The name of an instance variable must start with the **@** symbol, and it cannot be accessed outside of the object unless we expose them through methods.
+To define attributes for a class, we use instance variables. Instance variables are defined and used in the same way as normal variables, but their name must start with the **@** symbol, and they cannot be accessed outside of the object unless exposed via methods.
 
 ```ruby
 class Color
 
-   ...
+  def initialize(name, hexcode)
+    @name    = name
+    @hexcode = hexcode
+  end
 
   def name
     @name
@@ -93,7 +96,7 @@ puts "The hexcode of #{color.name} is #{color.hexcode}"
 
 ## Privacy
 
-By default, any method you define in Ruby (and most other languages too) is public. This means that anything outside of the object can call any of the methods, with the exception of `initialize` which is always private and can only be accessed through calling `new`.
+By default, any method you define in Ruby (and most other languages too) is public. This means that anything outside of the object can call any of the methods, with the exception of `initialize` which is always private and can only be called by `new`.
 
 Besides **public** you can also have **private** and **protected**  methods.
 
