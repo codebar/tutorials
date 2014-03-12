@@ -13,7 +13,7 @@ To get help outside our sessions, [join the codebar channel](https://gitter.im/c
 
 # Things to help you get started
 
-There is an abundance of resources out there that can help you out, but all you need to get started is an idea. Overthinking and overengineering what you want to do, can make things a lot harder for you so always remember to keep things simple and evolve the project gradually.
+There is an abundance of resources out there that can help you out, but all you need to get started is an idea. Over-thinking and over-engineering what you want to do, can make things a lot harder for you so always remember to keep things simple and evolve the project gradually.
 
 ## Building your interface
 
@@ -28,7 +28,7 @@ However, using pen and paper is probably the easiest way, so try and choose what
 
 ## Tracking your tasks
 
-It's important to keep organised and remember what you intend to build. Try and make a list of your tasks. You can keep track using [github's issues](https://github.com/blog/831-issues-2-0-the-next-generation) or applications like [trello](https://trello.com/) or [pivotal tracker](http://www.pivotaltracker.com/). You can use all these tools for free and it's an easy and efficient way of not just remembering everything but also of communicating to others that may be interested in helping you out what it is that you want to achieve.
+It's important to keep organised and remember what you intend to build. Try and make a list of your tasks. You can keep track using [Github's issues](https://github.com/blog/831-issues-2-0-the-next-generation) or applications like [trello](https://trello.com/) or [pivotal tracker](http://www.pivotaltracker.com/). You can use all these tools for free and it's an easy and efficient way of not just remembering everything but also of communicating to others that may be interested in helping you out what it is that you want to achieve.
 
 ## Storing data
 
@@ -75,7 +75,7 @@ When working with someone else it's also nice to do your work in branches so you
 
 ## Useful APIs
 
-In our previous tutorials we briefly introduced the [github](http://developer.github.com/v3/) and [BBC](http://www.bbc.co.uk/developer/technology/apis.html) APIs. Most services that you have encountered are likely to have an API available, so just try googling for it.
+In our previous tutorials we briefly introduced the [Github](http://developer.github.com/v3/) and [BBC](http://www.bbc.co.uk/developer/technology/apis.html) APIs. Most services that you have encountered are likely to have an API available, so just try searching google for it.
 
 Some popular API's that you may find useful
 

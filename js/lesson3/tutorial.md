@@ -4,7 +4,7 @@ title: Introduction to JQuery
 ---
 
 
-So far, we've learned the basic of Javascript. From variables, to understanding Objects, functions and how to manipulate the **D**ocument **O**bject **M**odel.
+So far, we've learned the basic of JavaScript. From variables, to understanding Objects, functions and how to manipulate the **D**ocument **O**bject **M**odel.
 
 In this session we will introduce JQuery, a very commonly used JavaScript library, that simplifies working with JavaScript.
 
@@ -14,7 +14,7 @@ Today, we will be using **[JQuery 2.0.3](http://code.jquery.com/jquery-2.0.3.min
 
 ###Required files
 
-Download the files required to begin working through the the first tutorial example from [here](https://gist.github.com/despo/309f684b7a6e002aaf1f/download) (JQuery is included)
+Download the files required to begin working through the first tutorial example from [here](https://gist.github.com/despo/309f684b7a6e002aaf1f/download) (JQuery is included)
 
 #What is JQuery?
 
@@ -52,9 +52,9 @@ $('#logo').attr('width')
 $('#logo').attr('width', 300)
 ```
 
-##Changing css attributes
+##Changing CSS attributes
 
-You can get and set the css properties of an item by using the `css()` action.
+You can get and set the CSS properties of an item by using the `css()` action.
 
 ```js
 var heading = $('h1');
@@ -74,7 +74,7 @@ $('input').val("");
 
 ##Adding content
 
-There are many diffrent ways you can add content. You can use **append** to add something to the end to an element, or **prepend** to add to the beginning to an element.
+There are many different ways you can add content. You can use **append** to add something to the end to an element, or **prepend** to add to the beginning to an element.
 
 ```js
 $('#container').append("<div>I love JQuery!</div>")
@@ -118,7 +118,7 @@ $(document).on(event, selector, function() {
 
 Using the `on()` method, means that the click event will work even if we add new items to the DOM dynamically.
 
-> `$(this)` is the element that we have triggerred the event from.
+> `$(this)` is the element that we have triggered the event from.
 
 ##Waiting for the page to load
 
@@ -142,7 +142,7 @@ Download the files required to begin working through the example [here](https://
 git clone https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
 ```
 
-Move the files under your github page folder, in a new directory `wishlist`. Also, try to commit each task you complete e.g. ability to add an item to the list or label items as **Pending**. To do that, you can use the **Github Client** or alternatively **git** on the command line:
+Move the files under your Github page folder, in a new directory `wishlist`. Also, try to commit each task you complete e.g. ability to add an item to the list or label items as **Pending**. To do that, you can use the **Github Client** or alternatively **git** on the command line:
 
 ```bash
 git commit -m "message"
@@ -175,13 +175,13 @@ Try running the function you've just written from the inspector
 addToList("build a website");
 ```
 
-Now that you can succesfuly add items to the list, bind the function to the button with the id `#add-to-list`.  To get the text from the input field, you can use `$("#item").val()`.
+Now that you can successfully add items to the list, bind the function to the button with the id `#add-to-list`.  To get the text from the input field, you can use `$("#item").val()`.
 
 ###Bonus
 After adding the item to the list
 
 1. Empty the text field
-2. Use `focus()` to place the cursor back to the textfield
+2. Use `focus()` to place the cursor back to the text field
 
 ###Label items
 
@@ -195,7 +195,7 @@ Refresh the page and run `addToList("build a website")` again.
 
 ###Setting items to complete
 
-When we click on the Pending label, we want to set items to complete. We will do that by adding a css class `.complete` to the list item (use `addClass()`), **append** a new label `<span class='label success'>Done!</span>` and **remove** the item we've just clicked so that we can't triger the event again.
+When we click on the Pending label, we want to set items to complete. We will do that by adding a CSS class `.complete` to the list item (use `addClass()`), **append** a new label `<span class='label success'>Done!</span>` and **remove** the item we've just clicked so that we can't trigger the event again.
 
 > Use `$(this)` to access the element that the event was triggered from.
 
@@ -221,7 +221,7 @@ function updateTotal() {
 }
 ```
 
-We **only** want to display the total **if there are completed or pending items** in the list. As we are using the `success` and `pending` css classes in each of our task, we should be able to get the occurences count using `length`.
+We **only** want to display the total **if there are completed or pending items** in the list. As we are using the `success` and `pending` CSS classes in each of our task, we should be able to get the occurrences count using `length`.
 
 Write the total `Pending: " + pending + " Completed: " + completed` in the element with the class `.total`
 
@@ -234,9 +234,9 @@ Update the displayed totals by calling `updateTotal()`
 1. after adding an item to the list
 2. when changing the state of an item from **Pending** to **Done**
 
-###Pushing to github page
+###Pushing to Github page
 
-Link to wishlist/index.html from the `index.html` of your github page. Push your changes to the _github-pages_ branch and check you can access the project from the internet.
+Link to wishlist/index.html from the `index.html` of your Github page. Push your changes to the _github-pages_ branch and check you can access the project from the internet.
 Access the wish list at **http://`<username>`.github.io/`<project>`/wishlist/index.html**
 
 Have a look at our [**Wish List**](../../examples/wishlist/index.html).
@@ -250,7 +250,7 @@ Have a look at our [**Wish List**](../../examples/wishlist/index.html).
 https://gist.github.com/ab21d29aa1ea8fbbbb0e.git
 ```
 
-Move the files under your github page folder, in a  directory colorpicker.
+Move the files under your Github page folder, in a  directory colorpicker.
 Don't forget to commit each task you complete! That way it will be easier to retrace your steps if something goes wrong!
 
 ##Functionality

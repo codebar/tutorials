@@ -8,7 +8,7 @@ footer: true
 
 ### Recap
 
-In the last lesson, we briefly introducted **HTML5** and **CSS3** with more focus on **CSS3**
+In the last lesson, we briefly introduced **HTML5** and **CSS3** with more focus on **CSS3**
 
 ### Today we will be focusing more on HTML5
 
@@ -21,7 +21,7 @@ The page we will build will look similar to this [example page](http://codebar.g
 Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7680133/download)
 
 
-## HTML5 stuctural semantics
+## HTML5 structural semantics
 
 ### Sectioning
 
@@ -32,7 +32,7 @@ In the previous lessons, we used some HTML5 elements, like `<header>` and `<foot
  The purpose of structural semantics is that the elements describe parts of a website.
 
 ### `<section>`
-A section is usually a blob of content. When you are considering using it, try and ask yourself if what you are thinking of defining as section has a natural heading. If not, you should propably avoid it. It is also used for sectioning elements.
+A section is usually a blob of content. When you are considering using it, try and ask yourself if what you are thinking of defining as section has a natural heading. If not, you should probably avoid it. It is also used for sectioning elements.
 
 If you just want to use it to style a part of the page, `<div>` would be more appropriate.
 
@@ -42,7 +42,7 @@ The article element represents a component of a page that consists of a self-con
 Besides content, an `<article>` could have a heading `<header>` and sometimes a `<footer>`. It's commonly used for blog posts, comments and stories.
 
 ### `<aside>`
-aside can be used within different contexes. For example, if you are using it inside the page, the content needs to be  related to the context of the page. Some example usage would be list of posts (if the page displays posts), advertising - if that is related to the page, or event additional navigation). If you use it within an article element, then the context should be specifically related to that article.
+aside can be used within different contexts. For example, if you are using it inside the page, the content needs to be  related to the context of the page. Some example usage would be list of posts (if the page displays posts), advertising - if that is related to the page, or event additional navigation). If you use it within an article element, then the context should be specifically related to that article.
 
 ### Other elements
 
@@ -76,9 +76,9 @@ This is **bad usage**, unless this information is directly relevant to the page.
 </address>
 ```
 
-#### `<figure>` and `<figcaption`
+#### `<figure>` and `<figcaption>`
 `<figure>` can be used in conjunction with the `<figcaption>` element to describe images, pictures, illustrations and diagrams (and even more).
-`<figcaption>` respresents a caption or legend for a picture.
+`<figcaption>` represents a caption or legend for a picture.
 
 ```html
 <figure>
@@ -94,7 +94,7 @@ This is **bad usage**, unless this information is directly relevant to the page.
 ### `<video>` and `<audio>`
 The `<video>` and `<audio>` tags were introduced to support build-in media and offer the ability to easy embed media into HTML documents.
 
-When you include a video, if the browser used does not support it, it will fallback to the message you contain within the container
+When you include a video, if the browser used does not support it, it will fall back to the message you contain within the container
 
 ```html
 <video src="path/to/video">
@@ -125,7 +125,7 @@ Grace Hopper on Letterman - http://codebar.github.io/tutorials/html/lesson6/asse
 
 ```
 
-Also, dont forget to refer to the [previous tutorials](http://codebar.github.io/tutorials)
+Also, don't forget to refer to the [previous tutorials](http://codebar.github.io/tutorials)
 
 > Don't afraid to ask help from your coach.
 

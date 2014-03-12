@@ -11,7 +11,7 @@ Testing is a way to ensure that the code you have written works correctly. It ve
 
 Today we will be briefly explaining how you can test-drive your code. Testing is not just a way to ensure that everything works well together, but also means of improving the quality and keeping your code simple and readable.
 
-## Javascript Testing Frameworks
+## JavaScript Testing Frameworks
 
 There are [a number](http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) of libraries written to assist with testing JavaScript, but we will use [Jasmine](http://pivotal.github.io/jasmine/). The syntax is quite simple and it doesn't require any additional configuration in order to use.
 
@@ -41,11 +41,11 @@ When a test is no longer working you get a failure
 
 > Don't forget that you must refresh your browser when you update the tests!
 
-# Exercise 1: Unit Coverter
+# Exercise 1: Unit Converter
 
 Using Jasmine to test drive our code, today we will implement a Unit Converter.
 
-To get started, download the code from [our github repository](https://github.com/codebar/TestingJavascript).
+To get started, download the code from [our Github repository](https://github.com/codebar/TestingJavascript).
 
 For Jasmine to work, it must know about our code and test files. So, before we begin using Jasmine to test, we must update the `SpecRunner.html` to include our files. The code is stored in the `src` directory (which stands for **source**), and our test files in `spec`.
 
@@ -89,9 +89,9 @@ return farheneit.toFixed(1);
 > Add another test using a different value for the temperature. Verify the result using google search `X Fahrenheit to Celsius`
 
 
-## Converting Celcius to Farheneit
+## Converting Celsius to Fahrenheit
 
-Not that we have that working, let's add another function that converts **celcius** to **farheneit** instead.
+Not that we have that working, let's add another function that converts **Celsius** to **Farhenheit** instead.
 First, don't forget to add your test and the expected solution. (You can use Google to figure out the result)
 
 To reverse the result we can use this formula:
@@ -131,7 +131,7 @@ Besides the `toEqual()` method, Jasmine has a big set of matchers that we can us
 
 # Exercise 2: Calculator
 
-Download the [Testing Javascript project again](https://github.com/codebar/TestingJavascript) and create a Calculator.js, under the `/src` directory, and a CalculatorSpec.js under the `/spec` directory. Don't forget to update the SpecRunner so it includes you tests and code files.
+Download the [Testing JavaScript project again](https://github.com/codebar/TestingJavascript) and create a Calculator.js, under the `/src` directory, and a CalculatorSpec.js under the `/spec` directory. Don't forget to update the SpecRunner so it includes you tests and code files.
 
 1. Write a simple calculator that adds, subtracts, divides and multiplies two numbers together.
 2. Commit when you add a test, and after you make each test working.
@@ -141,7 +141,7 @@ Download the [Testing Javascript project again](https://github.com/codebar/Testi
 # Additional Resources
 
 You should now understand enough about JavaScript to create and test your own code.
-To gain a deeper understanding of JavaScript, we recommend reading [Javascript, the good parts](http://www.amazon.co.uk/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742), by Douglas Crockford.
+To gain a deeper understanding of JavaScript, we recommend reading [JavaScript, the good parts](http://www.amazon.co.uk/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742), by Douglas Crockford.
 
 ---
 This ends our **Introduction to Testing** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

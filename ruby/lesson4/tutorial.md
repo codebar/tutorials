@@ -134,7 +134,7 @@ Create a `to_s` method, that returns the Celsius temperature formatted e.g. 16 &
 
 Create a script that prompts you to fill in the temperature for each day of the week (Monday - Sunday) and for the inputs 16, 17 18, 18, 21, 16, 19 prints out the following output:
 
-> If you don't remember how to create a script, you can look at the sample file for the first exercise of the [second Ruby tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html) in github, and read the instructions of the first Exercise.
+> If you don't remember how to create a script, you can look at the sample file for the first exercise of the [second Ruby tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html) on Github, and read the instructions of the first Exercise.
 
 ```html
 Mon | 16°C  | 61°F

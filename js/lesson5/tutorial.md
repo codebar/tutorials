@@ -39,7 +39,7 @@ $.ajax({
 
 ![](assets/images/hangman.png)
 
-[Download](https://gist.github.com/despo/c76a7bd0bef66713a9ac/download) the exercise files or clone them directly from github `git clone https://gist.github.com/c76a7bd0bef66713a9ac.git`
+[Download](https://gist.github.com/despo/c76a7bd0bef66713a9ac/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/c76a7bd0bef66713a9ac.git`
 
 ###API
 | type | resource | parameters | description |
