@@ -32,7 +32,7 @@ The name must be defined in camel case. **CamelCase** is a way of writing compou
 
 ## Creating an instance of a class
 
-To create an object, we call the **new** method on its class. If you want to pass information to the object, then you can write an `initialize` method, which Ruby will call whenever you call the classes' `new` method. Any parameters defined for the `initialize` method need to passed to `new`.
+To create an object, we call the **new** method on its class. If you want to pass information to the object, then you can write an `initialize` method, which Ruby will call whenever you call the classes' `new` method. Any parameters defined for the `initialize` method need to be passed to `new`.
 
 The `initialize` method is often called a **contructor**, as it helps *construct* new objects.
 
