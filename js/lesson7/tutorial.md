@@ -91,7 +91,7 @@ return farheneit.toFixed(1);
 
 ## Converting Celsius to Fahrenheit
 
-Not that we have that working, let's add another function that converts **Celsius** to **Farhenheit** instead.
+Now that we have that working, let's add another function that converts **Celsius** to **Farhenheit** instead.
 First, don't forget to add your test and the expected solution. (You can use Google to figure out the result)
 
 To reverse the result we can use this formula:
