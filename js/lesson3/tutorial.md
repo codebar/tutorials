@@ -4,7 +4,7 @@ title: Introduction to JQuery
 ---
 
 
-So far, we've learned the basic of JavaScript. From variables, to understanding Objects, functions and how to manipulate the **D**ocument **O**bject **M**odel.
+So far, we've learned the basic of JavaScript. From variables, to understanding Objects, functions and how to manipulate the &#x200b;**D**&#x200b;ocument &#x200b;**O**&#x200b;bject &#x200b;**M**&#x200b;odel.
 
 In this session we will introduce JQuery, a very commonly used JavaScript library, that simplifies working with JavaScript.
 
