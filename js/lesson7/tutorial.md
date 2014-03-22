@@ -69,7 +69,7 @@ When we are writing code, it's ok to write a test that is failing before making 
 We have already added a method that will be handling the conversion of Fahrenheit to Celsius. We also know that the formula is
 
 ```javascript
-farheneit = (celcius - 32)/1.8
+fahrenheit = (celsius - 32)/1.8
 ```
 
 Try implementing the solution to make your test work.
@@ -79,7 +79,7 @@ Try implementing the solution to make your test work.
 You will notice that this doesn't quite work as we are getting back a number with multiple decimals. We can use the `toFixed(decimal_places)` method to round up the number to one decimal.
 
 ```javascript
-return farheneit.toFixed(1);
+return fahrenheit.toFixed(1);
 ```
 
 > Did you manage to get your test working?
@@ -91,13 +91,13 @@ return farheneit.toFixed(1);
 
 ## Converting Celsius to Fahrenheit
 
-Now that we have that working, let's add another function that converts **Celsius** to **Farhenheit** instead.
+Now that we have that working, let's add another function that converts **Celsius** to **Fahrenheit** instead.
 First, don't forget to add your test and the expected solution. (You can use Google to figure out the result)
 
 To reverse the result we can use this formula:
 
 ```javascript
-celcius = farheneit * 1.8 + 32
+celsius = fahrenheit * 1.8 + 32
 ```
 
 ## Converting other units
