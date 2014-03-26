@@ -15,7 +15,29 @@ To make things a bit clearer, you must understand that **every** class in Ruby i
 
 ## public_methods
 
-In Ruby you can do some cool things, like check what methods are available on an object using `public_methods`. This is handy if you don't have the documentation available and want to view a class's API.
+In Ruby you can do some cool things, like check what methods are available on an object using `public_methods`. **Public methods** are the methods of an object that can be called from the outside world.
+
+```ruby
+class Dog
+   def bark
+     # do something
+   end
+
+   def walk
+     # go for a walk
+   end
+
+   private
+
+   def scratch
+     # scratch self
+   end
+end
+```
+
+In the example above, `bark` and `walk` are public methods; however `scratch` is private and can only be called from the Dog class directly.
+
+> This is handy if you don't have the documentation available and want to view a class's API.
 
 
 ## accessors, readers and writers
@@ -226,7 +248,7 @@ data = File.read(filename)
 adventure_map = YAML.load(data)
 ```
 
-As `yaml` is not part of Ruby's code libraries (but is part of the standard libraries), you need to `require` it before making use of it.
+As `yaml` is not part of Ruby's core libraries (but is part of the standard libraries), you need to `require` it before making use of it.
 
 You can [download the file](https://gist.github.com/despo/c3ea3f753c0630fea000) with all the data setup for our adventure from Github.
 
@@ -242,7 +264,7 @@ rescue
 end
 ```
 
-We can use **Exception handling** to manage Errors when we attempt to **move_to**  non existing locations. To do that, we need to wrap finding the location name, and assigning it to the `@current_location` in a `begin` block, and in the `rescue` block following it we can output something like `put "You can't go that #{direction"}`
+We can use **Exception handling** to manage errors when we attempt to **move_to** a non existing locations. To do that, we need to wrap finding the location name, and assigning it to the `@current_location` in a `begin` block, and in the `rescue` block following it we can output something like `put "You can't go that #{direction"}`
 
 Try this out by attempting to move `left` on the map.
 
