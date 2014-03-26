@@ -279,7 +279,7 @@ lena = Student.new("Lena Smith", "I am really excited about learning to program!
 vicky = Coach.new("Vicky Ruby", "I want to help people learn coding.")
 vicky.add_skill("HTML")
 vicky.add_skill("JavaScript")
-nicole = Coache.new("Nicole McMillan", "I have been programming for 5 years in Ruby and want to spread the love")
+nicole = Coach.new("Nicole McMillan", "I have been programming for 5 years in Ruby and want to spread the love")
 nicole.add_skill("Ruby")
 
 workshop.add_participant(jane)
