@@ -136,19 +136,19 @@ Define a method that returns the temperature in Fahrenheit. For the conversion w
 
 > Use the `round` method
 
-Create a `to_s` method, that returns the Celsius temperature formatted e.g. 16 &deg;C
+Create a `to_s` method, that returns the Celsius temperature formatted e.g. 16 degrees C
 
 Create a script that prompts you to fill in the temperature for each day of the week (Monday - Sunday) and for the inputs 16, 17 18, 18, 21, 16, 19 prints out the following output:
 
 ```html
-Mon | 16°C  | 61°F
-Tue | 17°C  | 63°F
-Tue | 17°C  | 63°F
-Wed | 18°C  | 64°F
-Thu | 18°C  | 64°F
-Fri | 21°C  | 70°F
-Sat | 16°C  | 61°F
-Sun | 19°C  | 66°F
+Mon | 16 degrees C  | 61 degrees F
+Tue | 17 degrees C  | 63 degrees F
+Tue | 17 degrees C  | 63 degrees F
+Wed | 18 degrees C  | 64 degrees F
+Thu | 18 degrees C  | 64 degrees F
+Fri | 21 degrees C  | 70 degrees F
+Sat | 16 degrees C  | 61 degrees F
+Sun | 19 degrees C  | 66 degrees F
 ```
 > If you don't remember how to create a script, you can look at the sample file for the first exercise of the [second Ruby tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html) on Github, and read the instructions of the first Exercise.
 
