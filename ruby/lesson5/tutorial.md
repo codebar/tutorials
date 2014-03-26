@@ -158,7 +158,7 @@ player.look_around
 
 So far, our `Player` only knows about one location, but in the game we can move between multiple locations through different paths.
 
-To do that, let's create a `Map`. The map get initialized with a list of `locations` and assigns the `current_location` to the **first location **on the list**.
+To do that, let's create a `Map`. The map get initialized with a list of `locations` and assigns the `current_location` to the **first location** on the list.
 
 In `Map`, add a method `describe` that prints out the `description` of the `current_location`.
 
