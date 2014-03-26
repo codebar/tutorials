@@ -259,7 +259,7 @@ Extend the game so that
 2. add an `inventory` method to a `Player`. Calling `inventory` prints out a list with all the items that the `Player` is holding
 3. extract a `Location` object. Modify your code so that it works with the location object, instead of a hash.
 
-If you need any help don't hesitate to ask [join our chatroom](https://gitter.im/codebar/tutorials).
+If you need any help don't hesitate to ask [in our chatroom](https://gitter.im/codebar/tutorials).
 
 ---
 This ends our **Object Oriented Ruby and Inheritance (part 2)** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
