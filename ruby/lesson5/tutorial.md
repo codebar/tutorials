@@ -62,7 +62,7 @@ end
 
 Ruby has some special methods for simplying this functionality.
 
-`attr_reader :color` will give you a writer method, `attr_writer :color` will give you a setter and `attr_accessor :color` will give you both a getter and a setter.
+`attr_reader :color` will give you a getter method, `attr_writer :color` will give you a setter and `attr_accessor :color` will give you both a getter and a setter.
 
 Modify the Flower class so that it no longer has a `color` and an `update_color` method, but instead using the methods we just learned.
 
