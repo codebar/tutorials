@@ -204,7 +204,7 @@ map.describe
 
 Let's also extend the `describe` method of the map to print out the location's available paths. You can use `puts "There is a #{path[:item]} going #{path[:direction]} from here."`. This way we know what path we can move towards.
 
-### Task 3 - Using both `Map` and `Player`
+### Task 3: Using both `Map` and `Player`
 
 To use the `Map` with the `Player`, let's change the `Player` to accept an instance of `Map` when it's initialized.
 
