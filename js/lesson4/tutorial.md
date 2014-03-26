@@ -14,7 +14,7 @@ Don't forget to move the files for the exercises under your Github page folder. 
 
 ##What are HTTP Requests?
 
-Every time the browser fetches data from a server (which could be a page, an images, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper&#x200b;**T**&#x200b;ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then gives back a **response**
+Every time the browser fetches data from a server (which could be a page, an images, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then gives back a **response**
 
 Here is an example of the **GET** requests issued by the [wishlist tutorial](http://codebar.github.io/tutorials/examples/wishlist/index.html).
 
