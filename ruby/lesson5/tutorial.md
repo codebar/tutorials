@@ -142,7 +142,7 @@ So using this example, let's implement the following methods on `Player`
 
 - `pick_up(item)` removes and item from the location, and adds it to `Players`'s `items` array
 
-- `look_around` extend to print out all the items of a location
+- extend `look_around` to print out all the items of a location
    - For each item print `"You see a #{item} on the floor"`
 
 Let's try this out by passing in this location hash to a new instance of `Player`.
