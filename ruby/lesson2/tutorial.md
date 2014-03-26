@@ -141,7 +141,7 @@ puts "#{duration/turns} seconds per problem"
 
 At the beginning of the game ask for the number of turns. If return is pressed default to 0.
 
-> To dynamically load a value you can use the `||=` operant.
+> To default value of a variable, only if the variable empty you can use the `||=` operant. This is called lazy loading.
 
 ```ruby
 # here the number will get assigned to 1 as its value is nil
