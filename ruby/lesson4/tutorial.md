@@ -143,7 +143,6 @@ Create a script that prompts you to fill in the temperature for each day of the 
 ```html
 Mon | 16 degrees C  | 61 degrees F
 Tue | 17 degrees C  | 63 degrees F
-Tue | 17 degrees C  | 63 degrees F
 Wed | 18 degrees C  | 64 degrees F
 Thu | 18 degrees C  | 64 degrees F
 Fri | 21 degrees C  | 70 degrees F
