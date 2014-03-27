@@ -43,7 +43,7 @@ Map the stylesheet to the page
 <link rel="stylesheet" href="style.css">
 ```
 
-Set the title that will be displayed on the browser's bar
+Set the title that will be displayed in the browser's bar
 
 ```html
 <title>Grace Hopper</title>
@@ -149,7 +149,7 @@ And finally, add some space between the two elements and make sure the title is 
 }
 ```
 
-Color the `<h1>` so it stands out and its not the same like the other text on the page
+Color the `<h1>` so it stands out and is not the same as the other text on the page
 
 ```css
 .title h1 {
@@ -269,9 +269,9 @@ Style the container
 
 ## Floating elements
 
-Floating elements still keeps the in the normal flow, but as far to the left or right of their container element. Other elements, like paragraphs or lists, wrap around them.
+Floating elements still keeps them in the normal flow, but as far to the left or right of their container element. Other elements, like paragraphs or lists, wrap around them.
 
-To ensure an element `floats` you must always specify its width, or else its likely to take over the width of the page and not appear floated.
+To ensure an element `floats` you must always specify its width, or else it's likely to take over the width of the page and not appear floated.
 
 ###Box floating left
 ![](assets/images/float-left.png)
@@ -336,9 +336,9 @@ Add space around the images so there is some separation between them and the tex
 
 ## Positioning
 
-By default, all HTML elements position is **static**. This means that they are positioned within the normal flow of the page and ignore any `top`, `bottom`, `right` or `left` properties defined  in the CSS.
+By default, all HTML elements have a position of **static**. This means that they are positioned within the normal flow of the page and ignore any `top`, `bottom`, `right` or `left` properties defined  in the CSS.
 
-Inline boxes flow from left to right and block boxes from top to bottom
+Inline boxes flow from left to right and block boxes from top to bottom.
 
 ### Relative positioning
 When an element's position is defined as relative `position: relative;` it is no longer in the normal flow and it can be moved to the top, right, bottom or left. It can be used in conjunction with `absolute` positioning.
