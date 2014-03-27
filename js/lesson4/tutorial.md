@@ -46,7 +46,7 @@ HTTP Verbs are the actions performed when the server receives a request.
 
 #AJAX
 
-AJAX is a way of updating websites asynchronously, without having to reload them. It stands for **A**synchronous **Ja**vascript and **X**ML.
+AJAX is a way of updating websites asynchronously, without having to reload them. It stands for &#x200b;**A**&#x200b;synchronous &#x200b;**Ja**&#x200b;vascript and &#x200b;**X**&#x200b;ML.
 
 ##Request using JavaScript
 
@@ -76,7 +76,7 @@ To be able to utilise the response we get, we need to convert it to `JSON`.
 JSON.parse(response)
 ```
 
-> JSON stands for **J**ava**S**cript **O**bject **N**otation.
+> JSON stands for &#x200b;**J**&#x200b;ava&#x200b;**S**&#x200b;cript &#x200b;**O**&#x200b;bject &#x200b;**N**&#x200b;otation.
 
 ##Exercise 1 - Retrieve GitHub user information
 
