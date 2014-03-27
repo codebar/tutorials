@@ -351,11 +351,12 @@ Inline boxes flow from left to right and block boxes from top to bottom.
 When an element's position is defined as relative `position: relative;` it is no longer in the normal flow and it can be moved to the top, right, bottom or left. It can be used in conjunction with `absolute` positioning.
 
 ### Absolute positioning
-Absolute positioned elements are also outside the normal flow. They are offset from their container block, positioned relative.
+Absolute positioned elements are also outside the normal flow.
 
-Despite what element an **absolute** positioned element is wrapped in, the element that is considered it's container is the first that has a position set other than **static**. If there is no such element, the outer `<html>` is considered its container.
+Their position is determined by the offset values in the properties `top`, `bottom`, `left` and `right`. These offsets are measured from the element's container block
 
-Its position is determined by the offset values in the properties `top`, `bottom`, `left` and `right`
+The container is not necessarily the element it is wrapped in (its parent). To find the container, the browser first looks at the element's parent, then its grandparent, then its great-grandparent and so on, until it finds an ancestor with a `position` of anything other than **static**. If there is no such element, the outer `<html>` is considered its container.
+
 
 ### Using absolute and relative positioning
 
@@ -477,7 +478,7 @@ There is still one small problem with our page. You can view this better if you 
 
 ### z-index
 
-This can be fixed by changing the `z-index`, who defines the order of overlapping.
+This can be fixed by changing the `z-index`, which controls how content overlaps.
 The element with the highest `z-index` appears on top.
 
 Extend the CSS for the `header`
