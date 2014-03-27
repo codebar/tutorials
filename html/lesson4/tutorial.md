@@ -196,6 +196,13 @@ and make the elements inline so they sit next to each other
 }
 ```
 
+and set the colour of the toolbar
+
+```css
+background-color: #3D5167;
+text-align: center;
+```
+
 The text is now really hard to see. Change the color of the link...
 
 ```css
