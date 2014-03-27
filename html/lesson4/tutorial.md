@@ -325,6 +325,7 @@ Add a CSS class to the second image's wrapper
 ```
 
 And float the element to the right
+
 ```css
 .end-of-line {
   float: right;
