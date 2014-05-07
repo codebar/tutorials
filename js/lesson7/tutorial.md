@@ -69,7 +69,7 @@ When we are writing code, it's ok to write a test that is failing before making 
 We have already added a method that will be handling the conversion of Fahrenheit to Celsius. We also know that the formula is
 
 ```javascript
-fahrenheit = (celsius - 32)/1.8
+celsius = (farenheit - 32)/1.8
 ```
 
 Try implementing the solution to make your test work.
