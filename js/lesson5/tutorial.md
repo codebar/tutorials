@@ -30,7 +30,7 @@ You can also specify any `data` as a JSON object.
 ```js
 $.ajax({
   type: request_type,
-  date: { field: 'value',  other_field: 'other value' }
+  data: { field: 'value',  other_field: 'other value' }
   ...
 });
 ```
