@@ -326,7 +326,7 @@ Also, to make your code easier to read, try constructing the html in a method th
 
 ```javascript
 function processEpisode(episode) {
- item_html = "<li>"
+ var item_html = "<li>"
  item_html += "<h2>" + episode.programme.display_titles.title + "</h2>";
  // display image
  // display date and time
