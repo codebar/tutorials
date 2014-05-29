@@ -256,7 +256,7 @@ When the HTML is loaded on our page, the browser generates its DOM. This enables
 
 ### Interacting with DOM
 
-The **DOM** has is represented by **nodes**. Each node has different properties, and they are connected like a tree, as we can see in the diagram above.
+The **DOM** is represented by **nodes**. Each node has different properties, and nodes are connected (like in the tree diagram above).
 
 Let's try interacting with the DOM of our page by getting the parent node of the body.
 
