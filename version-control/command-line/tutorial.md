@@ -102,6 +102,7 @@ $ git pull origin master
 Username for 'https://github.com': <your username>
 Password for 'https://<username>@github.com': <your password>
 ```
+
 > When you are working with remote repo is important to sync your local repo before any commit, merge or push.
 
 ### Syncing the remote copy with your local copy
@@ -132,6 +133,7 @@ Update the index.html file and then commit and push the changes
     </body>
 </html>
 ```
+
 _index.html_
 
 ### Check the status of your repository
