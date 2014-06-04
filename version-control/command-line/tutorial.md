@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Git: Introduction to command line
+title: Git Introduction to command line
 ---
 
 ## Git: Introduction to command line
