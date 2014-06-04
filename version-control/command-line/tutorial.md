@@ -1,10 +1,12 @@
-# GIT command line tutorial
+# Git: Introduction to command line
+
+**PREREQUISITE:** Basic understanding of the command line.
 
 Git is an easy to share and collaborate tool that keeps our code tracked and safe.
 With the following examples we understand how to deal with the daily usage of the tool.
 
 ## Before you begin
-Install command line git for [OS X](http://code.google.com/p/git-osx-installer) or [Windows](http://msysgit.github.com/) and open your terminal.
+Install command line git for [OS X](http://code.google.com/p/git-osx-installer) or [Windows](http://msysgit.github.com/) and open your terminal. If you are on linux you should already have git installed.
 
 Create a directory where you will be storing all your projects. You can call is `code` or `projects`.
 
@@ -14,6 +16,10 @@ Create a directory where you will be storing all your projects. You can call is 
 $ git config --global user.name "Your Name"
 $ git config --global user.email "name@domain"
 ```
+
+### Setup an SSH key
+
+You need an ssh key so you don't have to authenticate every time you want to commit to git.
 
 
 ## Example 1: Everyday commands
@@ -35,13 +41,13 @@ $ echo "Learning git" > index.html
 
 > The above command will output `<h1>Learning git</h1>` and that will be pipped in index.html. Open up the file and have a look.
 
-### Check the git repo status.
+### Check the git repository status.
 
 ```bash
 $ git status
 ```
 
-### Add your file on the repo and commit your changes.
+### Add your file on the repository and commit your changes.
 
 ```bash
 $ git add .
@@ -57,18 +63,31 @@ $ git commit -m 'this is my first command-line commit!'
 $ git log
 ```
 
-### Transferring project repo to online service
+### Transferring project repository to online service
 
-**First you need to create an account to the service of your choice ([Github](http://github.com/join), [Gitlab](http://gitlab.com)).**
-Then, create a new project (or repository).
+First you need to create an account to the service of your choice ([Github](http://github.com/join), [Gitlab](http://gitlab.com)). Then, create a new project (or repository).
 
 Copy the information about adding an existing project to the repository which should be something like the details below.
 
 
 ```bash
-$ git remote add origin https://github.com/<username>/<git-repo-name>.git
+$ git remote add origin <repository-url>
 $ git push -u origin master
 ```
+
+#### What is `remote`
+
+`remote` git all the remote repositories you have configured. You could have the same repository stored in multiple resources like Github and Gitlab or Heroku.
+
+The structure of the command is `git remote <add|remove> <name of remote> <url of remote>`
+
+#### List all your remote repositories
+
+`git remote`
+
+Or to see more information you can use the verbose (-v) flag
+
+`git remote -v`
 
 ### Syncing your local copy with the remote copy
 
@@ -87,7 +106,7 @@ $ git push origin master
 $ git log
 ```
 
-# Example 2: Working with github
+# Example 2: Working with a remote service
 
 Update the index.html file and then commit and push the changes
 
@@ -130,10 +149,10 @@ $ git push origin master
 $ git log
 ```
 
-### Check your code online from the github website.
+### Check your code online (from the Github or Gitlab website).
 
 
-# Example 3: Running checks before any commit/push
+# Example 3: Verifying changes before any commit
 
 Edit index.html
 
@@ -158,149 +177,118 @@ Edit index.html
 </html>
 ```
 
-### Then check the changes before the commit.
+### Check the changes
 
 ```bash
 $ git status
 $ git diff
-
 ```
 
-**On the git diff results you can see -/+ indications:**
+The -/+ indications you can see mean
 
-**Lines marked with "-" indicate the lines that were removed from the file/code.**
+**-** indicates the lines that were removed from the code.
 
-**Lines marked with "+" indicate the lines that were added to the file/code.**
+**+** indicates the lines that were added to the code.
 
 ```bash
 $ git diff
+
 diff --git a/index.html b/index.html
-index aae57ff..4a74c00 100644
+index 21f15d1..c2031f1 100644
 --- a/index.html
 +++ b/index.html
-@@ -4,6 +4,6 @@
-    </head>
-
-    <body>
--       My first page
-+       <b>My first page</b>
-    </body>
+@@ -10,6 +10,8 @@
+             <dd>git init</dd>
+             <dt>Add files to git</dt>
+             <dd>git add <filename></dd>
++            <dt>Checking file changes</dt>
++            <dd>git status</dd>
+           </dl>
+     </body>
  </html>
 ```
 
-### If the results is acceptable then commit and push your changes with the following commands.
+### After you verify your change, commit and push them
 
 ```bash
-$ git commit -am 'Added bold message'
-
+$ git commit -m 'Added git status description'
 $ git push origin master
-
 ```
 
+# Example 4: Discarding uncommitted changes
 
-# Discard uncommitted changes
-# Example 4
-
-### With the following example will understand how we can revert accidental uncommitted changes.
-### Edit the index.html file and then check the changes.
+Edit the index.html file and then check the changes.
 
 ```bash
-$ echo "codebar codebar codebar codebar" >> index.html
-
-$ cat index.html
+$ echo "oh no!" > index.html
 ```
 
-###check the changes
+> Have a look at the file using `git diff`
 
-```bash
-$ git diff
-
-diff --git a/index.html b/index.html
-index 4a74c00..bba960e 100644
---- a/index.html
-+++ b/index.html
-@@ -7,3 +7,4 @@
-        <b>My first page</b>
-    </body>
- </html>
-+codebar codebar codebar codebar
-```
-
-###Then check the repo status
+### Check the status of the repository
 
 ```bash
 $ git status
 
-$ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-# modified:   index.html
-#
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-### To discard changes run the following command
+### To discard the changes checkout the file
 
 ```bash
 $ git checkout -- index.html
 ```
 
-###and then
+Don't forget to verify the changes
 
 ```bash
 $ git diff
-
-$ cat index.html
+$ view index.html
 ```
 
-# Revert committed changes
-# Example 5
+# Example 5: Revert committed changes
 
-### With the following example will understand how we can reset accidental committed changes
-
-###Repeat the following steps.
+Repeat the steps below to modify and commit a file
 
 ```bash
-$ echo "codebar codebar codebar codebar" >> index.html
-
-$ cat index.html
-
+$ echo "oh not again" > index.html
 $ git diff
-
-$ git status
-
-$ git commit -am 'Added unchecked code'
-
-$ git status
-
-$ git log
+$ git add index.html
+$ git commit -am 'Oops, I just deleted my list'
 ```
+
+> Can you explain the commands you just used?
 
 ### Check the log history.
 
 ```bash
-
 $ git log
- commit f4d8d2c2ca851c73176641109172780487da9c1d
- Author: Your Name <your@mail>
- Date:   Fri Jan  1 00:00:10 2014 +0100
 
-    Added unchecked code
+commit aafbe36777e19244ba5030cbc9467244a7163b61
+Author: Jane Doe <jane@codebar.io>
+Date:   Tue Jun 3 21:12:57 2014 +0100
 
- commit aa0f3b20baed214b29ea05b2e88b6e8fcf5f94bc
- Author: Your Name <your@mail>
- Date:   Fri Jan  1 00:00:00 2014 +0100
+    Oops, I just deleted my list
 
-    Added bold message
-...
+commit dbb313d28de82c11535968584ce2e149b1fc74ad
+Author: Jane Doe <jane@codebar.io>
+Date:   Tue Jun 3 21:06:09 2014 +0100
+
+    Added git status description
+
+commit c0bb15bf9f75613930c66760b90b2ccc1af0d2d6
 ...
 ...
 ```
 
-###Next step reset the last commit.
+### Resetting the last commit.
 
 ```bash
 $ git reset HEAD^
@@ -308,163 +296,157 @@ $ git reset HEAD^
 Unstaged changes after reset:
 M index.html
 ```
-### Check again the logs.
-### The latest commit should be reset.
 
+> The caret (^) after HEAD moves head back through commits. HEAD^ is short for HEAD^1 and in the same way you can apply HEAD^2 to go back two commit ago.
+
+### Check the log again
 
 ```bash
 $ git log
 ```
 
-### Now check the status.
+> Did you notice that the last commit is no longer there?
+
+
+### Now check the status and discard the changes in the file
 
 ```bash
 $ git status
-
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-# modified:   index.html
-#
-no changes added to commit (use "git add" and/or "git commit -a")
-
 ```
 
-### Next step: Discard the changes or edit the file.
-### To discard the changes run the following command.
+> Do you remember how to discard the changes? Have a look earlier in the tutorial.
+
+
+# Example 6: Revert committed and pushed changes.
+
+You can correct something you pushed accidentaly by changing history. In the following example you will see how can you revert the last pushed commit.
+
+### Run the following steps
+
 ```bash
-$ git checkout -- index.html
-```
-
-
-
-# Revert committed and pushed changes.
-# Example 6
-
-###Very often we push changes on the remote git repo which are not working properly. The best practice is to correct your code with one more commit, but some times fixing the issues is harder than reverting the last pushed commits. With the following example you will see how can you revert the last pushed commit.
-
-###Repeat the following steps
-```bash
-
-$ echo "codebar codebar codebar codebar" >> index.html
-
-$ cat index.html
-
+$ echo "this change will be soon reverted" > index.html
 $ git diff
-
-$ git status
-
-$ git commit -am 'Added unchecked code'
-
+$ git commit -am 'add another broken change'
 $ git push origin master
-
 $ git status
-
 $ git log
 ```
 
-###Now lets see how we can revert a commit
-```bash
+> What does git push do?
 
+### Reverting a commit
+
+```bash
 $ git log
- commit f4d8d2c2ca851c73176641109172780487da9c1d
- Author: Your Name <your@mail>
- Date:   Fri Jan  1 00:00:10 2014 +0100
 
-    Added unchecked code
+commit f4d8d2c2ca851c73176641109172780487da9c1d
+Author: Jane Doe <jane@codebar.io>
+Date:   Tue Jun 3 21:17:57 2014 +0100
 
- commit aa0f3b20baed214b29ea05b2e88b6e8fcf5f94bc
- Author: Your Name <your@mail>
- Date:   Fri Jan  1 00:00:00 2014 +0100
+    add another broken change
 
-    Added bold message
+commit dbb313d28de82c11535968584ce2e149b1fc74ad
+Author: Jane Doe <jane@codebar.io>
+Date:   Tue Jun 3 21:06:09 2014 +0100
+
+    Added git status description
+
+commit c0bb15bf9f75613930c66760b90b2ccc1af0d2d6
 ...
 ...
 ...
 ```
 
-### we need the commit id for the following command and we use it like that
+### You need to grab the commit identifier and then revert to it
 
 ```bash
-$ git revert 4d8d2c2ca851c73176641109172780487da9c1d
+$ git revert f4d8d2c2ca851c73176641109172780487da9c1d
 ```
-### After that we have reverted the changes local now we need to push the local repo into remote repo.
 
-###now check the file if it is clean from the unwanted changes
+After reverting the changes you have to push the code to the remote repo for them to be applied
 
 ```bash
-cat index.html
-```
-### and push the changes into remote repo (github)
-'''bash
 git push origin master
-...
-
+```
 
 # Extras
 
-Check the following link if you are mac user.
+If you are on OS X, check the following resources
+
 https://help.github.com/articles/set-up-git
 
+## Configuring your git environment
 
-To configure your environment for permanent you need the following files
-
-create the file ~/.gitconfig
+Create the file `.gitconfig` in your root directory and add the following configuration
 
 ```bash
 [user]
-    name = Your name
-    email = Your@mail
-[core]
-    editor = vim
-    pager = less -x4
-excludesfile = ~/.gitignore_global
-[color]
-    branch = auto
-    diff = auto
-    status = auto
-    ui = auto
-[difftool "sourcetree"]
-cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-path =
-[mergetool "sourcetree"]
-cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-trustExitCode = true
-[alias]
-sync = !git pull --rebase && git push
-com = !git add . && git commit -am
-
+  name = <Your name>
+  email = <Your email>
 ```
 
-Create the file ~/.gitignore_global
+### Creating shortcuts (aliases)
 
-```bash
+```
+[alias]
+  ci = commit
+  dc = diff --cached
+```
+
+> Can you think of another command that you would find handy to shorten down?
+
+### Telling git to try and fix whispace issues before committing
+
+```
+[apply]
+  whitespace = fix
+```
+
+### Ignoring files across directories
+
+```
+[core]
+  excludesfile = ~/.gitignore
+```
+
+To apply this you need to create a .gitignore file in your root path. There you can add either specific files or extentions that you always want excluded. This is a handy list to help you start
+
+```
+*.DS_Store
 *~
-.DS_Store
-*.gem
-*.rbc
 *.log
-*.gz
 *.zip
 *.pkg
 *.rar
 ```
 
-Make your bash PROMPT more frendly
-Add the following lines be careful with the changes.
+> Do you know what these files are? You normally wouldn't want to commit logs or packages.
 
-```bash
-export GITAWAREPROMPT=~/.bash
-source $GITAWAREPROMPT/main.sh
 
-HISTSIZE=10000
-HISTFILESIZE=20000
+### Pimping your log history
 
-export PS1="\u@\h{ \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\] \w }\n$ "
-
-source ~/.profile
-
+In your aliases add this as an alias for viewing git logs
+```
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 ```
 
+Try it out by running `git lg`
+
+### Store commands in your history
+
+Add HISTSIZE and HISTFILESIZE to your .bashrc file.  **HISTSIZE** is the number of commands stored in memory when you are using the terminal. **HISTFILESIZE** is the number of commands stored in memory when you are using the terminal
+
+```bash
+HISTSIZE=10000
+HISTFILESIZE=20000
+```
+
+After typing a couple of command in the terminal, try executing
+
+Ctrl+R followed by the command you want to run e.g. `git lg`
+
+
+> You can see the entire history by running `history`
+
+---
+This ends **Git: Introduction to command line** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
