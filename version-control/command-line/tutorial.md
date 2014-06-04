@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Git Introduction to command line
+title: Introduction to the git command line
 ---
 
-## Git: Introduction to command line
+## Introduction to the git command line
 
 **PREREQUISITE:** Basic understanding of the command line.
 
