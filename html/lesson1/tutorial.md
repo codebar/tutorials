@@ -292,8 +292,8 @@ Add a small rhyme to your page, wrapped with quotes using ASCII code.
   <p>
     <strong>
       <em>
-     &#34;A wise old owl sat on an oak;  The more he saw the less he spoke; <br>
-     The less he spoke the more he heard; Why aren&#39;t we like that wise old bird?&#34;
+       &#34;A wise old owl sat on an oak;  The more he saw the less he spoke; <br>
+       The less he spoke the more he heard; Why aren&#39;t we like that wise old bird?&#34;
       </em>
     </strong>
   </p>
