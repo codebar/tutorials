@@ -105,6 +105,8 @@ animals.unshift("cow")
 
 > What do you expect to get when apply `pop()` to the animals array? Try it out.
 
+Analogously, `array.shift()` removes and returns the *first* element of the array.
+
 ### Ordering
 
 To order the elements of an array we can use `sort()`.
