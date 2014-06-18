@@ -1,28 +1,28 @@
 ---
 layout: page
-title: Introduction to JQuery
+title: Introduction to jQuery
 ---
 
 
 So far, we've learned the basic of JavaScript. From variables, to understanding Objects, functions and how to manipulate the &#x200b;**D**&#x200b;ocument &#x200b;**O**&#x200b;bject &#x200b;**M**&#x200b;odel.
 
-In this session we will introduce JQuery, a very commonly used JavaScript library, that simplifies working with JavaScript.
+In this session we will introduce jQuery, a very commonly used JavaScript library, that simplifies working with JavaScript.
 
-Today, we will be using **[JQuery 2.0.3](http://code.jquery.com/jquery-2.0.3.min.js)**. If you want to use JQuery on other projects, You can download or link directly to the latest version from the [JQuery download section](http://jquery.com/download/).
+Today, we will be using **[jQuery 2.0.3](http://code.jquery.com/jquery-2.0.3.min.js)**. If you want to use jQuery on other projects, You can download or link directly to the latest version from the [jQuery download section](http://jquery.com/download/).
 
 ## But before we start...
 
 ###Required files
 
-Download the files required to begin working through the first tutorial example from [here](https://gist.github.com/despo/309f684b7a6e002aaf1f/download) (JQuery is included)
+Download the files required to begin working through the first tutorial example from [here](https://gist.github.com/despo/309f684b7a6e002aaf1f/download) (jQuery is included)
 
-#What is JQuery?
+#What is jQuery?
 
-JQuery is a JavaScript library that supplies you with functionality independent of browser platform. It's very commonly used on the internet and enables you to do more with writing less code.
+jQuery is a JavaScript library that supplies you with functionality independent of browser platform. It's very commonly used on the internet and enables you to do more with writing less code.
 
 ##Selectors
 
-Selectors are simplified in JQuery. You can access elements by element type, id or class, just like in `CSS`.
+Selectors are simplified in jQuery. You can access elements by element type, id or class, just like in `CSS`.
 
 For example, to retrieve all paragraph elements you can use this selector `$("p")` or to retrieve all elements with a specific id `$("#message")` instead of using `getElementByTag('p')` or `getElementById('message')`.
 
@@ -77,7 +77,7 @@ $('input').val("");
 There are many different ways you can add content. You can use **append** to add something to the end to an element, or **prepend** to add to the beginning to an element.
 
 ```js
-$('#container').append("<div>I love JQuery!</div>")
+$('#container').append("<div>I love jQuery!</div>")
 ```
 
 You can also use `replaceWith()` to substitute an element entirely with some new content.
@@ -85,7 +85,7 @@ You can also use `replaceWith()` to substitute an element entirely with some new
 Try this out in your browser.
 
 ```js
-$('#container').replaceWith("<div>I love JQuery!</div>")
+$('#container').replaceWith("<div>I love jQuery!</div>")
 ```
 
 > Check the html of the page using the inspector.
@@ -100,7 +100,7 @@ We've learned in the previous lesson how to bind events on **click** by setting 
 <a href="#" class="done" onclick="alert('Click event')">Show an alert box</a>
 ```
 
-With JQuery we can achieve this by applying event listeners to the document of the page, listening for the event.
+With jQuery we can achieve this by applying event listeners to the document of the page, listening for the event.
 
 ```js
 $(document).on('click','.done', function() {
@@ -134,7 +134,7 @@ Make a note of this. You should **always** use it or else your bindings won't wo
 
 #Exercise 1: Build a wish list
 
-Using JQuery and JavaScript functions, we will build a small todo list.
+Using jQuery and JavaScript functions, we will build a small todo list.
 
 Download the files required to begin working through the example [here](https://gist.github.com/despo/309f684b7a6e002aaf1f) or alternatively checkout with git.
 
@@ -327,7 +327,7 @@ Pick 10 color codes you like and store them in an array.
 var colors = [ "22ac5e", "d68236" ... ]
 ```
 
-We can iterate through the array using JQuery's `each()` function.
+We can iterate through the array using jQuery's `each()` function.
 
 ```javascript
 $.each(array, function(index, element) {
@@ -394,4 +394,4 @@ Compare your colorpicker with [ours](../../examples/colorpicker/index.html).
 
 
 ---
-This ends our **Introduction to JQuery** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **Introduction to jQuery** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
