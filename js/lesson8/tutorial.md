@@ -57,7 +57,7 @@ localStorage.getItem("name");
 
 ## Effects
 
-Everyone likes effects. Have a look at [JQuery's effects](http://api.jquery.com/category/effects/).
+Everyone likes effects. Have a look at [jQuery's effects](http://api.jquery.com/category/effects/).
 
 ## Tracking who visited your website
 
