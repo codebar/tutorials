@@ -222,13 +222,13 @@ Let's add some images!
 
 Before we start, we'll need to add the image files we want to use to the project folder.  It's a good idea to keep images in their own folder, so first, create a folder called 'images' inside the same folder as your HTML file.  Next, download the images you'll need by right clicking on the following links, selecting 'Save Link As...', and saving to the images folder you just created:
 
-* [logo.png](/tutorials/html/lesson1/images/logo.png "logo.png")
-* [img1.jpg](/tutorials/html/lesson1/images/img1.jpg "img1.jpg")
-* [img2.jpg](/tutorials/html/lesson2/images/img2.jpg "img2.jpg")
-* [img3.jpg](/tutorials/html/lesson3/images/img3.jpg "img3.jpg")
-* [img4.jpg](/tutorials/html/lesson4/images/img4.jpg "img4.jpg")
-* [img5.jpg](/tutorials/html/lesson5/images/img5.jpg "img5.jpg")
-* [img6.jpg](/tutorials/html/lesson6/images/img6.jpg "img6.jpg")
+* [logo.png](/html/lesson1/images/logo.png "logo.png")
+* [img1.jpg](/html/lesson1/images/img1.jpg "img1.jpg")
+* [img2.jpg](/html/lesson1/images/img2.jpg "img2.jpg")
+* [img3.jpg](/html/lesson1/images/img3.jpg "img3.jpg")
+* [img4.jpg](/html/lesson1/images/img4.jpg "img4.jpg")
+* [img5.jpg](/html/lesson1/images/img5.jpg "img5.jpg")
+* [img6.jpg](/html/lesson1/images/img6.jpg "img6.jpg")
 
 Images are primarily made up of three attributes
 
