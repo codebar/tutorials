@@ -192,32 +192,53 @@ Another cool operation you can apply is `reverse()`.
 animals.sort().reverse();
 ```
 
-Of course, if you're customizing `sort`, then you can just multiply the return of the custom function by `-1` if you want to reverse the result!
+```js
+// Sort numbers descending.
+nums.sort(ascending).reverse();
+```
+
+> Can you write a function called `sortNumbersDescending` that can be used in place of `.sort(ascending).reverse()`?
 
 ### Loops again!
 
-Now that we know what arrays are, we can use that to understand while loops better. As we mentioned previously, a **while** loop does not need to be based on a counter. Let's try out another example without using counters.
+Now that we know what arrays are, we can use that to understand loops better. Let's try out another example:
 
 ```js
 var fruitAndVeg = [ "apple", "orange", "banana", "kiwi", "avocado", "celery", "aubergine" ];
 var noAvocados = [];
-var x = 0;
+var i = 0;
 
-while (x < fruitAndVeg.length) {
-  if (fruitAndVeg[x] !== "avocado") {
-    noAvocados.push(fruitAndVeg[x]);
+while (i < fruitAndVeg.length) {
+  if (fruitAndVeg[i] !== "avocado") {
+    noAvocados.push(fruitAndVeg[i]);
   }
 
-  x = x + 1;
+  i = i + 1;
 }
 ```
 
 > Can you understand what this loop is doing? Try to explain it to your coach.
 
+
+There is a counter here though, so a better way to write this would be:
+
+```js
+var fruitAndVeg = [ "apple", "orange", "banana", "kiwi", "avocado", "celery", "aubergine" ];
+var noAvocados = [];
+
+for (var i = 0; i < fruitAndVeg.length; i = i + 1) {
+  if (fruitAndVeg[i] !== "avocado") {
+    noAvocados.push(fruitAndVeg[i]);
+  }
+}
+```
+
+
+
 ## Objects
 
 ### So what are objects?
-Objects are very important in JavaScript. In fact, you've already a special kind of object (arrays). Objects are containers for anything you like, including other objects (weirdly, even themselves if you want) and functions. JavaScript makes creating objects very easy.
+Objects are very important in JavaScript. In fact, you've already used a special kind of object (arrays). Objects are containers for anything you like, including objects and functions. JavaScript makes creating objects very easy.
 
 They are special kinds of data, with **properties** and **methods**
 
