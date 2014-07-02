@@ -100,7 +100,7 @@ In the above case, a number is being added to a string. JavaScript turns the num
 Now let's output the current year, and auto-calculate the value of the next year using **addition**
 
 ```js
-var year = 2013;
+var year = 2014;
 var nextYear = year + 1;
 
 console.log("We are in " + year + ", but " + nextYear + " is just around the corner!");
@@ -198,8 +198,6 @@ if (!codebarIsAwesome) {
 > Did you use `var`? Since we have already declared our variable, you shouldn't need to do that.
 
 
-Conditions work with a number of evaluated statements. Some of the comparisons we can use are
-
 The `if` statement will try to turn anything in the round brackets into a `true` or a `false`. It is very common to let it do this, so when you see some JavaScript in the wild, be prepared! The following things become `false` when used in an `if` statement:
 
  - `false`
@@ -210,6 +208,8 @@ The `if` statement will try to turn anything in the round brackets into a `true`
  - `NaN`
 
 Don't worry about what all of these are yet. It'll become more clear as you go on.
+
+Conditions work with a number of evaluated statements. Some of the comparisons we can use are:
 
 #### Strict equality `===`
 
@@ -222,14 +222,14 @@ if (apples == oranges) {
 }
 ```
 
-There is also a version of strict equality called simply 'equality' that looks like `==`. JavaScript developers try to avoid it, because it behaves strangely. Ask your instructor for more information, but also remember to avoid `==`.
+There is also a relaxed equality called simply 'equality' that looks like `==`. JavaScript developers try to avoid it, because it behaves strangely. Ask your instructor for more information, but also remember to avoid `==`.
 
 This should not output anything, **apples** and **oranges** are not the same thing!
 
 #### Strict inequality `!==`
 
 ```js
-if (apples != oranges) {
+if (apples !== oranges) {
   console.log("Apples are not Oranges!");
 }
 ```
@@ -290,7 +290,7 @@ function hello() {
 }
 ```
 
-If you refresh the browser, you will notice that nothing is printed. This is because we must *call* our function in order for it to be evaluates and give us a result.
+If you refresh the browser, you will notice that nothing is printed. This is because we must *call* our function in order for it to be evaluated and give us a result.
 
 ```js
 hello();
@@ -439,5 +439,3 @@ With help from your coach try and write a program to do the following
 
 ---
 This ends our **Introduction to JavaScript** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
-
-
