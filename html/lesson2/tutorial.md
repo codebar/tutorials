@@ -30,7 +30,7 @@ We will be styling [this page](https://github.com/codebar/tutorials/blob/master/
 
 ### Required files
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download)
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download)(mac/linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip)(windows)
 
 ### What can I do with CSS?
 
