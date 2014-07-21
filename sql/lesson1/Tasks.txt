@@ -1,0 +1,86 @@
+
+Notes for tutorial - a place for various ideas
+
+Tasks)
+
+NOTE: these may or may not be done by the student, e.g. table creation and row insertions may be a bit of a slow start or just too fiddly for beginners.
+
+NOTE: consider two start points/gists, one with tables & data, one without
+
+		If initial state has no data or tables, student learns how to create and populate these. They also learn about fields and data types. If the initial state includes existing populated tables, the student has to be told about these things.
+
+## starting
+
+1) Create tables
+
+2) Create autoincrement field for id columns
+
+3) Insert data
+
+
+
+## Query data - default ordering
+
+
+5) select * from customers
+(let's see all the people who've visited our store)
+
+6) select * from customers order by
+ name,
+ (that list isn't very readable, is it?
+ We can use order by to request that the computer arranges the data in a way  more friendly to us humans.)
+
+
+ date
+ (That was a lot better, wasn't it? We can order by any of the fields in a table. Have a go at this, making a small change to our last query)
+
+7) asc, desc
+The ordering was useful, but perhaps we prefer to look at the data in reverse order. By default, an order by query is assumed to have "asc" at the end. This means ascending order. We can put this at the end to make out query clearer, if we want.
+
+A bit more usefully, if we put "desc" at the end, meaning descending, the order is reversed. Try asc and desc out with the order by queries we just used. Ask your coach if you're not sure of anything.
+
+8) select * from pets
+
+"create tbl pets ..."
+
+This is the definition for the table that stores info on pets. Write a query that shows info for all the pets, then change that query to show them alpabetically.
+That's good. Can you think of another interesting query for this table, using what we've learnt?
+
+## Limiting data
+
+9)select name, email from customer
+
+SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood for the trees.
+
+We can cut down the amount of data by specifying the column names of the data that interests us. Try that out now.
+
+Did you find that was a bit easier to read through?
+
+10) Limit
+
+Sometimes, as well as limiting the columns shown, we only want to see some of the rows. for instance, when viewing by date, perhaps we'd like to see the most recent 10 purchases. we do this with Limit.
+
+
+
+
+Story)
+
+Maybe it's good to have a rough idea of a story behind the tutorial and tasks
+
+Eg, existing data due to pet store having been in business for a bit
+    (this might give a reason for db already having data)
+
+    new table rows reflect new customers and pet purchases
+
+
+Maybe nice to have a story reason to create and populate a table
+
+    pet food, accessories, cat-sitting & dog-walking service
+
+
+Misc)
+
+1) details of different field data types may overwhelm the student with detail, or simply slow down the pace of learning and leave the student feeling that they are not making progress and having fun.
+
+2) Import from csv files
+
