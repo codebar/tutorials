@@ -27,26 +27,26 @@ CREATE TABLE orders (
     amount numeric
 );
 
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Donato Rempel','ladarius@waelchi.org','890 Ullrich Plains', 'Janachester', 'Virginia', '77714');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Tyrell Von DDS','cleo_frami@bartondenesik.name','63337 Abdullah Camp', 'Verdieborough', 'Colorado', '69882-7027');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Ms. Sofia Rowe','jacky_funk@bayerprosacco.name','1991 Kyler Village', 'Opheliaborough', 'Ohio', '15599-5395');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Evert Pfeffer','alisa.luettgen@hoeger.org','1311 Khalil Shores', 'Port Ozella', 'Arizona', '34713');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Elta Dicki','lesly@heaney.org','3878 Alyce Lock', 'Deckowtown', 'Montana', '42114-6195');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Zelma Davis','osborne@mohr.biz','184 Hazel Lane', 'Alport', 'Ohio', '87119');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Edna Hintz','elisha_mclaughlin@pouros.biz','2550 Hassan Pass', 'North Kelliestad', 'California', '40909-5637');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Coleman Prohaska Jr.','taryn.becker@doyle.org','32202 Zemlak Ridge', 'Rigobertoside', 'Colorado', '95667-8653');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Wilhelmine Huels','alexander_rice@ornjakubowski.com','44097 Elvie Divide', 'West Lauryntown', 'Maine', '55164-9178');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Hulda Will III','ella_sanford@stracke.com','3746 Ashton Divide', 'Mikeberg', 'Florida', '22826');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Don Rempel','don.rempel@waelchi.org','890 Ullrich Plains', 'Janachester', 'Virginia', '77714');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Bill Edwards','bill_edwards@bartondenesik.com','63337 Harker Court', 'Verdieborough', 'Colorado', '69882-7027');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Ms. Sofia Rowe','sofia_rowe@bayerprosacco.co.uk','1991 Kyler Village', 'Opheliaborough', 'Ohio', '15599-5395');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Eve Pfeffer','eve.Pfeffer@hoeger.org','1311 Khalil Shores', 'Port Ozella', 'Arizona', '34713');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Elsa Dickens','elsa@heaney.org','3878 Alyce Lock', 'Deckowtown', 'Montana', '42114-6195');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Zelma Davis','zelma@mohr.biz','184 Hazel Lane', 'Alport', 'Ohio', '87119');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Edna Harrison','edna_harrison@pouros.biz','2550 Hassan Pass', 'North Kelliestad', 'California', '40909-5637');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Chris Price','chris.price@doyle.org','32202 Zemlak Ridge', 'Rigobertoside', 'Colorado', '95667-8653');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Wendy Hughes','wendy_hughes@ornjakubowski.com','44097 Elvie Divide', 'West Lauryntown', 'Maine', '55164-9178');
+INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Hilda Williams','hilda_williams@stracke.com','3746 Ashton Divide', 'Mikeberg', 'Florida', '22826');
 
-INSERT INTO items (name, description) VALUES ('hutch01', 'rabbit cabin');
-INSERT INTO items (name, description) VALUES ('hutch02', 'rabbit cottage');
-INSERT INTO items (name, description) VALUES ('hutch03', 'rabbit house');
-INSERT INTO items (name, description) VALUES ('food01', 'carrots');
-INSERT INTO items (name, description) VALUES ('food02', 'dry biscuits');
-INSERT INTO items (name, description) VALUES ('food03', 'extra nutrients');
+INSERT INTO items (name, description) VALUES ('hutch01', 'hutch');
+INSERT INTO items (name, description) VALUES ('hutch02', 'double-level hutch');
+INSERT INTO items (name, description) VALUES ('hutch03', 'rabbit run');
+INSERT INTO items (name, description) VALUES ('food01', 'drinking bottle');
+INSERT INTO items (name, description) VALUES ('food02', 'food bowl');
+INSERT INTO items (name, description) VALUES ('food03', 'bedding hay');
 INSERT INTO items (name, description) VALUES ('rabbit01', 'dutch');
-INSERT INTO items (name, description) VALUES ('rabbit02', 'floppy');
-INSERT INTO items (name, description) VALUES ('rabbit03', 'giant');
+INSERT INTO items (name, description) VALUES ('rabbit02', 'lop-eared');
+INSERT INTO items (name, description) VALUES ('rabbit03', 'lionhead');
 
 INSERT INTO orderitems (order_id, item_id) VALUES ('1', '3');
 INSERT INTO orderitems (order_id, item_id) VALUES ('1', '2');
