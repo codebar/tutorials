@@ -8,7 +8,7 @@ footer: true
 
 **CSS** is the language used to style websites.
 
- It defines the visual representation of the content. For example colour, margins, borders, backgrounds, position in the page.
+It defines the visual representation of the content. For example colour, margins, borders, backgrounds, position in the page.
 
 ### What does it stand for?
 
