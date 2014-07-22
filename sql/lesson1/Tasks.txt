@@ -1,6 +1,8 @@
 
 Notes for tutorial - a place for various ideas
 
+Contents - Tasks), Story) & Misc)
+
 Tasks)
 
 NOTE: these may or may not be done by the student, e.g. table creation and row insertions may be a bit of a slow start or just too fiddly for beginners.
@@ -59,6 +61,26 @@ Did you find that was a bit easier to read through?
 10) Limit
 
 Sometimes, as well as limiting the columns shown, we only want to see some of the rows. for instance, when viewing by date, perhaps we'd like to see the most recent 10 purchases. we do this with Limit.
+
+11) To be continued
+
+Count of customers,
+
+full income of store
+
+income for specific customer
+
+customers from area
+(also using or, and etc)
+
+avg order price
+
+min max order
+
+min max order grouped by customer id
+
+insert new customer
+insert new order(s), delete one
 
 
 
