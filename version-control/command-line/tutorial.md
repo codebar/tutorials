@@ -13,7 +13,7 @@ With the following examples we understand how to deal with the daily usage of th
 ## Before you begin
 Install command line git for [OS X](http://code.google.com/p/git-osx-installer) or [Windows](http://msysgit.github.com/) and open your terminal. If you are on linux you should already have git installed.
 
-Create a directory where you will be storing all your projects. You can call is `code` or `projects`.
+Create a directory where you will be storing all your projects. You can call it `code` or `projects`.
 
 ### Setup your git details
 
@@ -44,7 +44,7 @@ $ git init
 $ echo "Learning git" > index.html
 ```
 
-> The above command will output `<h1>Learning git</h1>` and that will be pipped in index.html. Open up the file and have a look.
+> The above command will output `<h1>Learning git</h1>` and store it in index.html. Open up the file and have a look.
 
 ### Check the git repository status.
 
@@ -60,7 +60,7 @@ $ git status
 $ git commit -m 'this is my first command-line commit!'
 ```
 
-> . will add all the files in the current directory and subdirectories. You should only use it when initialising your repository, alternatively you can specify the file name.
+> . will add all the files in the current directory and subdirectories. You should only use it when initialising your repository, or you can specify the file name.
 
 ### Check the git commit history.
 
@@ -82,7 +82,7 @@ $ git push -u origin master
 
 #### What is `remote`
 
-`remote` git all the remote repositories you have configured. You could have the same repository stored in multiple resources like Github and Gitlab or Heroku.
+`remote` git all the remote repositories you have configured. You could have the same repository stored in many resources like Github and Gitlab or Heroku.
 
 The structure of the command is `git remote <add|remove> <name of remote> <url of remote>`
 
@@ -193,9 +193,9 @@ $ git diff
 
 The -/+ indications you can see mean
 
-**-** indicates the lines that were removed from the code.
+**-** indicates lines removed from the code.
 
-**+** indicates the lines that were added to the code.
+**+** indicates lines added to the code.
 
 ```bash
 $ git diff
@@ -262,7 +262,7 @@ $ view index.html
 
 # Example 5: Revert committed changes
 
-Repeat the steps below to modify and commit a file
+Repeat the steps below to change and commit a file
 
 ```bash
 $ echo "oh not again" > index.html
@@ -326,7 +326,7 @@ $ git status
 
 # Example 6: Revert committed and pushed changes.
 
-You can correct something you pushed accidentaly by changing history. In the following example you will see how can you revert the last pushed commit.
+You can correct something you pushed accidentally by changing history. In the following example you will see how can you revert the last pushed commit.
 
 ### Run the following steps
 
@@ -370,7 +370,7 @@ commit c0bb15bf9f75613930c66760b90b2ccc1af0d2d6
 $ git revert f4d8d2c2ca851c73176641109172780487da9c1d
 ```
 
-After reverting the changes you have to push the code to the remote repo for them to be applied
+After reverting the changes you have to push the code to the remote repo to apply them
 
 ```bash
 git push origin master
