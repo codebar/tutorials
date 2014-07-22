@@ -35,7 +35,7 @@ We will be building this [example page](http://codebar.github.io/tutorials/html/
 
 An **element** is an HTML component _eg. paragraph, heading, table, list etc_
 
-**Tags**, mark the opening and closing of an element.  They contain elements that indicate their purpose
+**Tags**, mark the opening and closing of an element.  They contain elements that show their purpose
 
 `<tagname>some content</tagname>`
 
@@ -74,7 +74,7 @@ The doctype is always followed by the `<html>` tag, which itself contains the co
 
 An HTML page is split into two parts. The **head** and the **body**.
 
-The **head** is where information like the page title, stylesheets, scripts and meta information is contained.
+The **head** contains information like the page title, stylesheets, scripts and meta information.
 
 The **body** contains what is visible to the user.
 
@@ -97,7 +97,7 @@ Let's start by defining the basic structure of our website.
 
 ### Element: Heading
 
-Headings come in a number of sizes
+Headings come in many sizes
 
 # `<h1>Heading</h1>`
 ## `<h2>Heading</h2>`
@@ -220,7 +220,7 @@ So far we've learned a lot about how to add text to our page. But how about some
 
 Let's add some images!
 
-Before we start, we'll need to add the image files we want to use to the project folder.  It's a good idea to keep images in their own folder, so first, create a folder called 'images' inside the same folder as your HTML file.  Next, download the images you'll need by right clicking on the following links, selecting 'Save Link As...', and saving to the images folder you just created:
+Before we start, we'll need to add the image files we want to use to the project folder.  It's a good idea to keep images in their own folder, so first, create a folder called 'images' inside the same folder as your HTML file.  Next, download the images you'll need. Do this by right clicking on each of the following links, select 'Save Link As...', and save it to the images folder you just created:
 
 * [logo.png](/html/lesson1/images/logo.png "logo.png")
 * [img1.jpg](/html/lesson1/images/img1.jpg "img1.jpg")
@@ -265,7 +265,7 @@ Links can contain not just text, but images or even a number of elements within.
 
 Let's link some pictures and text to a video. It can be handy when we want the user to get to where we want them without needing to click on text.
 
-Add that underneath the ordered list we defined previously.
+Add that underneath the ordered list we defined earlier.
 
 ```html
 <div>
@@ -307,7 +307,7 @@ Add a small rhyme to your page, wrapped with quotes using ASCII code.
 
 ### mailto links `<a>`
 
-Links can also be used to open up a user's email client and share content.
+Links can also open up a user's email client and share content.
 The difference between links and mailto links, is the content defined in the **href** attribute.
 
 ```html
