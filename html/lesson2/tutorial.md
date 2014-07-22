@@ -8,7 +8,7 @@ footer: true
 
 **CSS** is the language used to style websites.
 
- It defines the visual representation of the content, so for example colour, margins, borders, backgrounds, position in the page.
+It defines the visual representation of the content. For example colour, margins, borders, backgrounds, position in the page.
 
 ### What does it stand for?
 
@@ -56,7 +56,7 @@ selector {
 }
 ```
 
-A group of properties for the given selector can be defined within the curly braces
+A group of properties for the given selector is defined within the curly braces
 
 ```css
 body {
@@ -177,7 +177,7 @@ Selects all list elements that are nested within a **class** pictures
 }
 ```
 
-**display** specifies how the elements are displayed. **li** is a block element. By changing its display property, we make sure that it is displayed as an inline element.
+**display** specifies how the elements are displayed. **li** is a block element. By changing its display property, we make sure that it displays as an inline element.
 
 > Change inline to inline-block, and to block. Can you notice the difference?
 
@@ -216,7 +216,7 @@ To achieve this, let's move our CSS outside of the head of the page and into a n
 
 Stylesheets _cascade_ to all elements until they are changed.
 
-First let's reset the margin and border of all of the images.
+First let's reset the margin and border of all the images.
 
 ```css
 img {
@@ -225,7 +225,7 @@ img {
 }
 ```
 
-We can change the styling of some of these images by defining a more specific selector, which will supersede the `img` selector we just defined
+We can change the styling of some of these images by defining a more specific selector. This will supersede the `img` selector we just defined
 
 ```css
 .bigimg img {
@@ -275,7 +275,7 @@ margin-right: auto;
 margin-left: auto;
 ```
 
-**auto** adjusts the left and right margins. If you try making the window of your browser smaller, you can see that the left and right sides are adjusted automatically, so that **main** remains in the middle of the page.
+**auto** adjusts the left and right margins. If you try making the window of your browser smaller, you can see that the left and right sides adjust automatically, so that **main** remains in the middle of the page.
 
 **padding** is the area around an element but within its border.
 
@@ -292,7 +292,7 @@ margin-left: auto;
 
 ### Using empty elements for styling
 
-Sometimes to make the design of our page look nicer, we might add empty elements, similar to `<div id="top-line"></div>`
+Sometimes to make the design of our page look nicer, we might add empty elements. Like `<div id="top-line"></div>`
 
 ```css
 #top-line {
@@ -317,7 +317,7 @@ Let's also style the bottom of our page in a similar way
 
 ### Restyling through element selectors
 
-When we want to ensure that an element's apeararance changes consistently through our pages, it's better to use element selectors to make sure that we don't need to redefine the style and that it is applied to all elements of that type.
+When we want to ensure that an element's appearance changes consistently through our pages, it's better to use element selectors. That way we can make sure that we don't need to redefine the style and that it applies to all elements of that type.
 
 ```css
 h1 {
@@ -437,7 +437,7 @@ Let's add the code below to make sure we only apply a margin to the _first li el
 
 ### Bonus - Resetting styles
 
-To try and avoid browser inconsistencies - _you've propably seen pages look quite different when loading them on different browsers already_ - a common technique used is **CSS resetting**
+You've probably noticed that pages look quite different when loading them in different browsers. To try and avoid these browser inconsistencies a common technique is **CSS resetting**
 
 Let's apply this to the elements used within our page
 
