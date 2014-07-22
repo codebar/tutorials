@@ -87,7 +87,8 @@ For example, if you want to change the position of an element, the color of all 
 
 ###Bad commit messages
 
-Every time you commit a change, remember that in three months, when you come back to your file, you will have no idea why you applied that change. Never use messages like _changing some CSS_, _another commit_, _more changes_ etc.
+Every time you commit a change use a message that describes your change clearly. In a few months time you will have difficulty remembering why you applied a change if your messages say _changing some CSS_, _another commit_, or _more changes_
+
 Try using messages like _repositioned image to look better on page_, _resolved positioning issue for Firefox_.
 
 
