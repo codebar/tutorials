@@ -26,7 +26,7 @@ Download the files required to begin working through the tutorial from [here](ht
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
-A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a build in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
+A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a built in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
 
 ![](assets/images/firebug.png)
 
@@ -34,7 +34,7 @@ A very popular inspector is [firebug](http://getfirebug.com/), it works nicely o
 
 ## Getting started
 
-Let's begin from the head of our page and set the title like we learned in the first lesson.
+Let's begin from the head of our page and set the title as we learned in the first lesson.
 
 ```html
 <title>Ada Lovelace</title>
@@ -42,7 +42,7 @@ Let's begin from the head of our page and set the title like we learned in the f
 
 ### Structuring content
 
-We will separate our page in three different areas. The **header**, where our heading and picture, the top of our page, will be, the **container** where we will be specifying the main content, and the **footer**.
+We will separate our page into three different areas. The **header** will be at the top of our page showing our title and picture. The **container** is where we will specify the main content. And the **footer**.
 
 ```html
 <header>
@@ -62,19 +62,19 @@ We will separate our page in three different areas. The **header**, where our he
 
 ## Inline vs block elements
 
-In CSS there are different ways to [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display "display CSS") elements, most common ones are: _block_, and _inline_
+In CSS there are different ways to [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display "display CSS") elements. The most common ones are: _block_, and _inline_
 
 ### block elements
 
-Elements rendered in a new line
+Elements appear on a new line
 
 ![](assets/images/span-block.png)
 
-Some block elements are `<div>, <p>, <h1>, <ul>, <li>`. Most elements, are block elements.
+Some block elements are `<div>, <p>, <h1>, <ul>, <li>`. Most elements are block elements.
 
 ### inline elements
 
-Elements that appear on the same line
+Elements appear on the same line
 
 ![](assets/images/span-inline.png)
 
@@ -146,7 +146,7 @@ and then the relevant CSS
 }
 ```
 
-`inline-block` is another display attribute. You must use this, instead of `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h2>`, that takes over and expands across the end of the line.
+`inline-block` is another display attribute. You must use `inline-block` rather than `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h2>`, that takes over and expands across the end of the line.
 
 > Using firebug, change `inline-block` to `inline` and notice how they render
 
@@ -168,17 +168,17 @@ and make the picture a bit smaller
 
 ### What is the box model?
 
-An element, can be visualised as a box. The box model tells browsers how the element and its attributes relate to each other.
+An element can be visualised as a box. The box model tells browsers how the element and its attributes relate to each other.
 
 Characteristics that define the box model are `padding`, `margin`, `border`, `height` and `width`.
 
-**<span style="color: LightSkyBlue;">blue</span>** is where `height` and `width` are defined. These properties don't always need to be set, as they will by default be set using relevant sizing dimensions of the inner content.
+**<span style="color: LightSkyBlue;">blue</span>** is where `height` and `width` are defined. These properties don't always need to be set. By default they will use relevant sizing dimensions based on the inner content.
 
-**<span style="color: mediumpurple;">purple</span>** show the `padding`, the space between the content and the `border`. The padding also adds to the total width of the box, so if you set `padding: 10px;` and `width: 20px;` your element will be **30px** long.
+**<span style="color: mediumpurple;">purple</span>** shows the `padding` &mdash; the space between the content and the `border`. The padding also adds to the total width of the box. So if you set `padding: 10px;` and `width: 20px;` your element will be **30px** long.
 
-**black** is the `border` , the edge around the box. Its _thickness_, _style_ and _color_ can be defined.
+**black** is the `border` &mdash; the edge around the box. Its _thickness_, _style_ and _color_ can be defined.
 
-**<span style="color: gold;'">yellow</span>** is the `margin`, the transparent area around the box, separating it from other elements.
+**<span style="color: gold;'">yellow</span>** is the `margin` &mdash; the transparent area around the box. This separates it from other elements.
 
 _only the bottom margin is visible in our example. `padding`, `margin` and `border` can be defined for any or all sides of the box._
 
@@ -215,9 +215,9 @@ _border: `thickness` `style` `color`;_
 
 ## Setting up the sidebar
 
-Along with `width` and `height`, `min-width`, `max-width`, `min-height` and `max-height` can be set. These properties tend to be used to ensure that when the page is resized, the browser won't allow for it to be smaller or bigger than the specified property value.
+Along with `width` and `height`, `min-width`, `max-width`, `min-height`, and `max-height` can be set. These properties tend to be used to ensure that when the page is resized, the browser won't allow for it to be smaller or bigger than the specified property value.
 
-Let's add some content! Add the following  inside  the `div` in the html file
+Let's add some content! Add the following inside the `div` in the html file
 
 ```html
 <div>
@@ -231,7 +231,7 @@ Let's add some content! Add the following  inside  the `div` in the html file
 
 ### Styling
 
-Add a class `sidebar` to the div we just defined, so we can change its styling without impacting other elements.
+Add a class `sidebar` to the div we just defined. This is so that we can change its styling without impacting other elements.
 
 ```html
 <div class="sidebar">
@@ -266,7 +266,7 @@ margin-left: 20px;
 ```
 
 ###padding and margin
-Padding and margin, can be set in a number of different ways
+Padding and margin can be set in a number of different ways
 
 `padding: top right bottom left;` e.g. _padding: 10px 20px 30px 5px;_
 
@@ -314,7 +314,7 @@ Add a bottom border, to give the effect of a line, to the individual list items 
 
 ## Pseudo classes
 
-A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes, we can specify different styling for different states of a link
+A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes we can specify different styling for different states of a link
 
 ```css
 a:link
@@ -323,12 +323,12 @@ a:hover
 a:active
 ```
 
-Order is **very** important. Always use the order described above if you want to apply different styling for all of the states described above.
-The most commonly used pseudo class for links, that we will also be using today is `a:hover`
+Order is **very** important. Always use the order described above if you want to apply different styling for all of the states.
+The most commonly used pseudo class for links is `a:hover`. That is what we will use today.
 
 ## Styling links
 
-We only want links who are within the list to be affected, so we will specifically style `.social-media li a`
+We only want links that are within the list to be affected. So we will specifically style `.social-media li a`
 
 ```css
 .social-media li a {
