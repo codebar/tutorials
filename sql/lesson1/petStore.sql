@@ -38,12 +38,12 @@ INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Cole
 INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Wilhelmine Huels','alexander_rice@ornjakubowski.com','44097 Elvie Divide', 'West Lauryntown', 'Maine', '55164-9178');
 INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Hulda Will III','ella_sanford@stracke.com','3746 Ashton Divide', 'Mikeberg', 'Florida', '22826');
 
-INSERT INTO items (name, description) VALUES ('dog01', 'pug');
-INSERT INTO items (name, description) VALUES ('dog02', 'labrador');
-INSERT INTO items (name, description) VALUES ('dog03', 'collie');
-INSERT INTO items (name, description) VALUES ('cat01', 'persian');
-INSERT INTO items (name, description) VALUES ('cat02', 'shorthair');
-INSERT INTO items (name, description) VALUES ('cat03', 'norwegian');
+INSERT INTO items (name, description) VALUES ('hutch01', 'rabbit cabin');
+INSERT INTO items (name, description) VALUES ('hutch02', 'rabbit cottage');
+INSERT INTO items (name, description) VALUES ('hutch03', 'rabbit house');
+INSERT INTO items (name, description) VALUES ('food01', 'carrots');
+INSERT INTO items (name, description) VALUES ('food02', 'dry biscuits');
+INSERT INTO items (name, description) VALUES ('food03', 'extra nutrients');
 INSERT INTO items (name, description) VALUES ('rabbit01', 'dutch');
 INSERT INTO items (name, description) VALUES ('rabbit02', 'floppy');
 INSERT INTO items (name, description) VALUES ('rabbit03', 'giant');
@@ -267,4 +267,6 @@ INSERT INTO orders (customer_id, amount) VALUES (7, 80.36);
 INSERT INTO orders (customer_id, amount) VALUES (3, 50.1);
 INSERT INTO orders (customer_id, amount) VALUES (5, 59.5);
 
-select distinct name from customers inner join orders on customers.id = orders.customer_id order by name;
+select distinct customers.name, items.name, items.description from customers inner join orders on customers.id = orders.customer_id inner join orderitems on orders.id = orderitems.order_id inner join items on items.id = orderitems.item_id
+order by customers.name, items.name;
+
