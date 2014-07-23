@@ -144,7 +144,7 @@ When we search for data, the db does not make a guess about where to look. We ha
 let's see all the people who've visited our store.
 
 ```
-select * from customers
+select * from customers;
 ```
 
 This command is powerful, and shows us a lot of data. Perhaps a bit too much to make sense of?
@@ -160,7 +160,7 @@ SQL is very powerful at providing us with a lot of data for a simple query, but 
 We can cut down the amount of data by specifying the column names of the data that interests us. Try that out now.
 
 ```
-select name, email, city from customers
+select name, email, city from customers;
 ```
 
 Did you find that was a bit easier to read through? From now on, decide for yourself whether to use * or to name the columns.
@@ -172,7 +172,7 @@ That list still isn't very readable, is it?
 We can use "order by" to request that the computer arranges the data in a way  more friendly to us humans.
 
 ```
-select name, email, city from customers order by name
+select name, email, city from customers order by name;
 ```
 
 That was a lot better, wasn't it? We can user order by with any of the fields in a table. Have a go at this, making a small change to our last query. Your coach can help you.
@@ -192,11 +192,6 @@ This table that stores info on pets is called "items". Write a query that shows 
 
 That's excellent. Maybe you think of another interesting query for this table, using what we've learnt?
 
-```
-if (codebarIsAwesome) {
-  console.log("Codebar is AWESOME!");
-}
-```
 
 ## sql work ends here for now - more to come soon !
 
