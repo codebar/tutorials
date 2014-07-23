@@ -1,9 +1,14 @@
 
 Notes for tutorial - a place for various ideas
 
-Contents - Tasks), Story) & Misc)
+Contents of this file -
+Tasks),
+Story),
+Misc)
 
 Tasks)
+
+NOTE: the text for each task represents suggested tutorial phrases for tasks.
 
 NOTE: these may or may not be done by the student, e.g. table creation and row insertions may be a bit of a slow start or just too fiddly for beginners.
 
@@ -13,50 +18,68 @@ NOTE: consider two start points/gists, one with tables & data, one without
 
 ## starting
 
+Story intro, as defined in Story)
+
 1) Create tables
+
+a table can be considered to be similar to many excel worksheets. each column stores an item of data, such as name, email, city, etc. a row stores all data for a single, entry in that table. People who work with db's usually refer to columns as fields, and rows as ... rows.
 
 2) Create autoincrement field for id columns
 
 3) Insert data
 
+4) sqlite settings
+
+.mode column
+.headers on
 
 
 ## Query data - default ordering
 
+To query data, we use the select keyword in this format:
+
+```
+select * from table_name
+```
+
+When we search for data, the db does not guess where to look. We have to tell the db the tables to search in. We replace "table_name" in "from table_name" by a specific table name.
+
+ The * tells the db to return info on all fields.
 
 5) select * from customers
-(let's see all the people who've visited our store)
+(let's see all the people who've visited our store.)
 
-6) select * from customers order by
+## Limiting data
+
+6)select name, email, city from customers
+
+SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood for the trees.
+
+We can cut down the amount of data by specifying the column names of the data that interests us. Try that out now.
+
+Did you find that was a bit easier to read through? From now on, decide for yourself whether to use * or to name the columns.
+
+7) select name, email, city from customers order by
  name,
- (that list isn't very readable, is it?
+ (that list still isn't very readable, is it?
  We can use order by to request that the computer arranges the data in a way  more friendly to us humans.)
 
 
  date
  (That was a lot better, wasn't it? We can order by any of the fields in a table. Have a go at this, making a small change to our last query)
 
-7) asc, desc
-The ordering was useful, but perhaps we prefer to look at the data in reverse order. By default, an order by query is assumed to have "asc" at the end. This means ascending order. We can put this at the end to make out query clearer, if we want.
+8) asc, desc
+The ordering was useful, but perhaps we prefer to look at the data in reverse order. By default, an order by query is assumed to have "asc" at the end. This means ascending order. We can put this at the end to make our query clearer, if we want.
 
-A bit more usefully, if we put "desc" at the end, meaning descending, the order is reversed. Try asc and desc out with the order by queries we just used. Ask your coach if you're not sure of anything.
+A bit more usefully, if we put "desc" at the end, meaning descending, the order is reversed. Try out asc and desc with the order by queries we just used. Ask your coach if you're not sure of anything.
 
-8) select * from pets
+9) select * from items
 
-"create tbl pets ..."
+This is the definition for the table that stores info on pets. Write a query that shows info for all the pets, then change that query to show them alphabetically.
 
-This is the definition for the table that stores info on pets. Write a query that shows info for all the pets, then change that query to show them alpabetically.
-That's good. Can you think of another interesting query for this table, using what we've learnt?
+That's excellent. Can you think of another interesting query for this table, using what we've learnt?
 
-## Limiting data
-
-9)select name, email from customer
-
-SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood for the trees.
-
-We can cut down the amount of data by specifying the column names of the data that interests us. Try that out now.
-
-Did you find that was a bit easier to read through?
+## Limiting data (again)
 
 10) Limit
 
@@ -87,17 +110,18 @@ insert new order(s), delete one
 
 Story)
 
-Maybe it's good to have a rough idea of a story behind the tutorial and tasks
+It might be good to suggest the rough idea of a story behind the tutorial and tasks.
 
-Eg, existing data due to pet store having been in business for a bit
-    (this might give a reason for db already having data)
+Eg,
+    The existing data is for a pet store that has been in business for a while.
+    (this gives a reason for db already having data)
 
-    new table rows reflect new customers and pet purchases
+    (new table rows reflect new customers and pet purchases)
 
+Also, it's helpful to have a story reason to create and populate a new table
 
-Maybe nice to have a story reason to create and populate a table
-
-    pet food, accessories, cat-sitting & dog-walking service
+e.g.
+    sales of pet accessories, cat-sitting & dog-walking service
 
 
 Misc)
