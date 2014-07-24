@@ -49,7 +49,7 @@ To get all the numbers from 1 up to 5, excluding 5.
 
 ### `Random.rand()`
 
-Random is an interface to a number generator. The `rand()` method takes in the **max** and returns an integer greater than zero and less than **max**. You can also use a **range** as a parameter.
+Random is an interface to a number generator. The `rand()` method takes in an integer value **max**. It returns an integer greater than zero and less than **max**. You can also use a **range** as a parameter.
 
 ```ruby
 Random.rand(5..10)
@@ -57,9 +57,9 @@ Random.rand(5..10)
 
 ## Exercise 1: Numbers game!
 
-In this exercise we'll create a small game to help us practise math.
+In this exercise we'll create a small game to help us practise maths.
 
-[Download the files](https://gist.github.com/despo/d790a4fd1844da7d85ce/download) to get started. If you are having any trouble you can get the files directly [from Github](https://gist.github.com/despo/d790a4fd1844da7d85ce).
+[Download the files](https://gist.github.com/despo/d790a4fd1844da7d85ce/download) to get started. If you are having any trouble you can get the files directly [from GitHub](https://gist.github.com/despo/d790a4fd1844da7d85ce).
 
 
 To execute the file you must first change its permissions from the command line (to make it executable).
