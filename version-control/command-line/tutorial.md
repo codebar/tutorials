@@ -70,7 +70,7 @@ $ git log
 
 ### Transferring project repository to online service
 
-First you need to create an account to the service of your choice ([Github](http://github.com/join), [Gitlab](http://gitlab.com)). Then, create a new project (or repository).
+First you need to create an account to the service of your choice ([GitHub](http://github.com/join), [GitLab](http://gitlab.com)). Then, create a new project (or repository).
 
 Copy the information about adding an existing project to the repository which should be something like the details below.
 
@@ -82,7 +82,7 @@ $ git push -u origin master
 
 #### What is `remote`
 
-`remote` git all the remote repositories you have configured. You could have the same repository stored in many resources like Github and Gitlab or Heroku.
+`remote` git all the remote repositories you have configured. You could have the same repository stored in many resources like GitHub and GitLab or Heroku.
 
 The structure of the command is `git remote <add|remove> <name of remote> <url of remote>`
 
@@ -156,7 +156,7 @@ $ git push origin master
 $ git log
 ```
 
-### Check your code online (from the Github or Gitlab website).
+### Check your code online (from the GitHub or GitLab website).
 
 
 # Example 3: Verifying changes before any commit
