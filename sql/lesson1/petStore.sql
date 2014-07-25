@@ -1,11 +1,12 @@
 CREATE TABLE customers (
     id integer CONSTRAINT customers_pkey PRIMARY KEY,
-    name text,
+    firstName text,
+    lastName text,
     email text,
     address text,
-    city text,
-    state text,
-    zipcode text
+    town text,
+    county text,
+    country text
 );
 
 CREATE TABLE items (
@@ -27,16 +28,16 @@ CREATE TABLE orders (
     amount numeric
 );
 
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Don Rempel','don.rempel@waelchi.org','890 Ullrich Plains', 'Janachester', 'Virginia', '77714');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Bill Edwards','bill_edwards@bartondenesik.com','63337 Harker Court', 'Verdieborough', 'Colorado', '69882-7027');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Ms. Sofia Rowe','sofia_rowe@bayerprosacco.co.uk','1991 Kyler Village', 'Opheliaborough', 'Ohio', '15599-5395');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Eve Pfeffer','eve.Pfeffer@hoeger.org','1311 Khalil Shores', 'Port Ozella', 'Arizona', '34713');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Elsa Dickens','elsa@heaney.org','3878 Alyce Lock', 'Deckowtown', 'Montana', '42114-6195');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Zelma Davis','zelma@mohr.biz','184 Hazel Lane', 'Alport', 'Ohio', '87119');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Edna Harrison','edna_harrison@pouros.biz','2550 Hassan Pass', 'North Kelliestad', 'California', '40909-5637');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Chris Price','chris.price@doyle.org','32202 Zemlak Ridge', 'Rigobertoside', 'Colorado', '95667-8653');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Wendy Hughes','wendy_hughes@ornjakubowski.com','44097 Elvie Divide', 'West Lauryntown', 'Maine', '55164-9178');
-INSERT INTO customers (name, email, address, city, state, zipcode) VALUES ('Hilda Williams','hilda_williams@stracke.com','3746 Ashton Divide', 'Mikeberg', 'Florida', '22826');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Don', 'Rempel','don.rempel@aol.org','890 Ullrich Plains', 'Manchester', 'Greater Manchester', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Bill', 'Edwards','bill_edwards@bartondesk.com','63337 Harker Court', 'Romford', 'Essex', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Sofia', 'Rowe','sofia_rowe@bayerprosacco.co.uk','1991 Kyler Village', 'Newbury', 'Berkshire', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Eve', 'Pfeffer','eve.pfeffer@yahoo.co.uk','1311 Khalil Shores', 'Portsmouth', 'Hampshire', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Elsa', 'Dickens','elsa@dickens.org','3878 Alyce Lock', 'Derby', 'East Midlands', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Zelma', 'Davis','zelma@morrisons.biz','184 Hazel Lane', 'Alves', 'Moray', 'Scotland');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Edna', 'Harrison','edna_harrison@pouros.biz','2550 Hassan Pass', 'North Kessock', 'Highland', 'Scotland');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Chris', 'Price','chris.price@doyle.org','32202 Zemlak Ridge', 'Risca', 'Caerphilly', 'Wales');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Wendy', 'Hughes','wendy_hughes@ornjakubowski.com','44097 Elvie Divide', 'West Lulworth', 'Dorset', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Hilda', 'Williams','hilda_williams@posttrack.com','3746 Ashton Divide', 'Tralee', 'Kerry', 'Ireland');
 
 INSERT INTO items (name, description) VALUES ('hutch01', 'hutch');
 INSERT INTO items (name, description) VALUES ('hutch02', 'double-level hutch');
