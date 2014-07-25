@@ -22,7 +22,7 @@ Story intro, as defined in Story)
 
 1) Create tables
 
-a table can be considered to be similar to many excel worksheets. each column stores an item of data, such as name, email, city, etc. a row stores all data for a single, entry in that table. People who work with db's usually refer to columns as fields, and rows as ... rows.
+a table can be considered to be similar to many excel worksheets. each column stores an item of data, such as firstName, lastName, email, city, etc. a row stores all data for a single, entry in that table. People who work with db's usually refer to columns as fields, and rows as ... rows.
 
 2) Create autoincrement field for id columns
 
@@ -42,6 +42,8 @@ To query data, we use the select keyword in this format:
 select * from table_name
 ```
 
+HINT:
+
 When we search for data, the db does not guess where to look. We have to tell the db the tables to search in. We replace "table_name" in "from table_name" by a specific table name.
 
  The * tells the db to return info on all fields.
@@ -49,9 +51,9 @@ When we search for data, the db does not guess where to look. We have to tell th
 5) select * from customers
 (let's see all the people who've visited our store.)
 
-## Limiting data
+## Limiting data (columns)
 
-6)select name, email, city from customers
+6)select firstName, lastName, email, city from customers
 
 SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood for the trees.
 
@@ -59,8 +61,10 @@ We can cut down the amount of data by specifying the column names of the data th
 
 Did you find that was a bit easier to read through? From now on, decide for yourself whether to use * or to name the columns.
 
-7) select name, email, city from customers order by
- name,
+> The jargon for the results we see is "returned rows" or the "rows returned".
+
+7) select firstName, lastName, email, city from customers order by
+ firstName, lastName,
  (that list still isn't very readable, is it?
  We can use order by to request that the computer arranges the data in a way  more friendly to us humans.)
 
@@ -79,22 +83,65 @@ This is the definition for the table that stores info on pets. Write a query tha
 
 That's excellent. Can you think of another interesting query for this table, using what we've learnt?
 
-## Limiting data (again)
+NOTE: at this point, I've started giving the task a title, rather than using the sql as the title. These tasks are all an approx guide of the eventual tutorial document anyway.
 
-10) Limit
+## Limiting data (again, this time by rows)
 
-Sometimes, as well as limiting the columns shown, we only want to see some of the rows. for instance, when viewing by date, perhaps we'd like to see the most recent 10 purchases. we do this with Limit.
+10) Limiting data (max rows shown)
 
-11) To be continued
+Sometimes, as well as limiting the columns shown, we only want to see some of the rows. For instance, when viewing customers, perhaps we'd like to see only those at the start or end of the list. We do this with Limit.
+
+Enter this to view the first five customers:
+select firstName, lastName, email from customers order
+by lastName limit 5;
+
+To view the last five customers, we first reverse the list order as above, then apply the limit:
+select firstName, lastName, email from customers order
+by lastName desc limit 5;
+
+
+xx) Count of customers
 
 Count of customers,
+select count(*) from customers;
 
-full income of store
+select count(DISTINCT email) from
+customers;
+
+
+xx) More Limits (by comparing the data)
+
+Up to now, the limits that we've applied with our queries has not been based on the data in the table. This is a very useful technique, and it is easy to do.
+
+For instance, when viewing our customers, perhaps we'd like those who've come all the way from Scotland. We achieve using Where.
+
+select firstName, lastName from customers where country = "Scotland";
+
+xx) full income of store
+
+We are starting to see some of the benefits of using a db, and now it's time to see that we can make the computer perform calculations on numeric fields from multiple rows.
+
+First, let's view all the amounts received from our customers.
+ select amount from orders;
+
+That provides a rough idea of how much money the store has brought in, but adding up all those numbers would tax most peoples mental arithmetic.
+
+In SQL, it's easy to get add up the values several rows:
+
+select sum(amount) from orders;
+
+xx)
 
 income for specific customer
 
-customers from area
+xx) customers from area
 (also using or, and etc)
+
+select count(*) from customers where country = "England";
+
+xx) count of customers from area
+
+select count(*) from customers where country = "England";
 
 avg order price
 
@@ -104,6 +151,7 @@ min max order grouped by customer id
 
 insert new customer
 insert new order(s), delete one
+
 
 
 
