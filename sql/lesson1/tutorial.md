@@ -55,7 +55,7 @@ First open a command prompt and run **sqlite3**.
 sqlite3 store.db
 ```
 
-At the command prompt, type these lines
+At the new command prompt, type these lines:
 
 ```
 .mode column
@@ -65,6 +65,8 @@ At the command prompt, type these lines
 .headers on
 ```
 
+These settings make the data easier to view.
+
 > The SQL environment does not execute any command until it meets a ";". If it doesn't respond to a query, look to see if the semi-colon is there.
 
 Let's write out something in the console, to make sure that our data is in place and working!
@@ -73,7 +75,7 @@ Let's write out something in the console, to make sure that our data is in place
 select count(*) from customers;
 ```
 
-This should respond with 10.
+This should respond with 10. This shows we have the db set up correctly.
 
 ##Tables and Fields
 
@@ -132,6 +134,8 @@ To query data, we use the select keyword in this format:
 select * from table_name;
 ```
 
+> HINT: Jargon - we often refer to a statement that contains "select" as a "db query", or just a "query".
+
 When we search for data, the db does not make a guess about where to look. We have to tell the db the tables to search in. We replace "table_name" in "from table_name" by a specific table name.
 
  The * tells the db to return info on all fields.
@@ -160,7 +164,7 @@ SQL is very powerful at providing us with a lot of data for a simple query, but 
 We can cut down the amount of data by specifying the column names of the data that interests us. Try that out now.
 
 ```
-select name, email, city from customers;
+select firstName, lastName, email, city from customers;
 ```
 
 Did you find that was a bit easier to read through? From now on, decide for yourself whether to use * or to name the columns.
@@ -172,7 +176,7 @@ That list still isn't very readable, is it?
 We can use "order by" to request that the computer arranges the data in a way  more friendly to us humans.
 
 ```
-select name, email, city from customers order by name;
+select firstName, lastName, email, city from customers order by lastName;
 ```
 
 That was a lot better, wasn't it? We can user order by with any of the fields in a table. Have a go at this, making a small change to our last query. Your coach can help you.
