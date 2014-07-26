@@ -111,11 +111,23 @@ customers;
 
 xx) More Limits (by comparing the data)
 
+NOTE: refers to count(*) exercise, so must be after that on the tutorial page.
+
 Up to now, the limits that we've applied with our queries has not been based on the data in the table. This is a very useful technique, and it is easy to do.
+
+Let's search for customers by area of the UK.
 
 For instance, when viewing our customers, perhaps we'd like those who've come all the way from Scotland. We achieve using Where.
 
+```
 select firstName, lastName from customers where country = "Scotland";
+```
+
+Now, can you write query that tells us how many customers are from England? You've understood enough to have a go. Ask your coach if you have any questions.
+
+select count(*) from customers where country = "England";
+
+now we've done that ... link to tut page comparison operators
 
 xx) full income of store
 
@@ -135,6 +147,8 @@ xx)
 income for specific customer
 
 xx) customers from area
+
+NOTE: query now used above, but not using "or" or "and"
 (also using or, and etc)
 
 select count(*) from customers where country = "England";
