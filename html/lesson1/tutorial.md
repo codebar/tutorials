@@ -209,7 +209,7 @@ Let's list the reasons we like owls so much under the main heading of the page (
 <h2>Why do I like owls so much?</h2>
 <ol>
   <li>they are adorable</li>
-  <li>and lovely></li>
+  <li>and lovely</li>
   <li>and cuddly</li>
 </ol>
 ```
