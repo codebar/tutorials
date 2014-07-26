@@ -48,6 +48,8 @@ When we search for data, the db does not guess where to look. We have to tell th
 
  The * tells the db to return info on all fields.
 
+> Jargon: the "*" is known as the "wildcard" operator. Roughly speaking, to SQL it means "everything".
+
 5) select * from customers
 (let's see all the people who've visited our store.)
 
@@ -102,11 +104,15 @@ by lastName desc limit 5;
 
 xx) Count of customers
 
-Count of customers,
-select count(*) from customers;
+As well as providing data, SQL can do some counting for us, too. It can be hard to count the number of results by looking at the screen. It's much easier to let SQL do that for us.
 
-select count(DISTINCT email) from
-customers;
+To get a count of our customers we use the count function.
+
+> Jargon: a function performs some action. You can spot them because they have the rounded brackets. The item between the brackets affects the function in some way. Here we pass the wildcard.
+
+```
+select count(*) from customers;
+```
 
 
 xx) More Limits (by comparing the data)
@@ -128,6 +134,8 @@ Now, can you write query that tells us how many customers are from England? You'
 select count(*) from customers where country = "England";
 
 now we've done that ... link to tut page comparison operators
+
+UP TO HERE
 
 xx) full income of store
 
@@ -166,6 +174,8 @@ min max order grouped by customer id
 insert new customer
 insert new order(s), delete one
 
+select count(DISTINCT email) from
+customers;
 
 
 
