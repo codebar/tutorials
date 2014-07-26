@@ -3,7 +3,7 @@ layout: page
 title: Introduction to SQL
 ---
 
-## This is a draft for prototyping the lesson. The main work is in tasks.txt. By all means, work/read through this, but check tasks.txt for what is actually in the lesson, not just old text that's not been deleted.
+## This is a draft for prototyping the lesson, copied from a Javascript tutorial. The queries are written in tasks.txt. By all means, work/read through this, but watch out for old text that's not been deleted or adjusted to suit sql queries.
 
 ## What is SQL?
 
@@ -83,7 +83,7 @@ This should respond with 10. This shows we have the db set up correctly.
 
 ### What are Tables?
 
-A table can be considered to be similar to many excel worksheets. each column stores an item of data, such as name, email, city, etc. a row stores all data for a single, entry in that table. People who work with db's usually refer to columns as fields, and rows as ... rows.
+A table can be considered to be similar to many excel worksheets. each column stores an item of data, such as name, email, city, etc. A row stores all data for a single, entry in that table. People who work with db's usually refer to columns as **fields**, and rows as ... **rows**.
 
 ### What are fields?
 
@@ -103,21 +103,21 @@ The field "name" has the type of text.
 
 - **numbers**
 
-Field definition for "orders" table
+Field definition for "orders" table:
 
 ```
 id integer;
 ```
 
-The field "id" has the type of integer (a fancy word for a whole number).
+The field "id" has the type of **integer** (a fancy word for a whole number).
 
-Field definition for "orders" table
+Field definition for "orders" table:
 
 ```
 amount numeric;
 ```
 
-The field "amount" has the type of numeric (so that this field can store prices).
+The field "amount" has the type of **numeric** (so that this field can store prices).
 
 
 
@@ -128,40 +128,38 @@ A query is any statement that makes a search on a table, and returns data. We sa
 
 ### Query data - default ordering
 
-To query data, we use the select keyword in this format:
+To query data, we use the **select** and **from** keywords in this format:
 
 ```
 select * from table_name;
 ```
 
-> HINT: Jargon - we often refer to a statement that contains "select" as a "db query", or just a "query".
+> Jargon - we often refer to a statement that contains "select" as a "db query", or just a "query".
 
-When we search for data, the db does not make a guess about where to look. We have to tell the db the tables to search in. We replace "table_name" in "from table_name" by a specific table name.
+When we search for data, the db does not make guesses about where to look. We have to tell the db exactly which tables to search. We replace "table\_name" by a specific table name.
 
  The * tells the db to return info on all fields.
+
+> Jargon: the "*" is known as the "wildcard" operator. Roughly speaking, to SQL it means "everything".
 
  Let's understand this better by building some simple queries.
 
 
 #### View all data in a table
 
-let's see all the people who've visited our store.
+Let's see all the people who've visited our store:
 
 ```
 select * from customers;
 ```
 
-This command is powerful, and shows us a lot of data. Perhaps a bit too much to make sense of?
+This command is powerful, and shows us a lot of data. Perhaps a bit too much to make sense of it all? We can fix that easily.
 
-We can fix that easily.
-
-### Organise the data so it makes more sense
+### Organise the data to make it clear
 
 #### View specific fields only
 
-SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood for the trees.
-
-We can cut down the amount of data by specifying the column names of the data that interests us. Try that out now.
+SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood for the trees. We can cut down the amount of data by specifying the field names of the data that interests us. Try that out now.
 
 ```
 select firstName, lastName, email, city from customers;
@@ -171,30 +169,103 @@ Did you find that was a bit easier to read through? From now on, decide for your
 
 #### Ordering data
 
-That list still isn't very readable, is it?
+That list was an improvement, but we can make it more readable yet, by adjusting the query further.
 
-We can use "order by" to request that the computer arranges the data in a way  more friendly to us humans.
+We can use **order by** to request that the computer arranges the data in a way  more friendly to us humans.
 
 ```
 select firstName, lastName, email, city from customers order by lastName;
 ```
 
-That was a lot better, wasn't it? We can user order by with any of the fields in a table. Have a go at this, making a small change to our last query. Your coach can help you.
+That was a lot better, wasn't it? We can use order by with any of the fields in a table. Have a go at this, by making a small change to our last query. Your coach can help you.
 
 #### Ordering data this way and that
 
-The ordering was useful, but perhaps we prefer to look at the data in reverse order. By default, an order by query is assumed to have "asc" at the end. This means ascending order. We can put this at the end to make our query clearer, if we want.
+The ordering was useful, but perhaps we prefer to look at the data in reverse order. By default, an order by query is assumed to have **asc** at the end. This means ascending order. We can put this at the end to make our query clearer, if we want.
 
-A bit more usefully, if we put "desc" at the end, meaning descending, the order is reversed. Try out asc and desc with the order by queries we just used. Ask your coach if you're not sure of anything.
+A bit more usefully, if we put **desc** at the end (short of descending), then the order is reversed. Try out asc and desc with the order by queries we just used. Ask your coach if you're not sure of anything.
 
 
 ### What's in store?
 
-This table that stores info on pets is called "items". Write a query that shows info for all the pets and associated products, then adjust that query to show them alphabetically.
+The table that stores info on pets and associated products is called **items**. Write a query that shows info for all the our pets and products, then adjust that query to show them alphabetically.
 
-> If you're not sure, take a look at the start of the Queries section again. Begin with a very simple statement to get started.
+> If you're not sure, take a look at the start of the Queries section again. Begin with a very simple statement to get started. Your coach can help you.
 
 That's excellent. Maybe you think of another interesting query for this table, using what we've learnt?
+
+### Limiting data (max number of rows shown)
+
+Sometimes, as well as limiting the columns shown, we only want to see some of the rows. For instance, when viewing customers, perhaps we'd like to see only those at the start or end of the list. We do this with **limit**.
+
+Enter this to view the first five customers (by lastName):
+
+```
+select firstName, lastName, email from customers order
+by lastName limit 5;
+```
+
+To view the last five customers, we first reverse the list order as above, then apply the limit:
+
+```
+select firstName, lastName, email from customers order
+by lastName desc limit 5;
+```
+
+### Counting our customers
+
+As well as providing data, SQL can do some counting for us, too. It can be hard to count the number of results by looking at the screen. It's much easier to let SQL do that for us.
+
+To get a count of our customers we use the **count()** function.
+
+> Jargon: a "function" performs some action. You can spot them because they have rounded brackets after the name. The item between the brackets affects the function in some way. Here we pass the wildcard.
+
+```
+select count(*) from customers;
+```
+
+This was the test function we ran after setting up the db. The result is still 10.
+
+### Limiting data (by comparing the data to values)
+
+Up to now, the limits that we've applied with our queries have not been based on the data itself. Applying such limits is a very useful technique, and it is easy to do.
+
+We'll do this now, to search for customers by area of the UK.
+
+For instance, when viewing our customers, perhaps we'd like those who've come all the way from Scotland. We achieve using **where** with **comparison operators**.
+
+Here's an example to find the customers who live in Scotland:
+
+```
+select firstName, lastName from customers where country == "Scotland";
+```
+
+Let's understand this query a bit better:
+
+#### Equality `==`
+
+The query that we just ran uses the equality operator. When we enter this query, the db goes through the table, one row at a time. For each row, the db checks if the specified field (in this case, "country") matches the value ("Scotland"). If so, the row is printed.
+
+Now, can you write a query that tells us how many customers are from England? You've understood enough to have a go. Ask your coach if you have any questions.
+
+> You'll need to use "count(*)", which we learnt about just recently.
+
+```
+select count(*) from customers where country = "England";
+```
+
+#### Inequality `!=`
+
+Let's find out how many customers visited us from anywhere else but England. We use the inequality operator this time, but the db checks row by row, exactly as before.
+
+```
+select firstName, lastName from customers where country != "England";
+```
+
+Notice how this query finds customers from multiple places, and only ignores those from England. This is much easier than us having to do this with the equality operator.
+
+
+    NEXT, GTR LESS THAN WITH ORDER AMOUNTS
 
 
 ## sql work ends here for now - more to come soon !
@@ -215,27 +286,6 @@ if (!codebarIsAwesome) {
 
 
 Conditions work with a number of evaluated statements. Some of the comparisons we can use are
-
-#### Equality `==`
-
-```js
-var apples = "apples";
-var oranges = "oranges";
-
-if (apples == oranges) {
-  console.log("Apples and Oranges are the same thing!");
-}
-```
-
-This should not output anything, **apples** and **oranges** are not the same thing!
-
-#### Inequality `!=`
-
-```js
-if (apples != oranges) {
-  console.log("Apples are not Oranges!");
-}
-```
 
 #### Greater than `>`
 
