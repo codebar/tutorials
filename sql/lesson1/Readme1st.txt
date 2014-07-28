@@ -17,7 +17,8 @@ c) having a template for instructions, so I can visualize how they fit together
 
 This lists the various steps required for the tut
 
-Note that not all steps will be done by student, e.g. loading of tables with data, and autoincrement'ing of id fields may be best left as something to describe later
+Note that not all steps will be done by student, e.g. loading of tables with data, and autoincrement'ing of id fields
+may be best left as something to describe later
 
 
 
