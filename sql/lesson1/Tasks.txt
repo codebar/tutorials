@@ -10,13 +10,12 @@ Tasks)
 
 NOTE: the text for each task represents suggested tutorial phrases for tasks.
 
-NOTE: these may or may not be done by the student, e.g. table creation and row
-insertions may be a bit of a slow start or just too fiddly for beginners.
+NOTE: these may or may not be done by the student, e.g. table creation and row insertions may be a bit of a slow start
+or just too fiddly for beginners.
 
 NOTE: consider two start points/gists, one with tables & data, one without
 
-		If initial state has no data or tables, student learns how to create
-		and populate these. They also learn about fields and data types. If the
+		If initial state has no data or tables, student learns how to create and populate these. They also learn about fields and data types. If the
 		initial state includes existing populated tables, the student has to be
 		told about these things.
 
@@ -26,8 +25,7 @@ Story intro, as defined in Story)
 
 1) Create tables
 
-a table can be considered to be similar to many excel worksheets. each column
-stores an item of data, such as firstName, lastName, email, city, etc. a row
+a table can be considered to be similar to many excel worksheets. each column stores an item of data, such as firstName, lastName, email, city, etc. a row
 stores all data for a single, entry in that table. People who work with db's
 usually refer to columns as fields, and rows as ... rows.
 
