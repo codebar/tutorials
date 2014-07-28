@@ -28,16 +28,26 @@ CREATE TABLE orders (
     amount numeric
 );
 
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Don', 'Rempel','don.rempel@aol.org','890 Ullrich Plains', 'Manchester', 'Greater Manchester', 'England');
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Bill', 'Edwards','bill_edwards@bartondesk.com','63337 Harker Court', 'Romford', 'Essex', 'England');
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Sofia', 'Rowe','sofia_rowe@bayerprosacco.co.uk','1991 Kyler Village', 'Newbury', 'Berkshire', 'England');
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Eve', 'Pfeffer','eve.pfeffer@yahoo.co.uk','1311 Khalil Shores', 'Portsmouth', 'Hampshire', 'England');
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Elsa', 'Dickens','elsa@dickens.org','3878 Alyce Lock', 'Derby', 'East Midlands', 'England');
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Zelma', 'Davis','zelma@morrisons.biz','184 Hazel Lane', 'Alves', 'Moray', 'Scotland');
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Edna', 'Harrison','edna_harrison@pouros.biz','2550 Hassan Pass', 'North Kessock', 'Highland', 'Scotland');
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Chris', 'Price','chris.price@doyle.org','32202 Zemlak Ridge', 'Risca', 'Caerphilly', 'Wales');
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Wendy', 'Hughes','wendy_hughes@ornjakubowski.com','44097 Elvie Divide', 'West Lulworth', 'Dorset', 'England');
-INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Hilda', 'Williams','hilda_williams@posttrack.com','3746 Ashton Divide', 'Tralee', 'Kerry', 'Ireland');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Don', 'Rempel',
+'don.rempel@aol.org','890 Ullrich Plains', 'Manchester', 'Greater Manchester', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Bill', 'Edwards',
+'bill_edwards@bartondesk.com','63337 Harker Court', 'Romford', 'Essex', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Sofia', 'Rowe',
+'sofia_rowe@bayerprosacco.co.uk','1991 Kyler Village', 'Newbury', 'Berkshire', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Eve', 'Pfeffer',
+'eve.pfeffer@yahoo.co.uk','1311 Khalil Shores', 'Portsmouth', 'Hampshire', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Elsa', 'Dickens',
+'elsa@dickens.org','3878 Alyce Lock', 'Derby', 'East Midlands', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Zelma', 'Davis',
+'zelma@morrisons.biz','184 Hazel Lane', 'Alves', 'Moray', 'Scotland');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Edna', 'Harrison',
+'edna_harrison@pouros.biz','2550 Hassan Pass', 'North Kessock', 'Highland', 'Scotland');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Chris', 'Price',
+'chris.price@doyle.org','32202 Zemlak Ridge', 'Risca', 'Caerphilly', 'Wales');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Wendy', 'Hughes',
+'wendy_hughes@ornjakubowski.com','44097 Elvie Divide', 'West Lulworth', 'Dorset', 'England');
+INSERT INTO customers (firstName, lastName, email, address, town, county, country) VALUES ('Hilda', 'Williams',
+'hilda_williams@posttrack.com','3746 Ashton Divide', 'Tralee', 'Kerry', 'Ireland');
 
 INSERT INTO items (name, description) VALUES ('hutch01', 'hutch');
 INSERT INTO items (name, description) VALUES ('hutch02', 'double-level hutch');
@@ -268,6 +278,8 @@ INSERT INTO orders (customer_id, amount) VALUES (7, 80.36);
 INSERT INTO orders (customer_id, amount) VALUES (3, 50.1);
 INSERT INTO orders (customer_id, amount) VALUES (5, 59.5);
 
-select distinct customers.name, items.name, items.description from customers inner join orders on customers.id = orders.customer_id inner join orderitems on orders.id = orderitems.order_id inner join items on items.id = orderitems.item_id
-order by customers.name, items.name;
+select distinct firstName, lastName, items.name, items.description from customers inner join orders on
+customers.id = orders.customer_id inner join orderitems on orders.id = orderitems.order_id inner join items on
+items.id = orderitems.item_id
+order by lastName, items.name;
 
