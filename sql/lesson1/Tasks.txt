@@ -10,11 +10,15 @@ Tasks)
 
 NOTE: the text for each task represents suggested tutorial phrases for tasks.
 
-NOTE: these may or may not be done by the student, e.g. table creation and row insertions may be a bit of a slow start or just too fiddly for beginners.
+NOTE: these may or may not be done by the student, e.g. table creation and row
+insertions may be a bit of a slow start or just too fiddly for beginners.
 
 NOTE: consider two start points/gists, one with tables & data, one without
 
-		If initial state has no data or tables, student learns how to create and populate these. They also learn about fields and data types. If the initial state includes existing populated tables, the student has to be told about these things.
+		If initial state has no data or tables, student learns how to create
+		and populate these. They also learn about fields and data types. If the
+		initial state includes existing populated tables, the student has to be
+		told about these things.
 
 ## starting
 
@@ -22,7 +26,10 @@ Story intro, as defined in Story)
 
 1) Create tables
 
-a table can be considered to be similar to many excel worksheets. each column stores an item of data, such as firstName, lastName, email, city, etc. a row stores all data for a single, entry in that table. People who work with db's usually refer to columns as fields, and rows as ... rows.
+a table can be considered to be similar to many excel worksheets. each column
+stores an item of data, such as firstName, lastName, email, city, etc. a row
+stores all data for a single, entry in that table. People who work with db's
+usually refer to columns as fields, and rows as ... rows.
 
 2) Create autoincrement field for id columns
 
@@ -44,11 +51,14 @@ select * from table_name
 
 HINT:
 
-When we search for data, the db does not guess where to look. We have to tell the db the tables to search in. We replace "table_name" in "from table_name" by a specific table name.
+When we search for data, the db does not guess where to look. We have to tell
+the db the tables to search in. We replace "table_name" in "from table_name"
+by a specific table name.
 
  The * tells the db to return info on all fields.
 
-> Jargon: the "*" is known as the "wildcard" operator. Roughly speaking, to SQL it means "everything".
+> Jargon: the "*" is known as the "wildcard" operator. Roughly speaking, to
+SQL it means "everything".
 
 5) select * from customers
 (let's see all the people who've visited our store.)
@@ -57,58 +67,80 @@ When we search for data, the db does not guess where to look. We have to tell th
 
 6)select firstName, lastName, email, city from customers
 
-SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood for the trees.
+SQL is very powerful at providing us with a lot of data for a simple query, but
+sometimes it's hard to see the wood for the trees.
 
-We can cut down the amount of data by specifying the column names of the data that interests us. Try that out now.
+We can cut down the amount of data by specifying the column names of the data
+that interests us. Try that out now.
 
-Did you find that was a bit easier to read through? From now on, decide for yourself whether to use * or to name the columns.
+Did you find that was a bit easier to read through? From now on, decide for
+yourself whether to use * or to name the columns.
 
 > The jargon for the results we see is "returned rows" or the "rows returned".
 
 7) select firstName, lastName, email, city from customers order by
  firstName, lastName,
  (that list still isn't very readable, is it?
- We can use order by to request that the computer arranges the data in a way  more friendly to us humans.)
+ We can use order by to request that the computer arranges the data in a way
+ more friendly to us humans.)
 
 
  date
- (That was a lot better, wasn't it? We can order by any of the fields in a table. Have a go at this, making a small change to our last query)
+ (That was a lot better, wasn't it? We can order by any of the fields in a
+ table. Have a go at this, making a small change to our last query)
 
 8) asc, desc
-The ordering was useful, but perhaps we prefer to look at the data in reverse order. By default, an order by query is assumed to have "asc" at the end. This means ascending order. We can put this at the end to make our query clearer, if we want.
+The ordering was useful, but perhaps we prefer to look at the data in reverse
+order. By default, an order by query is assumed to have "asc" at the end. This
+means ascending order. We can put this at the end to make our query clearer,
+if we want.
 
-A bit more usefully, if we put "desc" at the end, meaning descending, the order is reversed. Try out asc and desc with the order by queries we just used. Ask your coach if you're not sure of anything.
+A bit more usefully, if we put "desc" at the end, meaning descending, the order
+is reversed. Try out asc and desc with the order by queries we just used. Ask
+your coach if you're not sure of anything.
 
 9) select * from items
 
-This is the definition for the table that stores info on pets. Write a query that shows info for all the pets, then change that query to show them alphabetically.
+This is the definition for the table that stores info on pets. Write a query
+that shows info for all the pets, then change that query to show them
+alphabetically.
 
-That's excellent. Can you think of another interesting query for this table, using what we've learnt?
+That's excellent. Can you think of another interesting query for this table,
+using what we've learnt?
 
-NOTE: at this point, I've started giving the task a title, rather than using the sql as the title. These tasks are all an approx guide of the eventual tutorial document anyway.
+NOTE: at this point, I've started giving the task a title, rather than using
+the sql as the title. These tasks are all an approx guide of the eventual
+tutorial document anyway.
 
 ## Limiting data (again, this time by rows)
 
 10) Limiting data (max rows shown)
 
-Sometimes, as well as limiting the columns shown, we only want to see some of the rows. For instance, when viewing customers, perhaps we'd like to see only those at the start or end of the list. We do this with Limit.
+Sometimes, as well as limiting the columns shown, we only want to see some of
+the rows. For instance, when viewing customers, perhaps we'd like to see only
+those at the start or end of the list. We do this with Limit.
 
 Enter this to view the first five customers:
 select firstName, lastName, email from customers order
 by lastName limit 5;
 
-To view the last five customers, we first reverse the list order as above, then apply the limit:
+To view the last five customers, we first reverse the list order as above,
+then apply the limit:
 select firstName, lastName, email from customers order
 by lastName desc limit 5;
 
 
 xx) Count of customers
 
-As well as providing data, SQL can do some counting for us, too. It can be hard to count the number of results by looking at the screen. It's much easier to let SQL do that for us.
+As well as providing data, SQL can do some counting for us, too. It can be hard
+to count the number of results by looking at the screen. It's much easier to
+let SQL do that for us.
 
 To get a count of our customers we use the count function.
 
-> Jargon: a function performs some action. You can spot them because they have the rounded brackets. The item between the brackets affects the function in some way. Here we pass the wildcard.
+> Jargon: a function performs some action. You can spot them because they have
+the rounded brackets. The item between the brackets affects the function in
+some way. Here we pass the wildcard.
 
 ```
 select count(*) from customers;
@@ -119,17 +151,20 @@ xx) More Limits (by comparing the data)
 
 NOTE: refers to count(*) exercise, so must be after that on the tutorial page.
 
-Up to now, the limits that we've applied with our queries has not been based on the data in the table. This is a very useful technique, and it is easy to do.
+Up to now, the limits that we've applied with our queries has not been based
+on the data in the table. This is a very useful technique, and it is easy to do.
 
 Let's search for customers by area of the UK.
 
-For instance, when viewing our customers, perhaps we'd like those who've come all the way from Scotland. We achieve using Where.
+For instance, when viewing our customers, perhaps we'd like those who've come
+all the way from Scotland. We achieve using Where.
 
 ```
 select firstName, lastName from customers where country = "Scotland";
 ```
 
-Now, can you write query that tells us how many customers are from England? You've understood enough to have a go. Ask your coach if you have any questions.
+Now, can you write query that tells us how many customers are from England?
+You've understood enough to have a go. Ask your coach if you have any questions.
 
 select count(*) from customers where country = "England";
 
@@ -139,12 +174,15 @@ UP TO HERE
 
 xx) full income of store
 
-We are starting to see some of the benefits of using a db, and now it's time to see that we can make the computer perform calculations on numeric fields from multiple rows.
+We are starting to see some of the benefits of using a db, and now it's time to
+see that we can make the computer perform calculations on numeric fields from
+multiple rows.
 
 First, let's view all the amounts received from our customers.
  select amount from orders;
 
-That provides a rough idea of how much money the store has brought in, but adding up all those numbers would tax most peoples mental arithmetic.
+That provides a rough idea of how much money the store has brought in, but
+adding up all those numbers would tax most peoples mental arithmetic.
 
 In SQL, it's easy to get add up the values several rows:
 
@@ -182,7 +220,8 @@ customers;
 
 Story)
 
-It might be good to suggest the rough idea of a story behind the tutorial and tasks.
+It might be good to suggest the rough idea of a story behind the tutorial and
+tasks.
 
 Eg,
     The existing data is for a pet store that has been in business for a while.
@@ -198,7 +237,9 @@ e.g.
 
 Misc)
 
-1) details of different field data types may overwhelm the student with detail, or simply slow down the pace of learning and leave the student feeling that they are not making progress and having fun.
+1) details of different field data types may overwhelm the student with detail,
+or simply slow down the pace of learning and leave the student feeling that
+they are not making progress and having fun.
 
 2) Import from csv files
 
