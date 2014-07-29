@@ -202,12 +202,22 @@ select count(*) from orders where amount < 35;
 Note that we could have gotten the same result by switching amount and 35. Generally, it's best to write the query in
 the way it sounds best to you.
 
+xx T) test for similarity LIKE
 
+The **LIKE** operator is very powerful when searching text fields. It is very common to look for text that matches some
+pattern, e.g. a field that starts with some text.
 
+In the items table, we use the name field to store item codes - "rabbit01", "food01", etc.
 
-UP TO HERE
+Here, we use "LIKE" with **%** to represent any or no characters, to search for all the pets:
 
-xx) full income of store
+```
+select * from items where name like "rabbit%";
+```
+
+Experiment with "%" in some other queries that use "like", so you get a feel for how it works.
+
+xx T) full income of store
 
 We are starting to see some of the benefits of using a db, and now it's time to see that we can make the computer
 perform calculations on numeric fields from multiple rows.
@@ -237,9 +247,9 @@ xx T) count of customers from area
 
 select count(*) from customers where country = "England";
 
-avg order price
+xx T) avg order price
 
-min max order
+xx T) min max order
 
 min max order grouped by customer id
 

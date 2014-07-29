@@ -1,4 +1,5 @@
 ---
+---
 layout: page
 title: Introduction to SQL
 ---
@@ -192,7 +193,7 @@ The table that stores info on pets and associated products is called **items**. 
 
 > If you're not sure, take a look at the start of the Queries section again. Begin with a very simple statement to get started. Your coach can help you.
 
-That's excellent. Maybe you think of another interesting query for this table, using what we've learnt?
+That's excellent. Maybe you can think of another interesting query for this table, using what we've learnt?
 
 ### Limiting data (max number of rows shown)
 
@@ -250,10 +251,6 @@ Now, can you write a query that tells us how many customers are from England? Yo
 
 > You'll need to use "count(*)", which we learnt about just recently.
 
-```
-select count(*) from customers where country = "England";
-```
-
 #### Inequality `!=`
 
 Let's find out how many customers visited us from anywhere else but England. We use the inequality operator this time, but the db checks row by row, exactly as before.
@@ -294,6 +291,69 @@ select count(*) from orders where amount < 35;
 ```
 
 > We could have obtained the same result by switching "amount" and "35". Usually though, it's best to write the query in the way it sounds best to you.
+
+
+#### Similarity `like`
+
+The **like** operator is very powerful when searching text fields. It is very common to look for text that matches some pattern, e.g. a field that starts with some text.
+
+In the items table, we use the name field to store item codes - "rabbit01", "food01", etc. Here, we use "LIKE", along with **"&#37;"** to represent any or no characters, to search for all the pets:
+
+```
+select * from items where name like "rabbit%";
+```
+
+Experiment with "%" in some other queries that use "like", so you get a feel for how it works.
+
+
+### Make SQL do some maths work for us (using maths functions)
+
+We are starting to see some of the benefits of using a db, and now it's time to see that we can make the computer
+perform calculations on numeric fields from multiple rows.
+
+#### Total of values `sum()`
+
+Earlier, we saw that the store has received 50 amounts from our customers, using "select amount from orders;". Perhaps that query provides a rough idea of how much money the store has brought in, but adding up all those numbers would tax most people's mental arithmetic.
+
+In SQL, it's easy to add up the values from several rows using the sum() function. We say that "amount" is "passed to" the function - by placing with between the brackets, the function works with this field:
+
+```
+select sum(amount) from orders;
+```
+
+That was easier that doing it ourselves!
+
+#### Mininum values `min()`
+
+SQL finds the minimum value with the min() function:
+
+```
+select min(amount) from orders;
+```
+
+#### Maximum values `max()`
+
+We can find the maximum value using the max() function:
+
+```
+select max(amount) from orders;
+```
+
+#### Average values `avg()`
+
+We can find the average value (the total of some values divided by how many values there are):
+
+```
+select avg(amount) from orders;
+```
+
+That seemed like a lot of numbers after the decimal point! We use the round() function to adjust a value to a more standard format.
+
+```
+select round(avg(amount)) from orders;
+```
+
+> Instead of passing a value or field name to the round() function, we have passed the result of "avg(amount)" to round(). In other words, "avg(amount)" is calculated, and the result given to round(). This may seem strange at first, so ask your coach if you have any questions.
 
 
 
