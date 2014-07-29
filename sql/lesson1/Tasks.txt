@@ -8,6 +8,8 @@ Misc)
 
 Tasks)
 
+NOTE: T by the task number, e.g. 6 T) means this task has been used in the tutorial.
+
 NOTE: the text for each task represents suggested tutorial phrases for tasks.
 
 NOTE: these may or may not be done by the student, e.g. table creation and row insertions may be a bit of a slow start
@@ -21,7 +23,7 @@ NOTE: consider two start points/gists, one with tables & data, one without
 
 ## starting
 
-Story intro, as defined in Story)
+Put Story intro here (as defined in Story), below)
 
 1) Create tables
 
@@ -36,6 +38,7 @@ db's usually refer to columns as fields, and rows as ... rows.
 4) sqlite settings
 
 .mode column
+.width 15
 .headers on
 
 
@@ -56,12 +59,12 @@ replace "table_name" in "from table_name" by a specific table name.
 
 > Jargon: the "*" is known as the "wildcard" operator. Roughly speaking, to SQL it means "everything".
 
-5) select * from customers
+5 T) select * from customers
 (let's see all the people who've visited our store.)
 
 ## Limiting data (columns)
 
-6)select firstName, lastName, email, city from customers
+6 T)select firstName, lastName, email, city from customers;
 
 SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood
 for the trees.
@@ -73,16 +76,16 @@ the columns.
 
 > The jargon for the results we see is "returned rows" or the "rows returned".
 
-7) select firstName, lastName, email, city from customers order by firstName, lastName,
+7 T) select firstName, lastName, email, city from customers order by firstName, lastName;
  (that list still isn't very readable, is it?
  We can use order by to request that the computer arranges the data in a way more friendly to us humans.)
 
 
- date
+
  (That was a lot better, wasn't it? We can order by any of the fields in a table. Have a go at this, making a small
  change to our last query)
 
-8) asc, desc
+8 T) asc, desc
 The ordering was useful, but perhaps we prefer to look at the data in reverse order. By default, an order by query is
 assumed to have "asc" at the end. This means ascending order. We can put this at the end to make our query clearer,
 if we want.
@@ -90,19 +93,20 @@ if we want.
 A bit more usefully, if we put "desc" at the end, meaning descending, the order is reversed. Try out asc and desc with
 the order by queries we just used. Ask your coach if you're not sure of anything.
 
-9) select * from items
+9 T) select * from items
 
 This is the definition for the table that stores info on pets. Write a query that shows info for all the pets, then
 change that query to show them alphabetically.
 
 That's excellent. Can you think of another interesting query for this table, using what we've learnt?
 
+
 NOTE: at this point, I've started giving the task a title, rather than using the sql as the title. These tasks are all
 an approx guide of the eventual tutorial document anyway.
 
 ## Limiting data (again, this time by rows)
 
-10) Limiting data (max rows shown)
+10 T) Limiting data (max rows shown)
 
 Sometimes, as well as limiting the columns shown, we only want to see some of the rows. For instance, when viewing
 customers, perhaps we'd like to see only those at the start or end of the list. We do this with Limit.
@@ -114,7 +118,7 @@ To view the last five customers, we first reverse the list order as above, then 
 select firstName, lastName, email from customers order by lastName desc limit 5;
 
 
-xx) Count of customers
+xx T) Count of customers
 
 As well as providing data, SQL can do some counting for us, too. It can be hard to count the number of results by
 looking at the screen. It's much easier to let SQL do that for us.
@@ -129,9 +133,9 @@ select count(*) from customers;
 ```
 
 
-xx) More Limits (by comparing the data)
+xx T) More Limits (by comparing the data)
 
-NOTE: refers to count(*) exercise, so must be after that on the tutorial page.
+NOTE: refers to count(*) exercise, so must be placed after that on the tutorial page.
 
 Up to now, the limits that we've applied with our queries has not been based on the data in the table. This is a very
 useful technique, and it is easy to do.
@@ -150,7 +154,47 @@ Ask your coach if you have any questions.
 
 select count(*) from customers where country = "England";
 
-now we've done that ... link to tut page comparison operators
+xx T) inequality comparison
+
+Let's find out how many customers visited us from anywhere else but England. We use the inequality operator this time, but the db checks row by row, exactly as before.
+
+```
+select firstName, lastName from customers where country != "England";
+```
+
+Notice how this query finds customers from multiple places, and only ignores those from England. This is much easier than us having to do this with the equality operator.
+
+xx T) gtr, less than ops
+
+We are now going to execute some comparisons on a table that stores numeric amounts, representing a customer payment. This table is the **orders** table, which has a field named **amount**.
+
+This table stores the amount paid for a purchase by a specific customer. The customer is represented in the table by the **customer_id** field .
+
+NOTE: we use the customer's id field to show specify a customer. This is more efficient for storage. But more important than this, it means we do not duplicate info about the customer in the db. To do this would both require more effort to enter info to db, and increase the chances of a mistake where the data is not the same in both places. Such mistakes might cause queries to give incorrect results. This avoidance of duplication is called **normalisation**.
+ CHECK phrasing
+
+If you use count(*) on the orders table, it shows there are 50 order.
+
+Now assume we want to know the orders of £35 or more. If we perform select * from orders, this is not easy to count. Even if we use order by, it's a fiddly thing to do.
+
+For a instant correct answer, we use the **greater than** operator.
+
+```
+select count(*) from orders where amount > 35;
+```
+
+less than
+
+The **less than** operator works in the same way.
+
+```
+select count(*) from orders where amount < 35;
+```
+
+Note that we could have gotten the same result by switching amount and 35. Generally, it's best to write the query in the way it sounds best to you.
+
+
+
 
 UP TO HERE
 
@@ -171,7 +215,7 @@ select sum(amount) from orders;
 
 xx)
 
-income for specific customer
+income from a specific customer
 
 xx) customers from area
 
@@ -180,7 +224,7 @@ NOTE: query now used above, but not using "or" or "and"
 
 select count(*) from customers where country = "England";
 
-xx) count of customers from area
+xx T) count of customers from area
 
 select count(*) from customers where country = "England";
 
