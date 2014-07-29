@@ -156,26 +156,34 @@ select count(*) from customers where country = "England";
 
 xx T) inequality comparison
 
-Let's find out how many customers visited us from anywhere else but England. We use the inequality operator this time, but the db checks row by row, exactly as before.
+Let's find out how many customers visited us from anywhere else but England. We use the inequality operator this
+time, but the db checks row by row, exactly as before.
 
 ```
 select firstName, lastName from customers where country != "England";
 ```
 
-Notice how this query finds customers from multiple places, and only ignores those from England. This is much easier than us having to do this with the equality operator.
+Notice how this query finds customers from multiple places, and only ignores those from England. This is much
+easier than us having to do this with the equality operator.
 
 xx T) gtr, less than ops
 
-We are now going to execute some comparisons on a table that stores numeric amounts, representing a customer payment. This table is the **orders** table, which has a field named **amount**.
+We are now going to execute some comparisons on a table that stores numeric amounts, representing a customer payment.
+This table is the **orders** table, which has a field named **amount**.
 
-This table stores the amount paid for a purchase by a specific customer. The customer is represented in the table by the **customer_id** field .
+This table stores the amount paid for a purchase by a specific customer. The customer is represented in the table by
+the **customer_id** field .
 
-NOTE: we use the customer's id field to show specify a customer. This is more efficient for storage. But more important than this, it means we do not duplicate info about the customer in the db. To do this would both require more effort to enter info to db, and increase the chances of a mistake where the data is not the same in both places. Such mistakes might cause queries to give incorrect results. This avoidance of duplication is called **normalisation**.
+NOTE: we use the customer's id field to show specify a customer. This is more efficient for storage. But more important
+than this, it means we do not duplicate info about the customer in the db. To do this would both require more effort to
+enter info to db, and increase the chances of a mistake where the data is not the same in both places. Such mistakes
+might cause queries to give incorrect results. This avoidance of duplication is called **normalisation**.
  CHECK phrasing
 
 If you use count(*) on the orders table, it shows there are 50 order.
 
-Now assume we want to know the orders of £35 or more. If we perform select * from orders, this is not easy to count. Even if we use order by, it's a fiddly thing to do.
+Now assume we want to know the orders of £35 or more. If we perform select * from orders, this is not easy to count.
+Even if we use order by, it's a fiddly thing to do.
 
 For a instant correct answer, we use the **greater than** operator.
 
@@ -191,7 +199,8 @@ The **less than** operator works in the same way.
 select count(*) from orders where amount < 35;
 ```
 
-Note that we could have gotten the same result by switching amount and 35. Generally, it's best to write the query in the way it sounds best to you.
+Note that we could have gotten the same result by switching amount and 35. Generally, it's best to write the query in
+the way it sounds best to you.
 
 
 
