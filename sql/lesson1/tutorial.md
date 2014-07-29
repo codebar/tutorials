@@ -232,7 +232,7 @@ Up to now, the limits that we've applied with our queries have not been based on
 
 We'll do this now, to search for customers by area of the UK.
 
-For instance, when viewing our customers, perhaps we'd like those who've come all the way from Scotland. We achieve using **where** with **comparison operators**.
+For instance, when viewing our customers, perhaps we'd like those who've come all the way from Scotland. We achieve this by using **where** with **comparison operators**.
 
 Here's an example to find the customers who live in Scotland:
 
@@ -265,7 +265,36 @@ select firstName, lastName from customers where country != "England";
 Notice how this query finds customers from multiple places, and only ignores those from England. This is much easier than us having to do this with the equality operator.
 
 
-    NEXT, GTR LESS THAN WITH ORDER AMOUNTS
+#### Greater than `>`
+
+We are now going to execute some comparisons on a table that stores numeric amounts, representing a customer payment. This table is the **orders** table, which has a field named **amount**.
+
+This table stores the amount paid for a purchase by a specific customer. The customer is represented in the table by the **customer_id** field .
+
+> Jargon: we use the customer's id field to specify a customer, which is more efficient for storage. But more importantly, it means we do not duplicate info about the customer in the db. To do this would both require more effort to enter info to db, and increase the chances of a mistake where the data is not the same in both places. Such mistakes might cause queries to give incorrect results. This avoidance of duplication is called **normalisation**.
+
+If you use count(*) on the orders table, it shows there are 50 orders.
+
+Now assume that we want to know the orders of &pound;35 or more. If we perform "select * from orders", this is not easy to count. Even if we add on "order by amount", it's a fiddly thing to do.
+
+For an instant and correct answer, we use the **greater than** operator:
+
+```
+select count(*) from orders where amount > 35;
+```
+
+That's a lot quicker and easier!
+
+#### Less than `<`
+
+The **less than** operator works in the same way:
+
+```
+select count(*) from orders where amount < 35;
+```
+
+> We could have obtained the same result by switching "amount" and "35". Usually though, it's best to write the query in the way it sounds best to you.
+
 
 
 ## sql work ends here for now - more to come soon !
@@ -286,32 +315,6 @@ if (!codebarIsAwesome) {
 
 
 Conditions work with a number of evaluated statements. Some of the comparisons we can use are
-
-#### Greater than `>`
-
-```js
-var coaches = 20;
-var students = 24;
-var pizzas = 25;
-
-var people = coaches + students;
-
-if (people > pizzas) {
-  console.log("We have more people than pizzas!");
-};
-
-if (students > pizzas) {
-  console.log("But we have more students than pizzas! Let's not give the coaches any food.");
-};
-```
-
-#### Less than `<`
-
-```js
-if (coaches < students) {
-  console.log("We have less coaches than students.");
-}
-```
 
 ### If Else statements
 
