@@ -46,9 +46,7 @@ We'll deal with the most common case of using SQL, which is to work with a relat
 
 In a relat db, all data exists in one or more tables - no data exists anywhere else. This will become clear to you soon.
 
-## Let's try out some SQL!
-
-We'll start by just outputting some data in our tool's environment.
+## Set up our SQL environment
 
 First open a command prompt and run **sqlite3**.
 
@@ -66,9 +64,13 @@ At the new command prompt, type these lines:
 .headers on
 ```
 
+```
+.width 15
+```
+
 These settings make the data easier to view.
 
-> The SQL environment does not execute any command until it meets a ";". If it doesn't respond to a query, look to see if the semi-colon is there.
+## Let's try out some SQL!
 
 Let's write out something in the console, to make sure that our data is in place and working!
 
@@ -76,7 +78,11 @@ Let's write out something in the console, to make sure that our data is in place
 select count(*) from customers;
 ```
 
-This should respond with 10. This shows we have the db set up correctly.
+This should respond with 10. This shows we have the db set up correctly. Hooray!
+
+> The SQL environment does not execute any command until it meets a ";". If it doesn't respond to a query, look to see if the semi-colon is there.
+
+
 
 ##Tables and Fields
 
@@ -227,7 +233,7 @@ select count(*) from customers;
 
 This was the test function we ran after setting up the db. The result is still 10.
 
-### Limiting data (by comparing the data to values)
+## Limiting data (by comparing the data to values)
 
 Up to now, the limits that we've applied with our queries have not been based on the data itself. Applying such limits is a very useful technique, and it is easy to do.
 
@@ -341,7 +347,7 @@ select max(amount) from orders;
 
 #### Average values `avg()`
 
-We can find the average value (the total of some values divided by how many values there are):
+We can find the average value (the total of some values divided by how many values there are) :
 
 ```
 select avg(amount) from orders;
