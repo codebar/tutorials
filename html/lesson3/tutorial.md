@@ -439,6 +439,7 @@ Ada was the world's first programmer. We want that content to stand out. Add a s
 ```
 
 Set the style for the highlight class
+
 ```css
 .highlight {
   color: #4c61a9;
