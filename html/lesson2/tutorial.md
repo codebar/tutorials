@@ -166,7 +166,7 @@ Selects the element with the id logo.
 
 > There can only be one element with a particular id. If you define multiple elements, only the first one will be selected.
 
-#### Selector: position
+#### Selector: nested elements
 
 Selects all list elements that are nested within a **class** pictures
 
