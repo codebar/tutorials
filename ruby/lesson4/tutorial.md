@@ -205,7 +205,7 @@ class Person
   end
 
   def to_s
-    "#{@name} is #{age} years old."
+    "#{@name} is #{@age} years old."
   end
 end
 
