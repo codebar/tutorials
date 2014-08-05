@@ -260,6 +260,45 @@ select count(DISTINCT email) from
 customers;
 
 
+xx ) BONUS
+Now you know enough to write your own **SQL** queries to compare the spending habits of two specific customers!
+
+Your queries will tell us who, of two customers, has the highest average purchase amount, and who of the two made the smallest purchase. So, with help from your coach try and write a set of queries to do the following:
+
+- View all customers in the table
+
+- Pick two customers by name, and make a note of their id numbers
+HINT: See the Greater Than section if this sounds unfamiliar
+
+- In separate queries for each chosen customer, perform the following tasks:
+
+- Find the purchase amounts made by that customer.
+HINT: See the section on comparing data to values.
+
+- Obtain the average purchase amount made by each customer.
+
+ Hooray! We know now which, of the two customers, pays more on average than the other. Maybe it's a good to time to contact that customer and offer them a discount on their next purchase?
+
+- Now adjust your queries to find which customer made the smallest purchase. Let your coach know if this is the same customer or the other one.
+
+ Well done for getting this far!
+
+  ```
+  Hi! My name is _name_.
+  A couple of things about me _about you_.
+  I have attended _number of sessions_ Codebar sessions so far!
+  ```
+
+- if the number of sessions attended is 0
+  ```
+  This is the first time I'm attending Codebar!
+  ```
+- If the number of sessions attended is more than 0
+  ```
+  This is not my first time here. I <3 Codebar!
+  ```
+
+
 
 
 Story)
