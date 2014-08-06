@@ -4,7 +4,7 @@ layout: page
 title: Introduction to SQL
 ---
 
-## This is a draft for prototyping the lesson, copied from a Javascript tutorial. The queries are written in tasks.txt. By all means, work/read through this, but watch out for old text that's not been deleted or adjusted to suit sql queries.
+## This rough draft for prototyping the lesson, copied from a Javascript tutorial, is almost ready for a review. The queries are written in tasks.txt. This draft may be read through, but watch out for old text at the end, which has not been deleted or adjusted to suit sql queries. The early part of this draft is sketchy, too.
 
 ## What is SQL?
 
@@ -35,6 +35,8 @@ Download the files required to begin working through the tutorial from [here](ht
 NOTE: need to decide what initial state of db will be.
 
 NOTE: considering two start points/gists, one with tables & data, one without
+
+NOTE: the draft has now been written assuming there is data in the db when the student begins the tutorial.
 
 For now - install sqlite, and download store.db.
 
@@ -128,12 +130,11 @@ The field "amount" has the type of **numeric** (so that this field can store pri
 
 
 
-##Queries
+##Basic Queries
 
-!! CHECK
-A query is any statement that makes a search on a table, and returns data. We say that data "matches" our query.
+A query is a statement that makes a search on a table, and that may return data. We say that any returned data "matches" our query.
 
-### Query data - default ordering
+### How to write a Query 
 
 To query data, we use the **select** and **from** keywords in this format:
 
@@ -141,15 +142,15 @@ To query data, we use the **select** and **from** keywords in this format:
 select * from table_name;
 ```
 
-> Jargon - we often refer to a statement that contains "select" as a "db query", or just a "query".
+> Jargon - we often refer to a statement that contains "select" as a "database query", or just a "query".
 
-When we search for data, the db does not make guesses about where to look. We have to tell the db exactly which tables to search. We replace "table\_name" by a specific table name.
+When we search for data, the database does not make guesses about where to look. We have to tell the database exactly which tables to search. We replace "table\_name" by a specific table name.
 
- The * tells the db to return info on all fields.
+ The * tells the database to return info on all fields.
 
 > Jargon: the "*" is known as the "wildcard" operator. Roughly speaking, to SQL it means "everything".
 
- Let's understand this better by building some simple queries.
+ Let's understand this better by writing our first query.
 
 
 #### View all data in a table
@@ -162,8 +163,6 @@ select * from customers;
 
 This command is powerful, and shows us a lot of data. Perhaps a bit too much to make sense of it all? We can fix that easily.
 
-### Organise the data to make it clear
-
 #### View specific fields only
 
 SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood for the trees. We can cut down the amount of data by specifying the field names of the data that interests us. Try that out now.
@@ -173,6 +172,8 @@ select firstName, lastName, email, city from customers;
 ```
 
 Did you find that was a bit easier to read through? From now on, decide for yourself whether to use * or to name the columns.
+
+### Organise data to make it clear
 
 #### Ordering data
 
@@ -193,7 +194,7 @@ The ordering was useful, but perhaps we prefer to look at the data in reverse or
 A bit more usefully, if we put **desc** at the end (short of descending), then the order is reversed. Try out asc and desc with the order by queries we just used. Ask your coach if you're not sure of anything.
 
 
-### What's in store?
+#### What's in store?
 
 The table that stores info on pets and associated products is called **items**. Write a query that shows info for all the our pets and products, then adjust that query to show them alphabetically.
 
@@ -201,7 +202,9 @@ The table that stores info on pets and associated products is called **items**. 
 
 That's excellent. Maybe you can think of another interesting query for this table, using what we've learnt?
 
-### Limiting data (max number of rows shown)
+### Some other ways to manage data
+
+#### Limiting data (max number of rows shown)
 
 Sometimes, as well as limiting the columns shown, we only want to see some of the rows. For instance, when viewing customers, perhaps we'd like to see only those at the start or end of the list. We do this with **limit**.
 
@@ -219,7 +222,7 @@ select firstName, lastName, email from customers order
 by lastName desc limit 5;
 ```
 
-### Counting our customers
+#### Counting our customers
 
 As well as providing data, SQL can do some counting for us, too. It can be hard to count the number of results by looking at the screen. It's much easier to let SQL do that for us.
 
@@ -231,9 +234,13 @@ To get a count of our customers we use the **count()** function.
 select count(*) from customers;
 ```
 
-This was the test function we ran after setting up the db. The result is still 10.
+This was the test function we ran after setting up the database. The result is still 10.
 
-## Limiting data (by comparing the data to values)
+##Comparison queries
+
+Most queries written specify some kind of comparison to be made against the data in the tables. We'll see how quickly and easily we can use such queries to generate powerful effects.  
+
+### Limiting data (by comparing data to values)
 
 Up to now, the limits that we've applied with our queries have not been based on the data itself. Applying such limits is a very useful technique, and it is easy to do.
 
@@ -251,7 +258,7 @@ Let's understand this query a bit better:
 
 #### Equality `==`
 
-The query that we just ran uses the equality operator. When we enter this query, the db goes through the table, one row at a time. For each row, the db checks if the specified field (in this case, "country") matches the value ("Scotland"). If so, the row is printed.
+The query that we just ran uses the equality operator. When we enter this query, the database goes through the table, one row at a time. For each row, the database checks if the specified field (in this case, "country") matches the value ("Scotland"). If so, the row is printed.
 
 Now, can you write a query that tells us how many customers are from England? You've understood enough to have a go. Ask your coach if you have any questions.
 
@@ -259,7 +266,7 @@ Now, can you write a query that tells us how many customers are from England? Yo
 
 #### Inequality `!=`
 
-Let's find out how many customers visited us from anywhere else but England. We use the inequality operator this time, but the db checks row by row, exactly as before.
+Let's find out how many customers visited us from anywhere else but England. We use the inequality operator this time, but the database checks row by row, exactly as before.
 
 ```
 select firstName, lastName from customers where country != "England";
@@ -274,7 +281,7 @@ We are now going to execute some comparisons on a table that stores numeric amou
 
 This table stores the amount paid for a purchase by a specific customer. The customer is represented in the table by the **customer_id** field .
 
-> Jargon: we use the customer's id field to specify a customer, which is more efficient for storage. But more importantly, it means we do not duplicate info about the customer in the db. To do this would both require more effort to enter info to db, and increase the chances of a mistake where the data is not the same in both places. Such mistakes might cause queries to give incorrect results. This avoidance of duplication is called **normalisation**.
+> Jargon: we use the customer's id field to specify a customer, which is more efficient for storage. But more importantly, it means we do not duplicate info about the customer in the database. To do this would both require more effort to enter info to database, and increase the chances of a mistake where the data is not the same in both places. Such mistakes might cause queries to give incorrect results. This avoidance of duplication is called **normalisation**.
 
 If you use count(*) on the orders table, it shows there are 50 orders.
 
@@ -311,10 +318,13 @@ select * from items where name like "rabbit%";
 
 Experiment with "%" in some other queries that use "like", so you get a feel for how it works.
 
+##Maths queries
 
-### Make SQL do some maths work for us (using maths functions)
+Excel is popular for it's maths capabilities, and SQL has many similar functions.
 
-We are starting to see some of the benefits of using a db, and now it's time to see that we can make the computer
+### SQL does maths, too (using maths functions)
+
+We are starting to see some of the benefits of using a database, and now it's time to see that we can make the computer
 perform calculations on numeric fields from multiple rows.
 
 #### Total of values `sum()`
@@ -363,7 +373,80 @@ select round(avg(amount)) from orders;
 
 
 
-## sql work ends here for now - more to come soon !
+
+## Bonus
+Now you know enough to write your own **SQL** queries to compare the spending habits of two specific customers!
+
+Your queries will tell us who, of two customers, has the highest average purchase amount, and who of the two made the smallest purchase. So, with help from your coach, try to write a set of queries to do the following:
+
+- View all customers in the table
+
+- Pick two customers by name, and make a note of their id numbers
+> HINT: See the Greater Than section if this sounds unfamiliar
+
+- In separate queries for each chosen customer, perform the following tasks:
+
+- Find the purchase amounts made by that customer.
+> HINT: See the section on comparing data to values for how to use "where".
+
+- Now revise your queries to obtain the average purchase amount made by each customer.
+
+ Hooray! We know now which, of the two customers, pays more on average than the other. Maybe it's a good to time to contact that customer and offer them a discount on their next purchase?
+
+- Now adjust your queries again, to find which customer made the smallest purchase. Let your coach know if this is the same customer or the other one.
+
+ **Well done** for getting this far!
+
+---
+This ends our **Introduction to SQL** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+
+## sql tutorial ends here - text below is from another tutorial
+
+
+
+
+
+
+Let's output the value of pi.
+
+```js
+var pi = 3.14;
+
+console.log("The value of pi: " + pi);
+```
+
+Now let's output the current year, and auto-calculate the value of the next year using **addition**
+
+```js
+var year = 2013;
+var nextYear = year + 1;
+
+console.log("We are in " + year +", but " + nextYear + " is just around the corner!");
+```
+
+That's great! We can combine strings together and add up numbers.
+
+> Is something not working? In JavaScript you must make sure to end every line with a *;*
+
+- **booleans** - true/false
+
+```js
+var codebarIsAwesome = true;
+var weatherIsAmazing = false;
+
+console.log("Is Codebar AWESOME? " + codebarIsAwesome);
+console.log("Is the weather in London amazing? " + weatherIsAmazing);
+```
+
+- **undefined variables**
+If no value is set for a variable, then it won't have a type until you set it.
+
+```js
+var iDontHaveAValue;
+
+console.log("What kind of variable am I? " + iDontHaveAValue);
+```
 
 Isn't that cool! :)
 
@@ -516,28 +599,7 @@ subtractNumbers(10,3);
 console.log(result);
 ```
 
-## Bonus
-Now you know enough to write your own **SQL** queries to compare the spending habits of two specific customers!
-
-Your queries will tell us who, of two customers, has the highest average purchase amount, and who of the two made the smallest purchase. So, with help from your coach, try to write a set of queries to do the following:
-
-- View all customers in the table
-
-- Pick two customers by name, and make a note of their id numbers
-> HINT: See the Greater Than section if this sounds unfamiliar
-
-- In separate queries for each chosen customer, perform the following tasks:
-
-- Find the purchase amounts made by that customer.
-> HINT: See the section on comparing data to values for how to use "where".
-
-- Now revise your queries to obtain the average purchase amount made by each customer.
-
- Hooray! We know now which, of the two customers, pays more on average than the other. Maybe it's a good to time to contact that customer and offer them a discount on their next purchase?
-
-- Now adjust your queries again, to find which customer made the smallest purchase. Let your coach know if this is the same customer or the other one.
-
- **Well done** for getting this far!
+From the bonus section -
 
 - Make the program output
   ```
@@ -555,51 +617,3 @@ Your queries will tell us who, of two customers, has the highest average purchas
   This is not my first time here. I <3 Codebar!
   ```
 
----
-This ends our **Introduction to SQL** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
-
-
-
-
-
-
-
-Let's output the value of pi.
-
-```js
-var pi = 3.14;
-
-console.log("The value of pi: " + pi);
-```
-
-Now let's output the current year, and auto-calculate the value of the next year using **addition**
-
-```js
-var year = 2013;
-var nextYear = year + 1;
-
-console.log("We are in " + year +", but " + nextYear + " is just around the corner!");
-```
-
-That's great! We can combine strings together and add up numbers.
-
-> Is something not working? In JavaScript you must make sure to end every line with a *;*
-
-- **booleans** - true/false
-
-```js
-var codebarIsAwesome = true;
-var weatherIsAmazing = false;
-
-console.log("Is Codebar AWESOME? " + codebarIsAwesome);
-console.log("Is the weather in London amazing? " + weatherIsAmazing);
-```
-
-- **undefined variables**
-If no value is set for a variable, then it won't have a type until you set it.
-
-```js
-var iDontHaveAValue;
-
-console.log("What kind of variable am I? " + iDontHaveAValue);
-```
