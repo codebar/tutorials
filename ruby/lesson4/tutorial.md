@@ -244,7 +244,7 @@ By overriding methods, you can change the behavior of a method defined in the su
 
 ```ruby
 def to_s
-  "#{@name} is #{age} years old and has the superpower #{superpower}"
+  "#{@name} is #{@age} years old and has the superpower #{@superpower}"
 end
 ```
 
