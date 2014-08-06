@@ -223,7 +223,7 @@ function updateTotal() {
 
 We **only** want to display the total **if there are completed or pending items** in the list. As we are using the `success` and `pending` CSS classes in each of our task, we should be able to get the occurrences count using `length`.
 
-Write the total `Pending: " + pending + " Completed: " + completed` in the element with the class `.total`
+Write the total `"Pending: " + pending + " Completed: " + completed` in the element with the class `.total`
 
 > Use `text()` to set the value. You can use `html()` for html content.
 
