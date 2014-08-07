@@ -4,7 +4,7 @@ layout: page
 title: Introduction to SQL
 ---
 
-## This rough draft for prototyping the lesson, copied from a Javascript tutorial, is almost ready for a review. The queries are written in tasks.txt. This draft may be read through, but watch out for old text at the end, which has not been deleted or adjusted to suit sql queries. The early part of this draft is sketchy, too.
+## This rough draft for prototyping the lesson, copied from a Javascript tutorial, is about ready for a review. The queries are written in tasks.txt. The early part of this draft is still a bit sketchy.
 
 ## What is SQL?
 
@@ -21,9 +21,9 @@ More examples ...
 
 ### Today we will be focusing on understanding the basics
 
-We're going to work with a db that represents a pet store that has been in business for a while.
+We're going to work with a database that represents a pet store that has been in business for a while, so the database already contains data.
 
-We'll start by seeing how powerful SQL can be at showing info about the store's business. Later, we will use SQL to store data for new customers and new pet purchases.
+We'll start by seeing how powerful SQL can be at showing information about the store's business. In the next tutorial, we will use SQL to store data for new customers and new pet purchases.
 
 
 ## But before we start...
@@ -32,11 +32,9 @@ We'll start by seeing how powerful SQL can be at showing info about the store's 
 
 Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/0b674ec9d5ae9cb09704/download)
 
-NOTE: need to decide what initial state of db will be.
+NOTE: there is data in the database when the student begins the tutorial.
 
-NOTE: considering two start points/gists, one with tables & data, one without
-
-NOTE: the draft has now been written assuming there is data in the db when the student begins the tutorial.
+NOTE: I'll create a gist with the store.db, the petStore.sql (for reference purposes) and possibly sqlite3.exe.
 
 For now - install sqlite, and download store.db.
 
@@ -44,9 +42,9 @@ For now - install sqlite, and download store.db.
 
 ### Setting up tables
 
-We'll deal with the most common case of using SQL, which is to work with a relational db. SQL can be used to work with other data sets, but working with dbs is most common.
+We'll deal with the most common case of using SQL, which is to work with a relational database. SQL can be used to work with other data sets, but working with databases is most common.
 
-In a relat db, all data exists in one or more tables - no data exists anywhere else. This will become clear to you soon.
+In a relational database, all data exists in one or more tables - no data exists anywhere else. This will become clear to you soon.
 
 ## Set up our SQL environment
 
@@ -80,27 +78,41 @@ Let's write out something in the console, to make sure that our data is in place
 select count(*) from customers;
 ```
 
-This should respond with 10. This shows we have the db set up correctly. Hooray!
+This should respond with 10. This shows we have the database set up correctly. Hooray!
 
-> The SQL environment does not execute any command until it meets a ";". If it doesn't respond to a query, look to see if the semi-colon is there.
-
+> The SQL environment does not execute any command until it meets a ";". If there is no response to your query, look to see if the semi-colon is there.
 
 
 ##Tables and Fields
 
-##NOTE: here or at the start of Queries below, we need to describe briefly the customers table.
+In our database, the SQL command below has been executed to create the customers table. 
+
+```
+CREATE TABLE customers (
+    id integer,
+    firstName text,
+    lastName text,
+    email text,
+    address text,
+    town text,
+    county text,
+    country text
+);
+```
+
+Let's learn something about what this means.
 
 ### What are Tables?
 
-A table can be considered to be similar to many excel worksheets. each column stores an item of data, such as name, email, city, etc. A row stores all data for a single, entry in that table. People who work with db's usually refer to columns as **fields**, and rows as ... **rows**.
+A table can be considered to be similar to many excel worksheets. Each column stores an item of data, such as name, email, city, etc. A row stores all data for a single entry in that table. People who work with databases usually refer to columns as **fields**, and rows as ... **rows**.
 
 ### What are fields?
 
-There are different types of fields that we can declare:
+There are different types of fields that we can declare. Here are some examples from the various tables in our database:
 
-- **text** - group of characters
+- **text** - any group of characters
 
-Field definition for "items" table
+In the field definition for the "items" table
 
 ```
 name text;
@@ -108,7 +120,9 @@ name text;
 
 The field "name" has the type of text.
 
-> If you feel it helps to to see this definition in context, ask your coach to show you.
+> If you feel it helps to to see this definition in context, ask your coach to show you the create table command for "items".
+
+Some other SQL databases use different definitions for text data, but the principles are the same.
 
 - **numbers**
 
@@ -129,7 +143,6 @@ amount numeric;
 The field "amount" has the type of **numeric** (so that this field can store prices).
 
 
-
 ##Basic Queries
 
 A query is a statement that makes a search on a table, and that may return data. We say that any returned data "matches" our query.
@@ -146,7 +159,7 @@ select * from table_name;
 
 When we search for data, the database does not make guesses about where to look. We have to tell the database exactly which tables to search. We replace "table\_name" by a specific table name.
 
- The * tells the database to return info on all fields.
+ The * tells the database to return information on all fields.
 
 > Jargon: the "*" is known as the "wildcard" operator. Roughly speaking, to SQL it means "everything".
 
@@ -196,7 +209,7 @@ A bit more usefully, if we put **desc** at the end (short of descending), then t
 
 #### What's in store?
 
-The table that stores info on pets and associated products is called **items**. Write a query that shows info for all the our pets and products, then adjust that query to show them alphabetically.
+The table that stores information on pets and associated products is called **items**. Write a query that shows information for all the our pets and products, then adjust that query to show them alphabetically.
 
 > If you're not sure, take a look at the start of the Queries section again. Begin with a very simple statement to get started. Your coach can help you.
 
@@ -281,7 +294,7 @@ We are now going to execute some comparisons on a table that stores numeric amou
 
 This table stores the amount paid for a purchase by a specific customer. The customer is represented in the table by the **customer_id** field .
 
-> Jargon: we use the customer's id field to specify a customer, which is more efficient for storage. But more importantly, it means we do not duplicate info about the customer in the database. To do this would both require more effort to enter info to database, and increase the chances of a mistake where the data is not the same in both places. Such mistakes might cause queries to give incorrect results. This avoidance of duplication is called **normalisation**.
+> Jargon: we use the customer's id field to specify a customer, which is more efficient for storage. But more importantly, it means we do not duplicate information about the customer in the database. To do this would both require more effort to enter information to database, and increase the chances of a mistake where the data is not the same in both places. Such mistakes might cause queries to give incorrect results. This avoidance of duplication is called **normalisation**.
 
 If you use count(*) on the orders table, it shows there are 50 orders.
 
@@ -395,225 +408,8 @@ Your queries will tell us who, of two customers, has the highest average purchas
 
 - Now adjust your queries again, to find which customer made the smallest purchase. Let your coach know if this is the same customer or the other one.
 
- **Well done** for getting this far!
+**Well done** for getting this far!
 
 ---
 This ends our **Introduction to SQL** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
-
-
-## sql tutorial ends here - text below is from another tutorial
-
-
-
-
-
-
-Let's output the value of pi.
-
-```js
-var pi = 3.14;
-
-console.log("The value of pi: " + pi);
-```
-
-Now let's output the current year, and auto-calculate the value of the next year using **addition**
-
-```js
-var year = 2013;
-var nextYear = year + 1;
-
-console.log("We are in " + year +", but " + nextYear + " is just around the corner!");
-```
-
-That's great! We can combine strings together and add up numbers.
-
-> Is something not working? In JavaScript you must make sure to end every line with a *;*
-
-- **booleans** - true/false
-
-```js
-var codebarIsAwesome = true;
-var weatherIsAmazing = false;
-
-console.log("Is Codebar AWESOME? " + codebarIsAwesome);
-console.log("Is the weather in London amazing? " + weatherIsAmazing);
-```
-
-- **undefined variables**
-If no value is set for a variable, then it won't have a type until you set it.
-
-```js
-var iDontHaveAValue;
-
-console.log("What kind of variable am I? " + iDontHaveAValue);
-```
-
-Isn't that cool! :)
-
-We can also write a condition that checks for the opposite, so, not true
-
-```js
-if (!codebarIsAwesome) {
-  console.log("Codebar is not so awesome :(!");
-}
-```
-
-> This should  not output anything. Try setting `codebarIsAwesome` to false before running this expression.
-
-> Did you use `var`? Since we have already declared our variable, you shouldn't need to do that.
-
-
-Conditions work with a number of evaluated statements. Some of the comparisons we can use are
-
-### If Else statements
-
-An **if else** statement enables us to run alternative actions when our condition is not true
-
-```js
-if (people > pizzas) {
-  console.log("We have more people than pizzas. That's not very good :/");
-} else {
-  console.log("We have waaay too much pizza. That can never be bad! :)");
-}
-
-```
-
-> Try changing the numbers. What happen when you set students to `2`. Do you see the else part of the statement being evaluated?
-
-## Functions
-
-Functions are a major part of every programming language. They enable us to create meaningful snippets of code that we can rerun without having to define the same things again.
-
-Let's write a small function that prompts someone accessing our page with a message.
-
-Let's to this in steps. First create a function:
-
-```js
-function hello() {
- console.log("Hello!");
-}
-```
-
-If you refresh the browser, you will notice that nothing is outputted. This is because we must call our function in order for it to be evaluates and give us a result.
-
-```js
-hello();
-```
-
-Now let's extend out function to take in **arguments**. We want it to say hello to different people.
-
-```js
-function hello(name) {
- console.log("Hello " + name + "!");
-};
-```
-
-If you now run `hello();` you will notice that it says "Hello undefined".
-
->  Why is that? Do you know? Have a look at **undefined variables*** if you don't remember
-
-Ok, so let's call the function with our name.
-
-```js
-hello("Codebar");
-```
-
-> Call the function with your name and your coach's name. Do you see the output?
-
-
-Let's write an improved version of this that shows a small dialog with the message.
-
-> We'll only give you a part of the function, try to make this work.
-
-```js
-function popupHello() {
-  alert("Hello " + name);
-}
-```
-
-Now that you fixed the problem, call the function from you browser's console!
-
-> Don't add the call to the function in your `script.js`(It will get annoying to see it ever time you refresh!)
-
-### Multiple arguments
-
-So far we've tried out functions with no and one argument. But no one limits how many we can use.
-Let's try writing a function with multiple arguments.
-
-```js
-function whatIAmDoingToday(coach, place) {
- console.log("Today, I am at " + place + " and I am learning a bit of JavaScript with the help of " + coach);
-}
-```
-
-
-### Returning values
-
-Besides outputting, which is nice when learning as it makes it easier to see the result, we can also `return` values.
-
-Create a function that adds two numbers together
-
-```js
-function addNumbers(x, y) {
-  x + y;
-}
-```
-> Try to run this. Not what you expected is it?
-
-To fix this, we must explicitly use `return` when we want the function to give us back the result
-
-Change the function to
-
-```js
-return x+y;
-```
-
-> Anything after the return will be ignored. What happens when you add some content before the end of your function but after defining `return`?
-
-We can also call functions, from functions. What do you expect to get when running `addNumbers(addNumbers(1,2), 4);`? Try it out.
-
-### Scope
-
-When we declare variable within a function, they are not visible outside it.
-
-```js
-function subtractNumbers(x,y) {
-  var result = x-y;
-  return result;
-}
-
-subtractNumbers(10,3);
-console.log(result);
-```
-
-But, when we declare them outside the function, they are
-
-```js
-var result;
-function subtractNumbers(x,y) {
-  result = x-y;
-  return result;
-}
-
-subtractNumbers(10,3);
-console.log(result);
-```
-
-From the bonus section -
-
-- Make the program output
-  ```
-  Hi! My name is _name_.
-  A couple of things about me _about you_.
-  I have attended _number of sessions_ Codebar sessions so far!
-  ```
-
-- if the number of sessions attended is 0
-  ```
-  This is the first time I'm attending Codebar!
-  ```
-- If the number of sessions attended is more than 0
-  ```
-  This is not my first time here. I <3 Codebar!
-  ```
 
