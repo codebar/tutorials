@@ -70,8 +70,8 @@ Before styling the header, reset the default styling of the page. This ensures c
 
 ```css
 body {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 ```
 
@@ -159,7 +159,7 @@ Color the `<h1>` so it stands out and is not the same as the other text on the p
 
 ## Adding a toolbar
 
-Add some of the resources we used to find out more information about Grace. 
+Add some of the resources we used to find out more information about Grace.
 This should be placed before the header closing tag.
 
 ```html
@@ -181,7 +181,7 @@ First let's remove the bullet from the list of links
 
 ```css
 #resources ul {
-  list-style:none;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -459,7 +459,7 @@ Extend `header` and set its position to fixed
 position: fixed;
 ```
 
-> Refresh the page. Notice how the header size has now collapsed to the size of its content? 
+> Refresh the page. Notice how the header size has now collapsed to the size of its content?
 
 Fix this by setting the width
 
