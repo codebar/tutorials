@@ -101,7 +101,7 @@ Add the heading `<h2>`, underneath the `<div>` wrapping the image, within the `<
 
 ```html
 <div>
-  <h2> Hi, I'm Ada Lovelace</h2>
+  <h2>Hi, I'm Ada Lovelace</h2>
 </div>
 ```
 
@@ -135,7 +135,7 @@ Make the `div` element surrounding the heading inline. Start by adding a class `
 
 ```html
 <div class="title">
- <h2> Hi, I'm Ada Lovelace</h2>
+ <h2>Hi, I'm Ada Lovelace</h2>
 </div>
 ```
 and then the relevant CSS
@@ -221,7 +221,7 @@ Let's add some content! Add the following inside the `div` in the html file
 
 ```html
 <div>
-  <b> Me on the internet</b>
+  <b>Me on the internet</b>
   <ul>
    <li><a href="https://www.facebook.com/augusta.ada.lovelace">facebook</a> </li>
    <li><a href="http://en.wikipedia.org/wiki/Ada_Lovelace">wikipedia</a> </li>
@@ -235,7 +235,7 @@ Add a class `sidebar` to the div we just defined. This is so that we can change 
 
 ```html
 <div class="sidebar">
-  <b> Me on the internet</b>
+  <b>Me on the internet</b>
   ...
 ```
 
@@ -293,7 +293,7 @@ Remove the list bullets and change the default margin and padding of the **u**no
 
 ```css
 ul.social-media {
-  list-style:none;
+  list-style: none;
   margin-left: 10px;
   padding-left: 20px;
 }
@@ -333,7 +333,7 @@ We only want links that are within the list to be affected. So we will specifica
 ```css
 .social-media li a {
   color: #4c4066;
-  text-decoration:none;
+  text-decoration: none;
   text-shadow: 1px 0px #ffffff;
   border-left: 7px solid #fdcc38;
   padding-left: 10px;
@@ -358,7 +358,7 @@ The sidebar is now almost perfect. Tweak a couple of other properties so that th
 
 ```css
 .sidebar b {
-  margin-left:36px;
+  margin-left: 36px;
   color: #4c4066;
   font-size: 19px;
 }
