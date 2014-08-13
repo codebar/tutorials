@@ -217,7 +217,7 @@ Conditions work with a number of evaluated statements. Some of the comparisons w
 var apples = "apples";
 var oranges = "oranges";
 
-if (apples == oranges) {
+if (apples === oranges) {
   console.log("Apples and Oranges are the same thing!");
 }
 ```
