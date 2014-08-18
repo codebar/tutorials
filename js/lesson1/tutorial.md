@@ -301,7 +301,7 @@ Now let's extend out function to take in **arguments**. We want it to say hello 
 ```js
 function hello(name) {
  console.log("Hello " + name + "!");
-};
+}
 ```
 
 Arguments are a list of variables that will be given when the function is called. Think of them as placeholders.
@@ -323,7 +323,7 @@ Let's write an improved version of this that shows a small dialog with the messa
 > We'll only give you a part of the function, try to make this work.
 
 ```js
-function popupHello() {
+function popupHello(name) {
   alert("Hello " + name);
 }
 ```
