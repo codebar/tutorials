@@ -101,7 +101,7 @@ Add the heading `<h2>`, underneath the `<div>` wrapping the image, within the `<
 
 ```html
 <div>
-  <h2> Hi, I'm Ada Lovelace</h2>
+  <h2>Hi, I'm Ada Lovelace</h2>
 </div>
 ```
 
@@ -135,7 +135,7 @@ Make the `div` element surrounding the heading inline. Start by adding a class `
 
 ```html
 <div class="title">
- <h2> Hi, I'm Ada Lovelace</h2>
+ <h2>Hi, I'm Ada Lovelace</h2>
 </div>
 ```
 and then the relevant CSS
@@ -168,22 +168,19 @@ and make the picture a bit smaller
 
 ### What is the box model?
 
-An element can be visualised as a box. The box model tells browsers how the element and its attributes relate to each other.
+An element can be visualised as a box. The box model is a way of describing the stacking of spatial properties of an element, those which effect it's size &amp; spacing on the page. These are: `padding`, `margin`, `border` as well as `height` and `width`.
 
-Characteristics that define the box model are `padding`, `margin`, `border`, `height` and `width`.
+**<span style="color: rgb(130,171,182);">blue</span>** represents the values for `height` and `width`. Typically these values are set implicitly based on the content.
 
-**<span style="color: LightSkyBlue;">blue</span>** is where `height` and `width` are defined. These properties don't always need to be set. By default they will use relevant sizing dimensions based on the inner content.
+**<span style="color: rgb(185,197,124);">green</span>** represents the `padding` &mdash; the space inside the `border`. `padding` adds to the total size of the box. So setting `padding-left: 10px;` and `width: 20px;` would make the element **30px** wide on the page.
 
-**<span style="color: mediumpurple;">purple</span>** shows the `padding` &mdash; the space between the content and the `border`. The padding also adds to the total width of the box. So if you set `padding: 10px;` and `width: 20px;` your element will be **30px** long.
+**<span style="color: rgb(244,211,139);">yellow</span>** is the `border` &mdash; the edge around the content and `padding`. It can be styled in various ways and represents the outer most visible part of an element.
 
-**black** is the `border` &mdash; the edge around the box. Its _thickness_, _style_ and _color_ can be defined.
+**<span style="color: rgb(239,195,144);">orange</span>** is the `margin` &mdash; the spacing outside the border. This separates the element from other elements on the page.
 
-**<span style="color: gold;'">yellow</span>** is the `margin` &mdash; the transparent area around the box. This separates it from other elements.
+Note: `padding`, `margin` and `border` can be applied to any combination of sides, below all three are applied in equal measure to all four sides around the content.
 
-_only the bottom margin is visible in our example. `padding`, `margin` and `border` can be defined for any or all sides of the box._
-
-![](assets/images/padding_and_margin-bottom.png)
-
+![](assets/images/box-model.png)
 
 ### Styling the header
 
@@ -221,7 +218,7 @@ Let's add some content! Add the following inside the `div` in the html file
 
 ```html
 <div>
-  <b> Me on the internet</b>
+  <b>Me on the internet</b>
   <ul>
    <li><a href="https://www.facebook.com/augusta.ada.lovelace">facebook</a> </li>
    <li><a href="http://en.wikipedia.org/wiki/Ada_Lovelace">wikipedia</a> </li>
@@ -235,7 +232,7 @@ Add a class `sidebar` to the div we just defined. This is so that we can change 
 
 ```html
 <div class="sidebar">
-  <b> Me on the internet</b>
+  <b>Me on the internet</b>
   ...
 ```
 
@@ -293,7 +290,7 @@ Remove the list bullets and change the default margin and padding of the **u**no
 
 ```css
 ul.social-media {
-  list-style:none;
+  list-style: none;
   margin-left: 10px;
   padding-left: 20px;
 }
@@ -333,7 +330,7 @@ We only want links that are within the list to be affected. So we will specifica
 ```css
 .social-media li a {
   color: #4c4066;
-  text-decoration:none;
+  text-decoration: none;
   text-shadow: 1px 0px #ffffff;
   border-left: 7px solid #fdcc38;
   padding-left: 10px;
@@ -358,7 +355,7 @@ The sidebar is now almost perfect. Tweak a couple of other properties so that th
 
 ```css
 .sidebar b {
-  margin-left:36px;
+  margin-left: 36px;
   color: #4c4066;
   font-size: 19px;
 }
@@ -439,6 +436,7 @@ Ada was the world's first programmer. We want that content to stand out. Add a s
 ```
 
 Set the style for the highlight class
+
 ```css
 .highlight {
   color: #4c61a9;

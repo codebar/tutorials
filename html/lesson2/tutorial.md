@@ -24,9 +24,12 @@ _**CSS** works in conjunction with **HTML**_
 
 ### Today we will be focusing on fundamental CSS concepts
 
-We will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson1/example.html) so that it looks like [this](http://codebar.github.io/tutorials/html/lesson2/example.html)
+We will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson1/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
 
 ## But before we start...
+
+> The first tutorial does not prepare you for this exercise. Before you continue, download the provided files.
+
 
 ### Required files
 
@@ -166,7 +169,7 @@ Selects the element with the id logo.
 
 > There can only be one element with a particular id. If you define multiple elements, only the first one will be selected.
 
-#### Selector: position
+#### Selector: nested elements
 
 Selects all list elements that are nested within a **class** pictures
 
