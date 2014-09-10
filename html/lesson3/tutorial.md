@@ -97,11 +97,11 @@ Add an image wrapped in a `<div>` element
 </div>
 ```
 
-Add the heading `<h2>`, underneath the `<div>` wrapping the image, within the `<header>` element
+Add the heading `<h1>`, underneath the `<div>` wrapping the image, within the `<header>` element
 
 ```html
 <div>
-  <h2>Hi, I'm Ada Lovelace</h2>
+  <h1>Hi, I'm Ada Lovelace</h1>
 </div>
 ```
 
@@ -135,7 +135,7 @@ Make the `div` element surrounding the heading inline. Start by adding a class `
 
 ```html
 <div class="title">
- <h2>Hi, I'm Ada Lovelace</h2>
+ <h1>Hi, I'm Ada Lovelace</h1>
 </div>
 ```
 and then the relevant CSS
@@ -146,7 +146,7 @@ and then the relevant CSS
 }
 ```
 
-`inline-block` is another display attribute. You must use `inline-block` rather than `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h2>`, that takes over and expands across the end of the line.
+`inline-block` is another display attribute. You must use `inline-block` rather than `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h1>`, that takes over and expands across the end of the line.
 
 > Using firebug, change `inline-block` to `inline` and notice how they render
 
@@ -218,7 +218,7 @@ Let's add some content! Add the following inside the `div` in the html file
 
 ```html
 <div>
-  <b>Me on the internet</b>
+  <strong>Me on the internet</strong>
   <ul>
    <li><a href="https://www.facebook.com/augusta.ada.lovelace">facebook</a> </li>
    <li><a href="http://en.wikipedia.org/wiki/Ada_Lovelace">wikipedia</a> </li>
@@ -574,7 +574,7 @@ footer a {
 
 Have a look at the [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace"). The heading and body of the page have some differences from the page we just created.
 
-Use the inspector to have a look at `<body>` and `<h2>` and apply these changes to your page.
+Use the inspector to have a look at `<body>` and `<h1>` and apply these changes to your page.
 
 -----
 
