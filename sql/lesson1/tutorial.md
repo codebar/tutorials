@@ -4,22 +4,22 @@ layout: page
 title: Introduction to SQL
 ---
 
-## This rough draft for prototyping the lesson, copied from a Javascript tutorial, is about ready for a review. The queries are written in tasks.txt. The early part of this draft is still a bit sketchy.
+## This early draft for prototyping the lesson (copied from a Javascript tutorial) is about ready for a review. The early part of this draft is still a bit sketchy, so if you are reviewing it, please bear that in mind.
 
 ## What is SQL?
 
 **SQL** is a language that enables searching a database, managing connections between related sets of data, and updating existing data.
 
+Today we'll deal with the most common case of using SQL, which is to work with a relational database. SQL can be used to work with other data sets, but working with databases is most common. In a relational database, all data exists in one or more tables - no data exists anywhere else. This will all become clear to you soon.
+
 Some common usages around the web are:
 
-Some examples ...
-#### Pretty much any major site !
-More examples ...
+#### Lots of major sites ! (Need to put some real examples here)
+
+<br>
 
 
-
-
-### Today we will be focusing on understanding the basics
+### Today we will use an example database for a fictional store 
 
 We're going to work with a database that represents a pet store that has been in business for a while, so the database already contains data.
 
@@ -30,31 +30,29 @@ We'll start by seeing how powerful SQL can be at showing information about the s
 
 ### Required files
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/0b674ec9d5ae9cb09704/download)
+Download the database file required to begin working through the tutorial from [here](https://gist.github.com/jkbits1/dac13e90598d04b97fd7/download).
 
-NOTE: there is data in the database when the student begins the tutorial.
+Put the database file, `store.db`, in a new folder on your computer, just as you would with a html file, etc.
 
-NOTE: I'll create a gist with the store.db, the petStore.sql (for reference purposes) and possibly sqlite3.exe.
+#### Get sqlite
 
-For now - install sqlite, and download store.db.
+Go to the sqlite download page: 
+`http://www.sqlite.org/download.html`
 
-    This is the start point with tables already created, which contain data
+Find the "precompiled binaries" section for your OS. The first link of the section is for a `command-line shell`. Download this .zip file. For Windows, the .zip file just contains a single file, `sqlite3.exe`. Copy this file to your folder that contains the store.db file.
 
-### Setting up tables
-
-We'll deal with the most common case of using SQL, which is to work with a relational database. SQL can be used to work with other data sets, but working with databases is most common.
-
-In a relational database, all data exists in one or more tables - no data exists anywhere else. This will become clear to you soon.
 
 ## Set up our SQL environment
 
-First open a command prompt and run **sqlite3**.
+Open a command prompt (terminal window, etc) and go to the folder for where you have stored the downloaded files.
 
+Type: 
 ```
 sqlite3 store.db
 ```
 
-At the new command prompt, type these lines:
+
+At the new command prompt, type these lines (make sure to include the full stop shown at the start of each line):
 
 ```
 .mode column
@@ -80,12 +78,12 @@ select count(*) from customers;
 
 This should respond with 10. This shows we have the database set up correctly. Hooray!
 
-> The SQL environment does not execute any command until it meets a ";". If there is no response to your query, look to see if the semi-colon is there.
+> The SQL environment does not execute any command until it meets a `;`. If there is no response to your query, look to see if the semi-colon is there.
 
 
 ##Tables and Fields
 
-In our database, the SQL command below has been executed to create the customers table. 
+In our database, the SQL command below has already been executed to create the customers table. 
 
 ```
 CREATE TABLE customers (
@@ -100,11 +98,13 @@ CREATE TABLE customers (
 );
 ```
 
-Let's learn something about what this means.
+Let's learn something about what this command did.
 
 ### What are Tables?
 
-A table can be considered to be similar to many excel worksheets. Each column stores an item of data, such as name, email, city, etc. A row stores all data for a single entry in that table. People who work with databases usually refer to columns as **fields**, and rows as ... **rows**.
+A table can be considered to be like many excel worksheets or reports that show data in a tabular format. Each column stores an item of data, such as name, email, town, etc. A row stores all data for a single entry in that table. People who work with databases usually refer to columns as **fields**, and rows as **rows**.
+
+If this sounds unclear, don't worry. It becomes easier to grasp when we use some queries shortly.
 
 ### What are fields?
 
@@ -120,7 +120,7 @@ name text;
 
 The field "name" has the type of text.
 
-> If you feel it helps to to see this definition in context, ask your coach to show you the create table command for "items".
+> If you feel it helps to to see this definition in context, either look again at the create table command for "items" or wait and see if the queries below make it clear.
 
 Some other SQL databases use different definitions for text data, but the principles are the same.
 
@@ -180,8 +180,10 @@ This command is powerful, and shows us a lot of data. Perhaps a bit too much to 
 
 SQL is very powerful at providing us with a lot of data for a simple query, but sometimes it's hard to see the wood for the trees. We can cut down the amount of data by specifying the field names of the data that interests us. Try that out now.
 
+> You can access previous typed commands by using the "up" arrow on your keyboard. This may save you some typing.
+
 ```
-select firstName, lastName, email, city from customers;
+select firstName, lastName, email, town from customers;
 ```
 
 Did you find that was a bit easier to read through? From now on, decide for yourself whether to use * or to name the columns.
@@ -195,7 +197,7 @@ That list was an improvement, but we can make it more readable yet, by adjusting
 We can use **order by** to request that the computer arranges the data in a way  more friendly to us humans.
 
 ```
-select firstName, lastName, email, city from customers order by lastName;
+select firstName, lastName, email, town from customers order by lastName;
 ```
 
 That was a lot better, wasn't it? We can use order by with any of the fields in a table. Have a go at this, by making a small change to our last query. Your coach can help you.
@@ -209,7 +211,7 @@ A bit more usefully, if we put **desc** at the end (short of descending), then t
 
 #### What's in store?
 
-The table that stores information on pets and associated products is called **items**. Write a query that shows information for all the our pets and products, then adjust that query to show them alphabetically.
+The table that stores information on pets and associated products is called `items`. Write a query that shows information for all the our pets and products, then adjust that query to show them alphabetically.
 
 > If you're not sure, take a look at the start of the Queries section again. Begin with a very simple statement to get started. Your coach can help you.
 
