@@ -195,7 +195,7 @@ Refresh the page and run `addToList("build a website")` again.
 
 ###Setting items to complete
 
-When we click on the Pending label, we want to set items to complete. We will do that by adding a CSS class `.complete` to the list item (use `addClass()`), **append** a new label `<span class='label success'>Done!</span>` and **remove** the item we've just clicked so that we can't trigger the event again.
+When we click on the Pending label, we want to set items to complete. We will do that by adding a CSS class `.completed` to the list item (use `addClass()`), **append** a new label `<span class='label success'>Done!</span>` and **remove** the item we've just clicked so that we can't trigger the event again.
 
 > Use `$(this)` to access the element that the event was triggered from.
 
@@ -283,7 +283,7 @@ Handle the `keydown keyup` and `keypress` events of the `#color` input. Pass the
 
 ###Set the color value
 
-Extend `setPreviewColor()` to also set the value of `.color-code` to the `background-color` of the `.preview` div.
+Extend `setPreviewColor()` to also set the text of `.color-code` to the `background-color` of the `.preview` div.
 As the color code is converted to *rgb* when set, that is the value the we will be displaying.
 
 ![](assets/images/color-codes.png)
@@ -293,7 +293,7 @@ As the color code is converted to *rgb* when set, that is the value the we will 
 Retrieve the color from the input field and add a box to the start of the `#colors` div every time the **Add to favorites** button is pressed, by handling the **click** event.
 
 ```javascript
-"<div class='item' style='background-color: " + color + ";'><div>"
+"<div class='item' style='background-color: " + color + ";'></div>"
 ```
 
 ###Create a function that adds the box to `#colors`
