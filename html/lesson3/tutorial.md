@@ -26,7 +26,7 @@ Download the files required to begin working through the tutorial from [here](ht
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
-A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a build in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
+A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a built in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
 
 ![](assets/images/firebug.png)
 
@@ -34,7 +34,7 @@ A very popular inspector is [firebug](http://getfirebug.com/), it works nicely o
 
 ## Getting started
 
-Let's begin from the head of our page and set the title like we learned in the first lesson.
+Let's begin from the head of our page and set the title as we learned in the first lesson.
 
 ```html
 <title>Ada Lovelace</title>
@@ -42,7 +42,7 @@ Let's begin from the head of our page and set the title like we learned in the f
 
 ### Structuring content
 
-We will separate our page in three different areas. The **header**, where our heading and picture, the top of our page, will be, the **container** where we will be specifying the main content, and the **footer**.
+We will separate our page into three different areas. The **header** will be at the top of our page showing our title and picture. The **container** is where we will specify the main content. And the **footer**.
 
 ```html
 <header>
@@ -62,19 +62,19 @@ We will separate our page in three different areas. The **header**, where our he
 
 ## Inline vs block elements
 
-In CSS there are different ways to [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display "display CSS") elements, most common ones are: _block_, and _inline_
+In CSS there are different ways to [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display "display CSS") elements. The most common ones are: _block_, and _inline_
 
 ### block elements
 
-Elements rendered in a new line
+Elements appear on a new line
 
 ![](assets/images/span-block.png)
 
-Some block elements are `<div>, <p>, <h1>, <ul>, <li>`. Most elements, are block elements.
+Some block elements are `<div>, <p>, <h1>, <ul>, <li>`. Most elements are block elements.
 
 ### inline elements
 
-Elements that appear on the same line
+Elements appear on the same line
 
 ![](assets/images/span-inline.png)
 
@@ -97,11 +97,11 @@ Add an image wrapped in a `<div>` element
 </div>
 ```
 
-Add the heading `<h2>`, underneath the `<div>` wrapping the image, within the `<header>` element
+Add the heading `<h1>`, underneath the `<div>` wrapping the image, within the `<header>` element
 
 ```html
 <div>
-  <h2> Hi, I'm Ada Lovelace</h2>
+  <h1>Hi, I'm Ada Lovelace</h1>
 </div>
 ```
 
@@ -135,7 +135,7 @@ Make the `div` element surrounding the heading inline. Start by adding a class `
 
 ```html
 <div class="title">
- <h2> Hi, I'm Ada Lovelace</h2>
+ <h1>Hi, I'm Ada Lovelace</h1>
 </div>
 ```
 and then the relevant CSS
@@ -146,7 +146,7 @@ and then the relevant CSS
 }
 ```
 
-`inline-block` is another display attribute. You must use this, instead of `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h2>`, that takes over and expands across the end of the line.
+`inline-block` is another display attribute. You must use `inline-block` rather than `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h1>`, that takes over and expands across the end of the line.
 
 > Using firebug, change `inline-block` to `inline` and notice how they render
 
@@ -168,22 +168,19 @@ and make the picture a bit smaller
 
 ### What is the box model?
 
-An element, can be visualised as a box. The box model tells browsers how the element and its attributes relate to each other.
+An element can be visualised as a box. The box model is a way of describing the stacking of spatial properties of an element, those which effect it's size &amp; spacing on the page. These are: `padding`, `margin`, `border` as well as `height` and `width`.
 
-Characteristics that define the box model are `padding`, `margin`, `border`, `height` and `width`.
+**<span style="color: rgb(130,171,182);">blue</span>** represents the values for `height` and `width`. Typically these values are set implicitly based on the content.
 
-**<span style="color: LightSkyBlue;">blue</span>** is where `height` and `width` are defined. These properties don't always need to be set, as they will by default be set using relevant sizing dimensions of the inner content.
+**<span style="color: rgb(185,197,124);">green</span>** represents the `padding` &mdash; the space inside the `border`. `padding` adds to the total size of the box. So setting `padding-left: 10px;` and `width: 20px;` would make the element **30px** wide on the page.
 
-**<span style="color: mediumpurple;">purple</span>** show the `padding`, the space between the content and the `border`. The padding also adds to the total width of the box, so if you set `padding: 10px;` and `width: 20px;` your element will be **30px** long.
+**<span style="color: rgb(244,211,139);">yellow</span>** is the `border` &mdash; the edge around the content and `padding`. It can be styled in various ways and represents the outer most visible part of an element.
 
-**black** is the `border` , the edge around the box. Its _thickness_, _style_ and _color_ can be defined.
+**<span style="color: rgb(239,195,144);">orange</span>** is the `margin` &mdash; the spacing outside the border. This separates the element from other elements on the page.
 
-**<span style="color: gold;'">yellow</span>** is the `margin`, the transparent area around the box, separating it from other elements.
+Note: `padding`, `margin` and `border` can be applied to any combination of sides, below all three are applied in equal measure to all four sides around the content.
 
-_only the bottom margin is visible in our example. `padding`, `margin` and `border` can be defined for any or all sides of the box._
-
-![](assets/images/padding_and_margin-bottom.png)
-
+![](assets/images/box-model.png)
 
 ### Styling the header
 
@@ -215,13 +212,13 @@ _border: `thickness` `style` `color`;_
 
 ## Setting up the sidebar
 
-Along with `width` and `height`, `min-width`, `max-width`, `min-height` and `max-height` can be set. These properties tend to be used to ensure that when the page is resized, the browser won't allow for it to be smaller or bigger than the specified property value.
+Along with `width` and `height`, `min-width`, `max-width`, `min-height`, and `max-height` can be set. These properties tend to be used to ensure that when the page is resized, the browser won't allow for it to be smaller or bigger than the specified property value.
 
-Let's add some content! Add the following  inside  the `div` in the html file
+Let's add some content! Add the following inside the `div` in the html file
 
 ```html
 <div>
-  <b> Me on the internet</b>
+  <strong>Me on the internet</strong>
   <ul>
    <li><a href="https://www.facebook.com/augusta.ada.lovelace">facebook</a> </li>
    <li><a href="http://en.wikipedia.org/wiki/Ada_Lovelace">wikipedia</a> </li>
@@ -231,11 +228,11 @@ Let's add some content! Add the following  inside  the `div` in the html file
 
 ### Styling
 
-Add a class `sidebar` to the div we just defined, so we can change its styling without impacting other elements.
+Add a class `sidebar` to the div we just defined. This is so that we can change its styling without impacting other elements.
 
 ```html
 <div class="sidebar">
-  <b> Me on the internet</b>
+  <b>Me on the internet</b>
   ...
 ```
 
@@ -266,7 +263,7 @@ margin-left: 20px;
 ```
 
 ###padding and margin
-Padding and margin, can be set in a number of different ways
+Padding and margin can be set in a number of different ways
 
 `padding: top right bottom left;` e.g. _padding: 10px 20px 30px 5px;_
 
@@ -293,7 +290,7 @@ Remove the list bullets and change the default margin and padding of the **u**no
 
 ```css
 ul.social-media {
-  list-style:none;
+  list-style: none;
   margin-left: 10px;
   padding-left: 20px;
 }
@@ -314,7 +311,7 @@ Add a bottom border, to give the effect of a line, to the individual list items 
 
 ## Pseudo classes
 
-A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes, we can specify different styling for different states of a link
+A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes we can specify different styling for different states of a link
 
 ```css
 a:link
@@ -323,17 +320,17 @@ a:hover
 a:active
 ```
 
-Order is **very** important. Always use the order described above if you want to apply different styling for all of the states described above.
-The most commonly used pseudo class for links, that we will also be using today is `a:hover`
+Order is **very** important. Always use the order described above if you want to apply different styling for all of the states.
+The most commonly used pseudo class for links is `a:hover`. That is what we will use today.
 
 ## Styling links
 
-We only want links who are within the list to be affected, so we will specifically style `.social-media li a`
+We only want links that are within the list to be affected. So we will specifically style `.social-media li a`
 
 ```css
 .social-media li a {
   color: #4c4066;
-  text-decoration:none;
+  text-decoration: none;
   text-shadow: 1px 0px #ffffff;
   border-left: 7px solid #fdcc38;
   padding-left: 10px;
@@ -358,7 +355,7 @@ The sidebar is now almost perfect. Tweak a couple of other properties so that th
 
 ```css
 .sidebar b {
-  margin-left:36px;
+  margin-left: 36px;
   color: #4c4066;
   font-size: 19px;
 }
@@ -439,6 +436,7 @@ Ada was the world's first programmer. We want that content to stand out. Add a s
 ```
 
 Set the style for the highlight class
+
 ```css
 .highlight {
   color: #4c61a9;
@@ -576,7 +574,7 @@ footer a {
 
 Have a look at the [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace"). The heading and body of the page have some differences from the page we just created.
 
-Use the inspector to have a look at `<body>` and `<h2>` and apply these changes to your page.
+Use the inspector to have a look at `<body>` and `<h1>` and apply these changes to your page.
 
 -----
 

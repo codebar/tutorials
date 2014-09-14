@@ -3,7 +3,7 @@ layout: page
 title: HTTP Requests, AJAX and APIs
 ---
 
-In the last lesson we've introduced [JQuery](http://jquery.com/download/).
+In the last lesson we've introduced [jQuery](http://jquery.com/download/).
 Today, we will be explaining HTTP Requests, using AJAX and APIs.
 
 ## Before we start...
@@ -175,10 +175,10 @@ Link to your Github User Finder from `index` and push your changes to Github.
 
 Here is a link to our [Github User Finder](../../examples/github-user-finder/index.html).
 
-##Request using JQuery
+##Request using jQuery
 
-AJAX requests can also be handled using JQuery using the `ajax()` method.
-Things are a bit easier when using JQuery as we can create different code blocks that handle successful or failed requests.
+AJAX requests can also be handled using jQuery using the `ajax()` method.
+Things are a bit easier when using jQuery as we can create different code blocks that handle successful or failed requests.
 
 ```js
 $.ajax({
@@ -226,7 +226,7 @@ Write a function `retrieveGenres()` that does an AJAX call to the API.
 
 ```javascript
 function retrieveGenres() {
-  // AJAX call using JQuery that retrieve and process the result
+  // AJAX call using jQuery that retrieve and process the result
 }
 ```
 > Try logging the resulted data and have a look in the console to see and explore the created objects

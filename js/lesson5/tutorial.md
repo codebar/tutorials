@@ -21,7 +21,7 @@ We will be using the **POST**, **PUT** and **GET** requests, and other things we
 | **POST** |  Create a new resource. |
 
 
-##Request using JQuery
+##Request using jQuery
 
 To use **POST** and **PUT** requests we must specify the `type` in the `ajax()` call that we introduced in the previous lesson.
 
@@ -78,7 +78,7 @@ $.ajax({
 
 4. **Bonus** don't process letters, guesses that have already been attempted or empty space 
 
-    1. You can use JQuery's `$.isNumeric(character))` to check if a letter is a number
+    1. You can use jQuery's `$.isNumeric(character))` to check if a letter is a number
 
     2. `trim()` removes all space around a string. You can apply `trim()` and check for the length to make sure the guess is one character long
 

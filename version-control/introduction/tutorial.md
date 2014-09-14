@@ -37,9 +37,9 @@ Wikipedia also holds a history of all changes.
 
 ## Why do you need Version Control?
 
-- Version control helps you store your files safely when used on a regular basis. It also makes it easy to figure out what broke your code by rolling back to previous version and figuring out when things last behaved the way you expected them to.
+- When used on a regular basis, version control helps you to store your files safely. It makes it easy to figure out what broke your code as you can roll back to a previous version and work out when things last worked as expected.
 
-- It is also extremely helpful when working with other people as it combines all changes together, and tracks who, why and when changed parts of the code.
+- It is also helpful when working with other people as it combines all the changes together, and tracks who, why and when it changed.
 
 ## Code version control systems
 
@@ -48,16 +48,17 @@ There are a number of different version control systems. The most popular ones a
 We will be using **git**.
 
 ### Why Git?
-There are a number of reasons we chose git. To name some
+There are a number of reasons we chose git. To name some  
+
 - A lot of learning resources
 
 - Does not require you to be connected to the internet to use
 
-- All your tracked changes stay on your machine until you are happy with them, and want to make them part of your codebase.
+- All your tracked changes stay on your machine until you are happy with them, and want to make them part of your codebase
 
 - Will tell you if someone has made changes since you last pushed code and urge you to update first and resolve issues
 
-- Github and online collaboration. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to it.
+- Github and online collaboration. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to them
 
 Some popular project using git:
 
@@ -86,7 +87,8 @@ For example, if you want to change the position of an element, the color of all 
 
 ###Bad commit messages
 
-Every time you commit a change, remember that in three months, when you come back to your file, you will have no idea why you applied that change. Never use messages like _changing some CSS_, _another commit_, _more changes_ etc.
+Every time you commit a change use a message that describes your change clearly. In a few months time you will have difficulty remembering why you applied a change if your messages say _changing some CSS_, _another commit_, or _more changes_
+
 Try using messages like _repositioned image to look better on page_, _resolved positioning issue for Firefox_.
 
 
