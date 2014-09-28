@@ -6,19 +6,22 @@ title: HTTP Requests, AJAX and APIs
 In the last lesson we've introduced [jQuery](http://jquery.com/download/).
 Today, we will be explaining HTTP Requests, using AJAX and APIs.
 
+Our goal is to implement a [Github User Finder](../../examples/github-user-finder/index.html)
+that allows us to look up GitHub users by the user name.
+
 ## Before we start...
 
 Don't forget to move the files for the exercises under your Github page folder. Commit each task you complete! If you are having trouble with this, ask your coach to help you out.
 
-#HTTP Requests
+# HTTP Requests
 
-##What are HTTP Requests?
+## What are HTTP Requests?
 
-Every time the browser fetches data from a server (which could be a page, an images, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then gives back a **response**
+Every time the browser fetches data from a server (which could be a page, an images, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then sends back a **response**
 
 Here is an example of the **GET** requests issued by the [wishlist tutorial](http://codebar.github.io/tutorials/examples/wishlist/index.html).
 
-*You can view any requests issued by a website by going to the Network (or Net) tab.
+\*You can view any requests issued by a website by going to the Network (or Net) tab.
 
 ![](assets/images/inspector_requests.png)
 
@@ -55,25 +58,29 @@ The `open()` method specified the type of request, the URL and if the request ca
 
  `xmlhttp.open(<request verb>, url, <async:true|false>);`
 
-The different between using a synchronous and an asynchronous request, is that our page will wait until the request has been completed, if we specify **synchronous**, so you should almost always use **asynchronous**
+The different between using a synchronous and an asynchronous request is that our page will wait until the request has been completed, if we specify **synchronous**. That means that no interaction with the page is possible while that request is waiting to be completed. So you should always use **asynchronous**.
 
 **An example using an asynchronous request**
 
 ```javascript
- xmlhttp = new XMLHttpRequest();
- xmlhttp.open("GET", url, true);
- xmlhttp.send();
- return xmlhttp;
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "https://api.github.com/", true);
+xmlhttp.send();
 ```
 
-To retrieve the response, we need to access `xmlhttp.responseText`. Before doing that though, we should make sure that the `xmlhttp.status` is `200`, as there will not be a response for failing requests.
+To retrieve the response, we need to access `xmlhttp.responseText`. Before doing that though, we should make sure that the `xmlhttp.status` is `200`. Otherwise we might accidentally try to work with an error response.
 
 > Have another look at the response status codes we mentioned earlier. What is `200`?
 
-To be able to utilise the response we get, we need to convert it to `JSON`.
+To be able to utilise the response we get, we need to convert it to `JSON`. JSON
+is a way of turning JavaScript objects into strings and vice versa. This is very
+useful if we want to exchange data over HTTP which works understands with text.
+You can use `JSON.parse` to turn JSON strings into real JavaScript objects.
 
 ```js
-JSON.parse(response)
+var londonJson = '"{"name":"London","population":8308369}"';
+var london = JSON.parse(response);
+console.log(london.name);
 ```
 
 > JSON stands for &#x200b;**J**&#x200b;ava&#x200b;**S**&#x200b;cript &#x200b;**O**&#x200b;bject &#x200b;**N**&#x200b;otation.
@@ -90,7 +97,8 @@ The URL structure for the request is `https://api.github.com/users/<username>` a
 {
   "login": "octocat",
   "id": 1,
-  "gravatar_id": "somehexcode",
+  "avatar_url": "https://avatars.githubusercontent.com/u/9906?v=2",
+  "gravatar_id": "",
   "html_url": "https://github.com/octocat",
   "type": "User",
   "name": "monalisa octocat",
@@ -104,7 +112,7 @@ The URL structure for the request is `https://api.github.com/users/<username>` a
 
 ```
 
-*You can read more information about the request structure in the [Github API](http://developer.github.com/v3/users/#response). This is not necessary for this exercise.
+\*You can read more information about the request structure in the [Github API](http://developer.github.com/v3/users/#response). This is not necessary for this exercise.
 
 > After parsing the response, you can access the data using the **dot** notation. For example, if we've parse the response into a user variable `var user = JSON.parse(responseText)`, we can access `user.login`
 
@@ -113,8 +121,11 @@ The URL structure for the request is `https://api.github.com/users/<username>` a
 First, let's create a function that does the AJAX call to the GitHub API.
 
 ```js
-function getGithubInfo(user) {
-  //call to API
+function getGithubInfo(username) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(...);
+
+  return xhr;
 }
 ```
 
@@ -125,11 +136,10 @@ To test this out, let's handle the keypress on the input field. We want this to 
 ```js
 $(document).ready(function(){
   $(document).on('keypress', '#username', function(e){
-    if (e.which == 13) {
+    if (e.which === 13) {
       // get val() from input field
 
-     // assign getGithubUserInfo(username) to a variable response
-
+      // assign getGithubUserInfo(username) to a variable response
     }
   })
 });
@@ -161,9 +171,8 @@ The `showUser(user)` function should:
 
 2. Add a link to the user's Github profile in `#profile .information`. The link should have a class `profile`
 
-3. Add an image in `#profile .avatar`. To do that, you can use the `gravatar_id` in this URL template `<img src="https://gravatar.com/avatar/<gravatar_id>?s=220" />`
-
-*You can read more about [Gravatar Image Requests](http://uk.gravatar.com/site/implement/images/).
+3. Add an image in `#profile .avatar`. To do that, you can use the `avatar_url`
+   from the response.
 
 > Don't forget to call `showUser()` from the function handling the keypress!
 
