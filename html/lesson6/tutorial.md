@@ -8,63 +8,40 @@ footer: true
 
 ### Recap
 
-In the last lesson, we briefly introduced **HTML5** and **CSS3** with more focus on **CSS3**
+In the last lesson, we briefly introduced **HTML5** and **CSS3**. We focused on **CSS3**.
 
-### Today we will be focusing more on HTML5
-
-The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson6/index.html "Women in Programming")
-
-## But before we start...
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7680133/download)
-
+### Today we will be focusing more on HTML5!
 
 ## HTML5 structural semantics
 
 ### Sectioning
 
-In the previous lessons, we used some HTML5 elements, like `<header>` and `<footer>`, `<section>` . There are a lot more elements, some other ones that are quite commonly used are `<section>`, `<nav>` and `<article>`.
+We used some HTML5 elements in previous lessons, including `<header>`, `<footer>`, and `<section>`. HTML5 introduced many other new elements. Some common ones include `<nav>`, `<article>`, and `<main>`.
 
 ![](assets/images/html5-example.png)
 
- The purpose of structural semantics is that the elements describe parts of a website.
+These elements don't change how our website *looks*. They let us describe the *structure* of our page. This gives more information to the user's browser, and helps out assistive programs (such as screen readers, commonly used by blind people). We can still use CSS to change the style of these elements, just like we did with `<div>`s in previous tutorials.
 
 ### `<section>`
-A section is usually a blob of content. When you are considering using it, try and ask yourself if what you are thinking of defining as section has a natural heading. If not, you should probably avoid it. It is also used for sectioning elements.
+A section is usually a "blob" of content. When you are considering using it, ask yourself if your potential `<section>` has a natural heading. If not, it might not be the right choice.
 
-If you just want to use it to style a part of the page, `<div>` would be more appropriate.
+If you just want to style a part of the page, a `<div>` would be more appropriate.
+
 
 ### `<article>`
-The article element represents a component of a page that consists of a self-contained composition in a document, page, application, or site and that is intended to be independently distributable or reusable, e.g. in syndication. This could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
 
-Besides content, an `<article>` could have a heading `<header>` and sometimes a `<footer>`. It's commonly used for blog posts, comments and stories.
+An `<article>` should make sense as a self-contained document. For instance, it could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, or any other independent item of contant. You can use `<header>` and `<footer>` tags within your `<article>`s too.
 
 ### `<aside>`
-aside can be used within different contexts. For example, if you are using it inside the page, the content needs to be  related to the context of the page. Some example usage would be list of posts (if the page displays posts), advertising - if that is related to the page, or event additional navigation). If you use it within an article element, then the context should be specifically related to that article.
+
+An `<aside>` is something related to but separate to the current containing element. For instance, if your page displayed bits of blog posts, an `<aside>` might contain a list of posts, or adverts related to the main content. Or maybe your page is a blog article - in that case, you could use an `<aside>` to contain a sidenote.
+
 
 ### Other elements
 
 #### `<address>`
-The `<address>` provides contact information for the page, or part of the page. Some information we could include in it are email addresses, postal addresses, telephone details and other means of contact.
 
-```html
-<address>
-  <a href="http://twitter.com/by_codebar">Codebar</a>
-  <a href="http://twitter.com/despo">Despo</a>
-  <a href="http://twitter.com/mariakhait">Maria</a>
-</address>
-```
-
-```html
-<address>
-  For more details, contact
-  <a href="mailto:feedback@codebar.io">Codebar</a>.
- </address>
-```
-
-This is **bad usage**, unless this information is directly relevant to the page.
+The `<address>` element is used to provide contact information related to the page. It's mainly meant for details like postal addresses and telephone numbers, but you can include email addresses and links to online contact methods too. Here's an example:
 
 ```html
 <address>
@@ -77,8 +54,9 @@ This is **bad usage**, unless this information is directly relevant to the page.
 ```
 
 #### `<figure>` and `<figcaption>`
+
+We've already seen that we can put images in our page using the `<img>` tag, but we often want to include a caption for our images.
 `<figure>` can be used in conjunction with the `<figcaption>` element to describe images, pictures, illustrations and diagrams (and even more).
-`<figcaption>` represents a caption or legend for a picture.
 
 ```html
 <figure>
@@ -92,9 +70,9 @@ This is **bad usage**, unless this information is directly relevant to the page.
 ![](assets/images/concerned-pug.png)
 
 ### `<video>` and `<audio>`
-The `<video>` and `<audio>` tags were introduced to support build-in media and offer the ability to easy embed media into HTML documents.
+In the old days, before HTML5, you had to use a plug-in if you wanted to include videos and audio in your page. These weren't supported in all browsers, and often didn't work at all on smart phones. These days, we can use the `<video>` and `<audio>` elements to play media directly in the browser and embed them in our documents.
 
-When you include a video, if the browser used does not support it, it will fall back to the message you contain within the container
+Some browsers still don't support this. In that case, the browser will show the message you include within the tag. Here's a video example:
 
 ```html
 <video src="path/to/video">
@@ -102,20 +80,28 @@ When you include a video, if the browser used does not support it, it will fall 
 </video>
 ```
 
-The same applies to the `<audio>`. You can also make the audio file start playing automatically by setting the **autoplay** property
+We can use other attributes to control our media plays. To make music start playing automatically, you use the **autoplay** attribute. To make the controls visible, use the **controls** attribute. Without this, you wouldn't see your audio player!
 
 ```html
-autoplay="autoplay"
+<audio src="path/to/music.mp3" controls="controls" autoplay="autoplay">
+  Your browser doesn't support embedded audio!
+</audio>
 ```
 
-## Getting started with out page
+
+## Getting started with our page
 
 Today, we will be following a different approach to building our page.
 
-You now know enough to build the page from scratch. Using this [page](http://codebar.github.io/tutorials/html/lesson6/index.html "Women in Programming") try and build it yourself, using the HTML5 elements we mentioned today and what you have learned in the previous tutorials.
+You now know enough to build a complete web page from scratch. Open [our example page](http://codebar.github.io/tutorials/html/lesson6/index.html "Women in Programming"), then try to build it yourself. You should use the HTML5 elements we mentioned today and what you have learned in the previous tutorials.
+
+### But before you begin...
+
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7680133/download). Create a new folder on your computer for this tutorial, and extract the downloaded archive in that folder.
 
 
-### Links and resources you will be needing
+
+### Links and resources you will need
 
 ```
 Hi I'm Ada Lovelace - http://codebar.github.io/tutorials/html/lesson3/example.html
@@ -127,20 +113,24 @@ Grace Hopper on Letterman - http://codebar.github.io/tutorials/html/lesson6/asse
 
 Also, don't forget to refer to the [previous tutorials](http://codebar.github.io/tutorials)
 
-> Don't afraid to ask help from your coach.
+> Don't be afraid to ask for help from your coach.
 
-> Remember to use your browser inspector!
+> Build a basic version first, then try to make it more fancy. Don't try to make it perfect first time.
 
-> Use Chrome to test the video playing, there is a small issue with playing the video on Firefox.
+> Remember to use your browser inspector! It can help you find out why things aren't working. Try not to use it to peek at how the example was built, though. :)
+
+> If your video doesn't play, try using Chrome. There's a known issue with Firefox's video playback.
 
 ## CSS Bonus
 
-Rotate elements using transform
+You can rotate elements using CSS:
 
 ```css
+img {
   transform: rotate(20deg);
+}
 ```
 
 
 -----
-This ends our sixth lesson. How did you find the introduction to HTML5? Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our sixth lesson. How did you find the introduction to HTML5? Is there something you don't understand? Try to use the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
