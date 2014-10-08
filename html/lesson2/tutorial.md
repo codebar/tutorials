@@ -24,7 +24,7 @@ _**CSS** works in conjunction with **HTML**_
 
 ### Today we will be focusing on fundamental CSS concepts
 
-We will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson1/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
+We will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
 
 ## But before we start...
 
