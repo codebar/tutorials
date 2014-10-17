@@ -17,7 +17,7 @@ Programmers use **text editors** to write code. You could use [Notepad](https://
 - **Project navigation and tabs** help you move between the different files in your project. 
 - **Autocompletion** shows you keywords you could use to finish what you're typing, so you don't have to remember all the possible commands. 
 
-We recommend you use **[Sublime Text 2](http://www.sublimetext.com/)** at Codebar. It's free to download & use for as long as you like (though it will nag you intermittently to buy it when you save your work), and it runs on both Windows & Mac. 
+We recommend you use **[Atom](https://atom.io/)** at Codebar. It's free, open source, and runs on Windows, Mac, and Linux. **[Sublime Text 2](http://www.sublimetext.com/)** is another popular choice. It's free to download & use for as long as you like (though it will nag you intermittently to buy it when you save your work), and it runs on both Windows & Mac.
 
 
 ## A web browser (required)
@@ -28,7 +28,7 @@ You'll have one of these already! Windows comes with [Internet Explorer](http://
 
 You won't need Ruby installed if you're working on CSS or HTML, but you will need access to Ruby if you work on the Ruby tutorials. You can use [a free webservice called Nitrous](https://www.nitrous.io/) to get started. You can sign up before the workshop to save some time.
 
-If you have a Mac you'll have a version of Ruby installed already. A coach can help you get started with Ruby on your Mac - ask them about `rbenv` and Homebrew. 
+If you have a Mac you'll have a version of Ruby installed already. A coach can help you get started with Ruby on your Mac - ask them about `rbenv` (or `rvm`) and Homebrew.
 
 You can [download and run the RubyInstaller program](http://rubyinstaller.org/) to program Ruby on Windows.
 
