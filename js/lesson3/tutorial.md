@@ -43,31 +43,40 @@ $("li:odd");           // all odd numbered list items
 $("li:first-child");   // the first child in a list
 ```
 
-##Accessing attributes `attr()`
+##Get and set HTML attributes `attr()`
 
-Using the `attr()` method you can retrieve any element attribute.
+Using `attr(attributeName)` you can retrieve the value of an attribute.
+
+You can use the same method to set the value of an attribute:
+`attr(attributeName, value)`. Many jQuery methods can be used to both get and
+set.
 
 ```js
-$('#logo').attr('width')
-$('#logo').attr('width', 300)
+$('#logo').attr('width')       // get width
+$('#logo').attr('width', 300)  // set width to 300
 ```
 
-##Changing CSS attributes
+##Get and set CSS styles `css()`
 
-You can get and set the CSS properties of an element with the `css()` method.
+Like `attr()`, you can get and set CSS style properties with the `css()`
+method.
 
 ```js
 var heading = $('h1');
+heading.css('color');
 heading.css('color', 'red');
 ```
 
-##val()
+##Get and set input values `val()`
 
-To set and get the text in an input field, you can use `val()`. Similar to `attr()` and `css()` you can use the function without any parameters to retrieve the value, and `val(value)` to update the value.
+Similar to `attr()` and `css()` you can use the `val()` function without any
+parameters to get the value of an input field, and `val(value)` to set the
+value.
 
 To empty an input field, you can set value to an empty string.
 
 ```javascript
+$('input').val();
 $('input').val("");
 ```
 
