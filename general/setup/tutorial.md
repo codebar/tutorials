@@ -1,6 +1,9 @@
-# Setting up your computer for Codebar
+---
+layout: page
+title: Setting up your computer for Codebar
+---
 
-You can have a great time at Codebar no matter what kind of laptop you have, but you must do a little setup before jumping in to the tutorials. You can do this at home so you can jump straight into a tutorial at Codebar. Don't worry if you have trouble - your coach can help you with this if you prefer. 
+You can have a great time at Codebar no matter what kind of laptop you have, but you must do a little setup before jumping in to the tutorials. You can do this at home so you can jump straight into a tutorial at Codebar. Don't worry if you have trouble - your coach can help you with this if you prefer.
 
 
 ## Somewhere to save your files (required)
@@ -10,12 +13,12 @@ Programming projects are normally made up of several related files, and we hope 
 
 ## A text editor (required)
 
-Programmers use **text editors** to write code. You could use [Notepad](https://en.wikipedia.org/wiki/Notepad_%28software%29) (Windows) or [Notes.app](https://en.wikipedia.org/wiki/Notes_%28application%29) (Mac) to write code, but almost all programmers use a text editor with programming-specific features: 
+Programmers use **text editors** to write code. You could use [Notepad](https://en.wikipedia.org/wiki/Notepad_%28software%29) (Windows) or [Notes.app](https://en.wikipedia.org/wiki/Notes_%28application%29) (Mac) to write code, but almost all programmers use a text editor with programming-specific features:
 
-- **Syntax highlighting** shows your code in different colours. This helps you spot typos and understand the structure of your code. 
+- **Syntax highlighting** shows your code in different colours. This helps you spot typos and understand the structure of your code.
 - **Auto-indent** helps you keep your code tidy.
-- **Project navigation and tabs** help you move between the different files in your project. 
-- **Autocompletion** shows you keywords you could use to finish what you're typing, so you don't have to remember all the possible commands. 
+- **Project navigation and tabs** help you move between the different files in your project.
+- **Autocompletion** shows you keywords you could use to finish what you're typing, so you don't have to remember all the possible commands.
 
 We recommend you use **[Atom](https://atom.io/)** at Codebar. It's free, open source, and runs on Windows, Mac, and Linux. **[Sublime Text 2](http://www.sublimetext.com/)** is another popular choice. It's free to download & use for as long as you like (though it will nag you intermittently to buy it when you save your work), and it runs on both Windows & Mac.
 
