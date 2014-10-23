@@ -4,7 +4,7 @@ title: Introduction to jQuery
 ---
 
 
-So far, we've learned the basic of JavaScript. From variables, to understanding Objects, functions and how to manipulate the &#x200b;**D**&#x200b;ocument &#x200b;**O**&#x200b;bject &#x200b;**M**&#x200b;odel.
+So far, we've learned the basics of JavaScript. From variables, to understanding Objects, functions and how to manipulate the &#x200b;**D**&#x200b;ocument &#x200b;**O**&#x200b;bject &#x200b;**M**&#x200b;odel.
 
 In this session we will introduce jQuery, a very commonly used JavaScript library, that simplifies working with JavaScript.
 
@@ -18,13 +18,13 @@ Download the files required to begin working through the first tutorial example 
 
 #What is jQuery?
 
-jQuery is a JavaScript library that supplies you with functionality independent of browser platform. It's very commonly used on the internet and enables you to do more with writing less code.
+jQuery is a JavaScript library that supplies you with functionality independent of browser platform. It's very commonly used on the internet and enables you to do more with less code.
 
 ##Selectors
 
 Selectors are simplified in jQuery. You can access elements by element type, id or class, just like in `CSS`.
 
-For example, to retrieve all paragraph elements you can use this selector `$("p")` or to retrieve all elements with a specific id `$("#message")` instead of using `getElementByTag('p')` or `getElementById('message')`.
+For example, to retrieve all paragraph elements you can use this selector `$("p")` or to retrieve all elements with a specific id `$("#message")` instead of using `getElementByTag("p")` or `getElementById("message")`.
 
 ```javascript
 $("p")                // all paragraph elemenets
@@ -34,7 +34,7 @@ $("ol#items")         // ordered list elements with the ID items
 $("ol#items li")      // list elements, within an ordered list with the id colors
 ```
 
-You can also use CSS3 selectors
+You can also use CSS3 selectors.
 
 ```javascript
 $("input[type=text]"); // inputs of type text
@@ -54,7 +54,7 @@ $('#logo').attr('width', 300)
 
 ##Changing CSS attributes
 
-You can get and set the CSS properties of an item by using the `css()` action.
+You can get and set the CSS properties of an element with the `css()` method.
 
 ```js
 var heading = $('h1');
@@ -69,7 +69,6 @@ To empty an input field, you can set value to an empty string.
 
 ```javascript
 $('input').val("");
-
 ```
 
 ##Adding content
@@ -92,7 +91,7 @@ $('#container').replaceWith("<div>I love jQuery!</div>")
 
 ##Handling Events
 
-Events is what happens when you interact with a website. Some events that you can capture are a **change** in an input field, a mouse **click** or even **focus** on an element. You can find a [all the events here](http://api.jquery.com/category/events/)
+Events are what happen when you interact with a website. Some events that you can capture are a **change** in an input field, a mouse **click** or even **focus** on an element. You can find a list of [all the events here](http://api.jquery.com/category/events/).
 
 We've learned in the previous lesson how to bind events on **click** by setting **onclick** to the HTML element..
 
