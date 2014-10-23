@@ -108,7 +108,9 @@ We've learned in the previous lesson how to bind events on **click** by setting 
 <a href="#" class="done" onclick="alert('Click event')">Show an alert box</a>
 ```
 
-With jQuery we can achieve this by applying event listeners to the document of the page, listening for the event.
+With jQuery we can achieve the same thing with an event listener. To listen for
+events anywhere on the page we attach the event listener to the document
+element.
 
 ```js
 $(document).on('click','.done', function() {
@@ -116,7 +118,18 @@ $(document).on('click','.done', function() {
 });
 ```
 
+There are two differences between these examples:
+
+  - This event listener will listen for `click` on all the elements with class
+    `done`, i.e. one listener can listen to many elements.
+  - jQuery's `on()` method is dynamic, so if we add new items to the page with
+    class `done` the listener will listen to them as well.
+
 **Handling events**
+
+To create your own event listener choose an `event` to listen for on the
+elements matching a `selector`. Then put the code you want to run each time the
+event occurs in the `function`.
 
 ```javascript
 $(document).on(event, selector, function() {
@@ -124,17 +137,12 @@ $(document).on(event, selector, function() {
 });
 ```
 
-Using the `on()` method, means that the click event will work even if we add new items to the DOM dynamically.
-
-> `$(this)` is the element that we have triggered the event from.
-
 ##Waiting for the page to load
 
 ```js
 $(document).ready(function() {
-  // here go all the interactions
-
-  /* click, mouseover, change etc */
+  // here go all the listeners
+  // e.g. on click, mouseover, change etc
 });
 ```
 
