@@ -108,24 +108,26 @@ We've learned in the previous lesson how to bind events on **click** by setting 
 <a href="#" class="done" onclick="alert('Click event')">Show an alert box</a>
 ```
 
-With jQuery we can achieve the same thing with an event listener. To listen for
-events anywhere on the page we attach the event listener to the document
-element.
+With jQuery we can achieve the same thing with an event listener.
 
 ```js
 $(document).on('click','.done', function() {
- alert("Click event");
+  alert("Click event");
 });
 ```
 
-There are two differences between these examples:
+Although these two examples do the same thing there are some differences.
 
-  - This event listener will listen for `click` on all the elements with class
-    `done`, i.e. one listener can listen to many elements.
-  - jQuery's `on()` method is dynamic, so if we add new items to the page with
-    class `done` the listener will listen to them as well.
+##Event listeners
 
-**Handling events**
+  - Event listeners are usually attached to the document element so they listen
+    for events anywhere on the page.
+  - The event listener uses a selector like `.done` to listen to specific
+    elements. A selector can match more than one element, so one listener can
+    listen to many elements.
+  - jQuery's `on()` method is dynamic, so if we add elements to the page that
+    match the selector, i.e. add an element with class `done`, then the listener
+    will automatically listen to them too.
 
 To create your own event listener choose an `event` to listen for on the
 elements matching a `selector`. Then put the code you want to run each time the
