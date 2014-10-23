@@ -24,10 +24,10 @@ jQuery is a JavaScript library that supplies you with functionality independent 
 
 Selectors are simplified in jQuery. You can access elements by element type, id or class, just like in `CSS`.
 
-For example, to retrieve all paragraph elements you can use this selector `$("p")` or to retrieve all elements with a specific id `$("#message")` instead of using `getElementByTag("p")` or `getElementById("message")`.
+For example, to retrieve all paragraph elements you can use this selector `$("div")`, or to retrieve all elements with a specific id `$("#container")` instead of vanilla JavaScript: `getElementByTag("div")`, or `getElementById("container")`.
 
 ```javascript
-$("p")                // all paragraph elemenets
+$("div")              // all div elemenets
 $("#container")       // an element with the ID container
 $(".total")           // elements with the class total
 $("ol#items")         // ordered list elements with the ID items
