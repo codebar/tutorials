@@ -20,7 +20,7 @@ There is an abundance of resources out there that can help you out, but all you 
 Some tools out there that you can use are:
 
 - [balsamiq](http://balsamiq.com/)
-- [gomockingbird](http://gomockingbirder.com/)
+- [gomockingbird](http://gomockingbird.com/)
 - [mockflow](http://mockflow.com/pricing/)
 
 However, using pen and paper is probably the easiest way, so try and choose whatever is easier for you!
