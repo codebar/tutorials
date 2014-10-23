@@ -24,6 +24,10 @@ We recommend you use **[Atom](https://atom.io/)** at Codebar. It's free, open so
 
 You'll have one of these already! Windows comes with [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/), and OS X comes with [Safari](https://www.apple.com/uk/safari/). [Firefox](https://www.mozilla.org/en-US/firefox/) and [Chrome](https://www.google.com/chrome/) are popular alternatives. You can get started with whatever you currently use, but when you reach the later tutorials the powerful developer tools in Chrome and Firefox will be useful. Your coach will show you how to use them while you work through the tutorials.
 
+## A compression utility (handy on Windows)
+
+Many of the tutorials have links to download code from Gist in .tar.gz format. Macs have built-in support to extract the files from these archives for you. On Windows there are a variety of utilities available. If you don't already have one, [7-zip is free](http://www.7-zip.org/).
+
 ## Ruby (optional)
 
 You won't need Ruby installed if you're working on CSS or HTML, but you will need access to Ruby if you work on the Ruby tutorials. You can use [a free webservice called Nitrous](https://www.nitrous.io/) to get started. You can sign up before the workshop to save some time.
