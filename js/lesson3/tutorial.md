@@ -24,10 +24,10 @@ jQuery is a JavaScript library that supplies you with functionality independent 
 
 Selectors are simplified in jQuery. You can access elements by element type, id or class, just like in `CSS`.
 
-For example, to retrieve all paragraph elements you can use this selector `$("p")` or to retrieve all elements with a specific id `$("#message")` instead of using `getElementByTag("p")` or `getElementById("message")`.
+For example, to retrieve all div elements you can use this selector `$("div")`, or to retrieve all elements with a specific id use `$("#container")` instead of vanilla JavaScript: `getElementByTag("div")`, or `getElementById("container")`.
 
 ```javascript
-$("p")                // all paragraph elemenets
+$("div")              // all div elemenets
 $("#container")       // an element with the ID container
 $(".total")           // elements with the class total
 $("ol#items")         // ordered list elements with the ID items
@@ -108,24 +108,26 @@ We've learned in the previous lesson how to bind events on **click** by setting 
 <a href="#" class="done" onclick="alert('Click event')">Show an alert box</a>
 ```
 
-With jQuery we can achieve the same thing with an event listener. To listen for
-events anywhere on the page we attach the event listener to the document
-element.
+With jQuery we can achieve the same thing with an event listener.
 
 ```js
 $(document).on('click','.done', function() {
- alert("Click event");
+  alert("Click event");
 });
 ```
 
-There are two differences between these examples:
+Although these two examples do the same thing there are some differences.
 
-  - This event listener will listen for `click` on all the elements with class
-    `done`, i.e. one listener can listen to many elements.
-  - jQuery's `on()` method is dynamic, so if we add new items to the page with
-    class `done` the listener will listen to them as well.
+##Event listeners
 
-**Handling events**
+  - Event listeners are usually attached to the document element so they listen
+    for events anywhere on the page.
+  - The event listener uses a selector like `.done` to listen to specific
+    elements. A selector can match more than one element, so one listener can
+    listen to many elements.
+  - jQuery's `on()` method is dynamic, so if we add elements to the page that
+    match the selector, i.e. add an element with class `done`, then the listener
+    will automatically listen to them too.
 
 To create your own event listener choose an `event` to listen for on the
 elements matching a `selector`. Then put the code you want to run each time the
@@ -181,23 +183,27 @@ function addToList(item) {
 
 }
 ```
-In the `index.html` file, we already have an `<ol>` component, so we want to add each new item, as a list item. We can do that by constructing the html we need `"<li>" + item + "</li>"` and adding it to the list using `append()`.
+In the `index.html` file there is an empty list, `<ol id="items">`, and we're going to add list items to it.
 
-We can get the ordered list using the element tag and the id `$("ol#items")`
+Target the empty list using its html tag and id: `$("ol#items")`.
 
-Try running the function you've just written from the inspector
+Then construct the html for a new list item `"<li>" + item + "</li>"` and add it to the end of the list using jQuery's `append()` method.
+
+Try running the function you've just written from the browser console.
 
 ```js
 addToList("build a website");
 ```
 
-Now that you can successfully add items to the list, bind the function to the button with the id `#add-to-list`.  To get the text from the input field, you can use `$("#item").val()`.
+Now that you can successfully add items to the list, write an event handler to listen for the `click` event on the button. Tip: the button's id is `#add-to-list`.
+
+Then use jQuery's `val()` method to get the text from the input field and run your `addToList()` function with the input field text as the argument from the event handler. Tip: the input field's id is `#item`.
 
 ###Bonus
-After adding the item to the list
+After adding the item to the list:
 
-1. Empty the text field
-2. Use `focus()` to place the cursor back to the text field
+1. Empty the text field after adding the item to the list.
+2. Use jQuery's `focus()` method to place the cursor back in the text field after clicking the button.
 
 ###Label items
 
