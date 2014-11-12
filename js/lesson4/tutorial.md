@@ -78,8 +78,8 @@ useful if we want to exchange data over HTTP which works understands with text.
 You can use `JSON.parse` to turn JSON strings into real JavaScript objects.
 
 ```js
-var londonJson = '"{"name":"London","population":8308369}"';
-var london = JSON.parse(response);
+var londonJson = '{"name":"London","population":8308369}';
+var london = JSON.parse(londonJson);
 console.log(london.name);
 ```
 
