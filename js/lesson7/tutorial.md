@@ -24,7 +24,7 @@ In Jasmine, you can use `describe()` to describe the purpose of a suite of tests
 
 ```javascript
 describe('Calculator', function() {
-  describe('addition', function() {
+  describe('adding numbers', function() {
     it('returns the sum of the numbers', function() {
       expect(add(3,5)).toEqual(8);
     });
