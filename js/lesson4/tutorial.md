@@ -79,7 +79,7 @@ You can use `JSON.parse` to turn JSON strings into real JavaScript objects.
 
 ```js
 var londonJson = '"{"name":"London","population":8308369}"';
-var london = JSON.parse(response);
+var london = JSON.parse(londonJson);
 console.log(london.name);
 ```
 
