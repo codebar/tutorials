@@ -243,7 +243,7 @@ Objects are very important in JavaScript. In fact, you've already used a special
 They are special kinds of data, with **properties** and **methods**
 
 ```js
-var message = "It's cold today"
+var message = "It's cold today";
 console.log(message.length);  // using length property
 console.log(message.toUpperCase());  // using toUpperCase() method
 ```
