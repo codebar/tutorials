@@ -257,7 +257,7 @@ var object = {
   propertyName: propertyValue,
   propertyName: propertyValue,
   ...
-}
+};
 ```
 
 Let's apply that to store some information about London.
@@ -274,7 +274,7 @@ var london = {
   averageRent: 1106,
   dailyTubePassengerJourney: 3500000,
   olympics: [ 1908, 1948, 2012]
-}
+};
 ```
 
 To access the properties, we can either use the **bracket notation** like in Arrays, or the **dot notation**
