@@ -412,7 +412,7 @@ var london = {
   averageRent: 1106,
   dailyTubePassengerJourney: 3500000,
   olympics: [ 1908, 1948, 2012]
-}
+};
 ```
 
 #### Display the population
