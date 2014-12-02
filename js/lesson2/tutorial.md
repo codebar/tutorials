@@ -243,7 +243,7 @@ Objects are very important in JavaScript. In fact, you've already used a special
 They are special kinds of data, with **properties** and **methods**
 
 ```js
-var message = "It's cold today"
+var message = "It's cold today";
 console.log(message.length);  // using length property
 console.log(message.toUpperCase());  // using toUpperCase() method
 ```
@@ -257,7 +257,7 @@ var object = {
   propertyName: propertyValue,
   propertyName: propertyValue,
   ...
-}
+};
 ```
 
 Let's apply that to store some information about London.
@@ -274,7 +274,7 @@ var london = {
   averageRent: 1106,
   dailyTubePassengerJourney: 3500000,
   olympics: [ 1908, 1948, 2012]
-}
+};
 ```
 
 To access the properties, we can either use the **bracket notation** like in Arrays, or the **dot notation**
@@ -412,7 +412,7 @@ var london = {
   averageRent: 1106,
   dailyTubePassengerJourney: 3500000,
   olympics: [ 1908, 1948, 2012]
-}
+};
 ```
 
 #### Display the population
