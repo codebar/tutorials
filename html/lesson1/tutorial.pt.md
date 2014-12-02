@@ -143,10 +143,10 @@ Acrescente o seguinte no corpo da página, depois do cabeçalho `<h1>`:
 
 ```html
 <p>
-  Most birds of prey sport eyes on the sides of their heads,
-  but the stereoscopic nature of
-  the owl's forward-facing eyes permits the greater
-  sense of depth perception necessary for low-light hunting.
+  A maioria das aves de rapina possui os olhos na parte lateral da cabeça
+  mas a natureza estereoscópica dos
+  olhos voltados para frente na coruja permite
+  um melhor senso de percepção profunda necessária para a caça com pouca luz.
 </p>
 ```
 
@@ -155,10 +155,10 @@ Como você já notou, apesar das novas linhas, não há quebra de linha em nosso
 
 ```html
 <p>
-  Most birds of prey sport eyes on the sides of their heads,<br/>
-  but the stereoscopic nature of<br/>
-  the owl's forward-facing eyes permits the greater<br/>
-  sense of depth perception necessary for low-light hunting.
+  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br/>
+  mas a natureza estereoscópica dos<br/>
+  olhos voltados para frente na coruja permite<br/>
+  um melhor senso de percepção profunda necessária para a caça com pouca luz.
 </p>
 ```
 
@@ -171,10 +171,10 @@ Vamos enfatizar alguns conteúdos no nosso parágrafo
 
 ```html
 <p>
-  Most birds of prey sport eyes on the sides of their heads,<br/>
-  but the stereoscopic nature of<br/>
-  the owl's forward-facing <strong>eyes permits the greater<br/>
-  sense of depth perception</strong> necessary for low-light hunting.
+  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br/>
+  mas a natureza estereoscópica dos<br/>
+  <strong>olhos voltados para frente na coruja permite<br/>
+  um melhor senso de percepção profunda</strong> necessária para a caça com pouca luz.
 </p>
 ```
 
@@ -201,10 +201,10 @@ Cerque o parágrafo já existente por um div e adicione um novo cabeçalho a ele
 <div>
   <h3>Corujas</h3>
   <p>
-    Most birds of prey sport eyes on the sides of their heads,<br/>
-    but the stereoscopic nature of<br/>
-    the owl's forward-facing <strong>eyes permits the greater<br/>
-    sense of depth perception</strong> necessary for low-light hunting.
+    A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br/>
+    mas a natureza estereoscópica dos<br/>
+    <strong>olhos voltados para frente na coruja permite<br/>
+    um melhor senso de percepção profunda</strong> necessária para a caça com pouca luz.
     <br/>
     <a href="http://pt.wikipedia.org/wiki/Coruja">Mais informações sobre corujas...</a>
   </p>
@@ -316,12 +316,12 @@ E um pequeno poema para a sua página, cercada por citações usando unidades HT
   <p>
     <strong>
       <em>
-       &quot;A wise old owl sat on an oak;  The more he saw the less he spoke; <br>
-       The less he spoke the more he heard; Why aren't we like that wise old bird?&quot;
+       &quot;Uma sábia velha coruja sentou num carvalho; Quanto mais observava, menos falava; <br>
+       Quanto menos falava, mais ouvia; Por que não somos como a sábia velha coruja?&quot;
       </em>
     </strong>
   </p>
-  <small>&mdash; poema de berçário</small>
+  <small>&mdash; poema infantil</small>
 </div>
 ```
 
