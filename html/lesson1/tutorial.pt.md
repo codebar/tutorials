@@ -80,11 +80,11 @@ O doctype vem sempre seguido pela tag `<html>`, a qual já tem o conteúdo da p�
 
 ### Tags de HEAD e BODY
 
-Uma página HTML é dividida em duas partes. O **head** (tópico) e **body** (estrutura).
+Uma página HTML é dividida em duas partes. O **head** (Cabeçalho do documento) e **body** (Corpo do documento).
 
 O **head** contém informações como título da página, folhas de estilo, escrita e meta-informação.
 
-O **body** contém o que é visível para o usuário.
+O **body** contém o que é visível para o usuário. O conteúdo propriamente dito.
 
 
 ## Vamos começar!
@@ -119,7 +119,7 @@ Cabeçalhos existem em diversos tamanhos
 ##### `<h5>Cabeçalho</h5>`
 ###### `<h6>Cabeçalho</h6>`
 
-Acrescente um cabeçalho à sua página. Coloque-o dentro da estrutura da página.
+Acrescente um cabeçalho à sua página. Coloque-o dentro da tag "body" da página. Lembre-se, é lá que vai o conteúdo que o usuário vê.
 
 ```html
 <h1>Corujas!</h1>
@@ -303,9 +303,9 @@ Adicione este texto abaixo da lista ordenada sobre porque gostamos de corujas.
 
 ### Caracteres especiais e mais formatação
 
-Alguns caracteres tem um significado especial no HTML. Por exemplo, nós usamos < e > para fazer tags de HTML, e usamos " para cercar nossos atributos. Mas e se quisermos usar aqueles caracteres na nossa página?
+Alguns caracteres tem um significado especial no HTML. Por exemplo, nós usamos `<` e `>` para fazer tags de HTML, e usamos `"` para cercar nossos atributos. Mas e se quisermos usar aqueles caracteres na nossa página?
 
-Uma forma é usar **unidades HTML**. Estes tem um & (ampersand ou E comercial), um nome e depois um ponto e vírgula (;). Aqui está a unidade HTML para um caracter de citação: &quot.
+Uma forma é usar **unidades HTML**. Estes tem um `&` (ampersand ou E comercial), um nome e depois um ponto e vírgula `;`. Aqui está a unidade HTML para um caracter de citação: `&quot;`.
 
 Você também pode usar um formato numérico para produzir caracteres especiais. [Aqui está uma lista](http://htmlandcssbook.com/extras/html-escape-codes/) de algumas unidades comuns.
 
@@ -316,8 +316,8 @@ E um pequeno poema para a sua página, cercada por citações usando unidades HT
   <p>
     <strong>
       <em>
-       &quot;Uma sábia velha coruja sentou num carvalho; Quanto mais observava, menos falava; <br>
-       Quanto menos falava, mais ouvia; Por que não somos como a sábia velha coruja?&quot;
+       &quot;Uma coruja sábia e anciã pousou em um carvalho; Quanto mais observava, menos falava; <br>
+       Quanto menos falava, mais ouvia; Por que não somos como a coruja sábia e anciã?&quot;
       </em>
     </strong>
   </p>
