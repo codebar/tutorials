@@ -3,7 +3,7 @@ layout: page
 title: Preparando o seu computador para o Codebar
 ---
 
-Você pode participar do Codebar usando o computador que você tem, desde que faça alguns ajustes antes de correr para os tutoriais. Você pode fazer isso em casa, e assim, começar rapidinho o tutorial no Codebar. Não se preocupe se tiver problemas - o seu tutor poderá ajudá-lo, caso você prefira.
+Você pode participar do Codebar usando o seu próprio computador, basta fazer alguns pequenos ajustes antes de correr para os tutoriais. Você pode fazer isto em casa e começar rapidinho os tutoriais no Codebar. Não se preocupe, se tiver problemas, o seu tutor poderá ajudá-lo!
 
 
 ## Algum lugar para salvar os seus arquivos (obrigatório)
