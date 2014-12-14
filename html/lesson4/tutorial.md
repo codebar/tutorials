@@ -173,14 +173,14 @@ This should be placed before the header closing tag.
 </div>
 ```
 
-Add an id `resources` to the outer `<div>`
+Add an id `toolbar` to the outer `<div>`
 
 ### Styling the toolbar
 
 First let's remove the bullet from the list of links
 
 ```css
-#resources ul {
+#toolbar ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -190,7 +190,7 @@ First let's remove the bullet from the list of links
 and make the elements inline so they sit next to each other
 
 ```css
-#resources li {
+#toolbar li {
   display: inline-block;
   padding: 10px;
 }
@@ -206,7 +206,7 @@ text-align: center;
 The text is now really hard to see. Change the color of the link...
 
 ```css
-#resources li a {
+#toolbar li a {
   text-decoration: none;
   color: #e7e7e7;
 }
@@ -215,7 +215,7 @@ The text is now really hard to see. Change the color of the link...
 ... and make it underline when you hover your mouse over it.
 
 ```css
-#resources li a:hover {
+#toolbar li a:hover {
   border-bottom: 1px solid;
 }
 ```
