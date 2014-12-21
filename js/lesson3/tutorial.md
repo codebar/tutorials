@@ -31,7 +31,7 @@ $("div")              // all div elemenets
 $("#container")       // an element with the ID container
 $(".total")           // elements with the class total
 $("ol#items")         // ordered list elements with the ID items
-$("ol#items li")      // list elements, within an ordered list with the id colors
+$("ol#items li")      // list elements, within an ordered list with the ID items
 ```
 
 You can also use CSS3 selectors.
@@ -45,10 +45,10 @@ $("li:first-child");   // the first child in a list
 
 ##Get and set HTML attributes `attr()`
 
-Using `attr(attributeName)` you can retrieve the value of an attribute.
+Using `attr("attributeName")` you can retrieve the value of an attribute.
 
 You can use the same method to set the value of an attribute:
-`attr(attributeName, value)`. Many jQuery methods can be used to both get and
+`attr("attributeName", value)`. Many jQuery methods can be used to both get and
 set.
 
 ```js
@@ -148,7 +148,7 @@ $(document).ready(function() {
 });
 ```
 
-Make a note of this. You should **always** use it or else your bindings won't work and the functions will run when you are loading the page.
+Make a note of this. Wrapping your event listeners and other code within this make's sure they are executed only after all the DOM elements are loaded and ready. You should **always** use it or else your bindings won't work and the functions will run when you are loading the page.
 
 #Exercise 1: Build a wish list
 
@@ -380,7 +380,7 @@ Set `.preview`'s background color, to the random color code.
 
 ###Restrict number of displayed boxes
 
-We only want to be able to add 16 colors to our favorite list. To do that, we can update the code handling the **click** event and check that the length of `$("#colors .item")` is **equal** than 16. If it's not, remove the last element.
+We only want to be able to add 16 colors to our favorite list. To do that, we can update the code handling the **click** event and check that the length of `$("#colors .item")` is **less** than 16. If it's not, remove the last element.
 
 This way, when the list is full, we remove a box and add another one.
 
