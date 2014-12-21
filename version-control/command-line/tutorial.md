@@ -3,7 +3,7 @@ layout: page
 title: Introduction to the git command line
 ---
 
-## Introduction to the git command line
+## Introduction to the Git command line
 
 **PREREQUISITE:** Basic understanding of the command line.
 
