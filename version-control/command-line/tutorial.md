@@ -3,7 +3,7 @@ layout: page
 title: Introduction to the git command line
 ---
 
-## Introduction to the git command line
+## Introduction to the Git command line
 
 **PREREQUISITE:** Basic understanding of the command line.
 
@@ -11,7 +11,7 @@ Git is an easy to share and collaborate tool that keeps our code tracked and saf
 With the following examples we understand how to deal with the daily usage of the tool.
 
 ## Before you begin
-Install command line git for [OS X](http://code.google.com/p/git-osx-installer) or [Windows](http://msysgit.github.com/) and open your terminal. If you are on linux you should already have git installed.
+Install command line git for your operating system ([OS X](http://code.google.com/p/git-osx-installer), [Windows](http://msysgit.github.com/) or [Linux](http://git-scm.com/download/linux)) and open your terminal / command prompt.
 
 Create a directory where you will be storing all your projects. You can call it `code` or `projects`.
 
@@ -41,16 +41,18 @@ $ git init
 ### Create a file
 
 ```bash
-$ echo "Learning git" > index.html
+$ echo "<h1>Learning git</h1>" > index.html
 ```
 
-> The above command will output `<h1>Learning git</h1>` and store it in index.html. Open up the file and have a look.
+> The above command will output `<h1>Learning git</h1>` and store it in `index.html`. Open up the file and have a look.
 
 ### Check the git repository status.
 
 ```bash
 $ git status
 ```
+
+> The above command will tell you what files in the current directory have been changed, what files have not yet been added to the git repository and so on.
 
 ### Add your file on the repository and commit your changes.
 
@@ -60,7 +62,7 @@ $ git status
 $ git commit -m 'this is my first command-line commit!'
 ```
 
-> . will add all the files in the current directory and subdirectories. You should only use it when initialising your repository, or you can specify the file name.
+> `.` will add all the files in the current directory and subdirectories. You should only use it when initialising your repository. Rest of the time you can specify the file names to be added.
 
 ### Check the git commit history.
 
@@ -68,7 +70,7 @@ $ git commit -m 'this is my first command-line commit!'
 $ git log
 ```
 
-### Transferring project repository to online service
+### Transferring project repository to an online service
 
 First you need to create an account to the service of your choice ([GitHub](http://github.com/join), [GitLab](http://gitlab.com)). Then, create a new project (or repository).
 
@@ -82,9 +84,9 @@ $ git push -u origin master
 
 #### What is `remote`
 
-`remote` git all the remote repositories you have configured. You could have the same repository stored in many resources like GitHub and GitLab or Heroku.
+`remote` is simply the URL of your repository in any online repository hosting services. The `git remote` lists all the remote repositories you have configured. You could have the same repository stored in many places like GitHub and GitLab or Heroku and in such cases you will have a remote configured for each of the remote repository you have.
 
-The structure of the command is `git remote <add|remove> <name of remote> <url of remote>`
+The structure of the command to add a new `remote` is `git remote <add|remove> <name of remote> <url of remote>`.
 
 #### List all your remote repositories
 
@@ -103,7 +105,7 @@ Username for 'https://github.com': <your username>
 Password for 'https://<username>@github.com': <your password>
 ```
 
-> When you are working with remote repo is important to sync your local repo before any commit, merge or push.
+> When you are working with a remote repo it is important to sync your local repo before doing any commit, merge or push.
 
 ### Syncing the remote copy with your local copy
 
@@ -114,7 +116,7 @@ $ git log
 
 # Example 2: Working with a remote service
 
-Update the index.html file and then commit and push the changes
+Update the `index.html` file and then commit and push the changes
 
 ```html
 <html>
@@ -128,7 +130,7 @@ Update the index.html file and then commit and push the changes
             <dt>Initialise a git repository</dt>
             <dd>git init</dd>
             <dt>Add files to git</dt>
-            <dd>git add <filename></dd>
+            <dd>git add filename</dd>
           </dl>
     </body>
 </html>
@@ -161,7 +163,7 @@ $ git log
 
 # Example 3: Verifying changes before any commit
 
-Edit index.html
+Update `index.html`
 
 
 ```html
@@ -194,7 +196,7 @@ $ git diff
 The -/+ indications you can see mean
 
 **-** indicates lines removed from the code.
-
+	
 **+** indicates lines added to the code.
 
 ```bash
@@ -230,7 +232,7 @@ Edit the index.html file and then check the changes.
 $ echo "oh no!" > index.html
 ```
 
-> Have a look at the file using `git diff`
+> Have a look at changes to the file using `git diff`
 
 ### Check the status of the repository
 
@@ -250,7 +252,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 ### To discard the changes checkout the file
 
 ```bash
-$ git checkout -- index.html
+$ git checkout index.html
 ```
 
 Don't forget to verify the changes
@@ -268,7 +270,7 @@ Repeat the steps below to change and commit a file
 $ echo "oh not again" > index.html
 $ git diff
 $ git add index.html
-$ git commit -am 'Oops, I just deleted my list'
+$ git commit -m 'Oops, I just deleted my list'
 ```
 
 > Can you explain the commands you just used?
@@ -304,7 +306,7 @@ Unstaged changes after reset:
 M index.html
 ```
 
-> The caret (^) after HEAD moves head back through commits. HEAD^ is short for HEAD^1 and in the same way you can apply HEAD^2 to go back two commit ago.
+> The caret (^) after HEAD moves head back through commits. HEAD^ is short for HEAD^1 and in the same way you can apply HEAD^2 to go back two commits ago.
 
 ### Check the log again
 
@@ -339,7 +341,9 @@ $ git status
 $ git log
 ```
 
-> What does git push do?
+> `git commit -am 'commit message` is short form for `git add .` followed by `git commit -m 'message'`.
+
+> What does `git push` do?
 
 ### Reverting a commit
 
@@ -378,8 +382,7 @@ git push origin master
 
 # Extras
 
-If you are on OS X, check the following resources
-
+Following are some good resources to to help you set up git.
 https://help.github.com/articles/set-up-git
 
 ## Configuring your git environment
@@ -430,7 +433,7 @@ To apply this you need to create a .gitignore file in your root path. There you 
 > Do you know what these files are? You normally wouldn't want to commit logs or packages.
 
 
-### Pimping your log history
+### Pimping your log historyr
 
 In your aliases add this as an alias for viewing git logs
 ```
