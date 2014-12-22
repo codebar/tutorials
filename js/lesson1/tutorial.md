@@ -27,7 +27,7 @@ Some common usages around the web is
 [Games](http://gorillas.heroku.com)
 ![](assets/images/game.png)
 
-It is also becoming common outside of the browser. You can write your own programmes and servers in JavaScript using [Node.js](http://nodejs.org/).
+It is also becoming common outside of the browser. You can write your own programs and servers in JavaScript using [Node.js](http://nodejs.org/).
 
 
 
@@ -108,7 +108,7 @@ console.log("We are in " + year + ", but " + nextYear + " is just around the cor
 
 That's great! We can combine strings together and add up numbers.
 
-> Sometimes you may forget to use `;` after a statement. Usually this is ok, but sometimes strange things can happen. Try not to forget to use `;`,
+> Sometimes you may forget to use `;` after a statement. Usually this is ok, but sometimes strange things can happen. Try not to forget to use `;`.
 
 - **booleans** - true/false
 
@@ -128,6 +128,7 @@ var iDontHaveAValue;
 
 console.log("What kind of variable am I? " + iDontHaveAValue);
 ```
+> The general convention in JavaScript is to use `lowerCamelCase` while naming variables.
 
 ### Operations
 The are are a number of operations you can apply, just like when using math.
@@ -247,11 +248,11 @@ var people = coaches + students;
 
 if (people > pizzas) {
   console.log("We have more people than pizzas!");
-};
+}
 
 if (students > pizzas) {
   console.log("But we have more students than pizzas! Let's not give the coaches any food.");
-};
+}
 ```
 
 #### Less than `<`
