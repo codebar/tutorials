@@ -3,7 +3,7 @@ layout: page
 title: Beginning JavaScript
 ---
 
-In our previous lesson we briefly introduced JavaScript, variables.  This time we will be explaining Loops, Arrays, Objects and the DOM.
+In our previous lesson we briefly introduced JavaScript - variables, expressions, conditions, etc.  This time we will be explaining loops, arrays, objects and the DOM.
 
 ## Before we start...
 
@@ -256,6 +256,9 @@ Here is the basic template for creating an object with some properties
 var object = {
   propertyName: propertyValue,
   propertyName: propertyValue,
+  methodName: function(){
+    //method definition
+  },
   ...
 };
 ```
@@ -273,7 +276,10 @@ var london = {
   numberOfUniversities: 43,
   averageRent: 1106,
   dailyTubePassengerJourney: 3500000,
-  olympics: [ 1908, 1948, 2012]
+  olympics: [ 1908, 1948, 2012],
+  updatePopulation: function(newPopulation) {
+    this.population = newPopulation;
+  }
 };
 ```
 
@@ -300,6 +306,15 @@ for (i = 0; i < london.olympics.length; i = i + 1) {
   console.log(london.olympics[i]);
 }
 ```
+Also you can see that we can have methods in them. We have a method `updatePopulation` using which you can update the `population` property of `london`.
+
+```js
+console.log("Population before update: " + london.population);
+london.updatePopulation(8400000);
+console.log("Population after update: " + london.population);
+```
+We have used the keyword `this` inside the `updatePopulation` method. It is used to access the properties and methods of objects from inside the object itself.
+
 
 ## The DOM
 
@@ -387,15 +402,15 @@ There are three main steps we need to follow to achieve this.
 
 1. creating an element
 ```js
-document.createElement(<tagName>);
+document.createElement("<tagName>");
 ```
 2. creating text nodes
 ```js
-document.createTextNode(<text>);
+document.createTextNode("<text>");
 ```
 3. adding children to elements
 ```js
-document.appendChild(<node>);
+document.appendChild("<node>");
 ```
 
 Try this out using the london object we declared previously
@@ -411,7 +426,10 @@ var london = {
   numberOfUniversities: 43,
   averageRent: 1106,
   dailyTubePassengerJourney: 3500000,
-  olympics: [ 1908, 1948, 2012]
+  olympics: [ 1908, 1948, 2012],
+  updatePopulation: function(newPopulation) {
+    this.population = newPopulation;
+  }
 };
 ```
 
