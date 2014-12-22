@@ -60,9 +60,9 @@ We've already seen that we can put images in our page using the `<img>` tag, but
 
 ```html
 <figure>
- <img src="assets/images/pug.png">
+ <img src="assets/images/concerned-pug.png">
  <figcaption>
-  Sceptical pug
+  Concerned pug
  </figcaption>
 </figure>
 ```
