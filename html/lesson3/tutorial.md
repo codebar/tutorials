@@ -12,7 +12,7 @@ In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**a
 
 ### Today we will be building a styled website from scratch
 
-The page we will be building will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace")
+The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
 
 We will also be explaining in more detail elements that we mentioned in our previous lesson.
 
@@ -198,9 +198,9 @@ header {
 Expand the styling of the header so that it has a border and tweak the height and padding
 
 ```css
-  border-bottom: 1px solid #e7e6e6;
-  padding-top: 14px;
-  height: 70px;
+border-bottom: 1px solid #e7e6e6;
+padding-top: 14px;
+height: 70px;
 ```
 
 > Do you remember the border properties description from our previous lesson?
@@ -311,7 +311,7 @@ Add a bottom border, to give the effect of a line, to the individual list items 
 
 ## Pseudo classes
 
-A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes we can specify different styling for different states of a link
+A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes we can specify different styling for different states of a link:
 
 ```css
 a:link
@@ -322,6 +322,11 @@ a:active
 
 Order is **very** important. Always use the order described above if you want to apply different styling for all of the states.
 The most commonly used pseudo class for links is `a:hover`. That is what we will use today.
+
+We talk about *pseudo* classes, because in contrast to the classes we address by
+putting a dot in front of them, the *pseudo* classes have no actual
+correspondent in the HTML. Instead, they refer to a certain state of the element
+that is not expressed through the markup.
 
 ## Styling links
 
@@ -414,9 +419,9 @@ Now that the content is there, we can see that again, we need to tweak the eleme
 Add a bit more space around the main container and set the vertical alignment.
 
 ```css
-  margin-left: 70px;
-  padding-top: 60px;
-  vertical-align: top;
+margin-left: 70px;
+padding-top: 60px;
+vertical-align: top;
 ```
 
 > Try removing `vertical-align`. What happens?
@@ -533,7 +538,7 @@ a {
 }
 
 a:hover {
-  color: #a26cd2
+  color: #a26cd2;
 }
 ```
 
