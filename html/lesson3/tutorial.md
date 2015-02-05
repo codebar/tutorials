@@ -232,7 +232,7 @@ Add a class `sidebar` to the div we just defined. This is so that we can change 
 
 ```html
 <div class="sidebar">
-  <b>Me on the internet</b>
+  <strong>Me on the internet</strong>
   ...
 ```
 
