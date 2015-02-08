@@ -7,7 +7,7 @@ title: HTML Aula 1
 
 **HTML** é a linguagem usada para construir sites da internet.
 
-Ele define a estrutura do site, ou seja, qualquer coisa relacionada ao conteúdo da página, como texto, imagens, vídeos.
+Ele define a estrutura do site, ou seja, qualquer coisa relacionada ao conteúdo da página: texto, imagens, vídeos.
 
 
 ### O que significa HTML:
@@ -15,7 +15,7 @@ Ele define a estrutura do site, ou seja, qualquer coisa relacionada ao conteúdo
 **H**yper **T**ext **M**arkup **L**anguage (Linguagem de marcação de hipertexto)
 
 
-### O que forma um site de internet
+### O que forma um site
 
 HTML: estrutura do site
 
@@ -35,7 +35,7 @@ Vamos construir esta [página de exemplo](/html/lesson1/example.pt.html "Eu amo 
 
 Um **elemento** é como um tijolo no HTML. Existem parágrafos, cabeçalhos, tabelas, links, listas e muitos outros.
 
-**Tags** indicam a abertura e fechamento de um elemento. Elas frequentemente contém outros elementos e texto.
+**Tags** indicam a abertura e fechamento de um elemento. Elas frequentemente contém outros elementos e textos.
 
 `<nomedatag>conteúdo</nomedatag>`
 
@@ -62,7 +62,7 @@ Podemos usar um tipo especial de tag para adicionar anotações em nossas págin
 ### DOCTYPE e tags HTML
 
 O doctype é a primeira coisa que precisa ser definida numa página HTML.
-Ele diz ao navegador qual a versão de HTML a página está usando.
+Ele diz ao navegador qual a versão de HTML que a página está usando.
 
 ```html
 <!DOCTYPE html>
@@ -70,7 +70,7 @@ Ele diz ao navegador qual a versão de HTML a página está usando.
 
 Por enquanto nós vamos usar somente HTML, mas você pode descobrir mais sobre doctypes [aqui](http://www.w3.org/wiki/Doctypes_and_markup_styles).
 
-O doctype vem sempre seguido pela tag `<html>`, a qual já tem o conteúdo da página.
+O doctype vem sempre seguido pela tag `<html>`, a qual já contém o conteúdo da página.
 
 ```html
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ O doctype vem sempre seguido pela tag `<html>`, a qual já tem o conteúdo da p�
 
 ### Tags de HEAD e BODY
 
-Uma página HTML é dividida em duas partes. O **head** (Cabeçalho do documento) e **body** (Corpo do documento).
+Uma página HTML é dividida em duas partes. O **head** (cabeçalho do documento) e **body** (corpo do documento).
 
 O **head** contém informações como título da página, folhas de estilo, escrita e meta-informação.
 
@@ -89,7 +89,7 @@ O **body** contém o que é visível para o usuário. O conteúdo propriamente d
 
 ## Vamos começar!
 
-Começaremos definindo a estrutura básica do nosso site. Crie uma pasta para seu trabalho chamada "HTML Aula 1". Depois, dentro desta pasta, crie um novo arquivo chamado "index.html". Isso é o que você deve escrever no arquivo:
+Vamos definir a estrutura básica do nosso site. Crie uma pasta para seu trabalho chamada "HTML tutorial 1". Depois, dentro desta pasta, crie um novo arquivo chamado "index.html". Isso é o que você deve escrever no arquivo:
 
 ```html
 <!DOCTYPE html>
@@ -108,9 +108,9 @@ Começaremos definindo a estrutura básica do nosso site. Crie uma pasta para se
 > E na barra de título do navegador ou barra de abas?
 
 
-### Elemento: Cabeçalho
+### Elemento: Heading (título)
 
-Cabeçalhos existem em diversos tamanhos
+Títulos podem existir em diversos tamanhos
 
 # `<h1>Cabeçalho</h1>`
 ## `<h2>Cabeçalho</h2>`
@@ -119,19 +119,19 @@ Cabeçalhos existem em diversos tamanhos
 ##### `<h5>Cabeçalho</h5>`
 ###### `<h6>Cabeçalho</h6>`
 
-Acrescente um cabeçalho à sua página. Coloque-o dentro da tag "body" da página. Lembre-se, é lá que vai o conteúdo que o usuário vê.
+Acrescente um título à sua página. Coloque-o dentro da tag "body" da página. Lembre-se, é lá que está o conteúdo que o usuário vê.
 
 ```html
 <h1>Corujas!</h1>
 ```
 
-> Você lembrou de adicionar o cabeçalho à estrutura?
+> Você lembrou de adicionar o título à estrutura?
 
 > Não esqueça de salvar as alterações antes de atualizar o navegador!
 
 ### Aninhando elementos
 
-Elementos podem ser aninhados um dentro do outro. Por exemplo, se você colocar o `<h1>` dentro das tags de corpo de página você está posicionando um cabeçalho dentro do `<body>` de uma página.
+Elementos podem ser aninhados um dentro do outro. Por exemplo, se você colocar o `<h1>` dentro das body tags da página, você está posicionando um título dentro do `<body>` de uma página.
 
 > Você deve sempre fechar qualquer elemento que você abrir. Abriu um elemento, feche no final!
 
@@ -139,7 +139,7 @@ Elementos podem ser aninhados um dentro do outro. Por exemplo, se você colocar 
 
 Adicionar conteúdo ao `<p>` faz com que o texto tenha uma estrutura de parágrafo. Isso ajuda para que o conteúdo da página fique mais fácil para leitura.
 
-Acrescente o seguinte no corpo da página, depois do cabeçalho `<h1>`:
+Acrescente o seguinte no body da página, depois do heading `<h1>`:
 
 ```html
 <p>
@@ -195,7 +195,7 @@ Div significa _divisão_. Ele cria seções num documento HTML. O div não afeta
 
 Podemos usar um div para limitar o nosso parágrafo.
 
-Cerque o parágrafo já existente por um div e adicione um novo cabeçalho a ele:
+Cerque o parágrafo já existente por um div e adicione um novo heading a ele:
 
 ```html
 <div>
@@ -217,7 +217,7 @@ Cerque o parágrafo já existente por um div e adicione um novo cabeçalho a ele
 Existem dois tipos de listas, **ordenada** e **desordenada**.
 Uma lista desordenada `<ul>` é definida por pontos enquanto a lista ordenada `<ol>` usa uma sequência.
 
-Vamos listar as razões que nós fazem gostar tanto de corujas abaixo do cabeçalho principal da página (o elemento `<h1>` que adicionamos mais cedo)
+Vamos listar as razões que nós fazem gostar tanto de corujas abaixo do heading principal da página (o elemento `<h1>` que adicionamos mais cedo)
 
 ```html
 <h2>Porque nós gostamos tanto de corujas?</h2>
@@ -252,7 +252,7 @@ Imagens são principalmente formadas por três atributos
 * o atributo `src`, o qual deixa a página saber qual imagem queremos que seja vista
 * o atributo `alt`, onde nós descrevemos nossa imagem para as pessoas que não conseguem ver a mesma
 
-Antes do principal cabeçalho da página, adicione o seguinte
+Antes do heading principal da página, adicione o seguinte
 
 ```html
 <div>
@@ -260,14 +260,14 @@ Antes do principal cabeçalho da página, adicione o seguinte
 </div>
 ```
 
-> Lembre-se: a seção `<head>` não é o mesmo que cabeçalho! Certifique-se de que sua nova `<div>` está no corpo da página.
+> Lembre-se: a seção `<head>` (cabeçalho) não é o mesmo que heading (título)! Certifique-se de que sua nova `<div>` está no body página.
 
 > Você consegue ver o logo do codebar? O que acontece quando você muda de logo para logo1?
 
 > Se você não consegue ver sua imagem, certifique-se de ter colocado as imagens na pasta `images`.
 
 Vamos adicionar mais imagens. Dessa vez nós vamos colocá-las em uma lista.
-Faça isso abaixo do cabeçalho `<h2>Porque nós gostamos tanto de corujas?</h2>`.
+Faça isso abaixo do heading `<h2>Porque nós gostamos tanto de corujas?</h2>`.
 
 ```html
 <ul>
@@ -283,7 +283,7 @@ Portanto, a lista pode conter não somente texto, mas outros elementos também.
 
 Links podem conter vários elementos - não somente texto.
 
-Vamos usar algumas imagens e texto para conectar a um video. Isso pode ajudar quando queremos que o usuário chegue onde desejamos sem que ele tenha que clicar num texto.
+Vamos usar algumas imagens e texto para conectar a um vídeo. Isso pode ajudar quando queremos que o usuário chegue onde desejamos sem que ele tenha que clicar num texto.
 
 Adicione este texto abaixo da lista ordenada sobre porque gostamos de corujas.
 
@@ -327,7 +327,7 @@ E um pequeno poema para a sua página, cercada por citações usando unidades HT
 
 **small** é um outro elemento de formatação que você pode usar.
 
-> Você notou como o caracter `&mdash;` renderiza na sua página?
+> Você notou como o caracter `&mdash;` aparece na sua página?
 
 ### Link de envio de email (mailto link) `<a>`
 
@@ -352,12 +352,12 @@ A diferença entre os links e link de envio de email (mailto link) é o conteúd
 > O que acontece quando você adiciona &body=Corujas são demais ao segundo link?
 
 
-## Bonus
+## Bônus
 
 Coloque um link para compartilhar no twitter junto com outros links de compartilhamento.
 
 ```html
-<a href="http://twitter.com/home?status=Eu amo corujas! via @by_codeba">Compartilhe seu amor por corujas no twitte</a>
+<a href="http://twitter.com/home?status=Eu amo corujas! via @by_codebar">Compartilhe seu amor por corujas no twitter</a>
 ```
 
 ---
