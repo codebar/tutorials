@@ -1,45 +1,45 @@
 ---
 layout: page
-title: HTML Lesson 2
+title: HTML Aula 2
 footer: true
 ---
 
-## What is CSS?
+## O que é CSS?
 
-**CSS** is the language used to style websites.
+**CSS** é a linguagem usada para criar o estilo dos sites.
 
-It defines the visual representation of the content. For example colour, margins, borders, backgrounds, position in the page.
+Ela define a representação visual do conteúdo. Por exemplo: cor, margens, bordas, fundo e posição na página.
 
-### What does it stand for?
+### O que isso significa?
 
- **C**ascading **S**tyle **S**heets.
+ Folha de estilo em cascata (**C**ascading **S**tyle **S**heets).
 
-### What makes a website
+### Do que consiste um site
 
-HTML: structure of a website
+HTML: estrutura do site
 
-CSS: presentation
+CSS: apresentação
 
-_**CSS** works in conjunction with **HTML**_
+_O **CSS** funciona em conjunto com o **HTML**_
 
-### Today we will be focusing on fundamental CSS concepts
+### Hoje vamos concentrar nos conceitos fundamentais do CSS
 
-We will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
+Nós vamos criar a aparência [desta página](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) para que fique igual [a este exemplo](http://codebar.github.io/tutorials/html/lesson2/example.html).
 
-## But before we start...
+## Mas antes de começar...
 
-> The first tutorial does not prepare you for this exercise. Before you continue, download the provided files.
+> O primeiro tutorial não te prepara para este exercício. Antes de continuar, baixe os seguintes arquivos.
 
 
-### Required files
+### Arquivos necessários
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download)(mac/linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip)(windows)
+Faça o download dos arquivos necessários para dar andamento ao tutorial por [aqui](https://gist.github.com/hundred/7332441/download) (mac/linux) ou [aqui](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip) (windows)
 
-### What can I do with CSS?
+### O que posso fazer com o CSS?
 
-You can change the color, position, dimensions and presentation of different elements
+Você pode mudar a cor, posição, dimensões e apresentações de diversos elementos.
 
-### Anatomy of a CSS element
+### Anatomia de um elemento CSS
 
 ```css
 body {
@@ -47,19 +47,19 @@ body {
 }
 ```
 
-**body** selector
+**body** seletor
 
-**color** property
+**color** propriedade
 
-**hotpink** value
+**hotpink** valor
 
 ```css
-selector {
-  property: value;
+seletor {
+  propriedade: valor;
 }
 ```
 
-A group of properties for the given selector is defined within the curly braces
+Um grupo de propriedades para determinado seletor é definido entre chaves `{ }`
 
 ```css
 body {
@@ -68,28 +68,28 @@ body {
 }
 ```
 
-## Getting started
+## Começando
 
-In the head of the html page define a style tag
+No head tag da página html, defina uma style tag (tag de estilo).
 
 ```html
 <head>
-  <title>I love owls</title>
+  <title>Eu amo corujas</title>
   <style type="text/css">
 
   </style>
 </head>
 ```
 
-Include the styling described below, within the style tag we defined.
+Inclua o estilo descrito abaixo, junto com a tag de estilo que definimos.
 
-## Introductions to selectors
+## Introdução aos seletores
 
-### Selectors
+### Seletores
 
-#### Selector: element
+#### Seletor: elemento
 
-Let's set the font that we want our page to use
+Vamos escolher a fonte que queremos usar na nossa página
 
 ```css
 body {
@@ -97,9 +97,9 @@ body {
 }
 ```
 
-As we have selected the **body** element, this change will apply to everything nested within it, the entire contents of our page.
+Já que selecionamos o elemento **body**, essa alteração será aplicada para tudo o que está aninhado a esta estrutura, ou seja, todos os conteúdos da nossa página.
 
-Let's also remove the bullet from the lists that we have defined
+Vamos retirar também os tópicos das listas que já definimos.
 
 ```css
 ul {
@@ -107,7 +107,7 @@ ul {
 }
 ```
 
-and change the appearance of the links on our page
+e mudar a aparência dos links na nossa página
 
 ```css
 a {
@@ -116,24 +116,23 @@ a {
    border-bottom: 1px dotted #a369d5;
 }
 ```
-**color**  defines the color of the text. `#a369d5` is the representation of the color in hex.
-A useful resource for figuring out color codes is [http://0to255.com](http://0to255.com).
+**color**  (cor) define as cores do texto. `#a369d5` é a representação da cor em formato hexadecimal. Uma fonte útil para descobrir os códigos das cores é [http://0to255.com](http://0to255.com).
 
-**text-decoration** specifies the decoration applied to the text. Some other options you can try out are _underline_, _overline_ and _line-through_. As links by default have an underline text decoration applied to them, by setting this to none, we reset that property.
+**text-decoration** (decoração do texto) especifica a decoração aplicada ao texto. Algumas outras opções que você pode experimentar são _underline_ (sublinhado), _overline_ (sobrelinhado) e _line-through_ (linha que corta o escrito). Como os links tem o sublinhado aplicado a eles como padrão, se estipularmos none (nenhum) ao link, cancelamos esta propriedade.
 
-**border-bottom** makes the text appear underlined. Border properties can be merged into one line
+**border-bottom** (base da borda) faz o texto aparecer sublinhado. Propriedades de bordas podem ser fundidas em uma linha
 
-`border-bottom: thickness border-style color`
+`border-bottom: thickness border-style color` (base da borda: espessura estilo da borda cor)
 
-**1px** defines the thickness of the border
+**1px** define a espessura da borda
 
-**dotted** the style of the line
+**dotted** (pontilhado) o estilo da linha
 
-**#a369d5** the color of the border
+**#a369d5** a cor da borda
 
-#### Selector: class
+#### Seletor: classe
 
-A class selector selects all elements that use the specified class.
+Um seletor de classes seleciona todos os elementos usados pela classe especificada.
 
 ```css
 .pictures {
@@ -142,7 +141,7 @@ A class selector selects all elements that use the specified class.
 }
 ```
 
-**margin** is the area surrounding an element. The above definition is a _shorthand_ version of
+**margin** (margem) é a área que rodeia um elemento. A definição acima é uma versão _abreviada_ de
 
 ```css
 margin-top: 10px;
@@ -151,14 +150,14 @@ margin-right: auto;
 margin-left: auto;
 ```
 
-What we defined above is
-_margin: (top bottom) (left right)_
+O que definimos acima é
+_margin: (top bottom) (right left)_ margem: (superior inferior) (direita esquerda)
 
-> You can see the margin of an element by inspecting it and having a look at the computed tab
+> Você consegue ver a margem de um elemento conferindo a guia de inspeção
 
-#### Selector: id
+#### Seletor: id
 
-Selects the element with the id logo.
+Seleciona o elemento com a identidade ou logotipo.
 
 ```css
 #logo {
@@ -167,11 +166,11 @@ Selects the element with the id logo.
 }
 ```
 
-> There can only be one element with a particular id. If you define multiple elements, only the first one will be selected.
+> Só pode existir um único elemento com determinada identidade. Se você definir múltiplos elementos, somente um poderá ser selecionado.
 
-#### Selector: nested elements
+#### Seletor: elementos aninhados
 
-Selects all list elements that are nested within a **class** pictures
+Seleciona todos os elementos de lista que estão aninhados dentro de uma **classe** de imagem (pictures).
 
 ```css
 .pictures li {
@@ -180,46 +179,46 @@ Selects all list elements that are nested within a **class** pictures
 }
 ```
 
-**display** specifies how the elements are displayed. **li** is a block element. By changing its display property, we make sure that it displays as an inline element.
+**display** (exibição) especifica como os elementos são expostos. **li** é um elemento de bloco. Mudando esta propriedade de exibição, nos certificamos que a exibição será como um elemento inline.
 
-> Change inline to inline-block, and to block. Can you notice the difference?
+> Modifique inline para bloco-inline e para bloco. Você consegue notar a diferença?
 
-## Ways of connecting CSS to HTML
+## Formas de unir o CSS ao HTML
 
-### Embedded CSS
+### CSS incorporado
 
-At the beginning of the tutorial we described how to connect the CSS to our page.
+No começo do tutorial nós descrevemos como juntar o CSS à nossa página.
 
 ```html
 <head>
-  <title>I love owls</title>
+  <title>Eu amo corujas</title>
   <style type="text/css">
 
   </style>
 </head>
 ```
 
-This method of using CSS, by defining it within our HTML page is called **embedded**. The problem with this, is that it cannot be reused across other pages and it also makes it a bit harder to work.
+Este método de usar o CSS, definindo-o dentro de nossa página HTML, é chamado **incorporar**. O problema deste mecanismo é que ele não pode ser reutilizado nas outras páginas, o que torna o trabalho um pouco mais difícil.
 
 
-### Linked CSS
+### CSS externa
 
-A better way to define CSS, is to include it within a separate stylesheet. This is easier to maintain and can be reused across several pages.
+Uma boa forma para definir o CSS é incluí-lo dentro de uma folha de estilo separada. Assim é mais fácil mantê-lo e reutilizá-lo por várias páginas.
 
-To achieve this, let's move our CSS outside of the head of the page and into a new file that we will link through the head.
+Para completar esta tarefa vamos mover nosso CSS para fora do head da página e criar um novo arquivo, que será conectado a página pelo head.
 
 ```html
 <head>
-  <title>I love owls</title>
+  <title>Eu amo corujas</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 ```
 
-## Cascading
+## Efeito cascata
 
-Stylesheets _cascade_ to all elements until they are changed.
+Vamos usar o efeito _cascata_ para todos os elementos da folha de estilo, até obter alterações.
 
-First let's reset the margin and border of all the images.
+Primeiro vamos redefinir a margin e border de todas as imagens.
 
 ```css
 img {
@@ -228,7 +227,7 @@ img {
 }
 ```
 
-We can change the styling of some of these images by defining a more specific selector. This will supersede the `img` selector we just defined
+Nós podemos mudar o estilo de algumas destas imagens estabelecendo um seletor mais específico. Isto vai substituir o seletor `img` que nós acabamos de definir.
 
 ```css
 .bigimg img {
@@ -238,16 +237,16 @@ We can change the styling of some of these images by defining a more specific se
 }
 ```
 
-## CSS Properties
+## Propriedades CSS
 
-So far we have explained some selectors and presented others with more self explanatory names. Knowing every selector, is not an easy task, but don't let this put you off. The internet is your friend. [Here you can find a list of all CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
+Até agora explicamos alguns seletores. Sabemos que conhecer cada seletor não é uma tarefa fácil, mas não deixe que isso te desanime. A internet é sua amiga. [Veja aqui uma lista com todas as propriedades CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
 
 
-## Styling our page further
+## Avançando na forma de estilo da nossa página
 
-### line-height
+### line-height (altura da linha)
 
-Let's extend the body selector so that our page looks a bit less cramped
+Vamos aumentar o seletor de body para que a nossa página tenha um aspecto menos aglomerado.
 
 ```css
 body {
@@ -256,9 +255,9 @@ body {
 }
 ```
 
-### Centering the content of our page
+### Centralizando o conteúdo da nossa página
 
-In the HTML page you will notice a div element with the id **main**. Let's use this selector to center that container
+Numa página HTML você notará um elemento div com a identificação **main** (principal). Vamos usar este seletor para centralizar aquele recipiente.
 
 ```css
 #main {
@@ -267,9 +266,9 @@ In the HTML page you will notice a div element with the id **main**. Let's use t
   padding: 0;
 }
 ```
-To achieve centering of a container, we must define its width. If you remove the width property you will notice that it won't be in the center of the page.
+Para obter a centralização de um recipiente, temos que definir a sua largura. Se você remover a propriedade de largura vai perceber que o recipiente não estará centralizado na página.
 
-We have also used another type of _shorthand_ to define the margin. The long version looks like this
+Nós também temos que usar outro tipo de _abreviação_ para definir a margem. A versão longa se parece com isso
 
 ```css
 margin-top: 0;
@@ -278,14 +277,14 @@ margin-right: auto;
 margin-left: auto;
 ```
 
-**auto** adjusts the left and right margins. If you try making the window of your browser smaller, you can see that the left and right sides adjust automatically, so that **main** remains in the middle of the page.
+**auto** ajusta as margens esquerda e direita. Se você tentar diminuir a janela de seu navegador, pode ver que os lados esquerdo e direito se ajustam automaticamente e o **main** continua no meio da página.
 
-**padding** is the area around an element but within its border.
+**padding** (enchimento) é a área em volta do elemento, mas dentro da border.
 
->  Don't confuse padding with margin, have a look using an inspector to see how the padding and margin of an element differ.
+>  Não confunda padding (enchimento) com margin (margem), faça um teste para ver como padding e margin de um elemento se diferem.
 
 
-### Floating elements
+### Elementos flutuantes
 
 ```css
 .right-box {
@@ -293,9 +292,9 @@ margin-left: auto;
 }
 ```
 
-### Using empty elements for styling
+### Usando elementos vazios para criar o estilo
 
-Sometimes to make the design of our page look nicer, we might add empty elements. Like `<div id="top-line"></div>`
+Algumas vezes, para fazer com que o design de uma página pareça melhor, precisamos adicionar elementos vazios. Como `<div id="top-line"></div>`
 
 ```css
 #top-line {
@@ -307,7 +306,7 @@ Sometimes to make the design of our page look nicer, we might add empty elements
 }
 ```
 
-Let's also style the bottom of our page in a similar way
+Vamos criar também um estilo na parte inferior de nossa página de uma forma muito parecida.
 
 ```css
 #bottom-line {
@@ -318,9 +317,9 @@ Let's also style the bottom of our page in a similar way
 }
 ```
 
-### Restyling through element selectors
+### Reestilização por elementos seletores
 
-When we want to ensure that an element's appearance changes consistently through our pages, it's better to use element selectors. That way we can make sure that we don't need to redefine the style and that it applies to all elements of that type.
+Quando queremos assegurar que a aparência de um elemento mude consistentemente nas nossas páginas, é melhor utilizar elementos seletores. Dessa forma podemos ter certeza que não precisaremos redefinir o estilo e que isso se aplicará a todos os elementos daquele tipo.
 
 ```css
 h1 {
@@ -369,11 +368,11 @@ ol li {
 }
 ```
 
-**font-weight** thickness of displayed text
+**font-weight** (peso da fonte) espessura do texto apresentado
 
-**text-align** horizontal alignment of a text element
+**text-align** (alinhamento de texto) alinhamento horizontal de um elemento de texto
 
-### A bit more styling
+### Um pouco mais de estilo
 
 ```css
 #the-quote{
@@ -399,7 +398,7 @@ ol li {
 
 ```
 
-### More cascading selectors
+### Mais seletores de cascata
 
 ```css
 .pictures li img {
@@ -413,7 +412,7 @@ ol li {
 }
 ```
 
-### Some extra touches
+### Alguns toques extras
 
 ```css
 .bigimg{
@@ -421,13 +420,13 @@ ol li {
 }
 ```
 
-## Advanced and bonus material
+## Material extra e avançado
 
-### Pseudo classes
+### Pseudo-classes
 
-A psedo class is a keyword added to a selector that specifies a special state of the element to be selected. [These](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) are the standard pseudo classes.
+Uma pseudo-classe é uma palavra-chave adicionada a um seletor que descreve um estado específico de um elemento a ser selecionado. [Estas](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) são as pseudo-classes padrões.
 
-Let's add the code below to make sure we only apply a margin to the _first li element_ within the pictures class.
+Vamos adicionar o código abaixo para ter certeza que aplicaremos a margin somente para o _primeiro elemento li_ dentro da classe de imagens.
 
 ```css
 .pictures li:first-child {
@@ -435,14 +434,14 @@ Let's add the code below to make sure we only apply a margin to the _first li el
 }
 ```
 
-> What happens when you remove _:first-child_ from your selector?
+> O que acontece quando você retira _:first-child_ do seu seletor?
 
 
-### Bonus - Resetting styles
+### Bônus - Reiniciando estilos
 
-You've probably noticed that pages look quite different when loading them in different browsers. To try and avoid these browser inconsistencies a common technique is **CSS resetting**
+Você provavelmente notou que as páginas parecem bem diferentes quando carregadas em navegadores diferentes. Para experimentar e evitar estas inconsistências de navegadores, uma técnica comum é **Reiniciar CSS**
 
-Let's apply this to the elements used within our page
+Vamos aplicar isso ao elemento usado em nossa página
 
 ```css
 html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
@@ -456,4 +455,4 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
 
 -----
 
-This ends our second lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+Terminamos a nossa segunda aula. Tem alguma coisa que você não entendeu? Tente novamente e utilize os recursos fornecidos junto com o seu tutor. Se você tem algum feedback ou idéias que possam melhorar o nosso tutorial, nos [mande um email](mailto:feedback@codebar.io).
