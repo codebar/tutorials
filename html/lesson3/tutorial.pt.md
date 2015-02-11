@@ -1,48 +1,48 @@
 ---
 layout: page
-title: HTML Lesson 3
+title: HTML Aula 3
 footer: true
 ---
 
-##  HTML AND CSS - Beyond the basics
+##  HTML E CSS - Além do básico
 
-### Recap
+### Recapitulando
 
-In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets. **HTML** defines the _structure_ of a website and **CSS** the _presentation_.
+Nas últimas duas aulas nós falamos de **HTML** (linguagem de marcação de hipertexto) e **CSS** (folha de estilo em cascata). O **HTML** define a _estrutura_ de um site, e o **CSS**, a _apresentação_.
 
-### Today we will be building a styled website from scratch
+### Hoje nós vamos construir um site do zero.
 
-The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
+A página que vamos construir vai parecer com esta [página de exemplo](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
 
-We will also be explaining in more detail elements that we mentioned in our previous lesson.
+Nós também vamos explicar em maiores detalhes elementos que mencionamos nas aulas anteriores.
 
-## But before we start...
+## Mas antes de começar...
 
-### Required files
+### Arquivos necessários
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7328342/download)
+Baixe os arquivos necessários para começar os trabalhos deste tutorial [aqui](https://gist.github.com/despo/7328342/download)
 
-### Development Tools - Inspectors
+### Ferramentas de Desenvolvimento - Inspetor Web
 
-Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
+Inspetores são ferramentas de desenvolvimento que te ajudam a ver, editar e depurar o CSS, HTML e JavaScript.
 
-A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a built in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
+Um inspetor bem popular é o [firebug](http://getfirebug.com/), funciona bem no Firefox. O Chrome tem um inspetor incorporado, mas sugerimos que você use o firebug, já que ele é um programa muito mais fácil para usar e mudar diversas propriedades.
 
 ![](assets/images/firebug.png)
 
->  Ask your coach to show you how to edit the styling on our example page using firebug
+>  Peça para seu tutor te mostrar como editar estilos na nossa página de exemplo usando o firebug.
 
-## Getting started
+## Início
 
-Let's begin from the head of our page and set the title as we learned in the first lesson.
+Vamos começar com o head da nossa página e colocar o title da forma que aprendemos na primeira aula.
 
 ```html
 <title>Ada Lovelace</title>
 ```
 
-### Structuring content
+### Estruturando conteúdo
 
-We will separate our page into three different areas. The **header** will be at the top of our page showing our title and picture. The **container** is where we will specify the main content. And the **footer**.
+Vamos separar nossa página em três áreas diferentes. O **header** (cabeçalho) estará no topo de nossa página mostrando nosso título e imagem. O **container** (recipiente) é onde vamos especificar o conteúdo principal. E o **footer** (rodapé).
 
 ```html
 <header>
@@ -56,40 +56,40 @@ We will separate our page into three different areas. The **header** will be at 
 </footer>
 ```
 
-> Did you remember to insert these tags within the `<body>` tags of your page?
+> Você lembrou de inserir estas tags dentro da `<body>` tag da sua página?
 
-> Inspect the page. Can you see the title and the elements we just added?
+> Confira a página. Você consegue ver o título e os elementos que acabamos de adicionar?
 
-## Inline vs block elements
+## Nível dos elementos: inline versus bloco
 
-In CSS there are different ways to [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display "display CSS") elements. The most common ones are: _block_, and _inline_
+No CSS existem formas diferentes de [introduzir](https://developer.mozilla.org/en-US/docs/Web/CSS/display "display CSS") os elementos. As formas mais comuns são: _block_ e _inline_.
 
-### block elements
+### elementos block (bloco)
 
-Elements appear on a new line
+Os elementos aparecem em uma nova linha
 
 ![](assets/images/span-block.png)
 
-Some block elements are `<div>, <p>, <h1>, <ul>, <li>`. Most elements are block elements.
+Alguns elementos de bloco são `<div>, <p>, <h1>, <ul>, <li>`. A maior parte dos elementos são de bloco.
 
-### inline elements
+### elementos inline
 
-Elements appear on the same line
+Os elementos aparecem na mesma linha.
 
 ![](assets/images/span-inline.png)
 
-Some inline elements are `<img>, <a>, <em>, <strong>, <span>`
+Alguns elementos inline são `<img>, <a>, <em>, <strong>, <span>`
 
-#### To tweak elements and turn them from block, to inline, or the other way around you can use the `display` CSS property with `inline` or `block`
+#### Para trocar os elementos e transformá-los de block para inline, ou vice-versa, você pode usar a propriedade de `display` (exibição) do CSS com `inline` ou `block`
 
 
-## Setting up the `<header>` content
+## Estabelecendo o conteúdo do `<header>`
 
-### Structure
+### Estrutura
 
-We will develop the page from the top down. You can always come back and tweak things later if you want to.
+Nós vamos desenvolver a página de cima para baixo. Você sempre pode voltar depois e trocar as coisas, caso queira.
 
-Add an image wrapped in a `<div>` element
+Adicione uma imagem envolvida por um elemento `<div>`
 
 ```html
 <div>
@@ -97,21 +97,21 @@ Add an image wrapped in a `<div>` element
 </div>
 ```
 
-Add the heading `<h1>`, underneath the `<div>` wrapping the image, within the `<header>` element
+Adicione o heading `<h1>`, abaixo do `<div>` que envolve a imagem, dentro do elemento `<header>`
 
 ```html
 <div>
-  <h1>Hi, I'm Ada Lovelace</h1>
+  <h1>Oi, eu sou a Ada Lovelace</h1>
 </div>
 ```
 
-> Load the page. Have a look at how the elements are rendered using the inspector
+> Carregue a página. Dẽ uma olhada em como os elementos estão apresentados usando o inspetor.
 
-### Presentation
+### Apresentação
 
-Let's use what we just learned and make the image an inline element.
+Vamos usar o que acabamos de aprender e tornar a imagem um elemento inline.
 
-Before you can manipulate the `<div>` surrounding the image, you must be able to access it from the stylesheet. Set a class names `my-picture` on that element.
+Antes de manipular o `<div>` que está ao redor da imagem, você deve ter condições de acessá-lo da folha de estilo. Coloque o nome `my-picture` na classe daquele elemento.
 
 ```html
 <div class="my-picture">
@@ -119,7 +119,7 @@ Before you can manipulate the `<div>` surrounding the image, you must be able to
 </div>
 ```
 
-Add the relevant style in your `style.css`
+Adicione o estilo relevante no seu `style.css`
 
 ```css
 .my-picture {
@@ -127,18 +127,18 @@ Add the relevant style in your `style.css`
 }
 ```
 
-> Have a look at the page. Inspect the image, and have a look at its CSS properties
+> Dê uma olhada na página. Confira a imagem e olhe as suas propriedades CSS.
 
-####Making this work
+####Fazendo funcionar
 
-Make the `div` element surrounding the heading inline. Start by adding a class `title` to it
+Faça com que o elemento `div` envolva o heading inline. Comece adicionando a classe `title` a ele.
 
 ```html
 <div class="title">
- <h1>Hi, I'm Ada Lovelace</h1>
+ <h1>Oi, eu sou a Ada Lovelace</h1>
 </div>
 ```
-and then the relevant CSS
+e então o CSS apropriado
 
 ```css
 .title {
@@ -146,17 +146,17 @@ and then the relevant CSS
 }
 ```
 
-`inline-block` is another display attribute. You must use `inline-block` rather than `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h1>`, that takes over and expands across the end of the line.
+`inline-block` é um outro atributo de exibição. Você deve usar o `inline-block` muito mais que o `inline` para fazer o elemento aparecer inline porque o `div` com a classe `title` contém elemento de bloco, o `<h1>`, que toma conta e se expande até o final da linha.
 
-> Using firebug, change `inline-block` to `inline` and notice how they render
+> Usando o firebug, troque o `inline-block` para `inline` e note como aparece na tela.
 
-Adjust the alignment of the `.title`
+Ajuste o alinhamento do `.title`
 
 ```css
 vertical-align: top;
 ```
 
-and make the picture a bit smaller
+e torne a imagem um pouco menor
 
 ```css
 .my-picture img {
@@ -164,27 +164,27 @@ and make the picture a bit smaller
 }
 ```
 
-##Box model
+##Caixa modelo (box model)
 
-### What is the box model?
+### O que é uma caixa modelo?
 
-An element can be visualised as a box. The box model is a way of describing the stacking of spatial properties of an element, those which effect it's size &amp; spacing on the page. These are: `padding`, `margin`, `border` as well as `height` and `width`.
+Um elemento pode ser visualizado como uma caixa. A caixa modelo é uma forma de descrever o amontoado de propriedades espaciais de um elemento, aqueles cujos efeitos são tamanho e espaçamento da página. Estes são: `padding` (enchimento), `margin` (margem), `border` (borda), assim como `height` (altura) e `width` (largura).
 
-**<span style="color: rgb(130,171,182);">blue</span>** represents the values for `height` and `width`. Typically these values are set implicitly based on the content.
+**<span style="color: rgb(130,171,182);">azul</span>** representa os valores para `height` e `width`. Normalmente estes valores são definidos implicitamente, baseados no conteúdo.
 
-**<span style="color: rgb(185,197,124);">green</span>** represents the `padding` &mdash; the space inside the `border`. `padding` adds to the total size of the box. So setting `padding-left: 10px;` and `width: 20px;` would make the element **30px** wide on the page.
+**<span style="color: rgb(185,197,124);">verde</span>** representa o `padding` &mdash; o espaço dentro da `border`. `Padding` contribui para o tamanho total da caixa. Então, se definimos `padding-left: 10px;` e `width: 20px;`, isso aplia o elemento em **30px** na página.
 
-**<span style="color: rgb(244,211,139);">yellow</span>** is the `border` &mdash; the edge around the content and `padding`. It can be styled in various ways and represents the outer most visible part of an element.
+**<span style="color: rgb(244,211,139);">amarelo</span>** é a `border` &mdash; o limite em volta do conteúdo e do `padding`. Pode aplicar o estilo de diversas formas e representa a parte externa mais visível em um elemento.
 
-**<span style="color: rgb(239,195,144);">orange</span>** is the `margin` &mdash; the spacing outside the border. This separates the element from other elements on the page.
+**<span style="color: rgb(239,195,144);">laranja</span>** é a `margin` &mdash; o espaço fora da borda. Isto separa o elemento de outros elementos na página.
 
-Note: `padding`, `margin` and `border` can be applied to any combination of sides, below all three are applied in equal measure to all four sides around the content.
+Nota: `padding`, `margin` e `border` podem ser aplicados a qualquer combinação de lados. Abaixo todos os três foram aplicados na mesma medida para os quatro lados em volta do conteúdo.
 
 ![](assets/images/box-model.png)
 
-### Styling the header
+### Formando o estilo do header
 
-The page is gradually starting to come together. Make `<header>` a bit more distinct by setting a background color and aligning its contents in its center.
+A página está se formando gradativamente. Diferencie o `<header>` um pouco mais colocando uma cor de fundo e centralizando o conteúdo.
 
 ```css
 header {
@@ -193,9 +193,9 @@ header {
 }
 ```
 
-### Applying box properties to header
+### Aplicando as propriedades de caixa no header
 
-Expand the styling of the header so that it has a border and tweak the height and padding
+Amplie o estilo do header para que tenha uma border e altere o height e padding
 
 ```css
 border-bottom: 1px solid #e7e6e6;
@@ -203,22 +203,22 @@ padding-top: 14px;
 height: 70px;
 ```
 
-> Do you remember the border properties description from our previous lesson?
+> Você lembra da descrição sobre as propriedades de border da nossa última aula?
 
 
-> Tweak the width of the border and refresh your page
+> Altere o width da border e atualize a página
 
 _border: `thickness` `style` `color`;_
 
-## Setting up the sidebar
+## Criando a barra lateral
 
-Along with `width` and `height`, `min-width`, `max-width`, `min-height`, and `max-height` can be set. These properties tend to be used to ensure that when the page is resized, the browser won't allow for it to be smaller or bigger than the specified property value.
+Junto com o `width` e `height`, o `min-width` (largura mínima), `max-width` (largura máxima), `min-height` (altura mínima) e `max-height` (altura máxima) podem ser estabelecidas. Estas propriedades tendem a ser usadas para assegurar que, quando a página é redimensionada, o navegador não permita que essa alteração seja menor ou maior do que os valores especificados na propriedade.
 
-Let's add some content! Add the following inside the `div` in the html file
+Vamos adicionar conteúdo! Adicione o seguinte dentro do `div` no arquivo html.
 
 ```html
 <div>
-  <strong>Me on the internet</strong>
+  <strong>Eu na internet</strong>
   <ul>
    <li><a href="https://www.facebook.com/augusta.ada.lovelace">facebook</a> </li>
    <li><a href="http://en.wikipedia.org/wiki/Ada_Lovelace">wikipedia</a> </li>
@@ -226,17 +226,17 @@ Let's add some content! Add the following inside the `div` in the html file
 </div>
 ```
 
-### Styling
+### Criando estilo
 
-Add a class `sidebar` to the div we just defined. This is so that we can change its styling without impacting other elements.
+Adicione uma classe `sidebar` (barra lateral) ao div que acabamos de definir. Isto é para que possamos mudar o estilo sem impactar outros elementos.
 
 ```html
 <div class="sidebar">
-  <b>Me on the internet</b>
+  <b>Eu na internet</b>
   ...
 ```
 
-Begin by adding a background color so we can clearly see the container
+Comece adicionando uma cor de fundo para que nós possamos ver claramente o recipiente.
 
 ```css
 .sidebar {
@@ -244,7 +244,7 @@ Begin by adding a background color so we can clearly see the container
 }
 ```
 
-Restrict the width of the sidebar
+Restrinja o width do sidebar
 
 ```css
 width: 30%;
@@ -252,7 +252,7 @@ min-width: 300px;
 max-width: 320px;
 ```
 
-Make it an inline-block and set some of its box properties
+Transforme isto num inline-block e estabeleça algumas das propriedades de caixa.
 
 ```css
 display: inline-block;
@@ -262,31 +262,31 @@ margin-top: 55px;
 margin-left: 20px;
 ```
 
-###padding and margin
-Padding and margin can be set in a number of different ways
+###padding e margin
+Padding e margin podem ser estabelecidos de diversas formas
 
-`padding: top right bottom left;` e.g. _padding: 10px 20px 30px 5px;_
+`padding: top right bottom left;` exemplo: _padding: 10px 20px 30px 5px;_
 
-`padding: top right/left bottom;` e.g. _padding: 10px 20px 5px;_
+`padding: top right/left bottom;` exemplo: _padding: 10px 20px 5px;_
 
-`padding: top/bottom right/left;` e.g. _padding: 5px 15px;_
+`padding: top/bottom right/left;` exemplo: _padding: 5px 15px;_
 
-`padding: all;` e.g. _padding: 20px_
+`padding: all;` exemplo: _padding: 20px_
 
-Alternatively, you can only set the side you want `padding-right: 20px`
+Como alternativa, você só pode estabelecer o lado que você quer `padding-right: 20px`
 
-_this also applies to the margin_
+_isso também se aplica para margin_
 
-###more styling...
+###mais criação de estilo...
 
-Specify a class `.social-media` in the `ul` element
+Especifique uma classe `.social-media` no elemento `ul`
 
 ```html
 <ul class="social-media">
   <li><a href="https://www.facebook.com/augusta.ada.lovelace">facebook</a> </li>
 ```
 
-Remove the list bullets and change the default margin and padding of the **u**nordered **l**ist
+Remova os tópicos e mude a margin e o padding padrão da ul (**u**nordered **l**ist)
 
 ```css
 ul.social-media {
@@ -296,7 +296,7 @@ ul.social-media {
 }
 ```
 
-Add a bottom border, to give the effect of a line, to the individual list items and tweak its dimensions
+Adicione a border-bottom, para dar um efeito de linha, para os itens individuais da lista e altere suas dimensões
 
 ```
 .social-media li {
@@ -306,12 +306,12 @@ Add a bottom border, to give the effect of a line, to the individual list items 
 }
 ```
 
-> Tweak the properties using the inspector
-> What happens when you remove the width or increase the padding?
+> Altere as propriedades usando o inspetor
+> O que acontece quando você remove a width ou aumenta o padding?
 
-## Pseudo classes
+## Pseudo-classes
 
-A pseudo class is a keyword added to selectors that specifies a special state. Using pseudo classes we can specify different styling for different states of a link:
+Uma pseudo-classe é uma palavra chave adicionada aos seletores que especifica uma condição. Usando as pseudo-classes, podemos identificar estilos diferentes para diferentes situações de um link:
 
 ```css
 a:link
@@ -320,17 +320,14 @@ a:hover
 a:active
 ```
 
-Order is **very** important. Always use the order described above if you want to apply different styling for all of the states.
-The most commonly used pseudo class for links is `a:hover`. That is what we will use today.
+Ordem é **muito** importante. Sempre use a ordem descrita acima se você quer aplicar estilos diferentes para todas as situações.
+A pseudo-classe mais usada geralmente para links é `a:hover`. É o que vamos usar hoje.
 
-We talk about *pseudo* classes, because in contrast to the classes we address by
-putting a dot in front of them, the *pseudo* classes have no actual
-correspondent in the HTML. Instead, they refer to a certain state of the element
-that is not expressed through the markup.
+Falamos sobre *pseudo*-classes porque, diferentemente das classes que são direcionadas quando colocamos um ponto na frente delas, as *pseudo*-classes não tem nenhum correspondente verdadeiro no HTML. Ao invés disso, elas se referem a certas situações do elemento que não são expressas pelos sinais.
 
-## Styling links
+## Criando estilo nos links
 
-We only want links that are within the list to be affected. So we will specifically style `.social-media li a`
+Nós queremos que somente os links dentro da lista sejam afetados. Então vamos agir somente no `.social-media li a`
 
 ```css
 .social-media li a {
@@ -342,11 +339,11 @@ We only want links that are within the list to be affected. So we will specifica
 }
 ```
 
-### Styling link on :hover state
+### Criando estilos de link no :hover state
 
-We only want to change the border color when hovering over the link. To avoid repeating ourselves an easy way to do that is by being more specific and using `border-left-color`. Since we have no other borders, we could also use `border-color`
+Nós queremos mudar a cor da border quando o cursor ficar em cima do link. Para evitar repetições, uma forma fácil para fazer isso é ser mais específico e usar `border-left-color`. Visto que não temos nenhuma outra border, podemos também usar `border-color`
 
-**Remember to have a look [at the list of all CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference) (mentioned in the previous tutorial) when working on styling. The properties are too many to remember!**
+**Lembre-se de olhar [a lista de todas as propriedades CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference) (mencionada na aula anterior) quando trabalhando com estilos. São muitas propriedades para lembrar!**
 
 ```css
 .social-media li a:hover {
@@ -354,9 +351,9 @@ We only want to change the border color when hovering over the link. To avoid re
 }
 ```
 
-## Almost there..
+## Quase lá...
 
-The sidebar is now almost perfect. Tweak a couple of other properties so that the list description is aligned with the other elements and emphasized
+A sidebar está quase perfeita. Altere algumas propriedades para que a lista de tarefas esteja alinhada com os outros elementos e destacada.
 
 ```css
 .sidebar b {
@@ -366,25 +363,24 @@ The sidebar is now almost perfect. Tweak a couple of other properties so that th
 }
 ```
 
-## Before we continue, some other nice to know box properties...
+## Antes de continuar, algumas propriedades de caixa legais de conhecer...
 
-Add these to the `.sidebar` CSS
+Adicione isso ao `.sidebar` do CSS
 
 ```css
 border-radius: 6px;
 box-shadow: 0 1px 1px 1px rgba(237, 235, 232, 0.4);
 ```
-**border-radius** creates rounded corners
+**border-radius** (raio da borda) cria cantos arredondados
 
-**box-shadow** creates a drop shadow effect allowing us to specify color, size, blur and offset
+**box-shadow** (sombra de caixa) cria um efeito sombreado, permitindo que se determine cor, tamanho, distorção e desvio.
 
 
-## Setting up the main container
+## Estabelecendo o recipiente principal
 
-You've done a great job so far! The sidebar is done and you know about box properties.
-Time to add some content to the page.
+Até agora você fez um excelente trabalho! A barra lateral está pronta e você sabe sobre propriedades de caixa. Hora de adicionar conteúdo à página.
 
-Add a div, with the class main after `.sidebar`
+Adicione um div, com a classe main depois de `.sidebar`
 
 ```html
 <div class="main">
@@ -392,19 +388,19 @@ Add a div, with the class main after `.sidebar`
 </div>
 ```
 
-Here, we will define the text we want to display about **Ada Lovelace**, using paragraphs to make the content easier to read.
+Aqui, vamos definir o texto que queremos mostrar sobre **Ada Lovelace**, usando parágrafos para deixar o conteúdo mais fácil para leitura.
 
-### First, a little bit about her
+### Primeiro, um pouquinho sobre ela
 
 ```html
-<p>My name is August Ada King. I'm the Countess of Lovelace.</p>
+<p>Meu nome é August Ada King. Sou a condessa de Lovelace.</p>
 
-<p>I am a mathematician and a writer. People know me from my work on Charles Babbage's early mechanical general-purpose computer, the Analytical engine. I wrote the first algorithm intended to be processed by a machine. In other words, I am the world's first programmer.</p>
+<p>Sou matemática e escritora. As pessoas me conhecem pelo meu trabalho em um computador mecânico para uso geral, a chamada Máquina Analítica, de Charles Babbage. Eu escrevi o primeiro algorítmo para ser processado em uma máquina. Em outras palavras, sou a primeira programadora do mundo.</p>
 
-<p>My mother, Anne Isabella Byron, was a great help to me as she helped me by promoting my interest in mathematics and logic, but I also never forgot about my dad, who moved to Greece when I was just an infant to help out in the civil war.</p>
+<p>Minha mãe, Anne Isabella Byron, me apoiou muito, já que foi ela quem incentivou meu interesse em matemática e lógica, mas nunca me esquecerei do meu pai, que mudou para Grécia quando eu era um bebê para lutar na guerra civil.</p>
 ```
 
-Now that the content is there, we can see that again, we need to tweak the element to display as an inline block and set its width to make sure it appears next to the sidebar.
+Agora que o conteúdo está lá, podemos revê-lo e alterar o elemento para aparecer como inline block e estabelecer o width para ter certeza de que vai aparecer ao lado da sidebar.
 
 ```css
 .main {
@@ -413,10 +409,10 @@ Now that the content is there, we can see that again, we need to tweak the eleme
 }
 ```
 
-> Are the sidebar and container displayed next to each other? What happens when you tweak the width?
+> O sidebar e o recipiente estão aparecendo um ao lado do outro? O que acontece quando você altera a width?
 
 
-Add a bit more space around the main container and set the vertical alignment.
+Adicione um pouco mais de espaço em volta do recipiente principal e estabeleça o alinhamento vertical.
 
 ```css
 margin-left: 70px;
@@ -424,23 +420,23 @@ padding-top: 60px;
 vertical-align: top;
 ```
 
-> Try removing `vertical-align`. What happens?
+> Tente remover o `vertical-align`. O que acontece?
 
-### Now, focus on the content
+### Agora, concentre-se no conteúdo
 
-Add a link so that anyone coming to the page can easily find out more about Charles Babbage. In the second paragraph, wrap his name in a link as shown below.
+Adicione um link para que qualquer pessoa que visite a página possa facilmente descobrir mais sobre Charles Babbage. No segundo parágrafo, coloque o nome dele com o link mostrado abaixo.
 
 ```html
 <a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage's </a>
 ```
 
-Ada was the world's first programmer. We want that content to stand out. Add a span around and specify a class `highlight`, so the intention is obvious and other people working on the code of the page can easily understand it.
+A Ada foi a primeira programadora do mundo. Nós queremos que esta informação esteja em destaque. Adicione um espaço em volta e especifique a classe como `highlight`, assim a intenção é óbvia e as outras pessoas trabalhando nos códigos da página podem entender isso facilmente.
 
 ```html
-<span class="highlight">I am the world's first programmer</span>
+<span class="highlight">Eu sou a primeira programadora do mundo</span>
 ```
 
-Set the style for the highlight class
+Especifique o estilo para a classe highlight
 
 ```css
 .highlight {
@@ -448,21 +444,21 @@ Set the style for the highlight class
 }
 ```
 
-### More content
+### Mais conteúdo
 
 ```html
-<blockquote>&ldquo;I do not believe that my father was such a poet as I shall be an Analyst; for with me the two go together indissolubly.&rdquo;</blockquote>
+<blockquote>&ldquo;Eu não acredito que meu pai era um poeta tão importante como eu serei uma Analista; para mim, os dois são indissociáveis.&rdquo;</blockquote>
 
-<p>Throughout my life, mathematics have been my primary interest. I always question even basic assumptions by integrating poetry, another great love of mine, and science. I also have a keen interest in scientific developments and trends of my era like phrenology and mesmerism.</p>
+<p>Durante a minha vida, matemática sempre foi meu interesse principal. Eu sempre questionei, inclusive premissas básicas, integrando poesias, outro grande amor na minha vida, e ciências. Também tenho um interesse especial em desenvolvimento científico e evoluções da minha época, como frenologia e magnetismo.</p>
 ```
 
-Being the first paragraph a quote, so we can use `<blockquote>`, as it's more appropriate than a p tag.
+Já que o primeiro parágrafo é uma citação, podemos usar `<blockquote>`, que é mais apropriado que uma p tag (tag de parágrafo).
 
 ```html
-<blockquote>&ldquo;I do not believe....</blockquote>
+<blockquote>&ldquo;Eu não acredito que...</blockquote>
 ```
 
-and then the styling
+e aí criar o estilo
 
 ```css
 blockquote {
@@ -476,25 +472,25 @@ blockquote {
 }
 ```
 
-> Tweak the properties. Explain to your coach what each property does.
+> Altere as propriedades. Explique ao seu tutor o que essa propriedade faz.
 
-A poem about Ada
+Um poema sobre a Ada
 
 ```html
 <p>
- Charles Babbage wrote the following poem about me
+ Charles Babbage escreveu o seguinte poema sobre mim
  <br/>
  <span>
-   Forget this world and all its troubles and if<br/>
-   possible its multitudinous Charlatans-every thing<br/>
-   in short but the Enchantress of Numbers.
+   Esqueça este mundo e todos os seus problemas<br/>
+   e, se possível, seu excesso de Charlatões - <br/>
+   tudo, em resumo, menos a Encantadora de Números.
  </span>
 </p>
 ```
 
-> Why do we need a line break (`<br/>`) before the span? What happens when we remove the line break?
+> Porque precisamos de uma quebra de linha (`<br/>`) antes do espaço? O que acontece quando removemos a quebra de linha?
 
-Make the poem look different than the rest of the text. Add a CSS class `poem` to the span element and add styling
+Faça o poema aparecer diferente do resto do texto. Adicione uma classe CSS chamada `poem` para dar ênfase no elemento e adicione estilo
 
 ```css
 .poem {
@@ -503,11 +499,11 @@ Make the poem look different than the rest of the text. Add a CSS class `poem` t
 }
 ```
 
-### Some more information about Ada
+### Mais algumas informações sobre a Ada
 ```html
-<p>The computer language <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)">Ada</a>, was named after me. The Defense Military standard for the language, MIL-STD-1815 was also given the year of my birth.</p>
+<p>A linguagem de computação <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)">Ada</a>, foi nomeada em minha homenagem. O padrão da Defesa Militar para a linguagem, o MIL-STD-1815 também tem seu nome em minha homenagem, com o ano do meu nascimento.</p>
 
-<p>These days, the British Computer Society runs an annual competitions for women students of computer science in my name. Also, the annual conference for women undergraduates is named after me. Google also dedicated its <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">Google doodle</a> to me, on the 197th anniversary of my birth. </p>
+<p>Hoje em dia, a Sociedade Britânica de Computação tem competições anuais para mulheres estudantes de Ciência da Computação com o meu nome. A conferência anual para as mulheres graduadas também foi nomeada em minha homenagem. O Google também dedicou o <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">Google doodle</a> a mim, no meu 197º aniversário. </p>
 
 <p>
  <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">
@@ -516,9 +512,9 @@ Make the poem look different than the rest of the text. Add a CSS class `poem` t
 </p>
 ```
 
-That looks great but we can tweak the position of the doodle so its aligned in the middle and there is a bit more space between it and the page.
+A aparência está ótima, mas podemos alterar a posição do doodle para que esteja alinhado no meio e para que tenha um pouco mais de espaço entre ele e a página.
 
-Add the class `google-doodle` in the last paragraph and set its styling.
+Adicione a classe `google-doodle` no último parágrafo e estabeleça seu estilo.
 
 ```css
 .google-doodle {
@@ -528,9 +524,9 @@ Add the class `google-doodle` in the last paragraph and set its styling.
 }
 ```
 
-### Styling links
+### Criando estilo dos links
 
-Previously, we specified the styling for link elements included within the sidebar. Now we can set a default link style that will be applied to all remaining elements.
+Anteriormente, nós especificamos o estilo para os elementos de link que estavam dentro da barra lateral. Agora nós vamos estabelecer um estilo de link padrão para ser aplicado a todos os elementos restantes.
 
 ```css
 a {
@@ -542,16 +538,16 @@ a:hover {
 }
 ```
 
-## Setting up the footer
-To complete our page, we will be adding some content and styling the footer
+## Definindo o footer
+Para completar nossa página, vamos adicionar conteúdos e criar o estilo do footer
 
-Within the footer, add an attribution to yourself and link to your twitter, Facebook or any other place you want to.
+Dentro do footer, adicione uma atribuição a você e um link para seu twitter, Facebook ou qualquer outro local que você queira.
 
 ```html
-<p>Made by <a href="...">[your name]</a></p>
+<p>Feito por <a href="...">[seu nome]</a></p>
 ```
 
-and add the final styling touches for the footer elements
+e adicione os toques finais de estilo para os elementos do footer
 
 ```css
 footer {
@@ -573,14 +569,14 @@ footer a {
 }
 ```
 
-> Do you have any questions?
+> Você tem alguma dúvida?
 
-### Bonus - Inspector
+### Bônus - Inspetor
 
-Have a look at the [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace"). The heading and body of the page have some differences from the page we just created.
+Dê uma olhada na [página de exemplo](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace"). O heading e body da página tem algumas diferenças da página que acabamos de criar.
 
-Use the inspector to have a look at `<body>` and `<h1>` and apply these changes to your page.
+Use o inspetor para olhar o `<body>` e `<h1>` e aplique estas mudanças à sua página.
 
 -----
 
-This ends our third lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+Assim termina nossa terceira aula. Tem alguma coisa que você não entendeu? Tente novamente e examine os recursos oferecidos junto com o seu tutor. Se você tem algum feedback ou alguma idéia de melhorar esta aula, [mande um email prá gente](mailto:feedback@codebar.io).
