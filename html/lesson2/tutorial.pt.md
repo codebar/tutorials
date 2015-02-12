@@ -24,7 +24,7 @@ _O **CSS** funciona em conjunto com o **HTML**_
 
 ### Hoje vamos concentrar nos conceitos fundamentais do CSS
 
-Nós vamos criar a aparência [desta página](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) para que fique igual [a este exemplo](http://codebar.github.io/tutorials/html/lesson2/example.html).
+Nós vamos criar a aparência [desta página](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) para que fique igual [a este exemplo](example.pt.html).
 
 ## Mas antes de começar...
 

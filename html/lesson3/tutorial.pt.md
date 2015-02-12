@@ -12,7 +12,7 @@ Nas últimas duas aulas nós falamos de **HTML** (linguagem de marcação de hip
 
 ### Hoje nós vamos construir um site do zero.
 
-A página que vamos construir vai parecer com esta [página de exemplo](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
+A página que vamos construir vai parecer com esta [página de exemplo](example.pt.html "Ada Lovelace").
 
 Nós também vamos explicar em maiores detalhes elementos que mencionamos nas aulas anteriores.
 
@@ -573,7 +573,7 @@ footer a {
 
 ### Bônus - Inspetor
 
-Dê uma olhada na [página de exemplo](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace"). O heading e body da página tem algumas diferenças da página que acabamos de criar.
+Dê uma olhada na [página de exemplo](example.pt.html "Ada Lovelace"). O heading e body da página tem algumas diferenças da página que acabamos de criar.
 
 Use o inspetor para olhar o `<body>` e `<h1>` e aplique estas mudanças à sua página.
 
