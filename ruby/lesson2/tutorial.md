@@ -128,7 +128,7 @@ To get the number of seconds that it takes to run the game we can store the time
 First create and assign the time to a variable `start`. Then, subtract `Time.now - start` and output that.
 
 ```ruby
-puts "Total time #{duration} seconds
+puts "Total time #{duration} seconds"
 ```
 
 > You can also calculate the average time it take to respond to each problem by dividing the duration with the amount of attempts.
