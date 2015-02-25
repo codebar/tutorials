@@ -221,6 +221,8 @@ When we click on the Pending label, we want to set items to complete. We will do
 
 > Use `$(this)` to access the element that the event was triggered from.
 
+Try this in the console:
+
 First of all, bind a **click** event to the span we've added using its class with the `on()` function. As `<li>` is the parent node of the <span> element, we can access it using `parent()` (which is equivalent to `parentNode`
 that we've used in the previous lesson).
 
