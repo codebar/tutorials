@@ -100,7 +100,7 @@ In the above case, a number is being added to a string. JavaScript turns the num
 Now let's output the current year, and auto-calculate the value of the next year using **addition**
 
 ```js
-var year = 2014;
+var year = 2015;
 var nextYear = year + 1;
 
 console.log("We are in " + year + ", but " + nextYear + " is just around the corner!");
@@ -131,7 +131,7 @@ console.log("What kind of variable am I? " + iDontHaveAValue);
 > The general convention in JavaScript is to use `lowerCamelCase` while naming variables.
 
 ### Operations
-The are are a number of operations you can apply, just like when using math.
+There are a number of operations you can apply, just like when using math.
 
 Let's section the output by outputting a title
 
@@ -194,7 +194,7 @@ if (!codebarIsAwesome) {
 }
 ```
 
-> This should  not output anything. Try setting `codebarIsAwesome` to false before running this expression.
+> This should not output anything. Try setting `codebarIsAwesome` to false before running this expression.
 
 > Did you use `var`? Since we have already declared our variable, you shouldn't need to do that.
 
@@ -331,7 +331,7 @@ function popupHello(name) {
 
 Now that you fixed the problem, call the function from you browser's console!
 
-> Don't add the call to the function in your `script.js`(It will get annoying to see it ever time you refresh!)
+> Don't add the call to the function in your `script.js`(It will get annoying to see it every time you refresh!)
 
 ### Multiple arguments
 
@@ -362,7 +362,7 @@ To fix this, we must explicitly use `return` when we want the function to give u
 Change the function to
 
 ```js
-return x+y;
+return x + y;
 ```
 
 > Anything after the return will be ignored. What happens when you add some content before the end of your function but after defining `return`?
@@ -371,7 +371,7 @@ You can fill an argument of a function with a call from another function. It's c
 
 ### Scope
 
-When we declare variable within a function, they are not visible outside it.
+When we declare a variable within a function, they are not visible outside it.
 
 ```js
 function subtractNumbers(x,y) {
