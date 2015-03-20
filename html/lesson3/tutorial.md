@@ -359,7 +359,7 @@ We only want to change the border color when hovering over the link. To avoid re
 The sidebar is now almost perfect. Tweak a couple of other properties so that the list description is aligned with the other elements and emphasized
 
 ```css
-.sidebar b {
+.sidebar strong {
   margin-left: 36px;
   color: #4c4066;
   font-size: 19px;
