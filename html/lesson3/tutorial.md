@@ -20,7 +20,7 @@ We will also be explaining in more detail elements that we mentioned in our prev
 
 ### Required files
 
-Download the files required to begin working through the tutorial from [here](assets/lesson3.zip)
+Download the files required to begin working through the tutorial from from [here](https://gist.github.com/despo/7328342/download) or for Windows users if you are having trouble extracing, you can use this [link](assets/lesson3.zip)
 
 ### Development Tools - Inspectors
 
