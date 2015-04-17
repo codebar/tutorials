@@ -6,4 +6,4 @@ We encourage you to contribute with your suggestions and corrections, head to ou
 
 ## License
 
-Codebar Tutorials is released under the [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
+Codebar Tutorials are released under the [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0/). 
