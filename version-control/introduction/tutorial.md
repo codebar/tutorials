@@ -66,6 +66,8 @@ Some popular project using git:
 
 - Linux
 
+- Python
+
 - Ruby
 
 - PHP

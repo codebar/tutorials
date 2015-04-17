@@ -40,4 +40,6 @@ If you have a Mac you'll have a version of Ruby installed already. A coach can h
 You can [download and run the RubyInstaller program](http://rubyinstaller.org/) to program Ruby on Windows.
 
 
+## Python (optional)
 
+Python would usually set up on your operating system. Your tutor will show you how to run Python code.
