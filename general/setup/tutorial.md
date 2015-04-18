@@ -42,4 +42,4 @@ You can [download and run the RubyInstaller program](http://rubyinstaller.org/) 
 
 ## Python (optional)
 
-Python would usually set up on your operating system. Your tutor will show you how to run Python code.
+Python usually comes with your operating system. Your coach will show you how to use it to run execute Python code.
