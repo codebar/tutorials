@@ -76,7 +76,7 @@ Try them out one by one!
 - **strings** - group of characters, it must always be in quotes
 
 ```js
-var name = "Codebar";
+var name = "codebar";
 
 console.log(name + " is amazing!"); // this is an expression
 ```
@@ -116,7 +116,7 @@ That's great! We can combine strings together and add up numbers.
 var codebarIsAwesome = true;
 var weatherIsAmazing = false;
 
-console.log("Is Codebar AWESOME? " + codebarIsAwesome);
+console.log("Is codebar AWESOME? " + codebarIsAwesome);
 console.log("Is the weather in London amazing? " + weatherIsAmazing);
 ```
 
@@ -180,7 +180,7 @@ Let's try this out.
 
 ```
 if (codebarIsAwesome) {
-  console.log("Codebar is AWESOME!");
+  console.log("codebar is AWESOME!");
 }
 ```
 
@@ -190,7 +190,7 @@ We can also write a condition that checks for the opposite, so, not true
 
 ```js
 if (!codebarIsAwesome) {
-  console.log("Codebar is not so awesome :(!");
+  console.log("codebar is not so awesome :(!");
 }
 ```
 
@@ -314,7 +314,7 @@ If you now run `hello();` you will notice that it says "Hello undefined".
 Ok, so let's call the function with our name.
 
 ```js
-hello("Codebar");
+hello("codebar");
 ```
 
 > Call the function with your name and your coach's name. Do you see the output?
@@ -426,16 +426,16 @@ With help from your coach try and write a program to do the following
   ```
   Hi! My name is _name_.
   A couple of things about me _about you_.
-  I have attended _number of sessions_ Codebar sessions so far!
+  I have attended _number of sessions_ codebar sessions so far!
   ```
 
 - if the number of sessions attended is 0
   ```
-  This is the first time I'm attending Codebar!
+  This is the first time I'm attending codebar!
   ```
 - If the number of sessions attended is more than 0
   ```
-  This is not my first time here. I <3 Codebar!
+  This is not my first time here. I <3 codebar!
   ```
 
 ---
