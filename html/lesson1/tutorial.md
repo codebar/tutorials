@@ -338,10 +338,10 @@ The difference between links and mailto links, is the content defined in the **h
 ```html
 <ul>
   <li>
-     <a href="mailto:social@codebar.io?subject=I love owls :: Codebar">Email us</a>
+     <a href="mailto:social@codebar.io?subject=I love owls :: codebar">Email us</a>
   </li>
   <li>
-     <a href="mailto:?subject=I love owls :: Codebar">Email a friend</a>
+     <a href="mailto:?subject=I love owls :: codebar">Email a friend</a>
   </li>
 </ul>
 ```
