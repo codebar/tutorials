@@ -1,3 +1,8 @@
+---
+layout: page
+title: Introduction to Python
+---
+
 #Introduction to Python
 
 There is a very good introduction article in [Google Developers Guide](https://developers.google.com/edu/python/introduction)
