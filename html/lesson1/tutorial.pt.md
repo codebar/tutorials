@@ -337,10 +337,10 @@ A diferença entre os links e link de envio de email (mailto link) é o conteúd
 ```html
 <ul>
   <li>
-     <a href="mailto:social@codebar.io?subject=Eu amo corujas :: Codebar">Mande um email</a>
+     <a href="mailto:social@codebar.io?subject=Eu amo corujas :: codebar">Mande um email</a>
   </li>
   <li>
-     <a href="mailto:?subject=Eu amo corujas :: Codebar">Mande um email para seu amigo</a>
+     <a href="mailto:?subject=Eu amo corujas :: codebar">Mande um email para seu amigo</a>
   </li>
 </ul>
 ```
