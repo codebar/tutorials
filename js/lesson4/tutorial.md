@@ -123,11 +123,17 @@ First, let's create a function that does the AJAX call to the GitHub API.
 ```js
 function getGithubInfo(username) {
   var xhr = new XMLHttpRequest();
-  xhr.open(...);
+  // open and then send the request
 
   return xhr;
 }
 ```
+> Set the async parameter to false so the call is synchronous.
+This means the browser will wait for the call to the GitHub API to finish before continuing.
+
+> Otherwise you can set it to true and add the extra methods to handle the changes in `readyState` of the request.
+
+> See [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange) for more details.
 
 **Note** We want `getGithubInfo(username)` to return us the entire response, so we can check for the status and handle it when necessary.
 
@@ -174,7 +180,10 @@ The `showUser(user)` function should:
 3. Add an image in `#profile .avatar`. To do that, you can use the `avatar_url`
    from the response.
 
+> Once you have parsed the response, try using `console.log()` to see what the object looks like in the browser console.
+
 > Don't forget to call `showUser()` from the function handling the keypress!
+
 
 ##Publish to Github
 
