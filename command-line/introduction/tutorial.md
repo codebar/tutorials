@@ -13,7 +13,7 @@ To access the command line, we use a terminal emulator, usually called a termina
 
 ## Example 1: navigating around in the terminal
 
-Once you opened up your terminal, type in the following after the $ or > sign ($ or > is the prompt, you don't have to retype that in the terminal, only the characters that come after them):
+Once you opened up your terminal, type in the following after the $ or > sign and hit enter: ($ or > is the prompt, you don't have to retype that in the terminal, only the characters that come after them):
 
 ```bash
 $ pwd
@@ -29,7 +29,7 @@ The `pwd` command prints out the current directory you are in. What are director
 /Users/your-username
 ```
 
-Now you know how to tell where you are in the folder structure of you computer, you might ask yourself: but if there is not visual user interface in the terminal how do I know what directories are in what directories? That's where the `ls` command comes in handy.
+Now you know how to tell where you are in the folder structure of you computer, you might ask yourself: but if there is no visual user interface in the terminal how do I know what directories are in what directories? That's where the `ls` command comes in handy.
 
 ### `ls` or list
 
@@ -39,7 +39,7 @@ In your terminal type:
 $ ls
 ```
 
-Most likely this command returned you a bunch of files and directories (folders). The `ls` command prints out the contents of a directory. If you are in the root directory of your computer you should see directories printed out such as Documents, Applications, etc. Now the question is, how do I move between directories?
+and hit enter. Most likely this command returned you a bunch of files and directories (folders). The `ls` command prints out the contents of a directory. If you are in the root directory of your computer you should see directories printed out such as Documents, Applications, etc. Now the question is, how do I move between directories?
 
 ### `cd` or change directory
 
@@ -110,5 +110,11 @@ $ touch bobs.txt
 Do an `ls` to check whether the file has been created. Inside bits, there should be a new file called bobs.txt. We used `touch` to create files. With touch you can create files with any extensions, just don't forget to specify what kind of file you are creating: index.html, script.js, style.css are all valid extensions. 
 
 ### Exercise 2: `cd` back into temp and create a couple of new folders with files in them
+
+### Bonus: type this into your terminal:
+
+```bash
+$ say hello
+```
 
 
