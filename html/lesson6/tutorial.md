@@ -106,7 +106,7 @@ Download the files required to begin working through the tutorial from [here](ht
 ```
 Hi I'm Ada Lovelace - http://codebar.github.io/tutorials/html/lesson3/example.html
 Grace Hopper - http://codebar.github.io/tutorials/html/lesson4/example.html
-Anita Borg - Where are we and where are we going. - http://codebar.github.io/tutorials/html/lesson4/example.html
+Anita Borg - Where are we and where are we going. - http://codebar.github.io/tutorials/html/lesson5/example.html
 Grace Hopper on Letterman - http://codebar.github.io/tutorials/html/lesson6/assets/images/grace-letterman.mp4
 
 ```
