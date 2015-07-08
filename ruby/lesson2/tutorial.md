@@ -9,13 +9,13 @@ _Use the **irb** to try out the examples_.
 
 > Don't forget to type!
 
-### Printing
+### Writing to the console
 
 `print` is similar to `puts` but it doesn't add a new line to the end of the output.
 
 `print "x + y ="`
 
-### Command line arguments
+### Reading from the console
 
 To read input from the console:
 
@@ -29,7 +29,7 @@ To read input without the new line use `chomp`
   input = gets.chomp
 ```
 
-###Ranges
+### Ranges
 
 A range is an interval with a beginning and an end.
 
