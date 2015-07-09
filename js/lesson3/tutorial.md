@@ -82,7 +82,7 @@ $('input').val("");
 
 ##Adding content
 
-There are many different ways you can add content. You can use **append** to add something to the end to an element, or **prepend** to add to the beginning to an element.
+There are many different ways you can add content. You can use **append** to add something to the end of an element, or **prepend** to add to the beginning of an element.
 
 ```js
 $('#container').append("<div>I love jQuery!</div>")
@@ -376,7 +376,7 @@ random_position = Math.floor( Math.random() * colors.length )
 
 > Use the `array[index]` notation to retrieve the colors at the random position.
 
-Set `.preview`'s background color, to the random color code.
+Set `.preview`'s background color to the random color code.
 
 ##Bonus
 
