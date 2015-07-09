@@ -90,7 +90,7 @@ $('#container').append("<div>I love jQuery!</div>")
 
 You can also use `replaceWith()` to substitute an element entirely with some new content.
 
-Try this out in your browser.
+Open the index.html of the files provided in your browser and try this out in the JavaScript console:
 
 ```js
 $('#container').replaceWith("<div>I love jQuery!</div>")
@@ -115,6 +115,7 @@ $(document).on('click','.done', function() {
   alert("Click event");
 });
 ```
+This function makes a JavaScript alert pop up when a user clicks on any element which has the class ".done".
 
 Although these two examples do the same thing there are some differences.
 
@@ -148,13 +149,13 @@ $(document).ready(function() {
 });
 ```
 
-Make a note of this. Wrapping your event listeners and other code within this make's sure they are executed only after all the DOM elements are loaded and ready. You should **always** use it or else your bindings won't work and the functions will run when you are loading the page.
+Make a note of this. Wrapping your event listeners and other code within this makes sure they are executed only after all the DOM elements are loaded and ready. You should **always** use it or else your bindings won't work and the functions will run before all elements on the page have loaded. So it might try to listen for events on elements that don't even exist yet and then you'll get lots of errors.
 
 #Exercise 1: Build a wish list
 
 Using jQuery and JavaScript functions, we will build a small todo list.
 
-Download the files required to begin working through the example [here](https://gist.github.com/despo/309f684b7a6e002aaf1f) or alternatively checkout with git.
+If you haven't yet, download the files required to begin working through the example [here](https://gist.github.com/despo/309f684b7a6e002aaf1f) or alternatively checkout with git.
 
 ```bash
 git clone https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
@@ -165,7 +166,7 @@ Move the files under your Github page folder, in a new directory `wishlist`. Als
 ```bash
 git commit -m "message"
 ```
-
+If you don't know how to use git yet, just ignore the above for now or [look at our git tutorial](http://tutorials.codebar.io/version-control/introduction/tutorial.html).
 
 ##Functionality
 - add wishes to the list by clicking the Add button
@@ -205,9 +206,11 @@ After adding the item to the list:
 1. Empty the text field after adding the item to the list.
 2. Use jQuery's `focus()` method to place the cursor back in the text field after clicking the button.
 
+If you don't know how to use the focus() method, try searching for it in the [jQuery documentation](http://api.jquery.com/). There are some code examples illustrating how to use it.
+
 ###Label items
 
-To label items, update the html of the list item being added to the list, so it includes a label.
+To label items as "pending" or "done", add the below html code to the html for the new list item that you wrote at the beginning of the tutorial.
 
 `<span class='label pending'>Pending</span>`
 
@@ -221,6 +224,8 @@ When we click on the Pending label, we want to set items to complete. We will do
 
 > Use `$(this)` to access the element that the event was triggered from.
 
+Let's go through this step by step.
+
 Try this in the console:
 
 First of all, bind a **click** event to the span we've added using its class with the `on()` function. As `<li>` is the parent node of the <span> element, we can access it using `parent()` (which is equivalent to `parentNode`
@@ -230,10 +235,11 @@ that we've used in the previous lesson).
 var parent_node = $(this).parent();
 ```
 
-> Use `attr()` to set the class attribute to `completed` or alternatively `addClass()`
+> Use `attr()` or `addClass()` to set the class attribute to `completed` 
 
 > Use `remove()` to remove an element from the DOM
 
+When you now click on the red label "pending", it should change to the green label "completed".
 
 ###Show the total task count
 
@@ -274,7 +280,7 @@ Have a look at our [**Wish List**](../../examples/wishlist/index.html).
 https://gist.github.com/ab21d29aa1ea8fbbbb0e.git
 ```
 
-Move the files under your Github page folder, in a  directory colorpicker.
+if you're using git, move the files under your Github page folder, in a  directory colorpicker.
 Don't forget to commit each task you complete! That way it will be easier to retrace your steps if something goes wrong!
 
 ##Functionality
