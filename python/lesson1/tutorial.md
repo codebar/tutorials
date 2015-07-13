@@ -3,15 +3,11 @@ layout: page
 title: Introduction to Python
 ---
 
-# Introduction to Python
-
-Welcome to the first Python tutorial. We're going to look at getting Python up and running on your computer, then trying a few simple operations to get to grips with the development environment, the syntax and basic computation.
+Welcome to the first Python tutorial. We're going to look at getting Python up and running on your computer, then look at a few simple operations to get to grips with the development environment, the syntax and basic computation.
 
 ## Installation
 
-First thing, install Python.
-
-On Mac, you already have Python.
+On Mac, you'll already have Python installed.
 
 On Windows:
 
@@ -110,7 +106,7 @@ The answer should go on forever, but it doesn't. This is because there is only a
 
 ### Concluding
 
-Now let's combine what we have learnt today. We can tell `print` to print multiple things at once, separated by a space:
+Now let's combine what we have learnt today. We can tell `print` to print multiple things at once, separated by a comma:
 
     print 'The result of 2 + 2 is', 2 + 2
 
