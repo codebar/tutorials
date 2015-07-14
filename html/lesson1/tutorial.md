@@ -306,7 +306,7 @@ Add this underneath the ordered list about why we like owls.
 
 Some characters have special meaning in HTML. For instance, we use < and > to make HTML tags, and we use " to wrap our attributes. But what if we wanted to use those characters in our page?
 
-One way is to use **HTML entities**. These have an ampersand, a name, then a semicolon. Here's the HTML entity for a quote character: `&quot`.
+One way is to use **HTML entities**. These have an ampersand, a name, then a semicolon. Here's the HTML entity for a quote character: `&quot;`.
 
 You can also use a numerical format to produce special characters. [Here's a list](http://htmlandcssbook.com/extras/html-escape-codes/) of some common entities.
 
