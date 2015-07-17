@@ -1,0 +1,87 @@
+---
+layout: page
+title: Python tutorial 2
+---
+
+In this tutorial we are going to look at variables, user input and decision making.
+
+##Creating a variable
+
+Python allows us to store data in something called variables so that we are able to use this data at a later point. To place an item in a variable we give it a name then set its value. 
+
+Now in the REPL type:
+
+	year = 2015
+
+In this example you have now stored the value `2015` into the variable `year`. See what happens next when you type `year' into the REPL. Does it show it back to you?
+
+How about saving your age into a variable or your lucky number? Have a play around with storing numbers into variables. Let us know if you think of something more exciting to store in variables than the year.
+
+##Storing numbers in variables
+
+Now that you are familair with the use of variables, we are able to combine variables with the maths operations we learnt in the previous tutorial.
+
+Now in the REPL type the following:
+
+	revenue = 1000
+	costs = 200
+	profit = revenue - costs
+
+Now type `profit` to see the results of this calculation. 
+
+How much money would a sponsor at codebar spend on pizza if they had 60 students turn up? 
+
+Along with pizza, students and cost, what oher variables can you think of that could go into this calculation?
+
+##Storing text in variables
+
+As well as numbers varaiables are able to store text, known in Python as string. 
+
+Now in the REPl type:
+
+	name = 'codebar'
+	url = "codebar.io"
+
+Now type `name' and `url` to see these strings shown back to you. As you can see Python allows both single and double quotes to denote a string variable. Double quotes are required if there is going to be an apostrophe in the string.
+
+For exmaple:
+
+	message = "I'm a string"
+
+Try storing a string within a varable without quotes, see what happens? Numbers do not require quotation marks, whereas they are mandatory for storing strings.
+
+Now store some strings in variables that contain apostrophes and some that do not.
+
+What happens when you store a number in a variable wrapped in quotes? 
+
+##Storing user input in variables
+
+Now we are going to look at capturing user input using the python input command.
+
+Let's create a variable in which to store the user input. Now type this into your REPL: 
+
+	question = input("What is your lucky number?")
+
+Type back your answer after it asks you.
+
+Now remember how strings need either single or double quotes?
+
+Now in the REPL type:
+
+	food = input("What is your favouirte food?")
+
+When you give the REPL your repsonse make sure you wrap it in quotes as this is storing your response as a string.
+
+Now try:
+
+	name = input("What is your name?")
+	greeting = "Hello " + name
+
+Then type `message` into your REPL to receive your message. 
+	
+
+### Further Reading
+
+
+ADD NOTE ABOUT NAMING VARIABLE!
+
