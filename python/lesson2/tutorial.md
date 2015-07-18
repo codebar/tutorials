@@ -5,7 +5,7 @@ title: Python tutorial 2
 
 In this tutorial we are going to look at variables, user input and decision making.
 
-##Creating a variable
+### Creating a variable
 
 Python allows us to store data in something called variables so that we are able to use this data at a later point. To place an item in a variable we give it a name then set its value. 
 
@@ -17,7 +17,7 @@ In this example you have now stored the value `2015` into the variable `year`. S
 
 How about saving your age into a variable or your lucky number? Have a play around with storing numbers into variables. Let us know if you think of something more exciting to store in variables than the year.
 
-##Storing numbers in variables
+### Storing numbers in variables
 
 Now that you are familair with the use of variables, we are able to combine variables with the maths operations we learnt in the previous tutorial.
 
@@ -33,7 +33,7 @@ How much money would a sponsor at codebar spend on pizza if they had 60 students
 
 Along with pizza, students and cost, what oher variables can you think of that could go into this calculation?
 
-##Storing text in variables
+### Storing text in variables
 
 As well as numbers varaiables are able to store text, known in Python as string. 
 
@@ -54,13 +54,13 @@ Now store some strings in variables that contain apostrophes and some that do no
 
 What happens when you store a number in a variable wrapped in quotes? 
 
-##Storing user input in variables
+### Storing user input in variables
 
 Now we are going to look at capturing user input using the python input command.
 
 Let's create a variable in which to store the user input. Now type this into your REPL: 
 
-	question = input("What is your lucky number?")
+	lucky_number = input("What is your lucky number?")
 
 Type back your answer after it asks you.
 
@@ -74,14 +74,27 @@ When you give the REPL your repsonse make sure you wrap it in quotes as this is 
 
 Now try:
 
-	name = input("What is your name?")
-	greeting = "Hello " + name
+	my_name = input("What is your name?")
+	greeting = "Hello " + my_name
 
-Then type `message` into your REPL to receive your message. 
+Then type `greeting` into your REPL to receive your message. 
+
+
+### Decision making using variables
+
+Now that we know how to use variables and know how to store data, let's play round with decision making and changing input based on your answer.
+
+In this final exercise we are going to ask you the number of coffees you have drank todaya and then change the statament back at you depending on your answer.
+
+Let's create a variable called:
+
+	coffee = input("How many cups of coffee have you consumed today?")
+
+	if coffee  >= 4: 
+		print "You have a coffee problem"
+	else:
+		print "You do not have a coffee problem"
 	
 
 ### Further Reading
-
-
-ADD NOTE ABOUT NAMING VARIABLE!
 
