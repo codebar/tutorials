@@ -82,9 +82,9 @@ Then type `greeting` into your REPL to receive your message.
 
 ### Decision making using variables
 
-Now that we know how to use variables and know how to store data, let's play round with decision making and changing input based on your answer.
+Now that we know how to use variables and know how to store data, let's play round with decision making and changing prints based on your answer. Now that we are getting more in depth with Python, we should say that Python is very particular about tabbing. Tabbing is the indents created when writing code. With Python, if certain lines are not indented correctly the code will not run.
 
-In this final exercise we are going to ask you the number of coffees you have drank todaya and then change the statament back at you depending on your answer.
+In this final exercise we are going to ask you the number of coffees you have drank today and then change the statament back at you depending on your answer.
 
 Let's create a variable called:
 
