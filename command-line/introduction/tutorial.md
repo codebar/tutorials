@@ -117,4 +117,3 @@ Do an `ls` to check whether the file has been created. Inside bits, there should
 $ say hello
 ```
 
-
