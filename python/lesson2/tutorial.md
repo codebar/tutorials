@@ -107,6 +107,3 @@ Let's create a variable called:
 	elif:
 		print "You do not have a coffee problem"
 	
-
-### Further Reading
-
