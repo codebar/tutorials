@@ -1,21 +1,20 @@
 ---
 layout: page
-title: Introduction to the git command line
+title: Introduction to the Git command line
 ---
 
 ## Introduction to the Git command line
 
 **PREREQUISITE:** Basic understanding of the command line.
 
-Git is an easy to share and collaborate tool that keeps our code tracked and safe.
-With the following examples we understand how to deal with the daily usage of the tool.
+Git is a tool that makes sharing code and collaborating with other developers really easy. It also keeps our code tracked and safe. The following examples will help you understand how to use this tool on a daily basis.
 
 ## Before you begin
-Install command line git for your operating system ([OS X](http://code.google.com/p/git-osx-installer), [Windows](http://msysgit.github.com/) or [Linux](http://git-scm.com/download/linux)) and open your terminal / command prompt.
+Install command line Git for your operating system ([OS X](http://sourceforge.net/projects/git-osx-installer/), [Windows](http://msysgit.github.com/) or [Linux](http://git-scm.com/download/linux)) and open your terminal / command prompt.
 
 Create a directory where you will be storing all your projects. You can call it `code` or `projects`.
 
-### Setup your git details
+### Setup your Git details
 
 ```bash
 $ git config --global user.name "Your Name"
@@ -24,13 +23,14 @@ $ git config --global user.email "name@domain"
 
 ### Setup an SSH key
 
-You need an ssh key so you don't have to authenticate every time you want to commit to git.
+An SSH key is used to identify trusted computers, without entering a password.
+[Instructions on how to generate an SSH key](https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key)
 
 
 ## Example 1: Everyday commands
 
 
-### Create and add your project in git
+### Create and add your project in Git
 
 ```bash
 $ mkdir practising-git
@@ -44,15 +44,15 @@ $ git init
 $ echo "<h1>Learning git</h1>" > index.html
 ```
 
-> The above command will output `<h1>Learning git</h1>` and store it in `index.html`. Open up the file and have a look.
+> The above command will output `<h1>Learning Git</h1>` and store it in `index.html`. Open up the file and have a look.
 
-### Check the git repository status.
+### Check the Git repository status.
 
 ```bash
 $ git status
 ```
 
-> The above command will tell you what files in the current directory have been changed, what files have not yet been added to the git repository and so on.
+> The above command will tell you which files in the current directory have been changed, which files have not yet been added to the Git repository and so on.
 
 ### Add your file on the repository and commit your changes.
 
@@ -64,7 +64,7 @@ $ git commit -m 'this is my first command-line commit!'
 
 > `.` will add all the files in the current directory and subdirectories. You should only use it when initialising your repository. Rest of the time you can specify the file names to be added.
 
-### Check the git commit history.
+### Check the Git commit history.
 
 ```bash
 $ git log
@@ -127,9 +127,9 @@ Update the `index.html` file and then commit and push the changes
     <body>
         <h1> Learning Git </h1>
           <dl>
-            <dt>Initialise a git repository</dt>
+            <dt>Initialise a Git repository</dt>
             <dd>git init</dd>
-            <dt>Add files to git</dt>
+            <dt>Add files to Git</dt>
             <dd>git add filename</dd>
           </dl>
     </body>
@@ -152,7 +152,7 @@ $ git commit -m 'updated to include the commands I learned today'
 $ git push origin master
 ```
 
-### Check the repository git history
+### Check the repository Git history
 
 ```bash
 $ git log
@@ -175,9 +175,9 @@ Update `index.html`
     <body>
         <h1> Learning Git </h1>
           <dl>
-            <dt>Initialise a git repository</dt>
+            <dt>Initialise a Git repository</dt>
             <dd>git init</dd>
-            <dt>Add files to git</dt>
+            <dt>Add files to Git</dt>
             <dd>git add <filename></dd>
             <dt>Checking file changes</dt>
             <dd>git status</dd>
@@ -196,7 +196,7 @@ $ git diff
 The -/+ indications you can see mean
 
 **-** indicates lines removed from the code.
-	
+  
 **+** indicates lines added to the code.
 
 ```bash
@@ -244,7 +244,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   index.html
+  modified:   index.html
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
@@ -382,10 +382,10 @@ git push origin master
 
 # Extras
 
-Following are some good resources to to help you set up git.
+Following are some good resources to to help you set up Git.
 https://help.github.com/articles/set-up-git
 
-## Configuring your git environment
+## Configuring your Git environment
 
 Create the file `.gitconfig` in your root directory and add the following configuration
 
@@ -405,7 +405,7 @@ Create the file `.gitconfig` in your root directory and add the following config
 
 > Can you think of another command that you would find handy to shorten down?
 
-### Telling git to try and fix whispace issues before committing
+### Telling Git to try and fix whitespace issues before committing
 
 ```
 [apply]
@@ -419,7 +419,7 @@ Create the file `.gitconfig` in your root directory and add the following config
   excludesfile = ~/.gitignore
 ```
 
-To apply this you need to create a .gitignore file in your root path. There you can add either specific files or extentions that you always want excluded. This is a handy list to help you start
+To apply this you need to create a .gitignore file in your root path. There you can add either specific files or extensions that you always want excluded. This is a handy list to help you start
 
 ```
 *.DS_Store
@@ -433,9 +433,9 @@ To apply this you need to create a .gitignore file in your root path. There you 
 > Do you know what these files are? You normally wouldn't want to commit logs or packages.
 
 
-### Pimping your log historyr
+### Pimping your log history
 
-In your aliases add this as an alias for viewing git logs
+In your aliases add this as an alias for viewing Git logs
 ```
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 ```
