@@ -31,18 +31,18 @@ Now type `profit` to see the results of this calculation.
 
 Now work out how much money a sponsor at codebar would spend on pizza if they had 60 students turn up? 
 
-Along with pizza, students and cost, what oher variables can you think of that could go into this calculation?
+Along with pizza, students and cost, what other variables can you think of that could go into this calculation?
 
 ### Storing text in variables
 
-As well as numbers varaiables are able to store text, known in Python as strings. 
+As well as numbers variables are able to store text, known in Python as strings. 
 
-Now in the REPl type:
+Now in the REPL type:
 
 	name = 'codebar'
 	url = "codebar.io"
 
-Now type `name' and `url` to see these strings shown back to you. As you can see Python allows both single and double quotes to denote a string variable. Double quotes are required if there is going to be an apostrophe in the string.
+Now type `name` and `url` to see these strings shown back to you. As you can see Python allows both single and double quotes to denote a string variable. Double quotes are required if there is going to be an apostrophe in the string.
 
 For exmaple:
 
