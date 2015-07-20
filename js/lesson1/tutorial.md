@@ -24,9 +24,6 @@ Some common usages around the web is
 [Stack of cards](http://designlovr.com/examples/dynamic_stack_of_index_cards/)
 ![](assets/images/effects_1.png)
 
-[Games](http://gorillas.heroku.com)
-![](assets/images/game.png)
-
 It is also becoming common outside of the browser. You can write your own programs and servers in JavaScript using [Node.js](http://nodejs.org/).
 
 
