@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Python tutorial 2
+title: Playing with variables
 ---
 
 In this tutorial we are going to look at variables, user input and decision making.
@@ -19,7 +19,7 @@ How about saving your age into a variable or your lucky number? Have a play arou
 
 ### Storing numbers in variables
 
-Now that you are familair with the use of variables, we are able to combine variables with the maths operations we learnt in the previous tutorial.
+Now that you are familiar with the use of variables, we are able to combine variables with the maths operations we learnt in the previous tutorial.
 
 Now in the REPL type the following:
 
@@ -44,7 +44,7 @@ Now in the REPL type:
 
 Now type `name` and `url` to see these strings shown back to you. As you can see Python allows both single and double quotes to denote a string variable. Double quotes are required if there is going to be an apostrophe in the string.
 
-For exmaple:
+For example:
 
 	message = "I'm a string"
 
@@ -52,7 +52,7 @@ Sometimes you will need to use an apostrophe within a single quote, on occasions
 
 	message ='I\'m a string'
 
-Try storing a string within a varable without quotes, see what happens? Numbers do not require quotation marks, whereas they are mandatory for storing strings.
+Try storing a string within a variable without quotes, see what happens? Numbers do not require quotation marks, whereas they are mandatory for storing strings.
 
 Now store some strings in variables that contain apostrophes and some that do not.
 
@@ -85,18 +85,18 @@ Then type `greeting` into your REPL to receive your message.
 
 ### Decision making using variables
 
-Now that we know how to use variables and know how to store data, let's play around with decision making and changing prints based on your answer. In Python (and many other languages), one of the most commons ways in which this is done is using an if statement. For example:
+Now that we know how to use variables and know how to store data, let's play around with decision making and changing prints based on your answer. In Python (and many other languages), one of the most common ways in which this is done is using an if statement. For example:
 
 	if number > 3:
 		print "Bigger than three"
 	elif number < 3:
 		print "Smaller than three"
 
-Here we can see that if a number we have passed into this decision making code is bigger than three, we will recieve a messag telling us so, and the same relevant message if the number is smaller than three.
+Here we can see that if a number we have passed into this decision making code is bigger than three, we will receive a message telling us so, and the same relevant message if the number is smaller than three.
 
 Also, now that we are getting more in depth with Python, we should say that Python is very particular about tabbing. Tabbing is the indents created when writing code. With Python, if any lines are not indented correctly the code will not run. If you are running into bugs, this is a good place to start.
 
-In this final exercise we are going to ask you the number of coffees you have drank today and then change the statament returned to you, depending on your answer.
+In this final exercise we are going to ask you the number of coffees you have drank today and then change the statement returned to you, depending on your answer.
 
 Let's create a variable called:
 
