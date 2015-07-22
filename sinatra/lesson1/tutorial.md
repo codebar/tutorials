@@ -41,9 +41,27 @@ Successfully installed sinatra-1.4.6
 ```
 
 
+## What is this gem thing, anyway?
+
+Often when programming we'll write sections of code that could be used in other
+projects, preventing us from having to solve the same problems over and over.
+These pieces of reusable code are called libraries, though in the Ruby world we
+typically call our libraries "gems", purely because it's a cute name.
+
+To save us the trouble of copy and pasting library code into our projects,
+applications were written that will go and download the libraries you ask for,
+and then make them available in your project. These applications are called
+"package managers", and our Ruby package manager is called "gem".
+
+So when you ran `gem install sinatra` before you were instructing the `gem`
+package manager to go and download the `sinatra` gem so you could use it in
+your project without any extra fuss. How convenient!
+
+
 ## Hello Sinatra
 
-Open your text editor, and create a file called `server.rb`.
+It's time to start working with Sinatra. Open your text editor, and create a
+file called `server.rb`.
 
 In this file, type the following:
 
@@ -118,7 +136,7 @@ end
 ```
 
 Our previous block of code ran when we `get` a request to the `/` address,
-and this new one runs when we `get` a request to the `/about` address. 
+and this new one runs when we `get` a request to the `/about` address.
 
 Start up our server again with `ruby server.rb`, and navigate to
 `http://localhost:4567/about`- we've created a new page. Navigate back to
