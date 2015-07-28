@@ -49,3 +49,21 @@ rm -r command?
 ### `rmdir` or removing directoris (only works on empty directories)
 
 to delete folders with files in them use rm -r command
+
+### `cat` or printing? streaming? files
+
+```bash
+$ cat file.txt
+```
+
+```bash
+$ cat file.txt > other_file.txt
+```
+
+redirecting and rewriting
+
+```bash
+$ cat file.txt >> other_file.txt
+```
+
+redirecting and appending
