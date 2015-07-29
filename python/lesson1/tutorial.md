@@ -3,15 +3,11 @@ layout: page
 title: Introduction to Python
 ---
 
-# Introduction to Python
-
-Welcome to the first Python tutorial. We're going to look at getting Python up and running on your computer, then trying a few simple operations to get to grips with the development environment, the syntax and basic computation.
+Welcome to the first Python tutorial. We're going to look at getting Python up and running on your computer, then look at a few simple operations to get to grips with the development environment, the syntax and basic computation.
 
 ## Installation
 
-First thing, install Python.
-
-On Mac, you already have Python.
+On Mac, you'll already have Python installed.
 
 On Windows:
 
@@ -38,7 +34,7 @@ If you see it, make sure you're running Python 2, not Python 3, otherwise parts 
 
 ## Hello, World!
 
-In keeping with tradition, we're going start by printing "Hello, World!" to the console. In Python, the command to achieve this is aptly named `print`. Type the following:
+In keeping with tradition, we're going to start by printing "Hello, World!" to the console. In Python, the command to achieve this is aptly named `print`. Type the following:
 
     print "Hello, World!"
 
@@ -64,7 +60,7 @@ Subtraction, multiplication and division work the same way.
     8 * 4
     9 / 3
 
-Now try a few more to see what you get.
+Now try a few more to see what results you get.
 
 Let's see what happens when you divide 14 by 4. Notice the remainder is chopped off. We can use the *modulus* operator, `%`, to get the remainder instead. Try `14 % 4` and see.
 
@@ -82,7 +78,7 @@ Did you notice any unexpected results when you started combining operations? If 
 
     10 - 2 * 4
 
-Python follows the traditional mathematical rules of precedence, which state that multiplication and division are done before addition and subtraction. (You may remember what *BODMAS* means.) This means in our example above, 2 and 4 are multiplied first, and then the result is subtracted from 10.
+Python follows the traditional mathematical rules of precedence, which state that multiplication and division are done before addition and subtraction. (You may remember *BODMAS*.) This means in our example above, 2 and 4 are multiplied first, and then the result is subtracted from 10.
 
 We can change the order of operations by using parentheses. Anything inside parentheses is executed first.
 
@@ -110,7 +106,7 @@ The answer should go on forever, but it doesn't. This is because there is only a
 
 ### Concluding
 
-Now let's combine what we have learnt today. We can tell `print` to print multiple things at once, separated by a space:
+Now let's combine what we have learnt today. We can tell `print` to print multiple things at once, separated by a comma:
 
     print 'The result of 2 + 2 is', 2 + 2
 
