@@ -29,7 +29,7 @@ Now in the REPL type the following:
 
 Now type `profit` to see the results of this calculation. 
 
-Now work out how much money a sponsor at codebar would spend on pizza if they had 60 students turn up? 
+Now work out the cost of running a codebar workshop if 60 people turned up and pizza cost £8 per 2 people? 
 
 Along with pizza, students and cost, what other variables can you think of that could go into this calculation?
 
