@@ -230,7 +230,7 @@ $ git push origin master
 Edit the index.html file and then check the changes.
 
 ```bash
-$ echo "oh no!" > index.html
+$ echo 'oh no!' > index.html
 ```
 
 > Have a look at changes to the file using `git diff`
