@@ -94,10 +94,12 @@ $ mkdir temp
 into the terminal. Now use `ls` to see the contents of the home directory. You should see a new folder, temp there. You just created a new folder! As it's name suggests, mkdir creates directories. What if we wanted to create a directory inside a directory? `cd` into temp and type:
 
 ```bash
-$ mkdir stuff/bits
+$ mkdir -p stuff/bits
 ```
 
-No do an `ls` and you should see stuff retruned. `cd` into stuff and do another `ls`. Inside stuff, the directory bits was created. What if you wanted to create files?
+No do an `ls` and you should see stuff retruned. `cd` into stuff and do another `ls`. Inside stuff, the directory bits was created. 
+
+What if you wanted to create files?
 
 ### `touch` or create files 
 
