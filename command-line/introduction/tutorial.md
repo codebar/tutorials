@@ -9,7 +9,7 @@ The command line is a text interface for your computer. Just like Windows Explor
 
 ## How do I access the command line?
 
-To access the command line, we use a terminal emulator, usually called a terminal. On Mac OSX you can access the terminal by opening the Terminal application from your Applications folder. On Windows you should use a program called the PowerShell.
+To access the command line, we use a terminal emulator, usually called a terminal. On Mac OSX you can access the terminal by opening the Terminal application from your Applications folder. On Windows you should use a program called the PowerShell. To access the Powershell, click 'Start', in 'Search programs and files' type powershell, and hit enter. This should open up Powershell on your computer.
 
 ## Example 1: navigating around in the terminal
 
