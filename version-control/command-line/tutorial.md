@@ -196,7 +196,7 @@ $ git diff
 The -/+ indications you can see mean
 
 **-** indicates lines removed from the code.
-  
+
 **+** indicates lines added to the code.
 
 ```bash
@@ -220,6 +220,7 @@ index 21f15d1..c2031f1 100644
 ### After you verify your change, commit and push them
 
 ```bash
+$ git add .
 $ git commit -m 'Added git status description'
 $ git push origin master
 ```
@@ -229,7 +230,7 @@ $ git push origin master
 Edit the index.html file and then check the changes.
 
 ```bash
-$ echo "oh no!" > index.html
+$ echo 'oh no!' > index.html
 ```
 
 > Have a look at changes to the file using `git diff`
