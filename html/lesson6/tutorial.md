@@ -137,4 +137,4 @@ This ends our sixth lesson. How did you find the introduction to HTML5? Is there
 
 ## Extras
 
-Now that you have become familiar with HTML & CSS, how about you go away and create your own portfolio site. Think about the pages that you may include, such as home, about me and a portfolio or gallery page. You may even want to include a downloadable CV.
+Now that you are familiar with HTML & CSS, how about you go away and create your own portfolio site. Think about the pages that you may include, such as home, about me and a portfolio or gallery page. You may even want to include a downloadable CV.
