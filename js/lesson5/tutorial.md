@@ -94,3 +94,9 @@ Here is our version of [Hangman](../../examples/hangman/index.html).
 
 ---
 This ends our **HTTP Requests, AJAX and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+## Extras
+
+Now that you are familiar with HTTP requests, AJAX and APIs, how about you go away and create a webpage that pulls in all instagram pictures with a certain hashtag.
+
+Or embed a google map onto a webpage with it pointing to a destination of your choice in London. 
