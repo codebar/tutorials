@@ -7,7 +7,7 @@ title: Introduction to JavaScript
 
 **JavaScript** is a language that allows for interaction with the user, controlling the content of the browser, and altering the displayed document content.
 
-Some common usages around the web is
+Some common usages around the web are
 
 #### [Lightboxes](http://lokeshdhakar.com/projects/lightbox2/#example)
 
