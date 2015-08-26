@@ -7,17 +7,17 @@ This is the second tutorial on HTTP Requests, AJAX and APIs. You can find the [f
 
 ## Todays lesson
 
-In the last lesson we've explained an HTTP Requests is when we ask the server some information.
+In the last lesson we learnt that an HTTP Request is when we ask the server for some information.
 
-In the two exercises we used the **GET** request. Today we will be building a Hangman game using an existing API that will handle the game logic for us.
+In the two earlier exercises we used the **GET** request. Today we will be building a Hangman game using an existing API that will handle the game logic for us.
 
 We will be using the **POST**, **PUT** and **GET** requests, and other things we've learned in the last couple of lessons.
 
 
 | Verb | Description |
 | ---- | ----------- |
-| **GET**  | fetching a resource (e.g. /index.html  will return the HTML of the page) |
-| **PUT**  |  updating an existing resource. |
+| **GET**  |  Fetching a resource (e.g. /index.html  will return the HTML of the page) |
+| **PUT**  |  Updating an existing resource. |
 | **POST** |  Create a new resource. |
 
 
@@ -69,8 +69,8 @@ $.ajax({
     3. Update the stored token
 
     4. Update remaining attempts and display all guesses
-        - If an attempt is not succesful, appent it to the `$('.attempts')` using a span with the class `wrong`
-        - You can then find out how many wrong attempts there wer using `$('.wrong').length+1;`
+        - If an attempt is not successful, append it to the `$('.attempts')` using a span with the class `wrong`
+        - You can then find out how many wrong attempts there were using `$('.wrong').length+1;`
 
 3. On the 7th failure, retrieve the solution using the **GET** request
 
