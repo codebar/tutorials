@@ -285,3 +285,9 @@ If you need any help don't hesitate to ask [in our chatroom](https://gitter.im/c
 
 ---
 This ends our **Object Oriented Ruby and Inheritance (part 2)** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+### Further reading 
+
+If you want to challenge yourself further and dive into the world of Rails, a Ruby framework for building websites, here is a tutorial book to [get you started.](https://www.railstutorial.org/book/frontmatter) 
+
+

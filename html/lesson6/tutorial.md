@@ -134,3 +134,7 @@ img {
 
 -----
 This ends our sixth lesson. How did you find the introduction to HTML5? Is there something you don't understand? Try to use the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+## Extras
+
+Now that you are familiar with HTML & CSS, how about you go away and create your own portfolio site. Think about the pages that you may include, such as home, about me and a portfolio or gallery page. You may even want to include a downloadable CV.
