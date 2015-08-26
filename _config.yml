@@ -1,6 +1,6 @@
 safe: true
 lsi: false
-highlighter: true
+highlighter: pygments
 future: true
 markdown: redcarpet
 encoding: utf-8
