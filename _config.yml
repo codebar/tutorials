@@ -1,7 +1,8 @@
 safe: true
 lsi: false
-pygments: true
+highlighter: pygments
 future: true
 markdown: redcarpet
+encoding: utf-8
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]

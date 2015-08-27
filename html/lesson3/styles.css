@@ -1,7 +1,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
-  padding:0;
-  margin:0;
+  padding: 0px;
+  margin: 0px;
   line-height: 23px;
 }
 
@@ -44,7 +44,7 @@ header {
 }
 
 .social-media {
-  list-style:none;
+  list-style: none;
   margin-left: 10px;
   padding-left: 20px;
 }
@@ -57,7 +57,7 @@ header {
 
 .social-media li a {
   color: #4c4066;
-  text-decoration:none;
+  text-decoration: none;
   text-shadow: 1px 0px #ffffff;
   border-left: 7px solid #fdcc38;
   padding-left: 10px;
@@ -67,8 +67,8 @@ header {
   border-left-color: #a26cd2;
 }
 
-.sidebar b {
-  margin-left:36px;
+.sidebar strong {
+  margin-left: 36px;
   color: #4c4066;
   font-size: 19px;
 }
@@ -84,7 +84,7 @@ header {
 h2 {
   color: #4c4066;
   font-size: 27px;
-  margin-top:0;
+  margin-top: 0;
 }
 
 

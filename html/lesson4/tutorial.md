@@ -43,7 +43,7 @@ Map the stylesheet to the page
 <link rel="stylesheet" href="style.css">
 ```
 
-Set the title that will be displayed on the browser's bar
+Set the title that will be displayed in the browser's bar
 
 ```html
 <title>Grace Hopper</title>
@@ -70,8 +70,8 @@ Before styling the header, reset the default styling of the page. This ensures c
 
 ```css
 body {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 ```
 
@@ -149,7 +149,7 @@ And finally, add some space between the two elements and make sure the title is 
 }
 ```
 
-Color the `<h1>` so it stands out and its not the same like the other text on the page
+Color the `<h1>` so it stands out and is not the same as the other text on the page
 
 ```css
 .title h1 {
@@ -159,7 +159,7 @@ Color the `<h1>` so it stands out and its not the same like the other text on th
 
 ## Adding a toolbar
 
-Add some of the resources we used to find out more information about Grace. 
+Add some of the resources we used to find out more information about Grace.
 This should be placed before the header closing tag.
 
 ```html
@@ -173,15 +173,15 @@ This should be placed before the header closing tag.
 </div>
 ```
 
-Add an id `resources` to the outer `<div>`
+Add an id `toolbar` to the outer `<div>`
 
 ### Styling the toolbar
 
 First let's remove the bullet from the list of links
 
 ```css
-#resources ul {
-  list-style:none;
+#toolbar ul {
+  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -190,16 +190,23 @@ First let's remove the bullet from the list of links
 and make the elements inline so they sit next to each other
 
 ```css
-#resources li {
+#toolbar li {
   display: inline-block;
   padding: 10px;
 }
 ```
 
+and set the colour of the toolbar
+
+```css
+background-color: #3D5167;
+text-align: center;
+```
+
 The text is now really hard to see. Change the color of the link...
 
 ```css
-#resources li a {
+#toolbar li a {
   text-decoration: none;
   color: #e7e7e7;
 }
@@ -208,7 +215,7 @@ The text is now really hard to see. Change the color of the link...
 ... and make it underline when you hover your mouse over it.
 
 ```css
-#resources li a:hover {
+#toolbar li a:hover {
   border-bottom: 1px solid;
 }
 ```
@@ -260,7 +267,6 @@ Style the container
 
 ```css
 #content {
-  padding-top: 150px;
   background-color: #e8e8e8;
   padding: 30px 40px;
 }
@@ -270,9 +276,9 @@ Style the container
 
 ## Floating elements
 
-Floating elements still keeps the in the normal flow, but as far to the left or right of their container element. Other elements, like paragraphs or lists, wrap around them.
+Floating elements still keeps them in the normal flow, but as far to the left or right of their container element. Other elements, like paragraphs or lists, wrap around them.
 
-To ensure an element `floats` you must always specify its width, or else its likely to take over the width of the page and not appear floated.
+To ensure an element `floats` you must always specify its width, or else it's likely to take over the width of the page and not appear floated.
 
 ###Box floating left
 ![](assets/images/float-left.png)
@@ -319,6 +325,7 @@ Add a CSS class to the second image's wrapper
 ```
 
 And float the element to the right
+
 ```css
 .end-of-line {
   float: right;
@@ -337,19 +344,20 @@ Add space around the images so there is some separation between them and the tex
 
 ## Positioning
 
-By default, all HTML elements position is **static**. This means that they are positioned within the normal flow of the page and ignore any `top`, `bottom`, `right` or `left` properties defined  in the CSS.
+By default, all HTML elements have a position of **static**. This means that they are positioned within the normal flow of the page and ignore any `top`, `bottom`, `right` or `left` properties defined  in the CSS.
 
-Inline boxes flow from left to right and block boxes from top to bottom
+Inline boxes flow from left to right and block boxes from top to bottom.
 
 ### Relative positioning
 When an element's position is defined as relative `position: relative;` it is no longer in the normal flow and it can be moved to the top, right, bottom or left. It can be used in conjunction with `absolute` positioning.
 
 ### Absolute positioning
-Absolute positioned elements are also outside the normal flow. They are offset from their container block, positioned relative.
+Absolute positioned elements are also outside the normal flow.
 
-Despite what element an **absolute** positioned element is wrapped in, the element that is considered it's container is the first that has a position set other than **static**. If there is no such element, the outer `<html>` is considered its container.
+Their position is determined by the offset values in the properties `top`, `bottom`, `left` and `right`. These offsets are measured from the element's container block
 
-Its position is determined by the offset values in the properties `top`, `bottom`, `left` and `right`
+The container is not necessarily the element it is wrapped in (its parent). To find the container, the browser first looks at the element's parent, then its grandparent, then its great-grandparent and so on, until it finds an ancestor with a `position` of anything other than **static**. If there is no such element, the outer `<html>` is considered its container.
+
 
 ### Using absolute and relative positioning
 
@@ -451,7 +459,7 @@ Extend `header` and set its position to fixed
 position: fixed;
 ```
 
-> Refresh the page. Notice how the header size has now collapsed to the size of its content? 
+> Refresh the page. Notice how the header size has now collapsed to the size of its content?
 
 Fix this by setting the width
 
@@ -471,7 +479,7 @@ There is still one small problem with our page. You can view this better if you 
 
 ### z-index
 
-This can be fixed by changing the `z-index`, who defines the order of overlapping.
+This can be fixed by changing the `z-index`, which controls how content overlaps.
 The element with the highest `z-index` appears on top.
 
 Extend the CSS for the `header`

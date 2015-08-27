@@ -9,13 +9,13 @@ _Use the **irb** to try out the examples_.
 
 > Don't forget to type!
 
-### Printing
+### Writing to the console
 
 `print` is similar to `puts` but it doesn't add a new line to the end of the output.
 
 `print "x + y ="`
 
-### Command line arguments
+### Reading from the console
 
 To read input from the console:
 
@@ -29,7 +29,7 @@ To read input without the new line use `chomp`
   input = gets.chomp
 ```
 
-###Ranges
+### Ranges
 
 A range is an interval with a beginning and an end.
 
@@ -49,7 +49,7 @@ To get all the numbers from 1 up to 5, excluding 5.
 
 ### `Random.rand()`
 
-Random is an interface to a number generator. The `rand()` method takes in the **max** and returns an integer greater than zero and less than **max**. You can also use a **range** as a parameter.
+Random is an interface to a number generator. The `rand()` method takes in an integer value **max**. It returns an integer greater than zero and less than **max**. You can also use a **range** as a parameter.
 
 ```ruby
 Random.rand(5..10)
@@ -57,9 +57,9 @@ Random.rand(5..10)
 
 ## Exercise 1: Numbers game!
 
-In this exercise we'll create a small game to help us practise math.
+In this exercise we'll create a small game to help us practise maths.
 
-[Download the files](https://gist.github.com/despo/d790a4fd1844da7d85ce/download) to get started. If you are having any trouble you can get the files directly [from Github](https://gist.github.com/despo/d790a4fd1844da7d85ce).
+[Download the files](https://gist.github.com/despo/d790a4fd1844da7d85ce/download) to get started. If you are having any trouble you can get the files directly [from GitHub](https://gist.github.com/despo/d790a4fd1844da7d85ce).
 
 
 To execute the file you must first change its permissions from the command line (to make it executable).
@@ -128,7 +128,7 @@ To get the number of seconds that it takes to run the game we can store the time
 First create and assign the time to a variable `start`. Then, subtract `Time.now - start` and output that.
 
 ```ruby
-puts "Total time #{duration} seconds
+puts "Total time #{duration} seconds"
 ```
 
 > You can also calculate the average time it take to respond to each problem by dividing the duration with the amount of attempts.
@@ -141,7 +141,7 @@ puts "#{duration/turns} seconds per problem"
 
 At the beginning of the game ask for the number of turns. If return is pressed default to 0.
 
-> To dynamically load a value you can use the `||=` operant.
+> To default value of a variable, only if the variable empty you can use the `||=` operant. This is called lazy loading.
 
 ```ruby
 # here the number will get assigned to 1 as its value is nil

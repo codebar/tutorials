@@ -1,40 +1,40 @@
 ---
 layout: page
-title: Introduction to JQuery
+title: Introduction to jQuery
 ---
 
 
-So far, we've learned the basic of JavaScript. From variables, to understanding Objects, functions and how to manipulate the **D**ocument **O**bject **M**odel.
+So far, we've learned the basics of JavaScript. From variables, to understanding Objects, functions and how to manipulate the &#x200b;**D**&#x200b;ocument &#x200b;**O**&#x200b;bject &#x200b;**M**&#x200b;odel.
 
-In this session we will introduce JQuery, a very commonly used JavaScript library, that simplifies working with JavaScript.
+In this session we will introduce jQuery, a very commonly used JavaScript library, that simplifies working with JavaScript.
 
-Today, we will be using **[JQuery 2.0.3](http://code.jquery.com/jquery-2.0.3.min.js)**. If you want to use JQuery on other projects, You can download or link directly to the latest version from the [JQuery download section](http://jquery.com/download/).
+Today, we will be using **[jQuery 2.0.3](http://code.jquery.com/jquery-2.0.3.min.js)**. If you want to use jQuery on other projects, You can download or link directly to the latest version from the [jQuery download section](http://jquery.com/download/).
 
 ## But before we start...
 
 ###Required files
 
-Download the files required to begin working through the first tutorial example from [here](https://gist.github.com/despo/309f684b7a6e002aaf1f/download) (JQuery is included)
+Download the files required to begin working through the first tutorial example from [here](https://gist.github.com/despo/309f684b7a6e002aaf1f/download) (jQuery is included)
 
-#What is JQuery?
+#What is jQuery?
 
-JQuery is a JavaScript library that supplies you with functionality independent of browser platform. It's very commonly used on the internet and enables you to do more with writing less code.
+jQuery is a JavaScript library that supplies you with functionality independent of browser platform. It's very commonly used on the internet and enables you to do more with less code.
 
 ##Selectors
 
-Selectors are simplified in JQuery. You can access elements by element type, id or class, just like in `CSS`.
+Selectors are simplified in jQuery. You can access elements by element type, id or class, just like in `CSS`.
 
-For example, to retrieve all paragraph elements you can use this selector `$("p")` or to retrieve all elements with a specific id `$("#message")` instead of using `getElementByTag('p')` or `getElementById('message')`.
+For example, to retrieve all div elements you can use this selector `$("div")`, or to retrieve all elements with a specific id use `$("#container")` instead of vanilla JavaScript: `getElementByTag("div")`, or `getElementById("container")`.
 
 ```javascript
-$("p")                // all paragraph elemenets
+$("div")              // all div elemenets
 $("#container")       // an element with the ID container
 $(".total")           // elements with the class total
 $("ol#items")         // ordered list elements with the ID items
-$("ol#items li")      // list elements, within an ordered list with the id colors
+$("ol#items li")      // list elements, within an ordered list with the ID items
 ```
 
-You can also use CSS3 selectors
+You can also use CSS3 selectors.
 
 ```javascript
 $("input[type=text]"); // inputs of type text
@@ -43,56 +43,64 @@ $("li:odd");           // all odd numbered list items
 $("li:first-child");   // the first child in a list
 ```
 
-##Accessing attributes `attr()`
+##Get and set HTML attributes `attr()`
 
-Using the `attr()` method you can retrieve any element attribute.
+Using `attr("attributeName")` you can retrieve the value of an attribute.
+
+You can use the same method to set the value of an attribute:
+`attr("attributeName", value)`. Many jQuery methods can be used to both get and
+set.
 
 ```js
-$('#logo').attr('width')
-$('#logo').attr('width', 300)
+$('#logo').attr('width')       // get width
+$('#logo').attr('width', 300)  // set width to 300
 ```
 
-##Changing CSS attributes
+##Get and set CSS styles `css()`
 
-You can get and set the CSS properties of an item by using the `css()` action.
+Like `attr()`, you can get and set CSS style properties with the `css()`
+method.
 
 ```js
 var heading = $('h1');
+heading.css('color');
 heading.css('color', 'red');
 ```
 
-##val()
+##Get and set input values `val()`
 
-To set and get the text in an input field, you can use `val()`. Similar to `attr()` and `css()` you can use the function without any parameters to retrieve the value, and `val(value)` to update the value.
+Similar to `attr()` and `css()` you can use the `val()` function without any
+parameters to get the value of an input field, and `val(value)` to set the
+value.
 
 To empty an input field, you can set value to an empty string.
 
 ```javascript
+$('input').val();
 $('input').val("");
-
 ```
 
 ##Adding content
 
-There are many different ways you can add content. You can use **append** to add something to the end to an element, or **prepend** to add to the beginning to an element.
+There are many different ways you can add content. You can use **append** to add something to the end of an element, or **prepend** to add to the beginning of an element.
 
 ```js
-$('#container').append("<div>I love JQuery!</div>")
+$('#container').append("<div>I love jQuery!</div>")
 ```
 
 You can also use `replaceWith()` to substitute an element entirely with some new content.
 
-Try this out in your browser.
+Open the index.html of the files provided in your browser and try this out in the JavaScript console:
 
 ```js
-$('#container').replaceWith("<div>I love JQuery!</div>")
+$('#container').replaceWith("<div>I love jQuery!</div>")
 ```
 
 > Check the html of the page using the inspector.
 
 ##Handling Events
 
-Events is what happens when you interact with a website. Some events that you can capture are a **change** in an input field, a mouse **click** or even **focus** on an element. You can find a [all the events here](http://api.jquery.com/category/events/)
+Events are what happen when you interact with a website. Some events that you can capture are a **change** in an input field, a mouse **click** or even **focus** on an element. You can find a list of [all the events here](http://api.jquery.com/category/events/).
 
 We've learned in the previous lesson how to bind events on **click** by setting **onclick** to the HTML element..
 
@@ -100,15 +108,31 @@ We've learned in the previous lesson how to bind events on **click** by setting 
 <a href="#" class="done" onclick="alert('Click event')">Show an alert box</a>
 ```
 
-With JQuery we can achieve this by applying event listeners to the document of the page, listening for the event.
+With jQuery we can achieve the same thing with an event listener.
 
 ```js
 $(document).on('click','.done', function() {
- alert("Click event");
+  alert("Click event");
 });
 ```
+This function makes a JavaScript alert pop up when a user clicks on any element which has the class ".done".
 
-**Handling events**
+Although these two examples do the same thing there are some differences.
+
+##Event listeners
+
+  - Event listeners are usually attached to the document element so they listen
+    for events anywhere on the page.
+  - The event listener uses a selector like `.done` to listen to specific
+    elements. A selector can match more than one element, so one listener can
+    listen to many elements.
+  - jQuery's `on()` method is dynamic, so if we add elements to the page that
+    match the selector, i.e. add an element with class `done`, then the listener
+    will automatically listen to them too.
+
+To create your own event listener choose an `event` to listen for on the
+elements matching a `selector`. Then put the code you want to run each time the
+event occurs in the `function`.
 
 ```javascript
 $(document).on(event, selector, function() {
@@ -116,27 +140,22 @@ $(document).on(event, selector, function() {
 });
 ```
 
-Using the `on()` method, means that the click event will work even if we add new items to the DOM dynamically.
-
-> `$(this)` is the element that we have triggered the event from.
-
 ##Waiting for the page to load
 
 ```js
 $(document).ready(function() {
-  // here go all the interactions
-
-  /* click, mouseover, change etc */
+  // here go all the listeners
+  // e.g. on click, mouseover, change etc
 });
 ```
 
-Make a note of this. You should **always** use it or else your bindings won't work and the functions will run when you are loading the page.
+Make a note of this. Wrapping your event listeners and other code within this makes sure they are executed only after all the DOM elements are loaded and ready. You should **always** use it or else your bindings won't work and the functions will run before all elements on the page have loaded. So it might try to listen for events on elements that don't even exist yet and then you'll get lots of errors.
 
 #Exercise 1: Build a wish list
 
-Using JQuery and JavaScript functions, we will build a small todo list.
+Using jQuery and JavaScript functions, we will build a small todo list.
 
-Download the files required to begin working through the example [here](https://gist.github.com/despo/309f684b7a6e002aaf1f) or alternatively checkout with git.
+If you haven't yet, download the files required to begin working through the example [here](https://gist.github.com/despo/309f684b7a6e002aaf1f) or alternatively checkout with git.
 
 ```bash
 git clone https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
@@ -147,7 +166,7 @@ Move the files under your Github page folder, in a new directory `wishlist`. Als
 ```bash
 git commit -m "message"
 ```
-
+If you don't know how to use git yet, just ignore the above for now or [look at our git tutorial](http://tutorials.codebar.io/version-control/introduction/tutorial.html).
 
 ##Functionality
 - add wishes to the list by clicking the Add button
@@ -165,27 +184,33 @@ function addToList(item) {
 
 }
 ```
-In the `index.html` file, we already have an `<ol>` component, so we want to add each new item, as a list item. We can do that by constructing the html we need `"<li>" + item + "</li>"` and adding it to the list using `append()`.
+In the `index.html` file there is an empty list, `<ol id="items">`, and we're going to add list items to it.
 
-We can get the ordered list using the element tag and the id `$("ol#items")`
+Target the empty list using its html tag and id: `$("ol#items")`.
 
-Try running the function you've just written from the inspector
+Then construct the html for a new list item `"<li>" + item + "</li>"` and add it to the end of the list using jQuery's `append()` method.
+
+Try running the function you've just written from the browser console.
 
 ```js
 addToList("build a website");
 ```
 
-Now that you can successfully add items to the list, bind the function to the button with the id `#add-to-list`.  To get the text from the input field, you can use `$("#item").val()`.
+Now that you can successfully add items to the list, write an event handler to listen for the `click` event on the button. Tip: the button's id is `#add-to-list`.
+
+Then use jQuery's `val()` method to get the text from the input field and run your `addToList()` function with the input field text as the argument from the event handler. Tip: the input field's id is `#item`.
 
 ###Bonus
-After adding the item to the list
+After adding the item to the list:
 
-1. Empty the text field
-2. Use `focus()` to place the cursor back to the text field
+1. Empty the text field after adding the item to the list.
+2. Use jQuery's `focus()` method to place the cursor back in the text field after clicking the button.
+
+If you don't know how to use the focus() method, try searching for it in the [jQuery documentation](http://api.jquery.com/). There are some code examples illustrating how to use it.
 
 ###Label items
 
-To label items, update the html of the list item being added to the list, so it includes a label.
+To label items as "pending" or "done", add the below html code to the html for the new list item that you wrote at the beginning of the tutorial.
 
 `<span class='label pending'>Pending</span>`
 
@@ -195,9 +220,13 @@ Refresh the page and run `addToList("build a website")` again.
 
 ###Setting items to complete
 
-When we click on the Pending label, we want to set items to complete. We will do that by adding a CSS class `.complete` to the list item (use `addClass()`), **append** a new label `<span class='label success'>Done!</span>` and **remove** the item we've just clicked so that we can't trigger the event again.
+When we click on the Pending label, we want to set items to complete. We will do that by adding a CSS class `.completed` to the list item (use `addClass()`), **append** a new label `<span class='label success'>Done!</span>` and **remove** the item we've just clicked so that we can't trigger the event again.
 
 > Use `$(this)` to access the element that the event was triggered from.
+
+Let's go through this step by step.
+
+Try this in the console:
 
 First of all, bind a **click** event to the span we've added using its class with the `on()` function. As `<li>` is the parent node of the <span> element, we can access it using `parent()` (which is equivalent to `parentNode`
 that we've used in the previous lesson).
@@ -206,10 +235,11 @@ that we've used in the previous lesson).
 var parent_node = $(this).parent();
 ```
 
-> Use `attr()` to set the class attribute to `completed` or alternatively `addClass()`
+> Use `attr()` or `addClass()` to set the class attribute to `completed` 
 
 > Use `remove()` to remove an element from the DOM
 
+When you now click on the red label "pending", it should change to the green label "completed".
 
 ###Show the total task count
 
@@ -223,7 +253,7 @@ function updateTotal() {
 
 We **only** want to display the total **if there are completed or pending items** in the list. As we are using the `success` and `pending` CSS classes in each of our task, we should be able to get the occurrences count using `length`.
 
-Write the total `Pending: " + pending + " Completed: " + completed` in the element with the class `.total`
+Write the total `"Pending: " + pending + " Completed: " + completed` in the element with the class `.total`
 
 > Use `text()` to set the value. You can use `html()` for html content.
 
@@ -250,7 +280,7 @@ Have a look at our [**Wish List**](../../examples/wishlist/index.html).
 https://gist.github.com/ab21d29aa1ea8fbbbb0e.git
 ```
 
-Move the files under your Github page folder, in a  directory colorpicker.
+if you're using git, move the files under your Github page folder, in a  directory colorpicker.
 Don't forget to commit each task you complete! That way it will be easier to retrace your steps if something goes wrong!
 
 ##Functionality
@@ -283,7 +313,7 @@ Handle the `keydown keyup` and `keypress` events of the `#color` input. Pass the
 
 ###Set the color value
 
-Extend `setPreviewColor()` to also set the value of `.color-code` to the `background-color` of the `.preview` div.
+Extend `setPreviewColor()` to also set the text of `.color-code` to the `background-color` of the `.preview` div.
 As the color code is converted to *rgb* when set, that is the value the we will be displaying.
 
 ![](assets/images/color-codes.png)
@@ -293,7 +323,7 @@ As the color code is converted to *rgb* when set, that is the value the we will 
 Retrieve the color from the input field and add a box to the start of the `#colors` div every time the **Add to favorites** button is pressed, by handling the **click** event.
 
 ```javascript
-"<div class='item' style='background-color: " + color + ";'><div>"
+"<div class='item' style='background-color: " + color + ";'></div>"
 ```
 
 ###Create a function that adds the box to `#colors`
@@ -327,7 +357,7 @@ Pick 10 color codes you like and store them in an array.
 var colors = [ "22ac5e", "d68236" ... ]
 ```
 
-We can iterate through the array using JQuery's `each()` function.
+We can iterate through the array using jQuery's `each()` function.
 
 ```javascript
 $.each(array, function(index, element) {
@@ -352,13 +382,13 @@ random_position = Math.floor( Math.random() * colors.length )
 
 > Use the `array[index]` notation to retrieve the colors at the random position.
 
-Set `.preview`'s background color, to the random color code.
+Set `.preview`'s background color to the random color code.
 
 ##Bonus
 
 ###Restrict number of displayed boxes
 
-We only want to be able to add 16 colors to our favorite list. To do that, we can update the code handling the **click** event and check that the length of `$("#colors .item")` is **equal** than 16. If it's not, remove the last element.
+We only want to be able to add 16 colors to our favorite list. To do that, we can update the code handling the **click** event and check that the length of `$("#colors .item")` is **less** than 16. If it's not, remove the last element.
 
 This way, when the list is full, we remove a box and add another one.
 
@@ -394,4 +424,4 @@ Compare your colorpicker with [ours](../../examples/colorpicker/index.html).
 
 
 ---
-This ends our **Introduction to JQuery** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **Introduction to jQuery** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
