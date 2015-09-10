@@ -24,11 +24,11 @@ From the **PHP** [website](http://php.net/manual/en/intro-whatis.php)
 
 > PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
 
-Well what does this mean? It is very easy to build dynamic websites using **PHP** as the server-side language, which generates **html**.
+Well what does this mean? It is very easy to build dynamic websites using **PHP** as the server-side language, which generates **HTML**.
 
 ## What does PHP look like?
 
-A simple help world application would look like the following:
+A simple Hello World application would look like the following:
 
 *File: index.php*
 ```php
@@ -49,7 +49,7 @@ On the Command Line (CLI), type:
 php index.php
 ```
 
-And the out will be:
+And the output will be:
 
 ```bash
 $ php index.php
@@ -79,6 +79,6 @@ Lets see the script output in the browser, in your browser (ideally **Firefox** 
 
 ![Hello World](assets/images/helloworld.png)
 
-## Conclusion
+## Summary
 
-**PHP** is very easy to learn and developer Dynamic Websites and Web Applications with.
+Now you should know how to create a simple **PHP** script and run it via the Command Line or via the Built-in **PHP** WebServer and see the output to the Command Line or the Browser respectively.
