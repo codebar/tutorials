@@ -60,7 +60,7 @@ Hello World
 
 ## How to the output in the browser?
 
-Seeing it on the Command Line is great, but what about the browser? We will need to get a WebServer running, the easiest way is to use the buil-in PHP WebServer.
+Seeing it on the Command Line is great, but what about the browser? We will need to get a WebServer running, the easiest way is to use the built-in PHP WebServer.
 
 *Note: Built-in PHP WebServer is great for Development, but **NOT** Production.*
 
@@ -70,12 +70,12 @@ Go to the directory where you created the `index.php` file and run the following
 $ php -S 0.0.0.0:8080
 ```
 
-1. You are already familiar with the `php` command from before
+1. `php` is the same command from before, that we used to run our **php** script
 2. `-S` means built-in WebServer
 3. `0.0.0.0` is the IP that the WebServer should listen on. By using `0` it will listen on everything - fine for development
 4. `8080` is the port to listen on - fine for development but in production the default port is `80` and therefore not required when accessing a URL
 
-Lets see the script output in the browser, in your browser (ideally **Firefox** or **Chrome**) navigate to ` http://localhost:8080/` and you should see:
+Lets see the script output in your web browser! In your web browser navigate to ` http://localhost:8080/` and you should see:
 
 ![Hello World](assets/images/helloworld.png)
 
