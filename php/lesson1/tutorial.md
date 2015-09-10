@@ -75,7 +75,7 @@ $ php -S 0.0.0.0:8080
 3. `0.0.0.0` is the IP that the WebServer should listen on. By using `0` it will listen on everything - fine for development
 4. `8080` is the port to listen on - fine for development but in production the default port is `80` and therefore not required when accessing a URL
 
-Lets see the script output in the browser, in your browser (ideally **Firefox** or **Chrome**) navigate to ` http://localhost:8090/` and you should see:
+Lets see the script output in the browser, in your browser (ideally **Firefox** or **Chrome**) navigate to ` http://localhost:8080/` and you should see:
 
 ![Hello World](assets/images/helloworld.png)
 
