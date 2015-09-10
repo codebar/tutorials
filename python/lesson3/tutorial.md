@@ -41,15 +41,15 @@ the `pyton` repl (read eval print loop) in the CLI:
 
 Note this returns back the month/day/year convention. For more control over
 the formatting (order in which the date is displayed) try searching through
-the documentation for your version of the Python programming language. Another
-way to change the order is:
+the documentation for your version of the Python programming language.
+Another way to change the order is:
 
-      datetime.date.today().isoformat()
+      todays_date = date.today().isoformat()
 
-Later in this tutorial you'll be able to use the theory from above to return a
-HTML template serving the following to browsers:
+Later in this tutorial you'll be able to use the theory from above to return
+a HTML template serving the following to browsers:
 
-      <p>The next event starts at <time>{{ date }}<time></p>
+      <p>The next event starts at <time>{{ todays_date }}<time></p>
 
       <p class='warning notice'>NB. The above HTML (HTML5) should be written
       using the correct HTML attributes and not say "date".</p>
