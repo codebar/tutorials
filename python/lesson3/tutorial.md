@@ -4,7 +4,8 @@ title: Discovering Flask via Python and pip
 ---
 
 An alternative to *Ruby's Sinatra* is the lesser known *Flask* (run using Python).
-Both are web application frameworks. Similar to the MVC (model-view-controller) pattern but for dynamic and smaller applications and sites.
+Both are web application frameworks. Similar to the MVC (model-view-controller)
+pattern but for dynamic and smaller applications and sites.
 
 Knowing both can be advantageous in work scenarios, understanding
 different programming and computer science conventions or thoughts.
@@ -75,7 +76,7 @@ For great system wide safety, it's recommended to strongly consider virtualenv.
 `$ [sudo] pip install virtualenv` – it's recommend against using the [sudo] for
 various reasons. [Homebrew maintainers have written why they believe using
 "why `sudo` is bad"](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md#user-content-why-does-homebrew-say-sudo-is-bad-).
-See virtualenv (https://virtualenv.pypa.io/en/latest/installation.html)
+See virtualenv (https://virtualenv.pypa.io/en/latest/installation.html).
 
 ## Almost there
 You should now have `Python`, `pip` and `virtualEnv`.
@@ -87,7 +88,7 @@ separate from other projects in the future.
 Install flask using pip inside your activate ENV directory. For more details on
 getting started see the Pocoo team's (a subset of Python community working on
 Flask and other libraries) [guide to getting up and running
-with Flask](http://flask.pocoo.org/docs/quickstart/#quickstart)
+with Flask](http://flask.pocoo.org/docs/quickstart/#quickstart).
 
 Below is a script from the Flask documentation (version 0.10). That gets
 the start of an app, up and running:
@@ -107,4 +108,8 @@ Once you've created your own script, run it and the application will listen to
 requests and served to that declared location output in the CLI.
 
 ## Congratulations!
-This ends our **Flask basic** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **Flask basic** tutorial. Is there something you don't understand?
+Try and go through the provided resources with your coach. If you have any
+feedback, or can think of ways to improve this tutorial
+[send us an email](mailto:feedback@codebar.io) and let us know.
+
