@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HTML Lesson 2
+title: HTML &amp; CSS Lesson 2
 footer: true
 ---
 
@@ -8,7 +8,7 @@ footer: true
 
 **CSS** is the language used to style websites.
 
-It defines the visual representation of the content. For example colour, margins, borders, backgrounds, position in the page.
+It defines the visual representation of the page content.  For example, it determines the colour, size and position of the HTML elements on the page.
 
 ### What does it stand for?
 
@@ -24,16 +24,11 @@ _**CSS** works in conjunction with **HTML**_
 
 ### Today we will be focusing on fundamental CSS concepts
 
-We will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
+We will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks like [this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
 
 ## But before we start...
 
-> The first tutorial does not prepare you for this exercise. Before you continue, download the provided files.
-
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download)(mac/linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip)(windows)
+> Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download) (Mac/Linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip) (Windows)
 
 ### What can I do with CSS?
 
@@ -75,7 +70,7 @@ In the head of the html page define a style tag
 ```html
 <head>
   <title>I love owls</title>
-  <style type="text/css">
+  <style>
 
   </style>
 </head>
@@ -97,7 +92,7 @@ body {
 }
 ```
 
-As we have selected the **body** element, this change will apply to everything nested within it, the entire contents of our page.
+As we have selected the **body** element, this change will apply to everything nested within it: the entire contents of our page.
 
 Let's also remove the bullet from the lists that we have defined
 
@@ -193,7 +188,7 @@ At the beginning of the tutorial we described how to connect the CSS to our page
 ```html
 <head>
   <title>I love owls</title>
-  <style type="text/css">
+  <style>
 
   </style>
 </head>
@@ -211,15 +206,15 @@ To achieve this, let's move our CSS outside of the head of the page and into a n
 ```html
 <head>
   <title>I love owls</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 ```
 
 ## Cascading
 
-Stylesheets _cascade_ to all elements until they are changed.
+CSS styles _cascade_ to all elements until we add another style with a more specific selector.
 
-First let's reset the margin and border of all the images.
+First, let's reset the margin and border of all the images.
 
 ```css
 img {
@@ -228,7 +223,7 @@ img {
 }
 ```
 
-We can change the styling of some of these images by defining a more specific selector. This will supersede the `img` selector we just defined
+We can change the styling of some of these images by creating a style with a more specific selector.  This will supersede the `img` selector we just defined.
 
 ```css
 .bigimg img {
@@ -240,7 +235,7 @@ We can change the styling of some of these images by defining a more specific se
 
 ## CSS Properties
 
-So far we have explained some selectors and presented others with more self explanatory names. Knowing every selector, is not an easy task, but don't let this put you off. The internet is your friend. [Here you can find a list of all CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
+So far we have explained some selectors and presented others with more self-explanatory names.  You don't need to know every selector, so don't let this put you off.  The internet is your friend.  You can find a list of all CSS properties [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference).
 
 
 ## Styling our page further
@@ -423,9 +418,9 @@ ol li {
 
 ## Advanced and bonus material
 
-### Pseudo classes
+### Pseudo-classes
 
-A psedo class is a keyword added to a selector that specifies a special state of the element to be selected. [These](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) are the standard pseudo classes.
+Pseudo-classes are keywords that can be added to CSS selectors to specify a special state of an element. For example, adding `:hover` to the end of a selector will make the definition only apply when you hover your cursor over the element.  [These](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) are the standard pseudo-classes.
 
 Let's add the code below to make sure we only apply a margin to the _first li element_ within the pictures class.
 

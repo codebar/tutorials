@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HTML Lesson 1
+title: HTML &amp; CSS Lesson 1
 ---
 
 ## What is HTML?
@@ -44,7 +44,7 @@ An **element** is an HTML building block. There are paragraphs, headings, tables
 <h1>I am a heading</h1>
 ```
 
-Some elements are standalone, as they cannot contain anything else. They look like this: `<tagname/>`
+Some elements are "void", meaning that they cannot contain anything else. They look like this: `<tagname/>`
 
 ```html
 <br/>
@@ -68,7 +68,7 @@ It tells the browser which version of HTML the page is using.
 <!DOCTYPE html>
 ```
 
-We will only be using html for now, but you can find more about doctypes [here](http://www.w3.org/wiki/Doctypes_and_markup_styles).
+We will only be using **html** for now, but you can find more about doctypes [here](http://www.w3.org/wiki/Doctypes_and_markup_styles).
 
 The doctype is always followed by the `<html>` tag, which itself contains the contents of the page.
 
@@ -137,7 +137,7 @@ Elements can be nested inside each other. For example, by putting the `<h1>` ins
 
 ### Element: Paragraph `<p>`
 
-Putting content into a `<p>` will make it look like a paragraph structure. This helps make the content of a page easier to read.
+Putting content into a `<p>` will make it look like a paragraph. This helps make the content of a page easier to read.
 
 Add the following to your page body, after the `<h1>` heading:
 
@@ -165,8 +165,8 @@ To achieve that we must use the `<br/>` tag.
 
 ### Formatting text
 
-We can also **emphasise** or make text *important*.
-For emphasis we use `<strong>` and for importance `<em>`
+We can also *emphasise* text or make it **important**.
+For emphasis we use `<em>` and for importance we use `<strong>`.
 
 Let's emphasise some of the content of our paragraph
 
@@ -174,8 +174,8 @@ Let's emphasise some of the content of our paragraph
 <p>
   Most birds of prey sport eyes on the sides of their heads,<br/>
   but the stereoscopic nature of<br/>
-  the owl's forward-facing <strong>eyes permits the greater<br/>
-  sense of depth perception</strong> necessary for low-light hunting.
+  the owl's forward-facing <em>eyes permits the greater<br/>
+  sense of depth perception</em> necessary for low-light hunting.
 </p>
 ```
 
@@ -306,7 +306,7 @@ Add this underneath the ordered list about why we like owls.
 
 Some characters have special meaning in HTML. For instance, we use < and > to make HTML tags, and we use " to wrap our attributes. But what if we wanted to use those characters in our page?
 
-One way is to use **HTML entities**. These have an ampersand, a name, then a semicolon. Here's the HTML entity for a quote character: `&quot;`.
+One way is to use **HTML entities**. These have an ampersand (&amp;), a name, then a semicolon. Here's the HTML entity for a quote character: `&quot;`.
 
 You can also use a numerical format to produce special characters. [Here's a list](http://htmlandcssbook.com/extras/html-escape-codes/) of some common entities.
 
