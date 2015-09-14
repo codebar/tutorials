@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HTML Lesson 1
+title: HTML &amp; CSS Lesson 1
 ---
 
 ## What is HTML?
