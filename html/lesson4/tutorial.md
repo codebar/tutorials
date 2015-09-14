@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HTML Lesson 4
+title: HTML & CSS Lesson 4
 footer: true
 ---
 
