@@ -7,7 +7,7 @@ In today's tutorial, we will be again going through OO concepts - some of which 
 
 Don't forget to commit to git regularly and also try to **type** out the examples as much as possible instead of copy &amp; pasting!
 
-If you are going through the tutorial in your own time and need any help then [join the chatroom](https://gitter.im/codebar/tutorials), but first read our [Code of Conduct](http://codebar.io/code-of-conduct) as we will not tolerate any inappropriate behavior.
+If you are going through the tutorial in your own time and need any help then join the [gitter.im chatroom](https://gitter.im/codebar/tutorials) or the [slack.com channel](https://codebar.slack.com/messages/tutorials/), but first read our [Code of Conduct](http://codebar.io/code-of-conduct) as we will not tolerate any inappropriate behavior.
 
 # How does inheritance fit in OO?
 
@@ -281,13 +281,11 @@ Extend the game so that
 2. add an `inventory` method to a `Player`. Calling `inventory` prints out a list with all the items that the `Player` is holding
 3. extract a `Location` object. Modify your code so that it works with the location object, instead of a hash.
 
-If you need any help don't hesitate to ask [in our chatroom](https://gitter.im/codebar/tutorials).
+If you need any help don't hesitate to ask in our [gitter.im  chatroom](https://gitter.im/codebar/tutorials) or [slack.com channel](https://codebar.slack.com/messages/tutorials/).
 
 ---
 This ends our **Object Oriented Ruby and Inheritance (part 2)** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
 
-### Further reading 
+### Further reading
 
-If you want to challenge yourself further and dive into the world of Rails, a Ruby framework for building websites, here is a tutorial book to [get you started.](https://www.railstutorial.org/book/frontmatter) 
-
-
+If you want to challenge yourself further and dive into the world of Rails, a Ruby framework for building websites, here is a tutorial book to [get you started.](https://www.railstutorial.org/book/frontmatter)

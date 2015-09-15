@@ -9,7 +9,7 @@ Ask your coach for help on getting your project setup in Github and granting per
 
 Today's session is not aimed to teach you anything new programming-wise but to enable you to start building things on your own. You are not expected to produce a working application by the end of today's lesson but to structure your thoughts and figure out what you want to build.
 
-To get help outside our sessions, [join the codebar channel](https://gitter.im/codebar) or send an email to [hello at codebar.io](mailto://hello@codebar.io).
+To get help outside our sessions, join the codebar channel on [gitter.im](https://gitter.im/codebar) or [slack.com](https://codebar.slack.com/) or send an email to [hello at codebar.io](mailto://hello@codebar.io).
 
 # Things to help you get started
 
@@ -93,4 +93,3 @@ Some popular API's that you may find useful
 
 ---
 This ends our **Building your own app** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
-
