@@ -7,7 +7,7 @@ In today's tutorial, we will be again going through OO concepts - some of which 
 
 Don't forget to commit to git regularly and also try to **type** out the examples as much as possible instead of copy &amp; pasting!
 
-If you are going through the tutorial in your own time and need any help then join the [gitter.im chatroom](https://gitter.im/codebar/tutorials) or the [slack.com channel](https://codebar.slack.com/messages/tutorials/), but first read our [Code of Conduct](http://codebar.io/code-of-conduct) as we will not tolerate any inappropriate behavior.
+If you are going through the tutorial in your own time and need any help then join the [slack.com channel](https://codebar.slack.com/messages/tutorials/), but first read our [Code of Conduct](http://codebar.io/code-of-conduct) as we will not tolerate any inappropriate behavior.
 
 # How does inheritance fit in OO?
 
