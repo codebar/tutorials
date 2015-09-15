@@ -6,7 +6,7 @@ title: Introduction to PHP
 ##### Requirements
 
 * 15 minutes
-* PHP installed - this is by default on most Operating Systems
+* PHP installed - this is by default on most Operating Systems. But if not, here are the official [installation instructions](http://php.net/manual/en/install.php)
 
 ##### Achievements
 
