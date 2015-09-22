@@ -61,7 +61,7 @@ your project without any extra fuss. How convenient!
 ## Hello Sinatra
 
 It's time to start working with Sinatra. Open your text editor, and create a
-file called `server.rb`.
+file called `app.rb`.
 
 In this file, type the following:
 
@@ -78,7 +78,7 @@ to the directory where you saved your Ruby file (remember `cd` from the version
 control tutorial), and type the following:
 
 ```
-ruby server.rb
+ruby app.rb
 ```
 
 Where the path is the path to where you saved the file. If all goes well, it'll
@@ -126,7 +126,7 @@ page, also called the 'root'. This is the one that maps to
 If we want to have a new page at `http://localhost:4567/about` we'll need to
 create a new route that matches `/about`.
 
-Open our `server.rb` file and add the following code at the bottom, below our
+Open our `app.rb` file and add the following code at the bottom, below our
 other code.
 
 ```ruby
@@ -138,7 +138,7 @@ end
 Our previous block of code ran when we `get` a request to the `/` address,
 and this new one runs when we `get` a request to the `/about` address.
 
-Start up our server again with `ruby server.rb`, and navigate to
+Start up our server again with `ruby app.rb`, and navigate to
 `http://localhost:4567/about`- we've created a new page. Navigate back to
 `http://localhost:4567/`, our first page is still there.
 
