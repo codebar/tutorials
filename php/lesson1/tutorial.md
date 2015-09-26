@@ -96,7 +96,7 @@ This will now show a file list in the built-in browser
 
 Now in the built-in webserver you will see the same output as the CLI from earlier `Hello world from Cloud9!`
 
-![Preview webserver output](assets/images/preview-webserver.png)
+![Preview webserver output](assets/images/php-webserver.png)
 
 ---
 
