@@ -6,80 +6,98 @@ title: Introduction to PHP
 ##### Requirements
 
 * 15 minutes
-* PHP installed - this is by default on most Operating Systems. But if not, here are the official [installation instructions](http://php.net/manual/en/install.php)
-    * Check installation by running the following command in cli `php -v`, this should output the version, eg. **5.5.9**
+* Internet connection and a modern browser
+
+*Note: Free for small projects*
 
 ##### Achievements
 
 By the end of this tutorial you will be able to:
 
-* write a **Hello World** Application that outputs on the:
+* run PHP in your browser from any computer in the following manner:
     * Command Line (CLI)
     * Browser
 
 ---
 
-## What is PHP?
+If you want to have a go with **PHP** but do not wish to setup a local environment on your laptop, one can use an online IDE to write PHP.
 
-From the **PHP** [website](http://php.net/manual/en/intro-whatis.php)
+## Setting up the Web based IDE to write PHP
 
-> PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.
+* 1. In a modern browser visit the url `https://c9.io`
 
-Well what does this mean? It is very easy to build dynamic websites using **PHP** as the server-side language, which generates **HTML**.
+* 2. Login with your GitHub credentials as shown in the image below
 
-## What does PHP look like?
+![Login with GitHub](assets/images/login.png)
 
-A simple Hello World application would look like the following:
+Then you should see your **Workspaces**
 
-*File: index.php*
-```php
-<?php
-echo "Hello World";
-```
+* 3. Click on the `+` to create a new **Workspace**
 
-1. The file must end with the extension `.php`
-2. The file must begin with the opening tag `<?php`
-3. `"` are used to Open/Close a string
-4. 'echo' Outputs the string [echo on php website](http://php.net/manual/en/function.echo.php)
+![Create new Workspace](assets/images/workspace-add.png)
 
-## How to run the script?
+* 4. Fill in your details: project name, description etc
 
-On the Command Line (CLI), type:
+In the last section **Template**, choose **PHP**
 
-```php
-php index.php
-```
+![PHP Template](assets/images/workspace-php.png)
 
-And the output will be:
+* 5. Then press **Create**
 
-```bash
-$ php index.php
-Hello World
-```
+Give it a minute to load, especially for the first time.
 
-*Note: `$` implies the Command Line shell, you did not need to type this.*
+Then you should have something like this
 
-## How to the output in the browser?
+![PHP Workspae IDE](assets/images/workspace-ide.png)
 
-Seeing it on the Command Line is great, but what about the browser? We will need to get a WebServer running, the easiest way is to use the built-in PHP WebServer.
+## In the Web based IDE
 
-*Note: Built-in PHP WebServer is great for Development, but **NOT** Production.*
+Now your **Workspace** has been created, you will have an example **PHP** script listed on the left, called `hello-world.php`.
 
-Go to the directory where you created the `index.php` file and run the following command:
+![Script list](assets/images/workspace-example-script.png)
 
-```bash
-$ php -S 0.0.0.0:8080
-```
+Double click this file and it will open in the *main window* which is on the right of the file list.
 
-1. `php` is the same command from before, that we used to run our **php** script
-2. `-S` means built-in WebServer
-3. `0.0.0.0` is the IP that the WebServer should listen on. By using `0` it will listen on everything - fine for development
-4. `8080` is the port to listen on - fine for development but in production the default port is `80` and therefore not required when accessing a URL
+![Workspace code](assets/images/workspace-code.png)
 
-Lets see the script output in your web browser! In your web browser navigate to ` http://localhost:8080/` and you should see:
+## Running the PHP code
 
-![Hello World](assets/images/helloworld.png)
+The **PHP** code can be run in two ways, the **CLI** or in the **Web Browser**
 
-## Summary
+### Running the PHP code in the CLI
 
-Now you should know how to create a simple **PHP** script and run it via the Command Line or via the Built-in **PHP** WebServer and see the output to the Command Line or the Browser respectively.
+* 1. Go to the bottom window that has your `yourname@yourprojectname:~/workspace`
+
+* 2. Type `php hello-world.php` and press **enter**.
+
+You should see the output `Hello world from Cloud9!`
+
+![PHP CLI](assets/images/php-cli.png)
+
+### Running the PHP code in the Browser
+
+* 1. Run the project webserver
+
+Click on **Run Project**
+
+![Run PHP Webserver](assets/images/run-php-webserver.png)
+
+The button will now change to **Stop**
+
+* 2. Click **Preview**, then **Preview running application**
+
+![Preview PHP Webserver](assets/images/preview-php-webserver.png)
+
+This will now show a file list in the built-in browser
+
+![Preview file list](assets/images/preview-file-list.png)
+
+* 3. Click on `hello-world.php` to run the script
+
+Now in the built-in webserver you will see the same output as the CLI from earlier `Hello world from Cloud9!`
+
+![Preview webserver output](assets/images/preview-webserver.png)
+
+---
+
+Now change the PHP code and repeat! Enjoy.
