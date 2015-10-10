@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Introduction to PHP
+title: Online PHP Environment in Minutes
 ---
 
 ##### Requirements
