@@ -13,7 +13,7 @@ Today we will be briefly explaining how you can test-drive your code. Testing is
 
 ## JavaScript Testing Frameworks
 
-There are [a number](http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) of libraries written to assist with testing JavaScript, but we will use [Jasmine](http://pivotal.github.io/jasmine/). The syntax is quite simple and it doesn't require any additional configuration in order to use.
+There are [a number](http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) of libraries written to assist with testing JavaScript, but we will use [Jasmine](http://jasmine.github.io/). The syntax is quite simple and it doesn't require any additional configuration in order to use.
 
 ## Jasmine
 
