@@ -8,7 +8,7 @@ title: Introduction to PHP
 * 15 minutes
 * PHP installed - this is by default on most Operating Systems. But if not, here are the official [installation instructions](http://php.net/manual/en/install.php)
     * Check installation by running the following command in cli `php -v`, this should output the version, eg. **5.5.9**
-    * Or use an online IDE [Lesson 1](/php/lesson1/tutorial.md)
+    * Or use an [online IDE](https://docs.c9.io/docs/getting-started)
 
 ##### Achievements
 
