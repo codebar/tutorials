@@ -81,7 +81,7 @@ In the head of the html page define a style tag
 </head>
 ```
 
-Include the styling described below, within the style tag we defined.
+Include the styling in this tutorial, within this style tag.
 
 ## Introductions to selectors
 
@@ -127,9 +127,11 @@ A useful resource for figuring out color codes is [http://0to255.com](http://0to
 
 **1px** defines the thickness of the border
 
-**dotted** the style of the line
+**dotted** defines the style of the line
 
-**#a369d5** the color of the border
+**#a369d5** defines the color of the border
+
+How about changing the border thickness to 5px to see what happens? 
 
 #### Selector: class
 
@@ -154,7 +156,7 @@ margin-left: auto;
 What we defined above is
 _margin: (top bottom) (left right)_
 
-> You can see the margin of an element by inspecting it and having a look at the computed tab
+> You can see the margin of an element by right clicking in your browser and selecting Inspect Element then having a look at the computed tab on the right hand site. (If you're using Safari this feature is not enabled by default like Chrome so go to your Safari preferences tab, then go to Advanced and check the box that says Show develop menu in menu bar).
 
 #### Selector: id
 
@@ -369,7 +371,7 @@ ol li {
 }
 ```
 
-**font-weight** thickness of displayed text
+**font-weight** is the thickness of displayed text
 
 **text-align** horizontal alignment of a text element
 
@@ -425,7 +427,7 @@ ol li {
 
 ### Pseudo classes
 
-A psedo class is a keyword added to a selector that specifies a special state of the element to be selected. [These](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) are the standard pseudo classes.
+A pseudo class is a keyword added to a selector that specifies a special state of the element to be selected. [These](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) are the standard pseudo classes.
 
 Let's add the code below to make sure we only apply a margin to the _first li element_ within the pictures class.
 
@@ -453,6 +455,8 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
   vertical-align: baseline;
 }
 ```
+
+If you have some time how about you go back through the tutorial making little amends to your CSS to see what things you can change. 
 
 -----
 

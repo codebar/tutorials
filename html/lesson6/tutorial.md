@@ -8,7 +8,7 @@ footer: true
 
 ### Recap
 
-In the last lesson, we briefly introduced **HTML5** and **CSS3**. We focused on **CSS3**.
+In the last lesson, we introduced you to even more **HTML5** and **CSS3**.
 
 ### Today we will be focusing more on HTML5!
 
@@ -60,7 +60,7 @@ We've already seen that we can put images in our page using the `<img>` tag, but
 
 ```html
 <figure>
- <img src="assets/images/concerned-pug.png">
+ <img src="assets/images/concerned-pug.png" alt="Concerned pug">
  <figcaption>
   Concerned pug
  </figcaption>
@@ -133,8 +133,8 @@ img {
 
 
 -----
-This ends our sixth lesson. How did you find the introduction to HTML5? Is there something you don't understand? Try to use the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our sixth lesson. How did you find learning HTML5 and CSS? Is there something you don't understand? Try to use the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
 
 ## Extras
 
-Now that you are familiar with HTML & CSS, how about you go away and create your own portfolio site. Think about the pages that you may include, such as home, about me and a portfolio or gallery page. You may even want to include a downloadable CV.
+Now that you are familiar with HTML & CSS, how about you go away and create your own little portfolio site. Think about the pages that you may include, such as home, about me and a portfolio or gallery page. You may even want to include a downloadable CV.

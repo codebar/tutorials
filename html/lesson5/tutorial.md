@@ -112,8 +112,8 @@ Add this right after the beginning of the element with the id `wrapper`
 
 ```html
 <div>
-  <img src="anita-top.jpg"/>
-  <img src="anita-bottom.jpg"/>
+  <img src="anita-top.jpg" alt="Anita Borg image 1"/>
+  <img src="anita-bottom.jpg" alt="Anita Borg image 2"/>
   <div>
     <a href="http://gos.sbc.edu/b/borg.html">reference</a>
     <a href="http://en.wikipedia.org/wiki/Anita_Borg">wikipedia</a>
@@ -154,7 +154,7 @@ Great! Now our images and links are on the left, and the main content on the rig
 
 ### Border-radius
 
-[border radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) enables us to create rounded corners for our elements. In the past, multiple divs and the use of images was required to achieve that effect.
+[Border radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) enables us to create rounded corners for our elements. In the past, multiple divs and the use of images was required to achieve that effect.
 
 `border-radius: arc`
 
@@ -179,7 +179,7 @@ As we only want the bottom right and bottom left corners to be rounded, we can b
   border-bottom-right-radius: 5px;
 ```
 
-Let's also round the corners of the second picture. First, a class `rounded` to it.
+Let's also round the corners of the second picture. First, let's add a class `rounded` to it.
 
 ```css
 .rounded {
@@ -211,7 +211,7 @@ Also add a top border to our page, to make it a bit more polished. Add this to t
 
 ### Background
 
-Background is not a new CSS property, but in CSS3 it had a lot more capabilities. You can set multiple images, specify their dimension,  position and attachment.
+Background is not a new CSS property, but in CSS3 it had a lot more capabilities. You can set multiple background images, specify their dimension, position and attachment.
 
 To set a background you can use
 
@@ -228,7 +228,7 @@ You can also set different properties for your backgrounds, by defining them in 
 
 #### Let's try this out.
 
-First lets set two background images, the first positioned on the right and the second on the left.
+First let's set two background images, the first positioned on the right and the second on the left.
 
 ```
 background: url('assets/images/background-right.jpg') right top no-repeat,
@@ -259,7 +259,7 @@ Do you remember how we styled our links last time? Today we will try and make th
 
 First, let's give their container element a class called `references`
 
-Add a top margin, so there is some space between them and the image above and center them.
+Add a top margin so that there is some space between them and the image above. Let's center them too.
 
 ```css
 .references {
@@ -268,7 +268,7 @@ Add a top margin, so there is some space between them and the image above and ce
 }
 ```
 
-Now, set a class `btn` to both of the links inside the `references` div and style that.
+Now, set a class `btn` to both of the links inside the `references` div and style them.
 
 ```css
 a.btn {
@@ -307,7 +307,7 @@ a.btn:hover {
 
 ## A little more about Anita
 
-The text in our page, is one of Anita Borg's speeches. Lets add a brief biography, at the top of the page, just below the title `h1`
+The text in our page, is one of Anita Borg's speeches. Let's add a brief biography about her at the top of the page, just below the title `h1`
 
 ```html
 <p>
@@ -315,7 +315,7 @@ Anita Borg believed that technology affects all aspects of our economic, politic
 </p>
 ```
 
-Lets style that. First, let's assign it a class `about`
+Let's style that. First, give it a class `about`
 
 ```css
 p.about {
@@ -355,7 +355,7 @@ Also, add its title using an `h2` heading
 
 ### Achievements
 
-Anita was an amazing personality and a person who contributed greatly to women in technology.
+Anita had an amazing personality and was a person who contributed greatly to women in technology.
 Let's list some of her achievements, just after the `about` paragraph
 
 ```html
@@ -399,7 +399,7 @@ Making it prettier
 
 ### CSS - Even and Odd rules, applying styling to alternate elements
 
-We will finish off, by styling every second child element of our list.
+We will finish off by styling every second child element of our list.
 Thanks to some great CSS selectors, this is quite easy to do.
 
 We can use

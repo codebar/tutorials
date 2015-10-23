@@ -93,7 +93,7 @@ Add an image wrapped in a `<div>` element
 
 ```html
 <div>
-  <img src="ada_lovelace.jpg"/>
+  <img src="ada_lovelace.jpg" alt="Ada Lovelace"/>
 </div>
 ```
 
@@ -115,7 +115,7 @@ Before you can manipulate the `<div>` surrounding the image, you must be able to
 
 ```html
 <div class="my-picture">
-  <img src="ada_lovelace.jpg"/>
+  <img src="ada_lovelace.jpg" alt="Ada Lovelace"/>
 </div>
 ```
 
@@ -184,7 +184,7 @@ Note: `padding`, `margin` and `border` can be applied to any combination of side
 
 ### Styling the header
 
-The page is gradually starting to come together. Make `<header>` a bit more distinct by setting a background color and aligning its contents in its center.
+Our page is gradually starting to come together. Make `<header>` a bit more distinct by setting a background color and aligning its contents in its center.
 
 ```css
 header {
@@ -262,7 +262,7 @@ margin-top: 55px;
 margin-left: 20px;
 ```
 
-###padding and margin
+###Padding and margin
 Padding and margin can be set in a number of different ways
 
 `padding: top right bottom left;` e.g. _padding: 10px 20px 30px 5px;_
@@ -275,9 +275,9 @@ Padding and margin can be set in a number of different ways
 
 Alternatively, you can only set the side you want `padding-right: 20px`
 
-_this also applies to the margin_
+_this method also applies to the margin_
 
-###more styling...
+###More styling...
 
 Specify a class `.social-media` in the `ul` element
 
@@ -306,7 +306,7 @@ Add a bottom border, to give the effect of a line, to the individual list items 
 }
 ```
 
-> Tweak the properties using the inspector
+> Tweak the properties using the inspector.
 > What happens when you remove the width or increase the padding?
 
 ## Pseudo classes
@@ -346,7 +346,7 @@ We only want links that are within the list to be affected. So we will specifica
 
 We only want to change the border color when hovering over the link. To avoid repeating ourselves an easy way to do that is by being more specific and using `border-left-color`. Since we have no other borders, we could also use `border-color`
 
-**Remember to have a look [at the list of all CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference) (mentioned in the previous tutorial) when working on styling. The properties are too many to remember!**
+**Remember to have a look [at the list of all CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference) (mentioned in the previous tutorial) when working on styling. There are too many properties to remember!**
 
 ```css
 .social-media li a:hover {
@@ -381,7 +381,7 @@ box-shadow: 0 1px 1px 1px rgba(237, 235, 232, 0.4);
 
 ## Setting up the main container
 
-You've done a great job so far! The sidebar is done and you know about box properties.
+You've done a great job so far! The sidebar is done and you are familiar with box properties.
 Time to add some content to the page.
 
 Add a div, with the class main after `.sidebar`
@@ -434,7 +434,7 @@ Add a link so that anyone coming to the page can easily find out more about Char
 <a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage's </a>
 ```
 
-Ada was the world's first programmer. We want that content to stand out. Add a span around and specify a class `highlight`, so the intention is obvious and other people working on the code of the page can easily understand it.
+Ada was the world's first programmer therefore we want that to stand out. Add a span around it and specify a class `highlight`, so the intention is obvious and other people working on the code of the page can easily understand it.
 
 ```html
 <span class="highlight">I am the world's first programmer</span>
