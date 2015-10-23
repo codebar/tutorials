@@ -81,7 +81,7 @@ In the head of the html page define a style tag
 </head>
 ```
 
-Include the styling in this tutorial, within this style tag.
+Include the styling in this tutorial, within the style tag we just created.
 
 ## Introductions to selectors
 
