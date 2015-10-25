@@ -69,14 +69,15 @@ $.ajax({
     3. Update the stored token
 
     4. Update remaining attempts and display all guesses
-        - If an attempt is not successful, append it to the `$('.attempts')` using a span with the class `wrong`
+        - Append each attempt to the `$('.attempts')` using a span
+        - If the attempt is successful, include the class `correct` in the span; if it is unsuccessful, include the class `wrong`
         - You can then find out how many wrong attempts there were using `$('.wrong').length+1;`
 
 3. On the 7th failure, retrieve the solution using the **GET** request
 
     1. Display the solution, hide the input field and allow a user to start a new game
 
-4. **Bonus** don't process letters, guesses that have already been attempted or empty space 
+4. **Bonus** don't process numbers, guesses that have already been attempted or empty space
 
     1. You can use jQuery's `$.isNumeric(character))` to check if a letter is a number
 
@@ -99,4 +100,4 @@ This ends our **HTTP Requests, AJAX and APIs** tutorial. Is there something you 
 
 Now that you are familiar with HTTP requests, AJAX and APIs, how about you go away and create a webpage that pulls in all instagram pictures with a certain hashtag.
 
-Or embed a google map onto a webpage with it pointing to a destination of your choice in London. 
+Or embed a google map onto a webpage with it pointing to a destination of your choice in London.
