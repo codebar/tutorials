@@ -200,7 +200,7 @@ Wrap your existing paragraph in a div and add a new heading to it:
 
 ```html
 <div>
-  <h3>Owls</h3>
+  <h1>Owls</h1>
   <p>
     Most birds of prey sport eyes on the sides of their heads,<br/>
     but the stereoscopic nature of<br/>
