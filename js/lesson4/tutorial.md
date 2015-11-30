@@ -153,7 +153,7 @@ function getGithubInfo(username) {
 
 Our `getGithubInfo` method will return the response from the server, including the HTTP status. If the request was successful, the status code will be 200. If we check that this code is 200, we know we can proceed to reading the data.
 
-Create a new method called `showUser()` that handles the response from the API, and performs this check on the passed `xmlhttp` variable.
+Create a new method called `showUser()` that handles the response from the API, and performs this check on the passed `xmlhttp` variable. Once the `keypress` block has called `getGithubInfo`, it should pass the result to `showUser`.
 
 ```js
 function showUser(xmlhttp) {
@@ -198,10 +198,31 @@ When we have a failing request, we want to change the `html` of `$("#profile h2"
 Try this out using username: `iamcodebar` (or if someone registered this, make up a random string)
 
 
-##Request using jQuery
+### Bonus!
 
-AJAX requests can also be handled using jQuery using the `ajax()` method.
-Things are a bit easier when using jQuery as we can create different code blocks that handle successful or failed requests.
+Well done, you've finished! For a bonus, switch your `getGithubInfo` method to run asynchronously - your coach can help you.
+
+> Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange)
+
+##Exercise 2 - BBC's tomorrow's TV schedule
+
+[Download](https://gist.github.com/despo/05cab2f0b38bc02318e7) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
+
+For the second exercise, we will build an application that retrieves tomorrow's TV schedule for each genre using BBC's API.
+
+###What we will be doing:
+
+1. Retrieve and render available genres using `http://www.bbc.co.uk/tv/programmes/genres.json`
+
+2. Write a function that retrieves tomorrow's TV schedule using a genre `http://www.bbc.co.uk/tv/programmes/genres/<genre>/schedules/tomorrow.json`
+
+3. Write a function that displays each programme
+
+4. **Bonus** Retrieve all upcoming episodes of a programme
+
+###Request using jQuery
+
+This time, let's use jQuery's `ajax()` method. Things are a bit easier when using jQuery as we can create different code blocks that handle successful or failed requests.
 
 ```js
 $.ajax({
@@ -227,21 +248,6 @@ $.ajax({
 
 `.fail()` is called when the request fails
 
-##Exercise 2 - BBC's tomorrow's TV schedule
-
-[Download](https://gist.github.com/despo/05cab2f0b38bc02318e7) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
-
-For the second exercise, we will build an application that retrieves tomorrow's TV schedule for each genre using BBC's API.
-
-###What we will be doing:
-
-1. Retrieve and render available genres using `http://www.bbc.co.uk/tv/programmes/genres.json`
-
-2. Write a function that retrieves tomorrow's TV schedule using a genre `http://www.bbc.co.uk/tv/programmes/genres/<genre>/schedules/tomorrow.json`
-
-3. Write a function that displays each programme
-
-4. **Bonus** Retrieve all upcoming episodes of a programme
 
 ## Retrieving and displaying all available genres
 
