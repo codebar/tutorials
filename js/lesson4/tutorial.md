@@ -6,8 +6,7 @@ title: HTTP Requests, AJAX and APIs
 In the last lesson we've introduced [jQuery](http://jquery.com/download/).
 Today, we will be explaining HTTP Requests, using AJAX and APIs.
 
-Our goal is to implement a [Github User Finder](../../examples/github-user-finder/index.html)
-that allows us to look up GitHub users by the user name.
+Our goal is to implement a [Github User Finder](../../examples/github-user-finder/index.html) that allows us to look up GitHub users by the user name.
 
 ## Before we start...
 
