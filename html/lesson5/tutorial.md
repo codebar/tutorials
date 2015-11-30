@@ -20,7 +20,7 @@ The page we will build will look similar to this [example page](http://codebar.g
 ### Required files
 
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7565600/download)
+Download the files required to begin working through the tutorial from [here](https://drive.google.com/file/d/0Bws_MKyXHfv9VUYxazUzOE9Rc2M/view?usp=sharing)
 
 ## Getting started
 
@@ -436,5 +436,3 @@ You can find both the rgb and hex values of a color through [http://0to255.com](
 
 -----
 This ends our fifth lesson. How did you find the introduction to CSS3? Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
-
-
