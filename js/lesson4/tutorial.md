@@ -28,16 +28,7 @@ As part of the response, a request gives back a **status code**. You can use thi
 
 ###HTTP Verbs
 
-HTTP Verbs are the actions performed when the server receives a request.
-
-| Verb | Description |
-| ---- | ----------- |
-| **GET**  | fetching a resource (e.g. /index.html  will return the HTML of the page) |
-| **PUT**  |  updating an existing resource. |
-| **PATCH** | updating a particular value of a resource |
-| **POST** |  Create a new resource. |
-| **DELETE**  | Delete an existing resource. |
-
+HTTP verbs are sent by the browser or client, and along with the URL used and data transmitted form part of the instruction to the API. There are several verbs, but in this tutorial we will be primarily using GET. GET is used to fetch information from an API. Another common verb is POST, which is used to create a new object on the remote service.
 
 #AJAX
 
