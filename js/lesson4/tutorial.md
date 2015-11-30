@@ -15,7 +15,7 @@ GitHub offers a [simple API](https://status.github.com/api) for viewing its curr
 
 You can access an API in your web browser. Just pop the following into the address bar:
 
-    `https://status.github.com/api.json`
+    https://status.github.com/api.json
 
 If you are on a mac or a linux/unix machine, you can access the API using curl:
 
