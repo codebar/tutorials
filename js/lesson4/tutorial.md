@@ -165,7 +165,7 @@ function showUser(xmlhttp) {
 }
 ```
 
-Once we've checked the status, we need to decode the data which is stored in `xmlhttp.responseText`. It's in JSON format, which is a string, so we need to turn that into a native JavaScript object. We do this using `JSON.parse(data)`.
+Once we've checked the status, we need to decode the data which is stored in `xmlhttp.responseText`. It's in [JSON](http://www.json.org/) format, which is a string, so we need to turn that into a native JavaScript object. We do this using `JSON.parse(data)`.
 
 ```js
 function showUser(xmlhttp) {
