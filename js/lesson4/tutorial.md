@@ -11,7 +11,11 @@ In this tutorial we will be looking at HTTP and API requests. We will first run 
 
 Every time the browser fetches data from a server (which could be a page, an image, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then sends back a **response**. An API is an easy way of fetching information from a remote service, in a way that's easy for a computer to understand.
 
-GitHub offers a [simple API](https://status.github.com/api) for viewing its current server uptime. Try this [example request](https://rested.io/#/requests/87bc5477-a4ee-4bab-a9fb-0f37d91ff9c6) to view the current GitHub status.
+GitHub offers a [simple API](https://status.github.com/api) for viewing its current server uptime.
+
+You can access an API in your web browser. Just pop the following into the address bar:
+
+    `https://status.github.com/api.json`
 
 If you are on a mac or a linux/unix machine, you can access the API using curl:
 
@@ -38,11 +42,19 @@ HTTP verbs are sent by the browser or client, and along with the URL used and da
 
 ##Exercise 1 - Retrieve GitHub user information
 
-[Download](https://gist.github.com/despo/7af30cfe957f3cfc2a9f/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/despo/7af30cfe957f3cfc2a9f`
+Well build a small application that gives us back information about a GitHub user - we want to show their username, information and their picture. [Download](https://gist.github.com/despo/7af30cfe957f3cfc2a9f/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/despo/7af30cfe957f3cfc2a9f`
 
-Using the example above, we'll build a small application that gives us back information about a GitHub user.
+GitHub offers an API where you can request information for a given username. The verb to use is GET, and the url is `https://api.github.com/users/<username>`. For codebar, this would be: `https://api.github.com/users/codebar`. Again, to request this you can use curl:
 
-The URL structure for the request is `https://api.github.com/users/<username>` and here is a partial response to get you started
+    $  curl -XGET https://api.github.com/users/codebar
+
+or, as GET is the default verb, just:
+
+    $ curl https://api.github.com/users/codebar
+
+Again, you can simply access this URL in your web browser by inserting `https://api.github.com/users/codebar` into the address bar.
+
+The response will look something like the JSON data below, which we have shortened:
 
 ```json
 {
@@ -58,14 +70,11 @@ The URL structure for the request is `https://api.github.com/users/<username>` a
   "location": "San Francisco",
   "email": "octocat@github.com",
   "bio": "There once was...",
-  ...
 }
 
 ```
 
-\*You can read more information about the request structure in the [Github API](http://developer.github.com/v3/users/#response). This is not necessary for this exercise.
-
-> After parsing the response, you can access the data using the **dot** notation. For example, if we've parse the response into a user variable `var user = JSON.parse(responseText)`, we can access `user.login`
+This data is what's called key value pairs, meaning that the name of the field is displayed immediately before the value. As you can see, the URL for the avatar (user's icon) is in the `avatar_field` field, and is `https://avatars.githubusercontent.com/u/9906?v=2`.
 
 ###Getting started
 
