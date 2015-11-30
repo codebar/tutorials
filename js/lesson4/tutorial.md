@@ -78,38 +78,114 @@ This data is what's called key value pairs, meaning that the name of the field i
 
 ###Getting started
 
-First, let's create a function that does the AJAX call to the GitHub API.
+First, open the HTML page supplied in the download. As you can see, there is a box to type in a username. When the user has typed in the username, they should be able to trigger the API call to GitHub by pressing <enter>.
 
-```js
-function getGithubInfo(username) {
-  var xhr = new XMLHttpRequest();
-  // open and then send the request
-
-  return xhr;
-}
-```
-> Set the async parameter to false so the call is synchronous.
-This means the browser will wait for the call to the GitHub API to finish before continuing.
-
-> Otherwise you can set it to true and add the extra methods to handle the changes in `readyState` of the request.
-
-> See [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange) for more details.
-
-**Note** We want `getGithubInfo(username)` to return us the entire response, so we can check for the status and handle it when necessary.
-
-To test this out, let's handle the keypress on the input field. We want this to only execute when we press the return key. To do that, we handle the `event` posted, and check for the key that's been pressed using [`which`](http://api.jquery.com/event.which/).
+The following code allows you to listen for a keypress on the input field, and to see if it was the <enter> key that was pressed.
 
 ```js
 $(document).ready(function(){
   $(document).on('keypress', '#username', function(e){
-    if (e.which === 13) {
-      // get val() from input field
-
-      // assign getGithubUserInfo(username) to a variable response
+    if (event.which === 13) { // check the key was <enter>
+      // do something
     }
   })
 });
 ```
+
+We will need to pass the username to GitHub, so we need to extract it from the input text box. To show that we can do this - let's first extract the data using jQuery's `val()`, and log it to the console. Something like this should work:
+
+```js
+$(document).ready(function(){
+  $(document).on('keypress', '#username', function(e){
+    if (event.which === 13) { // check the key was <enter>
+      var input = $(this)
+      var username = input.val()
+
+      console.log("username was: " + username)
+
+    }
+  })
+});
+```
+
+Now we're ready to pass this through to GitHub. Let's make another function, something like this:
+
+```js
+function getGithubInfo(username) {
+  var url = "https://api.github.com/users/" + username
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", url, false);
+  xmlhttp.send();
+
+  var data = xmlhttp.responseText;
+
+  console.log(data)
+}
+```
+
+`XMLHttpRequest` is the object we use in JavaScript to perform an HTTP or API request. Although it has `XML` in the name (XML is a data format), it can be used for other formats such as JSON, which is what we're using here.
+
+We create an `XMLHttpRequest` object and then call the `open` method, passing three arguments:
+
+1. the verb - in this case, GET
+2. the url - in this case the url eg https://api.github.com/users/codebar
+3. whether or not to run this request synchronously or asynchronously.
+
+In this case, we'll specify synchronously by passing `false`. This means the browser will wait for the call to the GitHub API to finish before continuing. We'll get into asynchronous requests later on.
+
+You can now call `getGithubInfo`, passing the username, from the `keypress` block above. That will log the data to the console. Next, we need to pass this back to the web page via the DOM.
+
+```js
+function getGithubInfo(username) {
+  var url = "https://api.github.com/users/" + username
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", url, false);
+  xmlhttp.send();
+
+  return xmlhttp;
+
+}
+```
+
+### Handling a successful request
+
+Our `getGithubInfo` method will return the response from the server, including the HTTP status. If the request was successful, the status code will be 200. If we check that this code is 200, we know we can proceed to reading the data.
+
+Create a new method called `showUser()` that handles the response from the API, and performs this check on the passed `xmlhttp` variable.
+
+```js
+function showUser(xmlhttp) {
+  if(xmlhttp.status === 200){
+    // show the user details
+  } else {
+    // show an error
+  }
+}
+```
+
+Once we've checked the status, we need to decode the data which is stored in `xmlhttp.responseText`. It's in JSON format, which is a string, so we need to turn that into a native JavaScript object. We do this using `JSON.parse(data)`.
+
+```js
+function showUser(xmlhttp) {
+  if(xmlhttp.status === 200){
+    // show the user details
+    var json = xmlhttp.responseText;
+    var user = JSON.parse(json)
+  } else {
+    // show an error
+  }
+}
+```
+
+Now the `user` variable will contain all the information we need to update the page. Finish the function to:
+
+1. Display the user's Github id in `#profile h2` - `<user login> + " is GitHub user #" + <user id>`
+2. Add a link to the user's Github profile in `#profile .information`. The link should have a class `profile`
+3. Add an image in `#profile .avatar`. To do that, you can use the `avatar_url`
+   from the response.
+
 
 ###Handling a failed request
 
@@ -120,29 +196,6 @@ First, let's make sure we handle any requests that have failed.
 When we have a failing request, we want to change the `html` of `$("#profile h2")` to `No such user: <username>`
 
 Try this out using username: `iamcodebar` (or if someone registered this, make up a random string)
-
-###Handling a successful request
-
-When the request is succesful, we want to call another function that will handle displaying the information on the page. Let's do that in a showUser() function.
-
-```js
-function showUser(user) {
-  //render user information
-}
-```
-
-The `showUser(user)` function should:
-
-1. Display the user's Github id in `#profile h2` - `<user login> + " is GitHub user #" + <user id>`
-
-2. Add a link to the user's Github profile in `#profile .information`. The link should have a class `profile`
-
-3. Add an image in `#profile .avatar`. To do that, you can use the `avatar_url`
-   from the response.
-
-> Once you have parsed the response, try using `console.log()` to see what the object looks like in the browser console.
-
-> Don't forget to call `showUser()` from the function handling the keypress!
 
 
 ##Request using jQuery
