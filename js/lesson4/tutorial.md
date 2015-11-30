@@ -9,7 +9,13 @@ In this tutorial we will be looking at HTTP and API requests. We will first run 
 
 ## What are HTTP Requests?
 
-Every time the browser fetches data from a server (which could be a page, an images, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then sends back a **response**
+Every time the browser fetches data from a server (which could be a page, an image, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then sends back a **response**. An API is an easy way of fetching information from a remote service, in a way that's easy for a computer to understand.
+
+GitHub offers a [simple API](https://status.github.com/api) for viewing its current server uptime. Try this [example request](https://rested.io/#/requests/87bc5477-a4ee-4bab-a9fb-0f37d91ff9c6) to view the current GitHub status.
+
+If you are on a mac or a linux/unix machine, you can access the API using curl:
+
+    $ curl https://status.github.com/api.json
 
 Here is an example of the **GET** requests issued by the [wishlist tutorial](http://codebar.github.io/tutorials/examples/wishlist/index.html).
 
