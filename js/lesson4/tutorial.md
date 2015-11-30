@@ -42,7 +42,7 @@ HTTP verbs are sent by the browser or client, and along with the URL used and da
 
 ##Exercise 1 - Retrieve GitHub user information
 
-Well build a small application that gives us back information about a GitHub user - we want to show their username, information and their picture. [Download](https://gist.github.com/despo/7af30cfe957f3cfc2a9f/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/despo/7af30cfe957f3cfc2a9f`
+We'll build a small application that gives us back information about a GitHub user - we want to show their username, information and their picture. [Download](https://gist.github.com/deniseyu/d1bc03b8091153b4b1a7/download) the exercise files or clone them directly from Github `https://gist.github.com/deniseyu/d1bc03b8091153b4b1a7`
 
 GitHub offers an API where you can request information for a given username. The verb to use is GET, and the url is `https://api.github.com/users/<username>`. For codebar, this would be: `https://api.github.com/users/codebar`. Again, to request this you can use curl:
 
