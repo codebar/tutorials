@@ -3,14 +3,7 @@ layout: page
 title: HTTP Requests, AJAX and APIs
 ---
 
-In the last lesson we've introduced [jQuery](http://jquery.com/download/).
-Today, we will be explaining HTTP Requests, using AJAX and APIs.
-
-Our goal is to implement a [Github User Finder](../../examples/github-user-finder/index.html) that allows us to look up GitHub users by the user name.
-
-## Before we start...
-
-Don't forget to move the files for the exercises under your Github page folder. Commit each task you complete! If you are having trouble with this, ask your coach to help you out.
+In this tutorial we will be looking at HTTP and API requests. We will first run synchronous requests using vanilla JavaScript. After that, we will look at running asynchronous requests, and using jQuery, which was introduced in the previous tutorial.
 
 # HTTP Requests
 
@@ -183,14 +176,6 @@ The `showUser(user)` function should:
 
 > Don't forget to call `showUser()` from the function handling the keypress!
 
-
-##Publish to Github
-
-Link to your Github User Finder from `index` and push your changes to Github.
-
-**Link to your app** http://`<username>`.github.io/`<project>`/github-user-finder/index.html
-
-Here is a link to our [Github User Finder](../../examples/github-user-finder/index.html).
 
 ##Request using jQuery
 
