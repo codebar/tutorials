@@ -36,49 +36,11 @@ As part of the response, a request gives back a **status code**. You can use thi
 
 HTTP verbs are sent by the browser or client, and along with the URL used and data transmitted form part of the instruction to the API. There are several verbs, but in this tutorial we will be primarily using GET. GET is used to fetch information from an API. Another common verb is POST, which is used to create a new object on the remote service.
 
-#AJAX
-
-AJAX is a way of updating websites asynchronously, without having to reload them. It stands for &#x200b;**A**&#x200b;synchronous &#x200b;**Ja**&#x200b;vascript and &#x200b;**X**&#x200b;ML.
-
-##Request using JavaScript
-
-Using JavaScript, we can perform an AJAX request using `XMLHttpRequest`.
-The `open()` method specified the type of request, the URL and if the request can be handled asynchronously or not.
-
- `xmlhttp.open(<request verb>, url, <async:true|false>);`
-
-The different between using a synchronous and an asynchronous request is that our page will wait until the request has been completed, if we specify **synchronous**. That means that no interaction with the page is possible while that request is waiting to be completed. So you should always use **asynchronous**.
-
-**An example using an asynchronous request**
-
-```javascript
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.open("GET", "https://api.github.com/", true);
-xmlhttp.send();
-```
-
-To retrieve the response, we need to access `xmlhttp.responseText`. Before doing that though, we should make sure that the `xmlhttp.status` is `200`. Otherwise we might accidentally try to work with an error response.
-
-> Have another look at the response status codes we mentioned earlier. What is `200`?
-
-To be able to utilise the response we get, we need to convert it to `JSON`. JSON
-is a way of turning JavaScript objects into strings and vice versa. This is very
-useful if we want to exchange data over HTTP which works understands with text.
-You can use `JSON.parse` to turn JSON strings into real JavaScript objects.
-
-```js
-var londonJson = '{"name":"London","population":8308369}';
-var london = JSON.parse(londonJson);
-console.log(london.name);
-```
-
-> JSON stands for &#x200b;**J**&#x200b;ava&#x200b;**S**&#x200b;cript &#x200b;**O**&#x200b;bject &#x200b;**N**&#x200b;otation.
-
 ##Exercise 1 - Retrieve GitHub user information
 
 [Download](https://gist.github.com/despo/7af30cfe957f3cfc2a9f/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/despo/7af30cfe957f3cfc2a9f`
 
-Using the example above, we'll build a small application that gives us back information about a Github user.
+Using the example above, we'll build a small application that gives us back information about a GitHub user.
 
 The URL structure for the request is `https://api.github.com/users/<username>` and here is a partial response to get you started
 
