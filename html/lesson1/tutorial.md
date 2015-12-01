@@ -3,63 +3,46 @@ layout: page
 title: HTML & CSS Lesson 1
 ---
 
+##Objectives 
+In this tutorial we are going to look at:
+
+* What is HTML?
+* Fundamental HTML elements
+* Webpage structure
+* Special HTML characters
+* HTML commenting
+
+##Goal
+By the end of this tutorial you will have build [this.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
+
 ## What is HTML?
 
-**HTML** is the language used to build websites.
+**HTML** is the language used to build websites. All text and content that you see on the internet is built using HTML. 
 
-It defines the structure of the website, so anything related to the content of the page itself: text, images, videos.
+**CSS** is used with HTML to style the page. However we will not be learning any of this today as this is covered in the next tutorial.
 
 
-### What does it stand for?
+### What does HTML stand for?
 
 **H**yper **T**ext **M**arkup **L**anguage
 
 
-### What makes a website
+## HTML elements
 
-HTML: structure of a website
+An **element** is an HTML building block. There are paragraphs, headings, links, lists, and [many more.](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 
-CSS: presentation
-
-
-_The styling of a website is not part of the HTML._
-
-
-### Today we will be focusing on fundamental HTML concepts
-
-We will be building this [example page](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
-
-## But before we start...
-
-### HTML element anatomy
-
-An **element** is an HTML building block. There are paragraphs, headings, tables, links, lists, and many more.
-
-**Tags** mark the opening and closing of an element. They often contain other elements and text.
+HTML elements are made up of an opening tag, followed by content then the closing tag.
 
 `<tagname>some content</tagname>`
 
-```html
-<p>I am a paragraph</p>
-<h1>I am a heading</h1>
-```
-
-Some elements are standalone, as they cannot contain anything else. They look like this: `<tagname/>`
+Some HTML elements do not need a closing tag as they are used to place standalone elements on the webpage. For example:
 
 ```html
-<br/>
-<img/>
+<hr>
+<img>
 ```
 
-### Comments
-
-We can use a special kind of tag to add notes to our page. The computer will ignore them, but programmers can read them and understand how your code works.
-
-```html
-<!-- Note to self: this is where the header goes -->
-```
-
-### DOCTYPE and HTML tags
+## Webpage structure
 
 The doctype is the first thing that must be defined in an HTML page.
 It tells the browser which version of HTML the page is using.
@@ -70,7 +53,7 @@ It tells the browser which version of HTML the page is using.
 
 We will only be using html for now, but you can find more about doctypes [here](http://www.w3.org/wiki/Doctypes_and_markup_styles).
 
-The doctype is always followed by the `<html>` tag, which itself contains the contents of the page.
+The doctype is always followed by the `<html>` tag, which contains the contents of your page.
 
 ```html
 <!DOCTYPE html>
@@ -78,18 +61,47 @@ The doctype is always followed by the `<html>` tag, which itself contains the co
 </html>
 ```
 
-### HEAD and BODY tags
+## HEAD and BODY tags
 
-An HTML page is split into two parts. The **head** and the **body**.
+A HTML page is split into two parts. The **head** and the **body**.
 
 The **head** contains information like the page title, stylesheets, scripts and meta information.
 
 The **body** contains what is visible to the user.
 
 
-## Let's get started!
+### Let's get coding!
 
-Let's start by defining the basic structure of our website. Create a new folder for your work called "HTML tutorial 1". Then create a new file called "index.html" in that folder. Here's what you should put in it:
+Let's start by defining the basic structure of your website. Create a new folder for your work called "HTML tutorial 1". Then inside this folder create a new file called "index.html". 
+
+With guidance from your coach: 
+
+* declare the doctype to be HTML
+* open and close a set of `<html></html>` tags
+* Within this, create the head and body tags
+
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+  </body>
+</html>
+```
+
+> If you load this in your browser, do you see anything on the page?
+
+Now inside your head tag create a title:
+
+```html
+<title>I love owls</title>
+```
+
+> Don't forget to save your changes before refreshing the browser!
+
+> You should see that the tab bar has changed? If not, double check your code.
 
 ```html
 <!DOCTYPE html>
@@ -98,17 +110,14 @@ Let's start by defining the basic structure of our website. Create a new folder 
     <title>I love owls</title>
   </head>
   <body>
-    <!-- Put your page content in this body tag! -->
   </body>
 </html>
 ```
 
-> If you load this in your browser, do you see anything on the page?
-
-> What about in the browser's title bar or tab bar?
+Can you see that the title tag is indented, this makes your code much easier to read and you'll be able to see nested tags much easier.
 
 
-### Element: Heading
+### Element: Headings 
 
 Headings come in many sizes
 
@@ -119,84 +128,39 @@ Headings come in many sizes
 ##### `<h5>Heading</h5>`
 ###### `<h6>Heading</h6>`
 
-Add a heading to your page. Place it inside the page body.
+A `h1` defines the most important heading whereas a `h6` defines the least important.
 
-```html
-<h1>Owls!</h1>
-```
-
-> Did you remember to add the heading to the body?
-
-> Don't forget to save your changes before refreshing the browser!
-
-### Nesting elements
-
-Elements can be nested inside each other. For example, by putting the `<h1>` inside the body tags you are nesting a heading inside the `<body>` of a page.
-
-> You must always close any element that you open. The first element you open, you close last!
+Add a `h1` heading which includes Owls inside the body tag of your page.
 
 ### Element: Paragraph `<p>`
 
-Putting content into a `<p>` will make it look like a paragraph structure. This helps make the content of a page easier to read.
+Putting content into a `<p>` tag will make it look like a paragraph. This helps make the content of your page easier to read for the user.
 
-Add the following to your page body, after the `<h1>` heading:
+Add the following paragraph to your page body, after the `<h1>`:
 
 ```html
 <p>
   Most birds of prey sport eyes on the sides of their heads,
-  but the stereoscopic nature of
-  the owl's forward-facing eyes permits the greater
+  but the stereoscopic nature of the owl's forward-facing eyes permits the greater
   sense of depth perception necessary for low-light hunting.
 </p>
 ```
 
-### Line break `<br/>`
-As you've noticed, despite the new lines there are no line breaks in our paragraph.
-To achieve that we must use the `<br/>` tag.
+#### Element: Link `<a>`
+
+A link lets the user click through to another webpage. We use `href` to indicate where you want the user to go to.
+
+Let's add a link to the bottom of your paragraph:
 
 ```html
-<p>
-  Most birds of prey sport eyes on the sides of their heads,<br/>
-  but the stereoscopic nature of<br/>
-  the owl's forward-facing eyes permits the greater<br/>
-  sense of depth perception necessary for low-light hunting.
-</p>
-```
-
-### Formatting text
-
-We can also **emphasise** or make text *important*.
-For emphasis we use `<strong>` and for importance `<em>`
-
-Let's emphasise some of the content of our paragraph
-
-```html
-<p>
-  Most birds of prey sport eyes on the sides of their heads,<br/>
-  but the stereoscopic nature of<br/>
-  the owl's forward-facing <strong>eyes permits the greater<br/>
-  sense of depth perception</strong> necessary for low-light hunting.
-</p>
-```
-
-### Element: Link `<a>`
-
-The most important attribute of a link is **href**, which indicates the path or URL that is accessed through it.
-
-Let's add a link to the bottom of our paragraph
-
-```html
-<br/>
 <a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
 ```
 
 ### Element: Div `<div>`
 
-Div stands for _division_. It creates sections in an HTML document. They don't affect the layout of your page - but they do help you group related elements together.
+A `div` tag lets you group elements together. Grouping elements is useful because we can later style them together (e.g. giving them all the same colour).
 
-We can use a div to contain our paragraph.
-
-Wrap your existing paragraph in a div and add a new heading to it:
+Wrap your existing paragraph in a div and add a new heading to it.
 
 ```html
 <div>
@@ -212,13 +176,12 @@ Wrap your existing paragraph in a div and add a new heading to it:
 </div>
 ```
 
-
 ### Element: List `<li>`
 
 There are two types of lists, **ordered** and **unordered**.
-An unordered list `<ul>` is defined with bullets whilst an ordered list `<ol>` uses a sequence.
+An unordered list `<ul>` is defined with bullets whilst an ordered list `<ol>` uses a numbered sequence.
 
-Let's list the reasons we like owls so much under the main heading of the page (the `<h1>` element we added earlier on)
+Let's list the reasons we love owls under the `h1` we created earlier in the page.
 
 ```html
 <h2>Why do I like owls so much?</h2>
@@ -233,11 +196,9 @@ Let's list the reasons we like owls so much under the main heading of the page (
 
 ### Element: Image `<img>`
 
-So far we've learned a lot about how to add text to our page. But how about something to look at?
+So far we've learned a lot about how to add text to our page. Now let's add some images!
 
-Let's add some images!
-
-Before we start, we'll need to add the image files we want to use to the project folder.  It's a good idea to keep images in their own folder, so first, create a folder called 'images' inside the same folder as your HTML file.  Next, download the images you'll need. Do this by right clicking on each of the following links, select 'Save Link As...', and save it to the images folder you just created:
+Before we start, we'll need to add the image files we want to use to the project folder.  It's very important to keep images in their own folder, so first, create a folder called 'images' inside the same folder as your HTML file.  Next, download the images you'll need. Do this by right clicking on each of the following links, select 'Save Link As...', and save it to the images folder you just created:
 
 * [logo.png](/html/lesson1/images/logo.png "logo.png")
 * [img1.jpg](/html/lesson1/images/img1.jpg "img1.jpg")
@@ -251,9 +212,9 @@ Images are primarily made up of three attributes
 
 * the `<img>` tag
 * the `src` attribute, which lets the page know what image we want to view
-* the `alt` attribute, where we describe our image for people who can't see it
+* the `alt` attribute, this provides extra information if it cannot be seen on the webpage for any reason
 
-Before the main heading of the page, add the following
+In order for us to see this image on the webpage we need to link to the image, this involves telling the webpage where it is and what it is called. TBefore the main heading of the page, add the following
 
 ```html
 <div>
@@ -261,14 +222,11 @@ Before the main heading of the page, add the following
 </div>
 ```
 
-> Remember: the `<head>` section is not the same as a heading! Make sure your new `<div>` is in the page body.
-
-> Can you see the codebar logo? What happens when you change logo to logo1?
-
-> If you can't see your image, make sure you put it in the `images` folder.
+Here you can see we have told the `src` of the `href` to look in the images folder and display the image `logo.png`, then we have given it a relevant `alt` attribute.
 
 Let's add some more images. This time, we'll put them in a list.
-Do this underneath  the `<h2>Why do I like owls so much?</h2>` heading.
+
+Do this underneath the `<h2>Why do I like owls so much?</h2>` heading.
 
 ```html
 <ul>
@@ -277,8 +235,6 @@ Do this underneath  the `<h2>Why do I like owls so much?</h2>` heading.
   <li><img src="images/img3.jpg" alt="cuddly"/></li>
 </ul>
 ```
-
-So a list can not only contain text, but other elements as well.
 
 ### Adding a link on multiple elements
 
@@ -301,6 +257,22 @@ Add this underneath the ordered list about why we like owls.
 
 > Click any of the images. Can you get to the link's page?
 > What happens if you take the `<br/>` tag out? Remember to put it back afterwards!
+
+### Formatting text
+
+We can also **emphasise** or make text *important*.
+For emphasis we use `<strong>` and for importance `<em>`
+
+Let's emphasise some of the content of your paragraph
+
+```html
+<p>
+  Most birds of prey sport eyes on the sides of their heads,
+  but the stereoscopic nature of
+  the owl's forward-facing <strong>eyes permits the greater
+  sense of depth perception</strong> necessary for low-light hunting.
+</p>
+```
 
 ### Special characters and more formatting
 
@@ -355,6 +327,8 @@ The difference between links and mailto links, is the content defined in the **h
 
 ## Bonus
 
+### Twitter share 
+
 Add a share on twitter link along with your other sharing links.
 
 ```html
@@ -363,4 +337,17 @@ Add a share on twitter link along with your other sharing links.
 
 ---
 
+### Commenting
+
+We can use a special kind of tag to add notes to our page. The computer will ignore them, but programmers can read them and understand how your code works.
+
+```html
+<!-- Note to self: this is where the header goes -->
+```
+
 This ends our first lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+###Further reading
+
+*[HTML elements](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+*[Special characters](http://htmlandcssbook.com/extras/html-escape-codes)
