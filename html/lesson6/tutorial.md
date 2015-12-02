@@ -6,9 +6,13 @@ footer: true
 
 ## HTML AND CSS - Advanced HTML5
 
-### Objectives 
+### Objective
  
-Today we will be focusing more on HTML5!
+Today we will be focusing more on HTML5.
+
+### Goal
+
+Build a website 
 
 ### Recap
 
@@ -134,7 +138,7 @@ img {
 
 
 -----
-This ends our sixth lesson. How did you find learning HTML and CSS? If you have some spare time how about going back through this tutorial and making some of your own amends. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)back@codebar.io) and let us know.
+This ends our sixth lesson. How did you find learning HTML and CSS? If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
 ## Extras
 

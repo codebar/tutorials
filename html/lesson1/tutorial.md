@@ -327,7 +327,7 @@ Add a share on twitter link along with your other sharing links.
 <a href="http://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on twitter</a>
 ```
 -----
-This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and making some of your own amends. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
+This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
 
 ##Further reading
 

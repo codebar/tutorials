@@ -6,7 +6,7 @@ footer: true
 
 ##  HTML AND CSS - Diving into HTML5 and CSS3
 
-###Objectives 
+###Objective 
  
 Today we will be building a website and will focus more on HTML5 and CSS3 specific elements.
  
@@ -437,6 +437,6 @@ You can find both the rgb and hex values of a color through [http://0to255.com](
 
 
 -----
-This ends our fifth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and make some of your own amends to see what happends. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
+This ends our fifth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
 

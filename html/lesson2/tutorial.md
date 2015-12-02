@@ -4,7 +4,9 @@ title: HTML & CSS Lesson 2
 footer: true
 ---
 
-##Objectives 
+## Introduction to CSS
+
+###Objectives 
  
 In this tutorial we are going to look at:
  
@@ -15,13 +17,13 @@ In this tutorial we are going to look at:
 * Cascading selectors
 * Pseudo classes
  
-##Goal
+###Goal
  
 Today we will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
 
 ### Required files
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download)(mac/linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip)(windows)
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download) (mac/linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip) (windows).
 
 ## What is CSS?
 
@@ -42,7 +44,7 @@ CSS: presentation
 _**CSS** works in conjunction with **HTML**_
 
 
-### What can I do with CSS?
+## What can I do with CSS?
 
 You can change the color, position, dimensions and presentation of different elements
 
@@ -466,7 +468,7 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
 If you have some time how about you go back through the tutorial making little amends to your CSS to see what things you can change. 
 
 -----
-This ends our second lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and make some of your own amends to see what happends. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
+This ends our second lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
 ##Further reading
 

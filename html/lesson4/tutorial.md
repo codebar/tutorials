@@ -4,9 +4,9 @@ title: HTML & CSS Lesson 4
 footer: true
 ---
 
-## HTML AND CSS - CSS, layouts and formatting
+## HTML AND CSS - layouts and formatting
 
-###Objectives 
+###Objective 
  
 Today we will be building a website and learning more about CSS layouts and formatting. We will also be explaining in more detail elements that we mentioned in the previous two lessons.
  
@@ -16,7 +16,7 @@ The page we will build will look similar to this [example page]( http://codebar.
 
 ### Required files
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7443914/download)
+Download the files required to begin working through the tutorial from [here.](https://gist.github.com/despo/7443914/download)
 
 ### Recap
 
@@ -514,7 +514,7 @@ line-height: 23px;
 ```
 
 -----
-This ends our fourth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and make some of your own amends to see what happends. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
+This ends our fourth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
 ##Further reading 
 
