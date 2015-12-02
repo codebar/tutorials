@@ -466,10 +466,10 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
 If you have some time how about you go back through the tutorial making little amends to your CSS to see what things you can change. 
 
 -----
-
-This ends our second lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back throught this tutorial and make some of your own amends to see what happends. If there something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
+This ends our second lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and make some of your own amends to see what happends. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
 ##Further reading
 
-*[CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
-*[More CSS](http://learn.shayhowe.com/html-css/)
+* [CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
+* [More CSS](http://learn.shayhowe.com/html-css/)
+

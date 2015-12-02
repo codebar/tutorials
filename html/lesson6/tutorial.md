@@ -4,11 +4,11 @@ title: HTML Lesson 6
 footer: true
 ---
 
-##Objectives 
+## HTML AND CSS - Advanced HTML5
+
+### Objectives 
  
 Today we will be focusing more on HTML5!
-
-##  HTML AND CSS - Advanced HTML5
 
 ### Recap
 
@@ -16,7 +16,7 @@ In the last lesson, we introduced you to even more **HTML5** and **CSS3**.
 
 ## HTML5 structural semantics
 
-### Sectioning
+## Sectioning
 
 We used some HTML5 elements in previous lessons, including `<header>`, `<footer>`, and `<section>`. HTML5 introduced many other new elements. Some common ones include `<nav>`, `<article>`, and `<main>`.
 
@@ -30,18 +30,18 @@ A section is usually a "blob" of content. When you are considering using it, ask
 If you just want to style a part of the page, a `<div>` would be more appropriate.
 
 
-### `<article>`
+## `<article>`
 
 An `<article>` should make sense as a self-contained document. For instance, it could be a forum post, a magazine or newspaper article, a blog entry, a user-submitted comment, or any other independent item of contant. You can use `<header>` and `<footer>` tags within your `<article>`s too.
 
-### `<aside>`
+## `<aside>`
 
 An `<aside>` is something related to but separate to the current containing element. For instance, if your page displayed bits of blog posts, an `<aside>` might contain a list of posts, or adverts related to the main content. Or maybe your page is a blog article - in that case, you could use an `<aside>` to contain a sidenote.
 
 
-### Other elements
+## Other elements
 
-#### `<address>`
+### `<address>`
 
 The `<address>` element is used to provide contact information related to the page. It's mainly meant for details like postal addresses and telephone numbers, but you can include email addresses and links to online contact methods too. Here's an example:
 
@@ -55,7 +55,7 @@ The `<address>` element is used to provide contact information related to the pa
 </address>
 ```
 
-#### `<figure>` and `<figcaption>`
+### `<figure>` and `<figcaption>`
 
 We've already seen that we can put images in our page using the `<img>` tag, but we often want to include a caption for our images.
 `<figure>` can be used in conjunction with the `<figcaption>` element to describe images, pictures, illustrations and diagrams (and even more).
@@ -89,7 +89,6 @@ We can use other attributes to control our media plays. To make music start play
   Your browser doesn't support embedded audio!
 </audio>
 ```
-
 
 ## Getting started with our page
 
@@ -135,8 +134,8 @@ img {
 
 
 -----
-This ends our sixth lesson. How did you find learning HTML5 and CSS? Is there something you don't understand? Try to use the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our sixth lesson. How did you find learning HTML and CSS? If you have some spare time how about going back through this tutorial and making some of your own amends. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)back@codebar.io) and let us know.
 
 ## Extras
 
-Now that you are familiar with HTML & CSS, how about you go away and create your own little portfolio site. Think about the pages that you may include, such as home, about me and a portfolio or gallery page. You may even want to include a downloadable CV.
+Now that you are familiar with HTML & CSS, how about you create your own portfolio site. Think about the pages that you may include, such as home, about me and a portfolio or gallery page. You may even want to include a downloadable CV.
