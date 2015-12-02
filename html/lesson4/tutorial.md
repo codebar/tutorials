@@ -4,23 +4,25 @@ title: HTML & CSS Lesson 4
 footer: true
 ---
 
-##  HTML AND CSS - CSS, layouts and formatting
+## HTML AND CSS - layouts and formatting
+
+###Objective 
+ 
+Today we will be building a website and learning more about CSS layouts and formatting. We will also be explaining in more detail elements that we mentioned in the previous two lessons.
+ 
+###Goal
+
+The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
+
+### Required files
+
+Download the files required to begin working through the tutorial from [here.](https://gist.github.com/despo/7443914/download)
 
 ### Recap
 
 In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets.
+
 **HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements and pseudo classes.
-
-
-### Today we will be building a website and learning more about CSS layouts and formatting
-
-The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
-
-## But before we start...
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7443914/download)
 
 ## Getting started
 
@@ -37,7 +39,7 @@ Define the basic structure of the website
 </html>
 ```
 
-Map the stylesheet to the page
+Link the stylesheet to the page
 
 ```html
 <link rel="stylesheet" href="style.css">
@@ -58,7 +60,7 @@ Add a header element in the `<body>` of the page
 ```html
 <header>
   <div>
-    <img src="gracehopper.jpg" alt="Grace Hopper"/>
+    <img src="gracehopper.jpg" alt="Grace Hopper">
   </div>
   <div>
     <h1>Grace Hopper</h1>
@@ -98,7 +100,7 @@ Set a CSS class `portrait` to the `<div>` wrapping the image
 
 ```html
 <div class="portrait">
-  <img src="gracehopper.jpg" alt="Grace Hopper"/>
+  <img src="gracehopper.jpg" alt="Grace Hopper">
   ...
 ```
 
@@ -250,7 +252,7 @@ Let's add the main content. Paste underneath the header. We will tweak things as
   </p>
   <p>
   <div>
-     <img src="cobol.jpg" alt="Cobol"/>
+     <img src="cobol.jpg" alt="Cobol">
      <span>Working with COBOL</span>
   </div>
   Grace loved the Navy, and was reluctant to retire, even at the age of 79. At her retirement ceremony she was recognized for all she contributed, and received the Distinguished Service Medal of the Defense Department, the department's highest honor, and a citation which stated
@@ -325,7 +327,7 @@ Add a CSS class to the second image's wrapper
 
 ```html
 <div class="end-of-line">
-  <img src="cobol.jpg" alt="Working with Cobol"/>
+  <img src="cobol.jpg" alt="Working with Cobol">
   <span>Working with COBOL</span>
 </div>
 ```
@@ -512,4 +514,9 @@ line-height: 23px;
 ```
 
 -----
-This ends our fourth and last lesson in introducing HTML and CSS. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our fourth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
+
+##Further reading 
+
+* [Learn layout](http://learnlayout.com/)
+

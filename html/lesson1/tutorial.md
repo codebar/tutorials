@@ -3,6 +3,8 @@ layout: page
 title: HTML & CSS Lesson 1
 ---
 
+## Introduction to HTML
+
 ###Objectives 
 
 In this tutorial we are going to look at:
@@ -18,7 +20,7 @@ In this tutorial we are going to look at:
 
 By the end of this tutorial you will have build [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
 
-### What is HTML?
+#### What is HTML?
 
 **HTML** is the language used to build websites. All text and content that you see on the internet is built using HTML. 
 
@@ -30,7 +32,7 @@ By the end of this tutorial you will have build [this webpage.](http://codebar.g
 **H**yper **T**ext **M**arkup **L**anguage
 
 
-### HTML elements
+## HTML elements
 
 An **element** is an HTML building block. There are paragraphs, headings, links, lists, and [many more.](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 
@@ -45,7 +47,7 @@ Some HTML elements do not need a closing tag as they are used to place standalon
 <img>
 ```
 
-### Webpage structure
+## Webpage structure
 
 The doctype is the first thing that must be defined in an HTML page.
 It tells the browser which version of HTML the page is using.
@@ -220,7 +222,7 @@ Do this underneath the `<h2>Why do I like owls so much?</h2>` heading.
 </ul>
 ```
 
-### Adding a link on multiple elements
+## Adding a link on multiple elements
 
 Links can contain many elements - not just text.
 
@@ -242,7 +244,7 @@ Add this underneath the ordered list about why we like owls.
 > Click any of the images. Can you get to the link's page?
 > What happens if you take the `<br/>` tag out? Remember to put it back afterwards!
 
-### Formatting text
+## Formatting text
 
 We can also **emphasise** or make text *important*.
 For emphasis we use `<strong>` and for importance `<em>`
@@ -324,8 +326,8 @@ Add a share on twitter link along with your other sharing links.
 ```html
 <a href="http://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on twitter</a>
 ```
-
-This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and making some of your own amends. If there something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
+-----
+This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
 
 ##Further reading
 
