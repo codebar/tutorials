@@ -3,7 +3,7 @@ layout: page
 title: HTML & CSS Lesson 1
 ---
 
-###Objectives 
+##Objectives 
 
 In this tutorial we are going to look at:
 
@@ -14,7 +14,7 @@ In this tutorial we are going to look at:
 * Special HTML characters
 * HTML commenting
 
-###Goal
+##Goal
 
 By the end of this tutorial you will have build [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
 
@@ -30,7 +30,7 @@ By the end of this tutorial you will have build [this webpage.](http://codebar.g
 **H**yper **T**ext **M**arkup **L**anguage
 
 
-### HTML elements
+## HTML elements
 
 An **element** is an HTML building block. There are paragraphs, headings, links, lists, and [many more.](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 
@@ -45,7 +45,7 @@ Some HTML elements do not need a closing tag as they are used to place standalon
 <img>
 ```
 
-### Webpage structure
+## Webpage structure
 
 The doctype is the first thing that must be defined in an HTML page.
 It tells the browser which version of HTML the page is using.
@@ -220,7 +220,7 @@ Do this underneath the `<h2>Why do I like owls so much?</h2>` heading.
 </ul>
 ```
 
-### Adding a link on multiple elements
+## Adding a link on multiple elements
 
 Links can contain many elements - not just text.
 
@@ -242,7 +242,7 @@ Add this underneath the ordered list about why we like owls.
 > Click any of the images. Can you get to the link's page?
 > What happens if you take the `<br/>` tag out? Remember to put it back afterwards!
 
-### Formatting text
+## Formatting text
 
 We can also **emphasise** or make text *important*.
 For emphasis we use `<strong>` and for importance `<em>`
