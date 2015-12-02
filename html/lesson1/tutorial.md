@@ -4,16 +4,19 @@ title: HTML & CSS Lesson 1
 ---
 
 ##Objectives 
+
 In this tutorial we are going to look at:
 
 * What is HTML?
-* Fundamental HTML elements
+* HTML elements
 * Webpage structure
+* Fundamental HTML elements
 * Special HTML characters
 * HTML commenting
 
 ##Goal
-By the end of this tutorial you will have build [this.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
+
+By the end of this tutorial you will have build [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
 
 ## What is HTML?
 
@@ -65,41 +68,24 @@ The doctype is always followed by the `<html>` tag, which contains the contents 
 
 A HTML page is split into two parts. The **head** and the **body**.
 
-The **head** contains information like the page title, stylesheets, scripts and meta information.
+The **head** contains important webpage information like the page title, stylesheets, scripts and meta information.
 
 The **body** contains what is visible to the user.
 
 
-### Let's get coding!
+## Let's get coding!
 
 Let's start by defining the basic structure of your website. Create a new folder for your work called "HTML tutorial 1". Then inside this folder create a new file called "index.html". 
 
-With guidance from your coach: 
+Using what we just learnt and with guidance from your coach, create the following: 
 
 * declare the doctype to be HTML
 * open and close a set of `<html></html>` tags
 * Within this, create the head and body tags
 
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-  <body>
-  </body>
-</html>
-```
-
 > If you load this in your browser, do you see anything on the page?
 
-Now inside your head tag create a title:
-
-```html
-<title>I love owls</title>
-```
-
-> Don't forget to save your changes before refreshing the browser!
+Now inside your head tag create a `<title>` tag with **I love owls** as your title.
 
 > You should see that the tab bar has changed? If not, double check your code.
 
@@ -116,8 +102,7 @@ Now inside your head tag create a title:
 
 Can you see that the title tag is indented, this makes your code much easier to read and you'll be able to see nested tags much easier.
 
-
-### Element: Headings 
+## Element: Headings 
 
 Headings come in many sizes
 
@@ -130,7 +115,7 @@ Headings come in many sizes
 
 A `h1` defines the most important heading whereas a `h6` defines the least important.
 
-Add a `h1` heading which includes Owls inside the body tag of your page.
+Add a `h1` heading tag, which includes the word Owls, inside the body tag of your page.
 
 ### Element: Paragraph `<p>`
 
@@ -146,9 +131,9 @@ Add the following paragraph to your page body, after the `<h1>`:
 </p>
 ```
 
-#### Element: Link `<a>`
+## Element: Link `<a>`
 
-A link lets the user click through to another webpage. We use `href` to indicate where you want the user to go to.
+A link lets the user click through to another webpage. We use the attribute `href` to indicate where you want the user to go.
 
 Let's add a link to the bottom of your paragraph:
 
@@ -156,9 +141,9 @@ Let's add a link to the bottom of your paragraph:
 <a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
 ```
 
-### Element: Div `<div>`
+## Element: Div `<div>`
 
-A `div` tag lets you group elements together. Grouping elements is useful because we can later style them together (e.g. giving them all the same colour).
+A `div` tag lets you group elements together. Grouping elements is useful as we can later style them together (e.g. giving them all the same colour).
 
 Wrap your existing paragraph in a div and add a new heading to it.
 
@@ -166,22 +151,21 @@ Wrap your existing paragraph in a div and add a new heading to it.
 <div>
   <h1>Owls</h1>
   <p>
-    Most birds of prey sport eyes on the sides of their heads,<br/>
-    but the stereoscopic nature of<br/>
-    the owl's forward-facing <strong>eyes permits the greater<br/>
+    Most birds of prey sport eyes on the sides of their heads,
+    but the stereoscopic nature of
+    the owl's forward-facing <strong>eyes permits the greater
     sense of depth perception</strong> necessary for low-light hunting.
-    <br/>
     <a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
   </p>
 </div>
 ```
 
-### Element: List `<li>`
+## Element: List `<li>`
 
-There are two types of lists, **ordered** and **unordered**.
+There are two types of lists that can included on a webpage, **ordered** and **unordered**.
 An unordered list `<ul>` is defined with bullets whilst an ordered list `<ol>` uses a numbered sequence.
 
-Let's list the reasons we love owls under the `h1` we created earlier in the page.
+Let's list the reasons we love owls under the `h1` we created earlier:
 
 ```html
 <h2>Why do I like owls so much?</h2>
@@ -214,7 +198,7 @@ Images are primarily made up of three attributes
 * the `src` attribute, which lets the page know what image we want to view
 * the `alt` attribute, this provides extra information if it cannot be seen on the webpage for any reason
 
-In order for us to see this image on the webpage we need to link to the image, this involves telling the webpage where it is and what it is called. TBefore the main heading of the page, add the following
+In order for us to see this image on the webpage we need to link to the image, this involves telling the webpage where it is and what it is called. Before the main heading of the page, add the following
 
 ```html
 <div>
@@ -222,7 +206,7 @@ In order for us to see this image on the webpage we need to link to the image, t
 </div>
 ```
 
-Here you can see we have told the `src` of the `href` to look in the images folder and display the image `logo.png`, then we have given it a relevant `alt` attribute.
+Here you can see we have told the `src` of the image to look in the images folder and display the image `logo.png`, then we have given it a relevant `alt` attribute.
 
 Let's add some more images. This time, we'll put them in a list.
 
@@ -236,11 +220,11 @@ Do this underneath the `<h2>Why do I like owls so much?</h2>` heading.
 </ul>
 ```
 
-### Adding a link on multiple elements
+## Adding a link on multiple elements
 
 Links can contain many elements - not just text.
 
-Let's use some pictures and text to link to a video. It can be handy when we want the user to get to where we want them without needing to click on text.
+Let's use some pictures and text to link to a video. It can be handy when we want the user to get to where we want without needing to click on text.
 
 Add this underneath the ordered list about why we like owls.
 
@@ -258,7 +242,7 @@ Add this underneath the ordered list about why we like owls.
 > Click any of the images. Can you get to the link's page?
 > What happens if you take the `<br/>` tag out? Remember to put it back afterwards!
 
-### Formatting text
+## Formatting text
 
 We can also **emphasise** or make text *important*.
 For emphasis we use `<strong>` and for importance `<em>`
@@ -274,11 +258,11 @@ Let's emphasise some of the content of your paragraph
 </p>
 ```
 
-### Special characters and more formatting
+## Special characters and more formatting
 
 Some characters have special meaning in HTML. For instance, we use < and > to make HTML tags, and we use " to wrap our attributes. But what if we wanted to use those characters in our page?
 
-One way is to use **HTML entities**. These have an ampersand, a name, then a semicolon. Here's the HTML entity for a quote character: `&quot;`.
+One way is to use **HTML entities**. These are made up of an ampersand, a name, then a semicolon. Here's the HTML entity for a quote character: `&quot;`.
 
 You can also use a numerical format to produce special characters. [Here's a list](http://htmlandcssbook.com/extras/html-escape-codes/) of some common entities.
 
@@ -302,10 +286,9 @@ Add a small rhyme to your page, wrapped with quotes using HTML entities.
 
 > Have you noticed how the character `&mdash;` renders on the page?
 
-### mailto links `<a>`
+## mailto links `<a>`
 
-Links can also open up a user's email client and share content.
-The difference between links and mailto links, is the content defined in the **href** attribute.
+Links can also open up a user's email client and share content. The difference between links and mailto links, is the content defined in the **href** attribute.
 
 ```html
 <ul>
@@ -324,10 +307,17 @@ The difference between links and mailto links, is the content defined in the **h
 
 > What happens when you add `&body=Owls are amazing` to the second link?
 
+## Commenting
 
-## Bonus
+We can use a special kind of tag to add notes to our page that the computer will ignore. Comments are particularly useful when wanting to remind yourself, or other programmers, how your code works.
 
-### Twitter share 
+```html
+<!-- Note to self: this is where the header goes -->
+```
+
+### Bonus
+
+#### Twitter share 
 
 Add a share on twitter link along with your other sharing links.
 
@@ -335,19 +325,10 @@ Add a share on twitter link along with your other sharing links.
 <a href="http://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on twitter</a>
 ```
 
----
-
-### Commenting
-
-We can use a special kind of tag to add notes to our page. The computer will ignore them, but programmers can read them and understand how your code works.
-
-```html
-<!-- Note to self: this is where the header goes -->
-```
-
-This ends our first lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back throught this tutorial and make some of your own amends to see what happends. If there something you did not understand or what to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
 
 ###Further reading
 
 *[HTML elements](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 *[Special characters](http://htmlandcssbook.com/extras/html-escape-codes)
+*[The Bare Bones Guide to HTML](http://werbach.com/barebones/barebones.html)
