@@ -4,6 +4,18 @@ title: HTML & CSS Lesson 5
 footer: true
 ---
 
+##Objectives 
+ 
+Today we will be building a website and will focus more on HTML5 and CSS3 specific elements.
+ 
+##Goal
+
+The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson5/example.html "Anita Borg")
+
+### Required files
+
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7565600/download)
+
 ##  HTML AND CSS - Diving into HTML5 and CSS3
 
 ### Recap
@@ -11,16 +23,6 @@ footer: true
 In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets.
 **HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements, pseudo clases and went into more details about CSS Layouts and formatting.
 
-### Today we will be building a website and will focus more on HTML5 and CSS3 specific elements
-
-The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson5/example.html "Anita Borg")
-
-## But before we start...
-
-### Required files
-
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7565600/download)
 
 ## Getting started
 
@@ -112,8 +114,8 @@ Add this right after the beginning of the element with the id `wrapper`
 
 ```html
 <div>
-  <img src="anita-top.jpg" alt="Anita Borg image 1"/>
-  <img src="anita-bottom.jpg" alt="Anita Borg image 2"/>
+  <img src="anita-top.jpg" alt="Anita Borg image 1">
+  <img src="anita-bottom.jpg" alt="Anita Borg image 2">
   <div>
     <a href="http://gos.sbc.edu/b/borg.html">reference</a>
     <a href="http://en.wikipedia.org/wiki/Anita_Borg">wikipedia</a>
@@ -435,6 +437,6 @@ You can find both the rgb and hex values of a color through [http://0to255.com](
 
 
 -----
-This ends our fifth lesson. How did you find the introduction to CSS3? Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+TThis ends our fifth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back throught this tutorial and make some of your own amends to see what happends. If there something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
 

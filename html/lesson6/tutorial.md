@@ -4,13 +4,15 @@ title: HTML Lesson 6
 footer: true
 ---
 
+##Objectives 
+ 
+Today we will be focusing more on HTML5!
+
 ##  HTML AND CSS - Advanced HTML5
 
 ### Recap
 
 In the last lesson, we introduced you to even more **HTML5** and **CSS3**.
-
-### Today we will be focusing more on HTML5!
 
 ## HTML5 structural semantics
 

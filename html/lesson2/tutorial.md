@@ -4,6 +4,25 @@ title: HTML & CSS Lesson 2
 footer: true
 ---
 
+##Objectives 
+ 
+In this tutorial we are going to look at:
+ 
+* What is CSS?
+* What you can do with CSS?
+* Introductions to selectors
+* Linking your CSS file
+* Cascading selectors
+* Pseudo classes
+ 
+##Goal
+ 
+Today we will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
+
+### Required files
+
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download)(mac/linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip)(windows)
+
 ## What is CSS?
 
 **CSS** is the language used to style websites.
@@ -22,18 +41,6 @@ CSS: presentation
 
 _**CSS** works in conjunction with **HTML**_
 
-### Today we will be focusing on fundamental CSS concepts
-
-We will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
-
-## But before we start...
-
-> The first tutorial does not prepare you for this exercise. Before you continue, download the provided files.
-
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/hundred/7332441/download)(mac/linux) or [here](https://www.dropbox.com/s/zgb6l56sy87knzf/lesson2.zip)(windows)
 
 ### What can I do with CSS?
 
@@ -460,4 +467,9 @@ If you have some time how about you go back through the tutorial making little a
 
 -----
 
-This ends our second lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our second lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back throught this tutorial and make some of your own amends to see what happends. If there something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
+
+##Further reading
+
+*[CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
+*[More CSS](http://learn.shayhowe.com/html-css/)
