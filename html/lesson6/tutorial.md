@@ -12,7 +12,7 @@ Today we will be focusing more on HTML5.
 
 ### Goal
 
-Build a website 
+Build a website with little guidance. Remember you can look back on all of the previous tutorials and use inspect element. It should be your best friend when developing for the web.
 
 ### Recap
 
