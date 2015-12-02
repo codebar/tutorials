@@ -3,34 +3,34 @@ layout: page
 title: HTML & CSS Lesson 1
 ---
 
-##Objectives 
+###Objectives 
 
 In this tutorial we are going to look at:
 
 * What is HTML?
-* HTML elements
+* What is an element?
 * Webpage structure
 * Fundamental HTML elements
 * Special HTML characters
 * HTML commenting
 
-##Goal
+###Goal
 
 By the end of this tutorial you will have build [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
 
-## What is HTML?
+### What is HTML?
 
 **HTML** is the language used to build websites. All text and content that you see on the internet is built using HTML. 
 
 **CSS** is used with HTML to style the page. However we will not be learning any of this today as this is covered in the next tutorial.
 
 
-### What does HTML stand for?
+#### What does HTML stand for?
 
 **H**yper **T**ext **M**arkup **L**anguage
 
 
-## HTML elements
+### HTML elements
 
 An **element** is an HTML building block. There are paragraphs, headings, links, lists, and [many more.](https://developer.mozilla.org/en/docs/Web/HTML/Element)
 
@@ -45,7 +45,7 @@ Some HTML elements do not need a closing tag as they are used to place standalon
 <img>
 ```
 
-## Webpage structure
+### Webpage structure
 
 The doctype is the first thing that must be defined in an HTML page.
 It tells the browser which version of HTML the page is using.
@@ -64,13 +64,13 @@ The doctype is always followed by the `<html>` tag, which contains the contents 
 </html>
 ```
 
-## HEAD and BODY tags
+### HEAD and BODY tags
 
 A HTML page is split into two parts. The **head** and the **body**.
 
 The **head** contains important webpage information like the page title, stylesheets, scripts and meta information.
 
-The **body** contains what is visible to the user.
+The **body** contains webpage content that visible to the user.
 
 
 ## Let's get coding!
@@ -87,7 +87,7 @@ Using what we just learnt and with guidance from your coach, create the followin
 
 Now inside your head tag create a `<title>` tag with **I love owls** as your title.
 
-> You should see that the tab bar has changed? If not, double check your code.
+> You should see that the tab bar has changed. If not, double check your code.
 
 ```html
 <!DOCTYPE html>
@@ -100,11 +100,11 @@ Now inside your head tag create a `<title>` tag with **I love owls** as your tit
 </html>
 ```
 
-Can you see that the title tag is indented, this makes your code much easier to read and you'll be able to see nested tags much easier.
+Notice how each tag is indented to its parent tag. This is important as it makes your code much easier to read and you'll be able to see nested tags much easier.
 
-## Element: Headings 
+### Element: Headings 
 
-Headings come in many sizes
+Headings come in 6 sizes
 
 # `<h1>Heading</h1>`
 ## `<h2>Heading</h2>`
@@ -119,9 +119,9 @@ Add a `h1` heading tag, which includes the word Owls, inside the body tag of you
 
 ### Element: Paragraph `<p>`
 
-Putting content into a `<p>` tag will make it look like a paragraph. This helps make the content of your page easier to read for the user.
+Putting content into a `<p>` tag will break you text up into paragraphs. This helps make the content of your page easier to read for the user.
 
-Add the following paragraph to your page body, after the `<h1>`:
+Add the following paragraph inside your `<body>` tag, after the `<h1>`:
 
 ```html
 <p>
@@ -131,7 +131,7 @@ Add the following paragraph to your page body, after the `<h1>`:
 </p>
 ```
 
-## Element: Link `<a>`
+### Element: Link `<a>`
 
 A link lets the user click through to another webpage. We use the attribute `href` to indicate where you want the user to go.
 
@@ -141,11 +141,11 @@ Let's add a link to the bottom of your paragraph:
 <a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
 ```
 
-## Element: Div `<div>`
+### Element: Div `<div>`
 
 A `div` tag lets you group elements together. Grouping elements is useful as we can later style them together (e.g. giving them all the same colour).
 
-Wrap your existing paragraph in a div and add a new heading to it.
+Wrap your existing paragraph and link in a div and add a new heading to it.
 
 ```html
 <div>
@@ -160,12 +160,12 @@ Wrap your existing paragraph in a div and add a new heading to it.
 </div>
 ```
 
-## Element: List `<li>`
+### Element: List `<li>`
 
 There are two types of lists that can included on a webpage, **ordered** and **unordered**.
 An unordered list `<ul>` is defined with bullets whilst an ordered list `<ol>` uses a numbered sequence.
 
-Let's list the reasons we love owls under the `h1` we created earlier:
+Let's create a new `<h2>` then underneath list the reasons we love owls:
 
 ```html
 <h2>Why do I like owls so much?</h2>
@@ -196,13 +196,13 @@ Images are primarily made up of three attributes
 
 * the `<img>` tag
 * the `src` attribute, which lets the page know what image we want to view
-* the `alt` attribute, this provides extra information if it cannot be seen on the webpage for any reason
+* the `alt` attribute, this provides extra information if the image cannot be seen on the webpage for any reason
 
 In order for us to see this image on the webpage we need to link to the image, this involves telling the webpage where it is and what it is called. Before the main heading of the page, add the following
 
 ```html
 <div>
-  <img src="images/logo.png" alt="codebar.io"/>
+  <img src="images/logo.png" alt="codebar.io">
 </div>
 ```
 
@@ -214,13 +214,13 @@ Do this underneath the `<h2>Why do I like owls so much?</h2>` heading.
 
 ```html
 <ul>
-  <li><img src="images/img1.jpg" alt="adorable"/></li>
-  <li><img src="images/img2.jpg" alt="lovely"/></li>
-  <li><img src="images/img3.jpg" alt="cuddly"/></li>
+  <li><img src="images/img1.jpg" alt="adorable"></li>
+  <li><img src="images/img2.jpg" alt="lovely"></li>
+  <li><img src="images/img3.jpg" alt="cuddly"></li>
 </ul>
 ```
 
-## Adding a link on multiple elements
+### Adding a link on multiple elements
 
 Links can contain many elements - not just text.
 
@@ -231,8 +231,8 @@ Add this underneath the ordered list about why we like owls.
 ```html
 <div>
   <a href="http://www.youtube.com/watch?v=gBjnfgnwXic">
-    <img src="images/img4.jpg" alt="cute owl"/>
-    <img src="images/img5.jpg" alt="another cute owl"/>
+    <img src="images/img4.jpg" alt="cute owl">
+    <img src="images/img5.jpg" alt="another cute owl">
     <br/>
     Watch the video
   </a>
@@ -242,7 +242,7 @@ Add this underneath the ordered list about why we like owls.
 > Click any of the images. Can you get to the link's page?
 > What happens if you take the `<br/>` tag out? Remember to put it back afterwards!
 
-## Formatting text
+### Formatting text
 
 We can also **emphasise** or make text *important*.
 For emphasis we use `<strong>` and for importance `<em>`
@@ -258,7 +258,7 @@ Let's emphasise some of the content of your paragraph
 </p>
 ```
 
-## Special characters and more formatting
+### Special characters and more formatting
 
 Some characters have special meaning in HTML. For instance, we use < and > to make HTML tags, and we use " to wrap our attributes. But what if we wanted to use those characters in our page?
 
@@ -282,13 +282,13 @@ Add a small rhyme to your page, wrapped with quotes using HTML entities.
 </div>
 ```
 
-**small** is another html formatting element you can use.
+`<small>` is another html formatting element that you can use.
 
 > Have you noticed how the character `&mdash;` renders on the page?
 
-## mailto links `<a>`
+### mailto links `<a>`
 
-Links can also open up a user's email client and share content. The difference between links and mailto links, is the content defined in the **href** attribute.
+Links can also open up a user's email client and share content. The difference between links and mailto links is the content defined in the **href** attribute.
 
 ```html
 <ul>
@@ -307,17 +307,17 @@ Links can also open up a user's email client and share content. The difference b
 
 > What happens when you add `&body=Owls are amazing` to the second link?
 
-## Commenting
+### Commenting
 
-We can use a special kind of tag to add notes to our page that the computer will ignore. Comments are particularly useful when wanting to remind yourself, or other programmers, how your code works.
+You can use a special kind of tag to add notes to our page that the computer will ignore. Comments are particularly useful when wanting to remind yourself, or other programmers, how your code works.
 
 ```html
 <!-- Note to self: this is where the header goes -->
 ```
 
-### Bonus
+## Bonus
 
-#### Twitter share 
+### Twitter share 
 
 Add a share on twitter link along with your other sharing links.
 
@@ -325,10 +325,10 @@ Add a share on twitter link along with your other sharing links.
 <a href="http://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on twitter</a>
 ```
 
-This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back throught this tutorial and make some of your own amends to see what happends. If there something you did not understand or what to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
+This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and making some of your own amends. If there something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
 
-###Further reading
+##Further reading
 
-*[HTML elements](https://developer.mozilla.org/en/docs/Web/HTML/Element)
-*[Special characters](http://htmlandcssbook.com/extras/html-escape-codes)
-*[The Bare Bones Guide to HTML](http://werbach.com/barebones/barebones.html)
+* [HTML elements](https://developer.mozilla.org/en/docs/Web/HTML/Element)
+* [Special characters](http://htmlandcssbook.com/extras/html-escape-codes)
+* [The Bare Bones Guide to HTML](http://werbach.com/barebones/barebones.html)
