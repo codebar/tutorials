@@ -435,4 +435,5 @@ You can find both the rgb and hex values of a color through [http://0to255.com](
 
 
 -----
-This ends our fifth lesson. How did you find the introduction to CSS3? Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our fifth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and making some of your own amends. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
+

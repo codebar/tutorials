@@ -582,5 +582,5 @@ Have a look at the [example page](http://codebar.github.io/tutorials/html/lesson
 Use the inspector to have a look at `<body>` and `<h1>` and apply these changes to your page.
 
 -----
+This ends our third lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and making some of your own amends. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
 
-This ends our third lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

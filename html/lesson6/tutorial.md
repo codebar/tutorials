@@ -133,7 +133,7 @@ img {
 
 
 -----
-This ends our sixth lesson. How did you find learning HTML5 and CSS? Is there something you don't understand? Try to use the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our sixth lesson. How did you find learning HTML and CSS? If you have some spare time how about going back through this tutorial and making some of your own amends. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)back@codebar.io) and let us know.
 
 ## Extras
 
