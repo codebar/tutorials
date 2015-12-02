@@ -178,7 +178,7 @@ An element can be visualised as a box. The box model is a way of describing the 
 
 **<span style="color: rgb(239,195,144);">orange</span>** is the `margin` &mdash; the spacing outside the border. This separates the element from other elements on the page.
 
-Note: `padding`, `margin` and `border` can be applied to any combination of sides. In below example from the BBC News site, all three are applied, but only above the content.
+Note: `padding`, `margin` and `border` can be applied to any combination of sides. In the example below from the BBC News site, all three are applied, but only above the content.
 
 ![](assets/images/box-model.gif)
 
