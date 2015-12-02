@@ -3,7 +3,9 @@ layout: page
 title: HTML & CSS Lesson 1
 ---
 
-##Objectives 
+## Introduction to HTML
+
+###Objectives 
 
 In this tutorial we are going to look at:
 
@@ -14,11 +16,11 @@ In this tutorial we are going to look at:
 * Special HTML characters
 * HTML commenting
 
-##Goal
+###Goal
 
 By the end of this tutorial you will have build [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
 
-### What is HTML?
+#### What is HTML?
 
 **HTML** is the language used to build websites. All text and content that you see on the internet is built using HTML. 
 
