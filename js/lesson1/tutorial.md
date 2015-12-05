@@ -2,7 +2,8 @@
 layout: page
 title: Introduction to JavaScript
 ---
-<img src="assets/images/js-logo.jpg" alt='js-logo' style='width:150px'/>
+
+<img src="assets/images/js-logo.jpg" alt='js-logo' width='150px'/>
 
 ## What is JavaScript?
 
