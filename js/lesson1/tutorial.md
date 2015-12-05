@@ -28,7 +28,7 @@ Some of the things JavaScript on the web can do:
 
 It is also becoming more common outside of the browser. You can write your own server programs in JavaScript using [Node.js](http://nodejs.org/).
 
-<img src="http://mean.io/system/assets/img/logos/nodejs.png" alt='nodejs' style='width:300px'/>
+<img src="http://mean.io/system/assets/img/logos/nodejs.png" alt='nodejs' width='300px'/>
 
 
 
