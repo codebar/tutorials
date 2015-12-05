@@ -45,7 +45,7 @@ while (i <= 10) {
 console.log("Total: " + total);
 ```
 
-> `<=` stands for **smaller or equal**. We can also express `<=10` using `< 11`
+> `<=` stands for **smaller or equal**. We can also express `<= 10` using `< 11`
 
 You can read this as:
 
@@ -85,6 +85,7 @@ for (i = 1; i <= 10; i = i + 1) {
 
 console.log("Total: " + total);
 ```
+> Another way to write the for loop is `for (var i = 1; i <= 10; i++)`. The `i++` is a short way of writing "increase i by one".
 
 Even though `while` loops are more simple than `for` loops, it is more common to see `for` loops. This is because loops are often used to do something with arrays, which are introduced in the next section.
 
@@ -112,7 +113,7 @@ To get the first item `animals[0]`, the second `animals[1]` etc.
 The `length` property returns the size of the Array
 
 ```js
-animals.length
+animals.lengt
 ```
 
 The length property is extremely useful when you want to do something with every element in an array. For example, to log each entry of the `animals` array, you can use `animals.length` with a `for` loop:
@@ -184,7 +185,7 @@ nums.sort(sortNumbersAscending);
 console.log(nums);
 ```
 
-Sort passes pairs of entries from the array to `sortNumbersAscending`. If `sortNumberAscending` returns a number less than zero, then sort knows that `a` should come before `b`. If the number is greater than zero, then `b` should come before `a`.
+Sort passes pairs of entries from the array to `sortNumbersAscending`. If `sortNumbersAscending` returns a number less than zero, then sort knows that `a` should come before `b`. If the number is greater than zero, then `b` should come before `a`.
 
 Another cool operation you can apply is `reverse()`.
 
@@ -194,10 +195,10 @@ animals.sort().reverse();
 
 ```js
 // Sort numbers descending.
-nums.sort(ascending).reverse();
+nums.sort(sortNumbersAscending).reverse();
 ```
 
-> Can you write a function called `sortNumbersDescending` that can be used in place of `.sort(ascending).reverse()`?
+> Can you write a function called `sortNumbersDescending` that can be used in place of `.sort(sortNumbersAscending).reverse()`?
 
 ### Loops again!
 
@@ -232,8 +233,6 @@ for (var i = 0; i < fruitAndVeg.length; i = i + 1) {
   }
 }
 ```
-
-
 
 ## Objects
 
