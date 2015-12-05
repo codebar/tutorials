@@ -35,9 +35,9 @@ In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**a
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
-A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a built in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
+Chrome Devtools are already built into your Chrome browser, or Inspector if you are using Firefox. For advanced users, many other tools are available as browser plugins, including the Firefox add-on [Firebug](http://getfirebug.com/).
 
-![](assets/images/firebug.png)
+![](assets/images/chrome-devtools.png)
 
 >  Ask your coach to show you how to edit the styling on our example page using firebug
 
@@ -187,9 +187,9 @@ An element can be visualised as a box. The box model is a way of describing the 
 
 **<span style="color: rgb(239,195,144);">orange</span>** is the `margin` &mdash; the spacing outside the border. This separates the element from other elements on the page.
 
-Note: `padding`, `margin` and `border` can be applied to any combination of sides, below all three are applied in equal measure to all four sides around the content.
+Note: `padding`, `margin` and `border` can be applied to any combination of sides. In the example below from the BBC News site, all three are applied, but only above the content.
 
-![](assets/images/box-model.png)
+![](assets/images/box-model.gif)
 
 ### Styling the header
 
