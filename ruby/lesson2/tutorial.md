@@ -245,7 +245,7 @@ rake regen
 
 To try out the koans run `rake`. It gives you a hint as to what fails and you can move forward by fixing the file and running `rake` again.
 
-If you are working through this at home you can ask for help in our [gitter channel](https://gitter.im/codebar/tutorials).
+If you are working through this at home you can ask for help in our [slack.com channel](https://codebar.slack.com/messages/tutorials/).
 
 ##Some reading material
 
