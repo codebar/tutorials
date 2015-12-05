@@ -2,7 +2,7 @@
 layout: page
 title: Introduction to JavaScript
 ---
-![JavaScript](assets/images/js-logo.jpg)
+<img src="assets/images/js-logo.jpg" alt='js-logo' style='max-width: 230px'></img>
 
 ## What is JavaScript?
 
@@ -27,7 +27,7 @@ Some of the things JavaScript on the web can do:
 
 It is also becoming more common outside of the browser. You can write your own server programs in JavaScript using [Node.js](http://nodejs.org/).
 
-![node](http://mean.io/system/assets/img/logos/nodejs.png)
+<img src='http://mean.io/system/assets/img/logos/nodejs.png' alt='nodejs' style='max-width: 450px'></img
 
 
 
