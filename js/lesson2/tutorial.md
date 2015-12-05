@@ -75,7 +75,7 @@ The second part is a test, and just like in the `while` loop it is checked befor
 
 The third part is executed after each loop iteration. It's useful for incrementing the loop counter.
 
-For example, if we had an online shopping basket, we could loop over the items in the basket and add up the cost to a total. The initial value can be zero, the second part can test there are still items left to be added up and the third part increment to the next item. The code that is run of each iteration can add to a shopping basket total.
+For example, if we had an online shopping basket, we could loop over the items in the basket and add up the cost to a total. The initial value can be zero, the second part can test that there are still items left to be added up and the third part can increment to the next item. The code that is run on each iteration can add the cost to a shopping basket total.
 
 The `while` loop above can be rewritten as a `for` loop:
 
