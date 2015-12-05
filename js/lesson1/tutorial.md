@@ -5,9 +5,9 @@ title: Introduction to JavaScript
 
 ## What is JavaScript?
 
-**JavaScript** is a language that allows for interaction with the user, controlling the content of the browser, and altering the displayed document content.
+**JavaScript** is a popular programming language that runs in all modern web browsers. Along with CSS and HTML, it's one of the core technologies of the web and can do wonderful things for websites! It's most commonly used to make web pages interactive:
 
-Some common usages around the web are
+Some of the things JavaScript on the web can do:
 
 #### [Lightboxes](http://lokeshdhakar.com/projects/lightbox2/#example)
 
@@ -24,11 +24,11 @@ Some common usages around the web are
 [Stack of cards](http://designlovr.com/examples/dynamic_stack_of_index_cards/)
 ![](assets/images/effects_1.png)
 
-It is also becoming common outside of the browser. You can write your own programs and servers in JavaScript using [Node.js](http://nodejs.org/).
+It is also becoming more common outside of the browser. You can write your own server programs in JavaScript using [Node.js](http://nodejs.org/).
 
 
 
-### Today we will be focusing on understanding the basics
+### Today let's focus on understanding the basics
 
 ## But before we start...
 
@@ -58,6 +58,9 @@ There are a few things going on here. For now, all you need to know is that `con
 ### What are Variables?
 
 Variables are objects that hold content. They are declared using `var` and we can assign values to them.
+```js
+var hello = 'Hello Codebar!'
+```
 
 ### What are expressions?
 
@@ -117,8 +120,8 @@ console.log("Is codebar AWESOME? " + codebarIsAwesome);
 console.log("Is the weather in London amazing? " + weatherIsAmazing);
 ```
 
-- **undefined variables**
-If no value is set for a variable, then it won't have a type until you set it.
+- **undefined**
+If no value is set for a variable, then it will automatically be set to undefined.
 
 ```js
 var iDontHaveAValue;
