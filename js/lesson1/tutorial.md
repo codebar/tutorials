@@ -7,7 +7,7 @@ title: Introduction to JavaScript
 
 ## What is JavaScript?
 
-**JavaScript** is a popular programming language that runs in all modern web browsers. Along with CSS and HTML, it's one of the core technologies of the web and can do wonderful things for websites! It's most commonly used to make web pages interactive:
+**JavaScript** is a programming language that runs in all modern web browsers. Along with CSS and HTML, it's one of the core technologies of the web and can do wonderful things for websites! It's most commonly used to make web pages interactive:
 
 Some of the things JavaScript on the web can do:
 
