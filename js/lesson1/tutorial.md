@@ -62,9 +62,6 @@ There are a few things going on here. For now, all you need to know is that `con
 ### What are Variables?
 
 Variables are objects that hold content. They are declared using `var` and we can assign values to them.
-```js
-var hello = 'Hello Codebar!'
-```
 
 ### What are expressions?
 
