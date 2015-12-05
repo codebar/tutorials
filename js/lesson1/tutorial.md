@@ -173,7 +173,9 @@ console.log("Division: x / y = " + division);
 ### The if statement
 In JavaScript we can write conditions to control what we output
 
-Let's try this out.
+For example, if we were required to fill in our credit card details on a website's form, we could use an if statement to check that the card number is the correct length before submitting the form.
+
+Let's try out writing an if statement.
 
 ```
 if (codebarIsAwesome) {
