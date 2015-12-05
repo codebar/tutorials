@@ -31,6 +31,8 @@ When the while loop starts, the test is checked. If it is false, then the while 
 
 The difference is in what happens after the statements in the block. With an `if`, everything is finished and the statements below the if block are executed. With a `while`, we go back up to the test. If the test is still true, the statements in the block are executed again, and so on until the test is false. This is why we call it a loop.
 
+For example, if we wanted to set a timer on an online ticket outlet, we could count the timer down in the loop and while it hasn't reached zero, the option to buy the ticket can still be available.
+
 We can use this to sum all numbers from 1 to 10:
 
 ```js
