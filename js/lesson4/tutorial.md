@@ -11,7 +11,9 @@ In this tutorial we will be looking at HTTP and API requests. We will first run 
 
 Every time the browser fetches data from a server (which could be a page, an image, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then sends back a **response**. An API is an easy way of fetching information from a remote service, in a way that's easy for a computer to understand.
 
-GitHub offers a [simple API](https://status.github.com/api) for viewing its current server uptime.
+GitHub offers a [simple API](https://status.github.com/api) for viewing its current and historical server availability.
+
+> Availability means whether or not the GitHub website was accessible to users and accepting traffic. If your website is down, it is not available. 
 
 You can access an API in your web browser. Just pop the following into the address bar:
 
@@ -20,6 +22,8 @@ You can access an API in your web browser. Just pop the following into the addre
 If you are on a mac or a linux/unix machine, you can access the API using curl:
 
     $ curl https://status.github.com/api.json
+
+> Paste the following command into Terminal, which you can find in Finder - first go into the Applications folder, then Utilities.
 
 Here is an example of the **GET** requests issued by the [wishlist tutorial](http://codebar.github.io/tutorials/examples/wishlist/index.html).
 
@@ -126,10 +130,10 @@ function getGithubInfo(username) {
 
 `XMLHttpRequest` is the object we use in JavaScript to perform an HTTP or API request. Although it has `XML` in the name (XML is a data format), it can be used for other formats such as JSON, which is what we're using here.
 
-We create an `XMLHttpRequest` object and then call the `open` method, passing three arguments:
+We create an `XMLHttpRequest` object and then call the `open` method, passing three arguments to the GitHub API. 
 
-1. the verb - in this case, GET
-2. the url - in this case the url eg https://api.github.com/users/codebar
+1. the `verb` - in this case, `"GET"`
+2. the `url` - in this case the url eg https://api.github.com/users/codebar
 3. whether or not to run this request synchronously or asynchronously.
 
 In this case, we'll specify synchronously by passing `false`. This means the browser will wait for the call to the GitHub API to finish before continuing. We'll get into asynchronous requests later on.
