@@ -18,7 +18,7 @@ In this tutorial we are going to look at:
 
 ###Goal
 
-By the end of this tutorial you will have build [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
+By the end of this tutorial you will have built [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
 
 #### What is HTML?
 
@@ -70,16 +70,16 @@ The doctype is always followed by the `<html>` tag, which contains the contents 
 
 A HTML page is split into two parts. The **head** and the **body**.
 
-The **head** contains important webpage information like the page title, stylesheets, scripts and meta information.
+The **head** contains important webpage information like the page title (the text in the browser tab), stylesheets, scripts and meta information.
 
-The **body** contains webpage content that visible to the user.
+The **body** contains webpage content that is visible to the user.
 
 
 ## Let's get coding!
 
 Let's start by defining the basic structure of your website. Create a new folder for your work called "HTML tutorial 1". Then inside this folder create a new file called "index.html". 
 
-Using what we just learnt and with guidance from your coach, create the following: 
+Using what we just learnt, and with guidance from your coach, create the following: 
 
 * declare the doctype to be HTML
 * open and close a set of `<html></html>` tags
@@ -121,7 +121,7 @@ Add a `h1` heading tag, which includes the word Owls, inside the body tag of you
 
 ### Element: Paragraph `<p>`
 
-Putting content into a `<p>` tag will break you text up into paragraphs. This helps make the content of your page easier to read for the user.
+Putting content into a `<p>` tag will break your text up into paragraphs. This helps make the content of your page easier to read for the user.
 
 Add the following paragraph inside your `<body>` tag, after the `<h1>`:
 
@@ -262,7 +262,7 @@ Let's emphasise some of the content of your paragraph
 
 ### Special characters and more formatting
 
-Some characters have special meaning in HTML. For instance, we use < and > to make HTML tags, and we use " to wrap our attributes. But what if we wanted to use those characters in our page?
+Some characters have special meaning in HTML. For instance, we use `<` and `>` to make HTML tags, and we use " to wrap our attributes. But what if we wanted to use those characters in our page?
 
 One way is to use **HTML entities**. These are made up of an ampersand, a name, then a semicolon. Here's the HTML entity for a quote character: `&quot;`.
 
