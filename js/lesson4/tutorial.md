@@ -3,7 +3,23 @@ layout: page
 title: HTTP Requests, AJAX and APIs
 ---
 
-In this tutorial we will be looking at HTTP and API requests. We will first run synchronous requests using vanilla JavaScript. After that, we will look at running asynchronous requests, and using jQuery, which was introduced in the previous tutorial.
+###Objectives 
+
+In this tutorial we are going to look at:
+
+* The HTTP protocol
+* APIs
+* AJAX
+* JSON
+* Loading API data into web pages
+* Using jQuery AJAX functionality
+
+###Goal
+
+By the end of this tutorial you will have built:
+
+* A webpage that can retrieve information about a specified GitHub user
+* A webpage that can show the upcoming schedule for BBC shows
 
 # HTTP Requests
 
