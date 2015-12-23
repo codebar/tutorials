@@ -1,15 +1,29 @@
 ---
 layout: page
-title: Introduction to Version Control and git
+title: Version Control and Git
 ---
+
+## Introduction to Version Control and Git
+
+###Objectives 
+
+In this tutorial we are going to look what:
+
+* What is Version Control?
+* Why you need it?
+* Setting up a repository
+* Commiting to a repository
+
+###Goal
+
+Today we will set up an account on Github (if you do not have one yet) and set up a new project and commit a file to that project.
 
 ## What is Version Control?
 
-Version control is a way that you can manage and track any changes you make to your files.
+Version control is a way of recording all changes to a file or set of files over a period of time. 
 
-
-### Google docs revision history
-Google docs, for example, keeps a revision history of any document you create and modify.
+### Google Docs revision history
+Google Docs, for example, keeps a revision history of any document you create and modify.
 
 Have a look [at this Google document](https://docs.google.com/document/d/10kHJKXHLa-V8G6vVQoDiS6cTPvJoXnj_-SDvfQdziFk/edit?usp=sharing).
 
@@ -31,32 +45,31 @@ Wikipedia also holds a history of all changes.
 ![](images/wikipedia-view-history.png)
 
 - Try and have a look at the first revision of the page, by going back. It's dated back to 2005!
+
 - Click **curr**, that will show you the [differences between the first and the latest entry](http://en.wikipedia.org/w/index.php?title=Women_in_computing&diff=583521812&oldid=19298328)
 
 ![](images/wikipedia-diff.png)
 
 ## Why do you need Version Control?
 
-- When used on a regular basis, version control helps you to store your files safely. It makes it easy to figure out what broke your code as you can roll back to a previous version and work out when things last worked as expected.
+- When used on a regular basis, version control helps you to store your files safely. It makes it easy to figure out what has broken your code as you can roll back to previous versions and work out when things last worked as expected.
 
-- It is also helpful when working with other people as it combines all the changes together, and tracks who, why and when it changed.
+- It is also helpful when working with other people as it combines all the changes, and tracks who made the change, when it changed and what files changed.
 
 ## Code version control systems
 
-There are a number of different version control systems. The most popular ones are **svn** (or Subversion), **cvs**, **mercurial** and **git**.
+There are a number of different version control systems. The most popular ones are **SVN** (or Subversion), **CVS**, **Mercurial** and **Git**.
 
-We will be using **git**.
+We will be using **Git**.
 
 ### Why Git?
-There are a number of reasons we chose git. To name some  
+There are a number of reasons why we will be using Git. To name a few:  
 
-- A lot of learning resources
+- There are a lot of learning resources online
 
-- Does not require you to be connected to the internet to use
+- It allows more than one person to safely work on the same project without interfering with each other
 
-- All your tracked changes stay on your machine until you are happy with them, and want to make them part of your codebase
-
-- Will tell you if someone has made changes since you last pushed code and urge you to update first and resolve issues
+- It will tell you if someone has made changes since you last pushed code and urge you to update first then resolve any possible issues
 
 - Github and online collaboration. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to them
 
@@ -83,20 +96,19 @@ Some popular project using git:
 - commit: Applying any changes you have made to the **repository**
 
 #### Aim for small and focused changes
-When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row, changing too many things and then committing them.
+When using version control, you should commit every time you do a small piece of work, rather than working for hours on many different amends.
 
-For example, if you want to change the position of an element, the color of all the links on your page and the font size dimensions of all paragraphs, you should do three commits, using messages that describe what you are doing each time.
+For example, if you want to change the position of an element, the color of all the links on your page and the font size of all paragraphs. You should do three commits, using messages that describe what you have done each time.
 
 ###Bad commit messages
 
 Every time you commit a change use a message that describes your change clearly. In a few months time you will have difficulty remembering why you applied a change if your messages say _changing some CSS_, _another commit_, or _more changes_
 
-Try using messages like _repositioned image to look better on page_, _resolved positioning issue for Firefox_.
-
+Try using messages like _repositioned image to look better on page_ or _resolved positioning issue for Firefox_.
 
 # The next step!
 
-Sign up to [github](http://github.com/)
+Create an account on [github](http://github.com/)
 
 Download [Github for Windows](http://windows.github.com/) or [Github for Mac](http://mac.github.com/)
 
@@ -108,16 +120,16 @@ Now that you have the Github client setup on your machine, we will spend sometim
 
 	![](images/create_new_repository.png)
 
-2. Create a README.md file in the directory you created the repository and write
+2. Create a README.md file in the directory of the repository and write
 
-	_This is where I store the work I have done at Codebar_
+	_This is where I store the work I have done at codebar_
 
 3. Go to the Github client and commit that file
 	![](images/commit.png)
 
 4. Now, create a new branch called **gh-pages**
 
-5. In the directory, create a subdirectory **lesson1** and move the **html** file you created at the first sessionand all the other relevant files and directories (e.g. /images)
+5. In the directory, create a subdirectory **lesson1** and move the **html** file you created in the first session and all the other relevant files and directories (e.g. /images)
 
 6. Now, link the file from the root of your project by creating an `index.html` and adding a link to the page
 
@@ -136,11 +148,11 @@ Now that you have the Github client setup on your machine, we will spend sometim
 
 	To access your work, go to `http://<username>.github.io/codebar`
 
-10. Repeat the process to list the rest of the tutorials you have worked on on the page as well.
+10. Repeat the process to list the rest of the tutorials you have worked on too.
 
 ## Bonus
 This is your personal page. Use what we learned in the previous lessons to style it, and make it look pretty, and what we learned today to commit and publish your changes.
 
 -----
 
-This ends our _Introduction to Version Control and git_ lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our _Introduction to Version Control and Git_ lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
