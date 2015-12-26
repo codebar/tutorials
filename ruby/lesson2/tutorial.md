@@ -171,7 +171,7 @@ To write to a file, we must open it using the write mode (w), write the new cont
 
 ```ruby
 filename = "colors.txt"
-file = File.open(fname, "w")
+file = File.open(filename, "w")
 file.puts "red "
 file.puts "green"
 file.puts "blue"
