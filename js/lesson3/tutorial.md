@@ -121,11 +121,9 @@ Write a `$()` selector that selects the input box. Look at the
 Try calling the `.val()` method on that object. It should return the
 current contents of the input box.
 
-Now try calling the same method with a string parameter. See how it
-now changes what the input box contains? This is a common pattern in
-jQuery: calling a method with a new value as a parameter will change
-that property, while calling it without a parameter will return the
-current value.
+Now try calling the same method with a string parameter. See how this time it changes what the input box contains? 
+
+> This is a common pattern in jQuery: calling a method with a new value as a parameter will change that property, while calling it without a parameter will return the current value.
 
 To tie it all together, type some text in the input box, and call your
 addToList function with your `.val()` call as a parameter. You should
