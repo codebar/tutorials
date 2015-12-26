@@ -6,29 +6,38 @@ footer: true
 
 ##  HTML AND CSS - Beyond the basics
 
+###Objectives 
+ 
+In this tutorial we are going to look at:
+ 
+* Development Tools
+* Structuring content
+* Inline vs block elements
+* Box model
+* :hover state
+
+We will also be explaining in more detail elements that we mentioned in the previous two lessons.
+ 
+###Goal
+ 
+The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
+
+### Required files
+
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7328342/download) or for Windows users if you are having trouble extracting, you can use this [link.](assets/lesson3.zip)
+
 ### Recap
 
 In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets. **HTML** defines the _structure_ of a website and **CSS** the _presentation_.
 
-### Today we will be building a styled website from scratch
 
-The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
-
-We will also be explaining in more detail elements that we mentioned in our previous lesson.
-
-## But before we start...
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7328342/download) or for Windows users if you are having trouble extracting, you can use this [link](assets/lesson3.zip)
-
-### Development Tools - Inspectors
+## Development Tools - Inspectors
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
-A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a built in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
+Chrome Devtools are already built into your Chrome browser, or Inspector if you are using Firefox. For advanced users, many other tools are available as browser plugins, including the Firefox add-on [Firebug](http://getfirebug.com/).
 
-![](assets/images/firebug.png)
+![](assets/images/chrome-devtools.png)
 
 >  Ask your coach to show you how to edit the styling on our example page using firebug
 
@@ -93,7 +102,7 @@ Add an image wrapped in a `<div>` element
 
 ```html
 <div>
-  <img src="ada_lovelace.jpg" alt="Ada Lovelace"/>
+  <img src="ada_lovelace.jpg" alt="Ada Lovelace">
 </div>
 ```
 
@@ -115,7 +124,7 @@ Before you can manipulate the `<div>` surrounding the image, you must be able to
 
 ```html
 <div class="my-picture">
-  <img src="ada_lovelace.jpg" alt="Ada Lovelace"/>
+  <img src="ada_lovelace.jpg" alt="Ada Lovelace">
 </div>
 ```
 
@@ -178,9 +187,9 @@ An element can be visualised as a box. The box model is a way of describing the 
 
 **<span style="color: rgb(239,195,144);">orange</span>** is the `margin` &mdash; the spacing outside the border. This separates the element from other elements on the page.
 
-Note: `padding`, `margin` and `border` can be applied to any combination of sides, below all three are applied in equal measure to all four sides around the content.
+Note: `padding`, `margin` and `border` can be applied to any combination of sides. In the example below from the BBC News site, all three are applied, but only above the content.
 
-![](assets/images/box-model.png)
+![](assets/images/box-model.gif)
 
 ### Styling the header
 
@@ -511,7 +520,7 @@ Make the poem look different than the rest of the text. Add a CSS class `poem` t
 
 <p>
  <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">
-  <img src="http://www.google.com/logos/2012/ada_lovelaces_197th_birthday-991005-hp.jpg" />
+  <img src="http://www.google.com/logos/2012/ada_lovelaces_197th_birthday-991005-hp.jpg">
  </a>
 </p>
 ```
@@ -582,5 +591,5 @@ Have a look at the [example page](http://codebar.github.io/tutorials/html/lesson
 Use the inspector to have a look at `<body>` and `<h1>` and apply these changes to your page.
 
 -----
+This ends our third lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
 
-This ends our third lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

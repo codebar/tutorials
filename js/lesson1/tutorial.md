@@ -3,11 +3,13 @@ layout: page
 title: Introduction to JavaScript
 ---
 
+<img src="assets/images/js-logo.jpg" alt='js-logo' width='150px'/>
+
 ## What is JavaScript?
 
-**JavaScript** is a language that allows for interaction with the user, controlling the content of the browser, and altering the displayed document content.
+**JavaScript** is a programming language that runs in all modern web browsers. Along with CSS and HTML, it's one of the core technologies of the web and can do wonderful things for websites! It's most commonly used to make web pages interactive:
 
-Some common usages around the web are
+Some of the things JavaScript on the web can do:
 
 #### [Lightboxes](http://lokeshdhakar.com/projects/lightbox2/#example)
 
@@ -24,11 +26,13 @@ Some common usages around the web are
 [Stack of cards](http://designlovr.com/examples/dynamic_stack_of_index_cards/)
 ![](assets/images/effects_1.png)
 
-It is also becoming common outside of the browser. You can write your own programs and servers in JavaScript using [Node.js](http://nodejs.org/).
+It is also becoming more common outside of the browser. You can write your own server programs in JavaScript using [Node.js](http://nodejs.org/).
+
+<img src="http://mean.io/system/assets/img/logos/nodejs.png" alt='nodejs' width='300px'/>
 
 
 
-### Today we will be focusing on understanding the basics
+### Today let's focus on understanding the basics
 
 ## But before we start...
 
@@ -117,8 +121,8 @@ console.log("Is codebar AWESOME? " + codebarIsAwesome);
 console.log("Is the weather in London amazing? " + weatherIsAmazing);
 ```
 
-- **undefined variables**
-If no value is set for a variable, then it won't have a type until you set it.
+- **undefined**
+If no value is set for a variable, then it will automatically be set to undefined.
 
 ```js
 var iDontHaveAValue;
@@ -173,7 +177,9 @@ console.log("Division: x / y = " + division);
 ### The if statement
 In JavaScript we can write conditions to control what we output
 
-Let's try this out.
+For example, if we were required to fill in our credit card details on a website's form, we could use an `if` statement to check that the card number is the correct length before submitting the form.
+
+Let's try out writing an `if` statement.
 
 ```
 if (codebarIsAwesome) {

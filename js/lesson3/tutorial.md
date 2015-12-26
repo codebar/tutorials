@@ -6,8 +6,6 @@ title: Introduction to jQuery
 
 So far, we've learned the basics of JavaScript. From variables, to understanding Objects, functions and how to manipulate the &#x200b;**D**&#x200b;ocument &#x200b;**O**&#x200b;bject &#x200b;**M**&#x200b;odel.
 
-Today, we will be using **[jQuery 2.0.3](http://code.jquery.com/jquery-2.0.3.min.js)**. If you want to use jQuery on other projects, you can download or link directly to the latest version from the [jQuery download section](http://jquery.com/download/).
-
 #What is jQuery?
 
 jQuery is a widely used JavaScript library to help you find and change html elements on web pages, and do things in response to user events.
@@ -123,11 +121,9 @@ Write a `$()` selector that selects the input box. Look at the
 Try calling the `.val()` method on that object. It should return the
 current contents of the input box.
 
-Now try calling the same method with a string parameter. See how it
-now changes what the input box contains? This is a common pattern in
-jQuery: calling a method with a new value as a parameter will change
-that property, while calling it without a parameter will return the
-current value.
+Now try calling the same method with a string parameter. See how this time it changes what the input box contains? 
+
+> This is a common pattern in jQuery: calling a method with a new value as a parameter will change that property, while calling it without a parameter will return the current value.
 
 To tie it all together, type some text in the input box, and call your
 addToList function with your `.val()` call as a parameter. You should
@@ -651,6 +647,17 @@ Here are the things you learned about in exercise 2:
    has loaded.
 
 4. $.each() lets you run some code for each thing in an array.
+
+#Links
+
+If you want to use jQuery on other projects, you can download or link
+directly to the latest version from the
+[jQuery download section](http://jquery.com/download/).
+
+You can read the [jQuery documentation](http://api.jquery.com/) to
+look up what other things can be done with jQuery. The page for every
+jQuery method has examples of how to use it (maybe below a long
+explanation of what it does - scroll down to find the examples).
 
 ---
 This ends our **Introduction to jQuery** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

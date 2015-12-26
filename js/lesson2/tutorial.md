@@ -31,6 +31,8 @@ When the while loop starts, the test is checked. If it is false, then the while 
 
 The difference is in what happens after the statements in the block. With an `if`, everything is finished and the statements below the if block are executed. With a `while`, we go back up to the test. If the test is still true, the statements in the block are executed again, and so on until the test is false. This is why we call it a loop.
 
+For example, if we wanted to set a timer on an online ticket outlet, we could count the timer down and while it hasn't reached zero, the option to buy the ticket could still be available.
+
 We can use this to sum all numbers from 1 to 10:
 
 ```js
@@ -45,7 +47,7 @@ while (i <= 10) {
 console.log("Total: " + total);
 ```
 
-> `<=` stands for **smaller or equal**. We can also express `<=10` using `< 11`
+> `<=` stands for **smaller or equal**. We can also express `<= 10` using `< 11`
 
 You can read this as:
 
@@ -73,6 +75,8 @@ The second part is a test, and just like in the `while` loop it is checked befor
 
 The third part is executed after each loop iteration. It's useful for incrementing the loop counter.
 
+For example, if we had an online shopping basket, we could loop over the items in the basket and add up the cost to a total using a `for` loop. The initial value can be zero, the second part can test that there are still items left to be added up and the third part can increment to the next item. The code that is run on each iteration can add the cost to a shopping basket total.
+
 The `while` loop above can be rewritten as a `for` loop:
 
 ```js
@@ -85,6 +89,7 @@ for (i = 1; i <= 10; i = i + 1) {
 
 console.log("Total: " + total);
 ```
+> Another way to write the for loop is `for (var i = 1; i <= 10; i++)`. The `i++` is a short way of writing "increase i by one".
 
 Even though `while` loops are more simple than `for` loops, it is more common to see `for` loops. This is because loops are often used to do something with arrays, which are introduced in the next section.
 
@@ -112,7 +117,7 @@ To get the first item `animals[0]`, the second `animals[1]` etc.
 The `length` property returns the size of the Array
 
 ```js
-animals.length
+animals.lengt
 ```
 
 The length property is extremely useful when you want to do something with every element in an array. For example, to log each entry of the `animals` array, you can use `animals.length` with a `for` loop:
@@ -184,7 +189,7 @@ nums.sort(sortNumbersAscending);
 console.log(nums);
 ```
 
-Sort passes pairs of entries from the array to `sortNumbersAscending`. If `sortNumberAscending` returns a number less than zero, then sort knows that `a` should come before `b`. If the number is greater than zero, then `b` should come before `a`.
+Sort passes pairs of entries from the array to `sortNumbersAscending`. If `sortNumbersAscending` returns a number less than zero, then sort knows that `a` should come before `b`. If the number is greater than zero, then `b` should come before `a`.
 
 Another cool operation you can apply is `reverse()`.
 
@@ -194,10 +199,10 @@ animals.sort().reverse();
 
 ```js
 // Sort numbers descending.
-nums.sort(ascending).reverse();
+nums.sort(sortNumbersAscending).reverse();
 ```
 
-> Can you write a function called `sortNumbersDescending` that can be used in place of `.sort(ascending).reverse()`?
+> Can you write a function called `sortNumbersDescending` that can be used in place of `.sort(sortNumbersAscending).reverse()`?
 
 ### Loops again!
 
@@ -232,8 +237,6 @@ for (var i = 0; i < fruitAndVeg.length; i = i + 1) {
   }
 }
 ```
-
-
 
 ## Objects
 
