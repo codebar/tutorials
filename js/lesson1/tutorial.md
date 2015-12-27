@@ -7,439 +7,534 @@ title: Introduction to JavaScript
 
 ## What is JavaScript?
 
-**JavaScript** is a programming language that runs in all modern web browsers. Along with CSS and HTML, it's one of the core technologies of the web and can do wonderful things for websites! It's most commonly used to make web pages interactive:
+JavaScript is a programming language that runs in all modern web
+browsers. It is used to change what is displayed on a web page in
+response to user activity.
 
-Some of the things JavaScript on the web can do:
+This tutorial will give you your first introduction to JavaScript. It
+barely scratches the surface of all the things that you can do - this
+one is intended to be just enough for you to understand our next
+tutorials that do more interesting things.
 
-#### [Lightboxes](http://lokeshdhakar.com/projects/lightbox2/#example)
+Some words in programming have special meanings. We're going to take
+some time during this tutorial to explain what some of the most
+commonly used words mean. Words which mean a specific thing will be
+marked in **bold**. Try to remember them, because it's important for
+you to understand what other programmers mean when they use these
+words, and what the documentation means when you read it. You can
+always look back at this tutorial later to remind yourself.
 
-![](assets/images/lightbox.png)
+## Getting started
 
-#### [Data visualisations](http://www.nytimes.com/interactive/2013/04/08/business/global/asia-map.html?_r=0)
-![](assets/images/data_visualisations.png)
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/0b674ec9d5ae9cb09704/download).
 
-#### Many other cool things!
+We recommend that you use chrome for this tutorial, as the
+instructions are written to match it closely, but you should be able
+to do all the same things in any web browser.
 
-[The interactive ear](http://www.amplifon.co.uk/interactive-ear/index.html)
-![](assets/images/interactive_ear.png)
+We've given you two files. One is `script.js`, which you should open
+in your text editor. This is where you're going to write your
+code. The other is `index.html`, which you should open in your web
+browser. This is a very short file that just tells your browser to run
+the code in `script.js`.
 
-[Stack of cards](http://designlovr.com/examples/dynamic_stack_of_index_cards/)
-![](assets/images/effects_1.png)
+For this tutorial, you will also need to open the console. In
+chrome, use Ctrl-Shift-J or Cmd-Shift-J to open the console. The
+console should look something like this:
 
-It is also becoming more common outside of the browser. You can write your own server programs in JavaScript using [Node.js](http://nodejs.org/).
+<img src="assets/images/console.png">
 
-<img src="http://mean.io/system/assets/img/logos/nodejs.png" alt='nodejs' width='300px'/>
+## Writing your first line of JavaScript
 
-
-
-### Today let's focus on understanding the basics
-
-## But before we start...
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/0b674ec9d5ae9cb09704/download)
-
-## Let's try out some JavaScript!
-
-We'll start by just outputting some content on our browser's inspector console.
-To keep track of what we do, you should write the code in the `script.js`
-
-First open up your HTML page and the **inspector**.
-
-> We will be doing a lot of refreshing to see our changes! **JavaScript** loads when the page opens, so it's essential to refresh!
-
-Let's write out something in the console, to make sure that our file is in place and working!
-
-```js
-console.log("Hello! This is my first line of JavaScript!");
-```
-
-There are a few things going on here. For now, all you need to know is that `console.log` is a *function* that allows you to print something to the console. The stuff between the brackets is what gets printed.
-
-##Variables and Expressions
-
-### What are Variables?
-
-Variables are objects that hold content. They are declared using `var` and we can assign values to them.
-
-### What are expressions?
-
-Expressions are a set of variables, operations and expressions that get evaluated together.
-
-
-#### Let's try and understand variables by building some simple expressions
-
-There are different types of variables that we can declare:
-
-Try them out one by one!
-
-- **strings** - group of characters, it must always be in quotes
+The console is a place where you can type a single line of JavaScript,
+and it will immediately run. Try it out now, by typing the following
+line into the console, then pressing enter:
 
 ```js
-var name = "codebar";
-
-console.log(name + " is amazing!"); // this is an expression
+console.log('Hello!');
 ```
 
-> Can you see the output in your console? Try changing the value of `name`
+You should see something that looks something like this:
 
-The `+` operator adds things together. For strings, this means *concatenating* them. If anything other than a string is added to a string, JavaScript will try to turn it into a string first.
+<img src="assets/images/console-hello.png">
 
-- **numbers**
+Your screen might not look exactly the same as this, but it should
+have the same three lines of text at the bottom. If you don't see
+this, get your coach to help you.
 
-Let's output the value of pi:
+A few important things have happened here, which we're going to go
+over in more detail in the next section. For the moment, you should
+see where it's printed `Hello!` on your console. That's what
+console.log does: it takes the thing you give it, and prints it on the
+console.
+
+You should also see two other lines: one with the code that you typed
+in, and one that says `undefined`. There should be two little arrows
+to the left of them. The arrows tell you that this line is about
+something that was typed into the console directly. For now, just
+remember what they look like.
+
+Let's move on to writing code in a file. Type the same `console.log`
+line into `script.js`. Reload the page in your browser so that it
+reads the change you made.
+
+This time, you should just see the line that says `Hello!`, and not
+the lines that said `console.log('Hello!');` or `undefined` with
+arrows next to them. That's because you didn't type the JavaScript
+into the console this time.
+
+###What you've learned so far
+
+* How to type JavaScript into the console
+* How to type JavaScript into a file
+* How to print things to the console with console.log
+* How to recognise the things you see on the console
+
+We've been going really slowly so far, because it's essential that you
+be able to do all these things for the rest of the tutorial. If you
+aren't sure about any of them, stop and ask your coach about it
+now. Otherwise, we're going to start doing more interesting things.
+
+##Values and expressions
+
+Try typing a single `1` on the console. You should see that it
+repeats the number back to you, with an arrow next to it.
+
+Try typing `1 + 2` on the console. This time you should see it add the
+numbers together and give you the result.
+
+The `1 + 2` that you typed is an **expression**. What the console
+printed with the arrow next to it is the **value** of that
+expression. As you've just seen, the value of `1` is just `1`, and the
+value of two numbers with a `+` sign between them is those two numbers
+added together.
+
+We want to do things with words as well as numbers. A value containing
+letters is a **string**, and you write it in quotes. Try typing
+`'Hello'` on the console. Like before, you'll see it repeated back to
+you: the value of a string is just that string.
+
+Try `'Hello' + 'there'`. You should see it combine the two strings
+into one. The value of two strings with a `+` sign between them is
+those two strings concatenated. You'll also see that it's missing a
+space - can you fix that?
+
+Try typing `Hello` without any quotes around it. See how you just get
+an error about `Hello` not being defined? Words that aren't surrounded
+by quotes are not strings. There's a couple of things that they could
+be, which we'll discuss later, but the important thing to remember for
+now is that you can put anything you like into a string, but an
+unquoted word has to be defined before it means something.
+
+There are many more kinds of expressions and values, but we'll come
+back to that later.
+
+Remember:
+
+* A **value** can be a single number or a single string
+* An **expression** can combine several numbers or strings together
+* Every **expression** can be reduced to a single **value**
+
+##Variables
+
+Try typing this on the console:
 
 ```js
-var pi = 3.14;
-
-console.log("The value of pi: " + pi);
+var a = 17;
 ```
 
-In the above case, a number is being added to a string. JavaScript turns the number into a string, and then puts the two strings together.
+You'll see that it returns the value as `undefined`. undefined just
+means that the thing you typed doesn't really have a value. However,
+this did something else: it created a **variable** named `a`.
 
-Now let's output the current year, and auto-calculate the value of the next year using **addition**
+Now try typing `a` on the console. You should see that you get back
+17. Variables are a way of giving names to **values** so that you can
+use them later.
+
+Try typing these:
 
 ```js
-var year = 2015;
-var nextYear = year + 1;
-
-console.log("We are in " + year + ", but " + nextYear + " is just around the corner!");
+var b = 12;
+var c = a + b;
 ```
 
-That's great! We can combine strings together and add up numbers.
+Now look at the values of b and c. See how it's storing the values of
+these expressions?
 
-> Sometimes you may forget to use `;` after a statement. Usually this is ok, but sometimes strange things can happen. Try not to forget to use `;`.
+A line starting with `var` is a **variable definition**. You should
+use this whenever you are creating a new variable.
 
-- **booleans** - true/false
+You can also change the value of a variable. That's why it's a
+"variable": because its value can vary. Try this:
 
 ```js
-var codebarIsAwesome = true;
-var weatherIsAmazing = false;
-
-console.log("Is codebar AWESOME? " + codebarIsAwesome);
-console.log("Is the weather in London amazing? " + weatherIsAmazing);
+b = 2;
 ```
 
-- **undefined**
-If no value is set for a variable, then it will automatically be set to undefined.
+Notice that you don't have `var` this time. If you just have a
+variable name, an equals sign, and an expression, then this is a
+**variable assignment**, which changes the value of a variable that
+you defined earlier.
+
+You've just changed the value of `b`. Remember that you defined `c` to
+be `a + b`? Look at `c` again and see if it has changed.
+
+You should see that `c` has stayed the same. Now try assigning it again:
 
 ```js
-var iDontHaveAValue;
-
-console.log("What kind of variable am I? " + iDontHaveAValue);
+c = a + b;
 ```
-> The general convention in JavaScript is to use `lowerCamelCase` while naming variables.
 
-### Operations
-There are a number of operations you can apply, just like when using math.
+See that it's changed this time? This is because the **expression**
+`a + b` is converted into its **value** immediately when it is used.
 
-Let's section the output by outputting a title
+###Keywords, identifiers, and strings
+
+The word `var` is a **keyword**: a word that means something special
+to the language. `var` means "create a new variable".
+
+Earlier in this tutorial, we had you try typing `Hello` on the console
+without quotes, and you got an error about it not being defined. You
+can put anything you like into a string, but things that aren't in a
+string need to be defined to mean something before you can use
+them. The `var` keyword defines a new word to be a variable. In this
+section you created the variables `a`, `b`, and `c`, so you could use
+those.
+
+Unlike with strings, you can't use any word you like to be a variable
+name. The kind of words that can be variable names are called
+**identifiers**. Identifiers can contain letters, `$` signs, or
+underscores `_`. They can also have numbers in them, but may not start
+with a number. The rest of the punctuation on your keyboard cannot be
+used in identifiers.
+
+The other important rule is that you can't write an identifier that is
+the same as a keyword, so you cannot create a variable called
+`var`. If you try writing this then you will get a fairly obscure
+error message:
 
 ```js
-console.log("Operations");
+var var = 1;
 ```
 
-#### addition  `+`
+##Functions
+
+Start by typing this on the console:
 
 ```js
-var x = 6;
-var y = 3;
-var addition = x + y;
-
-console.log("Addition: x + y = " + addition);
+function hello() { console.log('Hello!'); }
 ```
 
-#### subtraction `-`
+It won't do anything just yet. This thing is a **function
+definition**. You can recognise it because it starts with the word
+`function`. It creates a new function named `hello`.
 
-```js
-var subtraction = x - y;
-
-console.log("Subtraction: x - y = " + subtraction);
-```
-
-#### Multiplication `*`
-
-```js
-var multiplication = x * y;
-
-console.log("Multiplication: x * y = " + multiplication);
-```
-
-#### Division `/`
-
-```js
-var division = x / y;
-
-console.log("Division: x / y = " + division);
-```
-
-### The if statement
-In JavaScript we can write conditions to control what we output
-
-For example, if we were required to fill in our credit card details on a website's form, we could use an `if` statement to check that the card number is the correct length before submitting the form.
-
-Let's try out writing an `if` statement.
-
-```
-if (codebarIsAwesome) {
-  console.log("codebar is AWESOME!");
-}
-```
-
-Isn't that cool! :)
-
-We can also write a condition that checks for the opposite, so, not true
-
-```js
-if (!codebarIsAwesome) {
-  console.log("codebar is not so awesome :(!");
-}
-```
-
-> This should not output anything. Try setting `codebarIsAwesome` to false before running this expression.
-
-> Did you use `var`? Since we have already declared our variable, you shouldn't need to do that.
-
-
-The `if` statement will try to turn anything in the round brackets into a `true` or a `false`. It is very common to let it do this, so when you see some JavaScript in the wild, be prepared! The following things become `false` when used in an `if` statement:
-
- - `false`
- - `0`
- - `"" // (an empty string)`
- - `null`
- - `undefined`
- - `NaN`
-
-Don't worry about what all of these are yet. It'll become more clear as you go on.
-
-Conditions work with a number of evaluated statements. Some of the comparisons we can use are:
-
-#### Strict equality `===`
-
-```js
-var apples = "apples";
-var oranges = "oranges";
-
-if (apples === oranges) {
-  console.log("Apples and Oranges are the same thing!");
-}
-```
-
-There is also a relaxed equality called simply 'equality' that looks like `==`. JavaScript developers try to avoid it, because it behaves strangely. Ask your instructor for more information, but also remember to avoid `==`.
-
-This should not output anything, **apples** and **oranges** are not the same thing!
-
-#### Strict inequality `!==`
-
-```js
-if (apples !== oranges) {
-  console.log("Apples are not Oranges!");
-}
-```
-
-As with `===`, there's a version of strict inequality called simply 'inequality'. It also behaves strangely and should be avoided.
-
-#### Greater than `>`
-
-```js
-var coaches = 20;
-var students = 24;
-var pizzas = 25;
-
-var people = coaches + students;
-
-if (people > pizzas) {
-  console.log("We have more people than pizzas!");
-}
-
-if (students > pizzas) {
-  console.log("But we have more students than pizzas! Let's not give the coaches any food.");
-}
-```
-
-#### Less than `<`
-
-```js
-if (coaches < students) {
-  console.log("We have less coaches than students.");
-}
-```
-
-### if-else statements
-
-An **if-else** statement enables us to run alternative actions when our condition is not true
-
-```js
-if (people > pizzas) {
-  console.log("We have more people than pizzas. That's not very good :/");
-} else {
-  console.log("We have waaay too much pizza. That can never be bad! :)");
-}
-```
-
-> Try changing the numbers. What happen when you set students to `2`. Do you see the else part of the statement being evaluated?
-
-## Functions
-
-Functions are a major part of every programming language. They enable us to create meaningful snippets of code that we can rerun without having to define the same things again.
-
-Let's write a small function that prompts someone accessing our page with a message.
-
-Let's do this in steps. First create a function:
-
-```js
-function hello() {
- console.log("Hello!");
-}
-```
-
-If you refresh the browser, you will notice that nothing is printed. This is because we must *call* our function in order for it to be evaluated and give us a result.
+Now try typing this:
 
 ```js
 hello();
 ```
 
-Now let's extend out function to take in **arguments**. We want it to say hello to different people.
+This thing is a **function call**. You can recognise it because
+it's a name with `()` immediately afterwards. Try calling `hello` again.
+
+Let's move some of this into `script.js`. We wrote the function
+definition all on one line because that's all the space you have in
+the console, but the normal way to write one is like this:
 
 ```js
-function hello(name) {
- console.log("Hello " + name + "!");
+function hello() {
+  console.log('Hello!');
 }
 ```
 
-Arguments are a list of variables that will be given when the function is called. Think of them as placeholders.
+Put that into `script.js` and reload the page. Now just try calling
+the `hello` function on the console, without doing anything else. You
+should see that it still works, using the definition that you put into
+`script.js`.
 
-If you now run `hello();` you will notice that it says "Hello undefined".
-
->  Why is that? Do you know? Have a look at **undefined variables** if you don't remember
-
-Ok, so let's call the function with our name.
-
-```js
-hello("codebar");
-```
-
-> Call the function with your name and your coach's name. Do you see the output?
-
-Let's write an improved version of this that shows a small dialog with the message.
-
-> We'll only give you a part of the function, try to make this work.
+Let's make a larger function. Put this one into `script.js`:
 
 ```js
-function popupHello(name) {
-  alert("Hello " + name);
+function conversation() {
+  hello();
+  console.log('How are you?');
+  console.log('Goodbye');
 }
 ```
 
-Now that you fixed the problem, call the function from you browser's console!
+Try calling the `conversation()` function on the console. See how it
+did all three things in order? Functions are lists of things to
+do. When you call the function, it does all the things in its
+definition.
 
-> Don't add the call to the function in your `script.js`(It will get annoying to see it every time you refresh!)
+Let's get a few words for these things before we move on:
 
-### Multiple arguments
+* `hello` and `conversation` are the **name** of the functions
+* The lines inside the braces `{}` are the **body** of the function
+* Remember from earlier that a function name followed by parentheses,
+  like `hello()`, is a **call**
 
-So far we've tried out functions with zero arguments and one argument. But we can use more! Let's try writing a function with multiple arguments.
+Function names are **identifiers**, the same as variables. That means
+they have exactly the same rules about what names you may give to your
+functions. The word `function` itself is a **keyword**.
+
+###What you've learned so far
+
+* What **strings**, **expressions**, **values**, **variables**, and
+  **functions** are
+* What sort of names you can use for your variables and functions
+* How to read and write number and string expressions
+* How to use the `+` operator on numbers and strings
+* How to store values in variables
+* How to **define** and **call** functions
+
+##Function parameters
+
+Change your `hello` function definition to look like this:
 
 ```js
-function whatIAmDoingToday(coach, place) {
- console.log("Today, I am at " + place + " and I am learning a bit of JavaScript with the help of " + coach);
+function hello(person) {
+  console.log('Hello ' + person + '!');
 }
 ```
 
+Now try calling it using `hello('Archibald')`.
 
-### Returning values
+That probably isn't your name. Try calling the function again using
+your own name.
 
-Besides printing, which is nice when learning as it makes it easier to see the result, we can also `return` values.
+What you've done here is to add a **parameter** to the function. When
+you call the function, you put a string between the parentheses. In
+the definition, you put the word `person` between the
+parentheses. While the function runs, `person` is defined to be a new
+**variable** with the **value** of whatever you used in the call.
 
-Create a function that adds two numbers together
+Now add a `person` parameter to the `conversation` function as well,
+and try it out.
 
-```js
-function addNumbers(x, y) {
-  x + y;
-}
-```
-> Try to run this. Not what you expected is it?
+> Some people use the word **argument** instead of
+  **parameter**. While there are subtle differences in their meaning
+  in computer science, the two words are interchangeable in practice.
 
-To fix this, we must explicitly use `return` when we want the function to give us back the result
+##Function return values
 
-Change the function to
+Make a new function named `greeting`. Give it a `person` parameter
+like the others.
 
-```js
-return x + y;
-```
-
-> Anything after the return will be ignored. What happens when you add some content before the end of your function but after defining `return`?
-
-You can fill an argument of a function with a call from another function. It's common to see this, but better to assign the value to a variable first. What do you expect to get when running `addNumbers(addNumbers(1,2), 4);`? Try it out.
-
-### Scope
-
-When we declare a variable within a function, they are not visible outside it.
+In the body of this new function, write this line:
 
 ```js
-function subtractNumbers(x,y) {
-  var result = x - y;
-}
-
-subtractNumbers(10,3);
-console.log(result);
+  return 'Hello ' + person + '!';
 ```
 
-But, when we declare them outside the function, they are
+Try calling this function from the console. Look carefully at the
+output: you should see that unlike all the functions you've called so
+far, this one has a value.
+
+`return` is another **keyword**: it means "return the value of this
+expression from this function". The value of a **function call** is
+the value that was given to `return`. If the function got to the end
+without ever seeing `return` then the value of the call will just be
+`undefined`.
+
+Now change your `hello` function to use this new `greeting` function,
+instead of having the message in it. Check that `conversation` still
+works afterwards.
+
+##Multiple function parameters
+
+Functions can have as many parameters as you want. You separate them
+with commas. Try changing the first line of the definition of
+`conversation` to be:
 
 ```js
-var result;
-
-function subtractNumbers(x,y) {
-  result = x - y;
-}
-
-subtractNumbers(10,3);
-console.log(result);
+function conversation(person, topic) {
 ```
 
-In the second example, `result` does not belong to `subtractNumbers`, but it can see and change it. In the first example, `result` is only defined inside the `subtractNumbers` function. The error that the first example above makes will tell you more information.
+Now add another line to the function that prints `"Do you like " +
+topic + "?"` on the console.
 
-There is another possibility:
+Similarly, you call the function like this:
 
 ```js
-var result;
-
-function subtractNumbers(x,y) {
-  var result = x - y;
-}
-
-subtractNumbers(10,3);
-console.log(result);
+conversation('Archibald', 'owls');
 ```
 
-Notice that the variable `result` has a `var` both outside and inside the function. This means that they are actually *two different variables*. This is called *shadowing*. It can be confusing, so try not to do this.
+Try it out for yourself.
 
-## Bonus
-Now you know enough to write your own little **JavaScript** program!
+###What you've learned so far
 
-With help from your coach try and write a program to do the following
-- Store your name in a variable
+* How to pass **parameters** to functions, and how to **return**
+  values from functions
 
-- Store information about yourself in a variable
+##Statements
 
-- Store how many codebar sessions you have attended
+We've been putting semicolons `;` in various places. A semicolon marks
+the end of a **statement**. So far we have been writing one line for
+each statement, but this is not required. With a few exceptions, you
+can add extra spaces and newlines anywhere you like. The following
+statements all mean exactly the same thing:
 
-- Make the program output
-  ```
-  Hi! My name is _name_.
-  A couple of things about me _about you_.
-  I have attended _number of sessions_ codebar sessions so far!
-  ```
+```js
+console.log('How are you?');
+```
 
-- if the number of sessions attended is 0
-  ```
-  This is the first time I'm attending codebar!
-  ```
-- If the number of sessions attended is more than 0
-  ```
-  This is not my first time here. I <3 codebar!
-  ```
+```js
+console.log(
+  'How are you?');
+```
+
+```js
+console.log(
+  'How are you?'
+);
+```
+
+Use spaces and newlines to make your program easy to read. When you're
+just starting out, it won't be immediately clear to you what makes
+things easier to read, so just try to follow the patterns that we use
+in the tutorials. As you read and write more programs this will start
+to make sense to you.
+
+###Semicolons
+
+Semicolons are needed after any statement that does not end in a
+`}`. While it is sometimes possible to leave out semicolons and have
+the program still work, this is likely to break in surprising ways, so
+you should try to put them in the right places.
+
+One important exception to these rules is the `return` statement. You
+may not add a newline immediately after the word `return`, because if
+you write this:
+
+```js
+return
+   a + b;
+```
+
+Then it is interpreted as meaning this:
+
+```js
+return;
+a + b;
+```
+
+If you want to break up a return into multiple lines, you can write it
+like this and it will work:
+
+```js
+return (
+  a + b);
+```
+
+We apologise for this quirk of the language.
+
+##Objects
+
+Another type of **value** is an **object**. A way to create an object
+is like this:
+
+```js
+var person = {
+    first_name: "Archibald",
+    likes: "owls",
+};
+```
+
+The **object** referred to by the variable named `person` will now
+have two **properties**, named `first_name` and `likes`. You can
+access them by writing `person.first_name` or `person.likes`.
+
+The `.` means "access an object's property". The value of
+`person.first_name` is whatever value is stored in the `first_name`
+property of the `person` object.
+
+A **property** is a lot like a **variable**. You can change the value
+stored in it by using `=`:
+
+```js
+person.first_name = "Aberforth";
+```
+
+###References
+
+Objects are **values**. We tend to say "the `person` object", but what
+we really mean is "the object referred to by the `person`
+variable". This is important because you can, and often will, have
+several variables that refer to the same object. Try this:
+
+```js
+var person_a = {
+    first_name: "Archibald",
+    likes: "owls",
+};
+var person_b = person_a;
+
+console.log("Before");
+console.log(person_a.first_name);
+console.log(person_b.first_name);
+
+person_a.first_name = "Aberforth";
+
+console.log("After");
+console.log(person_a.first_name);
+console.log(person_b.first_name);
+```
+
+Look carefully at the output. Would you expect person_a.first_name to
+be the same as person_b.first_name?
+
+Writing `person_b = person_a` copies the **reference** to the object,
+so that you have both variables referring to one object. You can then
+change the object through `person_a`, and see the changes that you
+made to the object through `person_b`.
+
+###Methods
+
+It is also possible to store a function in a property. When we do
+this, we use the word **method** instead of **property**. You call a
+method by combining the way you write properties with the way you
+write function calls:
+
+```js
+console.log('Hello!');
+```
+
+You may recall this line from the start of the tutorial. You now know
+enough to understand that `console` is an object, and `log` is a
+method on the console object.
+
+There are many more things that can be said about objects, and we will
+return to them in a later tutorial.
+
+##Summary
+
+You now know what all of these words mean:
+
+* strings
+* expressions
+* values
+* variables
+* functions (definitions and calls)
+* parameters
+* statements
+* objects
+* properties
+* methods
+
+You also know how to do all these things:
+
+* Use the javascript console
+* Store values in variables
+* Add numbers and combine strings with `+`
+* Define and call functions
+* Access object properties
+* Call object methods
+* Understand what everything in `console.log('Hello!');` means
+
+If you're uncertain about any of these, ask your coach! You'll be
+needing to know all of them for our next tutorial.
 
 ---
 This ends our **Introduction to JavaScript** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
