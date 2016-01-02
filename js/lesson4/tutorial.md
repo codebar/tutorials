@@ -152,7 +152,9 @@ We create an `XMLHttpRequest` object and then call the `open` method, passing th
 2. the `url` - in this case the url eg https://api.github.com/users/codebar
 3. whether or not to run this request synchronously or asynchronously.
 
-In this case, we'll specify synchronously by passing `false`. This means the browser will wait for the call to the GitHub API to finish before continuing. We'll get into asynchronous requests later on.
+In this case, we'll specify synchronously by passing `false`. This means the browser will wait for the call to the GitHub API to finish before continuing.
+
+> Making requests synchronously is not good practice, but we're doing it for now to keep things simple. Your browser may show a deprecation warning but the request will still work. We'll move onto asynchronous requests further down once we have the basics of APIs covered.
 
 You can now call `getGithubInfo`, passing the username, from the `keypress` block above. That will log the data to the console. Next, we need to pass this back to the web page via the DOM.
 
