@@ -81,7 +81,7 @@ In the old days, before HTML5, you had to use a plug-in if you wanted to include
 Some browsers still don't support this. In that case, the browser will show the message you include within the tag. Here's a video example:
 
 ```html
-<video src="path/to/video">
+<video src="path/to/video" controls>
   Your browser doesn't support embedded video!
 </video>
 ```
