@@ -104,6 +104,6 @@ Let's create a variable called:
 
 	if coffee  >= 4: 
 		print "You have a coffee problem"
-	elif:
+	else:
 		print "You do not have a coffee problem"
 	
