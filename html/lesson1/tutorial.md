@@ -154,9 +154,8 @@ Wrap your existing paragraph and link in a div and add a new heading to it.
   <h1>Owls</h1>
   <p>
     Most birds of prey sport eyes on the sides of their heads,
-    but the stereoscopic nature of
-    the owl's forward-facing <strong>eyes permits the greater
-    sense of depth perception</strong> necessary for low-light hunting.
+    but the stereoscopic nature of the owl's forward-facing eyes permits the greater
+    sense of depth perception necessary for low-light hunting.
     <a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
   </p>
 </div>
