@@ -9,7 +9,9 @@ Ask your coach for help on getting your project setup in Github and granting per
 
 Today's session is not aimed to teach you anything new programming-wise but to enable you to start building things on your own. You are not expected to produce a working application by the end of today's lesson but to structure your thoughts and figure out what you want to build.
 
-To get help outside our sessions, [join the codebar channel](https://codebar.slack.com/messages/general/details/) or send an email to [hello at codebar.io](mailto://hello@codebar.io).
+To get help outside of our sessions go to [the Slack channel here](https://codebar.slack.com/messages/general/details/). If you are not on Slack, use [this link](https://codebar-slack.herokuapp.com/) to get an invite.
+
+You can also send an email to [hello at codebar.io](mailto://hello@codebar.io).
 
 # Things to help you get started
 
