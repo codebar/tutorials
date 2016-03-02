@@ -60,7 +60,7 @@ start by making the 'Add to list' button work.
 To get started, open `index.html` in your web browser, and open the
 javascript console.
 
-> In chrome, use Ctrl-Shift-J or Cmd-Shift-J to open the console
+> In chrome, use Ctrl-Shift-J or Cmd-alt-J to open the console
 
 There is a list on this page with id `items`. You can't see it yet
 because it's empty. Let's start by adding something to it. Try typing
