@@ -328,7 +328,7 @@ p.about {
 
 ### What is an em
 
-The name of an `em` doesn't really stand for anything. It was originally used to describe that it was equal to the **M** character as it was commonly casted as the full-width of the square "block which are used in printing presses.
+The name of an `em` stands for an ephemeral unit. It was originally used to describe that it was equal to the **M** character as it was commonly casted as the full-width of the square "block which are used in printing presses.
 
 By using `em` instead of `px` to set the font-size, we are keeping it relative to the default font size. So 0.9em is 0.9 times the size that would have otherwise applied to that container.
 
