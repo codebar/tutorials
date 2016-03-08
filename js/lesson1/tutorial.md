@@ -83,7 +83,7 @@ the lines that said `console.log('Hello!');` or `undefined` with
 arrows next to them. That's because you didn't type the JavaScript
 into the console this time.
 
-###What you've learned so far
+### What you've learned so far
 
 * How to type JavaScript into the console
 * How to type JavaScript into a file
@@ -95,7 +95,7 @@ be able to do all these things for the rest of the tutorial. If you
 aren't sure about any of them, stop and ask your coach about it
 now. Otherwise, we're going to start doing more interesting things.
 
-##Values and expressions
+## Values and expressions
 
 Try typing a single `1` on the console. You should see that it
 repeats the number back to you, with an arrow next to it.
@@ -135,7 +135,7 @@ Remember:
 * An **expression** can combine several numbers or strings together
 * Every **expression** can be reduced to a single **value**
 
-##Variables
+## Variables
 
 Try typing this on the console:
 
@@ -188,7 +188,7 @@ c = a + b;
 See that it's changed this time? This is because the **expression**
 `a + b` is converted into its **value** immediately when it is used.
 
-###Keywords, identifiers, and strings
+### Keywords, identifiers, and strings
 
 The word `var` is a **keyword**: a word that means something special
 to the language. `var` means "create a new variable".
@@ -217,7 +217,7 @@ error message:
 var var = 1;
 ```
 
-##Functions
+## Functions
 
 Start by typing this on the console:
 
@@ -279,7 +279,7 @@ Function names are **identifiers**, the same as variables. That means
 they have exactly the same rules about what names you may give to your
 functions. The word `function` itself is a **keyword**.
 
-###What you've learned so far
+### What you've learned so far
 
 * What **strings**, **expressions**, **values**, **variables**, and
   **functions** are
@@ -289,7 +289,7 @@ functions. The word `function` itself is a **keyword**.
 * How to store values in variables
 * How to **define** and **call** functions
 
-##Function parameters
+## Function parameters
 
 Change your `hello` function definition to look like this:
 
@@ -317,7 +317,7 @@ and try it out.
   **parameter**. While there are subtle differences in their meaning
   in computer science, the two words are interchangeable in practice.
 
-##Function return values
+## Function return values
 
 Make a new function named `greeting`. Give it a `person` parameter
 like the others.
@@ -342,7 +342,7 @@ Now change your `hello` function to use this new `greeting` function,
 instead of having the message in it. Check that `conversation` still
 works afterwards.
 
-##Multiple function parameters
+## Multiple function parameters
 
 Functions can have as many parameters as you want. You separate them
 with commas. Try changing the first line of the definition of
@@ -363,12 +363,12 @@ conversation('Archibald', 'owls');
 
 Try it out for yourself.
 
-###What you've learned so far
+### What you've learned so far
 
 * How to pass **parameters** to functions, and how to **return**
   values from functions
 
-##Statements
+## Statements
 
 We've been putting semicolons `;` in various places. A semicolon marks
 the end of a **statement**. So far we have been writing one line for
@@ -397,7 +397,7 @@ things easier to read, so just try to follow the patterns that we use
 in the tutorials. As you read and write more programs this will start
 to make sense to you.
 
-###Semicolons
+### Semicolons
 
 Semicolons are needed after any statement that does not end in a
 `}`. While it is sometimes possible to leave out semicolons and have
@@ -430,7 +430,7 @@ return (
 
 We apologise for this quirk of the language.
 
-##Objects
+## Objects
 
 Another type of **value** is an **object**. A way to create an object
 is like this:
@@ -457,7 +457,7 @@ stored in it by using `=`:
 person.first_name = "Aberforth";
 ```
 
-###References
+### References
 
 Objects are **values**. We tend to say "the `person` object", but what
 we really mean is "the object referred to by the `person`
@@ -490,7 +490,7 @@ so that you have both variables referring to one object. You can then
 change the object through `person_a`, and see the changes that you
 made to the object through `person_b`.
 
-###Methods
+### Methods
 
 It is also possible to store a function in a property. When we do
 this, we use the word **method** instead of **property**. You call a
@@ -508,7 +508,7 @@ method on the console object.
 There are many more things that can be said about objects, and we will
 return to them in a later tutorial.
 
-##Summary
+## Summary
 
 You now know what all of these words mean:
 
