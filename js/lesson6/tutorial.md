@@ -126,11 +126,11 @@ To fill in the circle, or any other joined elements, we use the `fill()` method 
 
 **Exercise** Create another circle and fill it with the color blue.
 
-##Transformations
+## Transformations
 
 In canvas, we can also use transformations on the current matrix.
 
-###`rotate()`
+### `rotate()`
 
 First add the rotate method at the bottom of the `draw()` method.
 
@@ -150,7 +150,7 @@ context.rotate(10*Math.PI/180);
 context.restore()
 ```
 
-###`translate()`
+### `translate()`
 
 Translate moves the current position. If we are at 10, 10 and we `translate(20, 15)`, then our new position is 30, 45.
 
@@ -158,7 +158,7 @@ Translate moves the current position. If we are at 10, 10 and we `translate(20, 
 context.translate(45, 45);
 ```
 
-###`scale()`
+### `scale()`
 
 And finally, `scale(scaleWidth, scalewHeight)`. Scale changes the dimensions of the rendered items.
 
@@ -169,7 +169,7 @@ context.scale(2,2);
 
 > Try tweaking the scale properties. How can you make the shape 5 times bigger?
 
-##Exercise - Drawing Hangman!
+## Exercise - Drawing Hangman!
 
 ![](assets/images/canvas-hangman.png)
 
@@ -186,7 +186,7 @@ We have already created the functions to draw the individual parts, so you shoul
 
 Here is our version of [Hangman in Canvas](../../examples/hangman-canvas/index.html).
 
-##Bonus
+## Bonus
 
 Plug hangman in the game you created in the last session. You can use conditional statements to control when each part is drawn.
 

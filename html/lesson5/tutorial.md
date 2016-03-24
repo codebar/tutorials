@@ -6,11 +6,11 @@ footer: true
 
 ##  HTML AND CSS - Diving into HTML5 and CSS3
 
-###Objective 
+### Objective 
  
 Today we will be building a website and will focus more on HTML5 and CSS3 specific elements.
  
-###Goal
+### Goal
 
 The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson5/example.html "Anita Borg")
 
@@ -18,7 +18,7 @@ The page we will build will look similar to this [example page](http://codebar.g
 
 Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7565600/download)
 
-###Recap
+### Recap
 
 In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets.
 **HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements, pseudo clases and went into more details about CSS Layouts and formatting.

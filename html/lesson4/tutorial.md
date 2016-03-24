@@ -6,11 +6,11 @@ footer: true
 
 ## HTML AND CSS - layouts and formatting
 
-###Objective 
+### Objective 
  
 Today we will be building a website and learning more about CSS layouts and formatting. We will also be explaining in more detail elements that we mentioned in the previous two lessons.
  
-###Goal
+### Goal
 
 The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
 
@@ -288,10 +288,10 @@ Floating elements still keeps them in the normal flow, but as far to the left or
 
 To ensure an element `floats` you must always specify its width, or else it's likely to take over the width of the page and not appear floated.
 
-###Box floating left
+### Box floating left
 ![](assets/images/float-left.png)
 
-###Box floating right
+### Box floating right
 ![](assets/images/float-right.png)
 
 ### Floating properties
@@ -516,7 +516,7 @@ line-height: 23px;
 -----
 This ends our fourth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
-##Further reading 
+## Further reading 
 
 * [Learn layout](http://learnlayout.com/)
 
