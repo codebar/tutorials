@@ -6,7 +6,7 @@ footer: true
 
 ##  HTML AND CSS - Beyond the basics
 
-###Objectives 
+### Objectives 
  
 In this tutorial we are going to look at:
  
@@ -18,7 +18,7 @@ In this tutorial we are going to look at:
 
 We will also be explaining in more detail elements that we mentioned in the previous two lessons.
  
-###Goal
+### Goal
  
 The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
 
@@ -138,7 +138,7 @@ Add the relevant style in your `style.css`
 
 > Have a look at the page. Inspect the image, and have a look at its CSS properties
 
-####Making this work
+#### Making this work
 
 Make the `div` element surrounding the heading inline. Start by adding a class `title` to it
 
@@ -173,7 +173,7 @@ and make the picture a bit smaller
 }
 ```
 
-##Box model
+## Box model
 
 ### What is the box model?
 
@@ -271,7 +271,7 @@ margin-top: 55px;
 margin-left: 20px;
 ```
 
-###Padding and margin
+### Padding and margin
 Padding and margin can be set in a number of different ways
 
 `padding: top right bottom left;` e.g. _padding: 10px 20px 30px 5px;_

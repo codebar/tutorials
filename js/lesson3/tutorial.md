@@ -6,11 +6,11 @@ title: Introduction to jQuery
 
 So far, we've learned the basics of JavaScript. From variables, to understanding Objects, functions and how to manipulate the &#x200b;**D**&#x200b;ocument &#x200b;**O**&#x200b;bject &#x200b;**M**&#x200b;odel.
 
-#What is jQuery?
+# What is jQuery?
 
 jQuery is a widely used JavaScript library to help you find and change html elements on web pages, and do things in response to user events.
 
-##Selectors
+## Selectors
 
 jQuery lets you identify the html element that you want to work on
 using `CSS` selectors. It uses the odd-looking `$()` function to do
@@ -23,7 +23,7 @@ $('#container')       // the element with the ID container
 $('.total')           // selects all elements with the class total
 ```
 
-##jQuery objects
+## jQuery objects
 
 The `$()` function returns a `jQuery object`. This object refers to
 the elements that you selected. You can then call jQuery methods on
@@ -35,7 +35,7 @@ $('.total').css('color', 'red')                // Set the CSS color to be 'red' 
 ```
 
 
-#Exercise 1: Build a wish list
+# Exercise 1: Build a wish list
 
 Using jQuery and JavaScript functions, we are going to build a small
 todo list.
@@ -53,9 +53,9 @@ git clone https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
 The files that you start with don't really do anything, so let's
 start by making the 'Add to list' button work.
 
-##Add wishes to the list
+## Add wishes to the list
 
-###Try it out
+### Try it out
 
 To get started, open `index.html` in your web browser, and open the
 javascript console.
@@ -77,7 +77,7 @@ the html element with id `items`. You then called the `append` method
 on this object. The append method takes an html string as a parameter,
 and appends it to the element that you selected.
 
-###Write some code
+### Write some code
 
 Now we can turn this into a function to add items to the list. Open
 `script.js` in your text editor and start writing a function:
@@ -105,12 +105,12 @@ addToList('build a website');
 
 You should see your item added to the list.
 
-##Make the input box work
+## Make the input box work
 
 There's an input field and button on the page. We're now going to
 connect those to the function you just wrote.
 
-###Try it out
+### Try it out
 
 Go to your web browser, type some text in the input box, and open the
 javascript console.
@@ -129,7 +129,7 @@ To tie it all together, type some text in the input box, and call your
 addToList function with your `.val()` call as a parameter. You should
 see this add the text from the input box to the wishlist.
 
-###Write some code
+### Write some code
 
 Now you know how to get the contents of the input box, and change
 it. Next you need to make all this happen when the button is clicked.
@@ -159,7 +159,7 @@ written, and make sure you understand what it all does. Ask your coach
 about anything that isn't clear to you. We're going to be building on
 these ideas in the next few steps.
 
-###Bonus
+### Bonus
 
 After you click on the button, the cursor is no longer in the input
 box. That's a bit annoying. Use jQuery's `focus()` method to place the
@@ -169,7 +169,7 @@ If you aren't sure how to use the focus() method, try searching for it
 in the [jQuery documentation](http://api.jquery.com/). There are some
 code examples illustrating how to use it.
 
-##Label items
+## Label items
 
 We're now going to add labels to the items in the list, so that you
 can mark them as done.
@@ -187,7 +187,7 @@ like this:
 
 ![](assets/images/build-a-website.png)
 
-##Setting items to complete
+## Setting items to complete
 
 When we click on the 'Pending' label, we want to mark items as
 complete. We shall do this by removing the 'Pending' label and adding
@@ -234,9 +234,9 @@ things in the css which apply to that class?
 This approach lets us keep all our styles in css files, and have
 javascript turn them on and off.
 
-##Show the total task count
+## Show the total task count
 
-###Try it out
+### Try it out
 
 Go to your web browser, add some items to the list, and open the
 javascript console.
@@ -255,7 +255,7 @@ span that comes just below the `<ol>` element. Write a jQuery selector
 for that element, and then call `.text('Pending: ' + pending + '
 Completed: ' + completed)` on it.
 
-###Write some code
+### Write some code
 
 You now know how to count the number of items in the list and display
 the totals. Write a new function called `updateTotal` to do this.
@@ -265,7 +265,7 @@ Update the displayed totals by calling `updateTotal()`
 1. after adding an item to the list
 2. when changing the state of an item from **Pending** to **Done**
 
-###Pushing to Github page
+### Pushing to Github page
 
 If you're using git for this exercise, you can push what you've made to your github page.
 
@@ -275,7 +275,7 @@ Access the wish list at **http://`<username>`.github.io/`<project>`/wishlist/ind
 Have a look at our [**Wish List**](../../examples/wishlist/index.html).
 
 
-##Exercise 1 recap
+## Exercise 1 recap
 
 Here are the things you learned about in exercise 1:
 
@@ -293,7 +293,7 @@ Here are the things you learned about in exercise 1:
    a handler for the `click` event, you can run your code when
    somebody clicks on something on the page.
 
-#Exercise 2: Build a colourpicker
+# Exercise 2: Build a colourpicker
 
 Before you start, close any windows you still have open from the last
 exercise. This one also has files called `index.html` and `script.js`,
@@ -317,13 +317,13 @@ something like this:
 
 ![](assets/images/color-codes.png)
 
-##Colour the preview area
+## Colour the preview area
 
 The big rectangle is meant to be a preview of the colour that you have
 typed into the text box above it. We're going to start by making a
 function to set the colour of this area.
 
-###Try it out
+### Try it out
 
 Have a look at `index.html`, and find the div called `preview`. In the
 javascript console, write a jQuery selector for this element.
@@ -341,7 +341,7 @@ setting the background colour to purple, like this:
   uses the American spelling, and it won't work if you write `colour`
   instead.
 
-###Write some code
+### Write some code
 
 Write a new function in `script.js` called `setPreviewColor`. Make it
 take a colour as a parameter and set the preview area's background to
@@ -350,7 +350,7 @@ be that colour.
 Try it out in the javascript console: `setPreviewColour('purple')`.
 You should see the same thing you did before.
 
-##Colour input box
+## Colour input box
 
 Next we're going to make the input box set the colour. Start by
 looking in the html for the `<input>` element. On the javascript
@@ -379,9 +379,9 @@ change colour when you type colour names into the input box.
 > Bonus question: why does the colour only change when you finish
   typing in a colour?
 
-##Display the rgb value of the colour
+## Display the rgb value of the colour
 
-###Try it out
+### Try it out
 
 Set the colour to purple again, and then use the javascript console to
 write a selector for the preview area, and call the css method on it
@@ -402,13 +402,13 @@ in rgb(x,y,z) form. Colours always get converted into this form when
 they are set. We can use this to add another feature to our colour
 picker.
 
-###Write some code
+### Write some code
 
 Extend your `setPreviewColor` function to set the text of
 `.color-code` to the rgb value that you read back from the `.preview`
 div.
 
-##Add colours to favorites list
+## Add colours to favorites list
 
 Next we're going to make the 'Add to favorites' button work. When it
 is clicked, it should add a box to the `#colors` div using the current
@@ -425,7 +425,7 @@ this to make the new box:
 
 > Run `addBox('FF0033')` from the console to make sure your code works.
 
-##Call the the `addBox` function from the `click` event
+## Call the the `addBox` function from the `click` event
 
 Write a new click event handler for the 'Add to favorites'
 button. Make it do the following things:
@@ -434,9 +434,9 @@ button. Make it do the following things:
 2. Add a box with that color
 3. Reset the value of the `#color` field
 
-##Setting up initial colours
+## Setting up initial colours
 
-###Try it out
+### Try it out
 
 For this next part, we're going to use a feature of jQuery that isn't
 related to changing web pages. Open the javascript console. Start by
@@ -461,7 +461,7 @@ See how the function got called with `(0, 'these')`, then with `(1,
 here. Experiment with it, or ask your coach, if there's anything
 you're unsure about.
 
-###Write some code
+### Write some code
 
 Now we're going to add some initial colours when the page loads. So
 far, you have been writing code that runs in event handlers when the
@@ -492,13 +492,13 @@ Now you can use a `$.each` inside your `ready` function to call
 should see that all these colours have been added, without you needing
 to click on anything.
 
-##Getting a random element
+## Getting a random element
 
 We can also initialise the preview box by selecting a random element
 from the colors list. To do this, we need to know how to pick a random
 choice.
 
-###Try it out
+### Try it out
 
 Start on the javascript console again. You can pick a random number
 with Math.random():
@@ -540,19 +540,19 @@ You should now be able to put these two things together to pick a
 random element from your array. Try it a few times to convince
 yourself that it's correct.
 
-###Write some code
+### Write some code
 
 You know how to do this now. Add some more code to `script.js` so that
 when the page has finished loading, you select a random colour from
 your array, and call `setPreviewColor` to set the preview area to that
 colour.
 
-##Restrict number of displayed boxes
+## Restrict number of displayed boxes
 
 If you keep adding more colours to the favourite list, the page gets a
 bit out of control. Let's limit the number of colours to 16.
 
-###Try it out
+### Try it out
 
 Add a few colours to the page, and open the javascript console.
 
@@ -578,7 +578,7 @@ With this object, you should be able to remove the last element. If
 you can't remember how, think back to exercise 1: you did this when
 removing pending labels from the wishlist.
 
-###Write some code
+### Write some code
 
 Change the code that handles the `click` event. If the number of
 colours on the page is 16 or greater, remove the last element from the
@@ -587,12 +587,12 @@ favourite list.
 This way, when the list is full, we remove a box from the end and add
 another one at the start.
 
-##Set focus
+## Set focus
 
 Similar to the first exercise, set the focus back to the `#color`
 input field when a color is added to the favorites list.
 
-##Change preview box on mouse over
+## Change preview box on mouse over
 
 The last feature to add to the colour picker is to make the preview
 area change colour as you point the mouse at the favourite
@@ -624,7 +624,7 @@ preview box and store it in `previewColor`.
 Write a `mouseleave` event for the items in the `#color` box, that
 sets the preview colour back to the original colour that you stored.
 
-##Publish to github
+## Publish to github
 
 If you're using git for this exercise, you can push what you've made to your github page.
 
@@ -633,7 +633,7 @@ Compare your colorpicker with [ours](../../examples/colorpicker/index.html).
 
 **Link to your colorpicker** http://`<username>`.github.io/`<project>`/colorpicker/index.html
 
-##Exercise 2 recap
+## Exercise 2 recap
 
 Here are the things you learned about in exercise 2:
 
@@ -648,7 +648,7 @@ Here are the things you learned about in exercise 2:
 
 4. $.each() lets you run some code for each thing in an array.
 
-#Links
+# Links
 
 If you want to use jQuery on other projects, you can download or link
 directly to the latest version from the

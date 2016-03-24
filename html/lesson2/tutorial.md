@@ -6,7 +6,7 @@ footer: true
 
 ## Introduction to CSS
 
-###Objectives 
+### Objectives 
  
 In this tutorial we are going to look at:
  
@@ -17,7 +17,7 @@ In this tutorial we are going to look at:
 * Cascading selectors
 * Pseudo classes
  
-###Goal
+### Goal
  
 Today we will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
 
@@ -470,7 +470,7 @@ If you have some time how about you go back through the tutorial making little a
 -----
 This ends our second lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
-##Further reading
+## Further reading
 
 * [CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
 * [More CSS](http://learn.shayhowe.com/html-css/)

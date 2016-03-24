@@ -153,7 +153,7 @@ number = 2
 number ||= 1
 ```
 
-##Reading and writing to a file
+## Reading and writing to a file
 
 In Ruby we can use the `File` object to read and write to files.
 
@@ -247,7 +247,7 @@ To try out the koans run `rake`. It gives you a hint as to what fails and you ca
 
 If you are working through this at home you can ask for help in our [gitter channel](https://gitter.im/codebar/tutorials).
 
-##Some reading material
+## Some reading material
 
 [Why's poignant guide to Ruby](http://mislav.uniqpath.com/poignant-guide/) is a cartoon written about Ruby by a programmer called Why the Lucky Stiff. You can also download the [pdf version](http://cloud.github.com/downloads/devyn/shoes-web/whys-poignant-guide-to-ruby.pdf).
 
