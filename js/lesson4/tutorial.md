@@ -3,7 +3,7 @@ layout: page
 title: HTTP Requests, AJAX and APIs
 ---
 
-###Objectives 
+### Objectives 
 
 In this tutorial we are going to look at:
 
@@ -14,7 +14,7 @@ In this tutorial we are going to look at:
 * Loading API data into web pages
 * Using jQuery AJAX functionality
 
-###Goal
+### Goal
 
 By the end of this tutorial you will have built:
 
@@ -56,11 +56,11 @@ As part of the response, a request gives back a **status code**. You can use thi
 |  400        |   Bad Request | The server did no understand the request |
 |  404        |   Not Found | The server could not find the requested resource |
 
-###HTTP Verbs
+### HTTP Verbs
 
 HTTP verbs are sent by the browser or client, and along with the URL used and data transmitted form part of the instruction to the API. There are several verbs, but in this tutorial we will be primarily using GET. GET is used to fetch information from an API. Another common verb is POST, which is used to create a new object on the remote service.
 
-##Exercise 1 - Retrieve GitHub user information
+## Exercise 1 - Retrieve GitHub user information
 
 We'll build a small application that gives us back information about a GitHub user - we want to show their username, information and their picture. [Download](https://gist.github.com/deniseyu/d1bc03b8091153b4b1a7/download) the exercise files or clone them directly from Github `https://gist.github.com/deniseyu/d1bc03b8091153b4b1a7`
 
@@ -96,7 +96,7 @@ The response will look something like the JSON data below, which we have shorten
 
 This data is what's called key value pairs, meaning that the name of the field is displayed immediately before the value. As you can see, the URL for the avatar (user's icon) is in the `avatar_field` field, and is `https://avatars.githubusercontent.com/u/9906?v=2`.
 
-###Getting started
+### Getting started
 
 First, open the HTML page supplied in the download. As you can see, there is a box to type in a username. When the user has typed in the username, they should be able to trigger the API call to GitHub by pressing <enter>.
 
@@ -209,7 +209,7 @@ Now the `user` variable will contain all the information we need to update the p
    from the response.
 
 
-###Handling a failed request
+### Handling a failed request
 
 First, let's make sure we handle any requests that have failed.
 
@@ -226,13 +226,13 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 > Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange)
 
-##Exercise 2 - BBC's tomorrow's TV schedule
+## Exercise 2 - BBC's tomorrow's TV schedule
 
 [Download](https://gist.github.com/despo/05cab2f0b38bc02318e7) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
 
 For the second exercise, we will build an application that retrieves tomorrow's TV schedule for each genre using BBC's API.
 
-###What we will be doing:
+### What we will be doing:
 
 1. Retrieve and render available genres using `http://www.bbc.co.uk/tv/programmes/genres.json`
 
@@ -242,7 +242,7 @@ For the second exercise, we will build an application that retrieves tomorrow's 
 
 4. **Bonus** Retrieve all upcoming episodes of a programme
 
-###Request using jQuery
+### Request using jQuery
 
 This time, let's use jQuery's `ajax()` method. Things are a bit easier when using jQuery as we can create different code blocks that handle successful or failed requests.
 
@@ -290,7 +290,7 @@ As you can see from the console, the resulting objects are returned inside an Ar
 
 Now that we have all the available genres, we can move on to making calls to the API using the genre to retrieve tomorrow's schedule!!
 
-##Retrieve schedule
+## Retrieve schedule
 
 Now, let's create a function that retrieves films using genre.
 
@@ -391,11 +391,11 @@ function processEpisode(episode) {
 
 To display an image for a programme, we need to use `<img src=http://ichef.bbci.co.uk/images/ic/272x153/<pid>.jpg />`.  As not all programmes have an image, we can use an image placeholder when no image is set `<img src='http://placehold.it/272x153' />`
 
-###Binding the call to the click event
+### Binding the call to the click event
 
 Handle a `click` event on `#genres li` and make a call to `getTomorrowsSchedule(genre)`
 
-###Improving our function
+### Improving our function
 
 To make the genre we have just clicked active, we also want to add the CSS class `active` to the element that the event has been triggered from.  Don't forget to remove the class `active` from any other `#genres li` items.
 
@@ -408,7 +408,7 @@ Also, as some of the requests take a while, we want to display a spinning image 
 
 > Don't forget to remove the spinner, when the request is completed successfully.
 
-##Bonus: Retrieving all upcoming episodes of a programme
+## Bonus: Retrieving all upcoming episodes of a programme
 
 To get back all the upcoming shows for an episode, we need to utilise the programme pid, that we can retrieve from the response using `episode.programme.programme.pid`. The URL for the request is `http://www.bbc.co.uk/programmes/<pid>/episodes/upcoming.json`
 
