@@ -398,7 +398,7 @@ for (var i = 0; i < fruitAndVeg.length; i = i + 1) {
 
 ## The DOM
 
-###What is the DOM?
+### What is the DOM?
 **DOM** stands for **D**ocument **O**bject **M**odel.
 
 When the HTML is loaded on our page, the browser generates its DOM. This enables us to access and interact with HTML elements using JavaScript.

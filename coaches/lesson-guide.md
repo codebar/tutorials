@@ -3,23 +3,23 @@ layout: page
 title: Coach's guide to tutorials
 ---
 
-#Introduction
+# Introduction
 
 This document serves as a quick guide to coaches about what each
 tutorial contains. It's intended to help advise students on which
 tutorials are appropriate for them, and to guide coaches on what parts
 of a tutorial the student should be focussing on.
 
-#HTML & CSS
+# HTML & CSS
 
-##Lesson 1: Introduction to HTML
+## Lesson 1: Introduction to HTML
 
-###Prerequisites
+### Prerequisites
 
 * A web browser
 * A text editor (see the getting started guide)
 
-###Learning goals
+### Learning goals
 
 * Understand what an element is and how their syntax works
   * Opening and closing tags
@@ -34,15 +34,15 @@ of a tutorial the student should be focussing on.
   * Entities `&quot;`
 * Some understanding of how URIs work in links and images
 
-##Lesson 2: Introduction to CSS
+## Lesson 2: Introduction to CSS
 
-###Prerequisites
+### Prerequisites
 
 * A text editor
 * Able to read and write html syntax (no need to understand what the
   tags do)
 
-###Learning goals
+### Learning goals
 
 * Know what a CSS rule is and how its syntax works
 * Understand these selectors:
@@ -60,40 +60,40 @@ of a tutorial the student should be focussing on.
   * height and width
   * text-align
 
-##Lesson 3: Beyond the basics
+## Lesson 3: Beyond the basics
 
-###Prerequisites
+### Prerequisites
 
-###Learning goals
+### Learning goals
 
-##Lesson 4: Layouts and formatting
+## Lesson 4: Layouts and formatting
 
-###Prerequisites
+### Prerequisites
 
-###Learning goals
+### Learning goals
 
-##Lesson 5: Diving into HTML5 and CSS3
+## Lesson 5: Diving into HTML5 and CSS3
 
-###Prerequisites
+### Prerequisites
 
-###Learning goals
+### Learning goals
 
-##Lesson 6: Advanced HTML5
+## Lesson 6: Advanced HTML5
 
-###Prerequisites
+### Prerequisites
 
-###Learning goals
+### Learning goals
 
-#JavaScript
+# JavaScript
 
-##Lesson 1: Introduction to JavaScript
+## Lesson 1: Introduction to JavaScript
 
-###Prerequisites
+### Prerequisites
 
 * A text editor (see the getting started guide)
 * Chrome or firefox
 
-###Learning goals
+### Learning goals
 
 * Some understanding of basic javascript syntax
 * Understand:
@@ -105,9 +105,9 @@ of a tutorial the student should be focussing on.
   * how to write and call functions
   * variable scope in functions
 
-##Lesson 2: Beginning JavaScript
+## Lesson 2: Beginning JavaScript
 
-###Prerequisites
+### Prerequisites
 
 * Some understanding of basic javascript syntax
 * Understand (from lesson 1):
@@ -116,7 +116,7 @@ of a tutorial the student should be focussing on.
   * how to call functions
 * Understand basic HTML elements
 
-###Learning goals
+### Learning goals
 
 * Understand these things:
   * `while` and `for(;;)` loops
@@ -127,9 +127,9 @@ of a tutorial the student should be focussing on.
 * Know how to find DOM objects via `document`
 * Know how to add new DOM objects to the page
 
-##Lesson 3: Introduction to jQuery
+## Lesson 3: Introduction to jQuery
 
-###Prerequisites
+### Prerequisites
 
 * Understand basic HTML elements
 * Some understanding of basic javascript syntax
@@ -139,7 +139,7 @@ of a tutorial the student should be focussing on.
 * Understand (from lesson 2):
   * properties and methods
 
-###Learning goals
+### Learning goals
 
 * Understand these things:
   * constructing jQuery objects with CSS selectors
@@ -152,9 +152,9 @@ of a tutorial the student should be focussing on.
 * Know how to write event handlers for keyboard and mouse events
 * Know how to change web pages in response to events
 
-##Lesson 4: HTTP Requests, AJAX, and APIs
+## Lesson 4: HTTP Requests, AJAX, and APIs
 
-###Prerequisites
+### Prerequisites
 
 * Understand (from lesson 1):
   * what variables and expressions are
@@ -164,7 +164,7 @@ of a tutorial the student should be focussing on.
   * properties and methods
 * Everything in lesson 3 goals
 
-###Learning goals
+### Learning goals
 
 * Understand these things:
   * basic structure of HTTP requests and responses
@@ -173,21 +173,21 @@ of a tutorial the student should be focussing on.
   * using `JSON.parse` to consume responses
   * using `$.ajax` to send queries and consume responses
 
-##Lesson 5: HTTP Requests, AJAX, and APIs (part 2)
+## Lesson 5: HTTP Requests, AJAX, and APIs (part 2)
 
-###Prerequisites
+### Prerequisites
 
 * Lesson 4
 
-###Learning goals
+### Learning goals
 
 * Understand these things:
   * using `POST` and `PUT` requests
 * Practice working with jQuery and json apis
 
-##Lesson 6: Drawing in Canvas
+## Lesson 6: Drawing in Canvas
 
-###Prerequisites
+### Prerequisites
 
 * Understand basic HTML elements
 * Understand (from lesson 1):
@@ -197,7 +197,7 @@ of a tutorial the student should be focussing on.
 * Understand (from lesson 2):
   * properties and methods
 
-###Learning goals
+### Learning goals
 
 * Understand these things:
   * setting up a canvas for drawing
@@ -206,9 +206,9 @@ of a tutorial the student should be focussing on.
   * drawing paths, using lines and arcs
   * transforming with rotate, translate, and scale
 
-##Lesson 7: Introduction to Testing
+## Lesson 7: Introduction to Testing
 
-###Prerequisites
+### Prerequisites
 
 * Understand (from lesson 1):
   * what variables and expressions are
@@ -218,16 +218,16 @@ of a tutorial the student should be focussing on.
 * Understand (from lesson 2):
   * properties and methods
 
-###Learning goals
+### Learning goals
 
 * Know how to write tests with Jasmine
 * Get some experience of writing unit tests
 
-##Lesson 8: Building your own app
+## Lesson 8: Building your own app
 
 This isn't a tutorial like the others, it's a few pointers on how to
 start building something independently.
 
-###Prerequisites
+### Prerequisites
 
 * As a minimum, lesson 3

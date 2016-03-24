@@ -48,7 +48,7 @@ There are a number of different version control systems. The most popular ones a
 We will be using **git**.
 
 ### Why Git?
-There are a number of reasons we chose git. To name some  
+There are a number of reasons we chose git. To name some
 
 - A lot of learning resources
 
