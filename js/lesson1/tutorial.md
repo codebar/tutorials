@@ -39,8 +39,8 @@ browser. This is a very short file that just tells your browser to run
 the code in `script.js`.
 
 For this tutorial, you will also need to open the console. In
-Google Chrome, use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd>
-or <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> to open the console. 
+Google Chrome, use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (on Windows/Linux)
+or <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (on Mac) to open the console. 
 The console should look something like this:
 
 <img src="assets/images/console.png" />
