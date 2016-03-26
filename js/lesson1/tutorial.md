@@ -39,10 +39,11 @@ browser. This is a very short file that just tells your browser to run
 the code in `script.js`.
 
 For this tutorial, you will also need to open the console. In
-chrome, use Ctrl-Shift-J or Cmd-Shift-J to open the console. The
-console should look something like this:
+Google Chrome, use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd>
+or <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> to open the console. 
+The console should look something like this:
 
-<img src="assets/images/console.png">
+<img src="assets/images/console.png" />
 
 ## Writing your first line of JavaScript
 
