@@ -299,7 +299,7 @@ Before you start, close any windows you still have open from the last
 exercise. This one also has files called `index.html` and `script.js`,
 and you don't want to edit the wrong one by accident.
 
-[Download the files](https://gist.github.com/despo/ab21d29aa1ea8fbbbb0e/download) required to begin working through the example.
+[Download the files](https://gist.github.com/niffinity/4edf3c21f0107a1099cc237dc6c8d66b/download) required to begin working through the example.
 
 If you're using git, you can clone this repo instead, and move the
 files under your Github page folder, in a directory called
