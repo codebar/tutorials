@@ -17,7 +17,6 @@ Java is a programming language, it's main selling point is that the code you wri
 ##### Requirements
 
 * 15 minutes
-* PHP installed
 
 ##### Achievements
 
@@ -33,7 +32,7 @@ By the end of this tutorial you will be able to:
 
 
 ### What you've learned so far
-  
+
 ## Variables and Types
 
 ### Keywords, identifiers, and strings
