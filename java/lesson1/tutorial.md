@@ -44,6 +44,6 @@ By the end of this tutorial you will be able to:
 ### What you've learned so far
 
 ## Further Reading
-[Codecademy Learn the fundamentals](Learn the fundamentals of the Java programming language)https://www.codecademy.com/learn/learn-java
-[Interactive Java Tutorial](http://www.learnjavaonline.org/)
-[Java 101: Learn Java from the ground up](http://www.javaworld.com/article/2076075/learn-java/core-java-learn-java-from-the-ground-up.html)
+* [Codecademy Learn the fundamentals](Learn the fundamentals of the Java programming language)https://www.codecademy.com/learn/learn-java
+* [Interactive Java Tutorial](http://www.learnjavaonline.org/)
+* [Java 101: Learn Java from the ground up](http://www.javaworld.com/article/2076075/learn-java/core-java-learn-java-from-the-ground-up.html)
