@@ -3,22 +3,29 @@ layout: page
 title: Introduction to Java
 ---
 
+---
+## Polite Reminder **'Show not tell'**
+### Focus on getting the student to do stuff and get instant feedback.
+**Aims:** Understand the core concepts of java and get something working from coding a small application, perhaps a small command line program or a game.  
+**Target audience:** Someone who has never seen java before, but may have written computer code before.  
+**Target duration:** 45mins - 1hour.
+
+---
 
 ## What is Java
 Java is a programming language, it's main selling point is that the code you write is written once and can be run an a variety of Operating Systems and irrespective of devices it is running on be it a computer, a phone or a web browser.
 
 ## How does Java Work
-* Source - You will write Java source code
-* Compiler - Your source will then be processed by a compiler which will check your code for any errors and won't let you compile until the compiler is happy your code will be able to run.
-* Output(code) - The compiler will generate a new file written in java bytecode. Any compatible device with Java installed will be now able to now run your application
-* Virtual Machine -  The bytecode will be run on the Java virtual machine which in available on a pethera of devices which runs in the billions.
+* **Source** - You will write Java source code
+* **Compiler** - Your source will then be processed by a compiler which will check your code for any errors and won't let you compile until the compiler is happy your code will be able to run.
+* **Output(code)** - The compiler will generate a new file written in java bytecode. Any compatible device with Java installed will be now able to now run your application
+* **Virtual Machine** -  The bytecode will be run on the Java virtual machine which in available on over 3 billion devices.
 
-### What you've learned so far
+
+#### What you've learned so far
 Java is a programming language compiled to bytecode and can be run on a Java virtual machine
 
 ## Code Structure in Java
-
-
 ```
  ______________________________________
 |Source file                           |
@@ -34,7 +41,7 @@ Java is a programming language compiled to bytecode and can be run on a Java vir
 |______________________________________|
 ```
 #### Source files
-Have the extension .java and will contain class files. These class files make up the building blocks of your code.
+Source files have the extension .java and will contain class files. These class files make up the building blocks of your code.
 ```
 public class fruit {
 
@@ -88,6 +95,44 @@ By the end of this tutorial you will be able to:
 ## Variables and Types
 
 ### Keywords, identifiers, and strings
+
+## Arrays
+Lets make an array. Arrays are collections of objects of the same type. The size of the array must be decided when created.
+```
+String [] days = new String[7];
+```
+|index|item|
+|---|-------------|
+|0  | null        |
+|1  | null        |
+|2  | null        |
+|3  | null        |
+|4  | null        |
+|5  | null        |
+|6  | null        |
+
+Lets add some items to an array. Each item is accessed by an numerical index that indicates the position where the object is stored in an array. Note in computer programming counting generally starts from zero.
+
+```
+String [] days = new String[7];
+day[0]="monday";
+days[1]="tuesday";
+days[2]="wednesday";
+```
+|index|item|
+|---|-------------|
+|0  | "monday"    |
+|1  | "tuesday"   |
+|2  | "wednesday" |
+|3  | null        |
+|4  | null        |
+|5  | null        |
+|6  | null        |
+**Question:** what will the below code return?
+```
+System.out.println(days[1]);
+```
+
 
 ## Conditionals
 
