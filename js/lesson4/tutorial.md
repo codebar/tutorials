@@ -37,7 +37,7 @@ You can access an API in your web browser. Just pop the following into the addre
 
 If you are on a mac or a linux/unix machine, you can access the API using curl:
 
-    $ curl https://status.github.com/api.json
+    curl https://status.github.com/api.json
 
 > Paste the following command into Terminal, which you can find in Finder - first go into the Applications folder, then Utilities.
 
@@ -104,7 +104,7 @@ The following code allows you to listen for a keypress on the input field, and t
 
 ```js
 $(document).ready(function(){
-  $(document).on('keypress', '#username', function(e){
+  $(document).on('keypress', '#username', function(){
     if (event.which === 13) { // check the key was <enter>
       // do something
     }
@@ -116,7 +116,7 @@ We will need to pass the username to GitHub, so we need to extract it from the i
 
 ```js
 $(document).ready(function(){
-  $(document).on('keypress', '#username', function(e){
+  $(document).on('keypress', '#username', function(){
     if (event.which === 13) { // check the key was <enter>
       var input = $(this)
       var username = input.val()
@@ -215,7 +215,7 @@ First, let's make sure we handle any requests that have failed.
 
 > Have a look in the status codes. There is only one response code for a successfully request, anything else should be classed as a failure.
 
-When we have a failing request, we want to change the `html` of `$("#profile h2")` to `No such user: <username>`
+When we have a failing request, we want to change the `html` of `$("#profile h2")` to `No such user!`
 
 Try this out using username: `iamcodebar` (or if someone registered this, make up a random string)
 
