@@ -67,6 +67,8 @@ public class fruit {
   }
 }
 ```
+
+
 ### What you've learned so far
 Source files contain __class files__.  
 Class files contain __methods__.  
@@ -150,6 +152,24 @@ System.out.println(days[1]);
 
 
 ## Conditionals
+You will often need to branch your code to do certain things if certain conditions are met. If a condition is true the code inside the curly brackets will be executed.
+
+you can do tests by checking the value of  variable
+```
+< // less that
+> // Greater than
+== // Equality 
+```
+int x = 2;
+
+if ( x == 10 ) {
+  System.out.print("x must be 10");
+} else {
+  System.out.print("x is not 10");
+}
+```
+
+
 
 ## Functions
 
