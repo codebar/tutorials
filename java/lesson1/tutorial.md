@@ -86,6 +86,21 @@ By the end of this tutorial you will be able to:
     * Browser
 
 ---
+## Comments
+All programming languages allow for ways to leave notes for yourself or other developers. These annotations are called comments and in java they can be done in two different ways, single and multiple line comments.
+
+```
+/*
+    Multiple line comments
+*/
+public class fruit {
+  void apple (){
+    // Single line comments
+    String color = "Green"; // These can also be used inline
+  }
+}
+```
+
 
 ## Writing your first line of Java
 
