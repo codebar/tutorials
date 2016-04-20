@@ -369,11 +369,13 @@ The container is not necessarily the element it is wrapped in (its parent). To f
 
 ### Using absolute and relative positioning
 
-Add a CSS class `caption` to the description of each of the images
+Add a CSS class `caption` to the description of each of the images. The first one:
 
 ```html
- <span class="caption">The Mark I</span>
- ```
+ <span class="caption">Mark I</span>
+```
+
+And the second:
 
 ```html
  <span class="caption">Working with COBOL</span>
