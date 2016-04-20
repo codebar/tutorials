@@ -158,6 +158,10 @@ Great! Now our images and links are on the left, and the main content on the rig
 
 [Border radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) enables us to create rounded corners for our elements. In the past, multiple divs and the use of images was required to achieve that effect.
 
+Border radius can be defined in many different units - the higher the number, the bigger the curve. An example of border-radius in your code would be:
+
+`border-radius: 10px;`
+
 Now that we know what border radius is, let's use it to add a nice frame to the first image.
 
 Wrap the first image in a `div` with the class `frame`
