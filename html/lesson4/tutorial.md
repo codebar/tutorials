@@ -478,7 +478,7 @@ width: 100%;
 And reposition the `#content` so it doesn't hide underneath the header. Change the padding property to have a padding-top
 
 ```css
-padding: 150px 30px 40px;
+padding: 160px 30px 40px;
 ```
 
 > Do you remember the padding shortcuts we discussed in the previous lesson? What does the above describe? Can you explain that to your coach?
