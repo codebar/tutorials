@@ -6,10 +6,10 @@ footer: true
 
 ## HTML AND CSS - layouts and formatting
 
-### Objective 
- 
+### Objective
+
 Today we will be building a website and learning more about CSS layouts and formatting. We will also be explaining in more detail elements that we mentioned in the previous two lessons.
- 
+
 ### Goal
 
 The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
@@ -236,11 +236,11 @@ Let's add the main content. Paste underneath the header. We will tweak things as
 
 ```html
 <div id="content">
-  <p>
   <div>
     <img src="mark_i.jpg" alt="Mark">
     <span>Mark I</span>
   </div>
+  <p>
   Grace Hopper was born in 1906. Her parents, noticing her interest in math, made special arrangements for her to take classes reserved for boys in school. She received a Bachelors deegree in Mathematics and  physics from Vassar college and then moved onto Yale, where she did her Masters deegree in Math. She continued her education and begun a teaching career at Vassar. When she received her PhD she joined the navy, where she was assigned to work in the Bureau of Ordinance computation project at Harvard university. There, she became part of the programming team, who works on the Mark I; the first computer ever made.
   </p>
   <p>
@@ -250,11 +250,11 @@ Let's add the main content. Paste underneath the header. We will tweak things as
   Throughout her childhood, she had a fascination with both math and the navy. She was able to join the navy after acquiring waivers for the weight and age requirements, and rapidly climbed the ranks. By the time she started working on the Mark I, she was already a lieutenant.
   The demanding environment and high expectations of her at the navy, helped her thrive. This was for her the perfect work environment. She was also the one who wrote the operating manual for the Mark I. In 1949, she left the navy to continue working with computers, and returned back in 1967 to teach young people about them. She loved teaching about computers as much as she loved working with them. Young people for her were the future.
   </p>
-  <p>
   <div>
      <img src="cobol.jpg" alt="Cobol">
      <span>Working with COBOL</span>
   </div>
+  <p>
   Grace loved the Navy, and was reluctant to retire, even at the age of 79. At her retirement ceremony she was recognized for all she contributed, and received the Distinguished Service Medal of the Defense Department, the department's highest honor, and a citation which stated
   <blockquote>
     Rear Admiral Hopper's personal dedication, technical expertise,and broad-based knowledge of the computers were a cornerstone of the navy's continuing development of Information Systems technology. She is one of the Navy's most effective public speakers and a sought-after adviser on the subject of automatic data processing.
@@ -516,7 +516,6 @@ line-height: 23px;
 -----
 This ends our fourth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
-## Further reading 
+## Further reading
 
 * [Learn layout](http://learnlayout.com/)
-
