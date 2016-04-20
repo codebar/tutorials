@@ -6,10 +6,10 @@ footer: true
 
 ##  HTML AND CSS - Diving into HTML5 and CSS3
 
-### Objective 
- 
+### Objective
+
 Today we will be building a website and will focus more on HTML5 and CSS3 specific elements.
- 
+
 ### Goal
 
 The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson5/example.html "Anita Borg")
@@ -157,8 +157,6 @@ Great! Now our images and links are on the left, and the main content on the rig
 ### Border-radius
 
 [Border radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) enables us to create rounded corners for our elements. In the past, multiple divs and the use of images was required to achieve that effect.
-
-`border-radius: arc`
 
 Now that we know what border radius is, let's use it to add a nice frame to the first image.
 
@@ -438,5 +436,3 @@ You can find both the rgb and hex values of a color through [http://0to255.com](
 
 -----
 This ends our fifth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
-
-
