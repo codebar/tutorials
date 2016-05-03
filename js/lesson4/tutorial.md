@@ -118,10 +118,10 @@ We will need to pass the username to GitHub, so we need to extract it from the i
 $(document).ready(function(){
   $(document).on('keypress', '#username', function(event){
     if (event.which === 13) { // check the key was <enter>
-      var input = $(this)
-      var username = input.val()
+      var input = $(this);
+      var username = input.val();
 
-      console.log("username was: " + username)
+      console.log("username was: " + username);
 
     }
   })
@@ -132,7 +132,7 @@ Now we're ready to pass this through to GitHub. Let's make another function, som
 
 ```js
 function getGithubInfo(username) {
-  var url = "https://api.github.com/users/" + username
+  var url = "https://api.github.com/users/" + username;
 
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", url, false);
@@ -140,7 +140,7 @@ function getGithubInfo(username) {
 
   var data = xmlhttp.responseText;
 
-  console.log(data)
+  console.log(data);
 }
 ```
 
@@ -160,7 +160,7 @@ You can now call `getGithubInfo`, passing the username, from the `keypress` bloc
 
 ```js
 function getGithubInfo(username) {
-  var url = "https://api.github.com/users/" + username
+  var url = "https://api.github.com/users/" + username;
 
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.open("GET", url, false);
@@ -194,7 +194,7 @@ function showUser(xmlhttp) {
   if(xmlhttp.status === 200){
     // show the user details
     var json = xmlhttp.responseText;
-    var user = JSON.parse(json)
+    var user = JSON.parse(json);
   } else {
     // show an error
   }
@@ -377,7 +377,7 @@ Also, to make your code easier to read, try constructing the html in a method th
 
 ```javascript
 function processEpisode(episode) {
- var item_html = "<li>"
+ var item_html = "<li>";
  item_html += "<h2>" + episode.programme.display_titles.title + "</h2>";
  // display image
  // display date and time
