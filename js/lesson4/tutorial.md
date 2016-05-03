@@ -116,7 +116,7 @@ We will need to pass the username to GitHub, so we need to extract it from the i
 
 ```js
 $(document).ready(function(){
-  $(document).on('keypress', '#username', function(){
+  $(document).on('keypress', '#username', function(event){
     if (event.which === 13) { // check the key was <enter>
       var input = $(this)
       var username = input.val()
