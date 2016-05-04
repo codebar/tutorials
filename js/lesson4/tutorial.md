@@ -231,7 +231,7 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 ## Exercise 2 - BBC's tomorrow's TV schedule
 
-[Download](https://gist.github.com/despo/05cab2f0b38bc02318e7) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
+[Download](https://gist.github.com/despo/05cab2f0b38bc02318e7/download) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
 
 For the second exercise, we will build an application that retrieves tomorrow's TV schedule for each genre using BBC's API.
 
