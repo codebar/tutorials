@@ -158,6 +158,11 @@ In this case, we'll specify synchronously by passing `false`. This means the bro
 
 You can now call `getGithubInfo`, passing the username, from the `keypress` block above. That will log the data to the console. Next, we need to pass this back to the web page via the DOM.
 
+
+### Handling a successful request
+
+Our `getGithubInfo` method will return the response from the server, including the HTTP status:
+
 ```js
 function getGithubInfo(username) {
   var url = "https://api.github.com/users/" + username;
@@ -171,11 +176,9 @@ function getGithubInfo(username) {
 }
 ```
 
-### Handling a successful request
+If the request was successful, the status code will be 200. If we check that this code is 200, we know we can proceed to reading the data.
 
-Our `getGithubInfo` method will return the response from the server, including the HTTP status. If the request was successful, the status code will be 200. If we check that this code is 200, we know we can proceed to reading the data.
-
-Create a new method called `showUser()` that handles the response from the API, and performs this check on the passed `xmlhttp` variable. Once the `keypress` block has called `getGithubInfo`, it should pass the result to `showUser`.
+Create a new method called `showUser()` that handles the response from the API, and performs this check on the `xmlhttp` variable we just returned from our `getGithubInfo` method. Once the `keypress` block has called `getGithubInfo`, it should pass the result to `showUser`.
 
 ```js
 function showUser(xmlhttp) {
