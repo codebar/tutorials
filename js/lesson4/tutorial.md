@@ -227,7 +227,7 @@ Try this out using username: `iamcodebar` (or if someone registered this, make u
 
 Well done, you've finished! For a bonus, switch your `getGithubInfo` method to run asynchronously - your coach can help you.
 
-> Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange)
+> Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
 ## Exercise 2 - BBC's tomorrow's TV schedule
 
