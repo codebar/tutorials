@@ -382,6 +382,7 @@ Also, to make your code easier to read, try constructing the html in a method th
 function processEpisode(episode) {
   var item_html = "<li>";
   item_html += "<h2>" + episode.programme.display_titles.title + "</h2>";
+  // display short short synopsis
   // display image
   // display date and time
   // display duration (HINT: the duration is in seconds, convert that to minutes)
