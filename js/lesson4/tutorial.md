@@ -94,7 +94,7 @@ The response will look something like the JSON data below, which we have shorten
 
 ```
 
-This data is what's called key value pairs, meaning that the name of the field is displayed immediately before the value. As you can see, the URL for the avatar (user's icon) is in the `avatar_field` field, and is `https://avatars.githubusercontent.com/u/9906?v=2`.
+This data is what's called key value pairs, meaning that the name of the field is displayed immediately before the value. As you can see, the URL for the avatar (user's icon) is in the `avatar_url` field, and is `https://avatars.githubusercontent.com/u/9906?v=2`.
 
 ### Getting started
 
