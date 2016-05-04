@@ -247,6 +247,8 @@ For the second exercise, we will build an application that retrieves tomorrow's 
 
 This time, let's use jQuery's `ajax()` method. Things are a bit easier when using jQuery as we can create different code blocks that handle successful or failed requests.
 
+Also, jQuery isolates us from the differences between browser implementations of AJAX calls (for example, if we wanted to make the previous AJAX call work in Internet Explorer,  we will have to write [a much longer method](http://www.tutorialspoint.com/ajax/ajax_browser_support.htm)!)
+
 ```js
 $.ajax({
   url: request_url,
