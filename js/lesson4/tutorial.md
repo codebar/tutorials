@@ -3,7 +3,7 @@ layout: page
 title: HTTP Requests, AJAX and APIs
 ---
 
-### Objectives 
+### Objectives
 
 In this tutorial we are going to look at:
 
@@ -29,7 +29,7 @@ Every time the browser fetches data from a server (which could be a page, an ima
 
 GitHub offers a [simple API](https://status.github.com/api) for viewing its current and historical server availability.
 
-> Availability means whether or not the GitHub website was accessible to users and accepting traffic. If your website is down, it is not available. 
+> Availability means whether or not the GitHub website was accessible to users and accepting traffic. If your website is down, it is not available.
 
 You can access an API in your web browser. Just pop the following into the address bar:
 
@@ -103,28 +103,27 @@ First, open the HTML page supplied in the download. As you can see, there is a b
 The following code allows you to listen for a keypress on the input field, and to see if it was the <enter> key that was pressed.
 
 ```js
-$(document).ready(function(){
-  $(document).on('keypress', '#username', function(){
+$(document).ready(function() {
+  $(document).on('keypress', '#username', function() {
     if (event.which === 13) { // check the key was <enter>
       // do something
     }
-  })
+  });
 });
 ```
 
 We will need to pass the username to GitHub, so we need to extract it from the input text box. To show that we can do this - let's first extract the data using jQuery's `val()`, and log it to the console. Something like this should work:
 
 ```js
-$(document).ready(function(){
-  $(document).on('keypress', '#username', function(event){
+$(document).ready(function() {
+  $(document).on('keypress', '#username', function(event) {
     if (event.which === 13) { // check the key was <enter>
       var input = $(this);
       var username = input.val();
 
       console.log("username was: " + username);
-
     }
-  })
+  });
 });
 ```
 
@@ -146,7 +145,7 @@ function getGithubInfo(username) {
 
 `XMLHttpRequest` is the object we use in JavaScript to perform an HTTP or API request. Although it has `XML` in the name (XML is a data format), it can be used for other formats such as JSON, which is what we're using here.
 
-We create an `XMLHttpRequest` object and then call the `open` method, passing three arguments to the GitHub API. 
+We create an `XMLHttpRequest` object and then call the `open` method, passing three arguments to the GitHub API.
 
 1. the `verb` - in this case, `"GET"`
 2. the `url` - in this case the url eg https://api.github.com/users/codebar
@@ -172,7 +171,6 @@ function getGithubInfo(username) {
   xmlhttp.send();
 
   return xmlhttp;
-
 }
 ```
 
@@ -182,7 +180,7 @@ Create a new method called `showUser()` that handles the response from the API, 
 
 ```js
 function showUser(xmlhttp) {
-  if(xmlhttp.status === 200){
+  if(xmlhttp.status === 200) {
     // show the user details
   } else {
     // show an error
@@ -194,7 +192,7 @@ Once we've checked the status, we need to decode the data which is stored in `xm
 
 ```js
 function showUser(xmlhttp) {
-  if(xmlhttp.status === 200){
+  if(xmlhttp.status === 200) {
     // show the user details
     var json = xmlhttp.responseText;
     var user = JSON.parse(json);
@@ -299,7 +297,7 @@ Now, let's create a function that retrieves films using genre.
 
 ```javascript
 function getTomorrowsSchedule(genre) {
- // call to retrieve TV schedule
+  // call to retrieve TV schedule
 }
 ```
 
@@ -307,61 +305,61 @@ The response you get back should look similar to this, with multiple objects in 
 
 ```json
 {
-   "broadcasts":[
-      {
-         "is_repeat":false,
-         "is_blanked":false,
-         "schedule_date":"2014-01-15",
-         "start":"2014-01-15T00:10:00Z",
-         "end":"2014-01-15T01:50:00Z",
-         "duration":6000,
-         "service":{
-            "type":"tv",
-            "id":"bbc_one",
-            "key":"bbcone",
-            "title":"BBC One",
-            "outlets":[
-               {
-                  "id":"bbc_one_wales",
-                  "key":"wales",
-                  "title":"Wales"
-               },
-               {
-                  "id":"bbc_one_wales_hd",
-                  "key":"wales_hd",
-                  "title":"Wales HD"
-               }
-            ]
-         },
-         "programme":{
-            "type":"episode",
-            "pid":"b00sbk03",
-            "position":null,
-            "title":"Disturbia",
-            "short_synopsis":"Thriller about a high school student convinced that his neighbour is a serial killer.",
-            "media_type":"audio_video",
-            "duration":6000,
-            "image":{
-               "pid":"p01gqbj3"
-            },
-            "display_titles":{
-               "title":"Disturbia",
-               "subtitle":""
-            },
-            "first_broadcast_date":"2010-05-03T22:30:00+01:00",
-            "ownership":{
-               "service":{
-                  "type":"tv",
-                  "id":"bbc_three",
-                  "key":"bbcthree",
-                  "title":"BBC Three"
-               }
-            },
-            "is_available_mediaset_pc_sd":false,
-            "is_legacy_media":false
-         }
+  "broadcasts": [
+    {
+      "is_repeat": false,
+      "is_blanked": false,
+      "schedule_date": "2014-01-15",
+      "start": "2014-01-15T00:10:00Z",
+      "end": "2014-01-15T01:50:00Z",
+      "duration": 6000,
+      "service": {
+        "type": "tv",
+        "id": "bbc_one",
+        "key": "bbcone",
+        "title": "BBC One",
+        "outlets": [
+          {
+            "id": "bbc_one_wales",
+            "key": "wales",
+            "title": "Wales"
+          },
+          {
+            "id": "bbc_one_wales_hd",
+            "key": "wales_hd",
+            "title": "Wales HD"
+          }
+        ]
+      },
+      "programme": {
+        "type": "episode",
+        "pid": "b00sbk03",
+        "position": null,
+        "title": "Disturbia",
+        "short_synopsis": "Thriller about a high school student convinced that his neighbour is a serial killer.",
+        "media_type": "audio_video",
+        "duration": 6000,
+        "image": {
+          "pid": "p01gqbj3"
+        },
+        "display_titles": {
+          "title": "Disturbia",
+          "subtitle": ""
+        },
+        "first_broadcast_date": "2010-05-03T22:30:00+01:00",
+        "ownership": {
+          "service": {
+            "type": "tv",
+            "id": "bbc_three",
+            "key": "bbcthree",
+            "title": "BBC Three"
+          }
+        },
+        "is_available_mediaset_pc_sd": false,
+        "is_legacy_media": false
+      }
       }]
-}
+    }
 ```
 
 To process the response, we want to iterate over the `response.broadcasts` array and add each item, to `#programmes` as a list item.
@@ -380,13 +378,13 @@ Also, to make your code easier to read, try constructing the html in a method th
 
 ```javascript
 function processEpisode(episode) {
- var item_html = "<li>";
- item_html += "<h2>" + episode.programme.display_titles.title + "</h2>";
- // display image
- // display date and time
- // display duration (HINT: the duration is in seconds, convert that to minutes)
- // display the channel (or service, as its called by the API) - add this in a span with the class `service`
- ...
+  var item_html = "<li>";
+  item_html += "<h2>" + episode.programme.display_titles.title + "</h2>";
+  // display image
+  // display date and time
+  // display duration (HINT: the duration is in seconds, convert that to minutes)
+  // display the channel (or service, as its called by the API) - add this in a span with the class `service`
+  ...
 }
 ```
 
@@ -420,7 +418,7 @@ To get back all the upcoming shows for an episode, we need to utilise the progra
 
 ```javascript
 function getUpcomingEpisodes(pid) {
- // AJAX call to retrieve upcoming episodes
+  // AJAX call to retrieve upcoming episodes
 }
 ```
 Since the response structure is similar to the one for retrieving tomorrow's schedule, we should be able to re-use the `processEpisode( )` function to display each item from the broadcasts array.
