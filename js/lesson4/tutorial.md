@@ -98,9 +98,9 @@ This data is what's called key value pairs, meaning that the name of the field i
 
 ### Getting started
 
-First, open the HTML page supplied in the download. As you can see, there is a box to type in a username. When the user has typed in the username, they should be able to trigger the API call to GitHub by pressing <enter>.
+First, open the HTML page supplied in the download. As you can see, there is a box to type in a username. When the user has typed in the username, they should be able to trigger the API call to GitHub by pressing \<enter\>.
 
-The following code allows you to listen for a keypress on the input field, and to see if it was the <enter> key that was pressed.
+The following code allows you to listen for a keypress on the input field, and to see if it was the \<enter\> key that was pressed.
 
 ```js
 $(document).ready(function() {
