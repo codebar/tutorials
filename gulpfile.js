@@ -6,6 +6,9 @@ browsersync  = require('browser-sync').create(),
   uglify     = require('gulp-uglify'),
   paths      = {
     jsdev:   [
+      './javascripts-dev/vendor/jszip.js',
+      './javascripts-dev/vendor/jszip-utils.js',
+      './javascripts-dev/vendor/FileSaver.js',
     ],
     jsdist:  './javascripts/',
   };
