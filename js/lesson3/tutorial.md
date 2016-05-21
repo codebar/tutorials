@@ -1,6 +1,11 @@
 ---
 layout: page
 title: Introduction to jQuery
+files:
+  - files/index.html
+  - files/jquery.js
+  - files/script.js
+  - files/style.css
 ---
 
 
