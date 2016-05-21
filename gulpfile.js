@@ -9,6 +9,7 @@ browsersync  = require('browser-sync').create(),
       './javascripts-dev/vendor/jszip.js',
       './javascripts-dev/vendor/jszip-utils.js',
       './javascripts-dev/vendor/FileSaver.js',
+      './javascripts-dev/src/ui.js',
     ],
     jsdist:  './javascripts/',
   };
