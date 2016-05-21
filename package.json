@@ -1,0 +1,19 @@
+{
+  "name": "codebar-tutorials",
+  "version": "1.0.0",
+  "description": "Codebar tutorials",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "devDependencies": {
+    "browser-sync": "^2.12.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-uglify": "^1.5.3"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}
