@@ -12,6 +12,7 @@ browsersync  = require('browser-sync').create(),
       './javascripts-dev/src/downloader.js',
       './javascripts-dev/src/zipper.js',
       './javascripts-dev/src/ui.js',
+      './javascripts-dev/main.js',
     ],
     jsdist:  './javascripts/',
   };
