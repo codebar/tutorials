@@ -36,6 +36,45 @@ We encourage you to contribute with your suggestions and corrections. Head to ou
 
 5. Before starting to write a new tutorial please speak with someone from codebar to see whether it is of interest to students.
 
+##### To add downloadable files to a new or existing tutorial:
+* **Add a folder** with your exercise files inside the tutorial folder. For example, for Javascript lesson 3:
+
+```bash
+js/lesson3/
+├── assets/
+├── files/
+│   ├── index.html
+│   ├── jquery.js
+│   ├── script.js
+│   └── style.css
+└── tutorial.md
+```
+
+- Add a frontmatter variable `files` to the tutorial page with a list of the files you added, **including folder name**:
+
+```yaml
+---
+layout: page
+title: Introduction to jQuery
+files:
+  - files/index.html
+  - files/jquery.js
+  - files/script.js
+  - files/style.css
+---
+```
+
+- In the copy of the tutorial, add your link to the files, **making it point to just `download`:**
+
+
+```markdown
+Download the files that you will need to work through the example
+[here](download).
+```
+
+And you're done. Commit and push as usual.
+
+
 ## License
 
 codebar Tutorials are released under the [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0/).
