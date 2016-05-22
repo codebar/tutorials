@@ -6,9 +6,7 @@ title: Introduction to PHP
 ##### Requirements
 
 * 15 minutes
-* PHP installed - this is by default on most Operating Systems. But if not, here are the official [installation instructions](http://php.net/manual/en/install.php)
-    * Check installation by running the following command in cli `php -v`, this should output the version, eg. **5.5.9**
-    * Or use an [online IDE](https://docs.c9.io/docs/getting-started)
+* PHP installed - PHP comes packaged in various ways. Please use our [installation guide](../using-php/simple.html) for an in-depth guide to the options. This tutorial assumes you have installed the command-line version. If you use other methods, you may not need to start the PHP WebServer.
 
 ##### Achievements
 
@@ -53,14 +51,11 @@ On the Command Line (CLI), type:
 php index.php
 ```
 
-And the output will be:
+And the output that displays just below where you typed will be:
 
 ```bash
-$ php index.php
 Hello World
 ```
-
-*Note: `$` implies the Command Line shell, you did not need to type this.*
 
 ## How to the output in the browser?
 
