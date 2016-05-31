@@ -46,7 +46,7 @@ Using jQuery and JavaScript functions, we are going to build a small
 todo list.
 
 Download the files that you will need to work through the example
-[here](download).
+[here](#download-default).
 <!-- https://gist.github.com/despo/309f684b7a6e002aaf1f/download -->
 
 Alternatively, if you've already learned how to use git and would like

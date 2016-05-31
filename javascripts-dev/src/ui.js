@@ -1,11 +1,11 @@
 var UserInterface = {
-  selector: "a[href=download]"
+  selector: "a[href|=#download]"
 };
 
 UserInterface.setup = function(zipper, downloader) {
 
-  var downloadLink = document.body.querySelector(UserInterface.selector);
-
+  var downloadLinks = document.body.querySelector(UserInterface.selector);
+console.log(downloadLinks);
   var createZip = function() {
     zipper.createZip(downloader);
   };
@@ -13,13 +13,15 @@ UserInterface.setup = function(zipper, downloader) {
   var registerListener = function(link) {
     link.addEventListener("click", function(event) {
       event.preventDefault();
+console.log('creating zip');
       createZip();
     }, false);
   };
 
   var checkIfDownloadLinkExist = function() {
-    if (downloadLink) {
-      registerListener(downloadLink);
+    if (downloadLinks) {
+      for (each downloadLinks as linkIdx)
+      registerListener(downloadLinks[linkIdx]);
     }
   };
 
