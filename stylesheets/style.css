@@ -16,3 +16,8 @@ footer {
 .tutorial-filelist__list {
 	display: none;
 }
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}

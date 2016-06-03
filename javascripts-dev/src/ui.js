@@ -6,8 +6,8 @@ UserInterface.setup = function(zipper, downloader) {
 
   var downloadLinks = document.body.querySelectorAll(UserInterface.selector);
 
-  var createZip = function() {
-    zipper.createZip(downloader);
+  var createZip = function(files) {
+    zipper.createZip(downloader, files);
   };
 
   var registerListener = function(link) {
@@ -15,14 +15,19 @@ UserInterface.setup = function(zipper, downloader) {
   
     link.addEventListener("click", function(event) {
       event.preventDefault();
+
+      //  Get the file list on the fly
+      var files = getFileList(event.target);
+console.log('files', files);
+
 console.log('creating zip');
-      createZip();
+      createZip(files);
     }, false);
   };
 
   var checkIfDownloadLinkExist = function() {
     if (downloadLinks) {
-      foreachSelector(downloadLinks, function() {
+      foreach(downloadLinks, function() {
         registerListener(this);
 
         hideAccessibleFileLinks(this);
@@ -32,37 +37,27 @@ console.log('creating zip');
 
   var locateAnchorForDownloadLink = function(link) {
     var anchorName = link.href.replace(/^[^#]*#/, '');
-console.log('looking for anchor', anchorName);
     return document.body.querySelector('a[name="' + anchorName + '"')
   }
 
   var hideAccessibleFileLinks = function(link) {
     var anchor = locateAnchorForDownloadLink(link);
-console.log('found anchor', anchor);
     var next = getNextSiblingInDom(anchor);
-    console.log('found sibling', next);
+
+    addClass(anchor, 'hidden'); //  could be made an expander button
+    addClass(next, 'hidden');
   };
 
-  function foreachSelector(nodelist, callback) {
-    for (var idx = 0; idx < nodelist.length; idx++) {
-      callback.apply(nodelist[idx]);
-    }
-  }
+  var getFileList = function(link) {
+    var anchor = locateAnchorForDownloadLink(link);
+    var next = getNextSiblingInDom(anchor);
 
-  function getNextSiblingInDom(element) {
-    var allChildrenOfParent = element.parentNode.children;
-    var nextSibling = false;
-
-    foreachSelector(allChildrenOfParent, function() {
-      if (this === element) {
-        nextSibling = true;
-      } else {
-        if (nextSibling === true) {
-          nextSibling = this;
-        }
-      }
+    var fileLinks = next.querySelectorAll('a'),
+        files = [];
+    foreach(fileLinks, function() {
+      files.push(this.href);
     });
-    return nextSibling;
+    return files;
   }
 
   checkIfDownloadLinkExist();
