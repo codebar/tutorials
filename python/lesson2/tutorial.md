@@ -5,7 +5,7 @@ title: Playing with variables
 
 In this tutorial we are going to look at variables, user input and decision making.
 
-### Creating a variable
+## Creating a variable
 
 Python allows us to store data in something called variables so that we are able to use this data at a later point. To place an item in a variable we give it a name then set its value. 
 
@@ -17,7 +17,7 @@ In this example you have now stored the value `2015` into the variable `year`. S
 
 How about saving your age into a variable or your lucky number? Have a play around with storing numbers into variables.
 
-### Storing numbers in variables
+## Storing numbers in variables
 
 Now that you are familiar with the use of variables, we are able to combine variables with the maths operations we learnt in the previous tutorial.
 
@@ -33,7 +33,7 @@ Now work out the cost of running a codebar workshop if 60 people turned up and p
 
 Along with pizza, students and cost, what other variables can you think of that could go into this calculation?
 
-### Storing text in variables
+## Storing text in variables
 
 As well as numbers variables are able to store text, known in Python as strings. 
 
@@ -58,7 +58,7 @@ Now store some strings in variables that contain apostrophes and some that do no
 
 What happens when you store a number in a variable wrapped in quotes? 
 
-### Storing user input in variables
+## Storing user input in variables
 
 Now we are going to look at capturing user input using the python input command. Let's create a variable in which to store the user input. 
 
@@ -72,7 +72,7 @@ Now in the REPL type:
 
 	food = input("What is your favourite food?")
 
-When you give the REPL your repsonse make sure you wrap it in quotes as this is storing your response as a string.
+When you give the REPL your response make sure you wrap it in quotes as this is storing your response as a string.
 
 Now we are going to put your response into another variable.
 
@@ -83,27 +83,26 @@ Now try:
 
 Then type `greeting` into your REPL to receive your message. 
 
-### Decision making using variables
+## Decision making using variables
 
-Now that we know how to use variables and know how to store data, let's play around with decision making and changing prints based on your answer. In Python (and many other languages), one of the most common ways in which this is done is using an if statement. For example:
+Now that we know how to use variables and know how to store data, let's play around with decision making and changing prints based on your answer. In Python (and many other languages), one of the most common ways in which this is done is using an `if` statement. For example:
 
 	if number > 3:
 		print "Bigger than three"
 	elif number < 3:
 		print "Smaller than three"
 
-Here we can see that if a number we have passed into this decision making code is bigger than three, we will receive a message telling us so, and the same relevant message if the number is smaller than three.
+Here we can see that if a number we have passed into this decision making code is bigger than three, we will receive a message telling us so. There is a different message if the number is smaller than three.
 
 Also, now that we are getting more in depth with Python, we should say that Python is very particular about tabbing. Tabbing is the indents created when writing code. With Python, if any lines are not indented correctly the code will not run. If you are running into bugs, this is a good place to start.
 
-In this final exercise we are going to ask you the number of coffees you have drank today and then change the statement returned to you, depending on your answer.
+In this final exercise we are going to ask you the number of coffees you have drunk today and then change the statement returned to you, depending on your answer.
 
 Let's create a variable called:
 
 	coffee = input("How many cups of coffee have you consumed today?")
 
-	if coffee  >= 4: 
+	if coffee >= 4: 
 		print "You have a coffee problem"
 	else:
 		print "You do not have a coffee problem"
-	

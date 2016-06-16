@@ -13,7 +13,7 @@ On Windows:
 
 1. Head to [the Python website](https://www.python.org/).
 2. Click "Downloads".
-3. There will be two options; one for Python 3 and one for Python 2. **Download Python 2.** At the time of writing, the version available is 2.7.10.
+3. There will be two options; one for Python 3 and one for Python 2. **Download Python 2.** At the time of writing, the version available is 2.7.11.
 4. Run the downloaded installer and click *Next* until you reach the *Customization* page.
 5. Scroll down to the bottom and choose to *Add python.exe to PATH*.
 6. Continue clicking *Next* until it's installed.
