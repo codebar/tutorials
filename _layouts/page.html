@@ -12,13 +12,16 @@ layout: default
     {% endif %}
 
     {% if page.files %}
-      <a class="tutorial-filelist__heading" name="download-default">Files for example</a>
-      <ul class="tutorial-filelist__list">
-        {% assign pageurl = page.url | split: '/' | pop: | join: '/' %}
-        {% for file in page.files %}
-          <li class="tutorial-filelist__file"><a href="{{ pageurl }}/{{ file }}">{{ pageurl }}/{{ file }}</a></li>
-        {% endfor %}
-      </ul>
+      {% for zip in page.files %}
+        <a class="tutorial-filelist__heading" name="download-{{zip.zipname}}">Files for {{zip.zipname}}</a>
+        <ul class="tutorial-filelist__list compact-list">
+          {% assign pageurl = page.url | split: '/' | pop: | join: '/' %}
+          {% assign files = zip.files %}
+          {% for file in files %}
+            <li class="tutorial-filelist__file"><a href="{{ pageurl }}/{{ file }}">{{ pageurl }}/{{ file }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     {% endif %}
 
     {{ content }}

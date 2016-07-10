@@ -14,10 +14,13 @@ footer {
 }
 
 .tutorial-filelist__list {
-	display: none;
 }
 
 .hidden {
 	display: none;
 	visibility: hidden;
+}
+
+.compact-list > * {
+	margin: 3px 0px;
 }

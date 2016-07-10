@@ -2,10 +2,14 @@
 layout: page
 title: Introduction to jQuery
 files:
-  - files/index.html
-  - files/jquery.js
-  - files/script.js
-  - files/style.css
+  - zipname: example1
+    files: 
+    - files/index.html
+    - files/jquery.js
+  - zipname: example2
+    files:
+    - files/script.js
+    - files/style.css
 ---
 
 
@@ -46,7 +50,7 @@ Using jQuery and JavaScript functions, we are going to build a small
 todo list.
 
 Download the files that you will need to work through the example
-[here](#download-default).
+[here](#download-example1). and [example2](#download-example2)
 <!-- https://gist.github.com/despo/309f684b7a6e002aaf1f/download -->
 
 Alternatively, if you've already learned how to use git and would like
