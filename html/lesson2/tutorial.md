@@ -165,7 +165,7 @@ margin-left: auto;
 What we defined above is
 _margin: (top bottom) (left right)_
 
-> You can see the margin of an element by right clicking in your browser and selecting Inspect Element then having a look at the computed tab on the right hand site. (If you're using Safari this feature is not enabled by default like Chrome so go to your Safari preferences tab, then go to Advanced and check the box that says Show develop menu in menu bar).
+> You can see the margin of an element by right clicking in your browser and selecting Inspect then having a look at the computed tab on the right hand site. (If you're using Safari this feature is not enabled by default like Chrome so go to your Safari preferences tab, then go to Advanced and check the box that says Show develop menu in menu bar).
 
 #### Selector: id
 
