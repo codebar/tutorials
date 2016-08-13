@@ -9,26 +9,30 @@ layout: default
       <h1 class="entry-title">{{ page.title }}</h1>
     </header>
     {% endif %}
+
     {{ content }}
+
+    {% if page.files %}
+    {% assign pageurl = page.url | split: '/' | pop: | join: '/' %}
+    <section id="js-hide">
+      {% for zip in page.files %}{% for folder in zip %}
+      {% assign exercise = folder[0] %}
+      {% assign files    = folder[1] %}
+      <h2>Files for {{ exercise }}</h2>
+      <ul id="download-{{ exercise }}">
+        {% for file in files %}
+        <li>
+          <a href="{{ pageurl }}/{{ exercise }}/{{ file }}">{{ file }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}{% endfor %}
+    </section>
+    {% endif %}
+
     <footer>
         <a href='http://tutorials.codebar.io/'>Back to tutorials</a>
         <a href='http://codebar.io/'>codebar mainpage</a>
     </footer>
   </article>
 </div>
-
-
-
-
-{% if page.files %}
-{% assign pageurl = page.url | split: '/' | pop: | join: '/' %}
-{% capture files %}[{% for file in page.files %}
-    "{{ pageurl }}/{{ file }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}
-  ]{% endcapture %}
-{% endif %}
-
-<script>
-  var Files = {
-    all : {{ files }}
-  }
-</script>
