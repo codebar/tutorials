@@ -2,10 +2,11 @@
 layout: page
 title: Introduction to jQuery
 files:
-  - files/index.html
-  - files/jquery.js
-  - files/script.js
-  - files/style.css
+  - exercise1:
+    - index.html
+    - jquery.js
+    - script.js
+    - style.css
 ---
 
 
@@ -46,7 +47,7 @@ Using jQuery and JavaScript functions, we are going to build a small
 todo list.
 
 Download the files that you will need to work through the example
-[here](download).
+[here](#download-exercise1).
 <!-- https://gist.github.com/despo/309f684b7a6e002aaf1f/download -->
 
 Alternatively, if you've already learned how to use git and would like
