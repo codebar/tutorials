@@ -2,11 +2,11 @@ var Zipper = {
   zip: new JSZip()
 };
 
-Zipper.createZip = function(downloader) {
+Zipper.createZip = function(downloader, filePaths) {
 
   var addFiles = function() {
     var filename;
-    Files.all.map(function(fileurl) {
+    filePaths.map(function(fileurl) {
       filename = fileurl.replace(/.*\//g, "");
       Zipper.zip.file(filename, downloader.getFile(fileurl), {binary:true});
     });
