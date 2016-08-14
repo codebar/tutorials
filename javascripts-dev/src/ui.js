@@ -1,16 +1,18 @@
 var UserInterface = {
-  selector: "a[href=download]"
+  selector: "a[href^='#download-']"
 };
 
 UserInterface.setup = function(zipper, downloader) {
-  var createZip = function() {
-    zipper.createZip(downloader);
+
+  var createZip = function(downloadLinkUrl) {
+    var listId = downloadLinkUrl.split("#").pop();
+    zipper.createZip(downloader, UserInterface.getPathsInList(listId));
   };
 
   var registerListener = function(downloadLink) {
     downloadLink.addEventListener("click", function(event) {
       event.preventDefault();
-      createZip();
+      createZip(this.href);
     }, false);
   };
 
@@ -22,4 +24,11 @@ UserInterface.setup = function(zipper, downloader) {
   };
 
   checkIfDownloadLinkExist();
-}
+};
+
+UserInterface.getPathsInList = function(listId) {
+  var links = document.querySelectorAll("#" + listId + " a");
+  return Array.prototype.slice.call(links).map(function(link) {
+    return link.href;
+  });
+};
