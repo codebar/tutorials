@@ -50,6 +50,14 @@ describe("UI", function() {
     expect(UserInterface.getPathsInList(listId)).toEqual(testPaths())
   });
 
+  it("hides a links-list if there is a download link", function() {
+    pointLinkTo(rightAnchor);
+    section.setAttribute("id", UserInterface.hideId);
+    UserInterface.setup(undefined, undefined);
+    link.click();
+    expect(section.getAttribute("class")).toContain(UserInterface.hideClass);
+  });
+
   function pointLinkTo(href) {
     link.setAttribute("href", href);
   }

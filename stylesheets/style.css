@@ -12,3 +12,7 @@ footer {
   min-width: 680px;
   margin: 0 auto;
 }
+
+.hidden {
+  display: none;
+}

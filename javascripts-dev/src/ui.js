@@ -1,5 +1,7 @@
 var UserInterface = {
-  selector: "a[href^='#download-']"
+  selector: "a[href^='#download-']",
+  hideId: "js-hide",
+  hideClass: "hidden"
 };
 
 UserInterface.setup = function(zipper, downloader) {
@@ -20,6 +22,7 @@ UserInterface.setup = function(zipper, downloader) {
     var downloadLink = document.body.querySelector(UserInterface.selector);
     if (downloadLink) {
       registerListener(downloadLink);
+      UserInterface.hideLinksList();
     }
   };
 
@@ -31,4 +34,11 @@ UserInterface.getPathsInList = function(listId) {
   return Array.prototype.slice.call(links).map(function(link) {
     return link.href;
   });
+};
+
+UserInterface.hideLinksList = function() {
+  element = document.getElementById(UserInterface.hideId);
+  if (element) {
+    element.setAttribute("class", UserInterface.hideClass);
+  }
 };
