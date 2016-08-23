@@ -138,7 +138,7 @@ Add an id `left-bar` to the external `div` so we can change the styling
 }
 ```
 
-This doesn't seem to work. Wrap the content below in a `div` with the id `container` and change the position, dimensions and the display attribute.
+This doesn't seem to work. Wrap the rest of the content below the `left-bar` in a new `div` with the id `container`. We'll then use the following css to change the position, dimensions and the display attribute.
 
 ```css
 #container {
