@@ -86,9 +86,14 @@ Try tweaking the style.
 
 Text shadow, adds a drop shadow to the header. This only works with CSS3 compatible browsers, so unless you are using a really [old browser](http://caniuse.com/css-textshadow) or IE9, you should be able to see the results.
 
+The text-shadow property is formatted as follows:
+
 `text-shadow: horizontal-shadow vertical-shadow blur color`
 
-**blur** is optional, so you don't need to set it.
+- horizonal-shadow is the length of the shadow along the x-axis
+- vertical-shadow is the length of the shadow along the y-axis
+- blur controls how much, if any, blur radius to add to the shadows. This is optional, but can look cool.
+- color controls the color of the shadow. It is also optional
 
 ### Style the header
 
