@@ -13,7 +13,7 @@ To access the command line, we use a terminal emulator, usually called a termina
 
 Before we get started, you should note some **DO's** and **DONT's** while using the command line. The command line is a powerful tool that can significantly speed up your workflow but can also irreversibly harm your computer so make sure you use it responsibly.
 
-If you are not sure what a command does **DO NOT** type it into your terminal. The command `rm -rf /` is a classic one that you should never use. If you are stuck and in need of help make sure you ask from someone you trust. It goes without saying that all commands in this tutorial are safe to use.
+If you are not sure what a command does **DO NOT** type it into your terminal. The command `rm -rf /` is a classic one that you should never use, it will delete all the files in your computer. If you are stuck and in need of help make sure you ask from someone you trust. It goes without saying that all commands in this tutorial are safe to use.
 
 ## Example 1: navigating around in the terminal
 
