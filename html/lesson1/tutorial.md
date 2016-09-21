@@ -108,7 +108,12 @@ Notice how each tag is indented to its parent tag. This is important as it makes
 
 Headings come in 6 sizes
 
-# `<h1>Heading</h1>` ## `<h2>Heading</h2>` ### `<h3>Heading</h3>` #### `<h4>Heading</h4>` ##### `<h5>Heading</h5>` ###### `<h6>Heading</h6>`
+# `<h1>Heading</h1>`
+## `<h2>Heading</h2>`
+### `<h3>Heading</h3>`
+#### `<h4>Heading</h4>`
+##### `<h5>Heading</h5>`
+###### `<h6>Heading</h6>`
 
 A `h1` defines the most important heading whereas a `h6` defines the least important.
 
