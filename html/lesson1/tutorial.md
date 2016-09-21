@@ -5,7 +5,7 @@ title: HTML & CSS Lesson 1
 
 ## Introduction to HTML
 
-### Objectives 
+### Objectives
 
 In this tutorial we are going to look at:
 
@@ -22,7 +22,7 @@ By the end of this tutorial you will have built [this webpage.](http://codebar.g
 
 #### What is HTML?
 
-**HTML** is the language used to build websites. All text and content that you see on the internet is built using HTML. 
+**HTML** is the language used to build websites. All text and content that you see on the internet is built using HTML.
 
 **CSS** is used with HTML to style the page. However we will not be learning any of this today as this is covered in the next tutorial.
 
@@ -77,9 +77,9 @@ The **body** contains webpage content that is visible to the user.
 
 ## Let's get coding!
 
-Let's start by defining the basic structure of your website. Create a new folder for your work called "HTML tutorial 1". Then inside this folder create a new file called "index.html". 
+Let's start by defining the basic structure of your website. Create a new folder for your work called "HTML tutorial 1". Then inside this folder create a new file called "index.html".
 
-Using what we just learnt, and with guidance from your coach, create the following: 
+Using what we just learnt, and with guidance from your coach, create the following:
 
 * declare the doctype to be HTML
 * open and close a set of `<html></html>` tags
@@ -104,7 +104,7 @@ Now inside your head tag create a `<title>` tag with **I love owls** as your tit
 
 Notice how each tag is indented to its parent tag. This is important as it makes your code much easier to read and you'll be able to see nested tags much easier.
 
-### Element: Headings 
+### Element: Headings
 
 Headings come in 6 sizes
 
@@ -234,14 +234,14 @@ Add this underneath the ordered list about why we like owls.
   <a href="http://www.youtube.com/watch?v=gBjnfgnwXic">
     <img src="images/img4.jpg" alt="cute owl">
     <img src="images/img5.jpg" alt="another cute owl">
-    <br/>
+    <br>
     Watch the video
   </a>
 </div>
 ```
 
 > Click any of the images. Can you get to the link's page?
-> What happens if you take the `<br/>` tag out? Remember to put it back afterwards!
+> What happens if you take the `<br>` tag out? Remember to put it back afterwards!
 
 ## Formatting text
 
@@ -318,7 +318,7 @@ You can use a special kind of tag to add notes to our page that the computer wil
 
 ## Bonus
 
-### Twitter share 
+### Twitter share
 
 Add a share on twitter link along with your other sharing links.
 
