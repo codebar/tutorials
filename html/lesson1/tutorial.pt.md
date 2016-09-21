@@ -47,8 +47,8 @@ Um **elemento** é como um tijolo no HTML. Existem parágrafos, cabeçalhos, tab
 Alguns elementos são individuais, já que eles não tem nenhum conteúdo que os acompanha. Eles se parecem com isso: `<nomedatag/>`
 
 ```html
-<br/>
-<img/>
+<br>
+<img>
 ```
 
 ### Comentários
@@ -150,14 +150,14 @@ Acrescente o seguinte no corpo da página, depois do cabeçalho `<h1>`:
 </p>
 ```
 
-### Quebra de linha `<br/>`
-Como você já notou, apesar das novas linhas, não há quebra de linha em nosso parágrafo. Para que isso aconteça, precisamos usar a tag `<br/>`.
+### Quebra de linha `<br>`
+Como você já notou, apesar das novas linhas, não há quebra de linha em nosso parágrafo. Para que isso aconteça, precisamos usar a tag `<br>`.
 
 ```html
 <p>
-  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br/>
-  mas a natureza estereoscópica dos<br/>
-  olhos voltados para frente na coruja permite<br/>
+  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br>
+  mas a natureza estereoscópica dos<br>
+  olhos voltados para frente na coruja permite<br>
   um melhor senso de percepção profunda necessária para a caça com pouca luz.
 </p>
 ```
@@ -171,9 +171,9 @@ Vamos enfatizar alguns conteúdos no nosso parágrafo
 
 ```html
 <p>
-  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br/>
-  mas a natureza estereoscópica dos<br/>
-  <strong>olhos voltados para frente na coruja permite<br/>
+  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br>
+  mas a natureza estereoscópica dos<br>
+  <strong>olhos voltados para frente na coruja permite<br>
   um melhor senso de percepção profunda</strong> necessária para a caça com pouca luz.
 </p>
 ```
