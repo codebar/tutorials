@@ -20,17 +20,33 @@ On Windows:
 
 ## Opening the REPL
 
-Python is often developed with the aid of a *REPL*, or *Read-Eval-Print-Loop*. The REPL is a way of getting immediate feedback as you work.
+Python is often developed with the aid of a *REPL*, or *Read-Eval-Print-Loop*.
+The REPL is a way of getting immediate feedback as you work. Python's REPL is called **IDLE**.
 
-Python's REPL is called **IDLE**.
+It's very important to find what Python version you are working with.
 
-On Windows, you can run it by clicking on the shortcut in your Start menu or Start screen named "IDLE (Python GUI)".
+On Windows, open `cmd` or on Mac OS / GNU/Linux open `terminal` and type (without the `$` sign):
 
-On Mac OS, open the Terminal and type "python" to start the REPL. At the top, you'll see something similar (but probably not identical) to this:
+    $ python --version
 
-    Python 2.7.6 (default, Sep  9 2014, 15:04:36)
+What you should see is:
 
-If you see it, make sure you're running Python 2, not Python 3, otherwise parts of this exercise will not make sense. Once you've checked that, we're ready to move on to writing Python.
+    $ python 2.7.12
+
+Any 2.* version should do for this tutorial to work.
+
+Now, open the *REPL* by typing:
+
+    $ python
+
+And you should see something like this:
+
+    Python 2.7.12 (default, Jul  1 2016, 15:12:24)
+    [GCC 5.4.0 20160609] on linux2
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>>
+
+Now you're all set!
 
 ## Hello, World!
 
