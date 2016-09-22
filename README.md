@@ -31,19 +31,29 @@ $ gulp
 
 Then go to http://localhost:4000/test/specrunner.html to run the tests. Tests should be green.
 
-> *Gulp is only used for development, not in production. In your local copy of this repo, it will concatenate and minify the files inside the `javascripts-dev` folder, as well as watch for changes in that folder. The concatenated and minified JS file will be generated inside the `javascripts` folder. You can push both folders when you are finished with your changes. GitHub pages will then  generate the site in production with whatever is inside the `javascripts` folder.*
+> *Gulp is only used for development, not in production. In your local copy of
+> this repo, it will concatenate and minify the files inside the
+> `javascripts-dev` folder, as well as watch for changes in that folder. The
+> concatenated and minified JS file will be generated inside the `javascripts`
+> folder. You can push both folders when you are finished with your changes.
+> GitHub pages will then  generate the site in production with whatever is
+> inside the `javascripts` folder.*
 
 If you are just updating or adding new tutorials, follow steps 1 to 3 only.
 
 ## Getting in Touch
 
-You can go to the general [codebar Slack channel here](https://codebar.slack.com/messages/general/) or the dedicated [tutorials channel here](https://codebar.slack.com/messages/tutorials/). Use it to get in touch and chat to other codebar students/coaches, or if you need help.
+You can go to the general [codebar Slack channel here](https://codebar.slack.com/messages/general/) or the
+dedicated [tutorials channel here](https://codebar.slack.com/messages/tutorials/). Use it to get in touch
+and chat to other codebar students/coaches, or if you need help.
 
 If you are not on Slack use [this link](http://codebar-slack.herokuapp.com/) to get an invite.
 
 ## Contributing
 
-We encourage you to contribute with your suggestions and corrections. Head to our [issues page](https://github.com/codebar/tutorials/issues) and open a new issue or help on the existing ones.
+We encourage you to contribute with your suggestions and corrections. Head to our
+[issues page](https://github.com/codebar/tutorials/issues) and open a new issue or
+help on the existing ones.
 
 
 ##### General tutorial rule
@@ -54,14 +64,23 @@ We encourage you to contribute with your suggestions and corrections. Head to ou
 	* Objectives - "In this tutorial we are going to look at..."
 	* Goals - "By the end of this tutorial you will have..."
 	* Then the exercises.
-	* Bonus - This is not always required but if you feel there is something that could be added then please include it.
-	* Further reading - Again this is not always required but if you feel there was something in the tutorials that could be covered in more depth then please include any good reading materials/videos or extra tutorials.
+        * Bonus - This is not always required but if you feel there is
+          something that could be added then please include it.
+        * Further reading - Again this is not always required but if you feel
+          there was something in the tutorials that could be covered in more
+          depth then please include any good reading materials/videos or extra
+          tutorials.
 
-3. Repetition is good. A tutorial can contain multiple exercises that ask the students to take similar steps (e.g. for HTTP Requests one exercise introduces GET, another has GET and POST etc).
+3. Repetition is good. A tutorial can contain multiple exercises that ask the
+   students to take similar steps (e.g. for HTTP Requests one exercise
+   introduces GET, another has GET and POST etc).
 
-4. Explaining and getting the students to focus on one new thing at a time, presenting students with lots of new content and usage examples can be confusing.
+4. Explaining and getting the students to focus on one new thing at a time,
+   presenting students with lots of new content and usage examples can be
+   confusing.
 
-5. Before starting to write a new tutorial please speak with someone from codebar to see whether it is of interest to students.
+5. Before starting to write a new tutorial please speak with someone from
+   codebar to see whether it is of interest to students.
 
 ##### To add downloadable files to a new or existing tutorial:
 
