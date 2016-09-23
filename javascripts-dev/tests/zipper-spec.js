@@ -3,6 +3,10 @@ describe("Zipper", function() {
 
   var zip = Zipper.zip;
 
+  beforeEach(function() {
+    spyOn(zip, "generateAsync").and.returnValue(new Promise( function() {} ));
+  });
+
   it("adds files to the zip", function() {
     spyOn(zip, "file");
     Zipper.createZip(Downloader);
