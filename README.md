@@ -83,7 +83,7 @@ help on the existing ones.
 ```bash
 js/lesson3/
 ├── assets/
-├── files/
+├── exercise1/
 │   ├── index.html
 │   ├── jquery.js
 │   ├── script.js
@@ -98,19 +98,20 @@ js/lesson3/
 layout: page
 title: Introduction to jQuery
 files:
-  - files/index.html
-  - files/jquery.js
-  - files/script.js
-  - files/style.css
+  - exercise1:
+    - index.html
+    - jquery.js
+    - script.js
+    - style.css
 ---
 ```
 
-- In the copy of the tutorial, add your link to the files, **making it point to just `download`:**
+- In the copy of the tutorial, add your link to the files, **making it point to `#download-foldername`:**. For example:
 
 
 ```markdown
 Download the files that you will need to work through the example
-[here](download).
+[here](#download-exercise1).
 ```
 
 And you're done. Commit and push as usual.
