@@ -12,3 +12,15 @@ footer {
   min-width: 680px;
   margin: 0 auto;
 }
+
+.tutorial-filelist__list {
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+.compact-list > * {
+	margin: 3px 0px;
+}

@@ -2,6 +2,7 @@
 layout: default
 ---
 
+
 <div>
   <article role="article">
     {% if page.title %}
@@ -9,6 +10,20 @@ layout: default
       <h1 class="entry-title">{{ page.title }}</h1>
     </header>
     {% endif %}
+
+    {% if page.files %}
+      {% for zip in page.files %}
+        <a class="tutorial-filelist__heading" name="download-{{zip.zipname}}">Files for {{zip.zipname}}</a>
+        <ul class="tutorial-filelist__list compact-list">
+          {% assign pageurl = page.url | split: '/' | pop: | join: '/' %}
+          {% assign files = zip.files %}
+          {% for file in files %}
+            <li class="tutorial-filelist__file"><a href="{{ pageurl }}/{{ file }}">{{ pageurl }}/{{ file }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    {% endif %}
+
     {{ content }}
     <footer>
         <a href='http://tutorials.codebar.io/'>Back to tutorials</a>
@@ -20,15 +35,3 @@ layout: default
 
 
 
-{% if page.files %}
-{% assign pageurl = page.url | split: '/' | pop: | join: '/' %}
-{% capture files %}[{% for file in page.files %}
-    "{{ pageurl }}/{{ file }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}
-  ]{% endcapture %}
-{% endif %}
-
-<script>
-  var Files = {
-    all : {{ files }}
-  }
-</script>
