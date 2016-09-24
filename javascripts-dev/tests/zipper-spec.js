@@ -40,14 +40,8 @@ describe("Zipper", function() {
     expect(Downloader.getFile).toHaveBeenCalledWith("/js/lesson3/files/script.js");
   });
 
-  xit("generates a zip file", function(done) {
-    // var async = jasmine.createSpy('zip')
-    spyOn(zip, "generateAsync");
-    Zipper.createZip(Downloader, {
-      success: function () {
-        expect(zip.generateAsync).toHaveBeenCalled();
-        done();
-      }
-    });
+  it("generates a zip file", function() {
+    Zipper.createZip(Downloader);
+    expect(zip.generateAsync).toHaveBeenCalled();
   });
 });
