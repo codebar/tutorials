@@ -5,9 +5,9 @@ var Zipper = {
 Zipper.createZip = function(downloader) {
 
   var addFiles = function() {
-    Files.all.map(function(url) {
-      var fileurl  = url;
-      var filename = fileurl.replace(/.*\//g, "");
+    var filename;
+    Files.all.map(function(fileurl) {
+      filename = fileurl.replace(/.*\//g, "");
       Zipper.zip.file(filename, downloader.getFile(fileurl), {binary:true});
     });
   };

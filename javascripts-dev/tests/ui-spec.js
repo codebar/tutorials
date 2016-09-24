@@ -13,7 +13,7 @@ describe("UI", function() {
 
   it("triggers the download if the link points to 'download'", function() {
     pointLinkTo("download");
-    spyOn(Zipper, 'createZip');
+    spyOn(Zipper, "createZip");
     UserInterface.setup(Zipper, undefined);
     link.click();
     expect(Zipper.createZip).toHaveBeenCalled();
@@ -28,7 +28,7 @@ describe("UI", function() {
 
   it("does not trigger the download if the link doesn't point to 'download'", function() {
     pointLinkTo("http://example.com");
-    spyOn(Zipper, 'createZip');
+    spyOn(Zipper, "createZip");
     UserInterface.setup(Zipper, undefined);
     dontFollowLink();
     link.click();
@@ -37,7 +37,7 @@ describe("UI", function() {
 
   it("calls the zipper with the right downloader", function() {
     pointLinkTo("download");
-    spyOn(Zipper, 'createZip');
+    spyOn(Zipper, "createZip");
     UserInterface.setup(Zipper, Downloader);
     link.click();
     expect(Zipper.createZip).toHaveBeenCalledWith(Downloader);
@@ -58,5 +58,4 @@ describe("UI", function() {
       "cancelable": true
     });
   }
-
 });

@@ -20,12 +20,11 @@ describe("Zipper", function() {
   });
 
   it("gets the files names right", function() {
-    var promise = new Promise(function() {});
     spyOn(zip, "file");
-    spyOn(Downloader, "getFile").and.returnValue(promise);
+    spyOn(Downloader, "getFile").and.returnValue("irrelevant");
     Zipper.createZip(Downloader);
-    expect(zip.file).toHaveBeenCalledWith("index.html", promise, {binary: true});
-    expect(zip.file).toHaveBeenCalledWith("script.js",  promise, {binary: true});
+    expect(zip.file).toHaveBeenCalledWith("index.html", "irrelevant", {binary: true});
+    expect(zip.file).toHaveBeenCalledWith("script.js",  "irrelevant", {binary: true});
   });
 
   it("tells the downloader to download the files", function() {
@@ -41,15 +40,8 @@ describe("Zipper", function() {
     expect(Downloader.getFile).toHaveBeenCalledWith("/js/lesson3/files/script.js");
   });
 
-  xit("generates a zip file", function(done) {
-    // var async = jasmine.createSpy('zip')
-    spyOn(zip, "generateAsync");
-    Zipper.createZip(Downloader, {
-      success: function () {
-        expect(zip.generateAsync).toHaveBeenCalled();
-        done();
-      }
-    });
+  it("generates a zip file", function() {
+    Zipper.createZip(Downloader);
+    expect(zip.generateAsync).toHaveBeenCalled();
   });
-
 });
