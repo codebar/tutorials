@@ -20,12 +20,11 @@ describe("Zipper", function() {
   });
 
   it("gets the files names right", function() {
-    var promise = new Promise(function() {});
     spyOn(zip, "file");
-    spyOn(Downloader, "getFile").and.returnValue(promise);
+    spyOn(Downloader, "getFile").and.returnValue("irrelevant");
     Zipper.createZip(Downloader);
-    expect(zip.file).toHaveBeenCalledWith("index.html", promise, {binary: true});
-    expect(zip.file).toHaveBeenCalledWith("script.js",  promise, {binary: true});
+    expect(zip.file).toHaveBeenCalledWith("index.html", "irrelevant", {binary: true});
+    expect(zip.file).toHaveBeenCalledWith("script.js",  "irrelevant", {binary: true});
   });
 
   it("tells the downloader to download the files", function() {
@@ -51,5 +50,4 @@ describe("Zipper", function() {
       }
     });
   });
-
 });
