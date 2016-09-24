@@ -3,33 +3,29 @@ This is the source code for <http://tutorials.codebar.io>
 ## Getting started
 
 This is a [GitHub Pages](https://pages.github.com/) repo, so you can render the pages with [Jekyll](http://jekyllrb.com/).
+All you need is to make sure you have installed the version of Ruby indicated in
+`.ruby-version` and the [bundler](http://bundler.io/) gem installed. Then:
 
-The recommended way of installing the project depdendencies is via [RVM](https://rvm.io/rvm/install).
-Follow the [quick installation guide](https://rvm.io/rvm/install#quick-guided-install) and then run:
+1. `bundle install`, which will install Jekyll
+2. `bundle exec jekyll serve --watch`
+3. go to <http://localhost:4000>
 
-```bash
-$ rvm install 2.2.1  # inside `codebar/tutorials` folder
-$ rvm gemset use codebar-tutorial --create
-$ gem install bundler
-$ bundle install
-```
+(*you could also use your favorite manager, `chruby`, `rbenv`, `rvm`, etc. See
+intructions for `rvm` at the end of this README*)
 
-In order to serve the site, you'll need to have [Node](https://nodejs.org/en/) installed.
-This can be done with a tool like [NVM](https://github.com/creationix/nvm). Then run:
-
-```bash
-$ jekyll serve  # go to http://127.0.0.1:4000
-```
+If you are just updating or adding new tutorials, follow steps 1 to 3 only.
 
 If you also want to make changes to the structure of the site (i.e. if you want
-to modify the site's Javascript files) and run the tests, you can:
+to modify the site's Javascript files) and run the tests, you need to install
+[Node](https://nodejs.org/en/) (follow the link for installation
+instructions). Then:
 
 ```bash
 $ npm install
 $ gulp
 ```
 
-Then go to http://localhost:4000/test/specrunner.html to run the tests. Tests should be green.
+and go to <http://localhost:4000/test/specrunner.html> to run the tests. Tests should be green.
 
 > *Gulp is only used for development, not in production. In your local copy of
 > this repo, it will concatenate and minify the files inside the
@@ -38,8 +34,6 @@ Then go to http://localhost:4000/test/specrunner.html to run the tests. Tests sh
 > folder. You can push both folders when you are finished with your changes.
 > GitHub pages will then  generate the site in production with whatever is
 > inside the `javascripts` folder.*
-
-If you are just updating or adding new tutorials, follow steps 1 to 3 only.
 
 ## Getting in Touch
 
@@ -120,6 +114,24 @@ Download the files that you will need to work through the example
 ```
 
 And you're done. Commit and push as usual.
+
+# RVM
+
+Another way of installing the project depdendencies is via [RVM](https://rvm.io/rvm/install).
+Follow the [quick installation guide](https://rvm.io/rvm/install#quick-guided-install) and then run:
+
+```bash
+$ rvm install 2.2.1  # inside `codebar/tutorials` folder
+$ rvm gemset use codebar-tutorial --create
+$ gem install bundler
+$ bundle install
+$ jekyll serve  # go to http://127.0.0.1:4000
+```
+
+If you also want to make changes to the JavaScript of the site, you'll need to have
+[Node](https://nodejs.org/en/) installed.
+This can be done with a tool like [NVM](https://github.com/creationix/nvm).
+
 
 ## License
 
