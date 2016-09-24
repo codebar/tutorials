@@ -3,8 +3,8 @@ This is the source code for <http://tutorials.codebar.io>
 ## Getting started
 
 This is a [GitHub Pages](https://pages.github.com/) repo, so you can render the pages with [Jekyll](http://jekyllrb.com/).
-All you need is to make sure you have installed the version of Ruby indicated in
-`.ruby-version` and the [bundler](http://bundler.io/) gem installed. Then:
+First make sure to [install the version of Ruby](https://www.ruby-lang.org/en/documentation/installation/)
+indicated in `.ruby-version`, as well as the [bundler](http://bundler.io/) gem. Then:
 
 1. `bundle install`, which will install Jekyll
 2. `bundle exec jekyll serve --watch`
