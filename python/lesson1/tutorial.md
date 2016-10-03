@@ -1,39 +1,104 @@
 ---
 layout: page
-title: Introduction to Python
+title: Installation Guide
 ---
 
-Welcome to the first Python tutorial. We're going to look at getting Python up and running on your computer, then look at a few simple operations to get to grips with the development environment, the syntax and basic computation.
+Welcome to the first Python tutorial. We're going to look at getting Python up
+and running on your computer, then look at a few simple operations to get to
+grips with the development environment and syntax.
 
 ## Installation
 
-On Mac, you'll already have Python installed.
+### Mac
 
-On Windows:
+Mac OSX ships with Python 2.7 which, while still a great language, is very
+outdated these days, so we need to upgrade:
+
+1. Make sure you're running an updated version of OSX.  You should at least
+   have OS 10.3, and most modern Macs are running much later than that anyway,
+   but it's worth noting this requirement here.
+2. Head to [the Python website](https://www.python.org/).
+3. Click "Downloads".
+4. There will be two options; one for Python 3 and one for Python 2. 
+   **Download Python 3**. At the time of writing, the version available is
+   3.5.2.
+5. When the download's complete, your browser should automatically mount the
+   disk image and open a Finder window of what's inside, but if that doesn't
+   happen, you'll have to find the file `Python.mpkg` in your downloads folder
+   and double-click it to get started.
+6. Once the installer is running hit `Continue` a number of times and agree to
+   the Free software license as well as enter your administrator password. Just
+   follow the prompts and you'll be fine.
+
+If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3](http://www.diveintopython3.net/installing-python.html#macosx).
+
+### Windows:
 
 1. Head to [the Python website](https://www.python.org/).
 2. Click "Downloads".
-3. There will be two options; one for Python 3 and one for Python 2. **Download Python 2.** At the time of writing, the version available is 2.7.11.
-4. Run the downloaded installer and click *Next* until you reach the *Customization* page.
+3. There will be two options; one for Python 3 and one for Python 2. 
+   **Download Python 3**. At the time of writing, the version available is
+   3.5.2.
+4. Run the downloaded installer and click *Next* until you reach the
+   *Customization* page.
 5. Scroll down to the bottom and choose to *Add python.exe to PATH*.
 6. Continue clicking *Next* until it's installed.
+
+If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3](http://www.diveintopython3.net/installing-python.html#windows).
+
+### Linux
+
+All modern Linux distributions should support installing Python 3 via the
+package manager.  However, each distribution likes to do things slightly
+differently, so these instructions may need to be modified for your situation.
+
+#### Debian/Ubuntu
+
+Python 3 is available via apt, so you can install it with `apt install 
+python3`.
+
+#### Redhat/CentOS
+
+Python 3 isn't yet available in default Redhat/Centos installations, so you
+have to use the `scl` workaround:
+
+1. Install scl-utils: `yum install scl-utils`
+2. Install the extra repo needed for Pytyhon 3:
+        `rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/python33/epel-7-x86_64/download/rhscl-python33-epel-7-x86_64.noarch.rpm`
+3. Install Python 3 with this new repo: `yum install Python33` (no the second
+   `3` is not a typo)
+4. Run `scn enable python3 /bin/bash`.  This will put you into a shell that
+   supports Python 3.
+
+For more information on this process, take a look at [this tutorial](https://devops.profitbricks.com/tutorials/install-python-3-in-centos-7/).
+
+#### Arch
+
+Python 3 is available via Pacman, so all you need to do is `pacman -S python`.
+
+#### Gentoo
+
+You've already got it :-)
+
 
 ## Opening the REPL
 
 Python is often developed with the aid of a *REPL*, or *Read-Eval-Print-Loop*.
-The REPL is a way of getting immediate feedback as you work. Python's REPL is called **IDLE**.
+The REPL is a way of getting immediate feedback as you work. Python's REPL is
+called **IDLE**.
 
 It's very important to find what Python version you are working with.
 
-On Windows, open `cmd` or on Mac OS / GNU/Linux open `terminal` and type (without the `$` sign):
+On Windows, open `cmd` or on Mac OS / GNU/Linux open `terminal` and type
+(without the `$` sign):
 
     $ python --version
 
 What you should see is:
 
-    $ python 2.7.12
+    $ python 3.5.2
 
-Any 2.* version should do for this tutorial to work.
+Any 3.* version should do for this tutorial to work.
 
 Now, open the *REPL* by typing:
 
@@ -41,95 +106,9 @@ Now, open the *REPL* by typing:
 
 And you should see something like this:
 
-    Python 2.7.12 (default, Jul  1 2016, 15:12:24)
-    [GCC 5.4.0 20160609] on linux2
+    Python 3.5.2 (default, Aug  6 2016, 15:44:26) 
+    [GCC 5.4.0] on linux
     Type "help", "copyright", "credits" or "license" for more information.
-    >>>
+    >>> 
 
 Now you're all set!
-
-## Hello, World!
-
-In keeping with tradition, we're going to start by printing "Hello, World!" to the console. In Python, the command to achieve this is aptly named `print`. Type the following:
-
-    print "Hello, World!"
-
-The REPL will simply print the text right back at you.
-
-Now, print your name.
-
-## Maths
-
-Everybody's favourite pastime.
-
-### Simple Arithmetic
-
-Python can do simple arithmetic. To start, let's try addition:
-
-    5 + 7
-
-You should now see the result of that calculation in your REPL.
-
-Subtraction, multiplication and division work the same way.
-
-    6 - 2
-    8 * 4
-    9 / 3
-
-Now try a few more to see what results you get.
-
-Let's see what happens when you divide 14 by 4. Notice the remainder is chopped off. We can use the *modulus* operator, `%`, to get the remainder instead. Try `14 % 4` and see.
-
-### Combining Operations
-
-Being able to only perform one operation at a time is pretty limiting, so Python allows us to combine mathematical operations. Try this one:
-
-    9 * 4 - 6
-
-Now try a few more. You can combine as many operations as you like.
-
-### Operator Precedence
-
-Did you notice any unexpected results when you started combining operations? If you didn't, try this:
-
-    10 - 2 * 4
-
-Python follows the traditional mathematical rules of precedence, which state that multiplication and division are done before addition and subtraction. (You may remember *BODMAS*.) This means in our example above, 2 and 4 are multiplied first, and then the result is subtracted from 10.
-
-We can change the order of operations by using parentheses. Anything inside parentheses is executed first.
-
-Now try it like this:
-
-    (10 - 2) * 4
-
-You should have a different answer.
-
-Because of precedence rules, complex operations such as our first example can be quite confusing to read. If you find yourself writing more complex expressions, there is no harm in adding parentheses for clarity.
-
-### Decimal Points
-
-Remember dividing 14 by 4? The result probably surprised you. Fortunately, there is a way to convince Python that you really do want the full answer, not just the whole number. We can do this by *starting* with numbers with decimal points:
-
-    14.0 / 4.0
-
-Now try a few more and see how it goes. Remember that you can also use non-whole numbers in your calculations.
-
-You may notice that there are still some limitations. For example, try:
-
-    10.0 / 3.0
-
-The answer should go on forever, but it doesn't. This is because there is only a finite amount of space to store the number, and it runs out after approximately 15 significant figures.
-
-### Concluding
-
-Now let's combine what we have learnt today. We can tell `print` to print multiple things at once, separated by a comma:
-
-    print 'The result of 2 + 2 is', 2 + 2
-
-This concludes today's tutorial. In the next tutorial, we'll find out how to combine the results of multiple separate expressions using variables, get input from the user, and make decisions based on that information.
-
-### Further Reading
-
-There is a very good introductory article in [Google Developers Guide](https://developers.google.com/edu/python/introduction)
-
-You can also find resources for beginners on [the Python website](https://www.python.org/about/gettingstarted/) and refer to [the Python documentation](https://docs.python.org/2/tutorial/introduction.html), where the language basics are explained.

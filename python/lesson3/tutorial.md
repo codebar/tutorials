@@ -1,97 +1,184 @@
 ---
 layout: page
-title: Fun with Functions
+title: Playing with variables
 ---
 
-In this tutorial we are going to look at what functions are, how we use them and why.
+In this tutorial we are going to look at variables, user input and decision
+making.
 
-## Calling a fuction
+## Creating a variable
 
-A function is a collection of statements grouped together, that can be called later to run these statements. Python comes with plenty of functions already built in that you can use to perform common tasks. One example would be printing to the screen.
+Python allows us to store data in something called variables so that we are
+able to use this data at a later point. To place an item in a variable we give
+it a name then set its value. 
 
-	>>> print "This is a function"
-	This is a function
-	
-It is also possible to store the output of a function in a variable for future use. Let's try this with the built in function `range()`, which will provide us with a list of numbers.
+Now in the REPL type:
 
-	>>> list_of_numbers = range(1, 4)
-	>>> print list_of_numbers
-	[1, 2, 3]
-	
-You may have noticed that we specified the use of the function `range()` for our particular situation. We provided the numbers 1 and 4 as parameters to the function, a start number and an end number. These parameters let the function know where to start the number list, and where to end it (in the case of range, it provides a list of numbers up to, but not including the end number).
+	>>> year = 2016
 
-We can also chain functions to use the output of other functions as parameters. In the earlier example, we stored the list provided by the range function in a variable, and then passed that variable as a parameter for the print function, which then printed the list of numbers to the screen. We could also use the range function as a direct parameter for the print function.
+In this example you have now stored the value `2016` into the variable `year`.
+See what happens next when you type `year' into the REPL. Does it show it back
+to you?
 
-    >>> print range(1, 4)
-    [1, 2, 3]
-    
-This can be very useful in making code more concise, but using it too much could make code harder to read. Knowing when to use variables instead of chaining functions comes with experience; in reading and in writing code.
+How about saving your age into a variable or your lucky number? Have a play
+around with storing numbers into variables.
 
-Try creating your own lists of numbers using `range()` with different parameters. Looking at the [documentation](https://docs.python.org/2/library/functions.html#range "Python 2 documentation for range") is always a good idea when learning more about the language. You can also learn more by purposefully trying to break the function. What happens when you don't provide any parameters?
+## Storing numbers in variables
 
-## Defining your own functions
+Now that you are familiar with the use of variables, we are able to combine
+variables with the maths operations we learnt in the previous tutorial.
 
-Now we are going to create our own function. To do this we use the `def` keyword, provide a unique (and descriptive) name for the function and specify any parameters that may be accepted by the function. Then we write the code we want to be run when the function is called. Let's start with a simple function that takes no parameters.
+Now in the REPL type the following:
 
-    >>> def print_name():
-    ...     print "My name is Bart"
-        
- We can then call this function like we would any other.
- 
-     >>> print_name()
-     My name is Bart
+	>>> revenue = 1000
+	>>> costs = 200
+	>>> profit = revenue - costs
 
-We can change the function to use a parameter. Let's change it so that it allows the user to specify the name they want to print. 
+Now type `profit` to see the results of this calculation. 
 
-    >>> def print_name(name):
-    ...     print "My name is " + name
-    ...
-    >>> print_name("Lisa")
-    My name is Lisa
+Now work out the cost of running a codebar workshop if 60 people turned up and
+pizza cost £8 per 2 people?
 
-You may have noticed that the code inside the function is indented. This is to let the Python interpreter know what is part of the function we are defining, and what is not. That is why when we write `print_name("Lisa")` directly after, it knows to call the function and not include it in the function definition, it is not indented.
+Along with pizza, students and cost, what other variables can you think of that
+could go into this calculation?
 
-Now that we have defined a parameter, the function will raise an error if no parameter is provided. Try it yourself, it's good to get used to understanding how Python errors work and what they mean. It's an important skill when debugging more complex code.
+## Storing text in variables
 
-We can enhance the function to run with a default name if one is not provided. Let's do that by specifying a default value.
+As well as numbers variables are able to store text, known in Python as
+strings. 
 
-    >>> def print_name(name='Bart'):
-    ...     print "My name is " + name
-    ...
-    >>> print_name("Lisa")
-    My name is Lisa
-    >>> print_name()
-    My name is Bart
+Now in the REPL type:
 
+	>>> name = 'codebar'
+	>>> url = "codebar.io"
 
-## Different kinds of functions
+Now type `name` and `url` to see these strings shown back to you. As you can
+see Python allows both single and double quotes to denote a string variable.
+Double quotes are required if there is going to be an apostrophe in the string.
 
-A function can be put into one of two categories. Fruitful functions, and void functions. So far we have only created void functions, these are functions that perform tasks but don't return a value. Fruitful functions return a value, a familiar example is the range function we used earlier that returned a list. Let's change our function from void to fruitful.
+For example:
 
-    >>> def print_name(name='Bart'):
-    ...    return "My name is " + name
-    
-Now the function returns a value that we can work with. We could store this in a value to be used later. Let's try storing it as a value, and using that value as a parameter in another `print_name()` function call.
+	message = "I'm a string"
 
-    >>> printed_name = print_name("Lisa")
-    >>> print print_name(printed_name)
-    My name is My name is Lisa
+Sometimes you will need to use an apostrophe within a single quote, on
+occasions like this it is recommended to use "string escaping". This would look
+like:
 
-Notice that we now need to use the print function to print to the screen. While the REPL will print what the function returns to the console, if run as a script, simply calling the function without a print statement would not print anything to the screen. This is because the function is returning a value, and no longer printing a string. 
+	message ='I\'m a string'
 
-A subtle indicator of this is the quote marks around the sentence that denotes a string is being output to the screen, rather than something being printed with the print function.
+Try storing a string within a variable without quotes, see what happens?
+Numbers do not require quotation marks, whereas they are mandatory for storing
+strings.
 
-    >>> printed_name = print_name("Lisa")
-    >>> print_name(printed_name)
-    'My name is My name is Lisa'
+Now store some strings in variables that contain apostrophes and some that do
+not.
 
-## Why use functions
+## Types & casting
 
-At first glance it may not seem obvious why it is worth expending the extra effort of defining and calling a function, rather than just writing the code independant of such things. Defining tasks as functions reduces the need to copy and paste the same code multiple times to achieve the same effect. Simply calling the function multiple times makes it much easier to not only write code, but to read it also. 
+Python is what's called a "typed language".  This is to say that there are
+multiple *types* of objects that you work with in Python, and they don't all
+act the same way.  The three types you've learnt so far are *integers* (`int`),
+*floats* (`float`), and *strings* (`str`).  This is important to know because
+every Python programmer has tried to do this at least once in their career:
 
-Using functions also makes it a lot easier to fix and change code. If you are performing the same tasks in mutiple places and discover a bug, without functions you would need to fix the same bug multiple times. However with functions, you simply fix the bug once, and all of the subsequent function calls will now behave accordingly.
+    "7" + 8
 
+Go ahead and try this in your REPL, it explodes with a `TypeError`.  You just
+tried to add a number to something that isn't a number and Python doesn't know
+how to do that.  Additionally, the output of this may surprise you:
 
-## Further reading
+    "7" * 8
 
-Python comes with a lot of built in functions that are worth learning about, as they have been created specifically to perform the most common tasks that developers require. They are listed in the [documentation](https://docs.python.org/2/library/functions.html "Python 2 built in functions documentation"). To begin with, try using a few to see what they do, and how they behave with varying parameters. Once you have grasped how a few of them work, try writing your own functions that call the built in functions within them, like we did when we used the `print` function in our own custom `print_name()` function.
+This tells Python to multiply a string by 8 so you get eight sevens rather than
+what you might expect.  This is actually a very powerful feature of Python, but
+when you're just starting out, it can be pretty confusing.
+
+For now, all you really need to know is that if you have a string that you mean
+to treat like a number, you have to *cast* it that way.  This is a string:
+
+    "7"
+
+While this is a number:
+
+    int("7")
+
+This is an integer:
+
+    7
+
+While this is a string:
+
+    str(7)
+
+Go ahead an experiment with `int()`, `float()`, and `str()`.  You'll need one
+of these for the final part of this tutorial.
+
+## Storing user input in variables
+
+Now we are going to look at capturing user input using the python input
+command. Let's create a variable in which to store the user input. 
+
+Now type this into your REPL: 
+
+	>>> lucky_number = input("What is your lucky number? ")
+
+Type back your answer after it asks you.
+
+Now in the REPL type:
+
+	>>> food = input("What is your favourite food? ")
+
+When you give the REPL your response make sure you wrap it in quotes as this is
+storing your response as a string.
+
+Now we are going to put your response into another variable.
+
+Now try:
+
+	>>> my_name = input("What is your name? ")
+	>>> greeting = "Hello " + my_name
+
+Then type `greeting` into your REPL to receive your message. 
+
+## Decision making using variables
+
+Now that we know how to use variables and know how to store data, let's play
+around with decision making and changing prints based on your answer. In Python
+(and many other languages), one of the most common ways in which this is done
+is using an `if` statement. For example:
+
+    if number > 3:
+        print("Bigger than three")
+	elif number < 3:
+        print("Smaller than three")
+
+Here we can see that if a number we have passed into this decision making code
+is bigger than three, we will receive a message telling us so. There is a
+different message if the number is smaller than three.
+
+Also, now that we are getting more in depth with Python, we should say that
+Python is very particular about indentation. With Python, if any lines are not
+indented correctly the code will not run. If you are running into bugs, this
+is a good place to start.
+
+In this final exercise we are going to ask you the number of coffees you have
+drunk today and then change the statement returned to you, depending on your
+answer.
+
+Let's create a variable called `coffee` and put your coffee cup total into it:
+
+    >>> coffee = input("How many cups of coffee have you consumed today? ")
+
+Now we'll use some simple if/else logic to decide what to say about your
+drinking habits: 
+
+    >>> if int(coffee) > 4:
+    ...     print("You have a coffee problem")
+    ... else:
+    ...     print("You do not have a coffee problem")
+
+Note the use of `int()` here to cast `coffee` as an integer.  Without it,
+Python wouldn't know how to properly compare `coffee` to `4`.  Try setting
+`coffee` to different numbers and then re-typing the if/else logic to see what
+comes out.  Next you'll learn about *functions*, so you'll be able to do this
+without all the re-typing.
