@@ -1,184 +1,309 @@
 ---
 layout: page
-title: Playing with variables
+title: Lists, Tuples & Dictionaries
 ---
 
-In this tutorial we are going to look at variables, user input and decision
-making.
+There's two more basic types in Python that you should know before going
+forward.  Lists and dictionaries are very common in Python and are structures
+you can use to organise your data.
 
-## Creating a variable
+## Lists
 
-Python allows us to store data in something called variables so that we are
-able to use this data at a later point. To place an item in a variable we give
-it a name then set its value. 
+Lists are just what they sound like: they're an ordered collection of *things*.
+Like a shopping list, or a top ten list, it's a convenient way for you to write
+code that processes things in a deliberate order.
 
-Now in the REPL type:
+For our example, we're going to make a simple travel diary.  Here's a list of
+countries Alice wants to visit one day, sorted in order of preference:
 
-	>>> year = 2016
+* Mexico
+* Portugal
+* Kenya
+* Nepal
+* New Zealand
 
-In this example you have now stored the value `2016` into the variable `year`.
-See what happens next when you type `year' into the REPL. Does it show it back
-to you?
+If we were to represent this as a Python list, we'd use the `[` and `]`
+characters:
 
-How about saving your age into a variable or your lucky number? Have a play
-around with storing numbers into variables.
+    places_to_visit = ["Mexico", "Portugal", "Kenya", "Nepal", "New Zealand"]
 
-## Storing numbers in variables
+### Indexes
 
-Now that you are familiar with the use of variables, we are able to combine
-variables with the maths operations we learnt in the previous tutorial.
+The primary trait of lists is that they're sorted.  This means that if you ask
+a list for its first element, it will always be the same value unless you
+modify that list.  In other words, given the above, you should always be able
+to say "what is the 3rd value in my list" and always get `Kenya`.
 
-Now in the REPL type the following:
+The tricky/annoying part of indexing however is that **it starts at 0**, not 1,
+which is where most people would expect things to start.  This means that the
+*first* element of a list is referred to with a `0`, the second element is
+referred to with a `1`, and so on.  Perhaps an example would be helpful:
 
-	>>> revenue = 1000
-	>>> costs = 200
-	>>> profit = revenue - costs
+    >>> places_to_visit[0]
+    'Mexico'
+    >>> places_to_visit[2]
+    'Kenya'
 
-Now type `profit` to see the results of this calculation. 
+Positive numbers aren't the only thing you can use for indexes though. Negative
+numbers invert the index, so you can get the *last* element of a list by using
+`-1`, or the third-to-last by using `-3`:
 
-Now work out the cost of running a codebar workshop if 60 people turned up and
-pizza cost £8 per 2 people?
+    >>> places_to_visit[-1]
+    'New Zealand'
+    >>> places_to_visit[-3]
+    'Kenya'
 
-Along with pizza, students and cost, what other variables can you think of that
-could go into this calculation?
+Try it yourself now: Try to get `Nepal` out of `places_to_visit` using both a
+positive and negative number for the index.
 
-## Storing text in variables
+### Modifying
 
-As well as numbers variables are able to store text, known in Python as
-strings. 
+Lists are *mutable*.  This means that once created, you can change their
+contents and Python will just work with the updated list.  You can add to a
+list a number of ways:
 
-Now in the REPL type:
+* Setting a value in the list explicitly with `[n]` where `n` is the index you
+  want to change.
+* Using a [method](https://docs.python.org/3.5/tutorial/datastructures.html#more-on-lists "Methods of lists")
+  of the `list` object like `.append()` or `.pop()`
 
-	>>> name = 'codebar'
-	>>> url = "codebar.io"
+There's a lot that you can do with lists, so much that we simply can't cover it
+all here, so instead here are some examples, and a [link to the documentation](https://docs.python.org/3.5/tutorial/datastructures.html#more-on-lists "Methods of lists")
+for a more complete reference:
 
-Now type `name` and `url` to see these strings shown back to you. As you can
-see Python allows both single and double quotes to denote a string variable.
-Double quotes are required if there is going to be an apostrophe in the string.
+    >>> places_to_visit
+    ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
 
-For example:
+    >>> places_to_visit[5] = "Peru"
+    >>> places_to_visit
+    ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand', 'Peru']
+    
+    >>> places_to_visit.pop()
+    'Peru'
+    >>> places_to_visit
+    ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
+    
+    >>> places_to_visit.append("Columbia")
+    >>> places_to_visit
+    ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand', 'Columbia']
 
-	message = "I'm a string"
+Try some of these out yourself:
 
-Sometimes you will need to use an apostrophe within a single quote, on
-occasions like this it is recommended to use "string escaping". This would look
-like:
+* Try adding a country to a list with either the explicit indexing (`[n]`) or
+  `.append()`.  What happens if you give an index that's larger than the list?
+* Take a look at the documentation and try out some of the other methods.
+  `.count()` is a simple one, and `.reverse()` is handy to know.
 
-	message ='I\'m a string'
+### Subsets
 
-Try storing a string within a variable without quotes, see what happens?
-Numbers do not require quotation marks, whereas they are mandatory for storing
-strings.
+But we're not finished!  You can do even more interesting things with `[` and
+`]` on a list, like getting a subset of your data.  Say for example you wanted
+to get the first four elements of a list *as another list*.  That's easy with
+the subset syntax:
 
-Now store some strings in variables that contain apostrophes and some that do
-not.
+    >>> places_to_visit[0:4]
+    ["Mexico", "Portugal", "Kenya", "Nepal"]
+    >>> places_to_visit[:4]
+    ["Mexico", "Portugal", "Kenya", "Nepal"]
 
-## Types & casting
+You can do some interesting things with negative numbers too:
 
-Python is what's called a "typed language".  This is to say that there are
-multiple *types* of objects that you work with in Python, and they don't all
-act the same way.  The three types you've learnt so far are *integers* (`int`),
-*floats* (`float`), and *strings* (`str`).  This is important to know because
-every Python programmer has tried to do this at least once in their career:
+    >>> places_to_visit[-3:4]
+    ['Kenya', 'Nepal']
+    >>> places_to_visit[-3:]
+    ['Kenya', 'Nepal', 'New Zealand']
 
-    "7" + 8
+...and as getting a subset returns a list itself, you can get a subset of a
+subset:
 
-Go ahead and try this in your REPL, it explodes with a `TypeError`.  You just
-tried to add a number to something that isn't a number and Python doesn't know
-how to do that.  Additionally, the output of this may surprise you:
+    >>> places_to_visit[0:4][-1]
+    'Nepal'
 
-    "7" * 8
+### Nesting
 
-This tells Python to multiply a string by 8 so you get eight sevens rather than
-what you might expect.  This is actually a very powerful feature of Python, but
-when you're just starting out, it can be pretty confusing.
+The last list-related thing we'll cover here is that there's nothing stopping
+you from putting a list inside a list.  In fact, you can put a list inside a
+list, inside a list, inside a... you get the idea.  You're only limited by how
+many levels deep you can go before your code is too confusing:
 
-For now, all you really need to know is that if you have a string that you mean
-to treat like a number, you have to *cast* it that way.  This is a string:
+    cake_flavours = ["chocolate", ["chocolate", "vanilla"], "red velvet"]
 
-    "7"
+    cake_flavours[0]
+    'chocolate'
 
-While this is a number:
+    cake_flavours[1]
+    ['chocolate cake', 'vanilla icing']
 
-    int("7")
+    cake_flavours[1][1]
+    'vanilla icing'
 
-This is an integer:
+There's a lot more things you can do with lists including concatenating,
+diffing, sorting, and (scary, but fun) subclassing.  This is enough to get you
+started though.
 
-    7
+## Tuples
 
-While this is a string:
+Tuples are a lot like lists with one key exception: they're *immutable*.  This
+means that you can create them, reference them with all of the indexing tricks
+mentioned above, *but you can't modify them*.  Any attempts to modify a tuple
+will result in a `TypeError`.
 
-    str(7)
+Tuples are represented using `(` and `)`:
 
-Go ahead an experiment with `int()`, `float()`, and `str()`.  You'll need one
-of these for the final part of this tutorial.
+    places_to_visit = ("Mexico", "Portugal", "Kenya", "Nepal", "New Zealand")
 
-## Storing user input in variables
+    places_to_visit[1]
+    'Portugal'
 
-Now we are going to look at capturing user input using the python input
-command. Let's create a variable in which to store the user input. 
+    places_to_visit[0:3]
+    ('Mexico', 'Portugal', 'Kenya')
 
-Now type this into your REPL: 
+This however will fail with a `TypeError`:
 
-	>>> lucky_number = input("What is your lucky number? ")
+    places_to_visit[1] = "Canada"
 
-Type back your answer after it asks you.
+Tuples are commonly used in cases where you're defining something that
+shouldn't ever change, but should you ever need to modify something that's in a
+tuple, you can always *cast* it as a list:
 
-Now in the REPL type:
+    my_tuple = (1, 2, 3)
 
-	>>> food = input("What is your favourite food? ")
+    my_list = list(my_tuple)
+    my_list[3] = 99
 
-When you give the REPL your response make sure you wrap it in quotes as this is
-storing your response as a string.
+    my_list
+    [1, 2, 3, 99]
 
-Now we are going to put your response into another variable.
+    my_tuple
+    (1, 2, 3)
 
-Now try:
+This will make a **copy** of the tuple that's a list, so you can edit it, but
+the tuple itself will remain unchanged.
 
-	>>> my_name = input("What is your name? ")
-	>>> greeting = "Hello " + my_name
+Take some time to experiment with tuples and get comfortable with the
+limitations.  Try to create one, and watch how Python will explode when you try
+to modify it.  Then try casting a tuple as a list and a list as a tuple.
 
-Then type `greeting` into your REPL to receive your message. 
+## Dictionaries
 
-## Decision making using variables
+Sometimes called "associative arrays" or "hashmaps" by people coming from other
+languages, Python's dictionaries are a simple way to store *keys* and their
+corresponding *values*.  You'll often seen them as a simple way to have a
+lookup table or crude database in an application.  For this tutorial we'll use
+a dictionary for a phone book:
 
-Now that we know how to use variables and know how to store data, let's play
-around with decision making and changing prints based on your answer. In Python
-(and many other languages), one of the most common ways in which this is done
-is using an `if` statement. For example:
+    my_phone_book = {
+        "Arya": "+4407485376242",
+        "Breanne": "+3206785246863",
+        "Cersei": "+14357535455",
+        "Davos": "+244562726258"
+    }
 
-    if number > 3:
-        print("Bigger than three")
-	elif number < 3:
-        print("Smaller than three")
+As you can see, where lists use `[` and `]`, dictionaries use `{` and `}` and
+then separate the keys & values with a `:`.  The addressing style is similar
+though.  This will give you Cersei's phone number:
 
-Here we can see that if a number we have passed into this decision making code
-is bigger than three, we will receive a message telling us so. There is a
-different message if the number is smaller than three.
+    my_phone_book["Cersei"]
 
-Also, now that we are getting more in depth with Python, we should say that
-Python is very particular about indentation. With Python, if any lines are not
-indented correctly the code will not run. If you are running into bugs, this
-is a good place to start.
+There's nothing restricting you to strings as values in your dictionary though.
+You can have *anything* in there:
 
-In this final exercise we are going to ask you the number of coffees you have
-drunk today and then change the statement returned to you, depending on your
-answer.
+    my_crazy_dictionary = {
+        "a number": 7,
+        "a float": 1.23456789,
+        "a string": "hello, world!",
+        "a list": ["This", "is my", "list"],
+        "another dictionary!": {
+            {
+                "Arya": "+4407485376242",
+                "Breanne": "+3206785246863",
+                "Cersei": "+14357535455",
+                "Davos": "+244562726258"
+            }
+        }
 
-Let's create a variable called `coffee` and put your coffee cup total into it:
+Actually, you can have any type you like as a *key* as well, though this can
+sometimes lead to reduced readability, so use this with caution.  For example,
+while this is valid Python, it's not exactly easy to understand:
 
-    >>> coffee = input("How many cups of coffee have you consumed today? ")
+    my_unreadable_dictionary = {
+        {"a number": 8}: {"a string": "hello, world!"}
+    }
 
-Now we'll use some simple if/else logic to decide what to say about your
-drinking habits: 
+Your turn: try creating a dictionary or two of your own.  Try using different
+types as keys and values, and then try to access them using the standard
+`my_dictionary["my key"]` syntax.
 
-    >>> if int(coffee) > 4:
-    ...     print("You have a coffee problem")
-    ... else:
-    ...     print("You do not have a coffee problem")
+### Modifying
 
-Note the use of `int()` here to cast `coffee` as an integer.  Without it,
-Python wouldn't know how to properly compare `coffee` to `4`.  Try setting
-`coffee` to different numbers and then re-typing the if/else logic to see what
-comes out.  Next you'll learn about *functions*, so you'll be able to do this
-without all the re-typing.
+Like lists, dictionaries are *mutable*, so you can change the values associated
+with keys, add a key/value pair, or remove a pair altogether.  The means of
+doing this should hopefully feel intuitive by now:
+
+Change a value for a key:
+
+    my_phone_book["Breanne"] = "+830685432195"
+
+Add a new key/value pair:
+
+    my_phone_book["Ellaria"] = "+560538942621"
+
+This one is new: delete a key/value pair:
+
+    del(my_phone_book["Ellaria"])
+
+Now that you've got the tools to change your dictionaries, give a shot
+yourself.  Try changing Cersei's phone number.  In fact, change it to a list of
+phone numbers, and then add a character you love... and then delete them :-(
+
+### .keys(), .values() and .items()
+
+Dictionaries are useful structures for your data, but after using them for a
+while, you'll soon find that you'll want to break them up into specific
+manageable parts.  Thankfully, Python has you covered with `.keys()`,
+`.values()`, and `.items()`.  Let's work with some examples:
+
+    >>> my_phone_book = {
+        "Arya": "+4407485376242",
+        "Breanne": "+3206785246863",
+        "Cersei": "+14357535455",
+        "Davos": "+244562726258"
+    }
+    >>> my_phone_book.keys()
+    dict_keys(['Davos', 'Cersei', 'Breanne', 'Arya'])
+
+    >>> my_phone_book.values()
+    dict_values(['+3206785246863', '+14357535455', '+244562726258', '+4407485376242'])
+    
+    >>> my_phone_book.items()
+    dict_items([('Breanne', '+3206785246863'), ('Cersei', '+14357535455'), ('Davos', '+244562726258'), ('Arya', '+4407485376242')])
+
+As you can see, `.keys()` and `.values()` do what you'd expect: they return the
+keys and values respectively.  You may have noticed however that rather than a
+`list` or a `tuple`, these methods return `dict_keys` and `dict_values` types.
+These are sort of like tuples: you can't edit them, and if you want to do
+anything with them other than read them as a complete entity, you'll have to
+cast them as a list:
+
+    >>> list(my_phone_book.keys())
+    ['+3206785246863', '+14357535455', '+244562726258', '+4407485376242']
+
+    >>> list(my_phone_book.keys())[2]
+    '+244562726258'
+
+The last one there, `.items()` is interesting.  It returns all of the data in
+your dictionary, but dumps it out as `dict_items` which is a sort of *tuple of
+tuples*.  This allows you to reference your dictionary with list syntax:
+
+    >>> tuple(my_phone_book.items())[0]
+    ('Breanne', '+3206785246863')
+    
+    >>> tuple(my_phone_book.items())[0][1]
+    '+3206785246863'
+
+Truth be told though, you probably won't be accessing these values directly
+like this.  These methods come in handy inside *flow control statements* like
+`for` and `while`, where you can do things like loop over all of the items in
+`my_phone_book.items()` and do different things to the keys vs. the values.
+
+That's for another lesson though.

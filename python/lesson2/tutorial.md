@@ -1,134 +1,184 @@
 ---
 layout: page
-title: Strings, Integers and Floats
+title: Playing with variables
 ---
 
-In this tutorial, we're going to start to work with the basic types of Python:
-strings (for text) and integers & floats (for numeric values).
+In this tutorial we are going to look at variables, user input and decision
+making.
 
-## Hello, World!
+## Creating a variable
 
-In keeping with tradition, we're going to start by printing "Hello, World!" to
-the console. In Python, the function to achieve this is aptly named `print()`.
-Type the following next to the `>>>`:
+Python allows us to store data in something called variables so that we are
+able to use this data at a later point. To place an item in a variable we give
+it a name then set its value. 
 
-    print("Hello, World!")
+Now in the REPL type:
 
-The REPL will simply print the text right back at you.
+	>>> year = 2016
 
-Now, print your name, and experiment a little!
+In this example you have now stored the value `2016` into the variable `year`.
+See what happens next when you type `year' into the REPL. Does it show it back
+to you?
 
-### Multiple Arguments
+How about saving your age into a variable or your lucky number? Have a play
+around with storing numbers into variables.
 
-Something else interesting about the `print()` function is that you can pass it
-multiple arguments to print:
+## Storing numbers in variables
 
-    >>> print("Hello", "Goodbye")
+Now that you are familiar with the use of variables, we are able to combine
+variables with the maths operations we learnt in the previous tutorial.
 
-In fact, you can pass as many things into print as you like:
+Now in the REPL type the following:
 
-    >>> print("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+	>>> revenue = 1000
+	>>> costs = 200
+	>>> profit = revenue - costs
 
-Of course, you could also get the same output with this:
+Now type `profit` to see the results of this calculation. 
 
-    >>> print("one two three four five six seven eight nine")
+Now work out the cost of running a codebar workshop if 60 people turned up and
+pizza cost £8 per 2 people?
 
-It's up to you to decide what's appropriate and when.
+Along with pizza, students and cost, what other variables can you think of that
+could go into this calculation?
 
-## Maths
+## Storing text in variables
 
-Everybody's favourite pastime.
+As well as numbers variables are able to store text, known in Python as
+strings. 
 
-### Simple Arithmetic
+Now in the REPL type:
 
-Python can do simple arithmetic. To start, let's try addition:
+	>>> name = 'codebar'
+	>>> url = "codebar.io"
 
-    >>> 5 + 7
+Now type `name` and `url` to see these strings shown back to you. As you can
+see Python allows both single and double quotes to denote a string variable.
+Double quotes are required if there is going to be an apostrophe in the string.
 
-You should now see the result of that calculation in your REPL.
+For example:
 
-Subtraction, multiplication and division work the same way.
+	message = "I'm a string"
 
-    >>> 6 - 2
-    >>> 8 * 4
-    >>> 9 / 3
+Sometimes you will need to use an apostrophe within a single quote, on
+occasions like this it is recommended to use "string escaping". This would look
+like:
 
-Now try a few more to see what results you get.  Try your hand at all of the
-basic mathematical operators: `+`, `-`, `*` (multiplication), `/` (division),
-`**` (exponents) and `%` (modulus).
+	message ='I\'m a string'
 
-### Combining Operations
+Try storing a string within a variable without quotes, see what happens?
+Numbers do not require quotation marks, whereas they are mandatory for storing
+strings.
 
-Being able to only perform one operation at a time is pretty limiting, so
-Python allows us to combine mathematical operations. Try this one:
+Now store some strings in variables that contain apostrophes and some that do
+not.
 
-    >>> 9 * 4 - 6
+## Types & casting
 
-Now try a few more. You can combine as many operations as you like.
+Python is what's called a "typed language".  This is to say that there are
+multiple *types* of objects that you work with in Python, and they don't all
+act the same way.  The three types you've learnt so far are *integers* (`int`),
+*floats* (`float`), and *strings* (`str`).  This is important to know because
+every Python programmer has tried to do this at least once in their career:
 
-### Operator Precedence
+    "7" + 8
 
-Did you notice any unexpected results when you started combining operations? If
-you didn't, try this:
+Go ahead and try this in your REPL, it explodes with a `TypeError`.  You just
+tried to add a number to something that isn't a number and Python doesn't know
+how to do that.  Additionally, the output of this may surprise you:
 
-    >>> 10 - 2 * 4
+    "7" * 8
 
-Python follows the traditional mathematical rules of precedence, which state
-that multiplication and division are done before addition and subtraction. (You
-may remember *[BODMAS](https://en.wikipedia.org/wiki/BODMAS)*.) This means in
-our example above, 2 and 4 are multiplied first, and then the result is
-subtracted from 10.
+This tells Python to multiply a string by 8 so you get eight sevens rather than
+what you might expect.  This is actually a very powerful feature of Python, but
+when you're just starting out, it can be pretty confusing.
 
-We can change the order of operations by using parentheses. Anything inside
-parentheses is executed first.
+For now, all you really need to know is that if you have a string that you mean
+to treat like a number, you have to *cast* it that way.  This is a string:
 
-Now try it like this:
+    "7"
 
-    >>> (10 - 2) * 4
+While this is a number:
 
-You should have a different answer.
+    int("7")
 
-Because of precedence rules, complex operations such as our first example can
-be quite confusing to read. If you find yourself writing more complex
-expressions, there is no harm in adding parentheses for clarity.
+This is an integer:
 
-### Decimal Points
+    7
 
-One of the things that tends to confuse newcomers to programming in general is
-the concept of *floating point numbers*.  Basically, numbers with decimal
-points tend to behave a little strangely when you're performing mathematical
-operations on them.  The reasons for this are complex and rooted in the nature
-of computing itself, so for now, let's just go with the understanding that
-weird things happen with decimal numbers.
+While this is a string:
 
-To see an example of this, try dividing `10` by `3`:
+    str(7)
 
-    >>> 10 / 3
+Go ahead an experiment with `int()`, `float()`, and `str()`.  You'll need one
+of these for the final part of this tutorial.
 
-The answer should go on forever, but it doesn't.  Now try something a little
-more precision-sensitive:
+## Storing user input in variables
 
-    >>> 1.000000000000001 * 8
+Now we are going to look at capturing user input using the python input
+command. Let's create a variable in which to store the user input. 
 
-Probably not what you'd expect right?  For now, you'll just have to accept this
-as a limitation, and later on you'll learn how other programmers work around
-it.
+Now type this into your REPL: 
 
-### Concluding
+	>>> lucky_number = input("What is your lucky number? ")
 
-Now let's combine what we have learnt today. We can tell `print()` to print
-multiple things at once, separated by a comma:
+Type back your answer after it asks you.
 
-    >>> print('The result of 2 + 2 is', 2 + 2)
+Now in the REPL type:
 
-This concludes today's tutorial. In the next tutorial, we'll find out how to
-combine the results of multiple separate expressions using variables, get input
-from the user, and make decisions based on that information.
+	>>> food = input("What is your favourite food? ")
 
-### Further Reading
+When you give the REPL your response make sure you wrap it in quotes as this is
+storing your response as a string.
 
-There is a very good introductory article in [Google Developers Guide](https://developers.google.com/edu/python/introduction).
+Now we are going to put your response into another variable.
 
-You can also find resources for beginners on [the Python website](https://www.python.org/about/gettingstarted/)
-and refer to [the Python documentation](https://docs.python.org/2/tutorial/introduction.html),
-where the language basics are explained.
+Now try:
+
+	>>> my_name = input("What is your name? ")
+	>>> greeting = "Hello " + my_name
+
+Then type `greeting` into your REPL to receive your message. 
+
+## Decision making using variables
+
+Now that we know how to use variables and know how to store data, let's play
+around with decision making and changing prints based on your answer. In Python
+(and many other languages), one of the most common ways in which this is done
+is using an `if` statement. For example:
+
+    if number > 3:
+        print("Bigger than three")
+	elif number < 3:
+        print("Smaller than three")
+
+Here we can see that if a number we have passed into this decision making code
+is bigger than three, we will receive a message telling us so. There is a
+different message if the number is smaller than three.
+
+Also, now that we are getting more in depth with Python, we should say that
+Python is very particular about indentation. With Python, if any lines are not
+indented correctly the code will not run. If you are running into bugs, this
+is a good place to start.
+
+In this final exercise we are going to ask you the number of coffees you have
+drunk today and then change the statement returned to you, depending on your
+answer.
+
+Let's create a variable called `coffee` and put your coffee cup total into it:
+
+    >>> coffee = input("How many cups of coffee have you consumed today? ")
+
+Now we'll use some simple if/else logic to decide what to say about your
+drinking habits: 
+
+    >>> if int(coffee) > 4:
+    ...     print("You have a coffee problem")
+    ... else:
+    ...     print("You do not have a coffee problem")
+
+Note the use of `int()` here to cast `coffee` as an integer.  Without it,
+Python wouldn't know how to properly compare `coffee` to `4`.  Try setting
+`coffee` to different numbers and then re-typing the if/else logic to see what
+comes out.  Next you'll learn about *functions*, so you'll be able to do this
+without all the re-typing.

@@ -1,114 +1,134 @@
 ---
 layout: page
-title: Installation Guide
+title: Strings, Integers and Floats
 ---
 
-Welcome to the first Python tutorial. We're going to look at getting Python up
-and running on your computer, then look at a few simple operations to get to
-grips with the development environment and syntax.
+In this tutorial, we're going to start to work with the basic types of Python:
+strings (for text) and integers & floats (for numeric values).
 
-## Installation
+## Hello, World!
 
-### Mac
+In keeping with tradition, we're going to start by printing "Hello, World!" to
+the console. In Python, the function to achieve this is aptly named `print()`.
+Type the following next to the `>>>`:
 
-Mac OSX ships with Python 2.7 which, while still a great language, is very
-outdated these days, so we need to upgrade:
+    print("Hello, World!")
 
-1. Make sure you're running an updated version of OSX.  You should at least
-   have OS 10.3, and most modern Macs are running much later than that anyway,
-   but it's worth noting this requirement here.
-2. Head to [the Python website](https://www.python.org/).
-3. Click "Downloads".
-4. There will be two options; one for Python 3 and one for Python 2. 
-   **Download Python 3**. At the time of writing, the version available is
-   3.5.2.
-5. When the download's complete, your browser should automatically mount the
-   disk image and open a Finder window of what's inside, but if that doesn't
-   happen, you'll have to find the file `Python.mpkg` in your downloads folder
-   and double-click it to get started.
-6. Once the installer is running hit `Continue` a number of times and agree to
-   the Free software license as well as enter your administrator password. Just
-   follow the prompts and you'll be fine.
+The REPL will simply print the text right back at you.
 
-If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3](http://www.diveintopython3.net/installing-python.html#macosx).
+Now, print your name, and experiment a little!
 
-### Windows:
+### Multiple Arguments
 
-1. Head to [the Python website](https://www.python.org/).
-2. Click "Downloads".
-3. There will be two options; one for Python 3 and one for Python 2. 
-   **Download Python 3**. At the time of writing, the version available is
-   3.5.2.
-4. Run the downloaded installer and click *Next* until you reach the
-   *Customization* page.
-5. Scroll down to the bottom and choose to *Add python.exe to PATH*.
-6. Continue clicking *Next* until it's installed.
+Something else interesting about the `print()` function is that you can pass it
+multiple arguments to print:
 
-If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3](http://www.diveintopython3.net/installing-python.html#windows).
+    >>> print("Hello", "Goodbye")
 
-### Linux
+In fact, you can pass as many things into print as you like:
 
-All modern Linux distributions should support installing Python 3 via the
-package manager.  However, each distribution likes to do things slightly
-differently, so these instructions may need to be modified for your situation.
+    >>> print("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 
-#### Debian/Ubuntu
+Of course, you could also get the same output with this:
 
-Python 3 is available via apt, so you can install it with `apt install 
-python3`.
+    >>> print("one two three four five six seven eight nine")
 
-#### Redhat/CentOS
+It's up to you to decide what's appropriate and when.
 
-Python 3 isn't yet available in default Redhat/Centos installations, so you
-have to use the `scl` workaround:
+## Maths
 
-1. Install scl-utils: `yum install scl-utils`
-2. Install the extra repo needed for Pytyhon 3:
-        `rpm -Uvh https://www.softwarecollections.org/en/scls/rhscl/python33/epel-7-x86_64/download/rhscl-python33-epel-7-x86_64.noarch.rpm`
-3. Install Python 3 with this new repo: `yum install Python33` (no the second
-   `3` is not a typo)
-4. Run `scn enable python3 /bin/bash`.  This will put you into a shell that
-   supports Python 3.
+Everybody's favourite pastime.
 
-For more information on this process, take a look at [this tutorial](https://devops.profitbricks.com/tutorials/install-python-3-in-centos-7/).
+### Simple Arithmetic
 
-#### Arch
+Python can do simple arithmetic. To start, let's try addition:
 
-Python 3 is available via Pacman, so all you need to do is `pacman -S python`.
+    >>> 5 + 7
 
-#### Gentoo
+You should now see the result of that calculation in your REPL.
 
-You've already got it :-)
+Subtraction, multiplication and division work the same way.
 
+    >>> 6 - 2
+    >>> 8 * 4
+    >>> 9 / 3
 
-## Opening the REPL
+Now try a few more to see what results you get.  Try your hand at all of the
+basic mathematical operators: `+`, `-`, `*` (multiplication), `/` (division),
+`**` (exponents) and `%` (modulus).
 
-Python is often developed with the aid of a *REPL*, or *Read-Eval-Print-Loop*.
-The REPL is a way of getting immediate feedback as you work. Python's REPL is
-called **IDLE**.
+### Combining Operations
 
-It's very important to find what Python version you are working with.
+Being able to only perform one operation at a time is pretty limiting, so
+Python allows us to combine mathematical operations. Try this one:
 
-On Windows, open `cmd` or on Mac OS / GNU/Linux open `terminal` and type
-(without the `$` sign):
+    >>> 9 * 4 - 6
 
-    $ python --version
+Now try a few more. You can combine as many operations as you like.
 
-What you should see is:
+### Operator Precedence
 
-    $ python 3.5.2
+Did you notice any unexpected results when you started combining operations? If
+you didn't, try this:
 
-Any 3.* version should do for this tutorial to work.
+    >>> 10 - 2 * 4
 
-Now, open the *REPL* by typing:
+Python follows the traditional mathematical rules of precedence, which state
+that multiplication and division are done before addition and subtraction. (You
+may remember *[BODMAS](https://en.wikipedia.org/wiki/BODMAS)*.) This means in
+our example above, 2 and 4 are multiplied first, and then the result is
+subtracted from 10.
 
-    $ python
+We can change the order of operations by using parentheses. Anything inside
+parentheses is executed first.
 
-And you should see something like this:
+Now try it like this:
 
-    Python 3.5.2 (default, Aug  6 2016, 15:44:26) 
-    [GCC 5.4.0] on linux
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>> 
+    >>> (10 - 2) * 4
 
-Now you're all set!
+You should have a different answer.
+
+Because of precedence rules, complex operations such as our first example can
+be quite confusing to read. If you find yourself writing more complex
+expressions, there is no harm in adding parentheses for clarity.
+
+### Decimal Points
+
+One of the things that tends to confuse newcomers to programming in general is
+the concept of *floating point numbers*.  Basically, numbers with decimal
+points tend to behave a little strangely when you're performing mathematical
+operations on them.  The reasons for this are complex and rooted in the nature
+of computing itself, so for now, let's just go with the understanding that
+weird things happen with decimal numbers.
+
+To see an example of this, try dividing `10` by `3`:
+
+    >>> 10 / 3
+
+The answer should go on forever, but it doesn't.  Now try something a little
+more precision-sensitive:
+
+    >>> 1.000000000000001 * 8
+
+Probably not what you'd expect right?  For now, you'll just have to accept this
+as a limitation, and later on you'll learn how other programmers work around
+it.
+
+### Concluding
+
+Now let's combine what we have learnt today. We can tell `print()` to print
+multiple things at once, separated by a comma:
+
+    >>> print('The result of 2 + 2 is', 2 + 2)
+
+This concludes today's tutorial. In the next tutorial, we'll find out how to
+combine the results of multiple separate expressions using variables, get input
+from the user, and make decisions based on that information.
+
+### Further Reading
+
+There is a very good introductory article in [Google Developers Guide](https://developers.google.com/edu/python/introduction).
+
+You can also find resources for beginners on [the Python website](https://www.python.org/about/gettingstarted/)
+and refer to [the Python documentation](https://docs.python.org/2/tutorial/introduction.html),
+where the language basics are explained.
