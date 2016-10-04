@@ -1,108 +1,134 @@
 ---
 layout: page
-title: Playing with variables
+title: Strings, Integers and Floats
 ---
 
-In this tutorial we are going to look at variables, user input and decision making.
+In this tutorial, we're going to start to work with the basic types of Python:
+strings (for text) and integers & floats (for numeric values).
 
-## Creating a variable
+## Hello, World!
 
-Python allows us to store data in something called variables so that we are able to use this data at a later point. To place an item in a variable we give it a name then set its value. 
+In keeping with tradition, we're going to start by printing "Hello, World!" to
+the console. In Python, the function to achieve this is aptly named `print()`.
+Type the following next to the `>>>`:
 
-Now in the REPL type:
+    print("Hello, World!")
 
-	year = 2015
+The REPL will simply print the text right back at you.
 
-In this example you have now stored the value `2015` into the variable `year`. See what happens next when you type `year' into the REPL. Does it show it back to you?
+Now, print your name, and experiment a little!
 
-How about saving your age into a variable or your lucky number? Have a play around with storing numbers into variables.
+### Multiple Arguments
 
-## Storing numbers in variables
+Something else interesting about the `print()` function is that you can pass it
+multiple arguments to print:
 
-Now that you are familiar with the use of variables, we are able to combine variables with the maths operations we learnt in the previous tutorial.
+    >>> print("Hello", "Goodbye")
 
-Now in the REPL type the following:
+In fact, you can pass as many things into print as you like:
 
-	revenue = 1000
-	costs = 200
-	profit = revenue - costs
+    >>> print("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 
-Now type `profit` to see the results of this calculation. 
+Of course, you could also get the same output with this:
 
-Now work out the cost of running a codebar workshop if 60 people turned up and pizza cost £8 per 2 people? 
+    >>> print("one two three four five six seven eight nine")
 
-Along with pizza, students and cost, what other variables can you think of that could go into this calculation?
+It's up to you to decide what's appropriate and when.
 
-## Storing text in variables
+## Maths
 
-As well as numbers variables are able to store text, known in Python as strings. 
+Everybody's favourite pastime.
 
-Now in the REPL type:
+### Simple Arithmetic
 
-	name = 'codebar'
-	url = "codebar.io"
+Python can do simple arithmetic. To start, let's try addition:
 
-Now type `name` and `url` to see these strings shown back to you. As you can see Python allows both single and double quotes to denote a string variable. Double quotes are required if there is going to be an apostrophe in the string.
+    >>> 5 + 7
 
-For example:
+You should now see the result of that calculation in your REPL.
 
-	message = "I'm a string"
+Subtraction, multiplication and division work the same way.
 
-Sometimes you will need to use an apostrophe within a single quote, on occasions like this it is recommended to use string escaping. This would look like:
+    >>> 6 - 2
+    >>> 8 * 4
+    >>> 9 / 3
 
-	message ='I\'m a string'
+Now try a few more to see what results you get.  Try your hand at all of the
+basic mathematical operators: `+`, `-`, `*` (multiplication), `/` (division),
+`**` (exponents) and `%` (modulus).
 
-Try storing a string within a variable without quotes, see what happens? Numbers do not require quotation marks, whereas they are mandatory for storing strings.
+### Combining Operations
 
-Now store some strings in variables that contain apostrophes and some that do not.
+Being able to only perform one operation at a time is pretty limiting, so
+Python allows us to combine mathematical operations. Try this one:
 
-What happens when you store a number in a variable wrapped in quotes? 
+    >>> 9 * 4 - 6
 
-## Storing user input in variables
+Now try a few more. You can combine as many operations as you like.
 
-Now we are going to look at capturing user input using the python input command. Let's create a variable in which to store the user input. 
+### Operator Precedence
 
-Now type this into your REPL: 
+Did you notice any unexpected results when you started combining operations? If
+you didn't, try this:
 
-	lucky_number = input("What is your lucky number?")
+    >>> 10 - 2 * 4
 
-Type back your answer after it asks you.
+Python follows the traditional mathematical rules of precedence, which state
+that multiplication and division are done before addition and subtraction. (You
+may remember *[BODMAS](https://en.wikipedia.org/wiki/BODMAS)*.) This means in
+our example above, 2 and 4 are multiplied first, and then the result is
+subtracted from 10.
 
-Now in the REPL type:
+We can change the order of operations by using parentheses. Anything inside
+parentheses is executed first.
 
-	food = input("What is your favourite food?")
+Now try it like this:
 
-When you give the REPL your response make sure you wrap it in quotes as this is storing your response as a string.
+    >>> (10 - 2) * 4
 
-Now we are going to put your response into another variable.
+You should have a different answer.
 
-Now try:
+Because of precedence rules, complex operations such as our first example can
+be quite confusing to read. If you find yourself writing more complex
+expressions, there is no harm in adding parentheses for clarity.
 
-	my_name = input("What is your name?")
-	greeting = "Hello " + my_name
+### Decimal Points
 
-Then type `greeting` into your REPL to receive your message. 
+One of the things that tends to confuse newcomers to programming in general is
+the concept of *floating point numbers*.  Basically, numbers with decimal
+points tend to behave a little strangely when you're performing mathematical
+operations on them.  The reasons for this are complex and rooted in the nature
+of computing itself, so for now, let's just go with the understanding that
+weird things happen with decimal numbers.
 
-## Decision making using variables
+To see an example of this, try dividing `10` by `3`:
 
-Now that we know how to use variables and know how to store data, let's play around with decision making and changing prints based on your answer. In Python (and many other languages), one of the most common ways in which this is done is using an `if` statement. For example:
+    >>> 10 / 3
 
-	if number > 3:
-		print "Bigger than three"
-	elif number < 3:
-		print "Smaller than three"
+The answer should go on forever, but it doesn't.  Now try something a little
+more precision-sensitive:
 
-Here we can see that if a number we have passed into this decision making code is bigger than three, we will receive a message telling us so. There is a different message if the number is smaller than three.
+    >>> 1.000000000000001 * 8
 
-Also, now that we are getting more in depth with Python, we should say that Python is very particular about tabbing. Tabbing is the indents created when writing code. With Python, if any lines are not indented correctly the code will not run. If you are running into bugs, this is a good place to start.
+Probably not what you'd expect right?  For now, you'll just have to accept this
+as a limitation, and later on you'll learn how other programmers work around
+it.
 
-In this final exercise we are going to ask you the number of coffees you have drunk today and then change the statement returned to you, depending on your answer.
+### Concluding
 
-Let's create a variable called:
+Now let's combine what we have learnt today. We can tell `print()` to print
+multiple things at once, separated by a comma:
 
-	coffee = input("How many cups of coffee have you consumed today?")
+    >>> print('The result of 2 + 2 is', 2 + 2)
 
-	if coffee >= 4: 
-		print "You have a coffee problem"
-	else:
-		print "You do not have a coffee problem"
+This concludes today's tutorial. In the next tutorial, we'll find out how to
+combine the results of multiple separate expressions using variables, get input
+from the user, and make decisions based on that information.
+
+### Further Reading
+
+There is a very good introductory article in [Google Developers Guide](https://developers.google.com/edu/python/introduction).
+
+You can also find resources for beginners on [the Python website](https://www.python.org/about/gettingstarted/)
+and refer to [the Python documentation](https://docs.python.org/2/tutorial/introduction.html),
+where the language basics are explained.
