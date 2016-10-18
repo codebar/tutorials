@@ -140,7 +140,7 @@ Next up is our list of resources and its title, this is going to be inside the s
     <h2 class="resourcelist_title">Resources</h2>
     <ul class="resourcelist">
         <li class="resourcelist_item">
-            <a class="resourcelist_link" href="#">Computer Scientist</a>
+            <a href="#" class="resourcelist_link">Computer Scientist</a>
         </li>
         ...
     </ul>
