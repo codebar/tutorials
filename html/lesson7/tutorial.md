@@ -4,7 +4,7 @@ title: HTML & CSS Lesson 7
 footer: true
 ---
 
-##Responsive layouts and Media Queries
+## Responsive layouts and Media Queries
 
 ### Objective
 
@@ -73,7 +73,7 @@ initial-scale=1.0 sets the initial zoom level when the page is first loaded by t
 Add the meta viewport tag to your html, under your css links.
 
 
-##Mobile First Design
+## Mobile First Design
 
 Historically, web designers have tended to design from the biggest screen down to the smallest. The “main” design, with the most functionality, would be for the full desktop view.
 
@@ -81,18 +81,18 @@ The way we consume content on the web has changed a lot and more and more intern
 
 Mobile first design takes the opposite approach. The design process is started with consideration for mobile constraints and then you work your way up from there.
 
-<img src="assets/images/respond.png" style="max-width:500px">
+<img src="images/respond.png" style="max-width:500px">
 
 The mobile first approach aims to provide the best possible experience for mobile users by focussing on core content and functionality and by giving consideration to user's available bandwidth and likely needs.
 
 
-###Structure your content first
+### Structure your content first
 
 The content of your site is the important stuff! Think about what you want your users to see and do when they get to your site. Create a hierachy of content that will get your information across to your users in a way that is meaningful and cohesive.
 
 In the case of our example, in order of importance, we've got the site name, the text, a list of useful offsite resources and info about the author. If we were to show these things on a mobile they'd appear in this order eg.
 
-![](assets/images/mobilelayout.png)
+![](images/mobilelayout.png)
 
 So, lets get some markup written!  We're going to use our html5 elements to lay out the site so, put in a header, a section, a sidebar div and a footer with relevant class names
 
@@ -110,11 +110,11 @@ So, lets get some markup written!  We're going to use our html5 elements to lay 
 
 This is the structure of our page.
 
-###Add in the content
+### Add in the content
 
 Now we're ready to flesh out our structure with content.  Looking at the example page, starting from the top we can see that the header contains an image and a heading, so lets put them into our HTML, with class names
 
-    <img src="assets/images/gracehopper_portrait.jpg" class="header_img">
+    <img src="images/gracehopper_portrait.jpg" class="header_img">
     <h1 class="header_title"> Grace Hopper</h1>
 
 Next we have the copy in paragraphs interspersed with figures and a blockquote. Add this to your about section using
@@ -124,7 +124,7 @@ Next we have the copy in paragraphs interspersed with figures and a blockquote. 
     </p>
 
     <figure class="figure">
-        <img src="assets/images/grace.jpg" class="figure_img">
+        <img src="images/grace.jpg" class="figure_img">
         <figcaption class="figure_caption">
             ...
         </figcaption>
@@ -152,13 +152,13 @@ And finally we have the footer which will contain the author information. This w
 
 That's our page all marked up! Woop! Take a look at it in a browser. Because of the reset css it should look pretty boring. So, let's add some styles!
 
-###Mobile first styles
+### Mobile first styles
 
 As the name suggests, we're going to style up the mobile design first. Later on we'll add styles for wider screens, but what we want to achieve first is a design that works great on small screen devices.
 
 For this page we're going to stack the different sections of the site into one column, this is often the choice for mobile designs, users are used to scrolling lots on their phones.
 
-![](assets/images/mobilelayout.png)
+![](images/mobilelayout.png)
 
 Open up your style.css file in your text editor.
 
@@ -199,7 +199,7 @@ Have a go at styling these up, you can double check yours below.
 
 Look at your changes in Chrome (Chrome has some great developer tools which are going to help your responsive design).  Open up the chrome inspect tool by right clicking and choosing 'inspect'. In the top left hand corner of the inspect tool you should see an icon that looks like a mobile in front of a monitor
 
-<img src="assets/images/inspect.png" alt="inspect tool">
+<img src="images/inspect.png" alt="inspect tool">
 
 Click on the icon in your inspect tool to open up the <a href="https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports?hl=en" target="_blank">device toolbar</a>. This view will show you what your site will look like on a mobile device, it has a few different options for default device widths, or you can set it to responsive and drag the width and height about yourself. For now we'll set it to responsive and drop the width down to about 320, this is a very narrow screen.
 
@@ -325,16 +325,16 @@ And finally we have the footer. This isn't going to change much between mobile a
         color: #c0392b;
     }
 
-##Styling for Desktop
+## Styling for Desktop
 By now you should have a site that looks good on a mobile. You will notice however, if you turn off the device toolbar and drag the browser width back out or close your inspect tool, that the site looks a little boring in a desktop. This isn't the optimal design for desktop, the text becomes too wide to read comfortably and the images break up the page flow. By letting blocks of content sit next to each other when there is space for them we can create a better experience for wider screens. For example -
 
-![](assets/images/desktoplayout.png)
+![](images/desktoplayout.png)
 
 What we need is a way to add styles that will only be applied if the browser is above a certain width.
 
 The way we do this is with css <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">media queries</a>.
 
-###Media Queries
+### Media Queries
 A media query lets you restrict your css to only be applied when the condition of the query is true, for example when the media type specified in the media query matches the device that the user is viewing your site on.
 You may have seen them used to swap styles on a page for screen and for print eg
 
@@ -353,7 +353,7 @@ We want our desktop styles to only be applied when the browser is above a certai
 
 All of the style rules that we want to apply to widths above 500px we will write inside the curly braces of the media query. When the browser width is 499px and below it will ignore these rules, when above it will apply them.
 
-###Using Media Queries
+### Using Media Queries
 Media queries sit in the css cascade like normal rules, rules lower down the page will overwrite rules higher up, for this reason we put media queries with our desktop styles underneath the mobile styles, because we want the desktop styles to overwrite them. This means that your media queries will come at the bottom of your stylesheet.
 
 The first thing that we want to be able to change is to make the images sit inline with the text when there is space form them.  We can do this by applying a `float` to the `<figure>`. Since we gave the images a maximum width of 300px earlier, we want the text to start wrapping some time after this, so allowing for some margin to the right of the image and the fact that we ideally want the wrapping to be at least two words width, lets tell our new styles to apply at 500px or greater.
@@ -408,10 +408,10 @@ And finally we can apply a different layout for the text on a desktop. In this c
 
 Now your site should be starting to look responsive. Try adding in your own styles to make the sidebar look a little better at tablet widths.
 
-##A Deeper Look at Media Queries
+## A Deeper Look at Media Queries
 Media queries can take more than one expression, for example `@media screen and (min-width: 300px)` Would apply to screen devices above 300px and `@media (min-width: 300px) and (max-width: 900px)` would apply to any device with a width between 300px and 900px. There is a <a href="http://cssmediaqueries.com/overview.html">long list of available media queries</a> that will target different devices, browsers, widths, heights and resolutions so you can really customise your user's viewing experience. We've only used `min-width` because that works well with mobile first design, but it is by no means your only option.
 
-##Further work
+## Further work
 Why not try adding a navigation menu to your page? It could have a list of links that are vertical on mobile and horizontal on desktop. You could even try making them collapse on mobile.
 (eg http://codepen.io/thisisjofrank/pen/vXVmXP)
 
