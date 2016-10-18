@@ -338,8 +338,8 @@ The way we do this is with css <a href="https://developer.mozilla.org/en-US/docs
 A media query lets you restrict your css to only be applied when the condition of the query is true, for example when the media type specified in the media query matches the device that the user is viewing your site on.
 You may have seen them used to swap styles on a page for screen and for print eg
 
-    <link rel="stylesheet" media="screen" href="style.css" />
-    <link rel="stylesheet" media="print" href="print.css" />
+    <link rel="stylesheet" media="screen" href="style.css">
+    <link rel="stylesheet" media="print" href="print.css">
 
 Here the browser will load a different stylesheet for those wanting to print the page, usually saving ink and paper!
 
