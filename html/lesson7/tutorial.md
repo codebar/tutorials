@@ -114,7 +114,7 @@ This is the structure of our page.
 
 Now we're ready to flesh out our structure with content.  Looking at the example page, starting from the top we can see that the header contains an image and a heading, so lets put them into our HTML, with class names
 
-    <img class="header_img" src="assets/images/gracehopper_portrait.jpg" />
+    <img src="assets/images/gracehopper_portrait.jpg" class="header_img">
     <h1 class="header_title"> Grace Hopper</h1>
 
 Next we have the copy in paragraphs interspersed with figures and a blockquote. Add this to your about section using
@@ -124,7 +124,7 @@ Next we have the copy in paragraphs interspersed with figures and a blockquote. 
     </p>
 
     <figure class="figure">
-        <img class="figure_img" src="assets/images/grace.jpg">
+        <img src="assets/images/grace.jpg" class="figure_img">
         <figcaption class="figure_caption">
             ...
         </figcaption>
