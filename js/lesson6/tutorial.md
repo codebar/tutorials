@@ -29,7 +29,7 @@ To render to the canvas, we must use the canvas drawing context, which handles a
 
 ```js
 var canvas = document.getElementById('canvas-id');
-var context = canvas.getContext("2d");
+var context = canvas.getContext('2d');
 ```
 
 ### Controls
@@ -37,14 +37,14 @@ var context = canvas.getContext("2d");
 Depending on if we are filling up a shape, or just drawing the outline, we can use `fillStyle` or `strokeStyle`to set the color of the element.
 
 ```js
-  context.fillStyle = "yellow";
-  context.strokeStyle = "purple";
+  context.fillStyle = 'yellow';
+  context.strokeStyle = 'purple';
 ```
 
 To set the line width:
 
 ```js
-  context.lineWidth = "3";
+  context.lineWidth = '3';
 ```
 
 #### Drawing
@@ -99,7 +99,7 @@ You can also draw an join multiple paths together. Try this out by creating a re
 context.beginPath();
 
 context.lineWidth = 1;
-context.strokeStyle = "purple";
+context.strokeStyle = 'purple';
 
 context.moveTo(0,0);
 context.lineTo(0,200);
@@ -193,4 +193,3 @@ Plug hangman in the game you created in the last session. You can use conditiona
 
 ---
 This ends our **Drawing in Canvas** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
-

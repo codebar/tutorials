@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Lists, Tuples & Dictionaries
+title: Lists, Tuples and Dictionaries
 ---
 
 There's two more basic types in Python that you should know before going
@@ -77,12 +77,12 @@ for a more complete reference:
     >>> places_to_visit[5] = "Peru"
     >>> places_to_visit
     ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand', 'Peru']
-    
+
     >>> places_to_visit.pop()
     'Peru'
     >>> places_to_visit
     ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
-    
+
     >>> places_to_visit.append("Columbia")
     >>> places_to_visit
     ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand', 'Columbia']
@@ -274,7 +274,7 @@ manageable parts.  Thankfully, Python has you covered with `.keys()`,
 
     >>> my_phone_book.values()
     dict_values(['+3206785246863', '+14357535455', '+244562726258', '+4407485376242'])
-    
+
     >>> my_phone_book.items()
     dict_items([('Breanne', '+3206785246863'), ('Cersei', '+14357535455'), ('Davos', '+244562726258'), ('Arya', '+4407485376242')])
 
@@ -297,7 +297,7 @@ tuples*.  This allows you to reference your dictionary with list syntax:
 
     >>> tuple(my_phone_book.items())[0]
     ('Breanne', '+3206785246863')
-    
+
     >>> tuple(my_phone_book.items())[0][1]
     '+3206785246863'
 
