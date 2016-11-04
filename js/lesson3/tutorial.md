@@ -426,7 +426,7 @@ method to add something to the start of an element, and something like
 this to make the new box:
 
 ```js
-"<div class="item" style="background-color: " + color + ";"></div>"
+'<div class="item" style="background-color: ' + color + ';"></div>'
 ```
 
 > Run `addBox('FF0033')` from the console to make sure your code works.

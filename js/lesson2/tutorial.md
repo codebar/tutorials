@@ -105,8 +105,7 @@ var notEqual = apples !== oranges;
 console.log('Apples and oranges are different: ' + notEqual);
 ```
 
-> You may also see `==` and `!=`, these are similar but have some quirks so are
-> often not recommended.
+> You may also see `==` and `!=`, these are similar but have some quirks so it's generally recommended to avoid them.
 > You can just use `===` and `!==` and they will
 > always do what you expect.
 
@@ -119,10 +118,10 @@ var students = 24;
 var pizzas = 25;
 
 var moreStudents = students > coaches;
-console.log("Are there more students than coaches?" + moreStudents);
+console.log('Are there more students than coaches?' + moreStudents);
 
 var lessStudents = students < pizzas;
-console.log("Are there fewer students than pizzas?" + lessStudents);
+console.log('Are there fewer students than pizzas?' + lessStudents);
 
 ```
 
