@@ -11,7 +11,7 @@ Today's session is not aimed to teach you anything new programming-wise but to e
 
 To get help outside of our sessions go to [the Slack channel here](https://codebar.slack.com/messages/general/details/). If you are not on Slack, use [this link](https://codebar-slack.herokuapp.com/) to get an invite.
 
-You can also send an email to [hello at codebar.io](mailto://hello@codebar.io).
+You can also send an email to [hello@codebar.io](mailto:hello@codebar.io).
 
 # Things to help you get started
 
@@ -52,9 +52,9 @@ function supports_html5_storage() {
 Storing and retrieving data is quite simple as localStorage stores key/value pairs.
 
 ```javascript
-localStorage.setItem("name", "Johannah");
+localStorage.setItem('name', 'Johannah');
 
-localStorage.getItem("name");
+localStorage.getItem('name');
 ```
 
 ## Effects
@@ -95,4 +95,3 @@ Some popular API's that you may find useful
 
 ---
 This ends our **Building your own app** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
-

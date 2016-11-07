@@ -121,7 +121,7 @@ $(document).ready(function() {
       var input = $(this);
       var username = input.val();
 
-      console.log("username was: " + username);
+      console.log('username was: ' + username);
     }
   });
 });
@@ -131,10 +131,10 @@ Now we're ready to pass this through to GitHub. Let's make another function, som
 
 ```js
 function getGithubInfo(username) {
-  var url = "https://api.github.com/users/" + username;
+  var url = 'https://api.github.com/users/' + username;
 
   var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", url, false);
+  xmlhttp.open('GET', url, false);
   xmlhttp.send();
 
   var data = xmlhttp.responseText;
@@ -147,7 +147,7 @@ function getGithubInfo(username) {
 
 We create an `XMLHttpRequest` object and then call the `open` method, passing three arguments to the GitHub API.
 
-1. the `verb` - in this case, `"GET"`
+1. the `verb` - in this case, `'GET'`
 2. the `url` - in this case the url eg https://api.github.com/users/codebar
 3. whether or not to run this request synchronously or asynchronously.
 
@@ -164,10 +164,10 @@ Our `getGithubInfo` method will return the response from the server, including t
 
 ```js
 function getGithubInfo(username) {
-  var url = "https://api.github.com/users/" + username;
+  var url = 'https://api.github.com/users/' + username;
 
   var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", url, false);
+  xmlhttp.open('GET', url, false);
   xmlhttp.send();
 
   return xmlhttp;
@@ -204,7 +204,7 @@ function showUser(xmlhttp) {
 
 Now the `user` variable will contain all the information we need to update the page. Finish the function to:
 
-1. Display the user's Github id in `#profile h2` - `<user login> + " is GitHub user #" + <user id>`
+1. Display the user's Github id in `#profile h2` - `<user login> + ' is GitHub user #' + <user id>`
 2. Add a link to the user's Github profile in `#profile .information`. The link should have a class `profile`
 3. Add an image in `#profile .avatar`. To do that, you can use the `avatar_url`
    from the response.
@@ -216,7 +216,7 @@ First, let's make sure we handle any requests that have failed.
 
 > Have a look in the status codes. There is only one response code for a successfully request, anything else should be classed as a failure.
 
-When we have a failing request, we want to change the `html` of `$("#profile h2")` to `No such user!`
+When we have a failing request, we want to change the `html` of `$('#profile h2')` to `No such user!`
 
 Try this out using username: `iamcodebar` (or if someone registered this, make up a random string)
 
@@ -380,8 +380,8 @@ Also, to make your code easier to read, try constructing the html in a method th
 
 ```javascript
 function processEpisode(episode) {
-  var item_html = "<li>";
-  item_html += "<h2>" + episode.programme.display_titles.title + "</h2>";
+  var item_html = '<li>';
+  item_html += '<h2>' + episode.programme.display_titles.title + '</h2>';
   // display short short synopsis
   // display image
   // display date and time
