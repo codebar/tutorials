@@ -438,7 +438,7 @@ is like this:
 ```js
 var person = {
     first_name: "Archibald",
-    likes: "owls",
+    likes: "owls"
 };
 ```
 
@@ -467,7 +467,7 @@ several variables that refer to the same object. Try this:
 ```js
 var person_a = {
     first_name: "Archibald",
-    likes: "owls",
+    likes: "owls"
 };
 var person_b = person_a;
 
