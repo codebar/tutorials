@@ -416,7 +416,7 @@ When the HTML is loaded on our page, the browser generates its DOM. This enables
    <p>
      London <strong> is awesome</strong>
    </p>
-  <body>
+  </body>
 </html>
 ```
 
