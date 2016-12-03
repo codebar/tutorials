@@ -450,7 +450,7 @@ Now create a **Transition** affect:
 
 ```css
 a.btn:hover {
-    background: black;
+    background: black; 
     transition-duration: 4s;
 }```
 
