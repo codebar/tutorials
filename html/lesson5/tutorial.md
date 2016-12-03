@@ -425,6 +425,61 @@ In our case, we only want to change the style of every odd row. Achieving that i
 
 > Try changing odd to even
 
+
+### Transitions
+
+Let's take some **property** in our code and change it, making it somehow different.  E.g. The `background` of the two links named **btn**, and  let's change it on hover.  This is a 'change'.  Now we can have this affect take place during a number of seconds, this is a **Transition**.  
+Go ahead and add the selector to the stylesheet.  
+
+```css
+a.btn:hover {
+
+        [your property: your value;]
+  
+}
+```
+
+Add the **property** which we are chaning and its new value:
+
+```css
+a.btn:hover {
+    background: black;
+}```
+
+Now create a **Transition** affect:
+
+```css
+a.btn:hover {
+    background: black;
+    transition-duration: 4s;
+}```
+
+Create another one:
+
+```css
+a.btn:hover {
+    background: black;
+    transition-duration: 4s;
+    transition-delay: 1s;
+}```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## But before we end our lesson
 
 ### RGB colors and opacity
