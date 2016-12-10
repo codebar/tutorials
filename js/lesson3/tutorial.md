@@ -53,7 +53,7 @@ Alternatively, if you've already learned how to use git and would like
 to use it here, you can clone this repo:
 
 ```bash
-git clone https://gist.github.com/309f684b7a6e002aaf1f.git wishlist
+git clone https://gist.github.com/borellvi/f6ea22aa8549a04c7409193f9d2bfd2d wishlist
 ```
 
 The files that you start with don't really do anything, so let's
