@@ -8,14 +8,14 @@ Functional programming has many characteristics but for these tutorials you
 only need to keep two things in mind: _functions_ and _data_. By _data_ we
 mean _information_ and you can think of _functions_ as _actions_ that can
 be performed on specific pieces of information. Seeing the world through
-these two ideas will help you see problems in a different light and often
+these two concepts will help you see problems in a different light and often
 come up with simple solutions to them.
 
 For example if you wanted to make sushi you would need two things: fish
 (_data_) and the action (_function_) that contains all the necessary steps
 that will transform that piece of fish into sushi:
 
-```erlang
+```elixir
 make_sushi(🐟) -> 🍣
 ```
 
@@ -37,7 +37,7 @@ This is a fancy way of saying it uses the Erlang programming language
 underneath.
 [Erlang](https://en.wikipedia.org/wiki/Erlang_(programming_language)) was
 created to solve a very difficult problem-that of telecommunications. As
-such it has some characteristics that make it a very good language for
+such it has some characteristics that makes it a very good language for
 building reliable and robust systems. Elixir builds upon this solid
 foundation whilst adding its own characteristics alongside a Ruby-like
 syntax with which many people are familiar with.
