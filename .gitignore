@@ -18,3 +18,9 @@ TAGS
 *~
 \#*\#
 .\#*
+
+# node
+node_modules
+
+# sourcemaps
+*.map

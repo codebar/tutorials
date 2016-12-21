@@ -1,60 +1,62 @@
 ---
 layout: page
-title: Beginning JavaScript
+title: Expressions, Loops and Arrays
 ---
 
-In our previous lesson we briefly introduced JavaScript - variables, expressions, conditions, etc.  This time we will be explaining loops, arrays, objects and the DOM.
+In our previous lesson we learnt all about JavaScript variables, functions and objects. In this tutorial we will be diving a little deeper, exploring expressions, loops, arrays and the DOM.
 
 ## Before we start...
 
-### Required files
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/d46495ce986d1624af45/download).
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/d46495ce986d1624af45/download)
-
-You should use **lesson2.html** and **script.js** to write the exercises in for the first part of the tutorial, and **london.html** and **london-script.js** for doing the DOM exercises.
+In the first half of this tutorial we will be using the files **lesson2.html** and **script.js**, then files **london.html** and **london-script.js** for the second part.
 
 ## Values
 
-In the first tutorial, we talked about **values**. The types of values
-that we met before were **strings**:
+In the first tutorial, we learnt all about **values**.
+
+**Strings**:
 
 ```js
-var name = "codebar";
+var name = 'codebar';
 
-console.log(name + " is amazing!"); // this is an expression
+console.log(name + ' is amazing!'); // this is an expression
 ```
 
-**numbers**:
+**Numbers**:
 
 ```js
 var pi = 3.14;
 
-console.log("The value of pi: " + pi);
+console.log('The value of pi: ' + pi);
 ```
 
-and **objects**:
+and **Objects**:
 
 ```js
-var person = {first_name: "Archibald"};
+var person = {
+  first_name: 'Archibald'
+};
 
-console.log("Hello " + person.first_name + "!");
+console.log('Hello ' + person.first_name + '!');
 ```
 
 We're going to introduce one more important type: **booleans**. A
-boolean is either `true` or `false`: it has to be one of those two
-values.
+boolean can only be `true` or `false`, for example:
 
 ```js
 var codebarIsAwesome = true;
 var weatherIsAmazing = false;
 
-console.log("Is codebar AWESOME? " + codebarIsAwesome);
-console.log("Is the weather in London amazing? " + weatherIsAmazing);
+console.log('Is codebar AWESOME? ' + codebarIsAwesome);
+console.log('Is the weather in London amazing? ' + weatherIsAmazing);
 ```
 
 ## Expressions
 
-In the first tutorial, we saw expressions using the `+` operator. The
+#### Maths
+
+In the first tutorial, we learnt about expressions using the `+` operator. The
 other basic math operators are `-`, `*`, and `/`:
 
 ```js
@@ -62,112 +64,113 @@ var x = 6;
 var y = 3;
 var addition = x + y;
 
-console.log("Addition: x + y = " + addition);
+console.log('Addition: x + y = ' + addition);
 
 var subtraction = x - y;
 
-console.log("Subtraction: x - y = " + subtraction);
+console.log('Subtraction: x - y = ' + subtraction);
 
 var multiplication = x * y;
 
-console.log("Multiplication: x * y = " + multiplication);
+console.log('Multiplication: x * y = ' + multiplication);
 
 var division = x / y;
 
-console.log("Division: x / y = " + division);
+console.log('Division: x / y = ' + division);
 ```
 
-Another really important kind of operator are the comparisons. The
-`===` operator has a **boolean** value: it is `true` if the two things
-are exactly the same, and `false` if they are not.
+> Why not try some other maths problem using the `x` and `y` variables?
+
+#### Comparisons
+
+The `===` operator compares two values, it returns the boolean `true` if they are equal and `false` if they are not.
 
 ```js
-var apples = "apples";
-var oranges = "oranges";
+var apples = 'apples';
+var oranges = 'oranges';
 
 var equal = apples === oranges;
-console.log("Apples and oranges are the exactly same: " + equal);
+
+console.log('Apples and oranges are the exactly same: ' + equal);
 ```
 
-The opposite of `===` is `!==`: it is `false` if the two things are
-exactly the same, and `true` if they are different.
+The opposite of `===` is `!==`. It returns `true` if they are not equal, and `false` if they are.
 
 ```js
-var apples = "apples";
-var oranges = "oranges";
+var apples = 'apples';
+var oranges = 'oranges';
 
 var notEqual = apples !== oranges;
-console.log("Apples and oranges are different: " + notEqual);
+
+console.log('Apples and oranges are different: ' + notEqual);
 ```
 
-> There is another pair of operators called `==` and `!=` which we
-> aren't going to look at in this tutorial. These do something
-> similar, but are a bit more complicated and tend to be surprising
-> instead of useful. You can just use `===` and `!==` and they will
+> You may also see `==` and `!=`, these are similar but have some quirks so it's generally recommended to avoid them.
+> You can just use `===` and `!==` and they will
 > always do what you expect.
 
 The `>` and `<` operators are "greater than" and "less than". You can
-use them to tell which of two numbers is bigger. Similarly, `>=` and
-`<=` are "greater than or equal" and "less than or equal".
+use them to tell which of two numbers is bigger.
 
 ```js
 var coaches = 20;
 var students = 24;
 var pizzas = 25;
 
-var greater = students > coaches;
-console.log("More students than coaches: " + greater);
+var moreStudents = students > coaches;
+console.log('Are there more students than coaches?' + moreStudents);
 
-var less = students < pizzas;
-console.log("Fewer students than pizzas:" + less);
+var lessStudents = students < pizzas;
+console.log('Are there fewer students than pizzas?' + lessStudents);
+
 ```
 
-You can also use several operators together:
+You can also combine operators.
 
 ```js
-var enoughPizzas = coaches + students < pizzas;
-console.log("We have enough pizzas for everybody: " + enoughPizzas);
+var enoughPizzas = (coaches + students) < pizzas;
+console.log('Do we have enough pizzas for everybody? ' + enoughPizzas);
 ```
+> Now sit with your coach and create 2 variables, one is your age and one is the
+> minimum driving age. Then console log whether you are older enough to drive.
 
-## if statements
+## If statements
 
-When you have a boolean, you can use it to decide whether a block of
-statements should be executed.
+An if statement lets you run a piece of code if an expression is `true`.
 
 ```js
 var codebarIsAwesome = true;
 
 if (codebarIsAwesome) {
-  console.log("codebar is AWESOME!");
+  console.log('codebar is AWESOME!');
 }
 ```
 
-This is more interesting when you use the comparison operators:
+You can use an expression inside an if statement.
 
 ```js
 var coaches = 20;
 var students = 24;
 var pizzas = 25;
 
-var people = coaches + students;
+var totalPeople = coaches + students;
 
-if (people > pizzas) {
-  console.log("We have more people than pizzas!");
+if (totalPeople > pizzas) {
+  console.log('We have more people than pizzas!');
 }
 
 if (students > pizzas) {
-  console.log("But we have more students than pizzas! Let's not give the coaches any food.");
+  console.log('We have more students than pizzas!');
 }
 ```
 
-You can also have a block of statements that happen when the condition
-is false, using an `else`:
+You can add an `else` block to run some code if the expression is `false`.
 
 ```js
-if (people > pizzas) {
-  console.log("We have more people than pizzas. That's not very good :/");
+if (totalPeople > pizzas) {
+  console.log('We have more people than pizzas.');
 } else {
-  console.log("We have waaay too much pizza. That can never be bad! :)");
+  console.log('We have waaay too much pizza. That can never be bad! :)');
 }
 ```
 
@@ -202,7 +205,7 @@ while (i <= 10) {
   i = i + 1;
 }
 
-console.log("Total: " + total);
+console.log('Total: ' + total);
 ```
 
 > We can also express `<= 10` using `< 11`
@@ -245,7 +248,7 @@ for (i = 1; i <= 10; i = i + 1) {
   total = total + i;
 }
 
-console.log("Total: " + total);
+console.log('Total: ' + total);
 ```
 > Another way to write the for loop is `for (var i = 1; i <= 10; i++)`. The `i++` is a short way of writing "increase i by one".
 
@@ -255,12 +258,12 @@ Even though `while` loops are more simple than `for` loops, it is more common to
 
 An array is a simple *data structure*. It can hold a list of elements of the same or different types (e.g. strings, numbers, booleans). In an array each element can be accessed using the **index**.
 
-It may be a bit confusing, but the first index of an array is 0, and not 1.
+It may be a bit confusing, but the first index of an array is 0, not 1.
 
-To understand this better, let's try and represent the array below.
+To understand this better, let's create an array of strings.
 
 ```js
-var animals = [ "dog", "cat", "rabbit", "horse", "elephant", "monkey" ];
+var animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
 ```
 
 ![](assets/images/animals_array.png)
@@ -272,7 +275,7 @@ To get the first item `animals[0]`, the second `animals[1]` etc.
 
 ### Properties -  `length`
 
-The `length` property returns the size of the Array
+The `length` property returns the size of the array
 
 ```js
 animals.length
@@ -280,12 +283,11 @@ animals.length
 
 The length property is extremely useful when you want to do something with every element in an array. For example, to log each entry of the `animals` array, you can use `animals.length` with a `for` loop:
 
-```javascript
+```js
 var i;
 
 for (i = 0; i < animals.length; i = i + 1) {
   var animal = animals[i];
-
   console.log(animal);
 }
 ```
@@ -299,12 +301,16 @@ The word `method` is usually used to mean a function that belongs to an object. 
 #### Adding objects to an array
 
 `array.push(object)` adds an element to the end of the array
+
 `array.unshift(object)` adds an element to the beginning of the array
 
 ```js
-animals.push("zebra")
+var animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
 
-animals.unshift("cow")
+animals.unshift('cow');
+animals.push('zebra');
+
+console.log(animals);
 ```
 
 #### Removing objects
@@ -320,27 +326,29 @@ Analogously, `array.shift()` removes and returns the *first* element of the arra
 To order the elements of an array we can use `sort()`.
 
 ```js
-animals.sort()
+animals.sort();
 ```
 
 Try this out on an array of strings.
 
 ```js
-var names = [ "Jane", "Barry", "Helen", "David", "Sam" ];
+var names = ['Jane', 'Barry', 'Helen', 'David', 'Sam'];
 
 names.sort();
 
 console.log(names);
 ```
 
-`sort` takes an array and sorts items in a kind of alphabetic order (but be careful of capital letters and special characters). `sort` can be (and usually is) customized to sort things in any way you like. It can take a function as an argument to tell it what to do. For example:
+> What happens when you add the operator `reverse()` like so `animals.sort().reverse();`
+
+`sort` takes the array and sorts the items in a kind of alphabetic order (but be careful of capital letters and special characters). `sort` can be (and usually is) customised to sort things in any way you like. It can take a function as an argument to tell it what to do. For example:
 
 ```js
 function sortNumbersAscending(a, b) {
     return a - b;
 }
 
-var nums = [ 1, 5, 3, 19, 2, 10 ];
+var nums = [1, 5, 3, 19, 2, 10];
 
 nums.sort(sortNumbersAscending);
 
@@ -348,12 +356,6 @@ console.log(nums);
 ```
 
 Sort passes pairs of entries from the array to `sortNumbersAscending`. If `sortNumbersAscending` returns a number less than zero, then sort knows that `a` should come before `b`. If the number is greater than zero, then `b` should come before `a`.
-
-Another cool operation you can apply is `reverse()`.
-
-```js
-animals.sort().reverse();
-```
 
 ```js
 // Sort numbers descending.
@@ -367,30 +369,28 @@ nums.sort(sortNumbersAscending).reverse();
 Now that we know what arrays are, we can use that to understand loops better. Let's try out another example:
 
 ```js
-var fruitAndVeg = [ "apple", "orange", "banana", "kiwi", "avocado", "celery", "aubergine" ];
+var fruitAndVeg = ['apple', 'orange', 'banana', 'kiwi', 'avocado', 'celery', 'aubergine'];
 var noAvocados = [];
 var i = 0;
 
 while (i < fruitAndVeg.length) {
-  if (fruitAndVeg[i] !== "avocado") {
+  if (fruitAndVeg[i] !== 'avocado') {
     noAvocados.push(fruitAndVeg[i]);
   }
-
   i = i + 1;
 }
 ```
 
 > Can you understand what this loop is doing? Try to explain it to your coach.
 
-
 There is a counter here though, so a better way to write this would be:
 
 ```js
-var fruitAndVeg = [ "apple", "orange", "banana", "kiwi", "avocado", "celery", "aubergine" ];
+var fruitAndVeg = ['apple', 'orange', 'banana', 'kiwi', 'avocado', 'celery', 'aubergine'];
 var noAvocados = [];
 
 for (var i = 0; i < fruitAndVeg.length; i = i + 1) {
-  if (fruitAndVeg[i] !== "avocado") {
+  if (fruitAndVeg[i] !== 'avocado') {
     noAvocados.push(fruitAndVeg[i]);
   }
 }
@@ -399,6 +399,7 @@ for (var i = 0; i < fruitAndVeg.length; i = i + 1) {
 ## The DOM
 
 ### What is the DOM?
+
 **DOM** stands for **D**ocument **O**bject **M**odel.
 
 When the HTML is loaded on our page, the browser generates its DOM. This enables us to access and interact with HTML elements using JavaScript.
@@ -415,7 +416,7 @@ When the HTML is loaded on our page, the browser generates its DOM. This enables
    <p>
      London <strong> is awesome</strong>
    </p>
-  <body>
+  </body>
 </html>
 ```
 
@@ -460,7 +461,7 @@ and add a link that triggers the function
 An easier way of interacting with the DOM is by retrieving elements using their tag.
 
 ```js
-document.getElementsByTagName("h1");
+document.getElementsByTagName('h1');
 ```
 
 That's not very easy though, as it's likely that you will have multiple paragraphs, divs, links or other elements.
@@ -470,7 +471,7 @@ The most common way, is by retrieving elements by id.
 Add an id `description`to the paragraph element.
 
 ```js
-var description = document.getElementById("description");
+var description = document.getElementById('description');
 console.log(description.innerHTML);
 ```
 
@@ -482,26 +483,26 @@ There are three main steps we need to follow to achieve this.
 
 1. creating an element
 ```js
-document.createElement("<tagName>");
+document.createElement('<tagName>');
 ```
 2. creating text nodes
 ```js
-document.createTextNode("<text>");
+document.createTextNode('<text>');
 ```
 3. adding children to elements
 ```js
-document.appendChild("<node>");
+document.appendChild('<node>');
 ```
 
 Try this out using the london object we declared previously
 
 ```js
 var london = {
-  name: "London",
+  name: 'London',
   population: 8308369,
   tallestBuilding: {
-     name:  "Shard",
-     height: "310m"
+     name:  'Shard',
+     height: '310m'
   },
   numberOfUniversities: 43,
   averageRent: 1106,
@@ -518,10 +519,10 @@ var london = {
 ```js
 function displayPopulation() {
   // Make a new <p></p> for population. This is not attached to the DOM yet.
-  var population = document.createElement("p");
+  var population = document.createElement('p');
 
   // Make some text content to put into your <p></p>
-  var content = document.createTextNode("Population: " + london.population);
+  var content = document.createTextNode('Population: ' + london.population);
 
   // Put the text content into the <p></p>.
   population.appendChild(content);

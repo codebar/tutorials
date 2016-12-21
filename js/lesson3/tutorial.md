@@ -1,6 +1,11 @@
 ---
 layout: page
 title: Introduction to jQuery
+files:
+  - files/index.html
+  - files/jquery.js
+  - files/script.js
+  - files/style.css
 ---
 
 
@@ -41,7 +46,8 @@ Using jQuery and JavaScript functions, we are going to build a small
 todo list.
 
 Download the files that you will need to work through the example
-[here](https://gist.github.com/despo/309f684b7a6e002aaf1f).
+[here](download).
+<!-- https://gist.github.com/despo/309f684b7a6e002aaf1f/download -->
 
 Alternatively, if you've already learned how to use git and would like
 to use it here, you can clone this repo:
@@ -420,7 +426,7 @@ method to add something to the start of an element, and something like
 this to make the new box:
 
 ```js
-"<div class='item' style='background-color: " + color + ";'></div>"
+'<div class="item" style="background-color: ' + color + ';"></div>'
 ```
 
 > Run `addBox('FF0033')` from the console to make sure your code works.
@@ -484,7 +490,7 @@ $(document).ready(function() {
 Pick a few colour codes you like and store them in an array:
 
 ```js
-var colors = [ "22ac5e", "d68236", "770077" ];
+var colors = [ '22ac5e', 'd68236', '770077' ];
 ```
 
 Now you can use a `$.each` inside your `ready` function to call

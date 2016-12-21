@@ -33,6 +33,7 @@ Well what does this mean? It is very easy to build dynamic websites using **PHP*
 A simple Hello World application would look like the following:
 
 *File: index.php*
+
 ```php
 <?php
 echo "Hello World";
@@ -41,13 +42,14 @@ echo "Hello World";
 1. The file must end with the extension `.php`
 2. The file must begin with the opening tag `<?php`
 3. `"` are used to Open/Close a string
-4. 'echo' Outputs the string [echo on php website](http://php.net/manual/en/function.echo.php)
+4. `echo` Outputs the string [echo on php website](http://php.net/manual/en/function.echo.php)
+5. `;` must end every statement
 
 ## How to run the script?
 
 On the Command Line (CLI), type:
 
-```php
+```bash
 php index.php
 ```
 
@@ -66,7 +68,7 @@ Seeing it on the Command Line is great, but what about the browser? We will need
 
 *Note: Built-in PHP WebServer is great for Development, but **NOT** Production.*
 
-Go to the directory where you created the `index.php` file and run the following command:
+Go to the directory where you created the _index.php_ file and run the following command:
 
 ```bash
 $ php -S 0.0.0.0:8080
@@ -77,7 +79,7 @@ $ php -S 0.0.0.0:8080
 3. `0.0.0.0` is the IP that the WebServer should listen on. By using `0` it will listen on everything - fine for development
 4. `8080` is the port to listen on - fine for development but in production the default port is `80` and therefore not required when accessing a URL
 
-Lets see the script output in your web browser! In your web browser navigate to ` http://localhost:8080/` and you should see:
+Lets see the script output in your web browser! In your web browser navigate to [http://localhost:8080/](http://localhost:8080/) and you should see:
 
 ![Hello World](assets/images/helloworld.png)
 

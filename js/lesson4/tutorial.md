@@ -3,7 +3,7 @@ layout: page
 title: HTTP Requests, AJAX and APIs
 ---
 
-### Objectives 
+### Objectives
 
 In this tutorial we are going to look at:
 
@@ -29,7 +29,7 @@ Every time the browser fetches data from a server (which could be a page, an ima
 
 GitHub offers a [simple API](https://status.github.com/api) for viewing its current and historical server availability.
 
-> Availability means whether or not the GitHub website was accessible to users and accepting traffic. If your website is down, it is not available. 
+> Availability means whether or not the GitHub website was accessible to users and accepting traffic. If your website is down, it is not available.
 
 You can access an API in your web browser. Just pop the following into the address bar:
 
@@ -37,7 +37,7 @@ You can access an API in your web browser. Just pop the following into the addre
 
 If you are on a mac or a linux/unix machine, you can access the API using curl:
 
-    $ curl https://status.github.com/api.json
+    curl https://status.github.com/api.json
 
 > Paste the following command into Terminal, which you can find in Finder - first go into the Applications folder, then Utilities.
 
@@ -94,37 +94,36 @@ The response will look something like the JSON data below, which we have shorten
 
 ```
 
-This data is what's called key value pairs, meaning that the name of the field is displayed immediately before the value. As you can see, the URL for the avatar (user's icon) is in the `avatar_field` field, and is `https://avatars.githubusercontent.com/u/9906?v=2`.
+This data is what's called key value pairs, meaning that the name of the field is displayed immediately before the value. As you can see, the URL for the avatar (user's icon) is in the `avatar_url` field, and is `https://avatars.githubusercontent.com/u/9906?v=2`.
 
 ### Getting started
 
-First, open the HTML page supplied in the download. As you can see, there is a box to type in a username. When the user has typed in the username, they should be able to trigger the API call to GitHub by pressing <enter>.
+First, open the HTML page supplied in the download. As you can see, there is a box to type in a username. When the user has typed in the username, they should be able to trigger the API call to GitHub by pressing \<enter\>.
 
-The following code allows you to listen for a keypress on the input field, and to see if it was the <enter> key that was pressed.
+The following code allows you to listen for a keypress on the input field, and to see if it was the \<enter\> key that was pressed.
 
 ```js
-$(document).ready(function(){
-  $(document).on('keypress', '#username', function(e){
+$(document).ready(function() {
+  $(document).on('keypress', '#username', function() {
     if (event.which === 13) { // check the key was <enter>
       // do something
     }
-  })
+  });
 });
 ```
 
 We will need to pass the username to GitHub, so we need to extract it from the input text box. To show that we can do this - let's first extract the data using jQuery's `val()`, and log it to the console. Something like this should work:
 
 ```js
-$(document).ready(function(){
-  $(document).on('keypress', '#username', function(e){
+$(document).ready(function() {
+  $(document).on('keypress', '#username', function(event) {
     if (event.which === 13) { // check the key was <enter>
-      var input = $(this)
-      var username = input.val()
+      var input = $(this);
+      var username = input.val();
 
-      console.log("username was: " + username)
-
+      console.log('username was: ' + username);
     }
-  })
+  });
 });
 ```
 
@@ -132,23 +131,23 @@ Now we're ready to pass this through to GitHub. Let's make another function, som
 
 ```js
 function getGithubInfo(username) {
-  var url = "https://api.github.com/users/" + username
+  var url = 'https://api.github.com/users/' + username;
 
   var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", url, false);
+  xmlhttp.open('GET', url, false);
   xmlhttp.send();
 
   var data = xmlhttp.responseText;
 
-  console.log(data)
+  console.log(data);
 }
 ```
 
 `XMLHttpRequest` is the object we use in JavaScript to perform an HTTP or API request. Although it has `XML` in the name (XML is a data format), it can be used for other formats such as JSON, which is what we're using here.
 
-We create an `XMLHttpRequest` object and then call the `open` method, passing three arguments to the GitHub API. 
+We create an `XMLHttpRequest` object and then call the `open` method, passing three arguments to the GitHub API.
 
-1. the `verb` - in this case, `"GET"`
+1. the `verb` - in this case, `'GET'`
 2. the `url` - in this case the url eg https://api.github.com/users/codebar
 3. whether or not to run this request synchronously or asynchronously.
 
@@ -158,28 +157,30 @@ In this case, we'll specify synchronously by passing `false`. This means the bro
 
 You can now call `getGithubInfo`, passing the username, from the `keypress` block above. That will log the data to the console. Next, we need to pass this back to the web page via the DOM.
 
-```js
-function getGithubInfo(username) {
-  var url = "https://api.github.com/users/" + username
-
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("GET", url, false);
-  xmlhttp.send();
-
-  return xmlhttp;
-
-}
-```
 
 ### Handling a successful request
 
-Our `getGithubInfo` method will return the response from the server, including the HTTP status. If the request was successful, the status code will be 200. If we check that this code is 200, we know we can proceed to reading the data.
+Our `getGithubInfo` method will return the response from the server, including the HTTP status:
 
-Create a new method called `showUser()` that handles the response from the API, and performs this check on the passed `xmlhttp` variable. Once the `keypress` block has called `getGithubInfo`, it should pass the result to `showUser`.
+```js
+function getGithubInfo(username) {
+  var url = 'https://api.github.com/users/' + username;
+
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open('GET', url, false);
+  xmlhttp.send();
+
+  return xmlhttp;
+}
+```
+
+If the request was successful, the status code will be 200. If we check that this code is 200, we know we can proceed to reading the data.
+
+Create a new method called `showUser()` that handles the response from the API, and performs this check on the `xmlhttp` variable we just returned from our `getGithubInfo` method. Once the `keypress` block has called `getGithubInfo`, it should pass the result to `showUser`.
 
 ```js
 function showUser(xmlhttp) {
-  if(xmlhttp.status === 200){
+  if(xmlhttp.status === 200) {
     // show the user details
   } else {
     // show an error
@@ -191,10 +192,10 @@ Once we've checked the status, we need to decode the data which is stored in `xm
 
 ```js
 function showUser(xmlhttp) {
-  if(xmlhttp.status === 200){
+  if(xmlhttp.status === 200) {
     // show the user details
     var json = xmlhttp.responseText;
-    var user = JSON.parse(json)
+    var user = JSON.parse(json);
   } else {
     // show an error
   }
@@ -203,7 +204,7 @@ function showUser(xmlhttp) {
 
 Now the `user` variable will contain all the information we need to update the page. Finish the function to:
 
-1. Display the user's Github id in `#profile h2` - `<user login> + " is GitHub user #" + <user id>`
+1. Display the user's Github id in `#profile h2` - `<user login> + ' is GitHub user #' + <user id>`
 2. Add a link to the user's Github profile in `#profile .information`. The link should have a class `profile`
 3. Add an image in `#profile .avatar`. To do that, you can use the `avatar_url`
    from the response.
@@ -215,7 +216,7 @@ First, let's make sure we handle any requests that have failed.
 
 > Have a look in the status codes. There is only one response code for a successfully request, anything else should be classed as a failure.
 
-When we have a failing request, we want to change the `html` of `$("#profile h2")` to `No such user: <username>`
+When we have a failing request, we want to change the `html` of `$('#profile h2')` to `No such user!`
 
 Try this out using username: `iamcodebar` (or if someone registered this, make up a random string)
 
@@ -224,11 +225,11 @@ Try this out using username: `iamcodebar` (or if someone registered this, make u
 
 Well done, you've finished! For a bonus, switch your `getGithubInfo` method to run asynchronously - your coach can help you.
 
-> Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/onreadystatechange)
+> Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
 ## Exercise 2 - BBC's tomorrow's TV schedule
 
-[Download](https://gist.github.com/despo/05cab2f0b38bc02318e7) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
+[Download](https://gist.github.com/despo/05cab2f0b38bc02318e7/download) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
 
 For the second exercise, we will build an application that retrieves tomorrow's TV schedule for each genre using BBC's API.
 
@@ -245,6 +246,8 @@ For the second exercise, we will build an application that retrieves tomorrow's 
 ### Request using jQuery
 
 This time, let's use jQuery's `ajax()` method. Things are a bit easier when using jQuery as we can create different code blocks that handle successful or failed requests.
+
+Also, jQuery isolates us from the differences between browser implementations of AJAX calls (for example, if we wanted to make the previous AJAX call work in Internet Explorer,  we will have to write [a much longer method](http://www.tutorialspoint.com/ajax/ajax_browser_support.htm)!)
 
 ```js
 $.ajax({
@@ -296,7 +299,7 @@ Now, let's create a function that retrieves films using genre.
 
 ```javascript
 function getTomorrowsSchedule(genre) {
- // call to retrieve TV schedule
+  // call to retrieve TV schedule
 }
 ```
 
@@ -304,61 +307,61 @@ The response you get back should look similar to this, with multiple objects in 
 
 ```json
 {
-   "broadcasts":[
-      {
-         "is_repeat":false,
-         "is_blanked":false,
-         "schedule_date":"2014-01-15",
-         "start":"2014-01-15T00:10:00Z",
-         "end":"2014-01-15T01:50:00Z",
-         "duration":6000,
-         "service":{
-            "type":"tv",
-            "id":"bbc_one",
-            "key":"bbcone",
-            "title":"BBC One",
-            "outlets":[
-               {
-                  "id":"bbc_one_wales",
-                  "key":"wales",
-                  "title":"Wales"
-               },
-               {
-                  "id":"bbc_one_wales_hd",
-                  "key":"wales_hd",
-                  "title":"Wales HD"
-               }
-            ]
-         },
-         "programme":{
-            "type":"episode",
-            "pid":"b00sbk03",
-            "position":null,
-            "title":"Disturbia",
-            "short_synopsis":"Thriller about a high school student convinced that his neighbour is a serial killer.",
-            "media_type":"audio_video",
-            "duration":6000,
-            "image":{
-               "pid":"p01gqbj3"
-            },
-            "display_titles":{
-               "title":"Disturbia",
-               "subtitle":""
-            },
-            "first_broadcast_date":"2010-05-03T22:30:00+01:00",
-            "ownership":{
-               "service":{
-                  "type":"tv",
-                  "id":"bbc_three",
-                  "key":"bbcthree",
-                  "title":"BBC Three"
-               }
-            },
-            "is_available_mediaset_pc_sd":false,
-            "is_legacy_media":false
-         }
+  "broadcasts": [
+    {
+      "is_repeat": false,
+      "is_blanked": false,
+      "schedule_date": "2014-01-15",
+      "start": "2014-01-15T00:10:00Z",
+      "end": "2014-01-15T01:50:00Z",
+      "duration": 6000,
+      "service": {
+        "type": "tv",
+        "id": "bbc_one",
+        "key": "bbcone",
+        "title": "BBC One",
+        "outlets": [
+          {
+            "id": "bbc_one_wales",
+            "key": "wales",
+            "title": "Wales"
+          },
+          {
+            "id": "bbc_one_wales_hd",
+            "key": "wales_hd",
+            "title": "Wales HD"
+          }
+        ]
+      },
+      "programme": {
+        "type": "episode",
+        "pid": "b00sbk03",
+        "position": null,
+        "title": "Disturbia",
+        "short_synopsis": "Thriller about a high school student convinced that his neighbour is a serial killer.",
+        "media_type": "audio_video",
+        "duration": 6000,
+        "image": {
+          "pid": "p01gqbj3"
+        },
+        "display_titles": {
+          "title": "Disturbia",
+          "subtitle": ""
+        },
+        "first_broadcast_date": "2010-05-03T22:30:00+01:00",
+        "ownership": {
+          "service": {
+            "type": "tv",
+            "id": "bbc_three",
+            "key": "bbcthree",
+            "title": "BBC Three"
+          }
+        },
+        "is_available_mediaset_pc_sd": false,
+        "is_legacy_media": false
+      }
       }]
-}
+    }
 ```
 
 To process the response, we want to iterate over the `response.broadcasts` array and add each item, to `#programmes` as a list item.
@@ -377,13 +380,14 @@ Also, to make your code easier to read, try constructing the html in a method th
 
 ```javascript
 function processEpisode(episode) {
- var item_html = "<li>"
- item_html += "<h2>" + episode.programme.display_titles.title + "</h2>";
- // display image
- // display date and time
- // display duration (HINT: the duration is in seconds, convert that to minutes)
- // display the channel (or service, as its called by the API) - add this in a span with the class `service`
- ...
+  var item_html = '<li>';
+  item_html += '<h2>' + episode.programme.display_titles.title + '</h2>';
+  // display short short synopsis
+  // display image
+  // display date and time
+  // display duration (HINT: the duration is in seconds, convert that to minutes)
+  // display the channel (or service, as its called by the API) - add this in a span with the class `service`
+  ...
 }
 ```
 
@@ -417,7 +421,7 @@ To get back all the upcoming shows for an episode, we need to utilise the progra
 
 ```javascript
 function getUpcomingEpisodes(pid) {
- // AJAX call to retrieve upcoming episodes
+  // AJAX call to retrieve upcoming episodes
 }
 ```
 Since the response structure is similar to the one for retrieving tomorrow's schedule, we should be able to re-use the `processEpisode( )` function to display each item from the broadcasts array.

@@ -1,46 +1,39 @@
 ---
 layout: page
-title: Introduction to Python
+title: Strings, Integers and Floats
 ---
 
-Welcome to the first Python tutorial. We're going to look at getting Python up and running on your computer, then look at a few simple operations to get to grips with the development environment, the syntax and basic computation.
-
-## Installation
-
-On Mac, you'll already have Python installed.
-
-On Windows:
-
-1. Head to [the Python website](https://www.python.org/).
-2. Click "Downloads".
-3. There will be two options; one for Python 3 and one for Python 2. **Download Python 2.** At the time of writing, the version available is 2.7.10.
-4. Run the downloaded installer and click *Next* until you reach the *Customization* page.
-5. Scroll down to the bottom and choose to *Add python.exe to PATH*.
-6. Continue clicking *Next* until it's installed.
-
-## Opening the REPL
-
-Python is often developed with the aid of a *REPL*, or *Read-Eval-Print-Loop*. The REPL is a way of getting immediate feedback as you work.
-
-Python's REPL is called **IDLE**.
-
-On Windows, you can run it by clicking on the shortcut in your Start menu or Start screen named "IDLE (Python GUI)".
-
-On Mac OS, open the Terminal and type "python" to start the REPL. At the top, you'll see something similar (but probably not identical) to this:
-
-    Python 2.7.6 (default, Sep  9 2014, 15:04:36)
-
-If you see it, make sure you're running Python 2, not Python 3, otherwise parts of this exercise will not make sense. Once you've checked that, we're ready to move on to writing Python.
+In this tutorial, we're going to start to work with the basic types of Python:
+strings (for text) and integers & floats (for numeric values).
 
 ## Hello, World!
 
-In keeping with tradition, we're going to start by printing "Hello, World!" to the console. In Python, the command to achieve this is aptly named `print`. Type the following:
+In keeping with tradition, we're going to start by printing "Hello, World!" to
+the console. In Python, the function to achieve this is aptly named `print()`.
+Type the following next to the `>>>`:
 
-    print "Hello, World!"
+    print("Hello, World!")
 
 The REPL will simply print the text right back at you.
 
-Now, print your name.
+Now, print your name, and experiment a little!
+
+### Multiple Arguments
+
+Something else interesting about the `print()` function is that you can pass it
+multiple arguments to print:
+
+    >>> print("Hello", "Goodbye")
+
+In fact, you can pass as many things into print as you like:
+
+    >>> print("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+
+Of course, you could also get the same output with this:
+
+    >>> print("one two three four five six seven eight nine")
+
+It's up to you to decide what's appropriate and when.
 
 ## Maths
 
@@ -50,70 +43,92 @@ Everybody's favourite pastime.
 
 Python can do simple arithmetic. To start, let's try addition:
 
-    5 + 7
+    >>> 5 + 7
 
 You should now see the result of that calculation in your REPL.
 
 Subtraction, multiplication and division work the same way.
 
-    6 - 2
-    8 * 4
-    9 / 3
+    >>> 6 - 2
+    >>> 8 * 4
+    >>> 9 / 3
 
-Now try a few more to see what results you get.
-
-Let's see what happens when you divide 14 by 4. Notice the remainder is chopped off. We can use the *modulus* operator, `%`, to get the remainder instead. Try `14 % 4` and see.
+Now try a few more to see what results you get.  Try your hand at all of the
+basic mathematical operators: `+`, `-`, `*` (multiplication), `/` (division),
+`**` (exponents) and `%` (modulus).
 
 ### Combining Operations
 
-Being able to only perform one operation at a time is pretty limiting, so Python allows us to combine mathematical operations. Try this one:
+Being able to only perform one operation at a time is pretty limiting, so
+Python allows us to combine mathematical operations. Try this one:
 
-    9 * 4 - 6
+    >>> 9 * 4 - 6
 
 Now try a few more. You can combine as many operations as you like.
 
 ### Operator Precedence
 
-Did you notice any unexpected results when you started combining operations? If you didn't, try this:
+Did you notice any unexpected results when you started combining operations? If
+you didn't, try this:
 
-    10 - 2 * 4
+    >>> 10 - 2 * 4
 
-Python follows the traditional mathematical rules of precedence, which state that multiplication and division are done before addition and subtraction. (You may remember *BODMAS*.) This means in our example above, 2 and 4 are multiplied first, and then the result is subtracted from 10.
+Python follows the traditional mathematical rules of precedence, which state
+that multiplication and division are done before addition and subtraction. (You
+may remember *[BODMAS](https://en.wikipedia.org/wiki/BODMAS)*.) This means in
+our example above, 2 and 4 are multiplied first, and then the result is
+subtracted from 10.
 
-We can change the order of operations by using parentheses. Anything inside parentheses is executed first.
+We can change the order of operations by using parentheses. Anything inside
+parentheses is executed first.
 
 Now try it like this:
 
-    (10 - 2) * 4
+    >>> (10 - 2) * 4
 
 You should have a different answer.
 
-Because of precedence rules, complex operations such as our first example can be quite confusing to read. If you find yourself writing more complex expressions, there is no harm in adding parentheses for clarity.
+Because of precedence rules, complex operations such as our first example can
+be quite confusing to read. If you find yourself writing more complex
+expressions, there is no harm in adding parentheses for clarity.
 
 ### Decimal Points
 
-Remember dividing 14 by 4? The result probably surprised you. Fortunately, there is a way to convince Python that you really do want the full answer, not just the whole number. We can do this by *starting* with numbers with decimal points:
+One of the things that tends to confuse newcomers to programming in general is
+the concept of *floating point numbers*.  Basically, numbers with decimal
+points tend to behave a little strangely when you're performing mathematical
+operations on them.  The reasons for this are complex and rooted in the nature
+of computing itself, so for now, let's just go with the understanding that
+weird things happen with decimal numbers.
 
-    14.0 / 4.0
+To see an example of this, try dividing `10` by `3`:
 
-Now try a few more and see how it goes. Remember that you can also use non-whole numbers in your calculations.
+    >>> 10 / 3
 
-You may notice that there are still some limitations. For example, try:
+The answer should go on forever, but it doesn't.  Now try something a little
+more precision-sensitive:
 
-    10.0 / 3.0
+    >>> 1.000000000000001 * 8
 
-The answer should go on forever, but it doesn't. This is because there is only a finite amount of space to store the number, and it runs out after approximately 15 significant figures.
+Probably not what you'd expect right?  For now, you'll just have to accept this
+as a limitation, and later on you'll learn how other programmers work around
+it.
 
 ### Concluding
 
-Now let's combine what we have learnt today. We can tell `print` to print multiple things at once, separated by a comma:
+Now let's combine what we have learnt today. We can tell `print()` to print
+multiple things at once, separated by a comma:
 
-    print 'The result of 2 + 2 is', 2 + 2
+    >>> print('The result of 2 + 2 is', 2 + 2)
 
-This concludes today's tutorial. In the next tutorial, we'll find out how to combine the results of multiple separate expressions using variables, get input from the user, and make decisions based on that information.
+This concludes today's tutorial. In the next tutorial, we'll find out how to
+combine the results of multiple separate expressions using variables, get input
+from the user, and make decisions based on that information.
 
 ### Further Reading
 
-There is a very good introductory article in [Google Developers Guide](https://developers.google.com/edu/python/introduction)
+There is a very good introductory article in [Google Developers Guide](https://developers.google.com/edu/python/introduction).
 
-You can also find resources for beginners on [the Python website](https://www.python.org/about/gettingstarted/) and refer to [the Python documentation](https://docs.python.org/2/tutorial/introduction.html), where the language basics are explained.
+You can also find resources for beginners on [the Python website](https://www.python.org/about/gettingstarted/)
+and refer to [the Python documentation](https://docs.python.org/2/tutorial/introduction.html),
+where the language basics are explained.

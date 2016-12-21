@@ -3,7 +3,7 @@ layout: page
 title: Introduction to JavaScript
 ---
 
-<img src="assets/images/js-logo.jpg" alt='js-logo' width='150px'/>
+<img src="assets/images/js-logo.jpg" alt="js-logo" width="150px">
 
 ## What is JavaScript?
 
@@ -39,11 +39,10 @@ browser. This is a very short file that just tells your browser to run
 the code in `script.js`.
 
 For this tutorial, you will also need to open the console. In
-Google Chrome, use <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (on Windows/Linux)
-or <kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>J</kbd> (on Mac) to open the console. 
-The console should look something like this:
+Google Chrome, use `Ctrl + Shift + J` on Windows/Linux
+or `Alt + Cmd + I` on Mac. The console should look something like this:
 
-<img src="assets/images/console.png" />
+<img src="assets/images/console.png" alt="console example">
 
 ## Writing your first line of JavaScript
 
@@ -57,7 +56,7 @@ console.log('Hello!');
 
 You should see something that looks something like this:
 
-<img src="assets/images/console-hello.png">
+<img src="assets/images/console-hello.png" alt="console hello example">
 
 Your screen might not look exactly the same as this, but it should
 have the same three lines of text at the bottom. If you don't see
@@ -65,8 +64,8 @@ this, get your coach to help you.
 
 A few important things have happened here, which we're going to go
 over in more detail in the next section. For the moment, you should
-see where it's printed `Hello!` on your console. That's what
-console.log does: it takes the thing you give it, and prints it on the
+see where it's printed `Hello!` in your console. That's what
+console.log does: it takes the thing you give it, and prints it in the
 console.
 
 You should also see two other lines: one with the code that you typed
@@ -76,8 +75,8 @@ something that was typed into the console directly. For now, just
 remember what they look like.
 
 Let's move on to writing code in a file. Type the same `console.log`
-line into `script.js`. Reload the page in your browser so that it
-reads the change you made.
+line into your `script.js` file. Save and reload the page in your browser so that it
+can read the change you made.
 
 This time, you should just see the line that says `Hello!`, and not
 the lines that said `console.log('Hello!');` or `undefined` with
@@ -92,16 +91,16 @@ into the console this time.
 * How to recognise the things you see on the console
 
 We've been going really slowly so far, because it's essential that you
-be able to do all these things for the rest of the tutorial. If you
-aren't sure about any of them, stop and ask your coach about it
-now. Otherwise, we're going to start doing more interesting things.
+are able to do all these things for the rest of the tutorial. If you
+are unsure about any of them, stop and ask your coach about it
+now. Otherwise, we're going to move onto more interesting things.
 
 ## Values and expressions
 
-Try typing a single `1` on the console. You should see that it
+Try typing a single `1` in the console. You should see that it
 repeats the number back to you, with an arrow next to it.
 
-Try typing `1 + 2` on the console. This time you should see it add the
+Try typing `1 + 2` in the console. This time you should see it add the
 numbers together and give you the result.
 
 The `1 + 2` that you typed is an **expression**. What the console
@@ -113,7 +112,7 @@ added together.
 We want to do things with words as well as numbers. A value containing
 letters is a **string**, and you write it in quotes. Try typing
 `'Hello'` on the console. Like before, you'll see it repeated back to
-you: the value of a string is just that string.
+you.
 
 Try `'Hello' + 'there'`. You should see it combine the two strings
 into one. The value of two strings with a `+` sign between them is
@@ -121,8 +120,8 @@ those two strings concatenated. You'll also see that it's missing a
 space - can you fix that?
 
 Try typing `Hello` without any quotes around it. See how you just get
-an error about `Hello` not being defined? Words that aren't surrounded
-by quotes are not strings. There's a couple of things that they could
+an error about `Hello` not being defined? Words that are not wrapped
+in quotes are not strings. There's a couple of things that they could
 be, which we'll discuss later, but the important thing to remember for
 now is that you can put anything you like into a string, but an
 unquoted word has to be defined before it means something.
@@ -326,7 +325,7 @@ like the others.
 In the body of this new function, write this line:
 
 ```js
-  return 'Hello ' + person + '!';
+return 'Hello ' + person + '!';
 ```
 
 Try calling this function from the console. Look carefully at the
@@ -439,7 +438,7 @@ is like this:
 ```js
 var person = {
     first_name: "Archibald",
-    likes: "owls",
+    likes: "owls"
 };
 ```
 
@@ -468,7 +467,7 @@ several variables that refer to the same object. Try this:
 ```js
 var person_a = {
     first_name: "Archibald",
-    likes: "owls",
+    likes: "owls"
 };
 var person_b = person_a;
 

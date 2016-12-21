@@ -42,7 +42,8 @@ $.ajax({
 [Download](https://gist.github.com/despo/c76a7bd0bef66713a9ac/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/c76a7bd0bef66713a9ac.git`
 
 ### API
-| type | resource | parameters | description |
+
+| Type | Resource | Parameters | Description |
 | ---- | -------- | ---------- | ----------- |
 | **POST**  | `http://hangman-api.herokuapp.com/hangman` | - | Create a new game |
 | **PUT**  | `http://hangman-api.herokuapp.com/hangman` | `{ token: game token, letter: guess }` | Guess a letter |
