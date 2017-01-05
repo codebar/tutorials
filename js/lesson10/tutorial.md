@@ -138,3 +138,110 @@ function draw() {
   drawBall();
 }
 ```
+
+### Drawing player one's paddle
+We need to add some paddles for the players, we will add some additional varibles to our application
+```javascript
+var paddleHeight = 10;
+var paddleWidth = 75;
+var paddleX = (canvas.width-paddleWidth)/2;
+```
+followed by a new function to draw the paddle
+```javascript
+function drawPaddle() {
+    ctx.beginPath();
+    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
+}
+```
+
+### Detecting button presses
+We will store the direction pressed in a variable and assign it a boolean value.
+```javascript
+var rightPressed = false;
+var leftPressed = false;
+```
+Tip:
+
+```javascript
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+```
+
+```javascript
+function keyDownHandler(e) {
+    if(e.keyCode == 39) {
+        rightPressed = true;
+    }
+    else if(e.keyCode == 37) {
+        leftPressed = true;
+    }
+}
+
+function keyUpHandler(e) {
+    if(e.keyCode == 39) {
+        rightPressed = false;
+    }
+    else if(e.keyCode == 37) {
+        leftPressed = false;
+    }
+}
+```
+
+### Moving the paddles
+```javascript
+if(rightPressed) {
+    paddleX += 7;
+}
+else if(leftPressed) {
+    paddleX -= 7;
+}
+```
+
+```javascript
+if(rightPressed && paddleX < canvas.width-paddleWidth) {
+    paddleX += 7;
+}
+else if(leftPressed && paddleX > 0) {
+    paddleX -= 7;
+}
+```
+
+```javascript
+drawPaddle();
+```
+### Keeping score
+With all the other variables we are going to add a new variable called **`score`**
+```javascript
+var playerOneScore = 0;
+var playerTwoScore = 0;
+```
+Depending on the postiton of the ball we can identify 
+
+```javascript
+if(y + dy < ballRadius) {
+    dy = -dy;
+} else if(x + dx > canvas.width - ballRadius) {
+    playerOneScore = playerOneScore + 1;
+} else if(x + dx > canvas.width - ballRadius) {
+    playerTwoScore = playerTwoScore + 1;
+}
+```
+
+
+### Letting the paddle hit the ball
+```javascript
+if(y + dy < ballRadius) {
+    dy = -dy;
+} else if(y + dy > canvas.height-ballRadius) {
+    if(x > paddleX && x < paddleX + paddleWidth) {
+        dy = -dy;
+    }
+    else {
+        alert("GAME OVER");
+        document.location.reload();
+    }
+}
+```
