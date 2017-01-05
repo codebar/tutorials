@@ -6,30 +6,135 @@ title: Drawing in Canvas
 ## Todays lesson
 
 In this lesson we will be animating the **`<canvas>`** HTML element.
-In the previous tutorial we drew shapes on the canvas, now we will make them move around.
+In the previous tutorial we drew shapes on the canvas, now we will make the shapes move around.
+In order to give the illusion of movement we are going to draw a circle, clear the canvas and move the ball to a new location repeatedly several times a second.
 
 ## Before we begin
 
 [Download](https://gist.github.com/despo/e4770ca5afeaf70c23bc/download) a canvas playground to practise the examples.
 
-
 ### Drawing a ball
-
+below the context declaration please insert the code below
 ```javascript
 ctx.beginPath();
 ctx.arc(240, 160, 20, 0, Math.PI*2, false);
-ctx.fillStyle = "green";
+ctx.fillStyle = "grey";
 ctx.fill();
 ctx.closePath();
 ```
 
-### Moving the the ball
-In order to give the illusion of movement we are going to draw a circle, clear the canvas and move the ball to a new location.
-You will put the code for drawing a ball into a function and call the function repeatedly using **` setInterval()`**
+Voila! A grey circle, unfortunately grey is a boring colour, please use [The SVG color scheme](http://www.graphviz.org/doc/info/colors.html#svg) to come up with something more exciting eg. 'chocolate', 'pink' or 'tomato'. ('beige' is not an acceptable exciting colour)
+
+### Putting the ball into a function
+Functions allow us to package up chunks of code and reuse them if and when we like.
+please wrap your ball drawing code into a **`draw()`** function
+```javascript
+function draw() {
+    // code to draw a ball
+}
+```
+
+#### Repeatedly drawing the ball
+In javascript if you want to do something again and again there is a function called **` setInterval()`**. Set interval takes two parameters, the function you would like to call and how frequently you would like the function to be called in milliseconds.
 
 ```javascript
 function draw() {
     // code to draw a ball
 }
 setInterval(draw, 10);
+```
+Tip: 1000 ms = 1 second.
+
+It doesn't look like it but the ball is being drawn every 100th of a second.
+
+#### Repeatedly drawing the ball in a new location
+Each time the draw function is called we will change the x and y values of the circle.
+First we will extract the x, y values from the **`ctx.arc(240, 160, 20, 0, Math.PI*2, false);`** to variable outside the draw function
+
+```javascript
+var canvas = document.getElementById('canvas-id');
+var ctx = canvas.getContext("2d");
+var x = 240; // Starting x position
+var y = 160; // Starting y position
+
+function draw() {
+  x = x+1; // Increase the value of x by 1
+  y = y+1; // Increase the value of y by 1
+  ctx.beginPath();
+  ctx.arc(x, y, 20, 0, Math.PI*2, false);
+  ctx.fillStyle = "grey";
+  ctx.fill();
+  ctx.closePath();
+}
+setInterval(draw, 10);
+```
+Voila! A diagonal line.
+
+The first time the ball is drawn at the coordinates 241,161. Each time the draw junction is called the x and y values are increment by 1.
+
+Experiment. Try some larger numbers and some negative numbers and see what happens?
+```javascript
+function draw() {
+  x = x+-1; // Decrease the value of x by 1
+  y = y+5; // Increase value of y by 5
+  // code to draw a ball
+}
+```
+
+### Clearing the canvas before each frame
+Each time the draw function is called a circle is drawn over the top of the previous one, which explains the line being drawn. Lets clear the canvas before each frame to give the illusion there is one single ball moving across the screen.
+```javascript
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  x = x+1; // Decrease the value of x by 1
+  y = y+1; // Increase value of y by 5
+  // code to draw a ball
+}
+```
+### Clean up the code
+We will extract the code for specifically drawing a ball into it's own function called **`drawBall()`**
+```javascript
+function drawBall() {
+    ctx.beginPath();
+    ctx.arc(x, y, 20, 0, Math.PI*2, false);
+    ctx.fillStyle = "grey";
+    ctx.fill();
+    ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  x = x+1; // Decrease the value of x by 1
+  y = y+1; // Increase value of y by 5
+  drawBall();
+}
+```
+### Bouncing of the walls
+Before we bounce the ball off the wall we are gonna need to know the ball's radius. We are going to store this value in a variable.
+```javascript
+var canvas = document.getElementById('canvas-id');
+var ctx = canvas.getContext("2d");
+var x = 240; // Starting x position
+var y = 160; // Starting y position
+var ballRadius = 20;
+
+function drawBall() {
+    ctx.beginPath();
+    ctx.arc(x, y, ballRadius, 0, Math.PI*2, false);
+    ctx.fillStyle = "grey";
+    ctx.fill();
+    ctx.closePath();
+}
+```
+
+```javascript
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  x = x+1; // Decrease the value of x by 1
+  y = y+1; // Increase value of y by 5
+  if(y + dy > canvas.height || y + dy < 0) {
+      dy = -dy;
+  }
+  drawBall();
+}
 ```
