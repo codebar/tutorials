@@ -49,7 +49,7 @@ end
 > Don't forget to wrap your interactions within `transaction` blocks
 
 
-# Exercise: Contacts list
+## Exercise: Contacts list
 
 Using what we have learned in the last couple of ruby lessons we will create a contact list where we can store people's names and date of birth.
 
