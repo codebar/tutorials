@@ -59,19 +59,12 @@ Random.rand(5..10)
 
 In this exercise we'll create a small game to help us practise maths.
 
-[Download the files](https://gist.github.com/despo/d790a4fd1844da7d85ce/download) to get started. If you are having any trouble you can get the files directly [from GitHub](https://gist.github.com/despo/d790a4fd1844da7d85ce).
+First, create an empty file called `numbers.rb`.
 
-
-To execute the file you must first change its permissions from the command line (to make it executable).
-
-```bash
-chmod a+x numbers.rb
-```
-
-and then run it
+To execute the file, run the following:
 
 ```bash
-./numbers.rb
+ruby numbers.rb
 ```
 
 In this exercise we want to generate two random numbers x and y using `Random.rand()`. We will output the numbers to the console and read in the answer.
