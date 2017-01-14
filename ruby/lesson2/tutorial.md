@@ -222,7 +222,7 @@ You can then use the [array sort](http://www.ruby-doc.org/core-2.1.1/Array.html#
 
 # More practise
 
-Download and try to go through as much of the [Ruby Koans](https://github.com/neo/ruby_koans) as you can.
+Download and try to go through as much of the [Ruby Koans](https://github.com/edgecase/ruby_koans) as you can.
 
 After you download the repository, you can generate the koans using
 
