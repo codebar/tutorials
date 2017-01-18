@@ -58,7 +58,7 @@ $.ajax({
     2. Update the displayed string on the page and store the token
         - Use the hidden field with the class `token`
 
-    3. Don't allow the user to start a new game, hide the **New game** bubtton
+    3. Don't allow the user to start a new game, hide the **New game** button
 
 2. Interact with the API to try out different guesses
 
