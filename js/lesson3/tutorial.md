@@ -23,7 +23,7 @@ this. We write a jQuery selector by passing the `$()` function a
 selector as a string, like this:
 
 ```javascript
-$('div')              // all div elemenets
+$('div')              // all div elements
 $('#container')       // the element with the ID container
 $('.total')           // selects all elements with the class total
 ```
