@@ -147,7 +147,7 @@ of a tutorial the student should be focussing on.
   * changing elements with `text`, `val`, and `addClass`
   * adding event handlers with `on`
   * changing css properties with `css`
-  * `$.each`
+  * `Array.prototype.forEach`
   * `$(document).ready`
 * Know how to write event handlers for keyboard and mouse events
 * Know how to change web pages in response to events
