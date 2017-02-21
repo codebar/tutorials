@@ -289,7 +289,7 @@ function retrieveGenres() {
 
 > You can use `<title>` to display a humanly readable format of the Genre
 
-As you can see from the console, the resulting objects are returned inside an Array. We want to iterate over the list using the `forEach( )` function and add each item to the `#genres` list, as a **list item**. As we need to have access to the `key` as well, we can set that as the list item's `id`.
+As you can see from the console, the resulting objects are returned inside an Array. We want to iterate over the list using the native Array `forEach( )` function and add each item to the `#genres` list, as a **list item**. As we need to have access to the `key` as well, we can set that as the list item's `id`.
 
 Now that we have all the available genres, we can move on to making calls to the API using the genre to retrieve tomorrow's schedule!!
 
