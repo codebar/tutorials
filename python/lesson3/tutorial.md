@@ -214,21 +214,24 @@ You can have *anything* in there:
         "a string": "hello, world!",
         "a list": ["This", "is my", "list"],
         "another dictionary!": {
-            {
-                "Arya": "+4407485376242",
-                "Breanne": "+3206785246863",
-                "Cersei": "+14357535455",
-                "Davos": "+244562726258"
-            }
+            "Arya": "+4407485376242",
+            "Breanne": "+3206785246863",
+            "Cersei": "+14357535455",
+            "Davos": "+244562726258"
         }
+    }
 
-Actually, you can have any type you like as a *key* as well, though this can
-sometimes lead to reduced readability, so use this with caution.  For example,
-while this is valid Python, it's not exactly easy to understand:
+Actually, you can have all kinds of *keys*: tuples, even functions and classes
+can be used for keys, though this can sometimes lead to reduced readability,
+so use this with caution.  For example, while this is valid Python, it's not
+exactly easy to understand:
 
     my_unreadable_dictionary = {
-        {"a number": 8}: {"a string": "hello, world!"}
+        ("this", "is", "a", "tuple!"): {"a string": "hello, world!"}
     }
+
+You can't however use a list or a dictionary as a key, which is probably a
+good thing 'cause that'd be super confusing.
 
 Your turn: try creating a dictionary or two of your own.  Try using different
 types as keys and values, and then try to access them using the standard
