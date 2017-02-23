@@ -444,26 +444,22 @@ button. Make it do the following things:
 
 ### Try it out
 
-For this next part, we're going to use a feature of jQuery that isn't
-related to changing web pages. Open the javascript console. Start by
-defining an array:
+For this next part, we're going to use a function that belongs to arrays.
+Open the javascript console. Start by defining an array:
 
 ```js
 var words = ['these', 'are', 'some', 'words'];
 ```
 
-We're going to use the jQuery `$.each` function. This isn't related to
-the `$()` function, it takes an array and a function and calls the
-function once for each thing in the array. Try this:
+We're going to use your array's `forEach` function. You can use it to call another function once for each thing in the array. Try this:
 
 ```js
-$.each(words, function(index, word) {
-   console.log('Position ' + index + ': ' + word)
+words.forEach(function(word) {
+   console.log(word)
 });
 ```
 
-See how the function got called with `(0, 'these')`, then with `(1,
-'are')`, and so on? Make sure you understand what's happening
+See how the function got called with `'these'`, then with `'are'`, and so on? Make sure you understand what's happening
 here. Experiment with it, or ask your coach, if there's anything
 you're unsure about.
 
@@ -493,7 +489,7 @@ Pick a few colour codes you like and store them in an array:
 var colors = [ '22ac5e', 'd68236', '770077' ];
 ```
 
-Now you can use a `$.each` inside your `ready` function to call
+Now you can use a `colors.forEach` inside your `ready` function to call
 `addBox` for each color in this array. When you reload the page, you
 should see that all these colours have been added, without you needing
 to click on anything.
@@ -652,7 +648,7 @@ Here are the things you learned about in exercise 2:
 3. $(document).ready() lets you write code that runs after your page
    has loaded.
 
-4. $.each() lets you run some code for each thing in an array.
+4. forEach() lets you run some code for each thing in an array.
 
 # Links
 

@@ -15,7 +15,7 @@ function updateTotal() {
 }
 
 $(document).ready(function(){
-  $.each(wishes, function(index, element) {
+  wishes.forEach(function(element) {
     addToList(element);
   });
   updateTotal();
