@@ -12,6 +12,9 @@ Studio](https://developer.android.com/studio/index.html) (please
 note: this is a large file, so our advice is to download and install it before
 arriving at the workshop!)
 
+If you want to run your app on your own phone, remember to enable USB debugging in the device system settings, under Settings -> Developer options.
+(please note: On Android 4.2 and newer, Developer options is hidden by default. To make it available, go to Settings -> About phone and tap Build number seven times. Return to the previous screen to find Developer options.)
+
 Feel free to chose a different topic other than cookies, we really like the popular pokémon [Goomy Clicker](http://joezeng.github.io/goomyclicker) - what things do you like?
 
 ![Imgur](http://i.imgur.com/ssQF3jO.png)
