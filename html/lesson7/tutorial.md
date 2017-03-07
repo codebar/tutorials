@@ -414,8 +414,8 @@ Media queries can take more than one expression, for example `@media screen and 
 ## Further work
 Why not try adding a navigation menu to your page? It could have a list of links that are vertical on mobile and horizontal on desktop. You could even try making them collapse on mobile.
 
-(eg <a href="http://codepen.io/thisisjofrank/pen/vXVmXP" target="_blank">Example on Codepen</a>)
+(eg <a href="https://codepen.io/thisisjofrank/pen/vXVmXP" target="_blank">Example on Codepen</a>)
 
 If you're looking for something a little more silly how about making the background of your site flash through the rainbow as you drag the browser width?
 
-(eg <a href="http://codepen.io/thisisjofrank/pen/RGQJvY" target="_blank">Example on Codepen</a>)
+(eg <a href="https://codepen.io/thisisjofrank/pen/RGQJvY" target="_blank">Example on Codepen</a>)

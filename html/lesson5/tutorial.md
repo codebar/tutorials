@@ -118,7 +118,7 @@ Add this right after the beginning of the element with the id `wrapper`
   <img src="anita-bottom.jpg" alt="Anita Borg image 2">
   <div>
     <a href="http://gos.sbc.edu/b/borg.html">reference</a>
-    <a href="http://en.wikipedia.org/wiki/Anita_Borg">wikipedia</a>
+    <a href="https://en.wikipedia.org/wiki/Anita_Borg">wikipedia</a>
   </div>
 </div>
 ```

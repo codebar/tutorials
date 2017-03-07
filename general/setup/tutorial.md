@@ -25,7 +25,7 @@ We recommend you use **[Atom](https://atom.io/)** at codebar. It's free, open so
 
 ## A web browser (required)
 
-You'll have one of these already! Windows comes with [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/), and OS X comes with [Safari](https://www.apple.com/uk/safari/). Most Linux distributions come with [Firefox](https://www.mozilla.org/en-US/firefox/), which is also available for Windows and OS X. You can also download [Chrome](https://www.google.com/chrome/) which is a popular alternative. You can get started with whatever you currently use, but when you reach the later tutorials the powerful developer tools in Chrome and Firefox will be useful. Your coach will show you how to use them while you work through the tutorials.
+You'll have one of these already! Windows comes with [Internet Explorer](https://windows.microsoft.com/en-us/internet-explorer/), and OS X comes with [Safari](https://www.apple.com/uk/safari/). Most Linux distributions come with [Firefox](https://www.mozilla.org/en-US/firefox/), which is also available for Windows and OS X. You can also download [Chrome](https://www.google.com/chrome/) which is a popular alternative. You can get started with whatever you currently use, but when you reach the later tutorials the powerful developer tools in Chrome and Firefox will be useful. Your coach will show you how to use them while you work through the tutorials.
 
 ## A compression utility (handy on Windows)
 

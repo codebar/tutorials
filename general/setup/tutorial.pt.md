@@ -25,7 +25,7 @@ Nós recomendamos usar **[Atom](https://atom.io/)** no Codebar. É de graça, te
 
 ## Um navegador de internet (obrigatório)
 
-Você já tem um desses! O Windows vem com o [Internet Explorer](http://windows.microsoft.com/pt-br/internet-explorer/), e o OS X vem com  [Safari](https://www.apple.com/br/safari/). [Firefox](https://www.mozilla.org/pt-BR/firefox/new/) e [Chrome](https://www.google.com.br/intl/pt-BR/chrome/) são alternativas populares. Você pode começar com qualquer um que já use, mas quando você chegar nos últimos tutoriais, as ferramentas poderosas do Chrome e Firefox vão ser úteis. Seu tutor vai te mostrar como usá-las quando vocês estiverem trabalhando nestes tutoriais.
+Você já tem um desses! O Windows vem com o [Internet Explorer](https://windows.microsoft.com/pt-br/internet-explorer/), e o OS X vem com  [Safari](https://www.apple.com/br/safari/). [Firefox](https://www.mozilla.org/pt-BR/firefox/new/) e [Chrome](https://www.google.com.br/intl/pt-BR/chrome/) são alternativas populares. Você pode começar com qualquer um que já use, mas quando você chegar nos últimos tutoriais, as ferramentas poderosas do Chrome e Firefox vão ser úteis. Seu tutor vai te mostrar como usá-las quando vocês estiverem trabalhando nestes tutoriais.
 
 ## Ferramenta de compactação (importante para Windows)
 

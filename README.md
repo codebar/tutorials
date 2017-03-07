@@ -2,9 +2,9 @@ This is the source code for <http://tutorials.codebar.io>
 
 ## Getting started
 
-This is a [GitHub Pages](https://pages.github.com/) repo, so you can render the pages with [Jekyll](http://jekyllrb.com/).
+This is a [GitHub Pages](https://pages.github.com/) repo, so you can render the pages with [Jekyll](https://jekyllrb.com/).
 First make sure to [install the version of Ruby](https://www.ruby-lang.org/en/documentation/installation/)
-indicated in `.ruby-version`, as well as the [bundler](http://bundler.io/) gem. Then:
+indicated in `.ruby-version`, as well as the [bundler](https://bundler.io/) gem. Then:
 
 1. `bundle install`, which will install Jekyll
 2. `bundle exec jekyll serve --watch`
@@ -135,4 +135,4 @@ This can be done with a tool like [NVM](https://github.com/creationix/nvm).
 
 ## License
 
-codebar Tutorials are released under the [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+codebar Tutorials are released under the [Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
