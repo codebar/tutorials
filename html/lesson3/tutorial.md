@@ -35,11 +35,11 @@ In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**a
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
-Chrome Devtools are already built into your Chrome browser, or Inspector if you are using Firefox. For advanced users, many other tools are available as browser plugins, including the Firefox add-on [Firebug](https://getfirebug.com/).
+Developer Tools are already built into all modern browsers, whether you use [Chrome](https://developer.chrome.com/devtools), [Firefox](https://developer.mozilla.org/en-US/docs/Tools), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide), [Opera](http://www.opera.com/dragonfly/) or [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html). For advanced users, many other tools are available as browser extensions, including the [Web Developer Toolbar](https://chrispederick.com/work/web-developer/) plugin.
 
 ![](assets/images/chrome-devtools.png)
 
->  Ask your coach to show you how to edit the styling on our example page using firebug
+>  Ask your coach to show you how to edit the styling on our example page using developer tools
 
 ## Getting started
 
@@ -157,7 +157,7 @@ and then the relevant CSS
 
 `inline-block` is another display attribute. You must use `inline-block` rather than `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h1>`, that takes over and expands across the end of the line.
 
-> Using firebug, change `inline-block` to `inline` and notice how they render
+> Using devtools, change `inline-block` to `inline` and notice how they render
 
 Adjust the alignment of the `.title`
 
