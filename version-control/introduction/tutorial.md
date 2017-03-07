@@ -25,13 +25,13 @@ Scroll through the revisions, from the bottom up. You should be able to see each
 
 ### Wikipedia page history
 Wikipedia also holds a history of all changes.
-- Go to [this document](http://en.wikipedia.org/wiki/Women_in_computing)
+- Go to [this document](https://en.wikipedia.org/wiki/Women_in_computing)
 - Click **view history**
 
 ![](images/wikipedia-view-history.png)
 
 - Try and have a look at the first revision of the page, by going back. It's dated back to 2005!
-- Click **curr**, that will show you the [differences between the first and the latest entry](http://en.wikipedia.org/w/index.php?title=Women_in_computing&diff=583521812&oldid=19298328)
+- Click **curr**, that will show you the [differences between the first and the latest entry](https://en.wikipedia.org/w/index.php?title=Women_in_computing&diff=583521812&oldid=19298328)
 
 ![](images/wikipedia-diff.png)
 
@@ -96,9 +96,9 @@ Try using messages like _repositioned image to look better on page_, _resolved p
 
 # The next step!
 
-Sign up to [github](http://github.com/)
+Sign up to [Github](https://github.com/)
 
-Download [Github for Windows](http://windows.github.com/) or [Github for Mac](http://mac.github.com/)
+Download [Github Desktop](https://desktop.github.com/) (for Mac or Windows).
 
 ## Now what?
 

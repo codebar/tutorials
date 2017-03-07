@@ -56,7 +56,7 @@ It tells the browser which version of HTML the page is using.
 <!DOCTYPE html>
 ```
 
-We will only be using html for now, but you can find more about doctypes [here](http://www.w3.org/wiki/Doctypes_and_markup_styles).
+We will only be using html for now, but you can find more about doctypes [here](https://www.w3.org/wiki/Doctypes_and_markup_styles).
 
 The doctype is always followed by the `<html>` tag, which contains the contents of your page.
 
@@ -145,7 +145,7 @@ A link lets the user click through to another webpage. We use the attribute `hre
 Let's add a link to the bottom of your paragraph:
 
 ```html
-<a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
+<a href="https://en.wikipedia.org/wiki/Owl">More information about owls...</a>
 ```
 
 ### Element: Div `<div>`
@@ -161,7 +161,7 @@ Wrap your existing paragraph and link in a div and add a new heading to it.
     Most birds of prey sport eyes on the sides of their heads,
     but the stereoscopic nature of the owl's forward-facing eyes permits the greater
     sense of depth perception necessary for low-light hunting.
-    <a href="http://en.wikipedia.org/wiki/Owl">More information about owls...</a>
+    <a href="https://en.wikipedia.org/wiki/Owl">More information about owls...</a>
   </p>
 </div>
 ```
@@ -236,7 +236,7 @@ Add this underneath the ordered list about why we like owls.
 
 ```html
 <div>
-  <a href="http://www.youtube.com/watch?v=gBjnfgnwXic">
+  <a href="https://www.youtube.com/watch?v=gBjnfgnwXic">
     <img src="images/img4.jpg" alt="cute owl">
     <img src="images/img5.jpg" alt="another cute owl">
     <br>

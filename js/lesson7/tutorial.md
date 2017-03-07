@@ -13,7 +13,7 @@ Today we will be briefly explaining how you can test-drive your code. Testing is
 
 ## JavaScript Testing Frameworks
 
-There are [a number](http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) of libraries written to assist with testing JavaScript, but we will use [Jasmine](http://jasmine.github.io/). The syntax is quite simple and it doesn't require any additional configuration in order to use.
+There are [a number](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) of libraries written to assist with testing JavaScript, but we will use [Jasmine](https://jasmine.github.io/). The syntax is quite simple and it doesn't require any additional configuration in order to use.
 
 ## Jasmine
 
@@ -126,7 +126,7 @@ kms = miles * 1.609
 
 # Test matchers
 
-Besides the `toEqual()` method, Jasmine has a big set of matchers that we can use to verify the results of our tests like `toBe()`, `not.toBe()`, `toBeNull()` and [a lot of others](http://pivotal.github.io/jasmine/)
+Besides the `toEqual()` method, Jasmine has a big set of matchers that we can use to verify the results of our tests like `toBe()`, `not.toBe()`, `toBeNull()` and [a lot of others](https://jasmine.github.io/2.5/introduction#section-Included_Matchers)
 
 
 # Exercise 2: Calculator

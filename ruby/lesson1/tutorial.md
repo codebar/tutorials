@@ -23,5 +23,5 @@ The tutorial is open source, so if you have anything to add to it, you can issue
 ---
 This ends our **Introduction to Ruby** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
 
-[1]: http://rvm.io/rvm/install "Ruby Version Manager"
+[1]: https://rvm.io/rvm/install "Ruby Version Manager"
 [2]: https://github.com/sstephenson/rbenv "rbenv"

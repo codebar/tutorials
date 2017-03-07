@@ -168,9 +168,9 @@ This should be placed before the header closing tag.
 <div>
   <ul>
     <li> <a href="http://www.cs.yale.edu/homes/tap/Files/hopper-story.html">Computer Scientist</a></li>
-    <li> <a href="http://www.youtube.com/watch?v=1-vcErOPofQ">Grace Hopper on Letterman</a></li>
-    <li> <a href="http://en.wikipedia.org/wiki/Grace_Hopper">Wikipedia</a></li>
-    <li> <a href="http://en.wikiquote.org/wiki/Grace_Hopper">Wikiquote</a></li>
+    <li> <a href="https://www.youtube.com/watch?v=1-vcErOPofQ">Grace Hopper on Letterman</a></li>
+    <li> <a href="https://en.wikipedia.org/wiki/Grace_Hopper">Wikipedia</a></li>
+    <li> <a href="https://en.wikiquote.org/wiki/Grace_Hopper">Wikiquote</a></li>
   </ul>
 </div>
 ```

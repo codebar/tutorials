@@ -35,7 +35,7 @@ In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**a
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
-Chrome Devtools are already built into your Chrome browser, or Inspector if you are using Firefox. For advanced users, many other tools are available as browser plugins, including the Firefox add-on [Firebug](http://getfirebug.com/).
+Chrome Devtools are already built into your Chrome browser, or Inspector if you are using Firefox. For advanced users, many other tools are available as browser plugins, including the Firefox add-on [Firebug](https://getfirebug.com/).
 
 ![](assets/images/chrome-devtools.png)
 
@@ -230,7 +230,7 @@ Let's add some content! Add the following inside the `div` in the html file
   <strong>Me on the internet</strong>
   <ul>
    <li><a href="https://www.facebook.com/augusta.ada.lovelace">facebook</a> </li>
-   <li><a href="http://en.wikipedia.org/wiki/Ada_Lovelace">wikipedia</a> </li>
+   <li><a href="https://en.wikipedia.org/wiki/Ada_Lovelace">wikipedia</a> </li>
  </ul>
 </div>
 ```
@@ -440,7 +440,7 @@ vertical-align: top;
 Add a link so that anyone coming to the page can easily find out more about Charles Babbage. In the second paragraph, wrap his name in a link as shown below.
 
 ```html
-<a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage's </a>
+<a href="https://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage's </a>
 ```
 
 Ada was the world's first programmer therefore we want that to stand out. Add a span around it and specify a class `highlight`, so the intention is obvious and other people working on the code of the page can easily understand it.
@@ -514,13 +514,13 @@ Make the poem look different than the rest of the text. Add a CSS class `poem` t
 
 ### Some more information about Ada
 ```html
-<p>The computer language <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)">Ada</a>, was named after me. The Defense Military standard for the language, MIL-STD-1815 was also given the year of my birth.</p>
+<p>The computer language <a href="https://en.wikipedia.org/wiki/Ada_(programming_language)">Ada</a>, was named after me. The Defense Military standard for the language, MIL-STD-1815 was also given the year of my birth.</p>
 
-<p>These days, the British Computer Society runs an annual competitions for women students of computer science in my name. Also, the annual conference for women undergraduates is named after me. Google also dedicated its <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">Google doodle</a> to me, on the 197th anniversary of my birth. </p>
+<p>These days, the British Computer Society runs an annual competitions for women students of computer science in my name. Also, the annual conference for women undergraduates is named after me. Google also dedicated its <a href="https://www.google.com/doodles/ada-lovelaces-197th-birthday">Google doodle</a> to me, on the 197th anniversary of my birth. </p>
 
 <p>
- <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">
-  <img src="http://www.google.com/logos/2012/ada_lovelaces_197th_birthday-991005-hp.jpg">
+ <a href="https://www.google.com/doodles/ada-lovelaces-197th-birthday">
+  <img src="https://www.google.com/logos/2012/ada_lovelaces_197th_birthday-991005-hp.jpg">
  </a>
 </p>
 ```

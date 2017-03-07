@@ -21,16 +21,16 @@ There is an abundance of resources out there that can help you out, but all you 
 
 Some tools out there that you can use are:
 
-- [balsamiq](http://balsamiq.com/)
-- [gomockingbird](http://gomockingbird.com/)
-- [mockflow](http://mockflow.com/pricing/)
+- [Balsamiq](https://balsamiq.com/)
+- [GoMockingbird](https://gomockingbird.com/)
+- [Mockflow](https://mockflow.com/pricing/)
 
 However, using pen and paper is probably the easiest way, so try and choose whatever is easier for you!
 
 
 ## Tracking your tasks
 
-It's important to keep organised and remember what you intend to build. Try and make a list of your tasks. You can keep track using [Github's issues](https://github.com/blog/831-issues-2-0-the-next-generation) or applications like [trello](https://trello.com/) or [pivotal tracker](http://www.pivotaltracker.com/). You can use all these tools for free and it's an easy and efficient way of not just remembering everything but also of communicating to others that may be interested in helping you out what it is that you want to achieve.
+It's important to keep organised and remember what you intend to build. Try and make a list of your tasks. You can keep track using [Github's issues](https://github.com/blog/831-issues-2-0-the-next-generation) or applications like [Trello](https://trello.com/) or [Pivotal Tracker](https://www.pivotaltracker.com/). You can use all these tools for free and it's an easy and efficient way of not just remembering everything but also of communicating to others that may be interested in helping you out what it is that you want to achieve.
 
 ## Storing data
 
@@ -63,7 +63,7 @@ Everyone likes effects. Have a look at [jQuery's effects](http://api.jquery.com/
 
 ## Tracking who visited your website
 
-[Google Analytics](http://www.google.com/analytics/) is a free tool you can use to check who visited your site. To get an analytics id, you just need to create your own account and follow the information on the website.
+[Google Analytics](https://www.google.com/analytics/) is a free tool you can use to check who visited your site. To get an analytics id, you just need to create your own account and follow the information on the website.
 
 > Adding analytics can be one of the tasks when planning your project.
 
@@ -77,18 +77,18 @@ When working with someone else it's also nice to do your work in branches so you
 
 ## Useful APIs
 
-In our previous tutorials we briefly introduced the [Github](http://developer.github.com/v3/) and [BBC](http://www.bbc.co.uk/developer/technology/apis.html) APIs. Most services that you have encountered are likely to have an API available, so just try searching google for it.
+In our previous tutorials we briefly introduced the [Github](https://developer.github.com/v3/) and [BBC](http://www.bbc.co.uk/developer/technology/apis.html) APIs. Most services that you have encountered are likely to have an API available, so just try searching Google for it.
 
 Some popular API's that you may find useful
 
 - [Google Maps](https://developers.google.com/maps/) Get directions, map images, places of interest and a lot more information about places.
 
-- [twilio](http://www.twilio.com/docs/api/rest) Initiate calls and send text messages.
+- [Twilio](https://www.twilio.com/docs/api/rest) Initiate calls and send text messages.
 
-- [twitter](https://dev.twitter.com/docs/api/1.1) search twitter, retrieve and send your tweets and a lot more.
+- [Twitter](https://dev.twitter.com/docs/api/1.1) search Twitter, retrieve and send your tweets and a lot more.
 - [Spotify](https://developer.spotify.com/technologies/web-api/) Explore Spotify's music catalog and retrieve track, album and artist data.
 
-- [instagram](http://instagram.com/developer/endpoints/) Search and retrieve images from instagram.
+- [Instagram](https://instagram.com/developer/endpoints/) Search and retrieve images from Instagram.
 
 > A lot of these API's require registering your application before you are able to use them, and some may take a while to respond. You can always read up and use fake data (by creating your own JSON objects, like we learned on the [Beginning JavaScript tutorial](http://codebar.github.io/tutorials/js/lesson2/tutorial.html).
 

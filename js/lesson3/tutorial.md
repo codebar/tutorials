@@ -172,7 +172,7 @@ box. That's a bit annoying. Use jQuery's `focus()` method to place the
 cursor back in the text field after clicking the button.
 
 If you aren't sure how to use the focus() method, try searching for it
-in the [jQuery documentation](http://api.jquery.com/). There are some
+in the [jQuery documentation](https://api.jquery.com/). There are some
 code examples illustrating how to use it.
 
 ## Label items
@@ -654,9 +654,9 @@ Here are the things you learned about in exercise 2:
 
 If you want to use jQuery on other projects, you can download or link
 directly to the latest version from the
-[jQuery download section](http://jquery.com/download/).
+[jQuery download section](https://jquery.com/download/).
 
-You can read the [jQuery documentation](http://api.jquery.com/) to
+You can read the [jQuery documentation](https://api.jquery.com/) to
 look up what other things can be done with jQuery. The page for every
 jQuery method has examples of how to use it (maybe below a long
 explanation of what it does - scroll down to find the examples).

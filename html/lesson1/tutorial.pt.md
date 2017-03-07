@@ -68,7 +68,7 @@ Ele diz ao navegador qual a versão de HTML a página está usando.
 <!DOCTYPE html>
 ```
 
-Por enquanto nós vamos usar somente HTML, mas você pode descobrir mais sobre doctypes [aqui](http://www.w3.org/wiki/Doctypes_and_markup_styles).
+Por enquanto nós vamos usar somente HTML, mas você pode descobrir mais sobre doctypes [aqui](https://www.w3.org/wiki/Doctypes_and_markup_styles).
 
 O doctype vem sempre seguido pela tag `<html>`, a qual já tem o conteúdo da página.
 
@@ -186,7 +186,7 @@ Vamos adicionar um link no final do nosso parágrafo
 
 ```html
 <br/>
-<a href="http://pt.wikipedia.org/wiki/Coruja">Mais informações sobre corujas...</a>
+<a href="https://pt.wikipedia.org/wiki/Coruja">Mais informações sobre corujas...</a>
 ```
 
 ### Elemento: Div `<div>`
@@ -206,7 +206,7 @@ Cerque o parágrafo já existente por um div e adicione um novo cabeçalho a ele
     <strong>olhos voltados para frente na coruja permite<br/>
     um melhor senso de percepção profunda</strong> necessária para a caça com pouca luz.
     <br/>
-    <a href="http://pt.wikipedia.org/wiki/Coruja">Mais informações sobre corujas...</a>
+    <a href="https://pt.wikipedia.org/wiki/Coruja">Mais informações sobre corujas...</a>
   </p>
 </div>
 ```
@@ -289,7 +289,7 @@ Adicione este texto abaixo da lista ordenada sobre porque gostamos de corujas.
 
 ```html
 <div>
-  <a href="http://www.youtube.com/watch?v=gBjnfgnwXic">
+  <a href="https://www.youtube.com/watch?v=gBjnfgnwXic">
     <img src="images/img4.jpg" alt="coruja fofa"/>
     <img src="images/img5.jpg" alt="outra coruja fofa"/>
     <br/>
