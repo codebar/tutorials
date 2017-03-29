@@ -78,8 +78,10 @@ not.
 Python is what's called a "typed language".  This is to say that there are
 multiple *types* of objects that you work with in Python, and they don't all
 act the same way.  The three types you've learnt so far are *integers* (`int`),
-*floats* (`float`), and *strings* (`str`).  This is important to know because
-every Python programmer has tried to do this at least once in their career:
+*floats* (`float`), and *strings* (`str`). Integers are whole numbers, floats 
+are numbers with a decimal point, and strings are any number of characters 
+surrounded be either "" or ''. This is important to know because every Python 
+programmer has tried to do this at least once in their career:
 
     "7" + 8
 
