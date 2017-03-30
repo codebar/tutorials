@@ -75,7 +75,7 @@ working group that maintains many of the relevant projects in Python packaging).
 For great system wide safety, it's recommended to strongly consider virtualenv.
 `$ [sudo] pip install virtualenv` – it's recommend against using the [sudo] for
 various reasons. [Homebrew maintainers have written why they believe using
-"why `sudo` is bad"](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/FAQ.md#user-content-why-does-homebrew-say-sudo-is-bad-).
+"why `sudo` is bad"](https://github.com/Homebrew/brew/blob/master/docs/FAQ.md#user-content-why-does-homebrew-say-sudo-is-bad).
 See virtualenv (https://virtualenv.pypa.io/en/latest/installation.html).
 
 ## Almost there
