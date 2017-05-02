@@ -12,7 +12,7 @@ Before you begin, you must have Ruby installed on your machine. There are a coup
 
 We recommend using a version manager (you are only able to do that if you are on a UNIX based system like OS X or Linux), so that you can manage different Ruby versions.
 
-Alternatively, if you are having trouble you can create an account on [nitrous.io](https://www.nitrous.io) which gives you a ready environment that you can use in the browser.
+Alternatively, if you are having trouble you can create an account on [Cloud9](https://c9.io/) which gives you a ready environment that you can use in the browser.
 
 ## Ruby in 100 minutes
 
