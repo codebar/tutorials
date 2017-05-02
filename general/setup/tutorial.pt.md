@@ -33,11 +33,8 @@ Muitos dos tutoriais tem links para baixar códigos do Gist em formato .tar.gz. 
 
 ## Ruby (opcional)
 
-Você não precisa instalar o Ruby se está trabalhando com CSS ou HTML, mas você precisará acessar o Ruby se for trabalhar nos tutoriais dele. Você pode usar  [um serviço online gratuito chamado Nitrous](https://www.nitrous.io/) para começar. Você pode se inscrever depois do workshop para poupar tempo.
+Você não precisa instalar o Ruby se está trabalhando com CSS ou HTML, mas você precisará acessar o Ruby se for trabalhar nos tutoriais dele. Você pode usar  [um serviço online gratuito chamado Cloud9](https://c9.io/) para começar. Você pode se inscrever depois do workshop para poupar tempo.
 
 Se você tem um Mac, então já tem uma versão do Ruby instalada. O seu tutor pode te ajudar a começar com Ruby no Mac - pergunte a eles sobre `rbenv` (ou `rvm`) e `Homebrew`.
 
 Você pode [baixar e executar o programa RubyInstaller](http://rubyinstaller.org/) para programar Ruby no Windows.
-
-
-

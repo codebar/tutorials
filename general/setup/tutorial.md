@@ -33,7 +33,7 @@ Many of the tutorials have links to download code from Gist in `.tar.gz` format.
 
 ## Ruby (optional)
 
-You won't need Ruby installed if you're working on CSS or HTML, but you will need access to Ruby if you work on the Ruby tutorials. You can use [a free web service called Nitrous](https://www.nitrous.io/) to get started. You can sign up before the workshop to save some time.
+You won't need Ruby installed if you're working on CSS or HTML, but you will need access to Ruby if you work on the Ruby tutorials. You can use [a free web service called Cloud9](https://c9.io/) to get started. You can sign up before the workshop to save some time.
 
 If you have a Mac you'll have a version of Ruby installed already. A coach can help you get started with Ruby on your Mac - ask them about `rbenv` (or `rvm`) and `Homebrew`.
 
