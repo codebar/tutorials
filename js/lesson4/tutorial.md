@@ -227,7 +227,13 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 > Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
-## Exercise 2 - BBC's tomorrow's TV schedule
+
+## ~~Exercise 2 - BBC's tomorrow's TV schedule~~
+
+![](https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-128.png)
+
+**Part 2 of this exercise is no longer possible as the API that it uses has been taken down by the BBC.**  
+**Sorry, we're working on fixing the exercise!**
 
 [Download](https://gist.github.com/despo/05cab2f0b38bc02318e7/download) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
 
