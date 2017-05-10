@@ -227,7 +227,13 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 > Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
-## Exercise 2 - BBC's tomorrow's TV schedule
+
+## ~~Exercise 2 - BBC's tomorrow's TV schedule~~
+
+![](https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-128.png)
+
+**Part 2 of this exercise is no longer possible as the API that it uses has been taken down by the BBC.**  
+**Sorry, we're working on fixing the exercise!**
 
 [Download](https://gist.github.com/despo/05cab2f0b38bc02318e7/download) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
 
@@ -425,6 +431,7 @@ function getUpcomingEpisodes(pid) {
 }
 ```
 Since the response structure is similar to the one for retrieving tomorrow's schedule, we should be able to re-use the `processEpisode( )` function to display each item from the broadcasts array.
+</div>
 
 Handle the `click` event to retrieve and display the upcoming episodes!
 
@@ -432,3 +439,4 @@ Here is our version of the [tv schedule app](../../examples/tv-schedule/index.ht
 
 ---
 This ends our **HTTP Requests, AJAX and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+</div>
