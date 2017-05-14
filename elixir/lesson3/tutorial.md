@@ -133,6 +133,7 @@ Congratulations for making it this far! We're still early in our journey through
 6. How can you retrieve all the values of a map?
 7. Write a function that takes two strings and joins them together.
 
-**Previous Step**: [Interactive Elixir](../lesson2/tutorial.html) - **Next Step**: [Expressive Elixir](../lesson4/tutorial.html)
+**Previous Step**: [Interactive Elixir](../lesson2/tutorial.html) - **Next
+Step**: [Expressive Elixir:  Thinking in Patterns](../lesson4/tutorial.html)
 
 This ends our **Elixir Basics (Data Types)** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
