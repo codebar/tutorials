@@ -72,10 +72,10 @@ context.strokeRect(300, 100, 50, 100);
 
 ### Reseting canvas
 
-Canvas does not have a reset function, but you can reset it by setting its width. You don't even need to change the value of the width so you can do:
+Canvas does not have a reset function, but there is a function to clear a specified rectangle called `context.clearRect`. You can use it like so:
 
 ```javascript
-canvas.width = canvas.width;
+context.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
 **Exercise**
