@@ -65,7 +65,7 @@ context.fillRect(100, 100, 50, 100);
 Now let's add another rectangle, but this time only its outline.
 
 ```
-context.strokeRect(400, 100, 50, 100);
+context.strokeRect(300, 100, 50, 100);
 ```
 
 **Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the screen. The **line width** of the rectangle should be 1.
