@@ -80,7 +80,7 @@ context.clearRect(0, 0, canvas.width, canvas.height);
 
 **Exercise**
 
-Reset the canvas when the Reset button is clicked, by calling a reset() function.
+Reset the canvas when the Reset button is clicked, by calling the `reset()` function.
 
 ### Drawing paths
 
