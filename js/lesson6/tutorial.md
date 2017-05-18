@@ -65,22 +65,22 @@ context.fillRect(100, 100, 50, 100);
 Now let's add another rectangle, but this time only its outline.
 
 ```
-context.strokeRect(400, 100, 50, 100);
+context.strokeRect(300, 100, 50, 100);
 ```
 
 **Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the screen. The **line width** of the rectangle should be 1.
 
 ### Reseting canvas
 
-Canvas does not have a reset function, but you can reset it by setting its width. You don't even need to change the value of the width so you can do:
+Canvas does not have a reset function, but there is a function to clear a specified rectangle called `context.clearRect`. You can use it like so:
 
 ```javascript
-canvas.width = canvas.width;
+context.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
 **Exercise**
 
-Reset the canvas when the Reset button is clicked, by calling a reset() function.
+Reset the canvas when the Reset button is clicked, by calling the `reset()` function.
 
 ### Drawing paths
 
