@@ -363,6 +363,7 @@ small {
   font-size: 15px;
   margin: 0 30px 10px;
   text-align: right;
+  display: block;
 }
 
 ol {
