@@ -307,7 +307,7 @@ ul.social-media {
 
 Add a bottom border, to give the effect of a line, to the individual list items and tweak its dimensions
 
-```
+```css
 .social-media li {
   border-bottom: 1px solid #b0afc0;
   padding: 10px;
