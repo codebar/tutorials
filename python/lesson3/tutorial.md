@@ -59,7 +59,7 @@ positive and negative number for the index.
 ### Modifying
 
 Lists are *mutable*.  This means that once created, you can change their
-contents and Python will just work with the updated list.  You can add to a
+contents and Python will just work with the updated list.  You can change a
 list a number of ways:
 
 * Setting a value in the list explicitly with `[n]` where `n` is the index you
@@ -74,9 +74,9 @@ for a more complete reference:
     >>> places_to_visit
     ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
 
-    >>> places_to_visit[5] = "Peru"
+    >>> places_to_visit[1] = "Peru"
     >>> places_to_visit
-    ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand', 'Peru']
+    ['Mexico', 'Peru', 'Kenya', 'Nepal', 'New Zealand']
 
     >>> places_to_visit.pop()
     'Peru'
@@ -89,8 +89,7 @@ for a more complete reference:
 
 Try some of these out yourself:
 
-* Try adding a country to a list with either the explicit indexing (`[n]`) or
-  `.append()`.  What happens if you give an index that's larger than the list?
+* Try adding a country to a list with `.append()`.
 * Take a look at the documentation and try out some of the other methods.
   `.count()` is a simple one, and `.reverse()` is handy to know.
 
