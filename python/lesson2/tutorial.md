@@ -130,9 +130,6 @@ Now in the REPL type:
 
 	>>> food = input("What is your favourite food? ")
 
-When you give the REPL your response make sure you wrap it in quotes as this is
-storing your response as a string.
-
 Now we are going to put your response into another variable.
 
 Now try:
