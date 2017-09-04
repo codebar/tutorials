@@ -418,11 +418,6 @@ ol li {
   border: 2px solid #b9b1bf;
 }
 
-.bigimg img {
-  margin: 15px 2px;
-  width: 439px;
-  border: 2px solid #b9b1bf;
-}
 ```
 
 ### Some extra touches
