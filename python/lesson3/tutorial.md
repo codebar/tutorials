@@ -168,10 +168,10 @@ tuple, you can always *cast* it as a list:
     my_tuple = (1, 2, 3)
 
     my_list = list(my_tuple)
-    my_list[3] = 99
+    my_list[2] = 99
 
     my_list
-    [1, 2, 3, 99]
+    [1, 2, 99]
 
     my_tuple
     (1, 2, 3)
