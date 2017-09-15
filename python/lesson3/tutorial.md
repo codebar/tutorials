@@ -131,10 +131,10 @@ many levels deep you can go before your code is too confusing:
     'chocolate'
 
     cake_flavours[1]
-    ['chocolate cake', 'vanilla icing']
+    ['chocolate', 'vanilla']
 
     cake_flavours[1][1]
-    'vanilla icing'
+    'vanilla'
 
 There's a lot more things you can do with lists including concatenating,
 diffing, sorting, and (scary, but fun) subclassing.  This is enough to get you
