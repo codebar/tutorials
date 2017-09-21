@@ -73,19 +73,22 @@ for a more complete reference:
 
     >>> places_to_visit
     ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
-
+    
+    >>> places_to_visit = ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
     >>> places_to_visit[1] = "Peru"
     >>> places_to_visit
     ['Mexico', 'Peru', 'Kenya', 'Nepal', 'New Zealand']
 
+    >>> places_to_visit = ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
     >>> places_to_visit.pop()
-    'Peru'
+    'New Zealand'
     >>> places_to_visit
-    ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
+    ['Mexico', 'Portugal', 'Kenya', 'Nepal']
 
-    >>> places_to_visit.append("Columbia")
+    >>> places_to_visit = ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
+    >>> places_to_visit.append("Colombia")
     >>> places_to_visit
-    ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand', 'Columbia']
+    ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand', 'Colombia']
 
 Try some of these out yourself:
 
