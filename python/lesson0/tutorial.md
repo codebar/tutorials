@@ -98,6 +98,9 @@ What you should see is:
 
     $ python 3.5.2
 
+On Mac OS running `python --version` might run the outdated Python 2.7 which is bundled with the operating system.
+If this is your case, then you need to run `python3` instead of `python`.
+
 Any 3.* version should do for this tutorial to work.
 
 Now, open the *REPL* by typing:
