@@ -3,7 +3,7 @@ layout: page
 title: Setting up your computer for codebar
 ---
 
-You can have a great time at codebar no matter what kind of laptop you have, but you must do a little setup before jumping in to the tutorials. You can do this at home so you can jump straight into a tutorial at codebar. Don't worry if you have trouble - your coach can help you with this if you prefer.
+You will have a great time at codebar no matter what kind of laptop you have, but you may need to do a little setup before completing the tutorials. You may want to do this at home, so that during a workshop you can jump straight into following the tutorial with your coach. Don't worry if you have trouble - your coach can help you with this if you prefer.
 
 
 ## Somewhere to save your files (required)
@@ -13,11 +13,11 @@ Programming projects are normally made up of several related files, and we hope 
 
 ## A text editor (required)
 
-Programmers use **text editors** to write code. You could use [Notepad](https://en.wikipedia.org/wiki/Notepad_%28software%29) (Windows) or [Notes.app](https://en.wikipedia.org/wiki/Notes_%28application%29) (Mac) to write code, but almost all programmers use a text editor with programming-specific features:
+Programmers use **text editors** to write code. You could use [Notepad](https://en.wikipedia.org/wiki/Notepad_%28software%29) (Windows) or [Notes.app](https://en.wikipedia.org/wiki/Notes_%28application%29) (Mac) to write code. However most programmers use a text editor with programming-specific features:
 
-- **Syntax highlighting** shows your code in different colours. This helps you spot typos and understand the structure of your code.
+- **Syntax highlighting** shows your code in different colours. This helps you spot any errors, and understand the structure of your code.
 - **Auto-indent** helps you keep your code tidy.
-- **Project navigation and tabs** help you move between the different files in your project.
+- **Project navigation and tabs** helps you move between the different files in your project.
 - **Auto-completion** shows you keywords you could use to finish what you're typing, so you don't have to remember all the possible commands.
 
 We recommend you use **[Atom](https://atom.io/)** at codebar. It's free, open source, and runs on Windows, Mac, and Linux. **[Sublime Text 2](http://www.sublimetext.com/)** is another popular choice. It's free to download & use for as long as you like (though it will nag you intermittently to buy it when you save your work), and it runs on Windows, Mac and Linux.
@@ -25,7 +25,7 @@ We recommend you use **[Atom](https://atom.io/)** at codebar. It's free, open so
 
 ## A web browser (required)
 
-You'll have one of these already! Windows comes with [Internet Explorer](https://windows.microsoft.com/en-us/internet-explorer/), and OS X comes with [Safari](https://www.apple.com/uk/safari/). Most Linux distributions come with [Firefox](https://www.mozilla.org/en-US/firefox/), which is also available for Windows and OS X. You can also download [Chrome](https://www.google.com/chrome/) which is a popular alternative. You can get started with whatever you currently use, but when you reach the later tutorials the powerful developer tools in Chrome and Firefox will be useful. Your coach will show you how to use them while you work through the tutorials.
+Windows comes with [Internet Explorer](https://windows.microsoft.com/en-us/internet-explorer/), and OS X comes with [Safari](https://www.apple.com/uk/safari/). Most Linux distributions come with [Firefox](https://www.mozilla.org/en-US/firefox/), which is also available for Windows and OS X. You can also download [Chrome](https://www.google.com/chrome/) which is a popular alternative. You can get started with whatever you currently use, but when you reach the later tutorials the powerful developer tools in Chrome and Firefox will be useful. Your coach will show you how to use them while you work through the tutorials.
 
 ## A compression utility (handy on Windows)
 
