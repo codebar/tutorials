@@ -24,7 +24,7 @@ In the previous lessons, we spoke about **HTML5** elements which are used to put
 
 ### Getting started
 
-Responsive web design, as the name suggests, is an approach that suggests that design and development should respond to their environment.
+Responsive web design is an approach that suggests that design and development should respond to their environment.
 
 Usually, this takes the form of a design that is optimised for the width of the viewport (the width of the device that the user is looking at, be it a mobile, tablet or monitor, or even a watch!)
 
@@ -88,13 +88,13 @@ The mobile first approach aims to provide the best possible experience for mobil
 
 ### Structure your content first
 
-The content of your site is the important stuff! Think about what you want your users to see and do when they get to your site. Create a hierachy of content that will get your information across to your users in a way that is meaningful and cohesive.
+The content of your site is the important stuff! Think about what you want your users to see and do when they get to your site. Create a hierarchy of content that will get your information across to your users in a way that is meaningful and cohesive.
 
-In the case of our example, in order of importance, we've got the site name, the text, a list of useful offsite resources and info about the author. If we were to show these things on a mobile they'd appear in this order eg.
+In the case of our example, in order of importance, we've got the site name, the text, a list of useful offsite resources and information about the author. If we were to show these things on a mobile they'd appear in this order
 
 ![](images/mobilelayout.png)
 
-So, lets get some markup written!  We're going to use our html5 elements to lay out the site so, put in a header, a section, a sidebar div and a footer with relevant class names
+So, lets get some markup written. We're going to use our HTML5 elements to lay out the site so, put in a header, a section, a sidebar div and a footer with relevant class names.
 
     <header class="header">
     </header>
@@ -108,16 +108,16 @@ So, lets get some markup written!  We're going to use our html5 elements to lay 
     <footer class="footer">
     </footer>
 
-This is the structure of our page.
+This is now the structure of our page.
 
 ### Add in the content
 
-Now we're ready to flesh out our structure with content.  Looking at the example page, starting from the top we can see that the header contains an image and a heading, so lets put them into our HTML, with class names
+Now we're ready to flesh out our structure with content. Looking at the example page, we can see that the header contains an image and a heading, so lets put them into our HTML, with class names.
 
     <img src="images/gracehopper_portrait.jpg" class="header_img">
     <h1 class="header_title"> Grace Hopper</h1>
 
-Next we have the copy in paragraphs interspersed with figures and a blockquote. Add this to your about section using
+Next we have the copy in paragraphs interspersed with a figure and a blockquote. Add the following to your about section. And remember do not copy and paste.
 
     <p class="main_text">
         ...
@@ -134,7 +134,7 @@ Next we have the copy in paragraphs interspersed with figures and a blockquote. 
         ...
     </blockquote>
 
-Next up is our list of resources and its title, this is going to be inside the sidebar and the HTML should look something like this (fill in the hrefs as you like)
+Next up is our list of resources and its title, this is going to be inside the sidebar and the HTML should look like this (fill in the hrefs as you like).
 
 
     <h2 class="resourcelist_title">Resources</h2>
@@ -146,23 +146,21 @@ Next up is our list of resources and its title, this is going to be inside the s
     </ul>
 
 
-And finally we have the footer which will contain the author information. This will just be a p tag with an a. Give them appropriate class names eg
+And finally we have the footer which will contain the author information. This will just be a `p` tag with an `a`. Give them appropriate class names eg:
 
     <p class="footer_text">Made by <a href="http://codebar.io" class="footer_link">codebar.io</a></p>
 
-That's our page all marked up! Woop! Take a look at it in a browser. Because of the reset css it should look pretty boring. So, let's add some styles!
+That's our page all marked up! Woop! Take a look at it in a browser. Because of the reset css it should look pretty boring. So, let's add some styles.
 
 ### Mobile first styles
 
-As the name suggests, we're going to style up the mobile design first. Later on we'll add styles for wider screens, but what we want to achieve first is a design that works great on small screen devices.
+As the name suggests, we're going to style up the mobile design first. Later on we'll add styles for wider screens, but what we want to achieve first is a design that works great on small devices.
 
 For this page we're going to stack the different sections of the site into one column, this is often the choice for mobile designs, users are used to scrolling lots on their phones.
 
 ![](images/mobilelayout.png)
 
-Open up your style.css file in your text editor.
-
-The first thing we're going to add is some generic styles for the page
+Open up your style.css file in your text editor. The first thing we're going to add is some generic styles for the page.
 
     body {
         font-family: Arial, Helvetica, sans-serif;
@@ -171,9 +169,9 @@ The first thing we're going to add is some generic styles for the page
 
 As far as possible we want the order that our CSS selectors come in to reflect the order of the HTML, so the first thing we're going to style is the header.
 
-Looking at the example page we can see that the header has some padding and a background colour. The image and title are centered, which we can do with <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">flex box</a> the image has a 50% border radius to make it round and the title is large, bold and white.
+Looking at the example page, we can see that the header has some padding and a background colour. The image and title are centered, which we can do with <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">flex box</a>, the image has a 50% border radius to make it round and the title is large, bold and white.
 
-Have a go at styling these up, you can double check yours below.
+Have a go at styling these up, you can compare yours with the below example.
 
 
     .header {
@@ -197,7 +195,7 @@ Have a go at styling these up, you can double check yours below.
         color: white;
     }
 
-Look at your changes in Chrome (Chrome has some great developer tools which are going to help your responsive design).  Open up the chrome inspect tool by right clicking and choosing 'inspect'. In the top left hand corner of the inspect tool you should see an icon that looks like a mobile in front of a monitor
+Look at your changes in Chrome (Chrome has some great developer tools which are going to help your responsive design). Open up the chrome inspect tool by right clicking and choosing 'inspect'. In the top left hand corner of the inspect tool you should see an icon that looks like a mobile in front of a monitor
 
 <img src="images/inspect.png" alt="inspect tool">
 
@@ -209,7 +207,7 @@ You might notice that the white text in your header looks blocky and bolder than
 
 Next up we need to style the images, captions and about text. At this width we want the images and captions to be full width, which will mean that the text doesn't wrap them at all. We can do this by making the images 100% width.
 
-Try the following styles
+Try the following styles (if you notice any you have not come across before do ask your coach).
 
 
     .figure {
@@ -262,9 +260,9 @@ Refresh the page in your browser. The first thing that you should notice is that
 
 We can now use this main div to give the content a little breathing space. In your css, select main and give it 10px padding. Since main comes before figure the main selector should be above figure it in your css.
 
-Refresh again, that's better!  Have a go at dragging out the width of the browser window in your device toolbar. You will notice that those images get a little on the large side. Not only does this look odd but it could cause the images to become pixelated if they stretch to above their natural size, so we're going to give the image holder (in this case figure) a max width. Let's make it `max-width: 300px;`. Because we have the `margin:0 auto` in there already, this will mean that the image will stretch until it becomes 300px wide then it will sit in the middle of its space. Try it out and drag the width out.
+Refresh again, that's better! Have a go at dragging out the width of the browser window in your device toolbar. You will notice that those images get a little on the large side. Not only does this look odd but it could cause the images to become pixelated if they stretch to above their natural size, so we're going to give the image holder (in this case figure) a max width. Let's make it `max-width: 300px;`. Because we have the `margin: 0 auto` in there already, this will mean that the image will stretch until it becomes 300px wide then it will sit in the middle of its space. Try it out and drag the width out.
 
-That's our text looking good, so next up is the References list. You can style these as you wish, the important thing here is that they stretch the full width of the page, which, if you use the inspect tool, you will notice that they already do!
+That's our text looking good, next up is the References list. You can style these as you wish, the important thing here is that they stretch the full width of the page, which, if you use the inspect tool, you will notice that they already do.
 
 Here are some styles if you don't want to style it yourself.
 
@@ -335,17 +333,17 @@ What we need is a way to add styles that will only be applied if the browser is 
 The way we do this is with css <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" target="_blank">media queries</a>.
 
 ### Media Queries
-A media query lets you restrict your css to only be applied when the condition of the query is true, for example when the media type specified in the media query matches the device that the user is viewing your site on.
+A media query lets you restrict your css to only be applied when the condition of the query is true, for example when the media type specified in the media query matches the device that the user is viewing your website on.
 You may have seen them used to swap styles on a page for screen and for print eg
 
     <link rel="stylesheet" media="screen" href="style.css">
     <link rel="stylesheet" media="print" href="print.css">
 
-Here the browser will load a different stylesheet for those wanting to print the page, usually saving ink and paper!
+Here the browser will load a different stylesheet for those wanting to print the page, usually saving ink and paper.
 
 Media queries can also be used in your CSS files with an <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule" target="_blank"> at-rule</a>: `@media`. You can give a media query expressions which will resolve to either true or false, anything inside the media query will then be applied.
 
-We want our desktop styles to only be applied when the browser is above a certain width, so we will use an expression that evaluates to true above that width. Our design starts to look a little stretched above 620px so lets set that as our lower limit.  Our media query will look like this
+We want our desktop styles to only be applied when the browser is above a certain width, so we will use an expression that evaluates to true above that width. Our design starts to look a little stretched above 620px so lets set that as our lower limit.  Our media query will look like this.
 
     @media (min-width: 500px) {
         ...
@@ -356,7 +354,7 @@ All of the style rules that we want to apply to widths above 500px we will write
 ### Using Media Queries
 Media queries sit in the css cascade like normal rules, rules lower down the page will overwrite rules higher up, for this reason we put media queries with our desktop styles underneath the mobile styles, because we want the desktop styles to overwrite them. This means that your media queries will come at the bottom of your stylesheet.
 
-The first thing that we want to be able to change is to make the images sit inline with the text when there is space form them.  We can do this by applying a `float` to the `<figure>`. Since we gave the images a maximum width of 300px earlier, we want the text to start wrapping some time after this, so allowing for some margin to the right of the image and the fact that we ideally want the wrapping to be at least two words width, lets tell our new styles to apply at 500px or greater.
+The first thing that we want to be able to change is to make the images sit inline with the text when there is space around them.  We can do this by applying a `float` to the `<figure>`. Since we gave the images a maximum width of 300px earlier, we want the text to start wrapping some time after this, so allowing for some margin to the right of the image and the fact that we ideally want the wrapping to be at least two words width. Lets tell our new styles to apply at 500px or greater.
 
     @media (min-width: 500px) {
         .figure {
@@ -373,7 +371,7 @@ Drag your browser width in and out and make sure that you can see when the style
 
 Feel free to increase or decrease these values to get the text looking as you'd like it to.
 
-Taking a fresh look at our content, we can now give it a little more breathing space. So firstly lets give the header a larger padding and we can increase the size of the header image. Both of these new rules should apply above 620px. The new media query goes below the previous one.
+Taking a fresh look at our content, we can now give it a little more breathing space. Firstly, lets give the header a larger padding and increase the size of the header image. Both of these new rules should apply above 620px. The new media query goes below the previous one.
 
     @media (min-width: 620px) {
         .header {
@@ -386,7 +384,7 @@ Taking a fresh look at our content, we can now give it a little more breathing s
         }
     }
 
-And finally we can apply a different layout for the text on a desktop. In this case we can make the main division that we created earlier `display: flex` to allow the sidebar to sit next to the content. we can also give it a maximum width to stop the text from stretching to a width that is uncomfortable to read.
+And finally we can apply a different layout for the text on a desktop. In this case we can make the main division that we created earlier `display: flex;` to allow the sidebar to sit next to the content. We can also give it a maximum width to stop the text from stretching to a width that is uncomfortable to read.
 
 
     @media (min-width: 860px) { /* larger than tablet */
