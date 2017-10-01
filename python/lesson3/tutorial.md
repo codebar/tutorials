@@ -134,10 +134,10 @@ many levels deep you can go before your code is too confusing:
     'chocolate'
 
     cake_flavours[1]
-    ['chocolate cake', 'vanilla icing']
+    ['chocolate', 'vanilla']
 
     cake_flavours[1][1]
-    'vanilla icing'
+    'vanilla'
 
 There's a lot more things you can do with lists including concatenating,
 diffing, sorting, and (scary, but fun) subclassing.  This is enough to get you
@@ -171,10 +171,10 @@ tuple, you can always *cast* it as a list:
     my_tuple = (1, 2, 3)
 
     my_list = list(my_tuple)
-    my_list[3] = 99
+    my_list[2] = 99
 
     my_list
-    [1, 2, 3, 99]
+    [1, 2, 99]
 
     my_tuple
     (1, 2, 3)
