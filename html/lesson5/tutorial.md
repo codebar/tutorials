@@ -468,7 +468,10 @@ a.btn:hover {
 
 If we wanted to even wilder with our on hover effect we could add a rotate:
 
-```css
+```css 
+a.btn{
+display:inline-block;
+}
 a.btn:hover {
   transform: rotate(90deg);
   transition-delay: 1s;
