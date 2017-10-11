@@ -69,7 +69,7 @@ We can change the function to use a parameter. Let's change it so that it
 allows the user to specify the name they want to print:
 
     >>> def print_name(name):
-    ...     print "My name is " + name
+    ...     print("My name is " + name)
     ...
     >>> print_name("Lisa")
     My name is Lisa
