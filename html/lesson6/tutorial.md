@@ -143,3 +143,23 @@ This ends our sixth lesson. How did you find learning HTML and CSS? If you have 
 ## Extras
 
 Now that you are familiar with HTML & CSS, how about you create your own portfolio site. Think about the pages that you may include, such as home, about me and a portfolio or gallery page. You may even want to include a downloadable CV.
+
+## Further Reading:
+### Accessibility
+
+Some of your users might be using screenreaders or keyboards to navigate across your page.
+How do you ensure your website is available to them? By following a few guidelines and integrating techniques.
+
+#### A few names acronyms to know:
+- (ARIA) Accessible Rich Internet Applications are set of techniques and additions to HTML to allow additional markup to be interpreted by accessibility devices
+- (WCAG) Website Content Accessibility Guidelines contain different compliance levels (A, AA and AAA) and lay down the “rules”to make a website or application accessible.
+- (WAI) Web Accessibility Initiative of W3 cover standard, guidelines, rules and techniques.
+
+#### There is a growing amount of information about accessibilty, here are few articles to get you started!
+- (Introduction to Accessibility)[https://www.w3.org/standards/webdesign/accessibility]
+- (WAI Getting started)[https://www.w3.org/WAI/gettingstarted/]
+- (How People with disabilities use the web)[https://www.w3.org/WAI/intro/people-use-web]
+- (Tutorials)[https://www.w3.org/WAI/tutorials/]
+- (Mozilla have created their own Accessibility page)[https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA]
+- (ARIA Techniques for WCAG 2.0)[https://www.w3.org/TR/WCAG20-TECHS/aria]
+- The (A11Y Project)[http://a11yproject.com/] is an open source project on aiming to provide up to date and easy to access information regarding accessibility.
