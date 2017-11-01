@@ -196,7 +196,7 @@ a dictionary for a phone book:
 
     my_phone_book = {
         "Arya": "+4407485376242",
-        "Breanne": "+3206785246863",
+        "Brienne": "+3206785246863",
         "Cersei": "+14357535455",
         "Davos": "+244562726258"
     }
@@ -217,7 +217,7 @@ You can have *anything* in there:
         "a list": ["This", "is my", "list"],
         "another dictionary!": {
             "Arya": "+4407485376242",
-            "Breanne": "+3206785246863",
+            "Brienne": "+3206785246863",
             "Cersei": "+14357535455",
             "Davos": "+244562726258"
         }
@@ -247,7 +247,7 @@ doing this should hopefully feel intuitive by now:
 
 Change a value for a key:
 
-    my_phone_book["Breanne"] = "+830685432195"
+    my_phone_book["Brienne"] = "+830685432195"
 
 Add a new key/value pair:
 
@@ -270,18 +270,18 @@ manageable parts.  Thankfully, Python has you covered with `.keys()`,
 
     >>> my_phone_book = {
         "Arya": "+4407485376242",
-        "Breanne": "+3206785246863",
+        "Brienne": "+3206785246863",
         "Cersei": "+14357535455",
         "Davos": "+244562726258"
     }
     >>> my_phone_book.keys()
-    dict_keys(['Davos', 'Cersei', 'Breanne', 'Arya'])
+    dict_keys(['Davos', 'Cersei', 'Brienne', 'Arya'])
 
     >>> my_phone_book.values()
     dict_values(['+3206785246863', '+14357535455', '+244562726258', '+4407485376242'])
 
     >>> my_phone_book.items()
-    dict_items([('Breanne', '+3206785246863'), ('Cersei', '+14357535455'), ('Davos', '+244562726258'), ('Arya', '+4407485376242')])
+    dict_items([('Brienne', '+3206785246863'), ('Cersei', '+14357535455'), ('Davos', '+244562726258'), ('Arya', '+4407485376242')])
 
 As you can see, `.keys()` and `.values()` do what you'd expect: they return the
 keys and values respectively.  You may have noticed however that rather than a
@@ -301,7 +301,7 @@ your dictionary, but dumps it out as `dict_items` which is a sort of *tuple of
 tuples*.  This allows you to reference your dictionary with list syntax:
 
     >>> tuple(my_phone_book.items())[0]
-    ('Breanne', '+3206785246863')
+    ('Brienne', '+3206785246863')
 
     >>> tuple(my_phone_book.items())[0][1]
     '+3206785246863'
