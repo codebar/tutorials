@@ -132,7 +132,7 @@ var enoughPizzas = (coaches + students) < pizzas;
 console.log('Do we have enough pizzas for everybody? ' + enoughPizzas);
 ```
 > Now sit with your coach and create 2 variables, one is your age and one is the
-> minimum driving age. Then console log whether you are older enough to drive.
+> minimum driving age. Then console log whether you are old enough to drive.
 
 ## If statements
 
