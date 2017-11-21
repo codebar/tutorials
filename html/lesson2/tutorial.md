@@ -12,8 +12,8 @@ In this tutorial we are going to look at:
  
 * What is CSS?
 * What you can do with CSS?
-* Introductions to selectors
 * Linking your CSS file
+* Introductions to selectors
 * Cascading selectors
 * Pseudo classes
  
@@ -78,19 +78,36 @@ body {
 ```
 
 ## Getting started
+### Ways of connecting CSS to HTML
 
-In the head of the html page define a style tag
+There are several ways to use CSS with HTML. A long time ago, it used to be inline with the HTML elements:
+```html
+<p style="color:blue">This is blue text</p>
+```
+This is bad practice now. It is also possible to add your CSS inside the head of the html page. You would then have to put it inside style tags. 
 
 ```html
 <head>
   <title>I love owls</title>
   <style type="text/css">
-
+      p {
+        color:blue
+      }
   </style>
 </head>
 ```
 
-Include the styling in this tutorial, within the style tag we just created.
+This is called embedded CSS. The problem with this, is that it cannot be reused across other pages and it also makes it a bit harder to work. 
+
+### Linked CSS 
+A better way to define CSS, is to include it within a separate stylesheet. This is easier to maintain and can be reused across several pages. The way to do this would be to create a new css file and then link to it in your html. We have already created the file for you (style.css) and next step is to add the following link inside the head of the html page. 
+
+```html
+<head>
+  <title>I love owls</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+```
 
 ## Introductions to selectors
 
@@ -195,36 +212,6 @@ Selects all list elements that are nested within a **class** pictures
 
 > Change inline to inline-block, and to block. Can you notice the difference?
 
-## Ways of connecting CSS to HTML
-
-### Embedded CSS
-
-At the beginning of the tutorial we described how to connect the CSS to our page.
-
-```html
-<head>
-  <title>I love owls</title>
-  <style type="text/css">
-
-  </style>
-</head>
-```
-
-This method of using CSS, by defining it within our HTML page is called **embedded**. The problem with this, is that it cannot be reused across other pages and it also makes it a bit harder to work.
-
-
-### Linked CSS
-
-A better way to define CSS, is to include it within a separate stylesheet. This is easier to maintain and can be reused across several pages.
-
-To achieve this, let's move our CSS outside of the head of the page and into a new file that we will link through the head.
-
-```html
-<head>
-  <title>I love owls</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-```
 
 ## Cascading
 
