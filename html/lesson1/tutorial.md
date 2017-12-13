@@ -272,16 +272,14 @@ One way is to use **HTML entities**. These are made up of an ampersand, a name, 
 
 You can also use a numerical format to produce special characters. [Here's a list](http://htmlandcssbook.com/extras/html-escape-codes/) of some common entities.
 
-Add a small rhyme to your page, wrapped with quotes using HTML entities.
+Add a small rhyme to your page, in which the first sentence says "The Owl & the Pussy-cat" instead of "The Owl and the Pussy-cat" using HTML entities for the ampersand: `&amp;`.
 
 ```html
 <div>
   <p>
     <strong>
-      <em>
-       &quot;A wise old owl sat on an oak;  The more he saw the less he spoke; <br>
-       The less he spoke the more he heard; Why aren't we like that wise old bird?&quot;
-      </em>
+       "The Owl &amp; the Pussy-cat went to sea <br> 
+        In a beautiful pea-green boat"
     </strong>
   </p>
   <small>&mdash; nursery rhyme</small>
