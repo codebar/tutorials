@@ -104,7 +104,7 @@ The following code allows you to listen for a keypress on the input field, and t
 
 ```js
 $(document).ready(function() {
-  $(document).on('keypress', '#username', function() {
+  $(document).on('keypress', '#username', function(event) {
     if (event.which === 13) { // check the key was <enter>
       // do something
     }
