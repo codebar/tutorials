@@ -52,9 +52,10 @@ Now in the REPL type:
     >>> name = 'codebar'
     >>> url = "codebar.io"
 
-Now type `name` and `url` to see these strings shown back to you. As you can
-see Python allows both single and double quotes to denote a string variable.
-Double quotes are required if there is going to be an apostrophe in the string.
+Now type `print(name)` and `print(url)` to see these strings shown back to you.
+As you can see Python allows both single and double quotes to denote a string
+variable. Double quotes are required if there is going to be an apostrophe in
+the string.
 
 For example:
 
@@ -146,10 +147,10 @@ around with decision making and changing prints based on your answer. In Python
 (and many other languages), one of the most common ways in which this is done
 is using an `if` statement. For example:
 
-    if number > 3:
-        print("Bigger than three")
-	elif number < 3:
-        print("Smaller than three")
+    >>> if number > 3:
+    ...     print("Bigger than three")
+    ... elif number < 3:
+    ...     print("Smaller than three")
 
 Here we can see that if a number we have passed into this decision making code
 is bigger than three, we will receive a message telling us so. There is a

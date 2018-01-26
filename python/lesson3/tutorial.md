@@ -39,18 +39,18 @@ which is where most people would expect things to start.  This means that the
 *first* element of a list is referred to with a `0`, the second element is
 referred to with a `1`, and so on.  Perhaps an example would be helpful:
 
-    >>> places_to_visit[0]
+    >>> print(places_to_visit[0])
     'Mexico'
-    >>> places_to_visit[2]
+    >>> print(places_to_visit[2])
     'Kenya'
 
 Positive numbers aren't the only thing you can use for indexes though. Negative
 numbers invert the index, so you can get the *last* element of a list by using
 `-1`, or the third-to-last by using `-3`:
 
-    >>> places_to_visit[-1]
+    >>> print(places_to_visit[-1])
     'New Zealand'
-    >>> places_to_visit[-3]
+    >>> print(places_to_visit[-3])
     'Kenya'
 
 Try it yourself now: Try to get `Nepal` out of `places_to_visit` using both a
@@ -71,23 +71,23 @@ There's a lot that you can do with lists, so much that we simply can't cover it
 all here, so instead here are some examples, and a [link to the documentation](https://docs.python.org/3.5/tutorial/datastructures.html#more-on-lists "Methods of lists")
 for a more complete reference:
 
-    >>> places_to_visit
+    >>> print(places_to_visit)
     ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
     
     >>> places_to_visit = ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
     >>> places_to_visit[1] = "Peru"
-    >>> places_to_visit
+    >>> print(places_to_visit)
     ['Mexico', 'Peru', 'Kenya', 'Nepal', 'New Zealand']
 
     >>> places_to_visit = ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
-    >>> places_to_visit.pop()
+    >>> print(places_to_visit.pop())
     'New Zealand'
-    >>> places_to_visit
+    >>> print(places_to_visit)
     ['Mexico', 'Portugal', 'Kenya', 'Nepal']
 
     >>> places_to_visit = ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand']
     >>> places_to_visit.append("Colombia")
-    >>> places_to_visit
+    >>> print(places_to_visit)
     ['Mexico', 'Portugal', 'Kenya', 'Nepal', 'New Zealand', 'Colombia']
 
 Try some of these out yourself:
@@ -103,22 +103,24 @@ But we're not finished!  You can do even more interesting things with `[` and
 to get the first four elements of a list *as another list*.  That's easy with
 the subset syntax:
 
-    >>> places_to_visit[0:4]
+    >>> print(places_to_visit[0:4])
     ["Mexico", "Portugal", "Kenya", "Nepal"]
-    >>> places_to_visit[:4]
+
+    >>> print(places_to_visit[:4])
     ["Mexico", "Portugal", "Kenya", "Nepal"]
 
 You can do some interesting things with negative numbers too:
 
-    >>> places_to_visit[-3:4]
+    >>> print(places_to_visit[-3:4])
     ['Kenya', 'Nepal']
-    >>> places_to_visit[-3:]
+
+    >>> print(places_to_visit[-3:])
     ['Kenya', 'Nepal', 'New Zealand']
 
 ...and as getting a subset returns a list itself, you can get a subset of a
 subset:
 
-    >>> places_to_visit[0:4][-1]
+    >>> print(places_to_visit[0:4][-1])
     'Nepal'
 
 ### Nesting
@@ -128,15 +130,15 @@ you from putting a list inside a list.  In fact, you can put a list inside a
 list, inside a list, inside a... you get the idea.  You're only limited by how
 many levels deep you can go before your code is too confusing:
 
-    cake_flavours = ["chocolate", ["chocolate", "vanilla"], "red velvet"]
+    >>> cake_flavours = ["chocolate", ["chocolate", "vanilla"], "red velvet"]
 
-    cake_flavours[0]
+    >>> print(cake_flavours[0])
     'chocolate'
 
-    cake_flavours[1]
+    >>> print(cake_flavours[1])
     ['chocolate', 'vanilla']
 
-    cake_flavours[1][1]
+    >>> print(cake_flavours[1][1])
     'vanilla'
 
 There's a lot more things you can do with lists including concatenating,
@@ -152,31 +154,31 @@ will result in a `TypeError`.
 
 Tuples are represented using `(` and `)`:
 
-    places_to_visit = ("Mexico", "Portugal", "Kenya", "Nepal", "New Zealand")
+    >>> places_to_visit = ("Mexico", "Portugal", "Kenya", "Nepal", "New Zealand")
 
-    places_to_visit[1]
+    >>> print(places_to_visit[1])
     'Portugal'
 
-    places_to_visit[0:3]
+    >>> print(places_to_visit[0:3])
     ('Mexico', 'Portugal', 'Kenya')
 
 This however will fail with a `TypeError`:
 
-    places_to_visit[1] = "Canada"
+    >>> places_to_visit[1] = "Canada"
 
 Tuples are commonly used in cases where you're defining something that
 shouldn't ever change, but should you ever need to modify something that's in a
 tuple, you can always *cast* it as a list:
 
-    my_tuple = (1, 2, 3)
+    >>> my_tuple = (1, 2, 3)
 
-    my_list = list(my_tuple)
-    my_list[2] = 99
+    >>> my_list = list(my_tuple)
+    >>> my_list[2] = 99
 
-    my_list
+    >>> print(my_list)
     [1, 2, 99]
 
-    my_tuple
+    >>> print(my_tuple)
     (1, 2, 3)
 
 This will make a **copy** of the tuple that's a list, so you can edit it, but
@@ -194,7 +196,7 @@ corresponding *values*.  You'll often seen them as a simple way to have a
 lookup table or crude database in an application.  For this tutorial we'll use
 a dictionary for a phone book:
 
-    my_phone_book = {
+    >>> my_phone_book = {
         "Arya": "+4407485376242",
         "Brienne": "+3206785246863",
         "Cersei": "+14357535455",
@@ -210,7 +212,7 @@ though.  This will give you Cersei's phone number:
 There's nothing restricting you to strings as values in your dictionary though.
 You can have *anything* in there:
 
-    my_crazy_dictionary = {
+    >>> my_crazy_dictionary = {
         "a number": 7,
         "a float": 1.23456789,
         "a string": "hello, world!",
@@ -228,7 +230,7 @@ can be used for keys, though this can sometimes lead to reduced readability,
 so use this with caution.  For example, while this is valid Python, it's not
 exactly easy to understand:
 
-    my_unreadable_dictionary = {
+    >>> my_unreadable_dictionary = {
         ("this", "is", "a", "tuple!"): {"a string": "hello, world!"}
     }
 
@@ -247,15 +249,15 @@ doing this should hopefully feel intuitive by now:
 
 Change a value for a key:
 
-    my_phone_book["Brienne"] = "+830685432195"
+    >>> my_phone_book["Brienne"] = "+830685432195"
 
 Add a new key/value pair:
 
-    my_phone_book["Ellaria"] = "+560538942621"
+    >>> my_phone_book["Ellaria"] = "+560538942621"
 
 This one is new: delete a key/value pair:
 
-    del(my_phone_book["Ellaria"])
+    >>> del(my_phone_book["Ellaria"])
 
 Now that you've got the tools to change your dictionaries, give a shot
 yourself.  Try changing Cersei's phone number.  In fact, change it to a list of
@@ -274,13 +276,13 @@ manageable parts.  Thankfully, Python has you covered with `.keys()`,
         "Cersei": "+14357535455",
         "Davos": "+244562726258"
     }
-    >>> my_phone_book.keys()
+    >>> print(my_phone_book.keys())
     dict_keys(['Davos', 'Cersei', 'Brienne', 'Arya'])
 
-    >>> my_phone_book.values()
+    >>> print(my_phone_book.values())
     dict_values(['+3206785246863', '+14357535455', '+244562726258', '+4407485376242'])
 
-    >>> my_phone_book.items()
+    >>> print(my_phone_book.items())
     dict_items([('Brienne', '+3206785246863'), ('Cersei', '+14357535455'), ('Davos', '+244562726258'), ('Arya', '+4407485376242')])
 
 As you can see, `.keys()` and `.values()` do what you'd expect: they return the
@@ -290,20 +292,20 @@ These are sort of like tuples: you can't edit them, and if you want to do
 anything with them other than read them as a complete entity, you'll have to
 cast them as a list:
 
-    >>> list(my_phone_book.keys())
+    >>> print(list(my_phone_book.keys()))
     ['+3206785246863', '+14357535455', '+244562726258', '+4407485376242']
 
-    >>> list(my_phone_book.keys())[2]
+    >>> print(list(my_phone_book.keys())[2])
     '+244562726258'
 
 The last one there, `.items()` is interesting.  It returns all of the data in
 your dictionary, but dumps it out as `dict_items` which is a sort of *tuple of
 tuples*.  This allows you to reference your dictionary with list syntax:
 
-    >>> tuple(my_phone_book.items())[0]
+    >>> print(tuple(my_phone_book.items())[0])
     ('Brienne', '+3206785246863')
 
-    >>> tuple(my_phone_book.items())[0][1]
+    >>> print(tuple(my_phone_book.items())[0][1])
     '+3206785246863'
 
 Truth be told though, you probably won't be accessing these values directly
