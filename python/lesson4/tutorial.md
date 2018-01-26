@@ -133,7 +133,7 @@ effort of defining and calling a function, rather than just writing the code
 independent of such things. Defining tasks as functions reduces the need to
 copy and paste the same code multiple times to achieve the same effect. Simply
 calling the function multiple times makes it much easier to not only write
-code, but to read it also.
+code, but to read it as well.
 
 Using functions also makes it a lot easier to fix and change code. If you are
 performing the same tasks in multiple places and discover a bug, without
