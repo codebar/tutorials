@@ -14,7 +14,7 @@ it a name then set its value.
 
 Now in the REPL type:
 
-	>>> year = 2016
+    >>> year = 2016
 
 In this example you have now stored the value `2016` into the variable `year`.
 See what happens next when you type `year' into the REPL. Does it show it back
@@ -30,9 +30,9 @@ variables with the maths operations we learnt in the previous tutorial.
 
 Now in the REPL type the following:
 
-	>>> revenue = 1000
-	>>> costs = 200
-	>>> profit = revenue - costs
+    >>> revenue = 1000
+    >>> costs = 200
+    >>> profit = revenue - costs
 
 Now type `profit` to see the results of this calculation. 
 
@@ -49,8 +49,8 @@ strings.
 
 Now in the REPL type:
 
-	>>> name = 'codebar'
-	>>> url = "codebar.io"
+    >>> name = 'codebar'
+    >>> url = "codebar.io"
 
 Now type `name` and `url` to see these strings shown back to you. As you can
 see Python allows both single and double quotes to denote a string variable.
@@ -58,13 +58,13 @@ Double quotes are required if there is going to be an apostrophe in the string.
 
 For example:
 
-	message = "I'm a string"
+    message = "I'm a string"
 
 Sometimes you will need to use an apostrophe within a single quote, on
 occasions like this it is recommended to use "string escaping". This would look
 like:
 
-	message ='I\'m a string'
+    message ='I\'m a string'
 
 Try storing a string within a variable without quotes, see what happens?
 Numbers do not require quotation marks, whereas they are mandatory for storing
@@ -122,20 +122,20 @@ command. Let's create a variable in which to store the user input.
 
 Now type this into your REPL: 
 
-	>>> lucky_number = input("What is your lucky number? ")
+    >>> lucky_number = input("What is your lucky number? ")
 
 Type back your answer after it asks you.
 
 Now in the REPL type:
 
-	>>> food = input("What is your favourite food? ")
+    >>> food = input("What is your favourite food? ")
 
 Now we are going to put your response into another variable.
 
 Now try:
 
-	>>> my_name = input("What is your name? ")
-	>>> greeting = "Hello " + my_name
+    >>> my_name = input("What is your name? ")
+    >>> greeting = "Hello " + my_name
 
 Then type `greeting` into your REPL to receive your message. 
 

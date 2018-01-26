@@ -13,16 +13,16 @@ later to run these statements. Python comes with plenty of functions already
 built in that you can use to perform common tasks. One example should be
 something you're already familiar with:
 
-	>>> print("This is a function")
-	This is a function
-	
+    >>> print("This is a function")
+    This is a function
+    
 It is also possible to store the output of a function in a variable for future
 use. Let's try this with the built in function `len()`, which will provide us
 with the length of a string:
 
-	>>> length_of_my_string = len("This is my string")
-	>>> print(length_of_my_string)
-	17
+    >>> length_of_my_string = len("This is my string")
+    >>> print(length_of_my_string)
+    17
 
 The function `len()` takes one *argument*: the string it's measuring, and it
 returns an *integer*: the length of the string.  Here, we're storing the output
