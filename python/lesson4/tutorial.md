@@ -13,16 +13,16 @@ later to run these statements. Python comes with plenty of functions already
 built in that you can use to perform common tasks. One example should be
 something you're already familiar with:
 
-	>>> print("This is a function")
-	This is a function
-	
+    >>> print("This is a function")
+    This is a function
+    
 It is also possible to store the output of a function in a variable for future
 use. Let's try this with the built in function `len()`, which will provide us
 with the length of a string:
 
-	>>> length_of_my_string = len("This is my string")
-	>>> print(length_of_my_string)
-	17
+    >>> length_of_my_string = len("This is my string")
+    >>> print(length_of_my_string)
+    17
 
 The function `len()` takes one *argument*: the string it's measuring, and it
 returns an *integer*: the length of the string.  Here, we're storing the output
@@ -133,7 +133,7 @@ effort of defining and calling a function, rather than just writing the code
 independent of such things. Defining tasks as functions reduces the need to
 copy and paste the same code multiple times to achieve the same effect. Simply
 calling the function multiple times makes it much easier to not only write
-code, but to read it also.
+code, but to read it as well.
 
 Using functions also makes it a lot easier to fix and change code. If you are
 performing the same tasks in multiple places and discover a bug, without
