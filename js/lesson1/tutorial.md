@@ -222,7 +222,7 @@ var var = 1;
 Start by typing this on the console:
 
 ```js
-function hello() { console.log('Hello!'); }
+function sayHello() { console.log('Hello!'); }
 ```
 
 It won't do anything just yet. This thing is a **function
@@ -232,7 +232,7 @@ definition**. You can recognise it because it starts with the word
 Now try typing this:
 
 ```js
-hello();
+sayHello();
 ```
 
 This thing is a **function call**. You can recognise it because
@@ -243,7 +243,7 @@ definition all on one line because that's all the space you have in
 the console, but the normal way to write one is like this:
 
 ```js
-function hello() {
+function sayHello() {
   console.log('Hello!');
 }
 ```
@@ -257,7 +257,7 @@ Let's make a larger function. Put this one into `script.js`:
 
 ```js
 function conversation() {
-  hello();
+  sayHello();
   console.log('How are you?');
   console.log('Goodbye');
 }
@@ -273,7 +273,7 @@ Let's get a few words for these things before we move on:
 * `hello` and `conversation` are the **name** of the functions
 * The lines inside the braces `{}` are the **body** of the function
 * Remember from earlier that a function name followed by parentheses,
-  like `hello()`, is a **call**
+  like `sayHello()`, is a **call**
 
 Function names are **identifiers**, the same as variables. That means
 they have exactly the same rules about what names you may give to your
@@ -294,12 +294,12 @@ functions. The word `function` itself is a **keyword**.
 Change your `hello` function definition to look like this:
 
 ```js
-function hello(person) {
+function sayHello(person) {
   console.log('Hello ' + person + '!');
 }
 ```
 
-Now try calling it using `hello('Archibald')`.
+Now try calling it using `sayHello('Archibald')`.
 
 That probably isn't your name. Try calling the function again using
 your own name.
