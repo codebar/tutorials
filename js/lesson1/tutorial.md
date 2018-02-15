@@ -44,7 +44,7 @@ or `Alt + Cmd + I` on Mac. The console should look something like this:
 
 <img src="assets/images/console.png" alt="console example">
 
-The console can appear in several different places. Below is the example of two of them: "docked to bottom", and "docked to right". You can change the location of the console by clicking on the three vertical docs located next to the cross (clicking on the cross will close the console). Their locations are indicated on the picture below.
+The console can appear in several different places. Below is the example of two of them: "docked to bottom", and "docked to right". You can change the location of the console by clicking on the three vertical dots located next to the cross (clicking on the cross will close the console). Their locations are indicated on the picture below.
 
 <img src="assets/images/console-locations.png" alt="console locations">
 
