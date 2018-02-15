@@ -44,6 +44,10 @@ or `Alt + Cmd + I` on Mac. The console should look something like this:
 
 <img src="assets/images/console.png" alt="console example">
 
+The console can appear in several different places. Below is the example of two of them: "docked to bottom", and "docked to right". You can change the location of the console by clicking on the three vertical docs located next to the cross (clicking on the cross will close the console). Their locations are indicated on the picture below.
+
+<img src="assets/images/console-locations.png" alt="console locations">
+
 ## Writing your first line of JavaScript
 
 The console is a place where you can type a single line of JavaScript,
@@ -59,7 +63,7 @@ You should see something that looks something like this:
 <img src="assets/images/console-hello.png" alt="console hello example">
 
 Your screen might not look exactly the same as this, but it should
-have the same three lines of text at the bottom. If you don't see
+have the same three lines of text in the console. If you don't see
 this, get your coach to help you.
 
 A few important things have happened here, which we're going to go
