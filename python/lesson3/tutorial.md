@@ -292,10 +292,10 @@ These are sort of like tuples: you can't edit them, and if you want to do
 anything with them other than read them as a complete entity, you'll have to
 cast them as a list:
 
-    >>> print(list(my_phone_book.keys()))
+    >>> print(list(my_phone_book.values()))
     ['+3206785246863', '+14357535455', '+244562726258', '+4407485376242']
 
-    >>> print(list(my_phone_book.keys())[2])
+    >>> print(list(my_phone_book.values())[2])
     '+244562726258'
 
 The last one there, `.items()` is interesting.  It returns all of the data in
