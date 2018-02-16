@@ -105,7 +105,7 @@ function that returns a value:
     ...    return "My name is " + name
 
 Now the function returns a value that we can work with. We could store this in
-a value to be used later. Let's try storing it as a value, and using that value
+a variable to be used later. Let's try storing it as a value, and using that value
 as a parameter in another `print()` function call.
 
     >>> statement = get_statement("Lisa")
@@ -118,7 +118,7 @@ script, simply calling the function without a print statement would not print
 anything to the screen. This is because the function is returning a value, and
 no longer printing a string.
 
-A subtle indicator of this is the quote marks around the sentence that denotes
+A subtle indicator of this are the quote marks around the sentence that denotes
 a string is being output to the screen, rather than something being printed
 with the print function:
 
@@ -128,7 +128,7 @@ with the print function:
 
 ## Why use functions
 
-At first glance it may not seem obvious why it is worth expending the extra
+At first glance it may not seem obvious why it's worth expending the extra
 effort of defining and calling a function, rather than just writing the code
 independent of such things. Defining tasks as functions reduces the need to
 copy and paste the same code multiple times to achieve the same effect. Simply
