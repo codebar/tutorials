@@ -285,6 +285,13 @@ manageable parts.  Thankfully, Python has you covered with `.keys()`,
     >>> print(my_phone_book.items())
     dict_items([('Arya', '+4407485376242'), ('Brienne', '+3206785246863'), ('Cersei', '+14357535455'), ('Davos', '+244562726258')])
 
+> **Important**: dictionaries are *unordered*, which means that while it may
+> seem reasonable that you've defined `my_phone_book` above with the keys
+> ordered alphabetically, *that's not now how Python stores them*, so the
+> results above may differ in order from your output.  Typically if you need
+> your dictionary to be ordered, you'll use a list of lists, or an
+> `OrderedDict` (a topic for another day). 
+
 As you can see, `.keys()` and `.values()` do what you'd expect: they return the
 keys and values respectively.  You may have noticed however that rather than a
 `list` or a `tuple`, these methods return `dict_keys` and `dict_values` types.
