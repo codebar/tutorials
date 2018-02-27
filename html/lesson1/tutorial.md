@@ -250,8 +250,8 @@ Add this underneath the ordered list about why we like owls.
 
 ## Formatting text
 
-We can also **emphasise** or make text *important*.
-For emphasis we use `<strong>` and for importance `<em>`
+We can also *emphasise* or make text **important**.
+For emphasis we use `<em>` and for importance `<strong>`
 
 Let's emphasise some of the content of your paragraph
 
