@@ -231,7 +231,7 @@ function sayHello() { console.log('Hello!'); }
 
 It won't do anything just yet. This thing is a **function
 definition**. You can recognise it because it starts with the word
-`function`. It creates a new function named `hello`.
+`function`. It creates a new function named `sayHello`.
 
 Now try typing this:
 
@@ -240,7 +240,8 @@ sayHello();
 ```
 
 This thing is a **function call**. You can recognise it because
-it's a name with `()` immediately afterwards. Try calling `hello` again.
+it's a name with `()` immediately afterwards. Try calling `sayHello`
+again.
 
 Let's move some of this into `script.js`. We wrote the function
 definition all on one line because that's all the space you have in
@@ -253,9 +254,9 @@ function sayHello() {
 ```
 
 Put that into `script.js` and reload the page. Now just try calling
-the `hello` function on the console, without doing anything else. You
-should see that it still works, using the definition that you put into
-`script.js`.
+the `sayHello` function on the console, without doing anything else.
+You should see that it still works, using the definition that you put
+into `script.js`.
 
 Let's make a larger function. Put this one into `script.js`:
 
@@ -274,7 +275,7 @@ definition.
 
 Let's get a few words for these things before we move on:
 
-* `hello` and `conversation` are the **name** of the functions
+* `sayHello` and `conversation` are the **name** of the functions
 * The lines inside the braces `{}` are the **body** of the function
 * Remember from earlier that a function name followed by parentheses,
   like `sayHello()`, is a **call**
@@ -295,7 +296,7 @@ functions. The word `function` itself is a **keyword**.
 
 ## Function parameters
 
-Change your `hello` function definition to look like this:
+Change your `sayHello` function definition to look like this:
 
 ```js
 function sayHello(person) {
@@ -342,9 +343,9 @@ the value that was given to `return`. If the function got to the end
 without ever seeing `return` then the value of the call will just be
 `undefined`.
 
-Now change your `hello` function to use this new `greeting` function,
-instead of having the message in it. Check that `conversation` still
-works afterwards.
+Now change your `sayHello` function to use this new `greeting`
+function, instead of having the message in it. Check that
+`conversation` still works afterwards.
 
 ## Multiple function parameters
 
