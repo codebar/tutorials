@@ -41,7 +41,9 @@ Most modern browsers support JavaScript's localStorage, but before you start usi
 ```javascript
 function supports_html5_storage() {
   try {
-    return 'localStorage' in window && window['localStorage'] !== null;
+    localStorage.setItem('codebar', 'test_value');
+    localStorage.removeItem('codebar');
+    return true;
   } catch (e) {
     return false;
   }
@@ -54,7 +56,7 @@ Storing and retrieving data is quite simple as localStorage stores key/value pai
 ```javascript
 localStorage.setItem('name', 'Johannah');
 
-localStorage.getItem('name');
+var name = localStorage.getItem('name');
 ```
 
 ## Effects
@@ -85,7 +87,7 @@ Some popular API's that you may find useful
 
 - [Twilio](https://www.twilio.com/docs/api/rest) Initiate calls and send text messages.
 
-- [Twitter](https://dev.twitter.com/docs/api/1.1) search Twitter, retrieve and send your tweets and a lot more.
+- [Twitter](https://developer.twitter.com/en/docs.html) search Twitter, retrieve and send your tweets and a lot more.
 - [Spotify](https://developer.spotify.com/technologies/web-api/) Explore Spotify's music catalog and retrieve track, album and artist data.
 
 - [Instagram](https://instagram.com/developer/endpoints/) Search and retrieve images from Instagram.
