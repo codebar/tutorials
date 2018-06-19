@@ -10,7 +10,7 @@ making.
 
 Python allows us to store data in something called variables so that we are
 able to use this data at a later point. To place an item in a variable we give
-it a name then set its value. 
+it a name then set its value.
 
 Now in the REPL type:
 
@@ -34,7 +34,7 @@ Now in the REPL type the following:
     >>> costs = 200
     >>> profit = revenue - costs
 
-Now type `profit` to see the results of this calculation. 
+Now type `profit` to see the results of this calculation.
 
 Now work out the cost of running a codebar workshop if 60 people turned up and
 pizza cost £8 per 2 people?
@@ -45,7 +45,7 @@ could go into this calculation?
 ## Storing text in variables
 
 As well as numbers variables are able to store text, known in Python as
-strings. 
+strings.
 
 Now in the REPL type:
 
@@ -79,9 +79,9 @@ not.
 Python is what's called a "typed language".  This is to say that there are
 multiple *types* of objects that you work with in Python, and they don't all
 act the same way.  The three types you've learnt so far are *integers* (`int`),
-*floats* (`float`), and *strings* (`str`). Integers are whole numbers, floats 
-are numbers with a decimal point, and strings are any number of characters 
-surrounded by either "" or ''. This is important to know because every Python 
+*floats* (`float`), and *strings* (`str`). Integers are whole numbers, floats
+are numbers with a decimal point, and strings are any number of characters
+surrounded by either "" or ''. This is important to know because every Python
 programmer has tried to do this at least once in their career:
 
     "7" + 8
@@ -119,9 +119,9 @@ of these for the final part of this tutorial.
 ## Storing user input in variables
 
 Now we are going to look at capturing user input using the python input
-command. Let's create a variable in which to store the user input. 
+command. Let's create a variable in which to store the user input.
 
-Now type this into your REPL: 
+Now type this into your REPL:
 
     >>> lucky_number = input("What is your lucky number? ")
 
@@ -138,7 +138,7 @@ Now try:
     >>> my_name = input("What is your name? ")
     >>> greeting = "Hello " + my_name
 
-Then type `greeting` into your REPL to receive your message. 
+Then type `greeting` into your REPL to receive your message.
 
 ## Decision making using variables
 
@@ -147,7 +147,8 @@ around with decision making and changing prints based on your answer. In Python
 (and many other languages), one of the most common ways in which this is done
 is using an `if` statement. For example:
 
-    >>> if number > 3:
+    >>> number = 4
+    ... if number > 3:
     ...     print("Bigger than three")
     ... elif number < 3:
     ...     print("Smaller than three")
@@ -170,7 +171,7 @@ Let's create a variable called `coffee` and put your coffee cup total into it:
     >>> coffee = input("How many cups of coffee have you consumed today? ")
 
 Now we'll use some simple if/else logic to decide what to say about your
-drinking habits: 
+drinking habits:
 
     >>> if int(coffee) > 4:
     ...     print("You have a coffee problem")
