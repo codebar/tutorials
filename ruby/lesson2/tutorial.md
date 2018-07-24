@@ -130,22 +130,6 @@ puts "Total time #{duration} seconds"
 puts "#{duration/turns} seconds per problem"
 ```
 
-### Bonus
-
-At the beginning of the game ask for the number of turns. If return is pressed default to 0.
-
-> To default value of a variable, only if the variable empty you can use the `||=` operant. This is called lazy loading.
-
-```ruby
-# here the number will get assigned to 1 as its value is nil
-number = nil
-number ||= 1
-
-# The number will not get assigned to 1 because it already has a value
-number = 2
-number ||= 1
-```
-
 ## Reading and writing to a file
 
 In Ruby we can use the `File` object to read and write to files.
