@@ -49,7 +49,7 @@ To get all the numbers from 1 up to 5, excluding 5.
 
 ### `Random.rand()`
 
-Random is an interface to a number generator. The `rand()` method takes in an integer value **max**. It returns an integer greater than zero and less than **max**. You can also use a **range** as a parameter.
+Random is an interface to a number generator. The `rand()` method takes in an integer value **max**. It returns an integer greater or equal than zero and less than **max**. You can also use a **range** as a parameter.
 
 ```ruby
 Random.rand(5..10)
