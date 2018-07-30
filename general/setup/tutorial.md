@@ -67,4 +67,6 @@ $ sudo pacman -S ruby
 
 ## Python (optional)
 
-Python usually comes with your operating system. Your coach will show you how to use it to run execute Python code.
+For Mac and Linux users, Python usually comes with your operating system. Your coach will show you how to use it to run execute Python code.
+
+For Windows users, Python will need to be installed. Your coach will show you how to install this.
