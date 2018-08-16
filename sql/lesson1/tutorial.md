@@ -158,5 +158,7 @@ SELECT * FROM MOVIE WHERE duration > 120 AND (genre = "Sci-Fi" OR genre = "Drama
 
 ### #fiddle-5b75dd36bfae7178jkx0i87f
 
+```SQL
 CREATE TABLE MOVIE (name text not null, genre text, director text, duration number, language text);
 INSERT INTO MOVIE (name, genre, director,duration,language) VALUES ("Titanic","Drama","James Cameron",194,"en"),("Star Wars","Action","George Lucas",121,"en"),("2001: A Space Odyssey","Sci-Fi","Stanley Kubrick",149,"en"),("Nueve Reinas","Drama","Fabian Bielinsky",114,"es");
+```
