@@ -1,5 +1,4 @@
 SQL student path
-https://github.com/codebar/tutorials/pull/129
 
 Lesson 1:
 - Explanation of the lessons. "By the end of this lessons you'll be able to: ..."

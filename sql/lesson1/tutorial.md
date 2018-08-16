@@ -143,7 +143,7 @@ Can you combine conditions? **of course**. But you need to know the logical conc
 SELECT * FROM MOVIE WHERE language = "es" OR genre = "Action";
 ```
 
-Study the rows you got. Why did you get _Star Wars_ if it is in English? Why did you get _Nueve Reinas_ if it's in a Drama?
+Study the rows you got. Why did you get _Star Wars_ if it is in English? Why did you get _Nueve Reinas_ if it's a Drama?
 Try the **AND** one now. Can you think of other combinations? Can you use OR and AND in the same SQL?
 
 What do you think this query will return? Can you predict the result before running it?
