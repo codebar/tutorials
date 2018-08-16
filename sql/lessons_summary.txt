@@ -1,5 +1,8 @@
 SQL student path
 
+https://markdown-here.com/livedemo.html
+https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
+
 Lesson 1:
 - Explanation of the lessons. "By the end of this lessons you'll be able to: ..."
 - What is SQL?
