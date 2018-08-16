@@ -1,0 +1,101 @@
+SQL student path
+https://github.com/codebar/tutorials/pull/129
+
+Lesson 1:
+- Explanation of the lessons. "By the end of this lessons you'll be able to: ..."
+- What is SQL?
+- What can it do?
+- What is a Database?
+- Short explanation about https://sqliteonline.com/
+- Columns and rows
+- SELECT (including columns and row filtering): WHERE statement: =, !=, IN, NOT IN.
+- ORDER BY, LIMIT
+- NULL value
+- ANNEX: Data set in SQL command lines in case they want to load it in other DB.
+- SELECT exercises: Report requirements so they build the query. The expected output can be provided so they can validate the correctness of the query.
+    - Show all the data available of all the persons.
+    - Show the name and last name of all the persons. Sort the result by last name in ascending order, in case of equal last name sort by first name.
+    - Show the name and last name of all the persons 20 years old or above.
+    - Show the name and last name of all the persons living in UK.
+    - Show the name and last name of all the persons not living in their birth place.
+    - Show the distinct studies of all the persons.
+    - Show the distinct studies of female biological born persons.
+    - Show the last name and the biological sex of the person with higher number of children.
+    - Show the country of birth of the oldest person.
+    - Show the age of the oldest person.
+    - Show the locations cities in UK.
+    - Show all the host names.
+    - Show the host name and the student capacity. Sort the result in descending order.
+    - Pick a host ID and show the dates where workshops were held there. Order the result chronologically.
+    - Show the distinct ID of the persons that positively RSVP but then they did not show up (attendance = false).
+
+Lesson 2:
+- Functions in WHERE clause: MAX, MIN, COUNT, AVG
+- Functions in SELECT clause: UPPER,
+- GROUP BY
+- HAVING
+- Exercises:
+    - Show the number of persons not living in their birth country.
+    - Show the average age of the people.
+    - Show the age of the oldest person. (Find a different way to the one use in Lesson 1).
+    - Show the number of female, intersex, and male born persons.
+    - Show the number of persons per country of residence.
+    - Show the top 5 countries with more residents.
+    - Show the countries having 3 residents or more.
+    - Show the country and number of locations in that country.
+    - Show the workshop id and the date of the latest RSVP per workshop.
+    - Show the distinct studies capitalized.
+    - Show the biological sex of the 3 youngest persons.
+    - Show the number of persons of each age. Sort the result in descending order by number of persons.
+
+Lesson 3:
+- Joining tables. PRODUCT, JOIN, LEFT JOIN
+- Table aliases
+- EXISTS clause
+
+Lesson 4:
+- Views. Their benefits
+- How to create views.
+-
+
+Lesson 5:
+- DDL. Extending existing tables (coach_id and tutorial_id in RSVP table)
+- DDL. Creating your own tables (WORKSHOP_ORGANIZERs, TUTORIALs, SKILLs table)
+- PRIMARY KEYs, FOREIGN KEYs
+- How to model your data. https://www.youtube.com/watch?v=UrYLYV7WSHM
+
+Lesson 6:
+- Installing SQL lite locally
+- Connecting Python/Ruby to SQLite
+- Executing queries from Python/Ruby
+
+Lesson 7:
+- Refactoring the data model:
+    - Can a student work in more than one tutorial in the same workshop with this data model?
+    - Can a host change their capacity for each workshop?
+    - Can Skills be normalized to a new table?
+    - Is storing the age of a person a good idea? what happens in one year from now?
+    - Is storing the number_of_children of a person a good idea? Isn't it better to normalize it? How could it be modeled to link a PERSON (the children) to other PERSON(s) (the parent(s))?
+
+Data Model:
+--- Lesson 1 onwards ---
+
+PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+
+LOCATION (id, city, country, start_date)
+
+HOST (id, name, location_id, students_capacity, coaches_capacity, contact_person)
+
+WORKSHOP (id, host_id, date)
+
+RSVP (id, person_id, workshop_id, date_of_rsvp, attendance)
+
+--- Lesson 5 onwards ---
+
+WORKSHOP_ORGANIZER (id, workshop_id, person_id )
+
+TUTORIAL (id, tech, lesson_number)
+
+RSVP (id, person_id, workshop_id, date_of_rsvp, attendance, coach_id, tutorial_id)
+
+SKILL (id, person_id, skill, level)
