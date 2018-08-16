@@ -132,6 +132,7 @@ Do you get all the rows from the table? Which ones you don't get?
 Try out the other operators examples. See what happens.
 
 Can you combine conditions? **of course**. But you need to know the logical concatenations **OR** and **AND**.
+
 | Symbol  | Meaning                                                 | Example                             |
 |:-------:| -----------                                             | ---------                           |
 | OR      | At least one of the expressions around it must be true  | language = "es" OR genre = "Action" |
