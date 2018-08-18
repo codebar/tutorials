@@ -154,6 +154,73 @@ SELECT * FROM MOVIE WHERE duration > 120 AND (genre = "Sci-Fi" OR genre = "Drama
 
 (To be continued. See ../lessons_summary.txt for details of what is missing here)
 
+## Lesson 1 exercises
+
+For the exercises below, we'll use two new tables: PERSON and LOCATIONS. These two tables could be codebar.io database. Lesson after lesson we'll be adding tables or extending the existing ones to construct the whole database by the end of this tutorial.
+
+### PERSON table
+
+PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+
+| id       | first_name     | last_name | age   | biological_sex | country_of_birth | country_of_residence | number_of_children | studies         |
+| :------: | :------------: | :-------: | :---: | :------------: | :--------------: | :------------------: | :----------------: | :-----:         |
+|1         | Emma           |Smith      |18     |Female          |UK                |UK                    |1                   |Computer science |
+|2         | Noah           |Johnson    |21     |Male            |UK                |US                    |0                   |Accountancy      |
+|3         | Liam           |Williams   |23     |Male            |ES                |UK                    |0                   |Maths            |
+|4         | Olivia         |Jones      |21     |Female          |AR                |PT                    |1                   |Arts             |
+|5         | William        |Brown      |25     |Male            |BR                |BR                    |1                   |Photography      |
+|6         | Sophia         |Davis      |30     |Female          |PT                |UK                    |2                   |NULL             |
+|7         | Jacob          |Miller     |35     |Male            |NL                |NL                    |2                   |Graphic designer |
+|8         | Mason          |Wilson     |42     |Intersex        |FR                |FR                    |3                   |NULL             |
+|9         | Mia            |Moore      |50     |Female          |US                |UK                    |4                   |Law              |
+|10        | Abigail        |Moore      |28     |Female          |CA                |ES                    |2                   |Law              |
+|11        | Michael        |Anderson   |22     |Intersex        |IT                |IT                    |1                   |Human Resources  |
+|...       | ...            |...        |...    |...             |...               |...                   |...                 |...              |
+|40        | Benjamin       |Taylor     |30     |Male            |ES                |IT                    |1                   |Computer science |
+
+### LOCATION table
+
+LOCATION (id, city, country, start_date)
+
+| id    | city         | country | start_date    |
+| :---: | :----------: | :-----: | :-----------: |
+| 1     | London       | UK      | 2013-06-01    |
+| 2     | Brighton     | UK      | 2013-10-01    |
+| 3     | Cambridge    | UK      | 2014-01-01    |
+| 4     | New York     | US      | 2015-05-01    |
+| 5     | Manchester   | UK      | 2015-07-01    |
+| 6     | West London  | UK      | 2015-10-01    |
+| 7     | West London  | UK      | 2015-10-01    |
+| 8     | Bournemouth  | UK      | 2015-10-01    |
+| 9     | Edinburgh    | UK      | 2016-11-01    |
+| 10    | Barcelona    | ES      | 2017-01-01    |
+| 11    | Berlin       | DE      | 2017-02-01    |
+| 12    | Glasgow      | UK      | 2017-06-01    |
+| 13    | Oxford       | UK      | 2017-08-01    |
+| 14    | Sydney       | AU      | 2017-10-01    |
+| 15    | Kent         | UK      | 2017-12-01    |
+| 16    | Helsinki     | FI      | 2018-01-01    |
+| 17    | Oslo         | NO      | 2018-02-01    |
+| 18    | Accra        | GH      | 2018-03-01    |
+| 19    | Norwich      | UK      | 2018-05-01    |
+
+## Write the following queries
+
+Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5b7840f9bfb0b178jkzlqxor
+
+* L1.1 Show all the data available of all the persons.
+* L1.2 Show the name and last name of all the persons 23 years old or above.
+* L1.3 Show the name and last name of all the persons living in UK.
+* L1.4 Show the name and last name of all the persons not living in their birth place.
+* L1.5 Show the distinct studies of all the persons.
+* L1.6 Show the distinct studies of female biological born persons.
+* L1.7 Show the locations cities in UK.
+
+---
+This ends our **SQL Lesson 1**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+---
+
 ## ANNEX
 
 ### #fiddle-5b75dd36bfae7178jkx0i87f
@@ -161,4 +228,59 @@ SELECT * FROM MOVIE WHERE duration > 120 AND (genre = "Sci-Fi" OR genre = "Drama
 ```SQL
 CREATE TABLE MOVIE (name text not null, genre text, director text, duration number, language text);
 INSERT INTO MOVIE (name, genre, director,duration,language) VALUES ("Titanic","Drama","James Cameron",194,"en"),("Star Wars","Action","George Lucas",121,"en"),("2001: A Space Odyssey","Sci-Fi","Stanley Kubrick",149,"en"),("Nueve Reinas","Drama","Fabian Bielinsky",114,"es");
+```
+
+### #fiddle-5b7840f9bfb0b178jkzlqxor
+```SQL
+CREATE TABLE PERSON (
+    id INTEGER not null,
+    first_name VARCHAR(20) not null,
+    last_name VARCHAR(20) not null,
+    age SMALLINT,
+    biological_sex VARCHAR(8),
+    country_of_birth VARCHAR(2),
+    country_of_residence VARCHAR(2),
+    number_of_children SMALLINT,
+    studies VARCAHR(30)
+);
+
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (1,"Emma","Smith",18,"Female","UK","UK",1,"Computer science");
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (2," Noah","Johnson",21,"Male","UK","US",0,"Accountancy");
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (3," Liam","Williams",23,"Male","ES","UK",0,"Maths");
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (4," Olivia","Jones",21,"Female","AR","PT",1,"Arts");
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (5," William","Brown",25,"Male","BR","BR",1,"Photography");
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (6," Sophia","Davis",30,"Female","PT","UK",2,NULL);
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (7," Jacob","Miller",35,"Male","NL","NL",2,"Graphic designer");
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (8," Mason","Wilson",42,"Intersex","FR","FR",3,NULL);
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (9," Mia","Moore",50,"Female","US","UK",4,"Law");
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (10," Abigail","Moore",28,"Female","CA","ES",2,"Law");
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (11," Michael","Anderson",22,"Intersex","IT","IT",1,"Human Resources");
+INSERT INTO PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (40," Benjamin","Taylor",30,"Male","ES","IT",1,"Computer science");
+
+CREATE TABLE LOCATION (
+  id INTEGER not null,
+  city VARCAHR(20) not null,
+  country  VARCHAR(2) not null,
+  start_date DATE
+);
+
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (1,"London","UK","2013-06-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (2,"Brighton","UK","2013-10-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (3,"Cambridge","UK","2014-01-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (4,"New York","US","2015-05-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (5,"Manchester","UK","2015-07-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (6,"West London","UK","2015-10-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (7,"West London","UK","2015-10-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (8,"Bournemouth","UK","2015-10-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (9,"Edinburgh","UK","2016-11-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (10,"Barcelona","ES","2017-01-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (11,"Berlin","DE","2017-02-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (12,"Glasgow","UK","2017-06-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (13,"Oxford","UK","2017-08-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (14,"Sydney","AU","2017-10-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (15,"Kent","UK","2017-12-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (16,"Helsinki","FI","2018-01-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (17,"Oslo","NO","2018-02-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (18,"Accra","GH","2018-03-01");
+INSERT INTO LOCATION (id, city, country, start_date) VALUES (19,"Norwich","UK","2018-05-01");
 ```
