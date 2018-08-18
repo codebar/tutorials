@@ -21,7 +21,7 @@ During this tutorial, we'll provide you the basic commands and explanations. If 
 
 ## About Lesson 1
 
-_Lesson 1_ will be an introduction to SQL and its querying possibilities. You'll work with an online database already filled in with some data and you'l focus in the **SELECT** operator. But before doing so, you'll learn what a **TABLE** is and how it is structured. At the end, you'll find some exercises to _capture_ the knowledge.
+_Lesson 1_ will be an introduction to SQL and its querying possibilities. You'll work with an online database already filled in with some data and you'll focus in the **SELECT** operator. But before doing so, you'll learn what a **TABLE** is and how it is structured. At the end, you'll find some exercises to _capture_ the knowledge.
 
 ## What is a sql? and a Database?
 
@@ -54,13 +54,13 @@ The first and more trivial SQL statement you'll learn allows you to show all the
 This is the minimum syntax of this type of statement:
 
 ```SQL
-SELECT {column} FROM {table name};
+SELECT {columns} FROM {table name};
 ```
 
 Where:
 
 * **SELECT** is the first reserved word you'll learn. This word tells the SQL parser that a query statement is coming.
-* **{column}** can be a _column_ list (separated by commas), or * meaning _every column_,
+* **{columns}** can be a _column_ list (separated by commas), or * meaning _every column_,
 * **FROM** is the second reserved word you'll learn. This word tells the SQL parser that after a table name is coming.
 * **{table name}** must be the name of one of the _TABLE_ in the database.
 
@@ -151,8 +151,6 @@ What do you think this query will return? Can you predict the result before runn
 ```SQL
 SELECT * FROM MOVIE WHERE duration > 120 AND (genre = "Sci-Fi" OR genre = "Drama");
 ```
-
-(To be continued. See ../lessons_summary.txt for details of what is missing here)
 
 ## Lesson 1 exercises
 
