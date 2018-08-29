@@ -123,28 +123,11 @@ SELECT * FROM PERSON where studies IS NOT NULL;
 
 Study the results of each one. Easy huh?
 
-
-Lesson 2:
-- SELECT exercises:
-    - Show the name and last name of all the persons. Sort the result by last name in ascending order, in case of equal last name sort by first name.
-    - Show the last name and the biological sex of the person with higher number of children.
-    - Show the country of birth of the oldest person.
-    - Show the age of the oldest person.
-    - Show all the host names.
-    - Show the host name and the student capacity. Sort the result in descending order.
-    - Pick a host ID and show the dates where workshops were held there. Order the result chronologically.
-    - Show the top 5 host according to their capacity
-    - Show the distinct ID of the persons that RSVP but then they did not show up (attendance = false).
-
-
-
-
-
-...
+It's time to do some exercises now... :)
 
 ## Lesson 2 exercises
 
-For the exercises below, we'll use the two tables from previous lesson and PERSON and LOCATIONS and we'll introduce three new ones: HOST, WORKSHOP and RSVP.
+For the exercises below, we'll use the two tables from previous lesson: PERSON and LOCATIONS and we'll introduce three new ones: HOST, WORKSHOP and RSVP.
 
 ### HOST table
 
