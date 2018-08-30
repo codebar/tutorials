@@ -364,7 +364,6 @@ Open this fiddle that will have the data shown in the tables above already loade
 * L2.8 Show the top 5 host according to their total capacity (Students + Coaches)
 * L2.9 Show the distinct ID of the persons that RSVP but then they did not show up (attendance = false).
 * L2.10 Show dates where workshops were held in these 3 hosts _Edincode_, _Kanguland_, and _CodeLab_ (TIP: think of the usage of **IN**)
-* L2.11
 
 ---
 This ends our **SQL Lesson 2**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
