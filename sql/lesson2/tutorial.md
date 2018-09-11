@@ -126,7 +126,7 @@ It's time to do some exercises now... :)
 
 ## Lesson 2 exercises
 
-For the exercises below, we'll use the two tables from previous lesson: PERSON and LOCATIONS and we'll introduce three new ones: HOST, WORKSHOP and RSVP.
+For the exercises below, we'll use the two tables from previous lesson: PERSON and LOCATIONS and we'll introduce three new ones: HOST, WORKSHOP and RSVP. The next sections show a few rows as examples of the values. If you want to see the whole table, you'll find the fiddle link and the SELECT statement under each table.
 
 ### HOST table
 
@@ -143,6 +143,11 @@ HOST (id, name, location_id, students_capacity, coaches_capacity, contact_person
 | 7              | Nemosoft       | 2              | 15               | 12               | Martin         |
 | 8              | Sosasoy        | 1              | 15               | 5                | Mercedes       |
 
+https://sqliteonline.com/#fiddle-5b8850d88562dnzvjlh0gn42
+```SQL
+SELECT * FROM HOST;
+```
+
 ### WORKSHOP table
 
 WORKSHOP (id, host_id, date)
@@ -155,22 +160,14 @@ WORKSHOP (id, host_id, date)
 |4|7|2016-05-24|
 |5|4|2016-06-23|
 |6|7|2016-07-21|
-|7|4|2016-10-07|
-|8|4|2016-11-03|
-|9|3|2017-01-19|
-|10|5|2017-02-21|
-|11|4|2017-03-19|
-|12|8|2017-05-05|
-|13|6|2017-06-03|
-|14|4|2017-07-04|
-|15|7|2017-09-05|
-|16|8|2017-10-28|
-|17|2|2017-12-01|
-|18|6|2018-01-02|
-|19|8|2018-01-28|
-|20|1|2018-03-04|
+|...|...|...|
 |21|3|2018-03-23|
 |22|3|2018-06-25|
+
+https://sqliteonline.com/#fiddle-5b8850d88562dnzvjlh0gn42
+```SQL
+SELECT * FROM WORKSHOP;
+```
 
 
 ### RSVP table
@@ -185,173 +182,15 @@ RSVP (id, person_id, workshop_id, date_of_rsvp, attendance)
 |4|4|1|2016-01-22|true|
 |5|8|1|2016-01-25|true|
 |6|7|2|2016-01-30|true|
-|7|2|2|2016-02-03|true|
-|8|15|2|2016-02-06|false|
-|9|15|2|2016-02-16|true|
-|10|11|2|2016-02-17|true|
-|11|10|2|2016-02-18|true|
-|12|10|2|2016-02-25|true|
-|13|15|2|2016-03-03|true|
-|14|4|2|2016-03-08|true|
-|15|17|3|2016-03-15|true|
-|16|14|3|2016-03-24|true|
-|17|13|3|2016-03-25|true|
-|18|11|3|2016-04-01|true|
-|19|7|3|2016-04-06|true|
-|20|1|3|2016-04-15|true|
-|21|9|3|2016-04-17|true|
-|22|3|4|2016-04-18|true|
-|23|11|4|2016-04-19|true|
-|24|5|4|2016-04-25|true|
-|25|1|4|2016-04-29|true|
-|26|4|4|2016-05-04|true|
-|27|5|4|2016-05-09|true|
-|28|4|4|2016-05-16|true|
-|29|4|4|2016-05-20|false|
-|30|9|4|2016-05-24|true|
-|31|4|5|2016-05-25|true|
-|32|2|5|2016-06-04|true|
-|33|11|5|2016-06-12|true|
-|34|5|5|2016-06-16|true|
-|35|1|5|2016-06-17|true|
-|36|19|5|2016-06-22|true|
-|37|3|5|2016-06-23|false|
-|38|4|6|2016-06-29|true|
-|39|12|6|2016-07-06|true|
-|40|19|6|2016-07-13|true|
-|41|5|6|2016-07-21|true|
-|42|1|7|2016-07-26|true|
-|43|8|7|2016-08-01|true|
-|44|3|7|2016-08-09|true|
-|45|6|7|2016-08-19|true|
-|46|18|7|2016-08-25|true|
-|47|15|7|2016-08-27|true|
-|48|12|7|2016-09-04|true|
-|49|13|7|2016-09-12|true|
-|50|4|7|2016-09-21|false|
-|51|6|7|2016-09-24|true|
-|52|19|7|2016-10-01|true|
-|53|2|7|2016-10-07|true|
-|54|17|8|2016-10-17|true|
-|55|10|8|2016-10-20|true|
-|56|4|8|2016-10-26|true|
-|57|15|8|2016-10-27|true|
-|58|7|8|2016-11-03|true|
-|59|5|9|2016-11-11|true|
-|60|3|9|2016-11-19|true|
-|61|19|9|2016-11-24|true|
-|62|7|9|2016-12-04|true|
-|63|9|9|2016-12-14|true|
-|64|10|9|2016-12-21|true|
-|65|14|9|2016-12-23|true|
-|66|18|9|2016-12-25|true|
-|67|18|9|2016-12-31|true|
-|68|8|9|2017-01-04|true|
-|69|3|9|2017-01-05|true|
-|70|10|9|2017-01-15|true|
-|71|12|9|2017-01-19|true|
-|72|6|10|2017-01-20|true|
-|73|14|10|2017-01-23|true|
-|74|19|10|2017-01-27|true|
-|75|6|10|2017-02-02|true|
-|76|2|10|2017-02-11|true|
-|77|15|10|2017-02-15|true|
-|78|11|10|2017-02-21|true|
-|79|2|11|2017-02-26|true|
-|80|12|11|2017-03-07|true|
-|81|3|11|2017-03-08|true|
-|82|8|11|2017-03-15|true|
-|83|17|11|2017-03-18|true|
-|84|1|11|2017-03-19|true|
-|85|4|12|2017-03-22|true|
-|86|18|12|2017-03-25|false|
-|87|5|12|2017-03-27|true|
-|88|18|12|2017-04-01|false|
-|89|9|12|2017-04-11|true|
-|90|15|12|2017-04-21|false|
-|91|9|12|2017-04-24|true|
-|92|2|12|2017-05-04|true|
-|93|12|12|2017-05-05|true|
-|94|12|13|2017-05-09|true|
-|95|7|13|2017-05-11|false|
-|96|14|13|2017-05-20|true|
-|97|14|13|2017-05-30|true|
-|98|13|13|2017-06-03|true|
-|99|10|14|2017-06-09|true|
-|100|7|14|2017-06-14|false|
-|101|6|14|2017-06-21|true|
-|102|3|14|2017-06-25|true|
-|103|1|14|2017-07-02|true|
-|104|11|14|2017-07-04|true|
-|105|12|15|2017-07-05|true|
-|106|17|15|2017-07-10|true|
-|107|3|15|2017-07-11|true|
-|108|16|15|2017-07-16|true|
-|109|1|15|2017-07-23|true|
-|110|18|15|2017-07-28|false|
-|111|11|15|2017-08-04|true|
-|112|4|15|2017-08-10|true|
-|113|9|15|2017-08-14|true|
-|114|1|15|2017-08-24|true|
-|115|6|15|2017-08-30|true|
-|116|4|15|2017-09-05|true|
-|117|18|16|2017-09-13|true|
-|118|3|16|2017-09-18|true|
-|119|1|16|2017-09-27|true|
-|120|19|16|2017-10-01|false|
-|121|2|16|2017-10-03|true|
-|122|5|16|2017-10-06|true|
-|123|11|16|2017-10-14|true|
-|124|6|16|2017-10-22|true|
-|125|18|16|2017-10-24|true|
-|126|7|16|2017-10-28|true|
-|127|10|17|2017-11-01|false|
-|128|4|17|2017-11-09|true|
-|129|10|17|2017-11-13|true|
-|130|12|17|2017-11-14|true|
-|131|10|17|2017-11-21|true|
-|132|2|17|2017-11-23|true|
-|133|6|17|2017-12-01|false|
-|134|8|18|2017-12-09|true|
-|135|12|18|2017-12-12|false|
-|136|16|18|2017-12-20|true|
-|137|13|18|2017-12-30|true|
-|138|11|18|2018-01-02|true|
-|139|19|19|2018-01-08|true|
-|140|7|19|2018-01-14|true|
-|141|7|19|2018-01-20|true|
-|142|9|19|2018-01-25|true|
-|143|1|19|2018-01-28|true|
-|144|9|20|2018-02-07|false|
-|145|17|20|2018-02-10|true|
-|146|10|20|2018-02-13|true|
-|147|13|20|2018-02-20|true|
-|148|7|20|2018-02-23|true|
-|149|14|20|2018-02-26|true|
-|150|1|20|2018-03-04|false|
-|151|13|21|2018-03-11|true|
-|152|8|21|2018-03-17|true|
-|153|6|21|2018-03-21|true|
-|154|8|21|2018-03-22|true|
-|155|6|21|2018-03-23|true|
-|156|6|22|2018-04-02|true|
-|157|13|22|2018-04-03|true|
-|158|11|22|2018-04-09|true|
-|159|17|22|2018-04-18|true|
-|160|18|22|2018-04-21|true|
-|161|4|22|2018-04-28|true|
-|162|7|22|2018-05-01|true|
-|163|9|22|2018-05-11|true|
-|164|17|22|2018-05-13|false|
-|165|6|22|2018-05-22|true|
-|166|15|22|2018-05-25|true|
-|167|1|22|2018-05-30|false|
-|168|1|22|2018-06-07|true|
-|169|3|22|2018-06-13|true|
+|...|...|...|...|...|
 |170|3|22|2018-06-15|true|
 |171|12|22|2018-06-18|true|
 |172|3|22|2018-06-25|true|
 
+https://sqliteonline.com/#fiddle-5b8850d88562dnzvjlh0gn42
+```SQL
+SELECT * FROM RSVP;
+```
 
 Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5b8850d88562dnzvjlh0gn42
 * L2.1 Show the name and last name of all the persons. Sort the result by last name in ascending order, in case of equal last name sort by first name.
@@ -371,6 +210,8 @@ This ends our **SQL Lesson 2**. Is there something you don't understand? Try and
 ---
 
 ## ANNEX
+
+As in previous lesson, this sections contains the SQL statements used to create the fiddle with the given reference.
 
 ### #fiddle-5b8850d88562dnzvjlh0gn42
 
@@ -655,5 +496,3 @@ INSERT INTO RSVP (id, person_id, workshop_id, date_of_rsvp, attendance) VALUES (
 INSERT INTO RSVP (id, person_id, workshop_id, date_of_rsvp, attendance) VALUES (171,12,22,'2018-06-18',true);
 INSERT INTO RSVP (id, person_id, workshop_id, date_of_rsvp, attendance) VALUES (172,3,22,'2018-06-25',true);
 ```
-
-SOLUTIONS: https://sqliteonline.com/#fiddle-5b885e9185630nzvjlh2jy9s
