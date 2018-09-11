@@ -43,17 +43,17 @@ SELECT first_name, age FROM PERSON ORDER BY 2 DESC, 1 ASC;
 
 This next query is an example of function. The function **LENGTH** in SQLite returns the length of the string passed as parameter (between the parentheses):
 ```SQL
-SELECT first_name, last_name FROM PERSON ORDER BY LENGTH(first_name) DESC
+SELECT first_name, last_name FROM PERSON ORDER BY LENGTH(first_name) DESC;
 ```
 
 Lets now use an arithmetic expression as a last example of sorting:
 ```SQL
-SELECT first_name, last_name FROM PERSON ORDER BY (age + 2 * number_of_children) DESC
+SELECT first_name, last_name FROM PERSON ORDER BY (age + 2 * number_of_children) DESC;
 ```
 
 TIP: You can also add expressions and functions in the columns to show in the results: Try this out:
 ```SQL
-SELECT first_name, last_name, (age + 2 * number_of_children) FROM PERSON ORDER BY (age + 2 * number_of_children) DESC
+SELECT first_name, last_name, (age + 2 * number_of_children) FROM PERSON ORDER BY (age + 2 * number_of_children) DESC;
 ```
 
 ### Limiting the number of results and paginating
@@ -191,6 +191,7 @@ https://sqliteonline.com/#fiddle-5b8850d88562dnzvjlh0gn42
 ```SQL
 SELECT * FROM RSVP;
 ```
+## Write the following queries
 
 Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5b8850d88562dnzvjlh0gn42
 * L2.1 Show the name and last name of all the persons. Sort the result by last name in ascending order, in case of equal last name sort by first name.

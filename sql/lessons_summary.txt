@@ -25,7 +25,7 @@ Lesson 1:
 Lesson 2:
 - Operators: IN, NOT IN.
 - ORDER BY, LIMIT
-- NULL value, IS and IS NOT 
+- NULL value, IS and IS NOT
 - SELECT exercises:
     - Show the name and last name of all the persons. Sort the result by last name in ascending order, in case of equal last name sort by first name.
     - Show the last name and the biological sex of the person with higher number of children.
@@ -66,7 +66,11 @@ Lesson 4:
 Lesson 5:
 - Views. Their benefits
 - How to create views.
--
+- HAVING
+
+- Exercises:
+    - Show the top 5 countries with more residents.
+    - Show the countries having 3 residents or more.
 
 Lesson 6:
 - DDL. Extending existing tables (coach_id and tutorial_id in RSVP table)
