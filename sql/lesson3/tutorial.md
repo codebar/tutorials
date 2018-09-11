@@ -11,7 +11,7 @@ _Lesson 3_ will extend your knowledge of the **SELECT** operator by explaining s
 ### Using aggregation Functions
 When you want to start analyzing your data, it might be handy to be able to find some figures among your records. Figures like maximum, average or minimum values; or simply the total number of records in a table. To accomplish that, you can use some SQL basic Functions
 
-#### COUNT function
+#### Using COUNT function
 
 **COUNT** function returns the number of records in the result. Open this lesson fiddle (https://sqliteonline.com/#fiddle-5b8850d88562dnzvjlh0gn42) and run the following query. We'll analyze the result right after.
 
@@ -28,7 +28,7 @@ SELECT COUNT(*) FROM PERSON WHERE biological_sex = 'Female';
 
 Which records is the COUNT function considering now?
 
-#### MIN, AVG and MAX function
+#### Using MIN, AVG and MAX functions
 
 Similarly, **MIN**, **AVG**, and **MAX** functions will return the minimum, average or maximum value of the given column. Contrary to COUNT, in this case the name of a column must be given as parameter. Look at these examples:
 
@@ -48,7 +48,7 @@ SELECT MAX(age) FROM PERSON WHERE biological_sex = 'Male';
 SELECT AVG(age) FROM PERSON WHERE biological_sex = 'Male';
 ```
 
-#### SUM function
+#### Using SUM function
 
 The last of the most common functions we'll explain here is **SUM**. This function adds all the values for the column given as parameter. SUM(number_of_children), for example, will sum up all the number of children on each row and reply with the total.
 
@@ -100,11 +100,11 @@ SELECT LOWER(first_name) 'First Name', UPPER(last_name) 'Last Name' FROM PERSON;
 
 Look at the next three queries.
 ```SQL
-SELECT MAX(age) FROM PERSON WHERE biological_sex = 'Male';
+SELECT * FROM PERSON WHERE biological_sex = 'Male';
 
-SELECT MAX(age) FROM PERSON WHERE biological_sex = 'Female';
+SELECT * FROM PERSON WHERE biological_sex = 'Female';
 
-SELECT MAX(age) FROM PERSON WHERE biological_sex = 'Intersex';
+SELECT * FROM PERSON WHERE biological_sex = 'Intersex';
 ```
 
 _biological_sex_ has a fixed number of values in the table: Male, Female and Intersex. This column can be used to group records using **GROUP BY** statement as below:
@@ -160,15 +160,20 @@ For the exercises below, we'll use the same tables from previous lesson. You can
 ### Summary of the tables
 
 PERSON (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+
 LOCATION (id, city, country, start_date)
+
 HOST (id, name, location_id, students_capacity, coaches_capacity, contact_person)
+
 WORKSHOP (id, host_id, date)
+
 RSVP (id, person_id, workshop_id, date_of_rsvp, attendance)
+
 HOST (id, name, location_id, students_capacity, coaches_capacity, contact_person)
 
 ## Write the following queries
 
-Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5b8850d88562dnzvjlh0gn42
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5b8850d88562dnzvjlh0gn42
 * L3.1 How many persons are not living in their birth country.
 * L3.2 What is the average age of the persons not living in their birth country.
 * L3.3 Show the age of the oldest person. (Find a different way to the one use in Lesson 2).
