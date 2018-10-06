@@ -117,7 +117,7 @@ DELETE FROM person
 WHERE age < 18;
 ```
 
-## Lesson 3 exercises
+## Lesson 4 exercises
 
 For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
 
