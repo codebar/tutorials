@@ -30,6 +30,8 @@ _Lesson 1_ will be an introduction to SQL and its querying possibilities. You'll
 
 SQL stands for Structured Query Language. As explained above, it is a programming language for interacting with databases. SQL commands can be classified under: data structure; data manipulation; and data querying.
 
+Unlike most programming language it's a declarative language not an imperative one: you describe what you want as a result and you let the computer decide how to do it. 
+
 ## What are databases?
 
 Databases are collections of structured data (tables of information) that are typically [related](https://en.wikipedia.org/wiki/Relational_database). In a nutshell, a database can be considered a relational one, when it is composed of one or more tables.
@@ -73,6 +75,8 @@ Where:
 * **{columns}** is a comma-separated list of columns you want to return, or * meaning _every column_
 * **FROM {table name}** This specifies the source of the data i.e. which table
 
+Please note that a SQL command always end with a ```;```. 
+
 Let's try it out. But first, a short introduction to SqLite.
 
 ### SqLite
@@ -95,6 +99,8 @@ Below this statement you should see the entire database table **movie** displaye
 Hooray!!! You just did your first query! Lets keep going, this is just the beginning!
 
 ### Showing only some columns
+
+In SQL ```*``` means all. A ```SELECT * ...``` means *show me all the columns*. It is really handy when you don't know them!
 
 Now change the * to the name of some columns. Try this:
 ```SQL
