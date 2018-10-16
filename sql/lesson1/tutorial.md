@@ -30,7 +30,7 @@ _Lesson 1_ will be an introduction to SQL and its querying possibilities. You'll
 
 SQL stands for Structured Query Language. As explained above, it is a programming language for interacting with databases. SQL commands can be classified under: data structure; data manipulation; and data querying.
 
-Unlike most programming language it's a declarative language not an imperative one: you describe what you want as a result and you let the computer decide how to do it. 
+Unlike most programming language it's a declarative language not an imperative one: you describe what you want as a result and you let the computer decide how to do it.
 
 ## What are databases?
 
@@ -75,7 +75,7 @@ Where:
 * **{columns}** is a comma-separated list of columns you want to return, or * meaning _every column_
 * **FROM {table name}** This specifies the source of the data i.e. which table
 
-Please note that a SQL command always end with a ```;```. 
+Please note that a SQL command always end with a ```;```.
 
 Let's try it out. But first, a short introduction to SqLite.
 
@@ -223,7 +223,7 @@ location (id, city, country, start_date)
 
 ## Write the following queries
 
-Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5babf45272720o2ajmjn0v4f
+Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bc611a172963o2ajnbxyxvw
 
 * L1.1 Show all the data available of all the persons.
 * L1.2 Show the name and last name of all the persons 23 years old or above.
@@ -250,7 +250,7 @@ CREATE TABLE movie (name text not null, genre text, director text, duration numb
 INSERT INTO movie (name, genre, director,duration,language) VALUES ("Titanic","Drama","James Cameron",194,"en"),("Star Wars","Action","George Lucas",121,"en"),("2001: A Space Odyssey","Sci-Fi","Stanley Kubrick",149,"en"),("Nueve Reinas","Drama","Fabian Bielinsky",114,"es");
 ```
 
-### #fiddle-5babf45272720o2ajmjn0v4f
+### #fiddle-5bc611a172963o2ajnbxyxvw
 ```SQL
 CREATE TABLE person (
     id INTEGER not null,
@@ -265,17 +265,17 @@ CREATE TABLE person (
 );
 
 INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (1,"Emma","Smith",18,"Female","UK","UK",1,"Computer science");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (2," Noah","Johnson",21,"Male","UK","US",0,"Accountancy");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (3," Liam","Williams",23,"Male","ES","UK",0,"Maths");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (4," Olivia","Jones",21,"Female","AR","PT",1,"Arts");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (5," William","Brown",25,"Male","BR","BR",1,"Photography");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (6," Sophia","Davis",30,"Female","PT","UK",2,NULL);
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (7," Jacob","Miller",35,"Male","NL","NL",2,"Graphic designer");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (8," Mason","Wilson",42,"Intersex","FR","FR",3,NULL);
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (9," Mia","Moore",50,"Female","US","UK",4,"Law");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (10," Abigail","Moore",28,"Female","CA","ES",2,"Law");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (11," Michael","Anderson",22,"Intersex","IT","IT",1,"Human Resources");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (40," Benjamin","Taylor",30,"Male","ES","IT",1,"Computer science");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (2,"Noah","Johnson",21,"Male","UK","US",0,"Accountancy");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (3,"Liam","Williams",23,"Male","ES","UK",0,"Maths");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (4,"Olivia","Jones",21,"Female","AR","PT",1,"Arts");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (5,"William","Brown",25,"Male","BR","BR",1,"Photography");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (6,"Sophia","Davis",30,"Female","PT","UK",2,NULL);
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (7,"Jacob","Miller",35,"Male","NL","NL",2,"Graphic designer");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (8,"Mason","Wilson",42,"Intersex","FR","FR",3,NULL);
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (9,"Mia","Moore",50,"Female","US","UK",4,"Law");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (10,"Abigail","Moore",28,"Female","CA","ES",2,"Law");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (11,"Michael","Anderson",22,"Intersex","IT","IT",1,"Human Resources");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (40,"Benjamin","Taylor",30,"Male","ES","IT",1,"Computer science");
 
 CREATE TABLE location (
   id INTEGER not null,

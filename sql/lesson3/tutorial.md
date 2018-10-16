@@ -13,7 +13,7 @@ When you want to start analyzing your data, it might be handy to be able to find
 
 #### Using COUNT function
 
-**COUNT** function returns the number of records in the result. Open this lesson fiddle (https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57) and run the following query. We'll analyze the result right after.
+**COUNT** function returns the number of records in the result. Open this lesson fiddle (https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm) and run the following query. We'll analyze the result right after.
 
 ```SQL
 SELECT COUNT(*) FROM person;
@@ -155,7 +155,7 @@ Does it make sense? How would you change this query to return the oldest and you
 
 ## Lesson 3 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 
 ### Summary of the tables
 
@@ -171,7 +171,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 * L3.1 How many persons are not living in their birth country.
 * L3.2 What is the average age of the persons not living in their birth country.
 * L3.3 Show the age of the oldest person. (Find a different way to the one use in Lesson 2).

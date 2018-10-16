@@ -119,7 +119,7 @@ WHERE age < 18;
 
 ## Lesson 4 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 
 ### Summary of the tables
 
@@ -135,7 +135,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 * L4.1 Update the age of the student named Liam.
 * L4.2 Increase by 1 the age of all the students who were born in Italy.
 * L4.3 Set all last names to uppercase.

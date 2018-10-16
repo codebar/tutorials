@@ -106,7 +106,7 @@ WHERE host.id is NULL;
 
 ## Lesson 5 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 
 ### Summary of the tables
 
@@ -122,7 +122,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 * L5.1 Select the list of workshops that have RSVP records.
 * L5.2 Select students with the list of workshops they have sent an RSVP to.
 * L5.3 Find all workshops that have no RSVP.

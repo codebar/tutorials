@@ -21,7 +21,7 @@ Where:
 * **{expression}** can be a _column_ name, the _column_ position, a function, or an arithmetic expression,
 * **{direction}** is either ASC or DESC, if omitted ASC is assumed.
 
-Using the same database as in Lesson 1 (https://sqliteonline.com/#fiddle-5babf45272720o2ajmjn0v4f), run the following query.
+Using the same database as in Lesson 1 (https://sqliteonline.com/#fiddle-5bc611a172963o2ajnbxyxvw), run the following query.
 ```SQL
 SELECT first_name, age FROM person ORDER BY age DESC;
 ```
@@ -143,7 +143,7 @@ host (id, name, location_id, students_capacity, coaches_capacity, contact_person
 | 7              | Nemosoft       | 2              | 15               | 12               | Martin         |
 | 8              | Sosasoy        | 1              | 15               | 5                | Mercedes       |
 
-https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 ```SQL
 SELECT * FROM host;
 ```
@@ -164,7 +164,7 @@ workshop (id, host_id, date)
 |21|3|2018-03-23|
 |22|3|2018-06-25|
 
-https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 ```SQL
 SELECT * FROM workshop;
 ```
@@ -187,13 +187,13 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 |171|12|22|2018-06-18|true|
 |172|3|22|2018-06-25|true|
 
-https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 ```SQL
 SELECT * FROM rsvp;
 ```
 ## Write the following queries
 
-Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5babf4cd72722o2ajmjn3i57
+Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
 * L2.1 Show the name and last name of all the persons. Sort the result by last name in ascending order, in case of equal last name sort by first name.
 * L2.2 Show the last name and the biological sex of the person with higher number of children.
 * L2.3 Show the country of birth of the oldest person.
@@ -214,7 +214,7 @@ This ends our **SQL Lesson 2**. Is there something you don't understand? Try and
 
 As in previous lesson, this sections contains the SQL statements used to create the fiddle with the given reference.
 
-### #fiddle-5babf4cd72722o2ajmjn3i57
+### #fiddle-5bc611fb72964o2ajnby0vdm
 
 ```SQL
 CREATE TABLE person (
@@ -230,17 +230,17 @@ CREATE TABLE person (
 );
 
 INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (1,"Emma","Smith",18,"Female","UK","UK",1,"Computer science");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (2," Noah","Johnson",21,"Male","UK","US",0,"Accountancy");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (3," Liam","Williams",23,"Male","ES","UK",0,"Maths");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (4," Olivia","Jones",21,"Female","AR","PT",1,"Arts");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (5," William","Brown",25,"Male","BR","BR",1,"Photography");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (6," Sophia","Davis",30,"Female","PT","UK",2,NULL);
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (7," Jacob","Miller",35,"Male","NL","NL",2,"Graphic designer");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (8," Mason","Wilson",42,"Intersex","FR","FR",3,NULL);
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (9," Mia","Moore",50,"Female","US","UK",4,"Law");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (10," Abigail","Moore",28,"Female","CA","ES",2,"Law");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (11," Michael","Anderson",22,"Intersex","IT","IT",1,"Human Resources");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (40," Benjamin","Taylor",30,"Male","ES","IT",1,"Computer science");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (2,"Noah","Johnson",21,"Male","UK","US",0,"Accountancy");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (3,"Liam","Williams",23,"Male","ES","UK",0,"Maths");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (4,"Olivia","Jones",21,"Female","AR","PT",1,"Arts");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (5,"William","Brown",25,"Male","BR","BR",1,"Photography");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (6,"Sophia","Davis",30,"Female","PT","UK",2,NULL);
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (7,"Jacob","Miller",35,"Male","NL","NL",2,"Graphic designer");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (8,"Mason","Wilson",42,"Intersex","FR","FR",3,NULL);
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (9,"Mia","Moore",50,"Female","US","UK",4,"Law");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (10,"Abigail","Moore",28,"Female","CA","ES",2,"Law");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (11,"Michael","Anderson",22,"Intersex","IT","IT",1,"Human Resources");
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (40,"Benjamin","Taylor",30,"Male","ES","IT",1,"Computer science");
 
 CREATE TABLE location (
   id INTEGER not null,
