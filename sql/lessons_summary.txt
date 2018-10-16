@@ -59,11 +59,16 @@ Lesson 3:
     - Show the number of persons of each age. Sort the result in descending order by number of persons.
 
 Lesson 4:
+- Updating data (UPDATE)
+- Inserting data (INSERT)
+- Deletig data (DELETE)
+
+Lesson 5:
 - Joining tables. PRODUCT, JOIN, LEFT JOIN
 - Table aliases
 - EXISTS clause
 
-Lesson 5:
+Lesson 6:
 - Views. Their benefits
 - How to create views.
 - HAVING
@@ -72,18 +77,18 @@ Lesson 5:
     - Show the top 5 countries with more residents.
     - Show the countries having 3 residents or more.
 
-Lesson 6:
+Lesson 7:
 - DDL. Extending existing tables (coach_id and tutorial_id in RSVP table)
 - DDL. Creating your own tables (WORKSHOP_ORGANIZERs, TUTORIALs, SKILLs table)
 - PRIMARY KEYs, FOREIGN KEYs
 - How to model your data. https://www.youtube.com/watch?v=UrYLYV7WSHM
 
-Lesson 7:
+Lesson 8:
 - Installing SQL lite locally
 - Connecting Python/Ruby to SQLite
 - Executing queries from Python/Ruby
 
-Lesson 8:
+Lesson 9:
 - Refactoring the data model:
     - Can a student work in more than one tutorial in the same workshop with this data model?
     - Can a host change their capacity for each workshop?
@@ -104,7 +109,7 @@ WORKSHOP (id, host_id, date)
 
 RSVP (id, person_id, workshop_id, date_of_rsvp, attendance)
 
---- Lesson 6 onwards ---
+--- Lesson 7 onwards ---
 
 WORKSHOP_ORGANIZER (id, workshop_id, person_id )
 
