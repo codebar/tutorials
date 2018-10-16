@@ -5,8 +5,8 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
 
 List of #fiddle
 #fiddle-5babeb117271co2ajmjlm3qn
-#fiddle-5bc611a172963o2ajnbxyxvw
-#fiddle-5bc611fb72964o2ajnby0vdm
+#fiddle-5bc61b5c72967o2ajnbzgc2s
+#fiddle-5bc61b9572968o2ajnbzhjy6
 
 Lesson 1:
 - Explanation of the lessons. "By the end of this lessons you'll be able to: ..."
@@ -66,14 +66,17 @@ Lesson 3:
 Lesson 4:
 - Updating data (UPDATE)
 - Inserting data (INSERT)
-- Deletig data (DELETE)
+- Deleting data (DELETE)
 
 Lesson 5:
 - Joining tables. PRODUCT, JOIN, LEFT JOIN
-- Table aliases
-- EXISTS clause
 
 Lesson 6:
+- Table aliases
+- EXISTS clause
+- GROUP BY in JOINED tables.
+
+Lesson 7:
 - Views. Their benefits
 - How to create views.
 - HAVING
@@ -82,18 +85,18 @@ Lesson 6:
     - Show the top 5 countries with more residents.
     - Show the countries having 3 residents or more.
 
-Lesson 7:
+Lesson 8:
 - DDL. Extending existing tables (coach_id and tutorial_id in RSVP table)
 - DDL. Creating your own tables (WORKSHOP_ORGANIZERs, TUTORIALs, SKILLs table)
 - PRIMARY KEYs, FOREIGN KEYs
 - How to model your data. https://www.youtube.com/watch?v=UrYLYV7WSHM
 
-Lesson 8:
+Lesson 9:
 - Installing SQL lite locally
 - Connecting Python/Ruby to SQLite
 - Executing queries from Python/Ruby
 
-Lesson 9:
+Lesson 10:
 - Refactoring the data model:
     - Can a student work in more than one tutorial in the same workshop with this data model?
     - Can a host change their capacity for each workshop?

@@ -7,6 +7,8 @@ title: Introduction to SQL
 
 Up until now, you've practised selecting data and formatting it but you haven't updated any of it. _Lesson 4_ will show you how to do that with three new operators: **UPDATE** to update existing records, **INSERT** to insert new ones and **DELETE** to delete existing ones.
 
+In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6)
+
 
 ### Updating existing records
 
@@ -14,7 +16,7 @@ When you want to update existing records, SQL offers the **UPDATE** statement, w
 
 ```SQL
 UPDATE table
-SET field1 = value1, field2 = value 2
+SET field1 = value1, field2 = value2
 WHERE condition
 ```
 
@@ -50,7 +52,7 @@ And we can confirm that only Emma was updated.
 
 #### Updating multiple records
 
-Let's assume that both Mia and Abigail had birthdays. We could run two **UPDATE** statements but we notice that they share the same last name so we should be able to to it in one go. In order to do this, we need two things:
+Let's assume that both Mia and Abigail had birthdays. We could run two **UPDATE** statements but we notice that they share the same last name so we should be able to do it in one go. In order to do this, we need two things:
 - A **WHERE** clause that only selects the two records we want to update
 - A **SET** clause that is able to add 1 to their age rather than set them to a set value
 
@@ -94,11 +96,11 @@ VALUES (41, 'Valerie', 'Knight', 44, 'Female', 'UK', 'UK', 0, 'Arts');
 
 #### Explicit form
 
-The downside of the simple form is that the list of values needs to be provided in order and it is sometimes difficult to tell what value is what. By using the explicit form, we can make the code more readable and ensure that it will still work even if new fields are added to the schema. So let's insert a record for a new student named Sonia Gupta for whom we don't know the studies:
+The downside of the simple form is that the list of values needs to be provided in order and it is sometimes difficult to tell what value is what. By using the explicit form, we can make the code more readable and ensure that it will still work even if new fields are added to the table. So let's insert a record for a new student named Sonia Gupta for whom we don't know the studies:
 
 ```SQL
-INSERT INTO (first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children)
-VALUES ('Sonia', 'Gupta', 25, 'Female', 'ES', 'IN', 1);
+INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children)
+VALUES (42, 'Sonia', 'Gupta', 25, 'Female', 'ES', 'IN', 1);
 ```
 
 ### Deleting records
@@ -119,7 +121,7 @@ WHERE age < 18;
 
 ## Lesson 4 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
 
 ### Summary of the tables
 
@@ -135,12 +137,15 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
 * L4.1 Update the age of the student named Liam.
 * L4.2 Increase by 1 the age of all the students who were born in Italy.
 * L4.3 Set all last names to uppercase.
-* L4.4 Insert a new record.
+* L4.4 Insert a new student.
 * L4.5 Delete the record you just inserted.
+* L4.6 Delete the students with no children.
+* L4.7 Add to the students the following one: "programming". Separate it by a comma. (You will have to investigate how to concatenate strings. Don't worry about those with _NULL_ for now).
+* L4.8 Add a new location.
 
 ---
 This ends our **SQL Lesson 4**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

@@ -21,7 +21,7 @@ Where:
 * **{expression}** can be a _column_ name, the _column_ position, a function, or an arithmetic expression,
 * **{direction}** is either ASC or DESC, if omitted ASC is assumed.
 
-Using the same database as in Lesson 1 (https://sqliteonline.com/#fiddle-5bc611a172963o2ajnbxyxvw), run the following query.
+Using the same database as in Lesson 1 (https://sqliteonline.com/#fiddle-5bc61b5c72967o2ajnbzgc2s), run the following query.
 ```SQL
 SELECT first_name, age FROM person ORDER BY age DESC;
 ```
@@ -143,7 +143,7 @@ host (id, name, location_id, students_capacity, coaches_capacity, contact_person
 | 7              | Nemosoft       | 2              | 15               | 12               | Martin         |
 | 8              | Sosasoy        | 1              | 15               | 5                | Mercedes       |
 
-https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
+https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
 ```SQL
 SELECT * FROM host;
 ```
@@ -164,7 +164,7 @@ workshop (id, host_id, date)
 |21|3|2018-03-23|
 |22|3|2018-06-25|
 
-https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
+https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
 ```SQL
 SELECT * FROM workshop;
 ```
@@ -187,13 +187,13 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 |171|12|22|2018-06-18|true|
 |172|3|22|2018-06-25|true|
 
-https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
+https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
 ```SQL
 SELECT * FROM rsvp;
 ```
 ## Write the following queries
 
-Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bc611fb72964o2ajnby0vdm
+Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
 * L2.1 Show the name and last name of all the persons. Sort the result by last name in ascending order, in case of equal last name sort by first name.
 * L2.2 Show the last name and the biological sex of the person with higher number of children.
 * L2.3 Show the country of birth of the oldest person.
@@ -214,7 +214,7 @@ This ends our **SQL Lesson 2**. Is there something you don't understand? Try and
 
 As in previous lesson, this sections contains the SQL statements used to create the fiddle with the given reference.
 
-### #fiddle-5bc611fb72964o2ajnby0vdm
+### #fiddle-5bc61b9572968o2ajnbzhjy6
 
 ```SQL
 CREATE TABLE person (
@@ -255,7 +255,7 @@ INSERT INTO location (id, city, country, start_date) VALUES (3,"Cambridge","UK",
 INSERT INTO location (id, city, country, start_date) VALUES (4,"New York","US","2015-05-01");
 INSERT INTO location (id, city, country, start_date) VALUES (5,"Manchester","UK","2015-07-01");
 INSERT INTO location (id, city, country, start_date) VALUES (6,"West London","UK","2015-10-01");
-INSERT INTO location (id, city, country, start_date) VALUES (7,"West London","UK","2015-10-01");
+INSERT INTO location (id, city, country, start_date) VALUES (7,"South London","UK","2015-10-01");
 INSERT INTO location (id, city, country, start_date) VALUES (8,"Bournemouth","UK","2015-10-01");
 INSERT INTO location (id, city, country, start_date) VALUES (9,"Edinburgh","UK","2016-11-01");
 INSERT INTO location (id, city, country, start_date) VALUES (10,"Barcelona","ES","2017-01-01");

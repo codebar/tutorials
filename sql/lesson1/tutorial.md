@@ -223,7 +223,7 @@ location (id, city, country, start_date)
 
 ## Write the following queries
 
-Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bc611a172963o2ajnbxyxvw
+Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bc61b5c72967o2ajnbzgc2s
 
 * L1.1 Show all the data available of all the persons.
 * L1.2 Show the name and last name of all the persons 23 years old or above.
@@ -250,7 +250,7 @@ CREATE TABLE movie (name text not null, genre text, director text, duration numb
 INSERT INTO movie (name, genre, director,duration,language) VALUES ("Titanic","Drama","James Cameron",194,"en"),("Star Wars","Action","George Lucas",121,"en"),("2001: A Space Odyssey","Sci-Fi","Stanley Kubrick",149,"en"),("Nueve Reinas","Drama","Fabian Bielinsky",114,"es");
 ```
 
-### #fiddle-5bc611a172963o2ajnbxyxvw
+### #fiddle-5bc61b5c72967o2ajnbzgc2s
 ```SQL
 CREATE TABLE person (
     id INTEGER not null,
@@ -290,7 +290,7 @@ INSERT INTO location (id, city, country, start_date) VALUES (3,"Cambridge","UK",
 INSERT INTO location (id, city, country, start_date) VALUES (4,"New York","US","2015-05-01");
 INSERT INTO location (id, city, country, start_date) VALUES (5,"Manchester","UK","2015-07-01");
 INSERT INTO location (id, city, country, start_date) VALUES (6,"West London","UK","2015-10-01");
-INSERT INTO location (id, city, country, start_date) VALUES (7,"West London","UK","2015-10-01");
+INSERT INTO location (id, city, country, start_date) VALUES (7,"South London","UK","2015-10-01");
 INSERT INTO location (id, city, country, start_date) VALUES (8,"Bournemouth","UK","2015-10-01");
 INSERT INTO location (id, city, country, start_date) VALUES (9,"Edinburgh","UK","2016-11-01");
 INSERT INTO location (id, city, country, start_date) VALUES (10,"Barcelona","ES","2017-01-01");
