@@ -33,7 +33,7 @@ WHERE loc.country = 'UK';
 ```
 In this case, the aliases are _h_ and _loc_.
 
-### EXISTS operator and NOT EXISTS
+### (NOT) EXISTS operator
 
 Sometimes you need to combine more than one table in a query to add more columns to the results, but in some cases, you only need other tables to check some conditions. Imagine you want to list all the persons that has RSVP to at least one event. You could do this using JOINs as follows:
 
