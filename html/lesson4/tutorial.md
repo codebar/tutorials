@@ -4,23 +4,25 @@ title: HTML & CSS Lesson 4
 footer: true
 ---
 
-##  HTML AND CSS - CSS, layouts and formatting
+## HTML AND CSS - layouts and formatting
+
+### Objective
+
+Today we will be building a website and learning more about CSS layouts and formatting. We will also be explaining in more detail elements that we mentioned in the previous two lessons.
+
+### Goal
+
+The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
+
+### Required files
+
+Download the files required to begin working through the tutorial from [here.](https://gist.github.com/despo/7443914/download)
 
 ### Recap
 
 In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets.
+
 **HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements and pseudo classes.
-
-
-### Today we will be building a website and learning more about CSS layouts and formatting
-
-The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
-
-## But before we start...
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7443914/download)
 
 ## Getting started
 
@@ -37,7 +39,7 @@ Define the basic structure of the website
 </html>
 ```
 
-Map the stylesheet to the page
+Link the stylesheet to the page
 
 ```html
 <link rel="stylesheet" href="style.css">
@@ -58,7 +60,7 @@ Add a header element in the `<body>` of the page
 ```html
 <header>
   <div>
-    <img src="gracehopper.jpg" alt="Grace Hopper"/>
+    <img src="gracehopper.jpg" alt="Grace Hopper">
   </div>
   <div>
     <h1>Grace Hopper</h1>
@@ -98,7 +100,7 @@ Set a CSS class `portrait` to the `<div>` wrapping the image
 
 ```html
 <div class="portrait">
-  <img src="gracehopper.jpg" alt="Grace Hopper"/>
+  <img src="gracehopper.jpg" alt="Grace Hopper">
   ...
 ```
 
@@ -165,10 +167,10 @@ This should be placed before the header closing tag.
 ```html
 <div>
   <ul>
-    <li> <a href="http://www.personal.psu.edu/djd5202/ass6.html">Computer Scientist</a></li>
-    <li> <a href="http://www.youtube.com/watch?v=1-vcErOPofQ">Grace Hopper on Letterman</a></li>
-    <li> <a href="http://en.wikipedia.org/wiki/Grace_Hopper">Wikipedia</a></li>
-    <li> <a href="http://en.wikiquote.org/wiki/Grace_Hopper">Wikiquote</a></li>
+    <li> <a href="http://www.cs.yale.edu/homes/tap/Files/hopper-story.html">Computer Scientist</a></li>
+    <li> <a href="https://www.youtube.com/watch?v=1-vcErOPofQ">Grace Hopper on Letterman</a></li>
+    <li> <a href="https://en.wikipedia.org/wiki/Grace_Hopper">Wikipedia</a></li>
+    <li> <a href="https://en.wikiquote.org/wiki/Grace_Hopper">Wikiquote</a></li>
   </ul>
 </div>
 ```
@@ -234,11 +236,11 @@ Let's add the main content. Paste underneath the header. We will tweak things as
 
 ```html
 <div id="content">
-  <p>
   <div>
     <img src="mark_i.jpg" alt="Mark">
     <span>Mark I</span>
   </div>
+  <p>
   Grace Hopper was born in 1906. Her parents, noticing her interest in math, made special arrangements for her to take classes reserved for boys in school. She received a Bachelors deegree in Mathematics and  physics from Vassar college and then moved onto Yale, where she did her Masters deegree in Math. She continued her education and begun a teaching career at Vassar. When she received her PhD she joined the navy, where she was assigned to work in the Bureau of Ordinance computation project at Harvard university. There, she became part of the programming team, who works on the Mark I; the first computer ever made.
   </p>
   <p>
@@ -248,11 +250,11 @@ Let's add the main content. Paste underneath the header. We will tweak things as
   Throughout her childhood, she had a fascination with both math and the navy. She was able to join the navy after acquiring waivers for the weight and age requirements, and rapidly climbed the ranks. By the time she started working on the Mark I, she was already a lieutenant.
   The demanding environment and high expectations of her at the navy, helped her thrive. This was for her the perfect work environment. She was also the one who wrote the operating manual for the Mark I. In 1949, she left the navy to continue working with computers, and returned back in 1967 to teach young people about them. She loved teaching about computers as much as she loved working with them. Young people for her were the future.
   </p>
-  <p>
   <div>
-     <img src="cobol.jpg" alt="Cobol"/>
+     <img src="cobol.jpg" alt="Cobol">
      <span>Working with COBOL</span>
   </div>
+  <p>
   Grace loved the Navy, and was reluctant to retire, even at the age of 79. At her retirement ceremony she was recognized for all she contributed, and received the Distinguished Service Medal of the Defense Department, the department's highest honor, and a citation which stated
   <blockquote>
     Rear Admiral Hopper's personal dedication, technical expertise,and broad-based knowledge of the computers were a cornerstone of the navy's continuing development of Information Systems technology. She is one of the Navy's most effective public speakers and a sought-after adviser on the subject of automatic data processing.
@@ -286,10 +288,10 @@ Floating elements still keeps them in the normal flow, but as far to the left or
 
 To ensure an element `floats` you must always specify its width, or else it's likely to take over the width of the page and not appear floated.
 
-###Box floating left
+### Box floating left
 ![](assets/images/float-left.png)
 
-###Box floating right
+### Box floating right
 ![](assets/images/float-right.png)
 
 ### Floating properties
@@ -325,7 +327,7 @@ Add a CSS class to the second image's wrapper
 
 ```html
 <div class="end-of-line">
-  <img src="cobol.jpg" alt="Working with Cobol"/>
+  <img src="cobol.jpg" alt="Working with Cobol">
   <span>Working with COBOL</span>
 </div>
 ```
@@ -367,11 +369,13 @@ The container is not necessarily the element it is wrapped in (its parent). To f
 
 ### Using absolute and relative positioning
 
-Add a CSS class `caption` to the description of each of the images
+Add a CSS class `caption` to the description of each of the images. The first one:
 
 ```html
- <span class="caption">The Mark I</span>
- ```
+ <span class="caption">Mark I</span>
+```
+
+And the second:
 
 ```html
  <span class="caption">Working with COBOL</span>
@@ -476,7 +480,7 @@ width: 100%;
 And reposition the `#content` so it doesn't hide underneath the header. Change the padding property to have a padding-top
 
 ```css
-padding: 150px 30px 40px;
+padding: 160px 30px 40px;
 ```
 
 > Do you remember the padding shortcuts we discussed in the previous lesson? What does the above describe? Can you explain that to your coach?
@@ -512,4 +516,8 @@ line-height: 23px;
 ```
 
 -----
-This ends our fourth and last lesson in introducing HTML and CSS. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our fourth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
+
+## Further reading
+
+* [Learn layout](http://learnlayout.com/)

@@ -1,15 +1,22 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel='stylesheet' type='text/css' href='../../stylesheets/style.css' />
-    <link rel='stylesheet' type='text/css' href='../../stylesheets/pygments.css' />
-    <link rel='stylesheet' type='text/css' href='../../stylesheets/github.css' />
+    <link rel='stylesheet' type='text/css' href='/stylesheets/style.css' />
+    <link rel='stylesheet' type='text/css' href='/stylesheets/pygments.css' />
+    <link rel='stylesheet' type='text/css' href='/stylesheets/github.css' />
+    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon'/ >
+    <!-- IE 6, 7, 8 and 9 -->
+    <!--[if IE]>
+    <script type="text/javascript" src="http://stuk.github.io/jszip-utils/dist/jszip-utils-ie.js"></script>
+    <![endif]-->
   </head>
-  <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} }>
+  <body {% if page.body_id %} id="{{ page.body_id }}" {% endif %}>
     <div id="main">
       <div id="content">
         {{ content | expand_urls: root_url }}
       </div>
     </div>
+    <script type="text/javascript" src="/javascripts/downloader-bundle.js"></script>
   </body>
 </html>

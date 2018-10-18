@@ -172,8 +172,8 @@ Try it out with the following data to make sure that you get back the correct re
 
 ```ruby
 tutorial1 = Tutorial.new("Object Oriented Ruby", :ruby, :medium)
-turorial2 = Tutorial.new("Introduction to JavaScript", :javascript, :easy)
-turorial3 = Tutorial.new("HTTP Requests, AJAX and APIs", :javascript, :medium)
+tutorial2 = Tutorial.new("Introduction to JavaScript", :javascript, :easy)
+tutorial3 = Tutorial.new("HTTP Requests, AJAX and APIs", :javascript, :medium)
 
 tutorial1.is_harder_than?(tutorial2)
 # You cannot compare a Ruby with a JavaScript tutorial

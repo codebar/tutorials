@@ -16,3 +16,19 @@ layout: default
     </footer>
   </article>
 </div>
+
+
+
+
+{% if page.files %}
+{% assign pageurl = page.url | split: '/' | pop | join: '/' %}
+{% capture files %}[{% for file in page.files %}
+    "{{ pageurl }}/{{ file }}"{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+  ]{% endcapture %}
+{% endif %}
+
+<script>
+  var Files = {
+    all : {{ files }}
+  }
+</script>

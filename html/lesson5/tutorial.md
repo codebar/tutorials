@@ -6,21 +6,22 @@ footer: true
 
 ##  HTML AND CSS - Diving into HTML5 and CSS3
 
-### Recap
+### Objective
 
-In the previous lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets.
-**HTML** defines the _structure_ of a website and **CSS** the _presentation_. We also discussed the box model, inline and block elements, pseudo clases and went into more details about CSS Layouts and formatting.
+Today we will be building a website and will focus more on HTML5 and CSS3 specific elements.
 
-### Today we will be building a website and will focus more on HTML5 and CSS3 specific elements
+### Goal
 
 The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson5/example.html "Anita Borg")
 
-## But before we start...
-
 ### Required files
 
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7565600/download)
 
-Download the files required to begin working through the tutorial from [here](https://drive.google.com/file/d/0Bws_MKyXHfv9VUYxazUzOE9Rc2M/view?usp=sharing)
+### Recap
+
+In the previous lessons we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets. Remember how **HTML** defines the structure of a website and **CSS** is the presentation. We also discussed the box model, inline and block elements, pseudo classes and went into more detail with CSS Layouts and formatting.
+
 
 ## Getting started
 
@@ -40,11 +41,11 @@ Also, set a title for your page
 
 Before we continue any further, format the existing content of the html file to use paragraphs `<p>`
 
-> Do you remember how to do that? Ask your coach to help you out if you are having any problems.
+> If you do not remember, ask your coach to help you.
 
 ## Main styling
 
-Set the font family and reset the padding and margin of the page
+Set the font family and reset the padding and margin of the page.
 
 ```css
 body {
@@ -54,11 +55,11 @@ body {
 }
 ```
 
-Let's wrap the contents in a `div` element with the id `wrapper` so we can tweak its dimensions and center it.
+Let's wrap the contents of the page in a `div` element with the id `wrapper` so we can tweak its dimensions and center it.
 
 > Did you remember to close the element you just added?
 
-Style the wrapper
+Let's style the wrapper
 
 ```css
 #wrapper {
@@ -69,24 +70,25 @@ Style the wrapper
 }
 ```
 
-Try tweaking the style.
+Try tweaking some of the styles that we just added to see what happens?
 
 > Remove the `max-width` and reload the page
 
-
 > Remove the `min-width` and try resizing the page
-
 
 > Do you notice how the content no longer centers when removing the `margin` property? Ask your coach to explain why.
 
 
 ## Text shadow
 
-Text shadow, adds a drop shadow to the header. This only works with CSS3 compatible browsers, so unless you are using a really [old browser](http://caniuse.com/css-textshadow) or IE9, you should be able to see the results.
+Text shadow will add a drop shadow to the header. The text-shadow property is formatted as follows:
 
 `text-shadow: horizontal-shadow vertical-shadow blur color`
 
-**blur** is optional, so you don't need to set it.
+- horizonal-shadow is the length of the shadow along the x-axis
+- vertical-shadow is the length of the shadow along the y-axis
+- blur controls how much, if any, blur radius to add to the shadows. This is optional, but can look cool.
+- color controls the color of the shadow. It is also optional.
 
 ### Style the header
 
@@ -99,7 +101,7 @@ h1 {
 }
 ```
 
-Tweak the text-shadow property, and add a blur of 2px
+Let's tweak the text-shadow property by adding a 2px blur.
 
 > Can you see the difference? Keep the version you like the most.
 
@@ -112,11 +114,11 @@ Add this right after the beginning of the element with the id `wrapper`
 
 ```html
 <div>
-  <img src="anita-top.jpg" alt="Anita Borg image 1"/>
-  <img src="anita-bottom.jpg" alt="Anita Borg image 2"/>
+  <img src="anita-top.jpg" alt="Anita Borg image 1">
+  <img src="anita-bottom.jpg" alt="Anita Borg image 2">
   <div>
     <a href="http://gos.sbc.edu/b/borg.html">reference</a>
-    <a href="http://en.wikipedia.org/wiki/Anita_Borg">wikipedia</a>
+    <a href="https://en.wikipedia.org/wiki/Anita_Borg">wikipedia</a>
   </div>
 </div>
 ```
@@ -131,7 +133,7 @@ Add an id `left-bar` to the external `div` so we can change the styling
 }
 ```
 
-This doesn't seem to work. Wrap the content below in a `div` with the id `container` and change the position, dimensions and the display attribute.
+This doesn't seem to work. Wrap the rest of the content below the `left-bar` in a new `div` with the id `container`. We'll then use the following css to change the position, dimensions and the display attribute.
 
 ```css
 #container {
@@ -150,17 +152,17 @@ Things should be looking a bit better now, but the images are still too big! Set
 }
 ```
 
-Great! Now our images and links are on the left, and the main content on the right.
+Great! Now our images and links are on the left, and our main content is on the right.
 
 ### Border-radius
 
-[Border radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) enables us to create rounded corners for our elements. In the past, multiple divs and the use of images was required to achieve that effect.
+[Border radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) enables us to create rounded corners for our elements.
 
-`border-radius: arc`
+Border radius can be defined in many different units - the higher the number, the bigger the curve. An example of border-radius in your code would be:
 
-Now that we know what border radius is, let's use it to add a nice frame to the first image.
+`border-radius: 10px;`
 
-Wrap the first image in a `div` with the class `frame`
+Let's add it so that it adds a nice frame to the first image. Wrap the first image in a `div` with the class `frame`.
 
 ```css
 .frame {
@@ -172,14 +174,15 @@ Wrap the first image in a `div` with the class `frame`
 }
 ```
 
-As we only want the bottom right and bottom left corners to be rounded, we can be more specific when setting the border radius so it only applies to those corners.
+If we only wanted the bottom right and bottom left corners to be rounded, we could be more specific when setting the border radius so it only applies to those corners.
 
 ```css
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
 ```
+> Play around with border radius a little bit to see what effects you get.
 
-Let's also round the corners of the second picture. First, let's add a class `rounded` to it.
+Let's also round the corners of the second picture. First, let's add a class `rounded` to it then add the `border-radius`.
 
 ```css
 .rounded {
@@ -191,9 +194,9 @@ Rounded corners look much nicer, don't you agree?
 
 ### Adding some subtle styling to the page
 
-Small details make the difference.
+Small details like this can make a big visual difference to your website.
 
-Add a top and bottom border to the first image
+Let's add a top and bottom border to the first image.
 
 ```css
 #left-bar .frame img {
@@ -203,21 +206,21 @@ Add a top and bottom border to the first image
 }
 ```
 
-Also add a top border to our page, to make it a bit more polished. Add this to the style of the `body`
+Also add a top border to our page, to make it a bit more polished. Add this to the style of the `body` element.
 
 ```css
-  border-top: 5px solid #4c4066;
+border-top: 5px solid #4c4066;
 ```
 
-### Background
+### Background images
 
-Background is not a new CSS property, but in CSS3 it had a lot more capabilities. You can set multiple background images, specify their dimension, position and attachment.
-
-To set a background you can use
+You can set a background image to any element on your page. To do this you declare that it's the background you want to change then add a URL, which is the path to your image. Like so:
 
 `background: url(path/to/image)`
 
-to set multiple backgrounds, you simple need to specify them separating them by commas
+You can also set multiple background images, specify their dimension, position and attachment. To set multiple backgrounds, you simple need to specify them separating them by commas.
+
+
 `background: url(path/to/image), url(path/to/other/image), ...`
 
 You can also set different properties for your backgrounds, by defining them in a similar comma separated way.
@@ -245,7 +248,7 @@ background-size: 420px auto, auto 900px;
 
 Awesome. Now we can see Anita's picture properly.
 
-But when we scroll, we don't want the background to change. To fix this, we must set the images as fixed. We can do that by specifying the `background-attachment` property
+But when we scroll, we don't want the background to change. To fix this, we must set the images as fixed. We can do that by specifying the `background-attachment` property. Let's add:
 
 ```css
 background-attachment: fixed, fixed;
@@ -326,7 +329,7 @@ p.about {
 
 ### What is an em
 
-The name of an `em` doesn't really stand for anything. It was originally used to describe that it was equal to the **M** character as it was commonly casted as the full-width of the square "block which are used in printing presses.
+The name of an `em` stands for an ephemeral unit. It was originally used to describe that it was equal to the **M** character as it was commonly casted as the full-width of the square "block which are used in printing presses.
 
 By using `em` instead of `px` to set the font-size, we are keeping it relative to the default font size. So 0.9em is 0.9 times the size that would have otherwise applied to that container.
 
@@ -336,7 +339,7 @@ By using `em` instead of `px` to set the font-size, we are keeping it relative t
 
 Increase the `line-height` of all other paragraphs. We can do this with another very smart selector, The  **not** selector.
 
-The **not** selector, finds all elements who don't match the specified description, in our case, all paragraphs that don't have a class `about`
+The **not** selector, finds all elements who don't match the specified description, in our case, all paragraphs that do not have an `about` class.
 
 ```css
 p:not(.about) {
@@ -347,16 +350,16 @@ p:not(.about) {
 ### Anita's speech
 
 The speech that we are using in our page, is titled **Where We Are And Where We Are Going**.
-To make our content more clear, wrap the remaining paragraphs (all but the `about`) in a div with the class `speech`
+To make our content more clear, wrap the remaining paragraphs (all but the `about` one) in a div with the class `speech`.
 
 Also, add its title using an `h2` heading
 
-> That should come right after you open up the `speech` div
+> That should come right after you open up the `speech` div.
 
 ### Achievements
 
 Anita had an amazing personality and was a person who contributed greatly to women in technology.
-Let's list some of her achievements, just after the `about` paragraph
+Let's list some of her achievements, just after the `about` paragraph.
 
 ```html
 <div>
@@ -371,7 +374,7 @@ Let's list some of her achievements, just after the `about` paragraph
 </div>
 ```
 
-It's nice to use descriptive classes, so its easy for someone else looking at our code to understand what each section is about. Add a class `achievements` to the external `div` we just added.
+It's nice to use descriptive classes, so that it's easy for someone else looking at our code to understand what each section is. Add a class `achievements` to the external `div` we just added.
 
 Now that we have done that, let's try reseting the list style, so there are no bullets present, and no margin or padding.
 
@@ -388,7 +391,7 @@ So here is how we will be reseting the list styling. We don't want to only speci
 }
 ```
 
-Making it prettier
+Let's make it look even better.
 
 ```css
 .achievements li {
@@ -399,10 +402,9 @@ Making it prettier
 
 ### CSS - Even and Odd rules, applying styling to alternate elements
 
-We will finish off by styling every second child element of our list.
-Thanks to some great CSS selectors, this is quite easy to do.
+In this part we will apply a different style to every second child element of our list.
 
-We can use
+Thanks to the following great CSS selectors, this is quite simple to do.
 
 `:nth-child(odd)` and `:nth-child(even)` to do that.
 
@@ -413,26 +415,71 @@ In our case, we only want to change the style of every odd row. Achieving that i
   background-color: rgba(176, 175, 192, 0.2);
 }
 ```
-
 > Try changing odd to even
-
-## But before we end our lesson
 
 ### RGB colors and opacity
 
-As you may have noticed, in the last example, we didn't define the color as we usually do, using hex codes. Instead, we used **rgba**. This, enables us to define the opacity of a color as well.
+As you may have just noticed, we didn't define the color as we usually do, using hex codes. Instead, we used **rgba**. This, enables us to define the opacity of a color as well.
 
 `rgba(rgb code, opacity)`
 
-
 `rgb(176, 175, 192);` is another way of defining the color with the hex code `#b0afc0`
 
-You can find both the rgb and hex values of a color through [http://0to255.com](http://0to255.com).
+A great way to find both the rgb and hex values of a color is [http://0to255.com](http://0to255.com).
 
 > Try changing the last attribute of the `rgba` we just set.
 > What happens when you set it to 1?
 > What happens when you set it to 0?
 
+### Bonus - Transitions
+
+Let's take a **property** in our code and give it an animation on hover. We do this by adding a `:hover` to the element you want to effect on hover.
+
+For this example we will give the two links named **btn** a different background on hover.
+
+```css
+a.btn:hover {
+  background: black;
+}
+```
+
+> Can you see this change on your website?
+
+We can now make this affect take place during a number of seconds by adding the `transition-duration` property.
+
+```css
+a.btn:hover {
+  background: black;
+  transition-duration: 1s;
+}
+```
+
+> Change the duration time to see what happens?
+
+Now let's add a delay property.
+
+```css
+a.btn:hover {
+  background: black;
+  transition-duration: 1s;
+  transition-delay: 1s;
+}
+```
+
+If we wanted to even wilder with our on hover effect we could add a rotate:
+
+```css 
+a.btn{
+display:inline-block;
+}
+a.btn:hover {
+  transform: rotate(90deg);
+  transition-delay: 1s;
+}
+```
+
+Woo, that's it for CSS transitions. If you have some time here is a [guide](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) where you can sit with your coach and dive a little deeper.
 
 -----
-This ends our fifth lesson. How did you find the introduction to CSS3? Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+This ends our fifth lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)

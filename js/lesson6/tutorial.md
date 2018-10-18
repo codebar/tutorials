@@ -29,7 +29,7 @@ To render to the canvas, we must use the canvas drawing context, which handles a
 
 ```js
 var canvas = document.getElementById('canvas-id');
-var context = canvas.getContext("2d");
+var context = canvas.getContext('2d');
 ```
 
 ### Controls
@@ -37,14 +37,14 @@ var context = canvas.getContext("2d");
 Depending on if we are filling up a shape, or just drawing the outline, we can use `fillStyle` or `strokeStyle`to set the color of the element.
 
 ```js
-  context.fillStyle = "yellow";
-  context.strokeStyle = "purple";
+  context.fillStyle = 'yellow';
+  context.strokeStyle = 'purple';
 ```
 
 To set the line width:
 
 ```js
-  context.lineWidth = "3";
+  context.lineWidth = '3';
 ```
 
 #### Drawing
@@ -65,22 +65,22 @@ context.fillRect(100, 100, 50, 100);
 Now let's add another rectangle, but this time only its outline.
 
 ```
-context.strokeRect(400, 100, 50, 100);
+context.strokeRect(300, 100, 50, 100);
 ```
 
 **Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the screen. The **line width** of the rectangle should be 1.
 
 ### Reseting canvas
 
-Canvas does not have a reset function, but you can reset it by setting its width. You don't even need to change the value of the width so you can do:
+Canvas does not have a reset function, but there is a function to clear a specified rectangle called `context.clearRect`. You can use it like so:
 
 ```javascript
-canvas.width = canvas.width;
+context.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
 **Exercise**
 
-Reset the canvas when the Reset button is clicked, by calling a reset() function.
+Reset the canvas when the Reset button is clicked, by calling the `reset()` function.
 
 ### Drawing paths
 
@@ -99,7 +99,7 @@ You can also draw an join multiple paths together. Try this out by creating a re
 context.beginPath();
 
 context.lineWidth = 1;
-context.strokeStyle = "purple";
+context.strokeStyle = 'purple';
 
 context.moveTo(0,0);
 context.lineTo(0,200);
@@ -126,11 +126,11 @@ To fill in the circle, or any other joined elements, we use the `fill()` method 
 
 **Exercise** Create another circle and fill it with the color blue.
 
-##Transformations
+## Transformations
 
 In canvas, we can also use transformations on the current matrix.
 
-###`rotate()`
+### `rotate()`
 
 First add the rotate method at the bottom of the `draw()` method.
 
@@ -150,7 +150,7 @@ context.rotate(10*Math.PI/180);
 context.restore()
 ```
 
-###`translate()`
+### `translate()`
 
 Translate moves the current position. If we are at 10, 10 and we `translate(20, 15)`, then our new position is 30, 45.
 
@@ -158,7 +158,7 @@ Translate moves the current position. If we are at 10, 10 and we `translate(20, 
 context.translate(45, 45);
 ```
 
-###`scale()`
+### `scale()`
 
 And finally, `scale(scaleWidth, scalewHeight)`. Scale changes the dimensions of the rendered items.
 
@@ -169,7 +169,7 @@ context.scale(2,2);
 
 > Try tweaking the scale properties. How can you make the shape 5 times bigger?
 
-##Exercise - Drawing Hangman!
+## Exercise - Drawing Hangman!
 
 ![](assets/images/canvas-hangman.png)
 
@@ -186,11 +186,10 @@ We have already created the functions to draw the individual parts, so you shoul
 
 Here is our version of [Hangman in Canvas](../../examples/hangman-canvas/index.html).
 
-##Bonus
+## Bonus
 
 Plug hangman in the game you created in the last session. You can use conditional statements to control when each part is drawn.
 
 
 ---
 This ends our **Drawing in Canvas** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
-

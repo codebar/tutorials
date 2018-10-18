@@ -49,19 +49,13 @@ end
 > Don't forget to wrap your interactions within `transaction` blocks
 
 
-# Exercise: Contacts list
+## Exercise: Contacts list
 
 Using what we have learned in the last couple of ruby lessons we will create a contact list where we can store people's names and date of birth.
 
-Create a new ruby script file.
+Create a new ruby script file named `contacts.rb`.
 
-> Remember to change the permissions to make the file executable using `chmod a+x contacts`
-
-First, make sure you tell the script to run in a ruby environment so you can execute it with `./contacts`
-
-```ruby
-#!/usr/bin/env ruby
-```
+You can execute it using `ruby contacts.rb`.  
 
 Unlike last time, we don't want this program to exit unless we tell it to. We can do that by setting a variable to true, and only changing it to false if the user tells the program to exit.
 

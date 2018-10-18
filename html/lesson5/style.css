@@ -108,3 +108,10 @@ a.btn {
   padding: 20px 30px;
   border-radius: 5px;
 }
+
+a.btn:hover {
+  background: black;
+  transition-property: background;
+  transition-duration: 4s;
+  transition-delay: 1s;
+}

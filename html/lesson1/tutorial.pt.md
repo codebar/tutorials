@@ -47,8 +47,8 @@ Um **elemento** é como um tijolo no HTML. Existem parágrafos, cabeçalhos, tab
 Alguns elementos são individuais, já que eles não tem nenhum conteúdo que os acompanha. Eles se parecem com isso: `<nomedatag/>`
 
 ```html
-<br/>
-<img/>
+<br>
+<img>
 ```
 
 ### Comentários
@@ -68,7 +68,7 @@ Ele diz ao navegador qual a versão de HTML a página está usando.
 <!DOCTYPE html>
 ```
 
-Por enquanto nós vamos usar somente HTML, mas você pode descobrir mais sobre doctypes [aqui](http://www.w3.org/wiki/Doctypes_and_markup_styles).
+Por enquanto nós vamos usar somente HTML, mas você pode descobrir mais sobre doctypes [aqui](https://www.w3.org/wiki/Doctypes_and_markup_styles).
 
 O doctype vem sempre seguido pela tag `<html>`, a qual já tem o conteúdo da página.
 
@@ -150,14 +150,14 @@ Acrescente o seguinte no corpo da página, depois do cabeçalho `<h1>`:
 </p>
 ```
 
-### Quebra de linha `<br/>`
-Como você já notou, apesar das novas linhas, não há quebra de linha em nosso parágrafo. Para que isso aconteça, precisamos usar a tag `<br/>`.
+### Quebra de linha `<br>`
+Como você já notou, apesar das novas linhas, não há quebra de linha em nosso parágrafo. Para que isso aconteça, precisamos usar a tag `<br>`.
 
 ```html
 <p>
-  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br/>
-  mas a natureza estereoscópica dos<br/>
-  olhos voltados para frente na coruja permite<br/>
+  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br>
+  mas a natureza estereoscópica dos<br>
+  olhos voltados para frente na coruja permite<br>
   um melhor senso de percepção profunda necessária para a caça com pouca luz.
 </p>
 ```
@@ -171,9 +171,9 @@ Vamos enfatizar alguns conteúdos no nosso parágrafo
 
 ```html
 <p>
-  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br/>
-  mas a natureza estereoscópica dos<br/>
-  <strong>olhos voltados para frente na coruja permite<br/>
+  A maioria das aves de rapina possui os olhos na parte lateral da cabeça<br>
+  mas a natureza estereoscópica dos<br>
+  <strong>olhos voltados para frente na coruja permite<br>
   um melhor senso de percepção profunda</strong> necessária para a caça com pouca luz.
 </p>
 ```
@@ -186,7 +186,7 @@ Vamos adicionar um link no final do nosso parágrafo
 
 ```html
 <br/>
-<a href="http://pt.wikipedia.org/wiki/Coruja">Mais informações sobre corujas...</a>
+<a href="https://pt.wikipedia.org/wiki/Coruja">Mais informações sobre corujas...</a>
 ```
 
 ### Elemento: Div `<div>`
@@ -206,7 +206,7 @@ Cerque o parágrafo já existente por um div e adicione um novo cabeçalho a ele
     <strong>olhos voltados para frente na coruja permite<br/>
     um melhor senso de percepção profunda</strong> necessária para a caça com pouca luz.
     <br/>
-    <a href="http://pt.wikipedia.org/wiki/Coruja">Mais informações sobre corujas...</a>
+    <a href="https://pt.wikipedia.org/wiki/Coruja">Mais informações sobre corujas...</a>
   </p>
 </div>
 ```
@@ -289,7 +289,7 @@ Adicione este texto abaixo da lista ordenada sobre porque gostamos de corujas.
 
 ```html
 <div>
-  <a href="http://www.youtube.com/watch?v=gBjnfgnwXic">
+  <a href="https://www.youtube.com/watch?v=gBjnfgnwXic">
     <img src="images/img4.jpg" alt="coruja fofa"/>
     <img src="images/img5.jpg" alt="outra coruja fofa"/>
     <br/>

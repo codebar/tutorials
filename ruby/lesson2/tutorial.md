@@ -49,7 +49,7 @@ To get all the numbers from 1 up to 5, excluding 5.
 
 ### `Random.rand()`
 
-Random is an interface to a number generator. The `rand()` method takes in an integer value **max**. It returns an integer greater than zero and less than **max**. You can also use a **range** as a parameter.
+Random is an interface to a number generator. The `rand()` method takes in an integer value **max**. It returns an integer greater than or equal to zero and less than **max**. You can also use a **range** as a parameter.
 
 ```ruby
 Random.rand(5..10)
@@ -59,19 +59,12 @@ Random.rand(5..10)
 
 In this exercise we'll create a small game to help us practise maths.
 
-[Download the files](https://gist.github.com/despo/d790a4fd1844da7d85ce/download) to get started. If you are having any trouble you can get the files directly [from GitHub](https://gist.github.com/despo/d790a4fd1844da7d85ce).
+First, create an empty file called `numbers.rb`.
 
-
-To execute the file you must first change its permissions from the command line (to make it executable).
-
-```bash
-chmod a+x numbers.rb
-```
-
-and then run it
+To execute the file, run the following:
 
 ```bash
-./numbers.rb
+ruby numbers.rb
 ```
 
 In this exercise we want to generate two random numbers x and y using `Random.rand()`. We will output the numbers to the console and read in the answer.
@@ -153,7 +146,7 @@ number = 2
 number ||= 1
 ```
 
-##Reading and writing to a file
+## Reading and writing to a file
 
 In Ruby we can use the `File` object to read and write to files.
 
@@ -171,7 +164,7 @@ To write to a file, we must open it using the write mode (w), write the new cont
 
 ```ruby
 filename = "colors.txt"
-file = File.open(fname, "w")
+file = File.open(filename, "w")
 file.puts "red "
 file.puts "green"
 file.puts "blue"
@@ -229,7 +222,7 @@ You can then use the [array sort](http://www.ruby-doc.org/core-2.1.1/Array.html#
 
 # More practise
 
-Download and try to go through as much of the [Ruby Koans](https://github.com/neo/ruby_koans) as you can.
+Download and try to go through as much of the [Ruby Koans](https://github.com/edgecase/ruby_koans) as you can.
 
 After you download the repository, you can generate the koans using
 
@@ -247,12 +240,12 @@ To try out the koans run `rake`. It gives you a hint as to what fails and you ca
 
 If you are working through this at home you can ask for help in our [gitter channel](https://gitter.im/codebar/tutorials).
 
-##Some reading material
+## Some reading material
 
 [Why's poignant guide to Ruby](http://mislav.uniqpath.com/poignant-guide/) is a cartoon written about Ruby by a programmer called Why the Lucky Stiff. You can also download the [pdf version](http://cloud.github.com/downloads/devyn/shoes-web/whys-poignant-guide-to-ruby.pdf).
 
 ---
 This ends our **Ruby basics** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
 
-[1]: http://rvm.io/rvm/install "Ruby Version Manager"
+[1]: https://rvm.io/rvm/install "Ruby Version Manager"
 [2]: https://github.com/sstephenson/rbenv "rbenv"

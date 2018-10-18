@@ -21,7 +21,7 @@ We will be using the **POST**, **PUT** and **GET** requests, and other things we
 | **POST** |  Create a new resource. |
 
 
-##Request using jQuery
+## Request using jQuery
 
 To use **POST** and **PUT** requests we must specify the `type` in the `ajax()` call that we introduced in the previous lesson.
 
@@ -35,20 +35,21 @@ $.ajax({
 });
 ```
 
-##Exercise - Hangman!
+## Exercise - Hangman!
 
 ![](assets/images/hangman.png)
 
 [Download](https://gist.github.com/despo/c76a7bd0bef66713a9ac/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/c76a7bd0bef66713a9ac.git`
 
-###API
-| type | resource | parameters | description |
+### API
+
+| Type | Resource | Parameters | Description |
 | ---- | -------- | ---------- | ----------- |
 | **POST**  | `http://hangman-api.herokuapp.com/hangman` | - | Create a new game |
 | **PUT**  | `http://hangman-api.herokuapp.com/hangman` | `{ token: game token, letter: guess }` | Guess a letter |
 | **GET**  | `http://hangman-api.herokuapp.com/hangman` | `{ token: game token }` | Get solution |
 
-###What we will be doing:
+### What we will be doing:
 
 1. Create a new game
 

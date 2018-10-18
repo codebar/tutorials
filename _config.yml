@@ -1,8 +1,15 @@
 safe: true
 lsi: false
-highlighter: pygments
+highlighter: rouge
 future: true
-markdown: redcarpet
+markdown: kramdown
 encoding: utf-8
-redcarpet:
+kramdown:
+  input: GFM
+  hard_wrap: false
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+exclude: [
+  "javascripts-dev",
+  "node_modules"
+]
+livereload: true

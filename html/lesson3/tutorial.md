@@ -6,31 +6,40 @@ footer: true
 
 ##  HTML AND CSS - Beyond the basics
 
+### Objectives 
+ 
+In this tutorial we are going to look at:
+ 
+* Development Tools
+* Structuring content
+* Inline vs block elements
+* Box model
+* :hover state
+
+We will also be explaining in more detail elements that we mentioned in the previous two lessons.
+ 
+### Goal
+ 
+The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
+
+### Required files
+
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7328342/download) or for Windows users if you are having trouble extracting, you can use this [link.](assets/lesson3.zip)
+
 ### Recap
 
 In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**anguage and **C**ascading **S**tyle **S**heets. **HTML** defines the _structure_ of a website and **CSS** the _presentation_.
 
-### Today we will be building a styled website from scratch
 
-The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
-
-We will also be explaining in more detail elements that we mentioned in our previous lesson.
-
-## But before we start...
-
-### Required files
-
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/7328342/download) or for Windows users if you are having trouble extracting, you can use this [link](assets/lesson3.zip)
-
-### Development Tools - Inspectors
+## Development Tools - Inspectors
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
-A very popular inspector is [firebug](http://getfirebug.com/), it works nicely on Firefox. Chrome has a built in inspector, but we do suggest you use firebug as it is much easier to use and change different properties with it.
+Developer Tools are already built into all modern browsers, whether you use [Chrome](https://developer.chrome.com/devtools), [Firefox](https://developer.mozilla.org/en-US/docs/Tools), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide), [Opera](http://www.opera.com/dragonfly/) or [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html). For advanced users, many other tools are available as browser extensions, including the [Web Developer Toolbar](https://chrispederick.com/work/web-developer/) plugin.
 
-![](assets/images/firebug.png)
+![](assets/images/chrome-devtools.png)
 
->  Ask your coach to show you how to edit the styling on our example page using firebug
+>  Ask your coach to show you how to edit the styling on our example page using developer tools
 
 ## Getting started
 
@@ -93,7 +102,7 @@ Add an image wrapped in a `<div>` element
 
 ```html
 <div>
-  <img src="ada_lovelace.jpg" alt="Ada Lovelace"/>
+  <img src="ada_lovelace.jpg" alt="Ada Lovelace">
 </div>
 ```
 
@@ -115,7 +124,7 @@ Before you can manipulate the `<div>` surrounding the image, you must be able to
 
 ```html
 <div class="my-picture">
-  <img src="ada_lovelace.jpg" alt="Ada Lovelace"/>
+  <img src="ada_lovelace.jpg" alt="Ada Lovelace">
 </div>
 ```
 
@@ -129,7 +138,7 @@ Add the relevant style in your `style.css`
 
 > Have a look at the page. Inspect the image, and have a look at its CSS properties
 
-####Making this work
+#### Making this work
 
 Make the `div` element surrounding the heading inline. Start by adding a class `title` to it
 
@@ -148,7 +157,7 @@ and then the relevant CSS
 
 `inline-block` is another display attribute. You must use `inline-block` rather than `inline` to make the element appear inline because the `div` with the class `title` contains a block element, `<h1>`, that takes over and expands across the end of the line.
 
-> Using firebug, change `inline-block` to `inline` and notice how they render
+> Using devtools, change `inline-block` to `inline` and notice how they render
 
 Adjust the alignment of the `.title`
 
@@ -164,7 +173,7 @@ and make the picture a bit smaller
 }
 ```
 
-##Box model
+## Box model
 
 ### What is the box model?
 
@@ -178,9 +187,9 @@ An element can be visualised as a box. The box model is a way of describing the 
 
 **<span style="color: rgb(239,195,144);">orange</span>** is the `margin` &mdash; the spacing outside the border. This separates the element from other elements on the page.
 
-Note: `padding`, `margin` and `border` can be applied to any combination of sides, below all three are applied in equal measure to all four sides around the content.
+Note: `padding`, `margin` and `border` can be applied to any combination of sides. In the example below from the BBC News site, all three are applied, but only above the content.
 
-![](assets/images/box-model.png)
+![](assets/images/box-model.gif)
 
 ### Styling the header
 
@@ -221,7 +230,7 @@ Let's add some content! Add the following inside the `div` in the html file
   <strong>Me on the internet</strong>
   <ul>
    <li><a href="https://www.facebook.com/augusta.ada.lovelace">facebook</a> </li>
-   <li><a href="http://en.wikipedia.org/wiki/Ada_Lovelace">wikipedia</a> </li>
+   <li><a href="https://en.wikipedia.org/wiki/Ada_Lovelace">wikipedia</a> </li>
  </ul>
 </div>
 ```
@@ -262,7 +271,7 @@ margin-top: 55px;
 margin-left: 20px;
 ```
 
-###Padding and margin
+### Padding and margin
 Padding and margin can be set in a number of different ways
 
 `padding: top right bottom left;` e.g. _padding: 10px 20px 30px 5px;_
@@ -298,7 +307,7 @@ ul.social-media {
 
 Add a bottom border, to give the effect of a line, to the individual list items and tweak its dimensions
 
-```
+```css
 .social-media li {
   border-bottom: 1px solid #b0afc0;
   padding: 10px;
@@ -431,7 +440,7 @@ vertical-align: top;
 Add a link so that anyone coming to the page can easily find out more about Charles Babbage. In the second paragraph, wrap his name in a link as shown below.
 
 ```html
-<a href="http://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage's </a>
+<a href="https://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage's </a>
 ```
 
 Ada was the world's first programmer therefore we want that to stand out. Add a span around it and specify a class `highlight`, so the intention is obvious and other people working on the code of the page can easily understand it.
@@ -505,13 +514,13 @@ Make the poem look different than the rest of the text. Add a CSS class `poem` t
 
 ### Some more information about Ada
 ```html
-<p>The computer language <a href="http://en.wikipedia.org/wiki/Ada_(programming_language)">Ada</a>, was named after me. The Defense Military standard for the language, MIL-STD-1815 was also given the year of my birth.</p>
+<p>The computer language <a href="https://en.wikipedia.org/wiki/Ada_(programming_language)">Ada</a>, was named after me. The Defense Military standard for the language, MIL-STD-1815 was also given the year of my birth.</p>
 
-<p>These days, the British Computer Society runs an annual competitions for women students of computer science in my name. Also, the annual conference for women undergraduates is named after me. Google also dedicated its <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">Google doodle</a> to me, on the 197th anniversary of my birth. </p>
+<p>These days, the British Computer Society runs an annual competitions for women students of computer science in my name. Also, the annual conference for women undergraduates is named after me. Google also dedicated its <a href="https://www.google.com/doodles/ada-lovelaces-197th-birthday">Google doodle</a> to me, on the 197th anniversary of my birth. </p>
 
 <p>
- <a href="http://www.google.com/doodles/ada-lovelaces-197th-birthday">
-  <img src="http://www.google.com/logos/2012/ada_lovelaces_197th_birthday-991005-hp.jpg" />
+ <a href="https://www.google.com/doodles/ada-lovelaces-197th-birthday">
+  <img src="https://www.google.com/logos/2012/ada_lovelaces_197th_birthday-991005-hp.jpg">
  </a>
 </p>
 ```
@@ -582,5 +591,5 @@ Have a look at the [example page](http://codebar.github.io/tutorials/html/lesson
 Use the inspector to have a look at `<body>` and `<h1>` and apply these changes to your page.
 
 -----
+This ends our third lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
 
-This ends our third lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
