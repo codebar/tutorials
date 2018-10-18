@@ -124,7 +124,7 @@ Do an `ls` to check whether the file has been created. Inside bits, there should
 
 ### `mv` or move item
 
-What if you created a file in the wrong place? There's a command for that! Let's move `bobs.txt` to somewhere new. Were you are in the `bits` folder type:
+What if you created a file in the wrong place? There's a command for that. Let's move `bobs.txt` to somewhere new. Inside the `bits` folder type:
 
 ```bash
 $ mv bobs.txt ..
