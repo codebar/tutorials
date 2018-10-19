@@ -126,7 +126,34 @@ It's time to do some exercises now... :)
 
 ## Lesson 2 exercises
 
-For the exercises below, we'll use the two tables from previous lesson: **person** and **location** and we'll introduce three new ones: **host**, **workshop** and **rsvp**. The next sections show a few rows as examples of the values. If you want to see the whole table, you'll find the fiddle link and the SELECT statement under each table.
+For the exercises below, we'll use the table from previous lesson: **person** and we'll introduce four new ones: **location**, **host**, **workshop** and **rsvp**. The next sections show a few rows as examples of the values. If you want to see the whole table, you'll find the fiddle link and the SELECT statement under each table.
+
+
+### LOCATION table
+
+location (id, city, country, start_date)
+
+| id    | city         | country | start_date    |
+| :---: | :----------: | :-----: | :-----------: |
+| 1     | London       | UK      | 2013-06-01    |
+| 2     | Brighton     | UK      | 2013-10-01    |
+| 3     | Cambridge    | UK      | 2014-01-01    |
+| 4     | New York     | US      | 2015-05-01    |
+| 5     | Manchester   | UK      | 2015-07-01    |
+| 6     | West London  | UK      | 2015-10-01    |
+| 7     | West London  | UK      | 2015-10-01    |
+| 8     | Bournemouth  | UK      | 2015-10-01    |
+| 9     | Edinburgh    | UK      | 2016-11-01    |
+| 10    | Barcelona    | ES      | 2017-01-01    |
+| 11    | Berlin       | DE      | 2017-02-01    |
+| 12    | Glasgow      | UK      | 2017-06-01    |
+| 13    | Oxford       | UK      | 2017-08-01    |
+| 14    | Sydney       | AU      | 2017-10-01    |
+| 15    | Kent         | UK      | 2017-12-01    |
+| 16    | Helsinki     | FI      | 2018-01-01    |
+| 17    | Oslo         | NO      | 2018-02-01    |
+| 18    | Accra        | GH      | 2018-03-01    |
+| 19    | Norwich      | UK      | 2018-05-01    |
 
 ### HOST table
 
@@ -198,12 +225,13 @@ Open this fiddle that will have the data shown in the tables above already loade
 * L2.2 Show the last name and the biological sex of the person with higher number of children.
 * L2.3 Show the country of birth of the oldest person.
 * L2.4 Show the age of the oldest person.
-* L2.5 Show all the host names.
-* L2.6 Show the host name and the student capacity. Sort the result in capacity descending order.
-* L2.7 Pick a host ID and show the dates where workshops were held there. Order the result chronologically.
-* L2.8 Show the top 5 host according to their total capacity (Students + Coaches)
-* L2.9 Show the distinct ID of the persons that RSVP but then they did not show up (attendance = false).
-* L2.10 Show dates where workshops were held in these 3 hosts _Edincode_, _Kanguland_, and _CodeLab_ (TIP: think of the usage of **IN**)
+* L1.5 Show the locations cities in UK.
+* L2.6 Show all the host names.
+* L2.7 Show the host name and the student capacity. Sort the result in capacity descending order.
+* L2.8 Pick a host ID and show the dates where workshops were held there. Order the result chronologically.
+* L2.9 Show the top 5 host according to their total capacity (Students + Coaches)
+* L2.10 Show the distinct ID of the persons that RSVP but then they did not show up (attendance = false).
+* L2.11 Show dates where workshops were held in these 3 hosts _Edincode_, _Kanguland_, and _CodeLab_ (TIP: think of the usage of **IN**)
 
 ---
 This ends our **SQL Lesson 2**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

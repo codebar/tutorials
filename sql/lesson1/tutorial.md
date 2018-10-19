@@ -87,7 +87,7 @@ We will be using the online version in this first tutorial. If you want to run t
 
 ### Showing all records and all column (continuation)
 
-Open (https://sqliteonline.com/#fiddle-5babeb117271co2ajmjlm3qn).
+Open (https://sqliteonline.com/#fiddle-5bca3353729b1o2ajngf6hsy).
 Type the statement below in the box beneath the house icon. Then press the blue 'Run' button at the top.
 
 ```SQL
@@ -173,7 +173,7 @@ SELECT * FROM movie WHERE duration > 120 AND (genre = "Sci-Fi" OR genre = "Drama
 
 ## Lesson 1 exercises
 
-For the exercises below, we'll use two new tables: _person_ and _location_. These two tables could be codebar.io database. Lesson after lesson we'll be adding tables or extending the existing ones to construct the whole database by the end of this tutorial.
+For the exercises below, we'll use a new table: _person_. This table could be part of codebar.io database. Lesson after lesson we'll be adding tables or extending the existing ones to construct the whole database by the end of this tutorial.
 
 ### PERSON table
 
@@ -195,32 +195,6 @@ person (id, first_name, last_name, age, biological_sex, country_of_birth, countr
 |...       | ...            |...        |...    |...             |...               |...                   |...                 |...              |
 |40        | Benjamin       |Taylor     |30     |Male            |ES                |IT                    |1                   |Computer science |
 
-### LOCATION table
-
-location (id, city, country, start_date)
-
-| id    | city         | country | start_date    |
-| :---: | :----------: | :-----: | :-----------: |
-| 1     | London       | UK      | 2013-06-01    |
-| 2     | Brighton     | UK      | 2013-10-01    |
-| 3     | Cambridge    | UK      | 2014-01-01    |
-| 4     | New York     | US      | 2015-05-01    |
-| 5     | Manchester   | UK      | 2015-07-01    |
-| 6     | West London  | UK      | 2015-10-01    |
-| 7     | West London  | UK      | 2015-10-01    |
-| 8     | Bournemouth  | UK      | 2015-10-01    |
-| 9     | Edinburgh    | UK      | 2016-11-01    |
-| 10    | Barcelona    | ES      | 2017-01-01    |
-| 11    | Berlin       | DE      | 2017-02-01    |
-| 12    | Glasgow      | UK      | 2017-06-01    |
-| 13    | Oxford       | UK      | 2017-08-01    |
-| 14    | Sydney       | AU      | 2017-10-01    |
-| 15    | Kent         | UK      | 2017-12-01    |
-| 16    | Helsinki     | FI      | 2018-01-01    |
-| 17    | Oslo         | NO      | 2018-02-01    |
-| 18    | Accra        | GH      | 2018-03-01    |
-| 19    | Norwich      | UK      | 2018-05-01    |
-
 ## Write the following queries
 
 Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bc61b5c72967o2ajnbzgc2s
@@ -231,7 +205,6 @@ Open this fiddle that will have the data shown in the tables above already loade
 * L1.4 Show the name and last name of all the persons not living in their birth place.
 * L1.5 Show the distinct countries of residence of all the persons.
 * L1.6 Show the distinct studies of female biological born persons.
-* L1.7 Show the locations cities in UK.
 
 ---
 This ends our **SQL Lesson 1**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
@@ -243,7 +216,7 @@ For the lessons, when you find a link to https://sqliteonline.com/ followed by a
 
 ## ANNEX
 
-### #fiddle-5babeb117271co2ajmjlm3qn
+### #fiddle-5bca3353729b1o2ajngf6hsy
 
 ```SQL
 CREATE TABLE movie (name text not null, genre text, director text, duration number, language text);
@@ -277,30 +250,4 @@ INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_b
 INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (11,"Michael","Anderson",22,"Intersex","IT","IT",1,"Human Resources");
 INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (40,"Benjamin","Taylor",30,"Male","ES","IT",1,"Computer science");
 
-CREATE TABLE location (
-  id INTEGER not null,
-  city VARCHAR(20) not null,
-  country  VARCHAR(2) not null,
-  start_date DATE
-);
-
-INSERT INTO location (id, city, country, start_date) VALUES (1,"London","UK","2013-06-01");
-INSERT INTO location (id, city, country, start_date) VALUES (2,"Brighton","UK","2013-10-01");
-INSERT INTO location (id, city, country, start_date) VALUES (3,"Cambridge","UK","2014-01-01");
-INSERT INTO location (id, city, country, start_date) VALUES (4,"New York","US","2015-05-01");
-INSERT INTO location (id, city, country, start_date) VALUES (5,"Manchester","UK","2015-07-01");
-INSERT INTO location (id, city, country, start_date) VALUES (6,"West London","UK","2015-10-01");
-INSERT INTO location (id, city, country, start_date) VALUES (7,"South London","UK","2015-10-01");
-INSERT INTO location (id, city, country, start_date) VALUES (8,"Bournemouth","UK","2015-10-01");
-INSERT INTO location (id, city, country, start_date) VALUES (9,"Edinburgh","UK","2016-11-01");
-INSERT INTO location (id, city, country, start_date) VALUES (10,"Barcelona","ES","2017-01-01");
-INSERT INTO location (id, city, country, start_date) VALUES (11,"Berlin","DE","2017-02-01");
-INSERT INTO location (id, city, country, start_date) VALUES (12,"Glasgow","UK","2017-06-01");
-INSERT INTO location (id, city, country, start_date) VALUES (13,"Oxford","UK","2017-08-01");
-INSERT INTO location (id, city, country, start_date) VALUES (14,"Sydney","AU","2017-10-01");
-INSERT INTO location (id, city, country, start_date) VALUES (15,"Kent","UK","2017-12-01");
-INSERT INTO location (id, city, country, start_date) VALUES (16,"Helsinki","FI","2018-01-01");
-INSERT INTO location (id, city, country, start_date) VALUES (17,"Oslo","NO","2018-02-01");
-INSERT INTO location (id, city, country, start_date) VALUES (18,"Accra","GH","2018-03-01");
-INSERT INTO location (id, city, country, start_date) VALUES (19,"Norwich","UK","2018-05-01");
 ```
