@@ -229,7 +229,7 @@ Open this fiddle that will have the data shown in the tables above already loade
 * L1.2 Show the name and last name of all the persons 23 years old or above.
 * L1.3 Show the name and last name of all the persons living in UK.
 * L1.4 Show the name and last name of all the persons not living in their birth place.
-* L1.5 Show the distinct studies of all the persons.
+* L1.5 Show the distinct countries of residence of all the persons.
 * L1.6 Show the distinct studies of female biological born persons.
 * L1.7 Show the locations cities in UK.
 
