@@ -134,7 +134,7 @@ And this one, those ending with _s_:
 SELECT * FROM PERSON WHERE name LIKE '%s';
 ```
 
-If using the _ then this one will return any name where there is an _m_, followed by any character, and the but an _r_:
+If using the _ then this one will return any name where there is an _m_, followed by any character, and then followed buy an _r_:
 ```SQL
 SELECT * FROM person where name like '%m_r%';
 ```
