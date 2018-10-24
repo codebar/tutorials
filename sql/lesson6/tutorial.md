@@ -7,7 +7,7 @@ title: Introduction to SQL
 
 The previous lessons showed you how to manipulate data from a single table and from multiple tables using **JOIN**. _Lesson 6_ will show you how to use aliases, the **EXISTS** operator, and how to save complex queries into **VIEWs**.
 
-In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6)
+In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij)
 
 ### Using aliases
 
@@ -38,14 +38,14 @@ In this case, the aliases are _h_ and _loc_.
 Sometimes you need to combine more than one table in a query to add more columns to the results, but in some cases, you only need other tables to check some conditions. Imagine you want to list all the persons that has RSVP to at least one event. You could do this using JOINs as follows:
 
 ```SQL
-SELECT DISTINCT p.first_name, p.last_name
+SELECT DISTINCT p.name
 FROM person p JOIN rsvp event ON event.person_id = p.id;
 ```
 
 But if you look closer, we are not using any column from the _rsvp_ table in the result. In cases like this, we can use the **EXISTS** operator. Look at the query below, it produces the same result:
 
 ```SQL
-SELECT p.first_name, p.last_name
+SELECT p.name
 FROM person p
 WHERE EXISTS (SELECT * FROM rsvp event where event.person_id = p.id);
 ```
@@ -56,11 +56,11 @@ Note that in the _rsvp_ query (a.k.a inner query), we are referring to p, which 
 **NOT EXISTS** can also be used to check the opposite condition. In this case, the row will be kept if the inner query returns no results. In this case, persons that never rsvp to an event:
 
 ```SQL
-SELECT p.first_name, p.last_name
+SELECT p.name
 FROM person p
 WHERE NOT EXISTS (SELECT * FROM rsvp event where event.person_id = p.id);
 ```
-Try it yourself, you should only get Benjamin in this last query.
+Try it yourself, you should only get Benjamin Martinez Lopez in this last query.
 
 ## GROUP BY in JOINed tables
 
@@ -88,7 +88,7 @@ Lets create our first **VIEW**, as follows:
 
 ```SQL
 CREATE VIEW active_members as
-SELECT p.first_name, p.last_name, p.age
+SELECT p.name, p.age
 FROM person p
 WHERE EXISTS (SELECT * FROM rsvp event where event.person_id = p.id);
 ```
@@ -107,11 +107,11 @@ It is important to mention that the VIEWs do not have their own data. The data i
 
 ## Lesson 6 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 
 ### Summary of the tables
 
-person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
 
 location (id, city, country, start_date)
 
@@ -123,7 +123,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 * L6.1 List all the hosts that had at least one workshop hosted
 * L6.2 List all the persons that have someone else with their same age (Use only JOINs)
 * L6.3 List all the persons that have someone else with their same age (Use only EXISTS)

@@ -13,7 +13,7 @@ When you want to start analyzing your data, it might be handy to be able to find
 
 #### Using COUNT function
 
-**COUNT** function returns the number of records in the result. Open this lesson fiddle (https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6) and run the following query. We'll analyze the result right after.
+**COUNT** function returns the number of records in the result. Open this lesson fiddle (https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij) and run the following query. We'll analyze the result right after.
 
 ```SQL
 SELECT COUNT(*) FROM person;
@@ -77,23 +77,23 @@ SELECT MAX(age) 'Oldest person', MIN(age) 'Youngest person', MAX(number_of_child
 Sometimes, if you allow your data in uppercase and lowercase, some WHERE conditions may not act as you expect. For example, 'Martin' will not result equal to 'martin'. Check this out with the following query:
 
 ```SQL
-SELECT * FROM person WHERE first_name = 'emma';
+SELECT * FROM person WHERE name = 'emma smith';
 ```
 
-Did you get any result? Try now with 'Emma' instead.
+Did you get any result? Try now with 'Emma Smith' instead.
 
 To avoid issues like this one, you can transform the values to a known case. Either uppercase (capital letters) or lowercase (small letters). To do this, you can use the functions **UPPER** and **LOWER**. Try the following query, Do you get results now?
 
 ```SQL
-SELECT * FROM person WHERE LOWER(first_name) = 'emma';
+SELECT * FROM person WHERE LOWER(name) = 'emma smith';
 ```
 
-In the statement above, _LOWER(first_name)_ transforms the value in the column _first_name_ into lowercase ('Emma' -> 'emma'). Is for this reason, that when compared to 'emma' it results true and then the record is shown in the result.
+In the statement above, _LOWER(name)_ transforms the value in the column _name_ into lowercase ('Emma Smith' -> 'emma smith'). Is for this reason, that when compared to 'emma smith' it results true and then the record is shown in the result.
 
 You can also use these functions in the SELECT part of the query as follows:
 
 ```SQL
-SELECT LOWER(first_name) 'First Name', UPPER(last_name) 'Last Name' FROM person;
+SELECT UPPER(name) 'Name', LOWER(country_of_residence) 'Residence' FROM person;
 ```
 
 ### Splitting the tables in GROUPS.
@@ -155,11 +155,11 @@ Does it make sense? How would you change this query to return the oldest and you
 
 ## Lesson 3 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 
 ### Summary of the tables
 
-person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
 
 location (id, city, country, start_date)
 
@@ -171,7 +171,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 * L3.1 How many persons are not living in their birth country.
 * L3.2 What is the average age of the persons not living in their birth country.
 * L3.3 Show the age of the oldest person. (Find a different way to the one use in Lesson 2).

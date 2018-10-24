@@ -7,7 +7,7 @@ title: Introduction to SQL
 
 Up until now, you've practised selecting data and formatting it but you haven't updated any of it. _Lesson 4_ will show you how to do that with three new operators: **UPDATE** to update existing records, **INSERT** to insert new ones and **DELETE** to delete existing ones.
 
-In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6)
+In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij)
 
 
 ### Updating existing records
@@ -22,7 +22,7 @@ WHERE condition
 
 #### Updating a single record
 
-Let's assume that Emma recently had a birthday and we need to set her age to `19`. We need to construct an **UPDATE** statement that only updates Emma's record and set the field correctly. The **WHERE** clause is the part of the update statement that selects what records to update so the simple way to check that it is correct is to use it in a **SELECT** statement first:
+Let's assume that Emma Smith recently had a birthday and we need to set her age to `19`. We need to construct an **UPDATE** statement that only updates Emma's record and set the field correctly. The **WHERE** clause is the part of the update statement that selects what records to update so the simple way to check that it is correct is to use it in a **SELECT** statement first:
 
 ```SQL
 SELECT * FROM person WHERE id = 1;
@@ -52,14 +52,14 @@ And we can confirm that only Emma was updated.
 
 #### Updating multiple records
 
-Let's assume that both Mia and Abigail had birthdays. We could run two **UPDATE** statements but we notice that they share the same last name so we should be able to do it in one go. In order to do this, we need two things:
+Let's assume that both Mia and Abigail had birthdays. We could run two **UPDATE** statements but we notice that they share part of the name so we should be able to do it in one go using a **LIKE** statement. In order to do this, we need two things:
 - A **WHERE** clause that only selects the two records we want to update
 - A **SET** clause that is able to add 1 to their age rather than set them to a set value
 
 We can try the **WHERE** clause using a **SELECT** statement:
 
 ```SQL
-SELECT * FROM person WHERE last_name = 'Moore';
+SELECT * FROM person WHERE name LIKE '%Moore%';
 ```
 
 And then it's just a case of using SQL arithmetic capabilities to set the value correctly:
@@ -67,16 +67,16 @@ And then it's just a case of using SQL arithmetic capabilities to set the value 
 ```SQL
 UPDATE person
 SET age = age + 1
-WHERE last_name = 'Moore';
+WHERE name like '%Moore%';
 ```
 
 #### Updating all records in a table
 
-If we omit the **WHERE** clause in our **UPDATE** statement, it can update all records in a table. This is very powerful and allows us to set all last names to uppercase for example:
+If we omit the **WHERE** clause in our **UPDATE** statement, it can update all records in a table. This is very powerful and allows us to set all names to uppercase for example:
 
 ```SQL
 UPDATE person
-SET last_name = UPPER(last_name);
+SET name = UPPER(name);
 ```
 
 However, be very careful with this as it can update a large amount of data in one go.
@@ -91,16 +91,16 @@ Let's add a new student called Valerie Knight, aged 44, no children, born and li
 
 ```SQL
 INSERT INTO person
-VALUES (41, 'Valerie', 'Knight', 44, 'Female', 'UK', 'UK', 0, 'Arts');
+VALUES (41, 'Valerie Knight', 44, 'Female', 'UK', 'UK', 0, 'Arts');
 ```
 
 #### Explicit form
 
-The downside of the simple form is that the list of values needs to be provided in order and it is sometimes difficult to tell what value is what. By using the explicit form, we can make the code more readable and ensure that it will still work even if new fields are added to the table. So let's insert a record for a new student named Sonia Gupta for whom we don't know the studies:
+The downside of the simple form is that the list of values needs to be provided in order and it is sometimes difficult to tell what value is what. By using the explicit form, we can make the code more readable and ensure that it will still work even if new fields are added to the table. So let's insert a record for a new student named Sonia Gupta Pacin for whom we don't know the studies:
 
 ```SQL
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children)
-VALUES (42, 'Sonia', 'Gupta', 25, 'Female', 'ES', 'IN', 1);
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children)
+VALUES (42, 'Sonia Gupta Pacin', 25, 'Female', 'ES', 'IN', 1);
 ```
 
 ### Deleting records
@@ -121,11 +121,11 @@ WHERE age < 18;
 
 ## Lesson 4 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 
 ### Summary of the tables
 
-person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
 
 location (id, city, country, start_date)
 
@@ -137,10 +137,10 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
-* L4.1 Update the age of the student named Liam.
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
+* L4.1 Update the age of the student named Luis Marco Polo.
 * L4.2 Increase by 1 the age of all the students who were born in Italy.
-* L4.3 Set all last names to uppercase.
+* L4.3 Set all names to lowercase.
 * L4.4 Insert a new student.
 * L4.5 Delete the record you just inserted.
 * L4.6 Delete the students with no children.

@@ -21,9 +21,9 @@ Where:
 * **{expression}** can be a _column_ name, the _column_ position, a function, or an arithmetic expression,
 * **{direction}** is either ASC or DESC, if omitted ASC is assumed.
 
-Using the same database as in Lesson 1 (https://sqliteonline.com/#fiddle-5bc61b5c72967o2ajnbzgc2s), run the following query.
+Using the same database as in Lesson 1 (https://sqliteonline.com/#fiddle-5bd0521d72a30o2ajnn1zerx), run the following query.
 ```SQL
-SELECT first_name, age FROM person ORDER BY age DESC;
+SELECT name, age FROM person ORDER BY age DESC;
 ```
 
 Is the result sorted by descending age? What happen in ages that appear more than once? Are the names sorted?
@@ -31,29 +31,29 @@ Is the result sorted by descending age? What happen in ages that appear more tha
 You can add more than one order by pairs of expression and direction:
 
 ```SQL
-SELECT first_name, age FROM person ORDER BY age DESC, first_name ASC;
+SELECT name, age FROM person ORDER BY age DESC, name ASC;
 ```
 
-With the SQL above, in case of equal ages, then records will be sorted by first name. Note that each sort has a different direction.
+With the SQL above, in case of equal ages, then records will be sorted by name. Note that each sort has a different direction.
 
 The following query is equivalent to the previous one, but instead of using column names, column positions are used.
 ```SQL
-SELECT first_name, age FROM person ORDER BY 2 DESC, 1 ASC;
+SELECT name, age FROM person ORDER BY 2 DESC, 1 ASC;
 ```
 
 This next query is an example of function. The function **LENGTH** in SQLite returns the length of the string passed as parameter (between the parentheses):
 ```SQL
-SELECT first_name, last_name FROM person ORDER BY LENGTH(first_name) DESC;
+SELECT name FROM person ORDER BY LENGTH(name) DESC;
 ```
 
 Lets now use an arithmetic expression as a last example of sorting:
 ```SQL
-SELECT first_name, last_name FROM person ORDER BY (age + 2 * number_of_children) DESC;
+SELECT name FROM person ORDER BY (age + 2 * number_of_children) DESC;
 ```
 
 TIP: You can also add expressions and functions in the columns to show in the results: Try this out:
 ```SQL
-SELECT first_name, last_name, (age + 2 * number_of_children) FROM person ORDER BY (age + 2 * number_of_children) DESC;
+SELECT name, (age + 2 * number_of_children) FROM person ORDER BY (age + 2 * number_of_children) DESC;
 ```
 
 ### Limiting the number of results and paginating
@@ -61,7 +61,7 @@ SELECT first_name, last_name, (age + 2 * number_of_children) FROM person ORDER B
 When you are building queries that will fill reports, when you are showing the results in pages, or simply when the result is too long, you may want to limit the number of rows you show. To do so, you can use the operator **LIMIT** as follows
 
 ```SQL
-SELECT first_name, age FROM person ORDER BY age DESC LIMIT 5;
+SELECT name, age FROM person ORDER BY age DESC LIMIT 5;
 ```
 
 Contrary to the query used before without LIMIT that returned all the rows in the table, this one only returns the first 5.
@@ -71,30 +71,31 @@ Although it is not strictly necessary to have an ORDER BY clause when you LIMIT 
 If additionally you are paginating the result, you need to use LIMIT together with **OFFSET**. This operator can we understood as _Skip the first N records, and give me the ones after_. For example, if you run
 
 ```SQL
-SELECT first_name, age FROM person ORDER BY age DESC LIMIT 5 offset 3;
+SELECT name, age FROM person ORDER BY age DESC LIMIT 5 offset 3;
 ```
 
-It will ignore the 3 oldest (Mia, Mason and Jacob), and will show the next 5 (Sophia, Benjamin, Abigail, William, and Liam).
+It will ignore the 3 oldest (Mia, Mason and Jacob), and will show the next 5 (Sophia, Benjamin, Abigail, William, and Luis).
 
 With LIMIT and OFFSET you can create a pagination mechanism like this:
 
-| Page | Query                                                                   | Results                                            |
-| :--: | :---------------------------------------------------------------------- | :------------------------------------------------- |
-| 1    | SELECT first_name, age FROM person ORDER BY age DESC LIMIT 5 offset 0;  | The first 5 oldest                                 |
-| 2    | SELECT first_name, age FROM person ORDER BY age DESC LIMIT 5 offset 5;  | The 6th to the 10th                                |
-| 3    | SELECT first_name, age FROM person ORDER BY age DESC LIMIT 5 offset 10; | The 11th to the 12th, as there are no more records |
+| Page | Query                                                             | Results                                            |
+| :--: | :---------------------------------------------------------------- | :------------------------------------------------- |
+| 1    | SELECT name, age FROM person ORDER BY age DESC LIMIT 5 offset 0;  | The first 5 oldest                                 |
+| 2    | SELECT name, age FROM person ORDER BY age DESC LIMIT 5 offset 5;  | The 6th to the 10th                                |
+| 3    | SELECT name, age FROM person ORDER BY age DESC LIMIT 5 offset 10; | The 11th to the 12th, as there are no more records |
 
 ### Filtering with multiple values
+#### IN operator
 
 Sometimes you need to filter some rows of your result and you may end up with queries like the one below
 
 ```SQL
-SELECT first_name FROM person WHERE age = 18 OR age = 21 OR age = 30;
+SELECT name FROM person WHERE age = 18 OR age = 21 OR age = 30;
 ```
 
 This query works, but you can write it in a more readable way, thanks to the operator **IN**
 ```SQL
-SELECT first_name FROM person WHERE age IN (18,21,30);
+SELECT name FROM person WHERE age IN (18,21,30);
 ```
 
 Try these two in the database. Do you get the same results? The **IN** operator must be followed by a list of values. All the records having any of the values in the list for the given column (age in this example) will be kept in the result.
@@ -102,11 +103,36 @@ Try these two in the database. Do you get the same results? The **IN** operator 
 You can also negate the operator IN, using **NOT IN**. The results is pretty straight forward. Contrary to the IN alone, when using NOT IN, only the record for which their value is NOT in the list will be kept in the result.
 
 ```SQL
-SELECT first_name FROM person WHERE age NOT IN (18,21,30);
+SELECT name FROM person WHERE age NOT IN (18,21,30);
 ```
 
 Try it in the Database. What do you get now?
 
+#### LIKE operator
+
+Another operator you can use to select multiple results at a time is the operator **LIKE**. This operator is used to filter text columns with partial matches.
+
+When using **LIKE**, there are two wildcards you can use in your conditions. Those are:
+
+* % - The percent sign represents zero, one, or multiple characters
+* _ - The underscore represents a single character
+
+For example:
+```SQL
+SELECT name FROM person WHERE name LIKE '%li%';
+```
+
+Will return Olivia Juanes and William Brown. Both have _li_ in them.
+
+The following one, will return those starting with _M_:
+```SQL
+SELECT * FROM PERSON WHERE name LIKE 'M%';
+```
+
+And this one, those ending with _s_:
+```SQL
+SELECT * FROM PERSON WHERE name LIKE '%s';
+```
 
 ### The NULL value
 
@@ -170,7 +196,7 @@ host (id, name, location_id, students_capacity, coaches_capacity, contact_person
 | 7              | Nemosoft       | 2              | 15               | 12               | Martin         |
 | 8              | Sosasoy        | 1              | 15               | 5                | Mercedes       |
 
-https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 ```SQL
 SELECT * FROM host;
 ```
@@ -191,7 +217,7 @@ workshop (id, host_id, date)
 |21|3|2018-03-23|
 |22|3|2018-06-25|
 
-https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 ```SQL
 SELECT * FROM workshop;
 ```
@@ -214,15 +240,15 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 |171|12|22|2018-06-18|true|
 |172|3|22|2018-06-25|true|
 
-https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 ```SQL
 SELECT * FROM rsvp;
 ```
 ## Write the following queries
 
-Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
-* L2.1 Show the name and last name of all the persons. Sort the result by last name in ascending order, in case of equal last name sort by first name.
-* L2.2 Show the last name and the biological sex of the person with higher number of children.
+Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
+* L2.1 Show the name of all the persons. Sort the result by name in ascending order, in case of equal name sort by country of residence.
+* L2.2 Show the name and the biological sex of the person with higher number of children.
 * L2.3 Show the country of birth of the oldest person.
 * L2.4 Show the age of the oldest person.
 * L1.5 Show the locations cities in UK.
@@ -242,13 +268,12 @@ This ends our **SQL Lesson 2**. Is there something you don't understand? Try and
 
 As in previous lesson, this sections contains the SQL statements used to create the fiddle with the given reference.
 
-### #fiddle-5bc61b9572968o2ajnbzhjy6
+### #fiddle-5bd0543f72a31o2ajnn2b4ij
 
 ```SQL
 CREATE TABLE person (
     id INTEGER not null,
-    first_name VARCHAR(20) not null,
-    last_name VARCHAR(20) not null,
+    name VARCHAR(40) not null,
     age SMALLINT,
     biological_sex VARCHAR(8),
     country_of_birth VARCHAR(2),
@@ -257,18 +282,18 @@ CREATE TABLE person (
     studies VARCHAR(30)
 );
 
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (1,"Emma","Smith",18,"Female","UK","UK",1,"Computer science");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (2,"Noah","Johnson",21,"Male","UK","US",0,"Accountancy");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (3,"Liam","Williams",23,"Male","ES","UK",0,"Maths");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (4,"Olivia","Jones",21,"Female","AR","PT",1,"Arts");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (5,"William","Brown",25,"Male","BR","BR",1,"Photography");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (6,"Sophia","Davis",30,"Female","PT","UK",2,NULL);
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (7,"Jacob","Miller",35,"Male","NL","NL",2,"Graphic designer");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (8,"Mason","Wilson",42,"Intersex","FR","FR",3,NULL);
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (9,"Mia","Moore",50,"Female","US","UK",4,"Law");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (10,"Abigail","Moore",28,"Female","CA","ES",2,"Law");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (11,"Michael","Anderson",22,"Intersex","IT","IT",1,"Human Resources");
-INSERT INTO person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (40,"Benjamin","Taylor",30,"Male","ES","IT",1,"Computer science");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (1,"Emma Smith",18,"Female","UK","UK",1,"Computer science");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (2,"Noah Johnson",21,"Male","UK","US",0,"Accountancy");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (3,"Luis Marco Polo",23,"Male","ES","UK",0,"Maths");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (4,"Olivia Juanes",21,"Female","AR","PT",1,"Arts");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (5,"William Brown",25,"Male","BR","BR",1,"Photography");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (6,"Sophia Davis",30,"Female","PT","UK",2,NULL);
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (7,"Jacob Miller",35,"Male","NL","NL",2,"Graphic designer");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (8,"Mason Wilson",42,"Intersex","FR","FR",3,NULL);
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (9,"Mia Moore",50,"Female","US","UK",4,"Law");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (10,"Abigail Moore",28,"Female","CA","ES",2,"Law");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (11,"Michael Anderson",22,"Intersex","IT","IT",1,"Human Resources");
+INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (40,"Benjamin Martinez Lopez",30,"Male","ES","IT",1,"Computer science");
 
 CREATE TABLE location (
   id INTEGER not null,

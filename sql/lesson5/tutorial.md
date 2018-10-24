@@ -7,11 +7,11 @@ title: Introduction to SQL
 
 The previous lessons showed you how to manipulate data from a single table. _Lesson 5_ will show you how to combine data from multiple tables and will bring out the _relational_ part of RDBMS.
 
-In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6)
+In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij)
 
 ### Primary and Foreign Keys
 
-All tables in a relational database need to have a primary key. This is an identifier that uniquely identifies each row. We saw in _Lesson 4_ that the `person` table uses the `id` field as a primary key. The key aspects of the primary key field are that it is never empty and it is unique: every record in a table has one and only one record can have a given primary key. For instance, in the `person` table, record with `id` `1` is the record for `Emma`. If we try to insert a new record with the same `id` primary key, it will fail. If we try to insert a record with no value for `id` it will fail too.
+All tables in a relational database need to have a primary key. This is an identifier that uniquely identifies each row. We saw in _Lesson 4_ that the `person` table uses the `id` field as a primary key. The key aspects of the primary key field are that it is never empty and it is unique: every record in a table has one and only one record can have a given primary key. For instance, in the `person` table, record with `id` `1` is the record for `Emma Smith`. If we try to insert a new record with the same `id` primary key, it will fail. If we try to insert a record with no value for `id` it will fail too.
 
 Any table can also have a number of foreign key fields. Each foreign key contains the value for a primary key in another table. For example, if we select the data in the `host` table:
 
@@ -107,11 +107,11 @@ WHERE host.id is NULL;
 
 ## Lesson 5 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 
 ### Summary of the tables
 
-person (id, first_name, last_name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
 
 location (id, city, country, start_date)
 
@@ -123,7 +123,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bc61b9572968o2ajnbzhjy6
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
 * L5.1 Select the list of workshops that have RSVP records.
 * L5.2 Select students with the list of workshops they have sent an RSVP to.
 * L5.3 Find all workshops that have no RSVP.
