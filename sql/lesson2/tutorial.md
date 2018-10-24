@@ -110,7 +110,7 @@ Try it in the Database. What do you get now?
 
 #### LIKE operator
 
-Another operator you can use to select multiple results at a time is the operator **LIKE**. This operator is used to filter text columns with partial matches.
+Another operator you can use to select multiple records at a time is the operator **LIKE**. This operator is used to filter text columns with partial matches.
 
 When using **LIKE**, there are two wildcards you can use in your conditions. Those are:
 
@@ -132,6 +132,11 @@ SELECT * FROM PERSON WHERE name LIKE 'M%';
 And this one, those ending with _s_:
 ```SQL
 SELECT * FROM PERSON WHERE name LIKE '%s';
+```
+
+If using the _ then this one will return any name where there is an _m_, followed by any character, and the but an _r_:
+```SQL
+SELECT * FROM person where name like '%m_r%';
 ```
 
 ### The NULL value
