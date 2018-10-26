@@ -41,15 +41,15 @@ A **TABLE** is a set of entities (stored in rows, aka records) that have the sam
 
 eg. a table that stores information about movies may look like:
 
-| name                  | genre       | director         | duration       | language |
-|:--------------------- |:----------- |:---------------- |:--------------:|:--------:|
-| Titanic               | Drama       | James Cameron    | 194            | en       |
-| Star Wars             | Action      | George Lucas     | 121            | en       |
-| 2001: A Space Odyssey | Sci-Fi      | Stanley Kubrick  | 149            | en       |
-| Nueve Reinas          | Drama       | Fabian Bielinsky | 114            | es       |
+| name                  | genre       | director         | Writer           | duration       | language |
+|:--------------------- |:----------- |:---------------- | :--------------- |:--------------:|:--------:|
+| Titanic               | Drama       | James Cameron    | James Cameron    | 194            | en       |
+| Star Wars             | Action      | George Lucas     | George Lucas     | 121            | en       |
+| 2001: A Space Odyssey | Sci-Fi      | Stanley Kubrick  | Arthur C. Clarke | 149            | en       |
+| Nueve Reinas          | Drama       | Fabian Bielinsky | Fabián Bielinsky | 114            | es       |
 
 
-In the table above, you can see that the table has 5 columns with headings and 4 rows.
+In the table above, you can see that the table has 6 columns with headings and 4 rows.
 
 _Rows_ are used to store the actual data we want to save in our database tables.
 
@@ -87,7 +87,7 @@ We will be using the online version in this first tutorial. If you want to run t
 
 ### Showing all records and all column (continuation)
 
-Open (https://sqliteonline.com/#fiddle-5babeb117271co2ajmjlm3qn).
+Open (https://sqliteonline.com/#fiddle-5bd3754272a88o2ajnqge8i9).
 Type the statement below in the box beneath the house icon. Then press the blue 'Run' button at the top.
 
 ```SQL
@@ -149,6 +149,11 @@ SELECT * FROM movie WHERE language = "en";
 Does the language column contain only rows equal to "en"?
 
 Try out the other operators examples. See what happens.
+
+You can compare columns in the conditions too, for example:
+```SQL
+SELECT * FROM movie WHERE writer = director;
+```
 
 You can combine conditions using the words **OR** and **AND**.
 
@@ -216,11 +221,11 @@ For the lessons, when you find a link to https://sqliteonline.com/ followed by a
 
 ## ANNEX
 
-### #fiddle-5babeb117271co2ajmjlm3qn
+### #fiddle-5bd3754272a88o2ajnqge8i9
 
 ```SQL
-CREATE TABLE movie (name text not null, genre text, director text, duration number, language text);
-INSERT INTO movie (name, genre, director,duration,language) VALUES ("Titanic","Drama","James Cameron",194,"en"),("Star Wars","Action","George Lucas",121,"en"),("2001: A Space Odyssey","Sci-Fi","Stanley Kubrick",149,"en"),("Nueve Reinas","Drama","Fabian Bielinsky",114,"es");
+CREATE TABLE movie (name text not null, genre text, director text, writer text, duration number, language text);
+INSERT INTO movie (name, genre, director,duration,language) VALUES ("Titanic","Drama","James Cameron","James Cameron",194,"en"),("Star Wars","Action","George Lucas","George Lucas",121,"en"),("2001: A Space Odyssey","Sci-Fi","Stanley Kubrick","Arthur C. Clarke",149,"en"),("Nueve Reinas","Drama","Fabian Bielinsky","Fabian Bielinsky",114,"es");
 ```
 
 ### #fiddle-5bd0521d72a30o2ajnn1zerx
