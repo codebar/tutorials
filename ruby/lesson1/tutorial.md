@@ -16,7 +16,7 @@ Alternatively, if you are having trouble you can create an account on [Cloud9](h
 
 ## Ruby in 100 minutes
 
-There are some great tutorials out there, so to understand Ruby basics we will be going through JumbStart Lab's [Ruby in 100 minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html).
+There are some great tutorials out there, so to understand Ruby basics we will be going through JumpStart Lab's [Ruby in 100 minutes](http://tutorials.jumpstartlab.com/projects/ruby_in_100_minutes.html).
 
 The tutorial is open source, so if you have anything to add to it, you can issue a pull request to [the project on Github](https://github.com/JumpstartLab/curriculum/blob/master/source/projects/ruby_in_100_minutes.markdown).
 
