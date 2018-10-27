@@ -7,7 +7,7 @@ title: Introduction to SQL
 
 The previous lessons showed you how to manipulate data from a single table. _Lesson 5_ will show you how to combine data from multiple tables and will bring out the _relational_ part of RDBMS.
 
-In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij)
+In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bd4656772a98o2ajnrgzwo2)
 
 ### Primary and Foreign Keys
 
@@ -107,11 +107,11 @@ WHERE host.id is NULL;
 
 ## Lesson 5 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd4656772a98o2ajnrgzwo2
 
 ### Summary of the tables
 
-person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job)
 
 location (id, city, country, start_date)
 
@@ -123,7 +123,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd4656772a98o2ajnrgzwo2
 * L5.1 Select the list of workshops that have RSVP records.
 * L5.2 Select students with the list of workshops they have sent an RSVP to.
 * L5.3 Find all workshops that have no RSVP.

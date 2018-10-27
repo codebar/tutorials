@@ -7,7 +7,7 @@ title: Introduction to SQL
 
 The previous lessons showed you how to manipulate data from a single table and from multiple tables using **JOIN**. _Lesson 6_ will show you how to use aliases, the **EXISTS** operator, and how to save complex queries into **VIEWs**.
 
-In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij)
+In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bd4656772a98o2ajnrgzwo2)
 
 ### Using aliases
 
@@ -107,11 +107,11 @@ It is important to mention that the VIEWs do not have their own data. The data i
 
 ## Lesson 6 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd4656772a98o2ajnrgzwo2
 
 ### Summary of the tables
 
-person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job)
 
 location (id, city, country, start_date)
 
@@ -123,7 +123,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd4656772a98o2ajnrgzwo2
 * L6.1 List all the hosts that had at least one workshop hosted
 * L6.2 List all the persons that have someone else with their same age (Use only JOINs)
 * L6.3 List all the persons that have someone else with their same age (Use only EXISTS)

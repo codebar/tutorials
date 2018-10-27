@@ -5,8 +5,8 @@ https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
 
 List of #fiddle
 #fiddle-5babeb117271co2ajmjlm3qn
-#fiddle-5bd0521d72a30o2ajnn1zerx
-#fiddle-5bd0543f72a31o2ajnn2b4ij
+#fiddle-5bd464f872a97o2ajnrgxj5d
+#fiddle-5bd4656772a98o2ajnrgzwo2
 
 Lesson 1:
 - Explanation of the lessons. "By the end of this lessons you'll be able to: ..."
