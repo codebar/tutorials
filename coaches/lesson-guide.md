@@ -136,6 +136,13 @@ of a tutorial the student should be focussing on.
 ### Learning goals
 
 - Demonstrate ability to structure an HTML document using semantic HTML5 elements
+- Know how to use the following elements
+  - `section`
+  - `article`
+  - `aside`
+  - `address`
+  - `figure` and `figcaption`
+  - `video` and `audio`
 - Demonstrate use of a range of CSS properties
 - Demonstrate use of web inspector
 
