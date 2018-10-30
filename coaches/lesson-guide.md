@@ -39,7 +39,7 @@ of a tutorial the student should be focussing on.
 ### Prerequisites
 
 - A text editor
-- Able to read and write html syntax (no need to understand what the
+- Able to read and write HTML syntax (no need to understand what the
   tags do)
 
 ### Learning goals
@@ -66,7 +66,7 @@ of a tutorial the student should be focussing on.
 
 - A web browser
 - A text editor
-- Able to read and write html syntax (no need to understand what the tags do)
+- Able to read and write HTML syntax
 - Able to read and write a simple CSS rule
 
 ### Learning goals
@@ -87,12 +87,13 @@ of a tutorial the student should be focussing on.
 
 - A web browser
 - A text editor
-- Able to read and write html syntax
+- Able to read and write HTML syntax
 - Able to read and write a simple CSS rule
 
 ### Learning goals
 
 - Some understanding of how to use HTML to structure content in a document
+- Know what the `header` and `footer` elements are for
 - Understand floats
 - Some understanding of the following position values:
   - `static`
@@ -105,13 +106,38 @@ of a tutorial the student should be focussing on.
 
 ### Prerequisites
 
+- A web browser
+- A text editor
+- Able to read and write HTML syntax
+- Able to read and write a simple CSS rule
+
 ### Learning goals
+
+- Understand these properties:
+  - max-width, min-width
+  - text-shadow
+  - border-radius
+  - box-shadow
+  - background, background-size, background-image, background-attachment and background-repeat
+  - `:not`
+  - `:nth-child()`
+- Understand the `em` and `px` units of measurement
+- Understand rgba color and opacity
 
 ## Lesson 6: Advanced HTML5
 
 ### Prerequisites
 
+- A web browser
+- A text editor
+- Able to read and write HTML5 syntax
+- Able to read and write CSS3
+
 ### Learning goals
+
+- Demonstrate ability to structure an HTML document using semantic HTML5 elements
+- Demonstrate use of a range of CSS properties
+- Demonstrate use of web inspector
 
 # JavaScript
 
