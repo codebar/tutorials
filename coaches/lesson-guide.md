@@ -85,7 +85,21 @@ of a tutorial the student should be focussing on.
 
 ### Prerequisites
 
+- A web browser
+- A text editor
+- Able to read and write html syntax
+- Able to read and write a simple CSS rule
+
 ### Learning goals
+
+- Some understanding of how to use HTML to structure content in a document
+- Understand floats
+- Some understanding of the following position values:
+  - `static`
+  - `relative`
+  - `absolute`
+  - `fixed`
+- Some understanding of z-index
 
 ## Lesson 5: Diving into HTML5 and CSS3
 
