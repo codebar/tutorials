@@ -146,6 +146,22 @@ of a tutorial the student should be focussing on.
 - Demonstrate use of a range of CSS properties
 - Demonstrate use of web inspector
 
+## Lesson 7: Responsive layouts and Media Queries
+
+### Prerequisites
+
+- A web browser
+- A text editor
+- Able to read and write HTML5 syntax
+- Able to read and write CSS3
+
+### Learning goals
+
+- Understand what the viewport is
+- Some understanding of mobile first principles
+- Know how to use media queries to target different viewport sizes and media
+- Demonstrate use of web inspector
+
 # JavaScript
 
 ## Lesson 1: Introduction to JavaScript
