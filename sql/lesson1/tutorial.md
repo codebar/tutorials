@@ -182,34 +182,34 @@ For the exercises below, we'll use a new table: _person_. This table could be pa
 
 ### PERSON table
 
-person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job)
 
-| id       | name                    | age   | biological_sex | country_of_birth | country_of_residence | number_of_children | studies         |
-| :------: | :---------------------: | :---: | :------------: | :--------------: | :------------------: | :----------------: | :-----:         |
-|1         | Emma Smith              |18     |Female          |UK                |UK                    |1                   |Computer science |
-|2         | Noah Johnson            |21     |Male            |UK                |US                    |0                   |Accountancy      |
-|3         | Luis Marco Polo         |23     |Male            |ES                |UK                    |0                   |Maths            |
-|4         | Olivia Juanes           |21     |Female          |AR                |PT                    |1                   |Arts             |
-|5         | William Brown           |25     |Male            |BR                |BR                    |1                   |Photography      |
-|6         | Sophia Davis            |30     |Female          |PT                |UK                    |2                   |NULL             |
-|7         | Jacob Miller            |35     |Male            |NL                |NL                    |2                   |Graphic designer |
-|8         | Mason Wilson            |42     |Intersex        |FR                |FR                    |3                   |NULL             |
-|9         | Mia Moore               |50     |Female          |US                |UK                    |4                   |Law              |
-|10        | Abigail Moore           |28     |Female          |CA                |ES                    |2                   |Law              |
-|11        | Michael Anderson        |22     |Intersex        |IT                |IT                    |1                   |Human Resources  |
-|...       | ...                     |...    |...             |...               |...                   |...                 |...              |
-|40        | Benjamin Martinez Lopez |30     |Male            |ES                |IT                    |1                   |Computer science |
+| id       | name                    | age   | country_of_birth | country_of_residence | number_of_children | studies         | has_job |
+| :------: | :---------------------: | :---: | :--------------: | :------------------: | :----------------: | :-----:         | :-----: |
+|1         | Emma Smith              |18     |UK                |UK                    |1                   |Computer science | yes     |
+|2         | Noah Johnson            |21     |UK                |US                    |0                   |Accountancy      | yes     |
+|3         | Luis Marco Polo         |23     |ES                |UK                    |0                   |Maths            | yes     |
+|4         | Olivia Juanes           |21     |AR                |PT                    |1                   |Arts             | yes     |
+|5         | William Brown           |25     |BR                |BR                    |1                   |Photography      | yes     |
+|6         | Sophia Davis            |30     |PT                |UK                    |2                   |NULL             | no      |
+|7         | Jacob Miller            |35     |NL                |NL                    |2                   |Graphic designer | yes     |
+|8         | Mason Wilson            |42     |FR                |FR                    |3                   |NULL             | yes     |
+|9         | Mia Moore               |50     |US                |UK                    |4                   |Law              | yes     |
+|10        | Abigail Moore           |28     |CA                |ES                    |2                   |Law              | yes     |
+|11        | Michael Anderson        |22     |IT                |IT                    |1                   |Human Resources  | no      |
+|...       | ...                     |...    |...               |...                   |...                 |...              | yes     |
+|40        | Benjamin Martinez Lopez |30     |ES                |IT                    |1                   |Computer science | yes     |
 
 ## Write the following queries
 
-Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bd0521d72a30o2ajnn1zerx
+Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bd464f872a97o2ajnrgxj5d
 
 * L1.1 Show all the data available of all the persons.
 * L1.2 Show the name and Country of residence of all the persons 23 years old or above.
 * L1.3 Show the name and age of all the persons living in UK.
 * L1.4 Show the name and age of all the persons not living in their birth place.
 * L1.5 Show the distinct countries of residence of all the persons.
-* L1.6 Show the distinct studies of female biological born persons.
+* L1.6 Show the distinct studies of the persons having less than 2 children.
 
 ---
 This ends our **SQL Lesson 1**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
@@ -228,30 +228,30 @@ CREATE TABLE movie (name text not null, genre text, director text, writer text, 
 INSERT INTO movie (name, genre, director,duration,language) VALUES ("Titanic","Drama","James Cameron","James Cameron",194,"en"),("Star Wars","Action","George Lucas","George Lucas",121,"en"),("2001: A Space Odyssey","Sci-Fi","Stanley Kubrick","Arthur C. Clarke",149,"en"),("Nueve Reinas","Drama","Fabian Bielinsky","Fabian Bielinsky",114,"es");
 ```
 
-### #fiddle-5bd0521d72a30o2ajnn1zerx
+### #fiddle-5bd464f872a97o2ajnrgxj5d
 ```SQL
 CREATE TABLE person (
     id INTEGER not null,
     name VARCHAR(40) not null,
     age SMALLINT,
-    biological_sex VARCHAR(8),
     country_of_birth VARCHAR(2),
     country_of_residence VARCHAR(2),
     number_of_children SMALLINT,
-    studies VARCHAR(30)
+    studies VARCHAR(30),
+    has_job BOOLEAN
 );
 
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (1,"Emma Smith",18,"Female","UK","UK",1,"Computer science");
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (2,"Noah Johnson",21,"Male","UK","US",0,"Accountancy");
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (3,"Luis Marco Polo",23,"Male","ES","UK",0,"Maths");
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (4,"Olivia Juanes",21,"Female","AR","PT",1,"Arts");
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (5,"William Brown",25,"Male","BR","BR",1,"Photography");
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (6,"Sophia Davis",30,"Female","PT","UK",2,NULL);
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (7,"Jacob Miller",35,"Male","NL","NL",2,"Graphic designer");
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (8,"Mason Wilson",42,"Intersex","FR","FR",3,NULL);
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (9,"Mia Moore",50,"Female","US","UK",4,"Law");
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (10,"Abigail Moore",28,"Female","CA","ES",2,"Law");
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (11,"Michael Anderson",22,"Intersex","IT","IT",1,"Human Resources");
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies) VALUES (40,"Benjamin Martinez Lopez",30,"Male","ES","IT",1,"Computer science");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (1,"Emma Smith",18,"UK","UK",1,"Computer science","yes");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (2,"Noah Johnson",21,"UK","US",0,"Accountancy","yes");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (3,"Luis Marco Polo",23,"ES","UK",0,"Maths","yes");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (4,"Olivia Juanes",21,"AR","PT",1,"Arts","yes");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (5,"William Brown",25,"BR","BR",1,"Photography","yes");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (6,"Sophia Davis",30,"PT","UK",2,NULL,"no");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (7,"Jacob Miller",35,"NL","NL",2,"Graphic designer","yes");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (8,"Mason Wilson",42,"FR","FR",3,NULL,"yes");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (9,"Mia Moore",50,"US","UK",4,"Law","yes");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (10,"Abigail Moore",28,"CA","ES",2,"Law","yes");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (11,"Michael Anderson",22,"IT","IT",1,"Human Resources","no");
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (40,"Benjamin Martinez Lopez",30,"ES","IT",1,"Computer science","yes");
 
 ```

@@ -7,7 +7,7 @@ title: Introduction to SQL
 
 Up until now, you've practised selecting data and formatting it but you haven't updated any of it. _Lesson 4_ will show you how to do that with three new operators: **UPDATE** to update existing records, **INSERT** to insert new ones and **DELETE** to delete existing ones.
 
-In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij)
+In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5bd4656772a98o2ajnrgzwo2)
 
 
 ### Updating existing records
@@ -87,20 +87,20 @@ In order to insert new records, SQL offers the **INSERT INTO** statement. It com
 
 #### Simple form
 
-Let's add a new student called Valerie Knight, aged 44, no children, born and lives in the UK and studies Arts:
+Let's add a new student called Valerie Knight, aged 44, no children, born and lives in the UK, studies Arts, and has a job:
 
 ```SQL
 INSERT INTO person
-VALUES (41, 'Valerie Knight', 44, 'Female', 'UK', 'UK', 0, 'Arts');
+VALUES (41, 'Valerie Knight', 44, 'UK', 'UK', 0, 'Arts','yes');
 ```
 
 #### Explicit form
 
-The downside of the simple form is that the list of values needs to be provided in order and it is sometimes difficult to tell what value is what. By using the explicit form, we can make the code more readable and ensure that it will still work even if new fields are added to the table. So let's insert a record for a new student named Sonia Gupta Pacin for whom we don't know the studies:
+The downside of the simple form is that the list of values needs to be provided in order and it is sometimes difficult to tell what value is what. By using the explicit form, we can make the code more readable and ensure that it will still work even if new fields are added to the table. So let's insert a record for a new student named Sonia Gupta Pacin for whom we don't know the studies, neither we know if she has a job:
 
 ```SQL
-INSERT INTO person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children)
-VALUES (42, 'Sonia Gupta Pacin', 25, 'Female', 'ES', 'IN', 1);
+INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children)
+VALUES (42, 'Sonia Gupta Pacin', 25, 'ES', 'IN', 1);
 ```
 
 ### Deleting records
@@ -121,11 +121,11 @@ WHERE age < 18;
 
 ## Lesson 4 exercises
 
-For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
+For the exercises below, we'll use the same tables from previous lesson. You can find the whole database in the following link https://sqliteonline.com/#fiddle-5bd4656772a98o2ajnrgzwo2
 
 ### Summary of the tables
 
-person (id, name, age, biological_sex, country_of_birth, country_of_residence, number_of_children, studies)
+person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job)
 
 location (id, city, country, start_date)
 
@@ -137,7 +137,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 ## Write the following queries
 
-Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd0543f72a31o2ajnn2b4ij
+Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5bd4656772a98o2ajnrgzwo2
 * L4.1 Update the age of the student named Luis Marco Polo.
 * L4.2 Increase by 1 the age of all the students who were born in Italy.
 * L4.3 Set all names to lowercase.

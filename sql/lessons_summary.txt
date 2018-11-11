@@ -4,9 +4,9 @@ https://markdown-here.com/livedemo.html
 https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet
 
 List of #fiddle
-#fiddle-5bd3754272a88o2ajnqge8i9
-#fiddle-5bd0521d72a30o2ajnn1zerx
-#fiddle-5bd0543f72a31o2ajnn2b4ij
+#fiddle-5babeb117271co2ajmjlm3qn
+#fiddle-5bd464f872a97o2ajnrgxj5d
+#fiddle-5bd4656772a98o2ajnrgzwo2
 
 Lesson 1:
 - Explanation of the lessons. "By the end of this lessons you'll be able to: ..."
@@ -23,7 +23,7 @@ Lesson 1:
     - Show the name and last name of all the persons living in UK.
     - Show the name and last name of all the persons not living in their birth place.
     - Show the distinct studies of all the persons.
-    - Show the distinct studies of female biological born persons.
+    - Show the distinct countries of residence of all the persons.
     - Show the locations cities in UK.
 
 
@@ -53,7 +53,7 @@ Lesson 3:
     - Show the number of persons not living in their birth country.
     - Show the average age of the people.
     - Show the age of the oldest person. (Find a different way to the one use in Lesson 1).
-    - Show the number of female, intersex, and male born persons.
+    - Show the number of employed and unemployed persons.
     - Show the number of persons per country of residence.
     - Show the top 5 countries with more residents.
     - Show the countries having 3 residents or more.
