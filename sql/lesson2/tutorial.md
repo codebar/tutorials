@@ -230,7 +230,8 @@ locations (id, city, country, start_date)
 
 https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y
 ```SQL
-SELECT * FROM locations;
+SELECT *
+  FROM locations;
 ```
 
 ### HOST table
@@ -250,7 +251,8 @@ hosts (id, name, location_id, students_capacity, coaches_capacity, contact_perso
 
 https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y
 ```SQL
-SELECT * FROM hosts;
+SELECT *
+  FROM hosts;
 ```
 
 ### WORKSHOP table
@@ -271,7 +273,8 @@ workshops (id, host_id, workshop_date)
 
 https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y
 ```SQL
-SELECT * FROM workshops;
+SELECT *
+  FROM workshops;
 ```
 
 
@@ -294,7 +297,8 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 
 https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y
 ```SQL
-SELECT * FROM rsvp;
+SELECT *
+  FROM rsvp;
 ```
 ## Write the following queries
 
