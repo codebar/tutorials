@@ -92,7 +92,7 @@ We will be using the online version in this first tutorial. If you want to run t
 
 ### Showing all records and all column (continuation)
 
-Open (https://sqliteonline.com/fiddle-5be8813c749e151ljod9lwa9).
+Open (https://sqliteonline.com/#fiddle-5be8813c749e151ljod9lwa9).
 Type the statement below in the box beneath the house icon. Then press the blue 'Run' button at the top.
 
 ```SQL
@@ -191,7 +191,7 @@ What do you think this query below will return? Can you predict the result befor
 SELECT *
   FROM movie
  WHERE duration > 120
-   AND (genre = "Sci-Fi" OR genre = "Drama");
+   AND (genre = 'Sci-Fi' OR genre = 'Drama');
 ```
 
 ## Lesson 1 exercises
@@ -239,7 +239,7 @@ For the lessons, when you find a link to https://sqliteonline.com/ followed by a
 
 ## ANNEX
 
-### fiddle-5be8813c749e151ljod9lwa9
+### #fiddle-5be8813c749e151ljod9lwa9
 
 ```SQL
 CREATE TABLE movies (
