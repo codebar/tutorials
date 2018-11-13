@@ -22,6 +22,10 @@ During this tutorial, we'll provide you the basic commands and explanations. If 
 * [W3Schools](https://www.w3schools.com/sql/)
 * [Wikipedia](https://en.wikipedia.org/wiki/SQL)
 
+## Style guide
+
+During these tutorials you will find SQL code fragments. There is a lot of bibliography out there about naming conventions and formatting recommendations, but it is not always possible to follow all of them. Thus, we have picked one style for these lessons. If you want to have a deeper look, you can find it [here](https://www.sqlstyle.guide/).
+
 ## About Lesson 1
 
 _Lesson 1_ will be an introduction to SQL and its querying possibilities. You'll work with an online database already filled in with some data and you'll focus on the **SELECT** operator. But before doing so, you'll learn what a **TABLE** is and how it is structured. At the end, you'll find some exercises to _capture_ the knowledge.
@@ -41,7 +45,7 @@ A **TABLE** is a set of entities (stored in rows, aka records) that have the sam
 
 eg. a table that stores information about movies may look like:
 
-| name                  | genre       | director         | Writer           | duration       | language |
+| name                  | genre       | director         | writer           | duration       | language |
 |:--------------------- |:----------- |:---------------- | :--------------- |:--------------:|:--------:|
 | Titanic               | Drama       | James Cameron    | James Cameron    | 194            | en       |
 | Star Wars             | Action      | George Lucas     | George Lucas     | 121            | en       |
@@ -66,7 +70,8 @@ The first SQL statement is for data querying. It allows you to show all the rows
 This is the minimum syntax of this type of statement (aka query):
 
 ```SQL
-SELECT {columns} FROM {table name};
+SELECT {columns}
+  FROM {table name};
 ```
 
 Where:
@@ -87,14 +92,15 @@ We will be using the online version in this first tutorial. If you want to run t
 
 ### Showing all records and all column (continuation)
 
-Open (https://sqliteonline.com/#fiddle-5bd3754272a88o2ajnqge8i9).
+Open (https://sqliteonline.com/#fiddle-5be8813c749e151ljod9lwa9).
 Type the statement below in the box beneath the house icon. Then press the blue 'Run' button at the top.
 
 ```SQL
-SELECT * FROM movie;
+SELECT *
+  FROM movies;
 ```
 
-Below this statement you should see the entire database table **movie** displayed. The output of a SELECT statement are generally known as the results.
+Below this statement you should see the entire database table **movies** displayed. The output of a SELECT statement are generally known as the results.
 
 Hooray!!! You just did your first query! Lets keep going, this is just the beginning!
 
@@ -104,21 +110,24 @@ In SQL ```*``` means all. A ```SELECT * ...``` means *show me all the columns*. 
 
 Now change the * to the name of some columns. Try this:
 ```SQL
-SELECT name, director FROM movie;
+SELECT name, director
+  FROM movies;
 ```
 
 What do you get when you click **run**? Are only two columns displayed? Are all four rows displayed?
 
 Now run this:
 ```SQL
-SELECT genre FROM movie;
+SELECT genre
+  FROM movies;
 ```
 What do you get? Are there still four rows? Are there any repetitions in Genre?
 
 In SQL, when we want only unique, distinct records in the result we can use another reserved word: **DISTINCT**. It should be placed before the list of column names. Try this:
 
 ```SQL
-SELECT DISTINCT genre FROM movie;
+SELECT DISTINCT genre
+  FROM movie;
 ```
 Nice, isn't it?
 
@@ -133,8 +142,8 @@ The next table shows the most common operators (there are more, but you'll learn
 
 | Symbol  | Meaning               | Example           |
 |:-------:| -----------           | ---------         |
-| =       | Equal                 | language = "en"   |
-| <>      | Not equal             | genre <> "Drama"  |
+| =       | Equal                 | language = 'en'   |
+| <>      | Not equal             | genre <> 'Drama'  |
 | >       | Greater than          | duration > 121    |
 | >=      | Greater than or equal | duration >= 121   |
 | <       | Lower than            | duration < 121    |
@@ -143,28 +152,34 @@ The next table shows the most common operators (there are more, but you'll learn
 Try this statement:
 
 ```SQL
-SELECT * FROM movie WHERE language = "en";
+SELECT *
+  FROM movie
+ WHERE language = 'en';
 ```
 
-Does the language column contain only rows equal to "en"?
+Does the language column contain only rows equal to 'en'?
 
 Try out the other operators examples. See what happens.
 
 You can compare columns in the conditions too, for example:
 ```SQL
-SELECT * FROM movie WHERE writer = director;
+SELECT *
+  FROM movie
+ WHERE writer = director;
 ```
 
 You can combine conditions using the words **OR** and **AND**.
 
 | Symbol  | Meaning                                                 | Example                             |
 |:-------:| -----------                                             | ---------                           |
-| OR      | At least one of the expressions must be true            | language = "es" OR genre = "Action" |
-| AND     | Both of the expressions must be true                    | language = "en" AND genre = "Drama" |
+| OR      | At least one of the expressions must be true            | language = 'es' OR genre = 'Action' |
+| AND     | Both of the expressions must be true                    | language = 'en' AND genre = 'Drama' |
 
 
 ```SQL
-SELECT * FROM movie WHERE language = "es" OR genre = "Action";
+SELECT *
+  FROM movie
+ WHERE language = 'es' OR genre = 'Action';
 ```
 
 Why did you get _Star Wars_ if it is in English? Why did you get _Nueve Reinas_ if it's a Drama?
@@ -173,16 +188,19 @@ Try the **AND** one now. Can you think of other combinations?
 What do you think this query below will return? Can you predict the result before running it?
 
 ```SQL
-SELECT * FROM movie WHERE duration > 120 AND (genre = "Sci-Fi" OR genre = "Drama");
+SELECT *
+  FROM movie
+ WHERE duration > 120
+   AND (genre = 'Sci-Fi' OR genre = 'Drama');
 ```
 
 ## Lesson 1 exercises
 
-For the exercises below, we'll use a new table: _person_. This table could be part of codebar.io database. Lesson after lesson we'll be adding tables or extending the existing ones to construct the whole database by the end of this tutorial.
+For the exercises below, we'll use a new table: _people_. This table could be part of codebar.io database. Lesson after lesson we'll be adding tables or extending the existing ones to construct the whole database by the end of this tutorial.
 
-### PERSON table
+### People table
 
-person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job)
+people (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job)
 
 | id       | name                    | age   | country_of_birth | country_of_residence | number_of_children | studies         | has_job |
 | :------: | :---------------------: | :---: | :--------------: | :------------------: | :----------------: | :-----:         | :-----: |
@@ -202,7 +220,7 @@ person (id, name, age, country_of_birth, country_of_residence, number_of_childre
 
 ## Write the following queries
 
-Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5bd464f872a97o2ajnrgxj5d
+Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5be8825d749e251ljod9s39t
 
 * L1.1 Show all the data available of all the persons.
 * L1.2 Show the name and Country of residence of all the persons 23 years old or above.
@@ -221,37 +239,50 @@ For the lessons, when you find a link to https://sqliteonline.com/ followed by a
 
 ## ANNEX
 
-### #fiddle-5bd3754272a88o2ajnqge8i9
+### #fiddle-5be8813c749e151ljod9lwa9
 
 ```SQL
-CREATE TABLE movie (name text not null, genre text, director text, writer text, duration number, language text);
-INSERT INTO movie (name, genre, director,duration,language) VALUES ("Titanic","Drama","James Cameron","James Cameron",194,"en"),("Star Wars","Action","George Lucas","George Lucas",121,"en"),("2001: A Space Odyssey","Sci-Fi","Stanley Kubrick","Arthur C. Clarke",149,"en"),("Nueve Reinas","Drama","Fabian Bielinsky","Fabian Bielinsky",114,"es");
-```
-
-### #fiddle-5bd464f872a97o2ajnrgxj5d
-```SQL
-CREATE TABLE person (
-    id INTEGER not null,
-    name VARCHAR(40) not null,
-    age SMALLINT,
-    country_of_birth VARCHAR(2),
-    country_of_residence VARCHAR(2),
-    number_of_children SMALLINT,
-    studies VARCHAR(30),
-    has_job BOOLEAN
+CREATE TABLE movies (
+  name      TEXT      NOT NULL,
+  genre     TEXT      NOT NULL,
+  director  TEXT      NOT NULL,
+  writer    TEXT      NOT NULL,
+  duration  NUMBER    NOT NULL,
+  language  TEXT      NOT NULL
 );
 
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (1,"Emma Smith",18,"UK","UK",1,"Computer science","yes");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (2,"Noah Johnson",21,"UK","US",0,"Accountancy","yes");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (3,"Luis Marco Polo",23,"ES","UK",0,"Maths","yes");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (4,"Olivia Juanes",21,"AR","PT",1,"Arts","yes");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (5,"William Brown",25,"BR","BR",1,"Photography","yes");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (6,"Sophia Davis",30,"PT","UK",2,NULL,"no");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (7,"Jacob Miller",35,"NL","NL",2,"Graphic designer","yes");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (8,"Mason Wilson",42,"FR","FR",3,NULL,"yes");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (9,"Mia Moore",50,"US","UK",4,"Law","yes");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (10,"Abigail Moore",28,"CA","ES",2,"Law","yes");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (11,"Michael Anderson",22,"IT","IT",1,"Human Resources","no");
-INSERT INTO person (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job) VALUES (40,"Benjamin Martinez Lopez",30,"ES","IT",1,"Computer science","yes");
+INSERT INTO movies (name, genre, director, writer, duration,language)
+VALUES ('Titanic','Drama','James Cameron','James Cameron',194,'en'),
+       ('Star Wars','Action','George Lucas','George Lucas',121,'en'),
+       ('2001: A Space Odyssey','Sci-Fi','Stanley Kubrick','Arthur C. Clarke',149,'en'),
+       ('Nueve Reinas','Drama','Fabian Bielinsky','Fabian Bielinsky',114,'es');
+```
+
+### #fiddle-5be8825d749e251ljod9s39t
+```SQL
+CREATE TABLE people (
+    id                    INTEGER     NOT NULL,
+    name                  VARCHAR(40) NOT NULL,
+    age                   SMALLINT,
+    country_of_birth      VARCHAR(2),
+    country_of_residence  VARCHAR(2),
+    number_of_children    SMALLINT,
+    studies               VARCHAR(30),
+    has_job               BOOLEAN
+);
+
+INSERT INTO people (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job)
+VALUES (1,"Emma Smith",18,"UK","UK",1,"Computer science","yes"),
+       (2,"Noah Johnson",21,"UK","US",0,"Accountancy","yes"),
+       (3,"Luis Marco Polo",23,"ES","UK",0,"Maths","yes"),
+       (4,"Olivia Juanes",21,"AR","PT",1,"Arts","yes"),
+       (5,"William Brown",25,"BR","BR",1,"Photography","yes"),
+       (6,"Sophia Davis",30,"PT","UK",2,NULL,"no"),
+       (7,"Jacob Miller",35,"NL","NL",2,"Graphic designer","yes"),
+       (8,"Mason Wilson",42,"FR","FR",3,NULL,"yes"),
+       (9,"Mia Moore",50,"US","UK",4,"Law","yes"),
+       (10,"Abigail Moore",28,"CA","ES",2,"Law","yes"),
+       (11,"Michael Anderson",22,"IT","IT",1,"Human Resources","no"),
+       (40,"Benjamin Martinez Lopez",30,"ES","IT",1,"Computer science","yes");
 
 ```
