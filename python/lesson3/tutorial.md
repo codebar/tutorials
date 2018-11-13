@@ -112,10 +112,10 @@ the subset syntax:
 You can do some interesting things with negative numbers too:
 
     >>> print(places_to_visit[-3:4])
-    ['Kenya', 'Nepal']
+    ['Portugal', 'Kenya', 'Nepal']
 
     >>> print(places_to_visit[-3:])
-    ['Kenya', 'Nepal', 'New Zealand']
+    ['Portugal', 'Kenya', 'Nepal']
 
 ...and as getting a subset returns a list itself, you can get a subset of a
 subset:
