@@ -41,7 +41,7 @@ If you are on a mac or a linux/unix machine, you can access the API using curl:
 
 > Paste the following command into Terminal, which you can find in Finder - first go into the Applications folder, then Utilities.
 
-Here is an example of the **GET** requests issued by the [wishlist tutorial](http://codebar.github.io/tutorials/examples/wishlist/index.html).
+Here is an example of the **GET** requests issued by the [wishlist tutorial](https://tutorials.codebar.io/examples/wishlist/index.html).
 
 \*You can view any requests issued by a website by going to the Network (or Net) tab.
 

@@ -239,7 +239,7 @@ On the `Player` class create
 
 To get more data in the game, you'll need to load them from a YAML file, using the ruby [yaml](http://www.ruby-doc.org/stdlib-2.1.0/libdoc/yaml/rdoc/YAML.html) library.
 
-We have loaded data from a file before in the [second Ruby tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html); the only difference with loading data from a YAML file is that  after reading the contents of a file using `File.read()` we need to process the content through yaml.
+We have loaded data from a file before in the [second Ruby tutorial](https://tutorials.codebar.io/ruby/lesson2/tutorial.html); the only difference with loading data from a YAML file is that  after reading the contents of a file using `File.read()` we need to process the content through yaml.
 
 ```ruby
 require 'yaml'

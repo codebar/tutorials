@@ -149,7 +149,7 @@ Fri | 21 degrees C  | 70 degrees F
 Sat | 16 degrees C  | 61 degrees F
 Sun | 19 degrees C  | 66 degrees F
 ```
-> If you don't remember how to create a script, you can look at the sample file for the first exercise of the [second Ruby tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html) on Github, and read the instructions of the first Exercise.
+> If you don't remember how to create a script, you can look at the sample file for the first exercise of the [second Ruby tutorial](https://tutorials.codebar.io/ruby/lesson2/tutorial.html) on Github, and read the instructions of the first Exercise.
 
 
 

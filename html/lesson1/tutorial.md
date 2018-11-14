@@ -18,7 +18,7 @@ In this tutorial we are going to look at:
 
 ### Goal
 
-By the end of this tutorial you will have built [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
+By the end of this tutorial you will have built [this webpage.](https://tutorials.codebar.io/html/lesson1/example.html "I love owls")
 
 #### What is HTML?
 

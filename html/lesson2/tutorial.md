@@ -19,7 +19,7 @@ In this tutorial we are going to look at:
  
 ### Goal
  
-Today we will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
+Today we will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](https://tutorials.codebar.io/html/lesson2/example.html).
 
 ### Required files
 
