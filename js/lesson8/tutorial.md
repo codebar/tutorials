@@ -73,7 +73,7 @@ Another important thing is to remember to commit your changes often and keep thi
 
 This way, if something goes wrong and things stop working you can always revert your local changes and start over again.
 
-When working with someone else it's also nice to do your work in branches so you can open pull requests and the other person can have a look at your changes before they are merged into the main repository. We briefly discussed creating branches in the [introduction to version control tutorial](http://codebar.github.io/tutorials/version-control/introduction/tutorial.html). Try to give your branches meaningful names and when they are merged into the main **master** branch, don't forget to update your local copy.
+When working with someone else it's also nice to do your work in branches so you can open pull requests and the other person can have a look at your changes before they are merged into the main repository. We briefly discussed creating branches in the [introduction to version control tutorial](https://tutorials.codebar.io/version-control/introduction/tutorial.html). Try to give your branches meaningful names and when they are merged into the main **master** branch, don't forget to update your local copy.
 
 ## Useful APIs
 
@@ -90,7 +90,7 @@ Some popular API's that you may find useful
 
 - [Instagram](https://instagram.com/developer/endpoints/) Search and retrieve images from Instagram.
 
-> A lot of these API's require registering your application before you are able to use them, and some may take a while to respond. You can always read up and use fake data (by creating your own JSON objects, like we learned on the [Beginning JavaScript tutorial](http://codebar.github.io/tutorials/js/lesson2/tutorial.html).
+> A lot of these API's require registering your application before you are able to use them, and some may take a while to respond. You can always read up and use fake data (by creating your own JSON objects, like we learned on the [Beginning JavaScript tutorial](https://tutorials.codebar.io/js/lesson2/tutorial.html).
 
 
 ---

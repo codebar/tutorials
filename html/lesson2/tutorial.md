@@ -19,7 +19,7 @@ In this tutorial we are going to look at:
  
 ### Goal
  
-Today we will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](http://codebar.github.io/tutorials/html/lesson2/example.html).
+Today we will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](https://tutorials.codebar.io/html/lesson2/example.html).
 
 ### Required files
 
@@ -126,7 +126,6 @@ a {
 }
 ```
 **color**  defines the color of the text. `#a369d5` is the representation of the color in hex.
-A useful resource for figuring out color codes is [http://0to255.com](http://0to255.com).
 
 **text-decoration** specifies the decoration applied to the text. Some other options you can try out are _underline_, _overline_ and _line-through_. As links by default have an underline text decoration applied to them, by setting this to none, we reset that property.
 

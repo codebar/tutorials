@@ -12,7 +12,7 @@ Today we will be building a responsive website and learning about CSS media quer
 
 ### Goal
 
-The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson7/example.html "Grace Hopper")
+The page we will build will look similar to this [example page]( https://tutorials.codebar.io/html/lesson7/example.html "Grace Hopper")
 
 ### Required files
 

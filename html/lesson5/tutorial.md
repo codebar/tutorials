@@ -12,7 +12,7 @@ Today we will be building a website and will focus more on HTML5 and CSS3 specif
 
 ### Goal
 
-The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson5/example.html "Anita Borg")
+The page we will build will look similar to this [example page](https://tutorials.codebar.io/html/lesson5/example.html "Anita Borg")
 
 ### Required files
 

@@ -12,7 +12,7 @@ Today we will be building a website and learning more about CSS layouts and form
 
 ### Goal
 
-The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
+The page we will build will look similar to this [example page]( https://tutorials.codebar.io/html/lesson4/example.html "Grace Hopper")
 
 ### Required files
 
@@ -228,7 +228,7 @@ The text is now really hard to see. Change the color of the link...
 }
 ```
 
-> Do you remember what **:hover** does? Have a quick look at **Pseudo classes** in the [previous tutorial](http://codebar.github.io/tutorials/html/lesson3/tutorial.html) to refresh your memory.
+> Do you remember what **:hover** does? Have a quick look at **Pseudo classes** in the [previous tutorial](https://tutorials.codebar.io/html/lesson3/tutorial.html) to refresh your memory.
 
 ## Content
 

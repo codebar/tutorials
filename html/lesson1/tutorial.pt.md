@@ -357,7 +357,7 @@ A diferença entre os links e link de envio de email (mailto link) é o conteúd
 Coloque um link para compartilhar no twitter junto com outros links de compartilhamento.
 
 ```html
-<a href="http://twitter.com/home?status=Eu amo corujas! via @by_codeba">Compartilhe seu amor por corujas no twitte</a>
+<a href="https://twitter.com/home?status=Eu amo corujas! via @by_codeba">Compartilhe seu amor por corujas no twitte</a>
 ```
 
 ---

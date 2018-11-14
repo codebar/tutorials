@@ -86,7 +86,7 @@ Tips for this exercise
 
 Have you gone through Ruby Koans? Don't be disappointed if you haven't managed to finish the Koans yet. It takes a lot of time and repetition to manage to understand and fix the entire collection. Ask your coach to guide you and answer your questions.
 
-If you haven't started going through Ruby Koans yet, you can find more information in the [previous tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html).
+If you haven't started going through Ruby Koans yet, you can find more information in the [previous tutorial](https://tutorials.codebar.io/ruby/lesson2/tutorial.html).
 
 ## More practise
 
