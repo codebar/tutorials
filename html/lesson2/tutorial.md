@@ -48,7 +48,7 @@ _**CSS** works in conjunction with **HTML**_
 
 You can change the color, position, dimensions and presentation of different elements
 
-### Anatomy of a CSS element
+### Anatomy of a CSS rule
 
 ```css
 body {

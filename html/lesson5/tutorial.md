@@ -33,7 +33,7 @@ Set her name as the title that will be displayed on the browser's bar.
 <title>Anita Borg</title>
 ```
 
-Also, set a title for your page
+Also, set a heading for your page
 
 ```html
 <h1>Anita Borg</h1>
