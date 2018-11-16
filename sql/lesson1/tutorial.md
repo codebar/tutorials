@@ -127,7 +127,7 @@ In SQL, when we want only unique, distinct records in the result we can use anot
 
 ```SQL
 SELECT DISTINCT genre
-  FROM movie;
+  FROM movies;
 ```
 Nice, isn't it?
 
@@ -153,7 +153,7 @@ Try this statement:
 
 ```SQL
 SELECT *
-  FROM movie
+  FROM movies
  WHERE language = 'en';
 ```
 
@@ -164,7 +164,7 @@ Try out the other operators examples. See what happens.
 You can compare columns in the conditions too, for example:
 ```SQL
 SELECT *
-  FROM movie
+  FROM movies
  WHERE writer = director;
 ```
 
@@ -178,7 +178,7 @@ You can combine conditions using the words **OR** and **AND**.
 
 ```SQL
 SELECT *
-  FROM movie
+  FROM movies
  WHERE language = 'es' OR genre = 'Action';
 ```
 
@@ -189,7 +189,7 @@ What do you think this query below will return? Can you predict the result befor
 
 ```SQL
 SELECT *
-  FROM movie
+  FROM movies
  WHERE duration > 120
    AND (genre = 'Sci-Fi' OR genre = 'Drama');
 ```
