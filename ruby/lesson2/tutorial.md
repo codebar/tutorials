@@ -242,7 +242,7 @@ If you are working through this at home you can ask for help in our [slack chann
 
 ## Some reading material
 
-[Why's poignant guide to Ruby](http://poignant.guide/) is a cartoon written about Ruby by a programmer called Why the Lucky Stiff. You can also download the [pdf version](http://cloud.github.com/downloads/devyn/shoes-web/whys-poignant-guide-to-ruby.pdf).
+[Why's poignant guide to Ruby](http://poignant.guide/) is a cartoon written about Ruby by a programmer called Why the Lucky Stiff. You can also download the [pdf version](http://www.rubyinside.com/media/poignant-guide.pdf).
 
 ---
 This ends our **Ruby basics** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
