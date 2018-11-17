@@ -72,7 +72,7 @@ $ git log
 
 ### Transferring project repository to an online service
 
-First you need to create an account to the service of your choice ([GitHub](https://github.com/join), [GitLab](https://gitlab.com)). Then, create a new project (or repository).
+First you need to create an account to the service of your choice ([GitHub](https://github.com/join), [GitLab](https://gitlab.com/)). Then, create a new project (or repository).
 
 Copy the information about adding an existing project to the repository which should be something like the details below.
 

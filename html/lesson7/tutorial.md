@@ -148,7 +148,7 @@ Next up is our list of resources and its title, this is going to be inside the s
 
 And finally we have the footer which will contain the author information. This will just be a `p` tag with an `a`. Give them appropriate class names eg:
 
-    <p class="footer_text">Made by <a href="http://codebar.io" class="footer_link">codebar.io</a></p>
+    <p class="footer_text">Made by <a href="http://codebar.io/" class="footer_link">codebar.io</a></p>
 
 That's our page all marked up! Woop! Take a look at it in a browser. Because of the reset css it should look pretty boring. So, let's add some styles.
 

@@ -1,4 +1,4 @@
-This is the source code for <http://tutorials.codebar.io>
+This is the source code for <http://tutorials.codebar.io/>
 
 ## Getting started
 
@@ -8,7 +8,7 @@ indicated in `.ruby-version`, as well as the [bundler](https://bundler.io/) gem.
 
 1. `bundle install`, which will install Jekyll
 2. `bundle exec jekyll serve --watch`
-3. go to <http://localhost:4000>
+3. go to <http://localhost:4000/>
 
 (*you could also use your favourite manager, `chruby`, `rbenv`, `rvm`, etc. See
 instructions for `rvm` at the end of this README*)
@@ -125,7 +125,7 @@ $ rvm install 2.2.1  # inside `codebar/tutorials` folder
 $ rvm gemset use codebar-tutorial --create
 $ gem install bundler
 $ bundle install
-$ jekyll serve  # go to http://127.0.0.1:4000
+$ jekyll serve  # go to http://127.0.0.1:4000/
 ```
 
 If you also want to make changes to the JavaScript of the site, you'll need to have
