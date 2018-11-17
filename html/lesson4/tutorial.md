@@ -429,7 +429,7 @@ Before we do some more cool things, let's add a footer to our page
 
 ```html
 <footer>
-  <p>Made by <a href="http://codebar.io/">codebar.io</a></p>
+  <p>Made by <a href="https://codebar.io/">codebar.io</a></p>
 </footer>
 ```
 

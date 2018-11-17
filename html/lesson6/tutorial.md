@@ -157,12 +157,12 @@ Some of your users might be using screenreaders or keyboards to navigate across 
 
 #### Articles for getting started with accessibility:
 - [Introduction to Accessibility](https://www.w3.org/standards/webdesign/accessibility)
-- [WAI Getting started](https://www.w3.org/WAI/gettingstarted/)
-- [How People with disabilities use the web](https://www.w3.org/WAI/intro/people-use-web)
+- [WAI Getting started](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
+- [How People with disabilities use the web](https://www.w3.org/WAI/people-use-web/)
 - [Tutorials](https://www.w3.org/WAI/tutorials/)
 - [Mozilla have created their own Accessibility page](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 - [ARIA Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/aria)
-- The [A11Y Project](http://a11yproject.com/) is an open source project on providing the most up to date and easy to access information regarding accessibility.
+- The [A11Y Project](https://a11yproject.com/) is an open source project on providing the most up to date and easy to access information regarding accessibility.
 
 #### These extensions are handy if you wish to check if your website meets the criteria and areas to improve:
 - Chrome: WAVE Evaluation Tool

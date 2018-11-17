@@ -173,7 +173,7 @@ context.scale(2,2);
 
 ![](assets/images/canvas-hangman.png)
 
-[Download](https://gist.github.com/despo/0dc7c874efa544475d66/download) the required files for this exercise or clone them directly from Github `git clone https://gist.github.com/despo/0dc7c874efa544475d66.git`
+[Download](https://gist.github.com/despo/0dc7c874efa544475d66/download) the required files for this exercise or clone them directly from Github `git clone https://gist.github.com/despo/0dc7c874efa544475d66`
 
 Using what we've learned today, draw Hangman in Canvas.
 

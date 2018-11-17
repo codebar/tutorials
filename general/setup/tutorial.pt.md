@@ -25,11 +25,11 @@ Nós recomendamos usar **[Atom](https://atom.io/)** no Codebar. É de graça, te
 
 ## Um navegador de internet (obrigatório)
 
-Você já tem um desses! O Windows vem com o [Internet Explorer](https://windows.microsoft.com/pt-br/internet-explorer/), e o OS X vem com  [Safari](https://www.apple.com/br/safari/). [Firefox](https://www.mozilla.org/pt-BR/firefox/new/) e [Chrome](https://www.google.com.br/intl/pt-BR/chrome/) são alternativas populares. Você pode começar com qualquer um que já use, mas quando você chegar nos últimos tutoriais, as ferramentas poderosas do Chrome e Firefox vão ser úteis. Seu tutor vai te mostrar como usá-las quando vocês estiverem trabalhando nestes tutoriais.
+Você já tem um desses! O Windows vem com o [Internet Explorer](https://support.microsoft.com/internet-explorer), e o OS X vem com  [Safari](https://www.apple.com/br/safari/). [Firefox](https://www.mozilla.org/pt-BR/firefox/new/) e [Chrome](https://www.google.com.br/intl/pt-BR/chrome/) são alternativas populares. Você pode começar com qualquer um que já use, mas quando você chegar nos últimos tutoriais, as ferramentas poderosas do Chrome e Firefox vão ser úteis. Seu tutor vai te mostrar como usá-las quando vocês estiverem trabalhando nestes tutoriais.
 
 ## Ferramenta de compactação (importante para Windows)
 
-Muitos dos tutoriais tem links para baixar códigos do Gist em formato .tar.gz. Os Macs tem ferramentas de apoio já instaladas para extrair os arquivos deste formato para você. O Windows tem uma variedade de ferramentas disponíveis. Se você ainda não tem uma, [7-zip é de graça](http://www.7-zip.org/).
+Muitos dos tutoriais tem links para baixar códigos do Gist em formato .tar.gz. Os Macs tem ferramentas de apoio já instaladas para extrair os arquivos deste formato para você. O Windows tem uma variedade de ferramentas disponíveis. Se você ainda não tem uma, [7-zip é de graça](https://www.7-zip.org/).
 
 ## Ruby (opcional)
 
@@ -37,4 +37,4 @@ Você não precisa instalar o Ruby se está trabalhando com CSS ou HTML, mas voc
 
 Se você tem um Mac, então já tem uma versão do Ruby instalada. O seu tutor pode te ajudar a começar com Ruby no Mac - pergunte a eles sobre `rbenv` (ou `rvm`) e `Homebrew`.
 
-Você pode [baixar e executar o programa RubyInstaller](http://rubyinstaller.org/) para programar Ruby no Windows.
+Você pode [baixar e executar o programa RubyInstaller](https://rubyinstaller.org/) para programar Ruby no Windows.
