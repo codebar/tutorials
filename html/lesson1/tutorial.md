@@ -334,5 +334,5 @@ This ends our first lesson, we hope you enjoyed it and learnt something. If you 
 ## Further reading
 
 * [HTML elements](https://developer.mozilla.org/en/docs/Web/HTML/Element)
-* [Special characters](http://htmlandcssbook.com/extras/html-escape-codes)
+* [Special characters](http://htmlandcssbook.com/extras/html-escape-codes/)
 * [The Bare Bones Guide to HTML](http://werbach.com/barebones/barebones.html)

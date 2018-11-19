@@ -2740,7 +2740,7 @@ getJasmineRequireObj().matchersUtil = function(j$) {
   }
 
   // Equality function lovingly adapted from isEqual in
-  //   [Underscore](http://underscorejs.org)
+  //   [Underscore](http://underscorejs.org/)
   function eq(a, b, aStack, bStack, customTesters) {
     var result = true;
 

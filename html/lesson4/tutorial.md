@@ -180,7 +180,7 @@ Add an id `toolbar` to the outer `<div>`
 See what happens when you add a `target="_blank"` to your link
 
 ```html
-  <li> <a href="http://www.personal.psu.edu/djd5202/ass6.html" target="_blank">Computer Scientist</a></li>
+  <li> <a href="http://www.cs.yale.edu/homes/tap/Files/hopper-story.html" target="_blank">Computer Scientist</a></li>
 ```
 
 ### Styling the toolbar
@@ -429,7 +429,7 @@ Before we do some more cool things, let's add a footer to our page
 
 ```html
 <footer>
-  <p>Made by <a href="http://codebar.io">codebar.io</a></p>
+  <p>Made by <a href="https://codebar.io/">codebar.io</a></p>
 </footer>
 ```
 

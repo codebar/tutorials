@@ -468,5 +468,5 @@ This ends our second lesson, we hope you enjoyed it and learnt something. If you
 ## Further reading
 
 * [CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
-* [More CSS](http://learn.shayhowe.com/html-css/)
+* [More CSS](https://learn.shayhowe.com/html-css/)
 

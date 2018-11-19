@@ -25,11 +25,11 @@ We recommend you use **[Atom](https://atom.io/)** or **[Visual Studio Code](http
 
 ## A web browser (required)
 
-Windows comes with [Internet Explorer](https://windows.microsoft.com/en-us/internet-explorer/), and OS X comes with [Safari](https://www.apple.com/uk/safari/). Most Linux distributions come with [Firefox](https://www.mozilla.org/en-US/firefox/), which is also available for Windows and OS X. You can also download [Chrome](https://www.google.com/chrome/) which is a popular alternative. You can get started with whatever you currently use, but when you reach the later tutorials the powerful developer tools in Chrome and Firefox will be useful. Your coach will show you how to use them while you work through the tutorials.
+Windows comes with [Internet Explorer](https://support.microsoft.com/internet-explorer), and OS X comes with [Safari](https://www.apple.com/uk/safari/). Most Linux distributions come with [Firefox](https://www.mozilla.org/en-US/firefox/), which is also available for Windows and OS X. You can also download [Chrome](https://www.google.com/chrome/) which is a popular alternative. You can get started with whatever you currently use, but when you reach the later tutorials the powerful developer tools in Chrome and Firefox will be useful. Your coach will show you how to use them while you work through the tutorials.
 
 ## A compression utility (handy on Windows)
 
-Many of the tutorials have links to download code from Gist in `.tar.gz` format. Macs and most Linux distributions have built-in support to extract the files from these archives for you. On Windows there are a variety of utilities available. If you don't already have one, [7-zip is free](http://www.7-zip.org/).
+Many of the tutorials have links to download code from Gist in `.tar.gz` format. Macs and most Linux distributions have built-in support to extract the files from these archives for you. On Windows there are a variety of utilities available. If you don't already have one, [7-zip is free](https://www.7-zip.org/).
 
 ## Ruby (optional)
 
@@ -37,7 +37,7 @@ You won't need Ruby installed if you're working on CSS or HTML, but you will nee
 
 If you have a Mac you'll have a version of Ruby installed already. A coach can help you get started with Ruby on your Mac - ask them about `rbenv` (or `rvm`) and `Homebrew`.
 
-You can [download and run the RubyInstaller program](http://rubyinstaller.org/) to program Ruby on Windows.
+You can [download and run the RubyInstaller program](https://rubyinstaller.org/) to program Ruby on Windows.
 
 On Linux, you can install Ruby using your distribution's package manager, as follows:
 

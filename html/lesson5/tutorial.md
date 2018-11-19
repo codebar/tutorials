@@ -425,8 +425,6 @@ As you may have just noticed, we didn't define the color as we usually do, using
 
 `rgb(176, 175, 192);` is another way of defining the color with the hex code `#b0afc0`
 
-A great way to find both the rgb and hex values of a color is [http://0to255.com](http://0to255.com).
-
 > Try changing the last attribute of the `rgba` we just set.
 > What happens when you set it to 1?
 > What happens when you set it to 0?
