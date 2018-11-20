@@ -303,17 +303,17 @@ SELECT *
 ## Write the following queries
 
 Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y
-* L2.1 Show the name of all the persons. Sort the result by name in ascending order, in case of equal name sort by country of residence.
-* L2.2 Show the name and the country of birth of the person with higher number of children.
+* L2.1 Show the names of all the people. Sort the result by name in ascending (alphabetical) order, in case of equal name sort by country of residence in alphabetical order.
+* L2.2 Show the name and the country of birth of the person with highest number of children.
 * L2.3 Show the country of birth of the oldest person.
 * L2.4 Show the age of the oldest person.
-* L1.5 Show the locations cities in UK.
+* L2.5 Show the location of cities in UK.
 * L2.6 Show all the host names.
 * L2.7 Show the host name and the student capacity. Sort the result in capacity descending order.
 * L2.8 Pick a host ID and show the dates where workshops were held there. Order the result chronologically.
 * L2.9 Show the top 5 host according to their total capacity (Students + Coaches)
-* L2.10 Show the distinct ID of the persons that RSVP but then they did not show up (attendance = false in attendance).
-* L2.11 Show dates where workshops were held in these 3 hosts _Edincode_, _Kanguland_, and _CodeLab_ (TIP: think of the usage of **IN**)
+* L2.10 Show the distinct ID of the people that RSVP but then they did not show up (false = 0, both indicate individual did not attend the event).
+* L2.11 Show dates when workshops were held in these 3 hosts _Edincode_, _Kanguland_, and _CodeLab_ (TIP: think of the usage of **IN**)
 
 ---
 This ends our **SQL Lesson 2**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

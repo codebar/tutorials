@@ -222,12 +222,12 @@ people (id, name, age, country_of_birth, country_of_residence, number_of_childre
 
 Open this fiddle that will have the data shown in the tables above already loaded: https://sqliteonline.com/#fiddle-5be8825d749e251ljod9s39t
 
-* L1.1 Show all the data available of all the persons.
-* L1.2 Show the name and Country of residence of all the persons 23 years old or above.
-* L1.3 Show the name and age of all the persons living in UK.
-* L1.4 Show the name and age of all the persons not living in their birth place.
-* L1.5 Show the distinct countries of residence of all the persons.
-* L1.6 Show the distinct studies of the persons having less than 2 children.
+* L1.1 Show all the data available of all the people.
+* L1.2 Show the name and Country of residence of all the people 23 years old or above.
+* L1.3 Show the name and age of all the people living in UK.
+* L1.4 Show the name and age of all the people not living in their birth place.
+* L1.5 Show the distinct countries of residence of all the people.
+* L1.6 Show the distinct studies of the people having less than 2 children.
 
 ---
 This ends our **SQL Lesson 1**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
