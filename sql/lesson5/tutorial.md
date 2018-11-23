@@ -5,7 +5,7 @@ title: Introduction to SQL
 
 ## About Lesson 5
 
-The previous lessons showed you how to manipulate data from a single table. _Lesson 5_ will show you how to combine data from multiple tables and will bring out the _relational_ part of RDBMS.
+The previous lessons showed you how to manipulate data from a single table. _Lesson 5_ will show you how to combine data from multiple tables and will bring out the _relational_ part of relational databases.
 
 In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y)
 

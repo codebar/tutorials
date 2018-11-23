@@ -2,7 +2,7 @@
 layout: page
 title: Introduction to SQL Solutions
 ---
-# Lesson 1 exercises Solutions
+# Lesson 4 solutions to exercises
 
 ## L4.1 Update the age of the person named Luis Marco Polo.
 
@@ -21,7 +21,10 @@ UPDATE people
 ```
 
 Solution 2:
-Just use their name as identifier to update age. (When could this cause problems?)
+Just use their name as identifier to update age. When could this cause problems?
+
+In fact, this is so unreliable that you should only update information regarding a single person, or any unique entity, when referencing them by their unique id.
+**Warning: the below solution is a false friend. Do not use!**
 ```SQL
 UPDATE people
    SET age = age + 1
