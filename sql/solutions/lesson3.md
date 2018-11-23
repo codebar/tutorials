@@ -6,10 +6,25 @@ title: Introduction to SQL Solutions
 
 ## L3.1 How many people are not living in their country of birth.
 
+Solution 1:
 ```SQL
 SELECT COUNT(*)
   FROM people
  WHERE country_of_birth IS NOT country_of_residence;
+```
+
+Solution 2:
+```SQL
+SELECT COUNT(*)
+FROM people
+WHERE country_of_birth != country_of_residence;
+```
+
+Solution 3:
+```SQL
+SELECT COUNT(*)
+FROM people
+WHERE country_of_birth <> country_of_residence;
 ```
 
 ##  L3.2 What is the average age of the people not living in their country of birth.
@@ -20,7 +35,7 @@ SELECT AVG(age)
  WHERE country_of_birth IS NOT country_of_residence;
 ```
 
-## L3.3 Show the age of the oldest person. (Find a different way to the one use in Lesson 2).
+## L3.3 Show the age of the oldest person. (Find a different way to the one used in Lesson 2).
 
 Solution 1:
 ```SQL
@@ -28,7 +43,7 @@ SELECT MAX(age)
   FROM people;
 ```
 
-Solution 2:
+Solution 2 (as learned in lesson 2):
 ```SQL
 SELECT age
   FROM people

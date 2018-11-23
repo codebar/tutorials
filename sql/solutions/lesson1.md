@@ -24,15 +24,23 @@ SELECT name, country_of_residence
 ```SQL
 SELECT name, age
   FROM people
- WHERE country_of_residence >= 'UK';
+ WHERE country_of_residence = 'UK';
 ```
 
 ##  L1.4 Show the name and age of all the people not living in their birth place.
 
+Solution 1:
 ```SQL
 SELECT name, age
   FROM people
  WHERE NOT country_of_birth = country_of_residence;
+```
+
+Solution 2:
+```SQL
+SELECT name, age
+  FROM people
+ WHERE country_of_birth <> country_of_residence;
 ```
 
 ##  L1.5 Show the distinct countries of residence of all the people.

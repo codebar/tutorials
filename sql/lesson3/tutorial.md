@@ -212,7 +212,7 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y
 * L3.1 How many people are not living in their country of birth.
 * L3.2 What is the average age of the people not living in their country of birth.
-* L3.3 Show the age of the oldest person. (Find a different way to the one use in Lesson 2).
+* L3.3 Show the age of the oldest person. (Find a different way to the one used in Lesson 2).
 * L3.4 Show the number of employed and unemployed people.
 * L3.5 Show the number of people per country of residence.
 * L3.6 Show the country and number of locations in that country.

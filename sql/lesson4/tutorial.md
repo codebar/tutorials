@@ -149,7 +149,7 @@ Open this fiddle that will have the data already loaded: https://sqliteonline.co
 * L4.1 Update the age of the person named Luis Marco Polo.
 * L4.2 Increase by 1 the age of all the people who were born in Italy.
 * L4.3 Set all names to lowercase.
-* L4.4 Insert a new student.
+* L4.4 Insert a new student. What is the minimum amount of information about a student you have to input to create a new student? How does the database handle the missing values?
 * L4.5 Delete the record you just inserted.
 * L4.6 Delete the people with no children.
 * L4.7 Add to the people the following study: "programming". Separate it by a comma. (You will have to investigate how to concatenate strings. Don't worry about those with _NULL_ for now).

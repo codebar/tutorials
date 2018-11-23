@@ -46,6 +46,15 @@ UPDATE people
 
 Solution 1:
 What problems could arise with this solution?
+
+```SQL
+INSERT INTO people (id, name, age, country_of_birth, country_of_residence, number_of_children, studies, has_job)
+VALUES (42, 'Valerie Knight', 32, 'US', 'UK', 1, 'Law', 'yes');
+```
+
+Solution 1 (with the minimum amount of information about a student needed to create a new student):
+What problems could arise with this solution?
+
 ```SQL
 INSERT INTO people (id, name)
 VALUES (42, 'Valerie Knight');
@@ -66,20 +75,10 @@ VALUES (
 ## L4.5 Delete the record you just inserted.
 
 Solution 1:
-What problems could arise with this solution?
+First ensure that you have the correct id for the record you would like to delete.
 ```SQL
 DELETE FROM people
 WHERE id = 45;
-```
-
-Solution 2:
-```SQL
-DELETE FROM people
- WHERE id =
-	   (SELECT id
-          FROM people
-         ORDER BY id DESC
-         LIMIT 1);
 ```
 
 ## L4.6 Delete the people with no children.
