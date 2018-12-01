@@ -64,19 +64,19 @@ var x = 6;
 var y = 3;
 var addition = x + y;
 
-console.log('Addition: x + y = ' + addition);
+console.log('Addition: x + y = ' + addition); // Addition: x + y = 9
 
 var subtraction = x - y;
 
-console.log('Subtraction: x - y = ' + subtraction);
+console.log('Subtraction: x - y = ' + subtraction); // Subtraction: x - y = 3
 
 var multiplication = x * y;
 
-console.log('Multiplication: x * y = ' + multiplication);
+console.log('Multiplication: x * y = ' + multiplication); // Multiplication: x * y = 18
 
 var division = x / y;
 
-console.log('Division: x / y = ' + division);
+console.log('Division: x / y = ' + division); // Division: x / y = 2
 ```
 
 > Why not try some other maths problem using the `x` and `y` variables?
