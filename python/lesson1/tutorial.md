@@ -127,7 +127,7 @@ multiple things at once, separated by a comma:
 ### Saving Your Work
 
 In this tutorial you coded in the REPL (IDLE), but a lot of times you want
-to save your code instead. In these casees you would use a text editor. 
+to save your code instead. In such cases you can save your code to a file using a text editor. 
 We give some information on text editors in our [Getting started guide](general/setup/tutorial.html) .
 
 Open your text editor and write the code from the first exercise:
