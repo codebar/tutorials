@@ -81,6 +81,36 @@ console.log('Division: x / y = ' + division);
 
 > Why not try some other maths problem using the `x` and `y` variables?
 
+#### More maths
+
+Other basic but useful math operators are `%`, `**`, `++` and `--`:
+
+> The modulus `%` operator returns the remainder when dividing one operand by another.
+
+> The exponentiation `**` operator returns the result of raising the first operand to the power of the second.
+
+> The increment `++` and decrement `--` operators return the result of adding one and subtracting one from an operand respectively.
+
+```js
+var x = 5;
+var y = 3;
+var modulus = x % y;
+
+console.log('Remainder: x % y = ' + modulus);
+
+var exponentiation = x ** y;
+
+console.log('Exponentiation: x ** y = ' + exponentiation);
+
+var increment = x++;
+
+console.log('Increment: x++ = ' + increment);
+
+var decrement = y--;
+
+console.log('Decrement: y-- = ' + decrement);
+```
+
 #### Comparisons
 
 The `===` operator compares two values, it returns the boolean `true` if they are equal and `false` if they are not.
