@@ -146,7 +146,7 @@ it with:
 
 	>>> quit()
 
-Than you should be able to load the file. 
+Then you should be able to load the file. 
 	
 This concludes today's tutorial. In the next tutorial, we'll find out how to
 combine the results of multiple separate expressions using variables, get input
