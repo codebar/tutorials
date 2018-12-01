@@ -12,7 +12,7 @@ Today we will be building a responsive website and learning about CSS media quer
 
 ### Goal
 
-The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson7/example.html "Grace Hopper")
+The page we will build will look similar to this [example page]( https://tutorials.codebar.io/html/lesson7/example.html "Grace Hopper")
 
 ### Required files
 
@@ -148,7 +148,7 @@ Next up is our list of resources and its title, this is going to be inside the s
 
 And finally we have the footer which will contain the author information. This will just be a `p` tag with an `a`. Give them appropriate class names eg:
 
-    <p class="footer_text">Made by <a href="http://codebar.io" class="footer_link">codebar.io</a></p>
+    <p class="footer_text">Made by <a href="https://codebar.io/" class="footer_link">codebar.io</a></p>
 
 That's our page all marked up! Woop! Take a look at it in a browser. Because of the reset css it should look pretty boring. So, let's add some styles.
 
@@ -199,7 +199,7 @@ Look at your changes in Chrome (Chrome has some great developer tools which are 
 
 <img src="images/inspect.png" alt="inspect tool">
 
-Click on the icon in your inspect tool to open up the <a href="https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports?hl=en" target="_blank">device toolbar</a>. This view will show you what your site will look like on a mobile device, it has a few different options for default device widths, or you can set it to responsive and drag the width and height about yourself. For now we'll set it to responsive and drop the width down to about 320, this is a very narrow screen.
+Click on the icon in your inspect tool to open up the <a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports?hl=en" target="_blank">device toolbar</a>. This view will show you what your site will look like on a mobile device, it has a few different options for default device widths, or you can set it to responsive and drag the width and height about yourself. For now we'll set it to responsive and drop the width down to about 320, this is a very narrow screen.
 
 <aside class="notice">
 You might notice that the white text in your header looks blocky and bolder than it should. This is caused by bad rendering of light fonts on dark backgrounds by chrome (and often other browsers) which tends to prioritise speed over beauty when rendering fonts. You can tell chrome to give you better looking text by putting `-webkit-font-smoothing: antialiased;` on the body selector.

@@ -7,7 +7,7 @@ In today's tutorial, we will be again going through OO concepts - some of which 
 
 Don't forget to commit to git regularly and also try to **type** out the examples as much as possible instead of copy &amp; pasting!
 
-If you are going through the tutorial in your own time and need any help then [join the chatroom](https://gitter.im/codebar/tutorials), but first read our [Code of Conduct](http://codebar.io/code-of-conduct) as we will not tolerate any inappropriate behavior.
+If you are going through the tutorial in your own time and need any help then [join the slack channel](https://slack.codebar.io/), but first read our [Code of Conduct](https://codebar.io/code-of-conduct) as we will not tolerate any inappropriate behavior.
 
 # How does inheritance fit in OO?
 
@@ -237,9 +237,9 @@ On the `Player` class create
 
 ### Task 4 - Loading data
 
-To get more data in the game, you'll need to load them from a YAML file, using the ruby [yaml](http://www.ruby-doc.org/stdlib-2.1.0/libdoc/yaml/rdoc/YAML.html) library.
+To get more data in the game, you'll need to load them from a YAML file, using the ruby [yaml](http://ruby-doc.org/stdlib-2.1.0/libdoc/yaml/rdoc/YAML.html) library.
 
-We have loaded data from a file before in the [second Ruby tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html); the only difference with loading data from a YAML file is that  after reading the contents of a file using `File.read()` we need to process the content through yaml.
+We have loaded data from a file before in the [second Ruby tutorial](https://tutorials.codebar.io/ruby/lesson2/tutorial.html); the only difference with loading data from a YAML file is that  after reading the contents of a file using `File.read()` we need to process the content through yaml.
 
 ```ruby
 require 'yaml'

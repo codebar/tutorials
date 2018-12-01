@@ -122,6 +122,16 @@ $ touch bobs.txt
 
 Do an `ls` to check whether the file has been created. Inside bits, there should be a new file called bobs.txt. We used `touch` to create files. With touch you can create files with any extension, just don't forget to specify what kind of file you are creating: for example, `index.html`, `script.js`, `style.css` are all valid extensions. 
 
+### `mv` or move item
+
+What if you created a file in the wrong place? There's a command for that. Let's move `bobs.txt` to somewhere new. Inside the `bits` folder type:
+
+```bash
+$ mv bobs.txt ..
+```
+
+Type `ls` and the file is no longer there. Type `cd ..`, this moves you one folder up to the `stuff` folder.  Then type `ls` and the bobs.txt file will be there. There are 3 parts to this command, the `mv` command, the item to be moved, here it's `bobs.txt`, and the new destination for the item, here we have it as `..` or one directory up the structure. You could also type the destination directory, replacing the `..` with `stuff` and it would do the same job.
+
 ### Exercise 2: `cd` back into temp and create a couple of new folders with files in them
 
 ### Bonus: if you are on a Mac, type this into your terminal:

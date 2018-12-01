@@ -22,7 +22,7 @@ There is an abundance of resources out there that can help you out, but all you 
 Some tools out there that you can use are:
 
 - [Balsamiq](https://balsamiq.com/)
-- [GoMockingbird](https://gomockingbird.com/)
+- [GoMockingbird](https://gomockingbird.com/home)
 - [Mockflow](https://mockflow.com/pricing/)
 
 However, using pen and paper is probably the easiest way, so try and choose whatever is easier for you!
@@ -30,7 +30,7 @@ However, using pen and paper is probably the easiest way, so try and choose what
 
 ## Tracking your tasks
 
-It's important to keep organised and remember what you intend to build. Try and make a list of your tasks. You can keep track using [Github's issues](https://github.com/blog/831-issues-2-0-the-next-generation) or applications like [Trello](https://trello.com/) or [Pivotal Tracker](https://www.pivotaltracker.com/). You can use all these tools for free and it's an easy and efficient way of not just remembering everything but also of communicating to others that may be interested in helping you out what it is that you want to achieve.
+It's important to keep organised and remember what you intend to build. Try and make a list of your tasks. You can keep track using [Github's issues](https://blog.github.com/2011-04-09-issues-2-0-the-next-generation/) or applications like [Trello](https://trello.com/) or [Pivotal Tracker](https://www.pivotaltracker.com/). You can use all these tools for free and it's an easy and efficient way of not just remembering everything but also of communicating to others that may be interested in helping you out what it is that you want to achieve.
 
 ## Storing data
 
@@ -63,7 +63,7 @@ Everyone likes effects. Have a look at [jQuery's effects](http://api.jquery.com/
 
 ## Tracking who visited your website
 
-[Google Analytics](https://www.google.com/analytics/) is a free tool you can use to check who visited your site. To get an analytics id, you just need to create your own account and follow the information on the website.
+[Google Analytics](https://marketingplatform.google.com/about/analytics/) is a free tool you can use to check who visited your site. To get an analytics id, you just need to create your own account and follow the information on the website.
 
 > Adding analytics can be one of the tasks when planning your project.
 
@@ -73,7 +73,7 @@ Another important thing is to remember to commit your changes often and keep thi
 
 This way, if something goes wrong and things stop working you can always revert your local changes and start over again.
 
-When working with someone else it's also nice to do your work in branches so you can open pull requests and the other person can have a look at your changes before they are merged into the main repository. We briefly discussed creating branches in the [introduction to version control tutorial](http://codebar.github.io/tutorials/version-control/introduction/tutorial.html). Try to give your branches meaningful names and when they are merged into the main **master** branch, don't forget to update your local copy.
+When working with someone else it's also nice to do your work in branches so you can open pull requests and the other person can have a look at your changes before they are merged into the main repository. We briefly discussed creating branches in the [introduction to version control tutorial](https://tutorials.codebar.io/version-control/introduction/tutorial.html). Try to give your branches meaningful names and when they are merged into the main **master** branch, don't forget to update your local copy.
 
 ## Useful APIs
 
@@ -81,16 +81,16 @@ In our previous tutorials we briefly introduced the [Github](https://developer.g
 
 Some popular API's that you may find useful
 
-- [Google Maps](https://developers.google.com/maps/) Get directions, map images, places of interest and a lot more information about places.
+- [Google Maps](https://cloud.google.com/maps-platform/) Get directions, map images, places of interest and a lot more information about places.
 
-- [Twilio](https://www.twilio.com/docs/api/rest) Initiate calls and send text messages.
+- [Twilio](https://www.twilio.com/docs/usage/api) Initiate calls and send text messages.
 
 - [Twitter](https://dev.twitter.com/docs/api/1.1) search Twitter, retrieve and send your tweets and a lot more.
 - [Spotify](https://developer.spotify.com/technologies/web-api/) Explore Spotify's music catalog and retrieve track, album and artist data.
 
 - [Instagram](https://instagram.com/developer/endpoints/) Search and retrieve images from Instagram.
 
-> A lot of these API's require registering your application before you are able to use them, and some may take a while to respond. You can always read up and use fake data (by creating your own JSON objects, like we learned on the [Beginning JavaScript tutorial](http://codebar.github.io/tutorials/js/lesson2/tutorial.html).
+> A lot of these API's require registering your application before you are able to use them, and some may take a while to respond. You can always read up and use fake data (by creating your own JSON objects, like we learned on the [Beginning JavaScript tutorial](https://tutorials.codebar.io/js/lesson2/tutorial.html).
 
 
 ---

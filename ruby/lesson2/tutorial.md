@@ -75,7 +75,7 @@ print "#{x} + #{y} = "
 answer = gets.to_i
 ```
 
-> [to_i](http://apidock.com/ruby/Symbol/to_i) returns an integer representation of an object.
+> [to_i](https://apidock.com/ruby/Symbol/to_i) returns an integer representation of an object.
 
 if the answer is correct, output `Right!`. If the answer is incorrect, output `Wrong :(`.
 
@@ -217,7 +217,7 @@ while entry = file.gets
   scores << entry.split(",")
 end
 ```
-You can then use the [array sort](http://www.ruby-doc.org/core-2.1.1/Array.html#method-i-sort) method.
+You can then use the [array sort](http://ruby-doc.org/core-2.1.1/Array.html#method-i-sort) method.
 
 
 # More practise
@@ -238,14 +238,14 @@ rake regen
 
 To try out the koans run `rake`. It gives you a hint as to what fails and you can move forward by fixing the file and running `rake` again.
 
-If you are working through this at home you can ask for help in our [gitter channel](https://gitter.im/codebar/tutorials).
+If you are working through this at home you can ask for help in our [slack channel](https://slack.codebar.io/).
 
 ## Some reading material
 
-[Why's poignant guide to Ruby](http://mislav.uniqpath.com/poignant-guide/) is a cartoon written about Ruby by a programmer called Why the Lucky Stiff. You can also download the [pdf version](http://cloud.github.com/downloads/devyn/shoes-web/whys-poignant-guide-to-ruby.pdf).
+[Why's poignant guide to Ruby](http://poignant.guide/) is a cartoon written about Ruby by a programmer called Why the Lucky Stiff. You can also download the [pdf version](http://www.rubyinside.com/media/poignant-guide.pdf).
 
 ---
 This ends our **Ruby basics** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
 
 [1]: https://rvm.io/rvm/install "Ruby Version Manager"
-[2]: https://github.com/sstephenson/rbenv "rbenv"
+[2]: https://github.com/rbenv/rbenv "rbenv"

@@ -86,11 +86,11 @@ Tips for this exercise
 
 Have you gone through Ruby Koans? Don't be disappointed if you haven't managed to finish the Koans yet. It takes a lot of time and repetition to manage to understand and fix the entire collection. Ask your coach to guide you and answer your questions.
 
-If you haven't started going through Ruby Koans yet, you can find more information in the [previous tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html).
+If you haven't started going through Ruby Koans yet, you can find more information in the [previous tutorial](https://tutorials.codebar.io/ruby/lesson2/tutorial.html).
 
 ## More practise
 
-There are a lot of online interactive tutorials that you can work through. Understanding basic concepts its important before moving forward. Try practising what you've learned so far by coming up and applying your own ideas. If you get stuck or needs help, bring your questions with you to our next session or ask your questions on our [gitter chat](gitter.im/codebar/tutorials)
+There are a lot of online interactive tutorials that you can work through. Understanding basic concepts its important before moving forward. Try practising what you've learned so far by coming up and applying your own ideas. If you get stuck or needs help, bring your questions with you to our next session or ask your questions on our [slack channel](https://slack.codebar.io/)
 
 ---
 This ends our **Ruby basics (part 2)** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

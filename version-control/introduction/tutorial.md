@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Introduction to Version Control and git
+title: Introduction to version control and git
 ---
 
-## What is Version Control?
+## What is version control?
 
-Version control is a way that you can manage and track any changes you make to your files.
-
+Version control is a way to manage and track any changes you make to your files. 
 
 ### Google docs revision history
+
 Google docs, for example, keeps a revision history of any document you create and modify.
 
 Have a look [at this Google document](https://docs.google.com/document/d/10kHJKXHLa-V8G6vVQoDiS6cTPvJoXnj_-SDvfQdziFk/edit?usp=sharing).
@@ -24,6 +24,7 @@ Have a look [at this Google document](https://docs.google.com/document/d/10kHJKX
 Scroll through the revisions, from the bottom up. You should be able to see each set of changes highlighted in green.
 
 ### Wikipedia page history
+
 Wikipedia also holds a history of all changes.
 - Go to [this document](https://en.wikipedia.org/wiki/Women_in_computing)
 - Click **view history**
@@ -48,6 +49,7 @@ There are a number of different version control systems. The most popular ones a
 We will be using **git**.
 
 ### Why Git?
+
 There are a number of reasons we chose git. To name some
 
 - A lot of learning resources
@@ -83,6 +85,7 @@ Some popular project using git:
 - commit: Applying any changes you have made to the **repository**
 
 #### Aim for small and focused changes
+
 When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row, changing too many things and then committing them.
 
 For example, if you want to change the position of an element, the color of all the links on your page and the font size dimensions of all paragraphs, you should do three commits, using messages that describe what you are doing each time.
@@ -93,7 +96,6 @@ Every time you commit a change use a message that describes your change clearly.
 
 Try using messages like _repositioned image to look better on page_, _resolved positioning issue for Firefox_.
 
-
 # The next step!
 
 Sign up to [Github](https://github.com/)
@@ -102,35 +104,40 @@ Download [Github Desktop](https://desktop.github.com/) (for Mac or Windows).
 
 ## Now what?
 
-Now that you have the Github client setup on your machine, we will spend sometime adding what you have created in the previous lessons on the internet!
+Now that you have the Github client setup on your machine, we will spend some time adding what you have created in the HTML & CSS lessons on the internet! Before you start make sure the Github client is running and you are signed in.
 
-1. Create a new repository
+1. Create a new repository by clicking the Create New Repository button
 
-	![](images/create_new_repository.png)
+	![](images/create-new-repository.png)
 
-2. Create a README.md file in the directory you created the repository and write
+2. Open the directory you just created in your text editor and create a README.md file with the following content:
 
-	_This is where I store the work I have done at Codebar_
+	_This is where I store the work I have done at codebar._
 
-3. Go to the Github client and commit that file
-	![](images/commit.png)
+3. Go back to the Github client and commit the file by filling out the Summary field and hitting the Commit to master button
+	
+	![](images/add-readme.png)
 
 4. Now, create a new branch called **gh-pages**
 
-5. In the directory, create a subdirectory **lesson1** and move the **html** file you created at the first sessionand all the other relevant files and directories (e.g. /images)
+	![](images/create-new-branch.png)
 
-6. Now, link the file from the root of your project by creating an `index.html` and adding a link to the page
+5. In the directory, create a subdirectory **lesson1** and move the **html** file you created at the first session and all the other relevant files and directories (e.g. /images)
+
+6. Now, link the file from the root of your project by creating an `index.html` file and adding a link to the page
 
 	```
 	<a href='lesson1/index.html'>Lesson 1 - Introduction to HTML </a>
-
 	```
 	> Don't forget to rename index to whatever you have named your file!
 
-7. Commit your changes
-![](images/commiting-changes.png)
+7. Commit your changes to the gh-pages branch
 
-8. Switch to branches on the Github client and hit **Publish**
+	![](images/commit-changes.png)
+
+8. Once you committed your changes publish your work by clicking the **Publish repository** button
+
+	![](images/publish-repository.png)
 
 9. View your work on the internet!
 
@@ -139,8 +146,9 @@ Now that you have the Github client setup on your machine, we will spend sometim
 10. Repeat the process to list the rest of the tutorials you have worked on on the page as well.
 
 ## Bonus
-This is your personal page. Use what we learned in the previous lessons to style it, and make it look pretty, and what we learned today to commit and publish your changes.
+
+This is your personal page. Use what you learned in the previous lessons to style it, make it look pretty, and what we learned today to commit and publish your changes.
 
 -----
 
-This ends our _Introduction to Version Control and git_ lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our _Introduction to version control and git_ lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

@@ -1,4 +1,4 @@
-This is the source code for <http://tutorials.codebar.io>
+This is the source code for <http://tutorials.codebar.io/>
 
 ## Getting started
 
@@ -8,10 +8,10 @@ indicated in `.ruby-version`, as well as the [bundler](https://bundler.io/) gem.
 
 1. `bundle install`, which will install Jekyll
 2. `bundle exec jekyll serve --watch`
-3. go to <http://localhost:4000>
+3. go to <http://localhost:4000/>
 
-(*you could also use your favorite manager, `chruby`, `rbenv`, `rvm`, etc. See
-intructions for `rvm` at the end of this README*)
+(*you could also use your favourite manager, `chruby`, `rbenv`, `rvm`, etc. See
+instructions for `rvm` at the end of this README*)
 
 If you are just updating or adding new tutorials, follow steps 1 to 3 only.
 
@@ -41,7 +41,7 @@ You can go to the general [codebar Slack channel here](https://codebar.slack.com
 dedicated [tutorials channel here](https://codebar.slack.com/messages/tutorials/). Use it to get in touch
 and chat to other codebar students/coaches, or if you need help.
 
-If you are not on Slack use [this link](http://codebar-slack.herokuapp.com/) to get an invite.
+If you are not on Slack use [this link](https://slack.codebar.io/) to get an invite.
 
 ## Contributing
 
@@ -117,7 +117,7 @@ And you're done. Commit and push as usual.
 
 # RVM
 
-Another way of installing the project depdendencies is via [RVM](https://rvm.io/rvm/install).
+Another way of installing the project dependencies is via [RVM](https://rvm.io/rvm/install).
 Follow the [quick installation guide](https://rvm.io/rvm/install#quick-guided-install) and then run:
 
 ```bash
@@ -125,7 +125,7 @@ $ rvm install 2.2.1  # inside `codebar/tutorials` folder
 $ rvm gemset use codebar-tutorial --create
 $ gem install bundler
 $ bundle install
-$ jekyll serve  # go to http://127.0.0.1:4000
+$ jekyll serve  # go to http://127.0.0.1:4000/
 ```
 
 If you also want to make changes to the JavaScript of the site, you'll need to have

@@ -18,7 +18,7 @@ In this tutorial we are going to look at:
 
 ### Goal
 
-By the end of this tutorial you will have built [this webpage.](http://codebar.github.io/tutorials/html/lesson1/example.html "I love owls")
+By the end of this tutorial you will have built [this webpage.](https://tutorials.codebar.io/html/lesson1/example.html "I love owls")
 
 #### What is HTML?
 
@@ -326,7 +326,7 @@ You can use a special kind of tag to add notes to our page that the computer wil
 Add a share on twitter link along with your other sharing links.
 
 ```html
-<a href="http://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on twitter</a>
+<a href="https://twitter.com/home?status=I love owls! via @codebar">Share your love of owls on twitter</a>
 ```
 -----
 This ends our first lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback, please [send us an email.](mailto:feedback@codebar.io)
@@ -334,5 +334,5 @@ This ends our first lesson, we hope you enjoyed it and learnt something. If you 
 ## Further reading
 
 * [HTML elements](https://developer.mozilla.org/en/docs/Web/HTML/Element)
-* [Special characters](http://htmlandcssbook.com/extras/html-escape-codes)
+* [Special characters](http://htmlandcssbook.com/extras/html-escape-codes/)
 * [The Bare Bones Guide to HTML](http://werbach.com/barebones/barebones.html)

@@ -27,7 +27,7 @@ describe("UI", function() {
   });
 
   it("does not trigger the download if the link doesn't point to 'download'", function() {
-    pointLinkTo("http://example.com");
+    pointLinkTo("http://example.com/");
     spyOn(Zipper, "createZip");
     UserInterface.setup(Zipper, undefined);
     dontFollowLink();

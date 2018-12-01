@@ -141,7 +141,7 @@ Download the [Testing JavaScript project again](https://github.com/codebar/Testi
 # Additional Resources
 
 You should now understand enough about JavaScript to create and test your own code.
-To gain a deeper understanding of JavaScript, we recommend reading [JavaScript, the good parts](http://www.amazon.co.uk/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742), by Douglas Crockford.
+To gain a deeper understanding of JavaScript, we recommend reading [JavaScript, the good parts](https://www.amazon.co.uk/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742), by Douglas Crockford.
 
 ---
 This ends our **Introduction to Testing** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

@@ -12,7 +12,7 @@ Today we will be building a website and learning more about CSS layouts and form
 
 ### Goal
 
-The page we will build will look similar to this [example page]( http://codebar.github.io/tutorials/html/lesson4/example.html "Grace Hopper")
+The page we will build will look similar to this [example page]( https://tutorials.codebar.io/html/lesson4/example.html "Grace Hopper")
 
 ### Required files
 
@@ -180,7 +180,7 @@ Add an id `toolbar` to the outer `<div>`
 See what happens when you add a `target="_blank"` to your link
 
 ```html
-  <li> <a href="http://www.personal.psu.edu/djd5202/ass6.html" target="_blank">Computer Scientist</a></li>
+  <li> <a href="http://www.cs.yale.edu/homes/tap/Files/hopper-story.html" target="_blank">Computer Scientist</a></li>
 ```
 
 ### Styling the toolbar
@@ -228,7 +228,7 @@ The text is now really hard to see. Change the color of the link...
 }
 ```
 
-> Do you remember what **:hover** does? Have a quick look at **Pseudo classes** in the [previous tutorial](http://codebar.github.io/tutorials/html/lesson3/tutorial.html) to refresh your memory.
+> Do you remember what **:hover** does? Have a quick look at **Pseudo classes** in the [previous tutorial](https://tutorials.codebar.io/html/lesson3/tutorial.html) to refresh your memory.
 
 ## Content
 
@@ -429,7 +429,7 @@ Before we do some more cool things, let's add a footer to our page
 
 ```html
 <footer>
-  <p>Made by <a href="http://codebar.io">codebar.io</a></p>
+  <p>Made by <a href="https://codebar.io/">codebar.io</a></p>
 </footer>
 ```
 

@@ -9,7 +9,7 @@ There are no sample files for this tutorial as you should already know how to cr
 
 Don't forget to commit to git regularly and also try to **type** out the examples as much as possible instead of copy &amp; pasting!
 
-If you are going through the tutorial in your own time and need any help then [join the chatroom](https://gitter.im/codebar/tutorials), but first read our [Code of Conduct](http://codebar.io/code-of-conduct) as we will not tolerate any inappropriate behavior.
+If you are going through the tutorial in your own time and need any help then [join our slack channel](https://slack.codebar.io/), but first read our [Code of Conduct](https://codebar.io/code-of-conduct) as we will not tolerate any inappropriate behavior.
 
 # What is Object Oriented Programming?
 
@@ -149,11 +149,11 @@ Fri | 21 degrees C  | 70 degrees F
 Sat | 16 degrees C  | 61 degrees F
 Sun | 19 degrees C  | 66 degrees F
 ```
-> If you don't remember how to create a script, you can look at the sample file for the first exercise of the [second Ruby tutorial](http://codebar.github.io/tutorials/ruby/lesson2/tutorial.html) on Github, and read the instructions of the first Exercise.
+> If you don't remember how to create a script, you can look at the sample file for the first exercise of the [second Ruby tutorial](https://tutorials.codebar.io/ruby/lesson2/tutorial.html) on Github, and read the instructions of the first Exercise.
 
 
 
-> Hint: You can store each created Celsius object in a Hash and iterate over the collection to print the results e.g. temperatures[:mon] = Celsius.new(temperate) and use [each_pair](http://www.ruby-doc.org/core-1.9.3/Hash.html)
+> Hint: You can store each created Celsius object in a Hash and iterate over the collection to print the results e.g. temperatures[:mon] = Celsius.new(temperate) and use [each_pair](http://ruby-doc.org/core-1.9.3/Hash.html)
 
 
 # Exercise 2: Tutorials

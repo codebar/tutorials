@@ -20,7 +20,7 @@ We will also be explaining in more detail elements that we mentioned in the prev
  
 ### Goal
  
-The page we will be building will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace").
+The page we will be building will look similar to this [example page](https://tutorials.codebar.io/html/lesson3/example.html "Ada Lovelace").
 
 ### Required files
 
@@ -35,7 +35,7 @@ In the previous two lessons, we spoke about **H**yper **T**ext **M**arkup **L**a
 
 Inspectors are development tools that help you view, edit and debug CSS, HTML and JavaScript.
 
-Developer Tools are already built into all modern browsers, whether you use [Chrome](https://developer.chrome.com/devtools), [Firefox](https://developer.mozilla.org/en-US/docs/Tools), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/f12-devtools-guide), [Opera](http://www.opera.com/dragonfly/) or [Safari](https://developer.apple.com/library/content/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html). For advanced users, many other tools are available as browser extensions, including the [Web Developer Toolbar](https://chrispederick.com/work/web-developer/) plugin.
+Developer Tools are already built into all modern browsers, whether you use [Chrome](https://developer.chrome.com/devtools), [Firefox](https://developer.mozilla.org/en-US/docs/Tools), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide), [Opera](http://www.opera.com/dragonfly/) or [Safari](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/GettingStarted/GettingStarted.html). For advanced users, many other tools are available as browser extensions, including the [Web Developer Toolbar](https://chrispederick.com/work/web-developer/) plugin.
 
 ![](assets/images/chrome-devtools.png)
 
@@ -586,7 +586,7 @@ footer a {
 
 ### Bonus - Inspector
 
-Have a look at the [example page](http://codebar.github.io/tutorials/html/lesson3/example.html "Ada Lovelace"). The heading and body of the page have some differences from the page we just created.
+Have a look at the [example page](https://tutorials.codebar.io/html/lesson3/example.html "Ada Lovelace"). The heading and body of the page have some differences from the page we just created.
 
 Use the inspector to have a look at `<body>` and `<h1>` and apply these changes to your page.
 

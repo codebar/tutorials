@@ -98,7 +98,7 @@ We can use other attributes to control our media plays. To make music start play
 
 Today, we will be following a different approach to building our page.
 
-You now know enough to build a complete web page from scratch. Open [our example page](http://codebar.github.io/tutorials/html/lesson6/index.html "Women in Programming"), then try to build it yourself. You should use the HTML5 elements we mentioned today and what you have learned in the previous tutorials.
+You now know enough to build a complete web page from scratch. Open [our example page](https://tutorials.codebar.io/html/lesson6/index.html "Women in Programming"), then try to build it yourself. You should use the HTML5 elements we mentioned today and what you have learned in the previous tutorials.
 
 ### But before you begin...
 
@@ -109,14 +109,14 @@ Download the files required to begin working through the tutorial from [here](ht
 ### Links and resources you will need
 
 ```
-Hi I'm Ada Lovelace - http://codebar.github.io/tutorials/html/lesson3/example.html
-Grace Hopper - http://codebar.github.io/tutorials/html/lesson4/example.html
-Anita Borg - Where are we and where are we going. - http://codebar.github.io/tutorials/html/lesson5/example.html
-Grace Hopper on Letterman - http://codebar.github.io/tutorials/html/lesson6/assets/images/grace-letterman.mp4
+Hi I'm Ada Lovelace - https://tutorials.codebar.io/html/lesson3/example.html
+Grace Hopper - https://tutorials.codebar.io/html/lesson4/example.html
+Anita Borg - Where are we and where are we going. - https://tutorials.codebar.io/html/lesson5/example.html
+Grace Hopper on Letterman - https://tutorials.codebar.io/html/lesson6/assets/images/grace-letterman.mp4
 
 ```
 
-Also, don't forget to refer to the [previous tutorials](http://codebar.github.io/tutorials)
+Also, don't forget to refer to the [previous tutorials](https://tutorials.codebar.io/)
 
 > Don't be afraid to ask for help from your coach.
 
@@ -157,12 +157,12 @@ Some of your users might be using screenreaders or keyboards to navigate across 
 
 #### Articles for getting started with accessibility:
 - [Introduction to Accessibility](https://www.w3.org/standards/webdesign/accessibility)
-- [WAI Getting started](https://www.w3.org/WAI/gettingstarted/)
-- [How People with disabilities use the web](https://www.w3.org/WAI/intro/people-use-web)
+- [WAI Getting started](https://www.w3.org/WAI/fundamentals/accessibility-intro/)
+- [How People with disabilities use the web](https://www.w3.org/WAI/people-use-web/)
 - [Tutorials](https://www.w3.org/WAI/tutorials/)
 - [Mozilla have created their own Accessibility page](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 - [ARIA Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/aria)
-- The [A11Y Project](http://a11yproject.com/) is an open source project on providing the most up to date and easy to access information regarding accessibility.
+- The [A11Y Project](https://a11yproject.com/) is an open source project on providing the most up to date and easy to access information regarding accessibility.
 
 #### These extensions are handy if you wish to check if your website meets the criteria and areas to improve:
 - Chrome: WAVE Evaluation Tool

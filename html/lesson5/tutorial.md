@@ -12,7 +12,7 @@ Today we will be building a website and will focus more on HTML5 and CSS3 specif
 
 ### Goal
 
-The page we will build will look similar to this [example page](http://codebar.github.io/tutorials/html/lesson5/example.html "Anita Borg")
+The page we will build will look similar to this [example page](https://tutorials.codebar.io/html/lesson5/example.html "Anita Borg")
 
 ### Required files
 
@@ -33,7 +33,7 @@ Set her name as the title that will be displayed on the browser's bar.
 <title>Anita Borg</title>
 ```
 
-Also, set a title for your page
+Also, set a heading for your page
 
 ```html
 <h1>Anita Borg</h1>
@@ -234,8 +234,8 @@ You can also set different properties for your backgrounds, by defining them in 
 First let's set two background images, the first positioned on the right and the second on the left.
 
 ```
-background: url('assets/images/background-right.jpg') right top no-repeat,
-            url('assets/images/background-left.jpg') left no-repeat;
+background: url('background-right.jpg') right top no-repeat,
+            url('background-left.jpg') left no-repeat;
 ```
 
 By default, a background image repeats itself to fill in the container. We don't want that, that's where the **no-repeat** property we specified comes into place.
@@ -424,8 +424,6 @@ As you may have just noticed, we didn't define the color as we usually do, using
 `rgba(rgb code, opacity)`
 
 `rgb(176, 175, 192);` is another way of defining the color with the hex code `#b0afc0`
-
-A great way to find both the rgb and hex values of a color is [http://0to255.com](http://0to255.com).
 
 > Try changing the last attribute of the `rgba` we just set.
 > What happens when you set it to 1?

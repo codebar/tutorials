@@ -10,7 +10,7 @@ title: Introduction to the Git command line
 Git is a tool that makes sharing code and collaborating with other developers really easy. It also keeps our code tracked and safe. The following examples will help you understand how to use this tool on a daily basis.
 
 ## Before you begin
-Install command line Git for your operating system ([OS X](http://sourceforge.net/projects/git-osx-installer/), [Windows](http://msysgit.github.com/) or [Linux](http://git-scm.com/download/linux)) and open your terminal / command prompt.
+Install command line Git for your operating system ([OS X](https://sourceforge.net/projects/git-osx-installer/), [Windows](http://msysgit.github.io/) or [Linux](https://git-scm.com/download/linux)) and open your terminal / command prompt.
 
 Create a directory where you will be storing all your projects. You can call it `code` or `projects`.
 
@@ -72,7 +72,7 @@ $ git log
 
 ### Transferring project repository to an online service
 
-First you need to create an account to the service of your choice ([GitHub](https://github.com/join), [GitLab](https://gitlab.com)). Then, create a new project (or repository).
+First you need to create an account to the service of your choice ([GitHub](https://github.com/join), [GitLab](https://gitlab.com/)). Then, create a new project (or repository).
 
 Copy the information about adding an existing project to the repository which should be something like the details below.
 
@@ -384,7 +384,7 @@ git push origin master
 # Extras
 
 Following are some good resources to to help you set up Git.
-https://help.github.com/articles/set-up-git
+https://help.github.com/articles/set-up-git/
 
 ## Configuring your Git environment
 
