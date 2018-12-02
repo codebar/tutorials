@@ -37,6 +37,9 @@ pixels it looks blocky when enlarged.
 <img src="./images/owl-silhouette.svg" alt="Little owl silhouette, SVG" width="200px">
 <img src="./images/owl-silhouette.png" alt="Little owl silhouette, PNG" width="200px">
 
+Owl image [CC0](https://creativecommons.org/publicdomain/zero/1.0/),
+[PhyloPic](http://phylopic.org/image/4e35207e-a75a-4518-8eca-1d574eebfbb4/).
+
 ## Tools to work with SVG
 
 SVG images are made of drawing instructions that use a markup language that work
@@ -224,7 +227,8 @@ Which should show this:
 Polygons are a bit more complex to construct. They are drawn with the `<polygon>`
 tag and take a single positional attributes, `points`, that describes a list of
 coordinates grouped in pairs. Coordinates of the same pair are separated by a
-comma and pairs are separated by spaces.
+comma and pairs are separated by spaces. Polygons are closed so the final
+coordinates generate a line to the first ones.
 
 Replace the previous `<ellipse>` tag with this:
 
@@ -236,6 +240,25 @@ Which is the first step to create a game of Tetris:
 
 <svg width="200px" height="200px">
     <polygon points="25,50 175,50 175,100 75,100 75,150 25,150" stroke="black" stroke-width="3" fill="purple" />
+</svg>
+
+### Polylines
+
+Polylines are polygons that are not closed, which means that the last set of
+coordinates are not linked back to the first set and the shape is open on one
+side. You can still provide a `fill` colour, which will shade the area defined
+by the line.
+
+Replace the previous `<polygon>` tag with this:
+
+```html
+<polyline points="25,50 175,50 175,100 75,100 75,150 25,150" stroke="black" stroke-width="3" fill="yellow" />
+```
+
+Which results in an open Tetris piece:
+
+<svg width="200px" height="200px">
+    <polyline points="25,50 175,50 175,100 75,100 75,150 25,150" stroke="black" stroke-width="3" fill="yellow" />
 </svg>
 
 ### Text
