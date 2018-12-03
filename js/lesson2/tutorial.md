@@ -310,7 +310,9 @@ var animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
 animals.unshift('cow');
 animals.push('zebra');
 
-console.log(animals);
+console.log(animals); 
+
+// Expected output: ['cow', 'dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey', 'zebra']
 ```
 
 #### Removing objects
