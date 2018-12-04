@@ -7,7 +7,7 @@ title: Introduction to SQL
 
 The previous lessons showed you how to manipulate data from a single table. _Lesson 5_ will show you how to combine data from multiple tables and will bring out the _relational_ part of relational databases.
 
-In this lesson we will keep using the same database than before (https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y)
+In this lesson we will keep using the same database as before (https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y)
 
 ### Primary and Foreign Keys
 
@@ -33,7 +33,7 @@ This shows us that the record in the `locations` table that has `id` set to `2` 
 
 #### Joining two tables
 
-If we want to select all the hosts and for each of them pull in location data, we need what we call an inner join. This is a **SELECT** query that will join the `hosts` and `locations` tables to return a single data set. To do this, we add an **INNER JOIN** clause to our **SELECT** statement:
+If we want to select all the hosts and for each of them pull in location data, we need what we call an inner join. This is a **SELECT** query that will join the `hosts` and `locations` tables to return a single data set. Inner joins can be written either with an **INNER JOIN** or a **JOIN** clause. Both of the **SELECT** statements below result in identical SQL queries and return the same results:
 
 ```SQL
 SELECT hosts.name, locations.city, locations.country
@@ -42,67 +42,64 @@ SELECT hosts.name, locations.city, locations.country
        ON hosts.location_id = locations.id;
 ```
 
-The **INNER JOIN** clause is of the form:
-
 ```SQL
-INNER JOIN table
-ON link condition
+SELECT hosts.name, locations.city, locations.country
+  FROM hosts
+  JOIN locations
+    ON hosts.location_id = locations.id;
 ```
 
-Here the link condition tells the database to create a join for every `(host, location)` pair of records where `hosts.location_id` is equal to `locations.id`. Note the `.` notation to explicitly specify fields in given tables when manipulating several tables at the same time.
+Note that SQL is not affected by the use of white space, which is used to improve the legibility of queries. White space in SQL is commonly used to line up root keywords so that they end on the same character boundary, thus forming a river that runs down the query helping the reader to scan over the code. White space is also used with subqueries, to nest the subquery in an indented block.
 
-We can also limit the set of results using a **WHERE** clause as we did with simple **SELECT** statements:
+#### Why are these joins called 'inner' joins?
+
+The word "inner" in "inner join" refers to the fact that this type of join will only return data where records exist on both sides of the join.
+
+In other words, inner joins only add rows to the combined data set that satisfy the join condition set forth in the **ON** statement.
+
+For instance, you will notice that we don't get all locations when running the following query:
 
 ```SQL
 SELECT hosts.name, locations.city, locations.country
   FROM hosts
-       INNER JOIN locations
-       ON hosts.location_id = locations.id
+  JOIN locations
+    ON hosts.location_id = locations.id;
+```
+
+Helsinki is missing because the database contains no host in Helsinki, even if there is a location record for it.
+
+#### Using WHERE with a JOIN statement
+
+We can limit the set of results using a **WHERE** clause as we did with simple **SELECT** statements:
+
+```SQL
+SELECT hosts.name, locations.city, locations.country
+  FROM hosts
+  JOIN locations
+    ON hosts.location_id = locations.id
  WHERE locations.country = 'UK';
 ```
 
 #### Joining more than two tables
 
-You can have multiple **INNER JOIN** clauses when connecting more than two tables. So for example if we wanted to know all workshop dates with host and location, we could do:
+You can have multiple **JOIN** clauses when connecting more than two tables. So for example if we wanted to know all workshop dates with host and location, we could do:
 
 ```SQL
 SELECT hosts.name, locations.city, locations.country, workshops.date
   FROM hosts
-       INNER JOIN locations
-       ON hosts.location_id = locations.id
-
-       INNER JOIN workshops
-       ON workshops.host_id = hosts.id;
+  JOIN locations
+    ON hosts.location_id = locations.id
+  JOIN workshops
+    ON workshops.host_id = hosts.id;
 ```
 
-The way to create such a query is to start with a simple **SELECT** on the first table and then gradually extend table by table using **INNER JOIN** clauses.
+The way to create such a query is to start with a simple **SELECT** on the first table and then gradually extend table by table using **JOIN** clauses.
 
-#### Why inner?
+### LEFT JOIN
 
-The word "inner" in "inner join" refers to the fact that this type of join will only return data where records exist on both sides of the join. For instance, you will notice that we don't get all locations when running the following query:
+Remember earlier when we said that some locations did not have any hosts? How can we identify those? SQL can do that using a **LEFT JOIN** clause. The **LEFT JOIN** keyword returns all records from the left table (the table specified after **FROM**), and the matched records from the right table (the table specified after **LEFT JOIN**). If the left table contains rows that do not match with any data from the right table then columns for those rows, that would have contained right table data, are filled with **NULL**.
 
-```SQL
-SELECT hosts.name, locations.city, locations.country
-  FROM hosts
-       INNER JOIN locations
-       ON hosts.location_id = locations.id;
-```
-
-For example, Helsinki is missing because the database contains no host in Helsinki, even if there is a location record for it.
-
-#### Alternative syntax
-
-The **INNER JOIN** syntax presented above is explicit but used not to exist in SQL. So you may sometimes see the same thing done with an older syntax that is just a variant of the **SELECT** statement:
-
-```SQL
-SELECT hosts.name, locations.city, locations.country
-  FROM hosts, locations
- WHERE hosts.location_id = locations.id;
-```
-
-### Left join
-
-Remember earlier when we said that some locations did not have any hosts? How can we identify those? SQL can do that using a **LEFT JOIN** clause. The **LEFT JOIN** keyword returns all records from the left table (the table specified after **FROM**), and the matched records from the right table (the table specified after **LEFT JOIN**). The result is **NULL** from the right side, if there is no match.
+In other words, **LEFT JOIN** returns all rows a **JOIN** would have returned and unmatched rows from the left table.
 
 ```SQL
 SELECT locations.city, locations.country, hosts.name
@@ -120,7 +117,7 @@ SELECT locations.city, locations.country, hosts.name
   FROM locations
        LEFT JOIN hosts
        ON hosts.location_id = locations.id
- WHERE hosts.id is NULL;
+ WHERE hosts.id IS NULL;
 ```
 
 ## Lesson 5 exercises
@@ -144,7 +141,8 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y
 * L5.1 Select the list of workshops that have RSVP records.
 * L5.2 Select students with the list of workshops they have sent an RSVP to.
-* L5.3 Find all workshops that have no RSVP.
+* L5.3 Find all workshops, with the workshop dates, that the individual with id 17 has RSVPed to, and the date of their RSVPs.
+* L5.4 Find all workshops that have no RSVP.
 
 ---
 This ends our **SQL Lesson 5**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
