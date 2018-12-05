@@ -17,9 +17,9 @@ SELECT DISTINCT workshops.id, workshops.workshop_date
 Solution 2:
 ```SQL
 SELECT DISTINCT workshops.id, workshops.workshop_date
- FROM workshops
-      INNER JOIN rsvp
-      ON rsvp.workshop_id = workshops.id;
+  FROM workshops
+ INNER JOIN rsvp
+    ON rsvp.workshop_id = workshops.id;
 ```
 
 # L5.2 Select students with the list of workshops they have sent an RSVP to.
@@ -38,12 +38,12 @@ SELECT people.name, workshops.id, workshops.workshop_date
 Solution 2:
 ```SQL
 SELECT people.name, workshops.id, workshops.workshop_date
- FROM workshops
-      INNER JOIN rsvp
-      ON rsvp.workshop_id = workshops.id       
-      INNER JOIN people
-      ON people.id = rsvp.person_id
-ORDER BY people.name;
+  FROM workshops
+ INNER JOIN rsvp
+    ON rsvp.workshop_id = workshops.id       
+ INNER JOIN people
+    ON people.id = rsvp.person_id
+ ORDER BY people.name;
 ```
 ## L5.3 Find all workshops, with the workshop dates, that the individual with id 17 has RSVPed to, and the date of their RSVPs.
 
@@ -63,8 +63,8 @@ Solution 1:
 ```SQL
 SELECT DISTINCT workshops.id, workshops.workshop_date
   FROM workshops
-       LEFT JOIN rsvp
-       ON workshops.id = rsvp.workshop_id
-       WHERE rsvp.id IS NULL;
+  LEFT JOIN rsvp
+    ON workshops.id = rsvp.workshop_id
+ WHERE rsvp.id IS NULL;
 ```
-If your query returns no results, you are correct! There are no workshops that have received no RSVPs.
+If your query returns no results, you are correct! Zero workshops have received no RSVPs.

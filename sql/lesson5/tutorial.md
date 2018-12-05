@@ -7,6 +7,8 @@ title: Introduction to SQL
 
 The previous lessons showed you how to manipulate data from a single table. _Lesson 5_ will show you how to combine data from multiple tables and will bring out the _relational_ part of relational databases.
 
+Tables in a relational database relate to each other as they contain keys which allow information from multiple tables to be combined easily. The real power of relational databases, and SQL, comes from working with multiple tables at once.
+
 In this lesson we will keep using the same database as before (https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y)
 
 ### Primary and Foreign Keys
@@ -38,8 +40,8 @@ If we want to select all the hosts and for each of them pull in location data, w
 ```SQL
 SELECT hosts.name, locations.city, locations.country
   FROM hosts
-       INNER JOIN locations
-       ON hosts.location_id = locations.id;
+ INNER JOIN locations
+    ON hosts.location_id = locations.id;
 ```
 
 ```SQL
@@ -104,8 +106,8 @@ In other words, **LEFT JOIN** returns all rows a **JOIN** would have returned an
 ```SQL
 SELECT locations.city, locations.country, hosts.name
   FROM locations
-       LEFT JOIN hosts
-       ON hosts.location_id = locations.id;
+  LEFT JOIN hosts
+    ON hosts.location_id = locations.id;
 ```
 
 In this example, the left table is `locations` and the right table is `hosts` so it will select all entries in `locations` and the matched records from `hosts`. In addition it will also show all entries in `locations` that do not have any matches in `hosts` and will set all corresponding values to `null`.
@@ -115,10 +117,37 @@ This is not quite what we wanted as we wanted only the locations that have no ho
 ```SQL
 SELECT locations.city, locations.country, hosts.name
   FROM locations
-       LEFT JOIN hosts
-       ON hosts.location_id = locations.id
+  LEFT JOIN hosts
+    ON hosts.location_id = locations.id
  WHERE hosts.id IS NULL;
 ```
+
+### RIGHT JOIN
+
+Right joins are the mirror image of left joins: **RIGHT JOIN** returns all rows a **JOIN** would have returned and unmatched rows from the right table.
+
+You can change a left join to a right join by changing the join term and by flipping the table order. For example, the following two queries are equivalent and return the same results:
+
+```SQL
+SELECT locations.city, locations.country, hosts.name
+  FROM locations
+  LEFT JOIN hosts
+    ON hosts.location_id = locations.id;
+```
+
+```SQL
+SELECT locations.city, locations.country, hosts.name
+  FROM hosts
+ RIGHT JOIN locations
+    ON hosts.location_id = locations.id;
+```
+
+In practice, the convention is to write these types of joins as a **LEFT JOIN**.
+
+### FULL OUTER JOIN
+
+If **LEFT JOIN** and **RIGHT JOIN** return unmatched rows from one of the tables, a **FULL OUTER JOIN**, which can also be written as a **FULL JOIN** returns unmatched rows from both tables. 
+
 
 ## Lesson 5 exercises
 
