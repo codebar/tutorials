@@ -10,6 +10,7 @@ title: Path and complex shapes
 In this tutorial we are going to look at:
 
 * Complex shapes using the `<path>` element
+* Disjoint shapes
 * Fill rules and shapes with holes
 
 ### Goal
@@ -208,8 +209,8 @@ Here is an animated visual representation of what is happening:
 ![Quadratic Bézier curve animation](https://upload.wikimedia.org/wikipedia/commons/3/3d/B%C3%A9zier_2_big.gif)
 
 In order to draw such shapes, we use the **Q** instruction. P<sub>0</sub> is
-the current point, P<sub>1</sub> is the first set of coordinates after **Q** and
-P<sub>2</sub> is the second set of coordinates. In the example below, we have:
+the current point and the instruction has the form `Q x1,y1 x2,y2`. In the
+example below, the three points are:
 
 * P<sub>0</sub>: 25,75
 * P<sub>1</sub>: 50,175
@@ -296,8 +297,8 @@ Here is an animated visual representation of what is happening:
 ![Cubic Bézier curve animation](https://upload.wikimedia.org/wikipedia/commons/d/db/B%C3%A9zier_3_big.gif)
 
 In order to draw such shapes, we use the **C** instruction. P<sub>0</sub> is
-the current point, P<sub>1</sub>, P<sub>2</sub> and P<sub>3</sub> are the sets
-of coordinates after **C**. In the example below, we have:
+the current point and the instruction has the form `C x1,y1 x2,y2 x3,y3`. In the
+example below, the three points are:
 
 * P<sub>0</sub>: 25,75
 * P<sub>1</sub>: 75,175
@@ -339,7 +340,7 @@ the same way as with quadratic curves:
         <title>SVG Tutorial</title>
     </head>
     <body>
-        <svg width="400px" height="200px">
+        <svg width="350px" height="200px">
             <path d="M 25,75 C 75,175 125,25 175,75 C 150,175 275,25 325,75" stroke="black" stroke-width="3" fill="none" />
         </svg>
     </body>
@@ -362,7 +363,7 @@ calculated by the SVG layout engine to ensure the curve is smooth:
         <title>SVG Tutorial</title>
     </head>
     <body>
-        <svg width="400px" height="200px">
+        <svg width="350px" height="200px">
             <path d="M 25,75 C 75,175 125,25 175,75 S 275,25 325,75" stroke="black" stroke-width="3" fill="none" />
         </svg>
     </body>
@@ -373,7 +374,168 @@ calculated by the SVG layout engine to ensure the curve is smooth:
     <path d="M 25,75 C 75,175 125,25 175,75 S 275,25 325,75" stroke="black" stroke-width="3" fill="none" />
 </svg>
 
+### Arcs
 
+The last type of line segment that can be described in a `<path>` element is a
+curcular or elliptical arc. The way an arc is specified is slightly complicated
+because it needs to be integrated into an existing path so that SVG can link
+the current point with a target point using a section of ellipse. To draw such
+a path element, we use the **A** intruction and it has the form
+`A rx ry x-axis-rotation large-arc-flag sweep-flag x y` where:
+
+* `rx` is the ellipse's horizontal radius
+* `ry` is the ellipse's vertical radius
+* `x-axis-rotation` is the angle by which the radii are rotated
+* `large-arc-flag` is a value of `0` or `1` that selects what arc to draw
+* `sweep-flag` is a value of `0` or `1` that selects what possible ellipse to
+  draw out of the two that can intersect on the line
+* `x` and `y` are the coordinates of the target point
+
+This is all a bit complex so here is an example with two arcs of circle:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <path d="M 0,50 L 25,50 A 25 25 0 0 0 75,50 L 125,50 A 35 35 0 0 0 175,50 L 200,50" stroke="black" stroke-width="3" fill="none" />
+            <path d="M 0,100 L 25,100 A 25 25 0 1 0 75,100 L 125,100 A 35 35 0 1 0 175,100 L 200,100" stroke="black" stroke-width="3" fill="none" />
+            <path d="M 0,175 L 25,175 A 25 25 0 0 1 75,175 L 125,175 A 35 35 0 0 1 175,175 L 200,175" stroke="black" stroke-width="3" fill="none" />
+        </svg>
+    </body>
+</html>
+```
+
+<svg width="200px" height="200px">
+    <path d="M 0,50 L 25,50 A 25 25 0 0 0 75,50 L 125,50 A 35 35 0 0 0 175,50 L 200,50" stroke="black" stroke-width="3" fill="none" />
+    <path d="M 0,100 L 25,100 A 25 25 0 1 0 75,100 L 125,100 A 35 35 0 1 0 175,100 L 200,100" stroke="black" stroke-width="3" fill="none" />
+    <path d="M 0,175 L 25,175 A 25 25 0 0 1 75,175 L 125,175 A 35 35 0 0 1 175,175 L 200,175" stroke="black" stroke-width="3" fill="none" />
+</svg>
+
+The first arc of the first line is drawn between the points _(25,50)_ and _(75,50)_,
+which corresponds to a length of 50 in the path. The radii are both 25, which means
+that the 50 space in the path will accommodate a full half-circle.
+
+The second arc of the first line is drawn between the points _(125,50)_ and _(175,50)_,
+which corresponds to a length of 50 in the path. The radii are both 35, which means
+that the 50 space in the path will accommodate less than half a circle.
+
+For the second line, we set the `large-arc-flag` to true, which has no effect on
+the half circle but selects a large option for the second arc.
+
+For the third line, we set the `large-arc-flag` back to false and the `sweep-flag`
+to true, which has the effect of drawing both arcs on the other side of the line.
+
+Arcs are quite difficult to understand so the best thing is to experiment with them.
+
+## Disjoint shapes
+
+The `<path>` element allows you to create very complex shapes but it can also
+create disjoint shapes, i.e. shapes that consist of multiple paths. This is done
+by introducing some **M** instructions in the middle of the path to draw a
+disjoint segment. For example, we can draw two squares side by side with a
+single shape, meaning that they will share all `fill`, `stroke` and `stroke-width`
+attributes:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <path d="M 25,25 H 100 V 100 H 25 Z M 125,125 H 175 V 175 H 125 Z" stroke="black" stroke-width="3" fill="yellow" />
+        </svg>
+    </body>
+</html>
+```
+
+<svg width="200px" height="200px">
+    <path d="M 25,25 H 100 V 100 H 25 Z M 125,125 H 175 V 175 H 125 Z" stroke="black" stroke-width="3" fill="yellow" />
+</svg>
+
+## Shapes with holes
+
+If we update the example above to draw the second square inside the first,
+SVG does just that:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <path d="M 25,25 H 175 V 175 H 25 Z M 50,50 H 150 V 150 H 50 Z" stroke="black" stroke-width="3" fill="yellow" />
+        </svg>
+    </body>
+</html>
+```
+
+<svg width="200px" height="200px">
+    <path d="M 25,25 H 175 V 175 H 25 Z M 50,50 H 150 V 150 H 50 Z" stroke="black" stroke-width="3" fill="yellow" />
+</svg>
+
+By default, SVG fills all the shape segments. This can be chaged using the
+`fill-rule` attribute. This attribute can take two values:
+
+* `nonzero` (the default): all shape segments are filled
+* `evenodd`: shape segments are filled or empty depending on whether the number
+  of shape segments that intersect are even or odd
+
+With the simple shape above, this allow us to create a shape with a hole. We can
+confirm that this is a real hole by showing another shape behind.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <path d="M 10,10 H 100 V 100 H 10 Z" stroke="lightgray" stroke-width="1" fill="orange" />
+            <path d="M 25,25 H 175 V 175 H 25 Z M 50,50 H 150 V 150 H 50 Z" stroke="black" stroke-width="3" fill="yellow" fill-rule="evenodd" />
+        </svg>
+    </body>
+</html>
+```
+
+<svg width="200px" height="200px">
+    <path d="M 10,10 H 100 V 100 H 10 Z" stroke="lightgray" stroke-width="1" fill="orange" />
+    <path d="M 25,25 H 175 V 175 H 25 Z M 50,50 H 150 V 150 H 50 Z" stroke="black" stroke-width="3" fill="yellow" fill-rule="evenodd" />
+</svg>
+
+This rule allows us to draw even more complex combinations. In the example below,
+the areas that are covered by an odd number of shapes (1 or 3) are filled in,
+while the areas that are covered by an even number of shapes (2) are empty, all
+this with a single `<path>` element:
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <path d="M 25,75 Q 250,250 75,25 Z M 175,75 Q -50,250 125,25 Z M 50,175 Q 100,0 150,175 Z" stroke="black" stroke-width="3" fill="yellow" fill-rule="evenodd" />
+        </svg>
+    </body>
+</html>
+```
+
+<svg width="200px" height="200px">
+    <path d="M 25,75 Q 250,250 75,25 Z M 175,75 Q -50,250 125,25 Z M 50,175 Q 100,0 150,175 Z" stroke="black" stroke-width="3" fill="yellow" fill-rule="evenodd" />
+</svg>
+
+Phew, this lesson was rather complex so congratulations for getting to the end
+if it! Take it slowly, go back through it and experiment.
 
 -----
 This ends our second SVG lesson, we hope you enjoyed it and learnt something.
