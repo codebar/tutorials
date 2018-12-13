@@ -144,7 +144,8 @@ translations, scaling, rotations or skews to it.
 
 The _translate_ function is of the form `translate(x [y])` and moves the object
 horizontally by an amount of _x_ and vertically by an amount of _y_. If _y_ is
-not specified, it is assumed to be 0.
+not specified, it is assumed to be 0. In the example blelow, the original shape
+is shown with an opacity of 0.3.
 
 ```html
 <!DOCTYPE html>
@@ -164,6 +165,11 @@ not specified, it is assumed to be 0.
     </head>
     <body>
         <svg width="200px" height="200px">
+            <g style="opacity: 0.3">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
             <g transform="translate(35 -60)">
                 <rect x="50" y="50" width="120" height="80" />
                 <rect x="150" y="150" width="40" height="40" />
@@ -185,6 +191,11 @@ not specified, it is assumed to be 0.
         fill: green;
     }
     </style>
+    <g style="opacity: 0.3">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
     <g transform="translate(35 -60)">
         <rect x="50" y="50" width="120" height="80" />
         <rect x="150" y="150" width="40" height="40" />
@@ -216,6 +227,11 @@ not specified, it is assumed to be the same as _x_.
     </head>
     <body>
         <svg width="200px" height="200px">
+            <g style="opacity: 0.3">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
             <g transform="scale(0.5 0.75)">
                 <rect x="50" y="50" width="120" height="80" />
                 <rect x="150" y="150" width="40" height="40" />
@@ -237,6 +253,11 @@ not specified, it is assumed to be the same as _x_.
         fill: green;
     }
     </style>
+    <g style="opacity: 0.3">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
     <g transform="scale(0.5 0.75)">
         <rect x="50" y="50" width="120" height="80" />
         <rect x="150" y="150" width="40" height="40" />
@@ -268,6 +289,11 @@ If _x_ and _y_ are not specified, the rotation is done around the origin.
     </head>
     <body>
         <svg width="200px" height="200px">
+            <g style="opacity: 0.3">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
             <g transform="rotate(30 100 100)">
                 <rect x="50" y="50" width="120" height="80" />
                 <rect x="150" y="150" width="40" height="40" />
@@ -289,6 +315,11 @@ If _x_ and _y_ are not specified, the rotation is done around the origin.
         fill: green;
     }
     </style>
+    <g style="opacity: 0.3">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
     <g transform="rotate(30 100 100)">
         <rect x="50" y="50" width="120" height="80" />
         <rect x="150" y="150" width="40" height="40" />
@@ -319,6 +350,11 @@ along the horizontal axis by an angle of _a_ degrees.
     </head>
     <body>
         <svg width="300px" height="200px">
+            <g style="opacity: 0.3">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
             <g transform="skewX(30)">
                 <rect x="50" y="50" width="120" height="80" />
                 <rect x="150" y="150" width="40" height="40" />
@@ -340,6 +376,11 @@ along the horizontal axis by an angle of _a_ degrees.
         fill: green;
     }
     </style>
+    <g style="opacity: 0.3">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
     <g transform="skewX(30)">
         <rect x="50" y="50" width="120" height="80" />
         <rect x="150" y="150" width="40" height="40" />
@@ -370,6 +411,11 @@ along the vertical axis by an angle of _a_ degrees.
     </head>
     <body>
         <svg width="200px" height="200px">
+            <g style="opacity: 0.3">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
             <g transform="skewY(-10)">
                 <rect x="50" y="50" width="120" height="80" />
                 <rect x="150" y="150" width="40" height="40" />
@@ -391,6 +437,11 @@ along the vertical axis by an angle of _a_ degrees.
         fill: green;
     }
     </style>
+    <g style="opacity: 0.3">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
     <g transform="skewY(-10)">
         <rect x="50" y="50" width="120" height="80" />
         <rect x="150" y="150" width="40" height="40" />
