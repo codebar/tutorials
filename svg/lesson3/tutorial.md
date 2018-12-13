@@ -10,7 +10,7 @@ title: Groups and transforms
 In this tutorial we are going to look at:
 
 * Shape grous using the `<g>` element
-* Transforms: translations, rotations, stretch
+* Transforms: translate, scale, rotate, skew
 
 ### Goal
 
@@ -46,7 +46,7 @@ on its own it doesn't have any effect on the result:
 </html>
 ```
 
-<svg width="200px" height="200px">
+<svg id="example1" width="200px" height="200px">
     <g>
         <rect x="50" y="50" width="120" height="80" stroke="black" stroke-width="3" fill="red" />
         <rect x="150" y="150" width="40" height="40" stroke="black" stroke-width="3" fill="red" />
@@ -78,7 +78,7 @@ rectangle overrides the `fill` property:
 </html>
 ```
 
-<svg width="200px" height="200px">
+<svg id="example2" width="200px" height="200px">
     <g stroke="black" stroke-width="3" fill="red">
         <rect x="50" y="50" width="120" height="80" />
         <rect x="150" y="150" width="40" height="40" />
@@ -134,6 +134,270 @@ What can be done with SVG attributes can also be done with CSS:
     </g>
 </svg>
 
+## Transforms
+
+All SVG elements can take a `transform` attribute. This attribute takes the
+form of a list of transform function calls that modify the shape by applying
+translations, scaling, rotations or skews to it.
+
+### translate
+
+The _translate_ function is of the form `translate(x [y])` and moves the object
+horizontally by an amount of _x_ and vertically by an amount of _y_. If _y_ is
+not specified, it is assumed to be 0.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+        <style>
+        g {
+            stroke: black;
+            stroke-width: 3;
+            fill: red;
+        }
+        rect.accent {
+            fill: green;
+        }
+        </style>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <g transform="translate(35 -60)">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example4" width="200px" height="200px">
+    <style>
+    #example4 g {
+        stroke: black;
+        stroke-width: 3;
+        fill: red;
+    }
+    #example4 rect.accent {
+        fill: green;
+    }
+    </style>
+    <g transform="translate(35 -60)">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+</svg>
+
+### scale
+
+The _scale_ function is of the form `scale(x [y])` and scales the object
+horizontally by an amount of _x_ and vertically by an amount of _y_. If _y_ is
+not specified, it is assumed to be the same as _x_.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+        <style>
+        g {
+            stroke: black;
+            stroke-width: 3;
+            fill: red;
+        }
+        rect.accent {
+            fill: green;
+        }
+        </style>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <g transform="scale(0.5 0.75)">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example5" width="200px" height="200px">
+    <style>
+    #example5 g {
+        stroke: black;
+        stroke-width: 3;
+        fill: red;
+    }
+    #example5 rect.accent {
+        fill: green;
+    }
+    </style>
+    <g transform="scale(0.5 0.75)">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+</svg>
+
+### rotate
+
+The _rotate_ function is of the form `rotate(a [x y])` and rotates the object
+by an angle of _a_ degrees around the point specified by _x_ and _y_.
+If _x_ and _y_ are not specified, the rotation is done around the origin.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+        <style>
+        g {
+            stroke: black;
+            stroke-width: 3;
+            fill: red;
+        }
+        rect.accent {
+            fill: green;
+        }
+        </style>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <g transform="rotate(30 100 100)">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example6" width="200px" height="200px">
+    <style>
+    #example6 g {
+        stroke: black;
+        stroke-width: 3;
+        fill: red;
+    }
+    #example6 rect.accent {
+        fill: green;
+    }
+    </style>
+    <g transform="rotate(30 100 100)">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+</svg>
+
+## skewX
+
+The _skewX_ function is of the form `skewX(a)` and skews the object
+along the horizontal axis by an angle of _a_ degrees.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+        <style>
+        g {
+            stroke: black;
+            stroke-width: 3;
+            fill: red;
+        }
+        rect.accent {
+            fill: green;
+        }
+        </style>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <g transform="skewX(30)">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example7" width="300px" height="200px">
+    <style>
+    #example7 g {
+        stroke: black;
+        stroke-width: 3;
+        fill: red;
+    }
+    #example7 rect.accent {
+        fill: green;
+    }
+    </style>
+    <g transform="skewX(30)">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+</svg>
+
+## skewY
+
+The _skewY_ function is of the form `skewY(a)` and skews the object
+along the vertical axis by an angle of _a_ degrees.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+        <style>
+        g {
+            stroke: black;
+            stroke-width: 3;
+            fill: red;
+        }
+        rect.accent {
+            fill: green;
+        }
+        </style>
+    </head>
+    <body>
+        <svg width="200px" height="200px">
+            <g transform="skewY(-10)">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example8" width="200px" height="200px">
+    <style>
+    #example8 g {
+        stroke: black;
+        stroke-width: 3;
+        fill: red;
+    }
+    #example8 rect.accent {
+        fill: green;
+    }
+    </style>
+    <g transform="skewY(-10)">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+</svg>
+
 
 -----
 This ends our third SVG lesson, we hope you enjoyed it and learnt something.
@@ -143,4 +407,4 @@ or want to give us some feedback, please [send us an email.](mailto:feedback@cod
 
 ## Further reading
 
-
+* [Mozilla SVG transform tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform)
