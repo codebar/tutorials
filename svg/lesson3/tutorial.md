@@ -318,7 +318,7 @@ along the horizontal axis by an angle of _a_ degrees.
         </style>
     </head>
     <body>
-        <svg width="200px" height="200px">
+        <svg width="300px" height="200px">
             <g transform="skewX(30)">
                 <rect x="50" y="50" width="120" height="80" />
                 <rect x="150" y="150" width="40" height="40" />
@@ -398,6 +398,153 @@ along the vertical axis by an angle of _a_ degrees.
     </g>
 </svg>
 
+### Transform chain
+
+You can chain transforms by specifying multiple transformation functions
+separated by spaces in the `transform` attribute. They will be applied in
+reverse order. The following example rotates the group before translating it.
+The intermediary steps are shown with an opacity of 0.3 and the centre of
+rotation is shown in blue.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+        <style>
+        g {
+            stroke: black;
+            stroke-width: 3;
+            fill: red;
+        }
+        rect.accent {
+            fill: green;
+        }
+        </style>
+    </head>
+    <body>
+        <svg width="300px" height="300px">
+            <g style="opacity: 0.3">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+            <g style="opacity: 0.3" transform="rotate(45 100 100)">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+            <g transform="translate(100) rotate(45 100 100)">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+            <circle cx="100" cy="100" r="5" stroke="black" stroke-width="1" fill="blue" />
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example9" width="300px" height="300px">
+    <style>
+    #example9 g {
+        stroke: black;
+        stroke-width: 3;
+        fill: red;
+    }
+    #example9 rect.accent {
+        fill: green;
+    }
+    </style>
+    <g style="opacity: 0.3">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+    <g style="opacity: 0.3" transform="rotate(45 100 100)">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+    <g transform="translate(100) rotate(45 100 100)">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+    <circle cx="100" cy="100" r="5" stroke="black" stroke-width="1" fill="blue" />
+</svg>
+
+The following example translates the group before rotating it.
+The intermediary steps are shown with an opacity of 0.3 and the centre of
+rotation is shown in blue.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+        <style>
+        g {
+            stroke: black;
+            stroke-width: 3;
+            fill: red;
+        }
+        rect.accent {
+            fill: green;
+        }
+        </style>
+    </head>
+    <body>
+        <svg width="300px" height="300px">
+            <g style="opacity: 0.3">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+            <g style="opacity: 0.3" transform="translate(100)">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+            <g transform="rotate(45 100 100) translate(100)">
+                <rect x="50" y="50" width="120" height="80" />
+                <rect x="150" y="150" width="40" height="40" />
+                <rect x="100" y="100" width="60" height="60" class="accent" />
+            </g>
+            <circle cx="100" cy="100" r="5" stroke="black" stroke-width="1" fill="blue" />
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example10" width="300px" height="300px">
+    <style>
+    #example10 g {
+        stroke: black;
+        stroke-width: 3;
+        fill: red;
+    }
+    #example10 rect.accent {
+        fill: green;
+    }
+    </style>
+    <g style="opacity: 0.3">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+    <g style="opacity: 0.3" transform="translate(100)">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+    <g transform="rotate(45 100 100) translate(100)">
+        <rect x="50" y="50" width="120" height="80" />
+        <rect x="150" y="150" width="40" height="40" />
+        <rect x="100" y="100" width="60" height="60" class="accent" />
+    </g>
+    <circle cx="100" cy="100" r="5" stroke="black" stroke-width="1" fill="blue" />
+</svg>
 
 -----
 This ends our third SVG lesson, we hope you enjoyed it and learnt something.
