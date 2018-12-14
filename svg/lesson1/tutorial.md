@@ -18,8 +18,8 @@ In this tutorial we are going to look at:
 
 ### Goal
 
-By the end of this tutorial, you'll have built an abstract masterpiece
-**embed link to SVG outcome here**
+By the end of this tutorial, you'll have mastered the basics of SVG and will be
+able to create an image using simple shapes.
 
 ## What is SVG?
 
@@ -69,18 +69,22 @@ in an HTML document.
 
 A standalone SVG image is a file with the `.svg` extension that contains a
 single `<svg>` tag. The file needs to start with an XML processing instruction
-and the `xmlns` and `version` attributes of the `<svg>` tag are mandatory:
+and the `xmlns` and `version` attributes of the `<svg>` tag are mandatory. It is
+better to include a `DOCTYPE` too, as shown below:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.0">
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
 </svg>
 ```
 
 ### Embedded in an HTML document
 
 When embedding your images in an HTML document, you should not include the
-XML processing instruction and the `xmlns` and `version` attributes are optional.
+XML processing instruction and the only `DOCTYPE` should be the HTML one at the
+top of the document. The `xmlns` and `version` attributes are optional.
 You should provide at least a `width` attribute otherwise the image will attempt
 to take as much space as possible, which is usually not what you want. Initially
 we will also provide a `height` argument to ensure our image is properly sized.
