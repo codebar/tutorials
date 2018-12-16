@@ -230,12 +230,15 @@ Open this fiddle that will have the data shown in the tables above already loade
 * L1.6 Show the distinct studies of the people having less than 2 children.
 
 We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
+
 ---
+
 This ends our **SQL Lesson 1**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
 
 ---
 
 For the lessons, when you find a link to https://sqliteonline.com/ followed by a #fiddle it means that the link will open an SQLLite online console with some data already loaded into the tables. Additionally, in case you are curious or you want to load the data in a local installation, we will provide you the SQL used to load the data at the end of the section Using the fiddle id as title. Don't worry if you don't completely understand the annex SQL statements yet.
+
 ----
 
 ## ANNEX
