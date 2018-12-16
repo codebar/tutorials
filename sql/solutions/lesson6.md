@@ -22,7 +22,7 @@ SELECT DISTINCT p1.name, p1.age
   FROM people p1
        INNER join people p2
        ON p1.age = p2.age
- WHERE p1.name <> p2.name;
+ WHERE p1.id <> p2.id;
 ```
 ## L6.3 List all the persons that have someone else with their same age (Use only EXISTS)
 
@@ -33,7 +33,7 @@ SELECT p1.name
          SELECT p2.name
            FROM People p2
           WHERE p1.age = p2.age
-                AND p1.name <> p2.name
+                AND p1.id <> p2.id
        );
 
 ```
@@ -50,7 +50,7 @@ SELECT p1.name, p2.name, r2.workshop_id
        ON r2.person_id = p2.id
  WHERE r1.Attendance = 1
        AND r2.Attendance = 1
-       AND p1.name <> p2.name;
+       AND p1.id <> p2.id;
 
 ```
 ## L6.5 List all the persons with the number of workshops each one has been to.
@@ -63,31 +63,42 @@ SELECT p.name, COUNT (*)
  GROUP BY p.name;
 ```
 ## L6.6 Create 3 VIEWs for the queries in L6.3, L6.4 and L6.5.
-Solution 1:
+Solution View L6.3:
 ```SQL
+CREATE VIEW PEOPLE_SAME_AGE AS
+  SELECT p1.name
+    FROM people p1
+   WHERE EXISTS (
+           SELECT p2.name
+             FROM People p2
+            WHERE p1.age = p2.age
+                  AND p1.id <> p2.id
+        );
 
 ```
- Solution 2:
+Solution View L6.4:
 ```SQL
-CREATE VIEW Members_RSVP AS
-  SELECT p.id, p.name, r.workshop_ID, r.attendance
+CREATE VIEW PEOPLE_THAT_MET AS
+  SELECT p1.name, p2.name, r2.workshop_id
+    FROM RSVP r1
+         INNER JOIN people p1
+         ON r1.person_id = p1.id
+         INNER JOIN rsvp r2
+         ON r1.workshop_id = r2.workshop_id
+         INNER JOIN people p2
+         ON r2.person_id = p2.id
+   WHERE r1.Attendance = 1
+         AND r2.Attendance = 1
+         AND p1.id <> p2.id;
+
+```
+Solution View L6.5:
+```SQL
+CREATE VIEW PEOPLE_ATTENDANCE AS
+  SELECT p.name, COUNT (*)
     FROM people p
          INNER JOIN rsvp r
-   WHERE p.id = r.person_id
-
-SELECT m1.name, m2.name, m1.workshop_id
-  FROM Members_RSVP m1
-       INNER JOIN Members_RSVP m2
-       ON m1.workshop_id=m2.workshop_id
- WHERE m1.name<>m2.name
-       AND m1.attendance = 1
-       AND m2.attendance = 1
-
-```
- Solution 3:
-```SQL
-SELECT name, COUNT(*)
-  FROM Members_RSVP
- WHERE attendance = 1
- GROUP BY name
+         ON p.id = r.person_id
+   WHERE attendance = 1
+   GROUP BY p.name;
 ```
