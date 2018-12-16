@@ -50,9 +50,9 @@ SELECT p1.name, p2.name, r2.workshop_id
        ON r2.person_id = p2.id
  WHERE r1.Attendance = 1
        AND r2.Attendance = 1
-       AND p1.id <> p2.id;
-
+       AND p1.id < p2.id;
 ```
+
 ## L6.5 List all the persons with the number of workshops each one has been to.
 ```SQL
 SELECT p.name, COUNT (*)
@@ -89,7 +89,7 @@ CREATE VIEW PEOPLE_THAT_MET AS
          ON r2.person_id = p2.id
    WHERE r1.Attendance = 1
          AND r2.Attendance = 1
-         AND p1.id <> p2.id;
+         AND p1.id < p2.id;
 
 ```
 Solution View L6.5:
