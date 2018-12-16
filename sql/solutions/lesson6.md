@@ -15,7 +15,7 @@ SELECT h.name
            WHERE h.id = w.host_id
          );
 ```
-# LL6.2 List all the persons that have someone else with their same age (Use only JOINs)
+## L6.2 List all the persons that have someone else with their same age (Use only JOINs)
 
 ```SQL
 SELECT distinct p1.name, p1.age
@@ -24,7 +24,7 @@ FROM people p1
          ON p1.age = p2.age
          WHERE p1.name <> p2.name
 ```
-# L6.3 List all the persons that have someone else with their same age (Use only EXISTS)
+## L6.3 List all the persons that have someone else with their same age (Use only EXISTS)
 
 ```SQL
 SELECT p1.name
@@ -36,7 +36,7 @@ WHERE EXISTS (
 AND p1.name <> p2.name)
 
 ```
-# L6.4 List all the pair of persons that met at least in one workshop.
+## L6.4 List all the pair of persons that met at least in one workshop.
 
 ```SQL
 SELECT p1.name, p2.name, r2.workshop_id
@@ -52,7 +52,7 @@ AND r2.Attendance = 1
 AND p1.name <> p2.name;
 
 ```
-# L6.5 List all the persons with the number of workshops each one has been to.
+## L6.5 List all the persons with the number of workshops each one has been to.
 ```SQL
 SELECT p.name, COUNT (*)
 FROM people p
@@ -61,7 +61,7 @@ ON p.id = r.person_id
 WHERE attendance = 1
 GROUP by p.name;
 ```
-# L6.6 Create 3 VIEWs for the queries in L6.3, L6.4 and L6.5.
+## L6.6 Create 3 VIEWs for the queries in L6.3, L6.4 and L6.5.
 Solution 1:
 ```SQL
 
