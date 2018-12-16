@@ -315,6 +315,9 @@ Open this fiddle that will have the data shown in the tables above already loade
 * L2.10 Show the distinct ID of the people that RSVP but then they did not show up (false = 0, both indicate individual did not attend the event).
 * L2.11 Show dates when workshops were held in these 3 hosts: _Edincode_, _Kanguland_, and _CodeLab_.
     To do so, first find the host IDs. Then use those IDs to show the dates when workshops were held at those hosts (TIP: think of the usage of **IN**)
+
+We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
+
 ---
 This ends our **SQL Lesson 2**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
 

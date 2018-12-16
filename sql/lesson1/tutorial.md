@@ -229,6 +229,7 @@ Open this fiddle that will have the data shown in the tables above already loade
 * L1.5 Show the distinct countries of residence of all the people.
 * L1.6 Show the distinct studies of the people having less than 2 children.
 
+We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
 ---
 This ends our **SQL Lesson 1**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
 

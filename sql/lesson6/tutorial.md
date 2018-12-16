@@ -170,6 +170,8 @@ Open this fiddle that will have the data already loaded: https://sqliteonline.co
 * L6.5 List all the persons with the number of workshops each one has been to.
 * L6.6 Create 3 VIEWs for the queries in L6.3, L6.4 and L6.5.
 
+We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
+
 ---
 This ends our **SQL Lesson 6**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
 

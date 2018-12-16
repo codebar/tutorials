@@ -146,7 +146,7 @@ In practice, the convention is to write these types of joins as a **LEFT JOIN**.
 
 ### FULL OUTER JOIN
 
-If **LEFT JOIN** and **RIGHT JOIN** return unmatched rows from one of the tables, a **FULL OUTER JOIN**, which can also be written as a **FULL JOIN** returns unmatched rows from both tables. 
+If **LEFT JOIN** and **RIGHT JOIN** return unmatched rows from one of the tables, a **FULL OUTER JOIN**, which can also be written as a **FULL JOIN** returns unmatched rows from both tables.
 
 
 ## Lesson 5 exercises
@@ -172,6 +172,8 @@ Open this fiddle that will have the data already loaded: https://sqliteonline.co
 * L5.2 Select students with the list of workshops they have sent an RSVP to.
 * L5.3 Find all workshops, with the workshop dates, that the individual with id 17 has RSVPed to, and the date of their RSVPs.
 * L5.4 Find all workshops that have no RSVP.
+
+We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
 
 ---
 This ends our **SQL Lesson 5**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
