@@ -5,7 +5,7 @@ title: Introduction to SQL
 
 ## About Lesson 3
 
-_Lesson 3_ will extend your knowledge of the **SELECT** operator by explaining some new functions and operators. You'll continue working with an online database already filled in with some data. At the end, you'll find some exercises constructing on top of the first 3 lessons.
+_Lesson 3_ will extend your knowledge of the **SELECT** operator by explaining some new functions and operators. You'll continue working with an online database already filled in with some data. At the end, you'll find some exercises which build on what you've learned in the first 3 lessons.
 
 
 ### Using aggregation Functions
@@ -20,7 +20,7 @@ SELECT COUNT(*)
   FROM people;
 ```
 
-How many rows did you get in the result? Only one, right? this is because this function aggregates the whole result in one single value. In this case, the **number of records** in the **people** table.
+How many rows did you get in the result? Only one, right? This is because this function aggregates the whole result in one single value. In this case, the **number of records** in the **people** table.
 
 What happens if you combine this function with a WHERE statement? Something like this:
 ```SQL
@@ -108,7 +108,7 @@ SELECT *
  WHERE LOWER(name) = 'emma smith';
 ```
 
-In the statement above, _LOWER(name)_ transforms the value in the column _name_ into lowercase ('Emma Smith' -> 'emma smith'). Is for this reason, that when compared to 'emma smith' it results true and then the record is shown in the result.
+In the statement above, _LOWER(name)_ transforms the value in the column _name_ into lowercase ('Emma Smith' -> 'emma smith'). The transformed value is compared to 'emma smith', and the record is shown in the result.
 
 You can also use these functions in the SELECT part of the query as follows:
 
@@ -180,7 +180,7 @@ SELECT DISTINCT country_of_residence, has_job
   FROM people;
 ```
 
-Now, how many persons are on each of those groups?
+Now, how many people are in each of those groups?
 
 ```SQL
 SELECT country_of_residence, has_job, COUNT(*)
@@ -210,16 +210,16 @@ rsvp (id, person_id, workshop_id, date_of_rsvp, attendance)
 ## Write the following queries
 
 Open this fiddle that will have the data already loaded: https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y
-* L3.1 How many persons are not living in their birth country.
-* L3.2 What is the average age of the persons not living in their birth country.
-* L3.3 Show the age of the oldest person. (Find a different way to the one use in Lesson 2).
-* L3.4 Show the number of employed and unemployed persons.
-* L3.5 Show the number of persons per country of residence.
+* L3.1 How many people are not living in their country of birth.
+* L3.2 What is the average age of the people not living in their country of birth.
+* L3.3 Show the age of the oldest person. (Find a different way to the one used in Lesson 2).
+* L3.4 Show the number of employed and unemployed people.
+* L3.5 Show the number of people per country of residence.
 * L3.6 Show the country and number of locations in that country.
 * L3.7 Show the workshop id and the date of the latest RSVP per workshop.
 * L3.8 Show the distinct studies capitalized.
-* L3.9 Show the name of the 3 youngest persons.
-* L3.10 Show the number of persons of each age. Sort the result in descending order by number of persons.
+* L3.9 Show the name of the 3 youngest people.
+* L3.10 Show the number of people of each age. Sort the result in descending order by number of people.
 
 ---
 This ends our **SQL Lesson 3**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
