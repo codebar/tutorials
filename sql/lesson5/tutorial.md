@@ -7,7 +7,7 @@ title: Introduction to SQL
 
 The previous lessons showed you how to manipulate data from a single table. _Lesson 5_ will show you how to combine data from multiple tables and will bring out the _relational_ part of relational databases.
 
-Tables in a relational database relate to each other as they contain keys which allow information from multiple tables to be combined easily. The real power of relational databases, and SQL, comes from working with multiple tables at once.
+Tables in a relational database are related by having common values in the fields of the tables. These fields are known as keys. These allow information from multiple tables to be combined.
 
 In this lesson we will keep using the same database as before (https://sqliteonline.com/#fiddle-5be888fa749e451ljodase3y)
 
@@ -15,7 +15,7 @@ In this lesson we will keep using the same database as before (https://sqliteonl
 
 All tables in a relational database need to have a primary key. This is an identifier that uniquely identifies each row. We saw in _Lesson 4_ that the `people` table uses the `id` field as a primary key. The key aspects of the primary key field are that it is never empty and it is unique: every record in a table has one and only one record can have a given primary key. For instance, in the `people` table, record with `id` `1` is the record for `Emma Smith`. If we try to insert a new record with the same `id` primary key, it will fail. If we try to insert a record with no value for `id` it will fail too.
 
-Any table can also have a number of foreign key fields. Each foreign key contains the value for a primary key in another table. For example, if we select the data in the `hosts` table:
+A foreign key is a field that contains the primary key value of another table, to indicate which record from that table relates to this row. This is known as a _reference_. For example, if we select the data in the `hosts` table:
 
 ```SQL
 SELECT *
@@ -51,7 +51,15 @@ SELECT hosts.name, locations.city, locations.country
     ON hosts.location_id = locations.id;
 ```
 
-Note that SQL is not affected by the use of white space, which is used to improve the legibility of queries. White space in SQL is commonly used to line up root keywords so that they end on the same character boundary, thus forming a river that runs down the query helping the reader to scan over the code. White space is also used with subqueries, to nest the subquery in an indented block.
+An INNER JOIN query can be generalized as follows:
+```SQL
+SELECT {columns}
+  FROM {table_A}
+ INNER JOIN {table_B}
+    ON {table_B.primary_key} = {table_A.foreign_key_to_B}
+```
+
+In the queries above, the `.` is used to indicate to which table does the field correspond to. This is known as _dot notation_. When any of the fields in your statement can be found in more than one of the table involved, you must use this notation to make it clear to which one you are referring to.
 
 #### Why are these joins called 'inner' joins?
 
@@ -96,6 +104,10 @@ SELECT hosts.name, locations.city, locations.country, workshops.date
 ```
 
 The way to create such a query is to start with a simple **SELECT** on the first table and then gradually extend table by table using **JOIN** clauses.
+
+In the example above, **workshops** table has a foreign key (host_id) to **hosts** table, and **hosts** table has a foreign key (location_id) to **locations** table.
+
+In some cases, you can find tables having more than one foreign key to other tables. For example, table **rsvp** has two foreign keys: one to **workshop** table (workshop_id) and one to **people** table (person_id).
 
 ### LEFT JOIN
 
@@ -173,7 +185,7 @@ Open this fiddle that will have the data already loaded: https://sqliteonline.co
 * L5.3 Find all workshops, with the workshop dates, that the individual with id 17 has RSVPed to, and the date of their RSVPs.
 * L5.4 Find all workshops that have no RSVP.
 
-We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
+We recommend you to try the above exercises in https://sqliteonline.com, if you get stuck, you can find the solutions [here](solutions.md)
 
 ---
 This ends our **SQL Lesson 5**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

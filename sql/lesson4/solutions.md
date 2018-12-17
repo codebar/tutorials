@@ -64,6 +64,7 @@ VALUES (42, 'Valerie Knight');
 ```
 
 Solution 2:
+This solution satisfies the request, but it may be difficult to understand until you finish lesson 5. Skip it if it's not clear yet. You can always come back later to check it again.
 ```SQL
 INSERT INTO people (id, name)
 VALUES (

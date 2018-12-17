@@ -30,11 +30,11 @@ During these tutorials you will find SQL code fragments. There is a lot of bibli
 
 _Lesson 1_ will be an introduction to SQL and its querying possibilities. You'll work with an online database already filled in with some data and you'll focus on the **SELECT** operator. But before doing so, you'll learn what a **TABLE** is and how it is structured. At the end, you'll find some exercises to _capture_ the knowledge.
 
-## What is a SQL?
+## What is SQL?
 
 SQL stands for Structured Query Language. As explained above, it is a programming language for interacting with databases. SQL commands can be classified under: data structure; data manipulation; and data querying.
 
-Unlike most programming language it's a declarative language not an imperative one: you describe what you want as a result and you let the computer decide how to do it.
+Unlike most programming languages it's a declarative language not an imperative one: you describe what you want as a result and you let the computer decide how to do it.
 
 ## What are databases?
 

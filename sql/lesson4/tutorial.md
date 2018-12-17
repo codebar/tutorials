@@ -155,7 +155,7 @@ Open this fiddle that will have the data already loaded: https://sqliteonline.co
 * L4.7 Add to the people the following study: "programming". Separate it by a comma. (You will have to investigate how to concatenate strings. Don't worry about those with _NULL_ for now).
 * L4.8 Add a new location.
 
-We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
+We recommend you to try the above exercises in https://sqliteonline.com, if you get stuck, you can find the solutions [here](solutions.md)
 
 ---
 This ends our **SQL Lesson 4**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

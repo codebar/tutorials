@@ -83,8 +83,8 @@ In queries like the one above, you may want to give a more readable title to the
 The following query defines aliases for the four columns in the result.
 
 ```SQL
-SELECT MAX(age) 'Oldest person', MIN(age) 'Youngest person',
-       MAX(number_of_children) 'Maximum kids', SUM(number_of_children) 'Total children in the community'
+SELECT MAX(age) AS 'Oldest person', MIN(age) AS 'Youngest person',
+       MAX(number_of_children) AS 'Maximum kids', SUM(number_of_children) AS 'Total children in the community'
   FROM people;
 ```
 
@@ -113,7 +113,7 @@ In the statement above, _LOWER(name)_ transforms the value in the column _name_ 
 You can also use these functions in the SELECT part of the query as follows:
 
 ```SQL
-SELECT UPPER(name) 'Name', LOWER(country_of_residence) 'Residence'
+SELECT UPPER(name) AS 'Name', LOWER(country_of_residence) AS 'Residence'
   FROM people;
 ```
 
@@ -138,7 +138,7 @@ Five, right? Why do you think you get five now?
 Your theory is correct. There is one row for each of the groups you made when using **GROUP BY**. To help you knowing which one corresponds to each group, it's always good to also add the group column in the SELECT part. Like this:
 
 ```SQL
-SELECT number_of_children, COUNT(*) 'Quantity'
+SELECT number_of_children, COUNT(*) AS 'Quantity'
   FROM people
  GROUP BY number_of_children;
 ```
@@ -146,24 +146,24 @@ SELECT number_of_children, COUNT(*) 'Quantity'
 Check these other examples, make sure you understand what each one is doing before moving to next section (the aliases may help):
 
 ```SQL
-SELECT country_of_residence 'Residence country', MAX(age) 'Oldest'
+SELECT country_of_residence AS 'Residence country', MAX(age) AS 'Oldest'
   FROM people
  GROUP BY country_of_residence;
 
-SELECT country_of_residence 'Residence country', COUNT() 'Quantity'
+SELECT country_of_residence AS 'Residence country', COUNT() AS 'Quantity'
   FROM people
  GROUP BY country_of_residence;
 
-SELECT country_of_residence 'Residence country', COUNT() 'Quantity',
-       MAX(age) 'Oldest',MIN(age) 'Youngest'
+SELECT country_of_residence AS 'Residence country', COUNT() AS 'Quantity',
+       MAX(age) AS 'Oldest',MIN(age) AS 'Youngest'
   FROM people
  GROUP BY country_of_residence;
 
-SELECT country, COUNT(*) 'Number of locations in the country'
+SELECT country, COUNT(*) AS 'Number of locations in the country'
   FROM locations
  GROUP BY country;
 
-SELECT country, MIN(start_date) 'Country join date'
+SELECT country, MIN(start_date) AS 'Country join date'
   FROM locations
  GROUP BY country
  ORDER BY start_date;
@@ -221,7 +221,7 @@ Open this fiddle that will have the data already loaded: https://sqliteonline.co
 * L3.9 Show the name of the 3 youngest people.
 * L3.10 Show the number of people of each age. Sort the result in descending order by number of people.
 
-We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
+We recommend you to try the above exercises in https://sqliteonline.com, if you get stuck, you can find the solutions [here](solutions.md)
 
 ---
 This ends our **SQL Lesson 3**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

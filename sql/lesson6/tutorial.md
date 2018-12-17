@@ -11,7 +11,7 @@ In this lesson we will keep using the same database than before (https://sqliteo
 
 ### Using aliases
 
-The moment we start combining tables as we did in _Lesson 5_, we need to tell the database engine from which table we want to pick the columns. So far, the `.` notation to explicitly specify the tables worked since we only joined a given table once per query. But, what happens if we need to join the same table more than once in the same query? Let's have a look at this example:
+The moment we start combining tables as we did in _Lesson 5_, we need to tell the database engine from which table we want to pick the columns. So far, we have used the `.` notation to explicitly specify the tables used, as we only joined a given table once per query. But, what happens if we need to join the same table more than once in the same query? Let's have a look at this example:
 
 ```SQL
 SELECT *
@@ -170,7 +170,7 @@ Open this fiddle that will have the data already loaded: https://sqliteonline.co
 * L6.5 List all the persons with the number of workshops each one has been to.
 * L6.6 Create 3 VIEWs for the queries in L6.3, L6.4 and L6.5.
 
-We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
+We recommend you to try the above exercises in https://sqliteonline.com, if you get stuck, you can find the solutions [here](solutions.md)
 
 ---
 This ends our **SQL Lesson 6**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

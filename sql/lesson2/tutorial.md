@@ -5,11 +5,11 @@ title: Introduction to SQL
 
 ## About Lesson 2
 
-_Lesson 2_ will extend your knowledge of the **SELECT** operator by explaining some new operators, ways to sort the results and to **LIMIT** the number of results shown. You'll continue working with an online database already filled in with some data. At the end, you'll find some exercises constructing on top of the lessons 1 and 2.
+_Lesson 2_ will extend your knowledge of the **SELECT** operator by explaining some new operators, ways to sort the results and to **LIMIT** the number of results shown. You'll continue working with an online database already filled in with some data. At the end, you'll find some exercises building on lessons 1 and 2.
 
 ### Ordering query results
 
-Normally, when you write a query, you'll want your results to be shown in a specific order. Doing so is very simple knowing the operator **ORDER BY**.
+Normally, when you write a query, you'll want your results to be shown in a specific order. You can achieve this using the **ORDER BY*** operator.
 This operator is placed at the end of the **SELECT** statement. It's basic syntax is the following:
 
 ```SQL
@@ -31,7 +31,7 @@ SELECT name, age
  ORDER BY age DESC;
 ```
 
-Is the result sorted by descending age? What happen in ages that appear more than once? Are the names sorted?
+Is the result sorted by descending age? What happens for ages that appear more than once? Are the names sorted?
 
 You can add more than one order by pairs of expression and direction:
 
@@ -84,9 +84,9 @@ SELECT name, age
 
 Contrary to the query used before without LIMIT that returned all the rows in the table, this one only returns the first 5.
 
-Although it is not strictly necessary to have an ORDER BY clause when you LIMIT the results, it is highly recommended. Doing so, you can be certain that you will always get the same results when running the same query multiple times.
+When using LIMIT you should always include an ORDER BY clause in your SQL statements. Doing so, you can be certain that you will get the same results when running the same query multiple times.
 
-If additionally you are paginating the result, you need to use LIMIT together with **OFFSET**. This operator can we understood as _Skip the first N records, and give me the ones after_. For example, if you run
+If you want to view the next _x_ results, you can specify an **OFFSET**. This operator can we understood as _Skip the first N records, and give me the ones after_. For example, if you run
 
 ```SQL
 SELECT name, age
@@ -105,6 +105,24 @@ With LIMIT and OFFSET you can create a pagination mechanism like this:
 | 1    | SELECT name, age FROM people ORDER BY age DESC LIMIT 5 offset 0;  | The first 5 oldest                                 |
 | 2    | SELECT name, age FROM people ORDER BY age DESC LIMIT 5 offset 5;  | The 6th to the 10th                                |
 | 3    | SELECT name, age FROM people ORDER BY age DESC LIMIT 5 offset 10; | The 11th to the 12th, as there are no more records |
+
+There is a short form when using LIMIT and OFFSET together. The following two queries produce the same results:
+
+```SQL
+SELECT name, age
+  FROM people
+ ORDER BY age DESC
+ LIMIT 5
+OFFSET 3;
+```
+```SQL
+SELECT name, age
+  FROM people
+ ORDER BY age DESC
+ LIMIT 3,5;
+```
+
+When using this short form, the first number corresponds to the _offset_ and the second one to the _number of records returned_.
 
 ### Filtering with multiple values
 #### IN operator
@@ -199,7 +217,7 @@ It's time to do some exercises now... :)
 
 ## Lesson 2 exercises
 
-For the exercises below, we'll use the table from previous lesson: **people** and we'll introduce four new ones: **locations**, **hosts**, **workshops** and **attendance**. The next sections show a few rows as examples of the values. If you want to see the whole table, you'll find the fiddle link and the SELECT statement under each table.
+For the exercises below, we'll use the **people** table from the previous lesson, and we'll introduce four new tables: **locations**, **hosts**, **workshops** and **attendance**. The next sections show a few rows as examples of the values. If you want to see the whole table, you'll find the fiddle link and the SELECT statement under each table.
 
 
 ### LOCATION table
@@ -316,7 +334,7 @@ Open this fiddle that will have the data shown in the tables above already loade
 * L2.11 Show dates when workshops were held in these 3 hosts: _Edincode_, _Kanguland_, and _CodeLab_.
     To do so, first find the host IDs. Then use those IDs to show the dates when workshops were held at those hosts (TIP: think of the usage of **IN**)
 
-We recommend you to try the above exercises in https://sqliteonline.com, if you get blocked, you can find the solutions [here](solutions.md)
+We recommend you to try the above exercises in https://sqliteonline.com, if you get stuck, you can find the solutions [here](solutions.md)
 
 ---
 This ends our **SQL Lesson 2**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
