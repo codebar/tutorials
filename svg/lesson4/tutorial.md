@@ -142,7 +142,7 @@ gradient, set `x2` and `y2` to 1.
     <body>
         <svg width="400px" height="200px" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
-                <linearGradient id="Gradient1">
+                <linearGradient id="LinearGradient1">
                     <stop offset="5%" stop-color="rgb(255, 105, 180)" />
                     <stop offset="18%" stop-color="red" />
                     <stop offset="31%" stop-color="rgb(255, 142, 0)" />
@@ -152,7 +152,7 @@ gradient, set `x2` and `y2` to 1.
                     <stop offset="82%" stop-color="rgb(64, 0, 152)" />
                     <stop offset="95%" stop-color="rgb(142, 0, 142)" />
                 </linearGradient>
-                <linearGradient id="Gradient2" x1="0" y1="0" x2="0" y2="1">
+                <linearGradient id="LinearGradient2" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stop-color="rgb(91, 206, 250)" />
                     <stop offset="20%" stop-color="rgb(245, 169, 184)" />
                     <stop offset="40%" stop-color="white" />
@@ -160,17 +160,17 @@ gradient, set `x2` and `y2` to 1.
                     <stop offset="80%" stop-color="rgb(245, 169, 184)" />
                     <stop offset="100%" stop-color="rgb(91, 206, 250)" />
                 </linearGradient>
-                <linearGradient id="Gradient3" x1="0" y1="0" x2="1" y2="1">
+                <linearGradient id="LinearGradient3" x1="0" y1="0" x2="1" y2="1">
                     <stop offset="20%" stop-color="red" />
                     <stop offset="80%" stop-color="red" stop-opacity="0" />
                 </linearGradient>
             </defs>
-            <rect x="10" y="10" width="180" height="90" fill="url(#Gradient1)" />
-            <rect x="10" y="110" width="180" height="90" fill="url(#Gradient2)" />
-            <circle cx="350" cy="150" r="45" fill="url(#Gradient1)" />
-            <circle cx="250" cy="50" r="45" fill="url(#Gradient2)" />
-            <path d="M210,110L240,150L210,190L250,170L290,190L260,150L290,110L250,130Z" fill="url(#Gradient2)" />
-            <rect x="310" y="10" width="80" height="80" fill="url(#Gradient3)" />
+            <rect x="10" y="10" width="180" height="90" fill="url(#LinearGradient1)" />
+            <rect x="10" y="110" width="180" height="90" fill="url(#LinearGradient2)" />
+            <circle cx="350" cy="150" r="45" fill="url(#LinearGradient1)" />
+            <circle cx="250" cy="50" r="45" fill="url(#LinearGradient2)" />
+            <path d="M210,110L240,150L210,190L250,170L290,190L260,150L290,110L250,130Z" fill="url(#LinearGradient2)" />
+            <rect x="310" y="10" width="80" height="80" fill="url(#LinearGradient3)" />
         </svg>
     </body>
 </html>
@@ -178,7 +178,7 @@ gradient, set `x2` and `y2` to 1.
 
 <svg id="example3" width="400px" height="200px" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-        <linearGradient id="Gradient1">
+        <linearGradient id="LinearGradient1">
             <stop offset="5%" stop-color="rgb(255, 105, 180)" />
             <stop offset="18%" stop-color="red" />
             <stop offset="31%" stop-color="rgb(255, 142, 0)" />
@@ -188,7 +188,7 @@ gradient, set `x2` and `y2` to 1.
             <stop offset="82%" stop-color="rgb(64, 0, 152)" />
             <stop offset="95%" stop-color="rgb(142, 0, 142)" />
         </linearGradient>
-        <linearGradient id="Gradient2" x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id="LinearGradient2" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stop-color="rgb(91, 206, 250)" />
             <stop offset="20%" stop-color="rgb(245, 169, 184)" />
             <stop offset="40%" stop-color="white" />
@@ -196,17 +196,17 @@ gradient, set `x2` and `y2` to 1.
             <stop offset="80%" stop-color="rgb(245, 169, 184)" />
             <stop offset="100%" stop-color="rgb(91, 206, 250)" />
         </linearGradient>
-        <linearGradient id="Gradient3" x1="0" y1="0" x2="1" y2="1">
+        <linearGradient id="LinearGradient3" x1="0" y1="0" x2="1" y2="1">
             <stop offset="20%" stop-color="red" />
             <stop offset="80%" stop-color="red" stop-opacity="0" />
         </linearGradient>
     </defs>
-    <rect x="10" y="10" width="180" height="80" fill="url(#Gradient1)" />
-    <rect x="10" y="110" width="180" height="80" fill="url(#Gradient2)" />
-    <circle cx="350" cy="150" r="45" fill="url(#Gradient1)" />
-    <circle cx="250" cy="50" r="45" fill="url(#Gradient2)" />
-    <path d="M210,110L240,150L210,190L250,170L290,190L260,150L290,110L250,130Z" fill="url(#Gradient2)" />
-    <rect x="310" y="10" width="80" height="80" fill="url(#Gradient3)" />
+    <rect x="10" y="10" width="180" height="80" fill="url(#LinearGradient1)" />
+    <rect x="10" y="110" width="180" height="80" fill="url(#LinearGradient2)" />
+    <circle cx="350" cy="150" r="45" fill="url(#LinearGradient1)" />
+    <circle cx="250" cy="50" r="45" fill="url(#LinearGradient2)" />
+    <path d="M210,110L240,150L210,190L250,170L290,190L260,150L290,110L250,130Z" fill="url(#LinearGradient2)" />
+    <rect x="310" y="10" width="80" height="80" fill="url(#LinearGradient3)" />
 </svg>
 
 ### Radial gradients
