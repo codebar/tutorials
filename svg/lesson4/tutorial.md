@@ -211,6 +211,73 @@ gradient, set `x2` and `y2` to 1.
 
 ### Radial gradients
 
+Radial gradients start from a centre and radiate out. They also have a focal
+point. By default, the center is the center of the shape's bounding box
+and the focal point is the same point as the center. This can be customised:
+
+* The `cx` and `cy` properties change where the center of the gradient is
+  placed as a proportion of width and height of the shape (the default
+  of 0.5 is the center);
+* The `fx` and `fy` properties specify the focal point of the gradient as a
+  proportion of the width and height of the shape;
+* The `r` property specifies the total gradient radius as a proportion to the
+  size of the shape, which makes it possible to constrain a gradient to part of
+  the shape.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+    </head>
+    <body>
+        <svg width="400px" height="200px" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <radialGradient id="RadialGradient1">
+                    <stop offset="0%" stop-color="white" />
+                    <stop offset="50%" stop-color="rgb(245, 169, 184)" />
+                    <stop offset="100%" stop-color="rgb(91, 206, 250)" />
+                </radialGradient>
+                <radialGradient id="RadialGradient2" cx="0.25" cy="0.25" r="0.25">
+                    <stop offset="0%" stop-color="white" />
+                    <stop offset="100%" stop-color="red" />
+                </radialGradient>
+                <radialGradient id="RadialGradient3" cx="0.5" cy="0.5" fx="0.25" fy="0.25" r="0.5">
+                    <stop offset="0%" stop-color="white" />
+                    <stop offset="100%" stop-color="red" />
+                </radialGradient>
+            </defs>
+            <rect x="10" y="10" width="180" height="90" fill="url(#RadialGradient1)" />
+            <path d="M10,110L40,150L10,190L50,170L90,190L60,150L90,110L50,130Z" fill="url(#RadialGradient1)" />
+            <circle cx="250" cy="100" r="45" fill="url(#RadialGradient2)" />
+            <circle cx="350" cy="100" r="45" fill="url(#RadialGradient3)" />
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example4" width="400px" height="200px" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <radialGradient id="RadialGradient1">
+            <stop offset="0%" stop-color="white" />
+            <stop offset="50%" stop-color="rgb(245, 169, 184)" />
+            <stop offset="100%" stop-color="rgb(91, 206, 250)" />
+        </radialGradient>
+        <radialGradient id="RadialGradient2" cx="0.25" cy="0.25" r="0.25">
+            <stop offset="0%" stop-color="white" />
+            <stop offset="100%" stop-color="red" />
+        </radialGradient>
+        <radialGradient id="RadialGradient3" cx="0.5" cy="0.5" fx="0.25" fy="0.25" r="0.5">
+            <stop offset="0%" stop-color="white" />
+            <stop offset="100%" stop-color="red" />
+        </radialGradient>
+    </defs>
+    <rect x="10" y="10" width="180" height="90" fill="url(#RadialGradient1)" />
+    <path d="M10,110L40,150L10,190L50,170L90,190L60,150L90,110L50,130Z" fill="url(#RadialGradient1)" />
+    <circle cx="250" cy="100" r="45" fill="url(#RadialGradient2)" />
+    <circle cx="350" cy="100" r="45" fill="url(#RadialGradient3)" />
+</svg>
+
 
 -----
 This ends our fourth SVG lesson, we hope you enjoyed it and learnt something.
