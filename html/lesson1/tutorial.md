@@ -297,10 +297,10 @@ Links can also open up a user's email client and share content. The difference b
 ```html
 <ul>
   <li>
-     <a href="mailto:social@codebar.io?subject=I love owls :: codebar">Email us</a>
+     <a href="mailto:social@codebar.io?subject=I%20love%20owls%20::%20codebar">Email us</a>
   </li>
   <li>
-     <a href="mailto:?subject=I love owls :: codebar">Email a friend</a>
+     <a href="mailto:?subject=I%20love%20owls%20::%20codebar">Email a friend</a>
   </li>
 </ul>
 ```
@@ -309,7 +309,9 @@ Links can also open up a user's email client and share content. The difference b
 
 > What happens when you click the second link? How is it different?
 
-> What happens when you add `&body=Owls are amazing` to the second link?
+> What happens when you add `&body=Owls%20are%20amazing` to the second link?
+
+Note that replacing spaces in the subject text with **%20** isn't essential but makes sure the spaces are kept when opening the link in a range of both new and older email clients/software.
 
 ### Commenting
 

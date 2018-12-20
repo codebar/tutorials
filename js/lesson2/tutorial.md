@@ -64,22 +64,52 @@ var x = 6;
 var y = 3;
 var addition = x + y;
 
-console.log('Addition: x + y = ' + addition);
+console.log('Addition: x + y = ' + addition); // Addition: x + y = 9
 
 var subtraction = x - y;
 
-console.log('Subtraction: x - y = ' + subtraction);
+console.log('Subtraction: x - y = ' + subtraction); // Subtraction: x - y = 3
 
 var multiplication = x * y;
 
-console.log('Multiplication: x * y = ' + multiplication);
+console.log('Multiplication: x * y = ' + multiplication); // Multiplication: x * y = 18
 
 var division = x / y;
 
-console.log('Division: x / y = ' + division);
+console.log('Division: x / y = ' + division); // Division: x / y = 2
 ```
 
 > Why not try some other maths problem using the `x` and `y` variables?
+
+#### More maths
+
+Other basic but useful math operators are `%`, `**`, `++` and `--`:
+
+> The modulus `%` operator returns the remainder when dividing one operand by another.
+
+> The exponentiation `**` operator returns the result of raising the first operand to the power of the second.
+
+> The increment `++` and decrement `--` operators return the result of adding one and subtracting one from an operand respectively.
+
+```js
+var x = 5;
+var y = 3;
+var modulus = x % y;
+
+console.log('Remainder: x % y = ' + modulus);
+
+var exponentiation = x ** y;
+
+console.log('Exponentiation: x ** y = ' + exponentiation);
+
+var increment = x++;
+
+console.log('Increment: x++ = ' + increment);
+
+var decrement = y--;
+
+console.log('Decrement: y-- = ' + decrement);
+```
 
 #### Comparisons
 
@@ -310,7 +340,9 @@ var animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
 animals.unshift('cow');
 animals.push('zebra');
 
-console.log(animals);
+console.log(animals); 
+
+// Expected output: ['cow', 'dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey', 'zebra']
 ```
 
 #### Removing objects
