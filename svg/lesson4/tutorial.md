@@ -116,7 +116,7 @@ come in two categories:
 
 All gradients are defined inside a `<defs>` tag at the beginning of the SVG
 file and can be reused multiple times using the `url` function in the `fill`
-attribute.
+attribute of the shapes that use them.
 
 ### Linear gradients
 
