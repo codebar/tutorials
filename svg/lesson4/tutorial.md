@@ -12,7 +12,7 @@ In this tutorial we are going to look at advanced SVG techniques:
 * Embedded Images
 * Links
 * Colour gradients
-* Fancy text styling
+* Text path
 * Markers
 
 ### Goal
@@ -278,6 +278,45 @@ and the focal point is the same point as the center. This can be customised:
     <circle cx="350" cy="100" r="45" fill="url(#RadialGradient3)" />
 </svg>
 
+## Text path
+
+Text doesn't have to follow a straight path, it can go all curvy with the
+`<textPath>` element. For this to work, we need to define a path and tell
+the text to follow it.
+
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+    </head>
+    <body>
+        <svg width="200px" height="200px" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <path id="TextPath1" d="M20,100C70,20 130,120 180,100" />
+            </defs>
+            <text font-size="40px">
+                <textPath href="#TextPath1">
+                    Curvy text
+                </textPath>
+            </text>
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example5" width="200px" height="200px" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="TextPath1" d="M20,100C70,20 130,120 180,100" />
+    </defs>
+    <text font-size="40px">
+        <textPath href="#TextPath1">
+            Curvy text
+        </textPath>
+    </text>
+</svg>
+
 
 -----
 This ends our fourth SVG lesson, we hope you enjoyed it and learnt something.
@@ -288,3 +327,4 @@ or want to give us some feedback, please [send us an email.](mailto:feedback@cod
 ## Further reading
 
 * [Mozilla gradient tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients)
+* [Mozilla textPath documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/textPath)
