@@ -281,8 +281,8 @@ and the focal point is the same point as the center. This can be customised:
 ## Text path
 
 Text doesn't have to follow a straight path, it can go all curvy with the
-`<textPath>` element. For this to work, we need to define a path and tell
-the text to follow it.
+`<textPath>` element. For this to work, we need to define a path inside the
+`<defs>` tag and tell the text to follow it.
 
 
 ```html
@@ -317,6 +317,87 @@ the text to follow it.
     </text>
 </svg>
 
+## Markers
+
+If you plan to create diagrams with SVG, you will want to create arrows at some
+point. With what we've learnt so far, you would have to create additional shapes
+and position them at the end of lines. There is an easier way to achieve this
+result, using the `<marker>` element. A marker is defined inside the `<defs>`
+tag and encloses a shape. This shape is then references when drawing a line to
+be position on any of the start, mid or end points of the line.
+
+The orientation of the marker is driven by the `orient` attribute, which can
+take the values `auto`, `auto-start-reverse` or a number that indicates a fixed
+angle. By default, it is set to 0. See the difference between the blue and green
+markers on the polyline.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SVG Tutorial</title>
+    </head>
+    <body>
+        <svg id="example6" width="400px" height="200px" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+                <marker id="MarkerArrow" viewBox="0 0 10 10" refX="5" refY="5"
+                        markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" />
+                </marker>
+                <marker id="MarkerDot" viewBox="0 0 10 10" refX="5" refY="5"
+                        markerWidth="5" markerHeight="5">
+                    <circle cx="5" cy="5" r="5" fill="red" />
+                </marker>
+                <marker id="MarkerSquare1" viewBox="0 0 10 10" refX="5" refY="5"
+                        markerWidth="5" markerHeight="5" orient="auto">
+                    <rect x="0" y="0" width="10" height="10" fill="blue" />
+                </marker>
+                <marker id="MarkerSquare2" viewBox="0 0 10 10" refX="5" refY="5"
+                        markerWidth="5" markerHeight="5" orient="45">
+                    <rect x="0" y="0" width="10" height="10" fill="green" />
+                </marker>
+            </defs>
+            <line x1="10" y1="50" x2="190" y2="50" stroke="black" stroke-width="2" marker-end="url(#MarkerArrow)" />
+            <line x1="10" y1="100" x2="190" y2="100" stroke="black" stroke-width="2" marker-start="url(#MarkerArrow)" />
+            <line x1="10" y1="150" x2="190" y2="150" stroke="black" stroke-width="2"
+                marker-start="url(#MarkerArrow)"  marker-end="url(#MarkerArrow)" />
+            <polyline points="210,190 240,80 275,150 320,60 355,100 390,10"
+                fill="none" stroke="grey" stroke-width="3"
+                marker-start="url(#MarkerSquare1)" marker-mid="url(#MarkerDot)" marker-end="url(#MarkerSquare2)" />
+        </svg>
+    </body>
+</html>
+```
+
+<svg id="example6" width="400px" height="200px" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <marker id="MarkerArrow" viewBox="0 0 10 10" refX="5" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" />
+        </marker>
+        <marker id="MarkerDot" viewBox="0 0 10 10" refX="5" refY="5"
+                markerWidth="5" markerHeight="5">
+            <circle cx="5" cy="5" r="5" fill="red" />
+        </marker>
+        <marker id="MarkerSquare1" viewBox="0 0 10 10" refX="5" refY="5"
+                markerWidth="5" markerHeight="5" orient="auto">
+            <rect x="0" y="0" width="10" height="10" fill="blue" />
+        </marker>
+        <marker id="MarkerSquare2" viewBox="0 0 10 10" refX="5" refY="5"
+                markerWidth="5" markerHeight="5" orient="45">
+            <rect x="0" y="0" width="10" height="10" fill="green" />
+        </marker>
+    </defs>
+    <line x1="10" y1="50" x2="190" y2="50" stroke="black" stroke-width="2" marker-end="url(#MarkerArrow)" />
+    <line x1="10" y1="100" x2="190" y2="100" stroke="black" stroke-width="2" marker-start="url(#MarkerArrow)" />
+    <line x1="10" y1="150" x2="190" y2="150" stroke="black" stroke-width="2"
+        marker-start="url(#MarkerArrow)"  marker-end="url(#MarkerArrow)" />
+    <polyline points="210,190 240,80 275,150 320,60 355,100 390,10"
+        fill="none" stroke="grey" stroke-width="3"
+        marker-start="url(#MarkerSquare1)" marker-mid="url(#MarkerDot)" marker-end="url(#MarkerSquare2)" />
+</svg>
+
+
 
 -----
 This ends our fourth SVG lesson, we hope you enjoyed it and learnt something.
@@ -327,4 +408,5 @@ or want to give us some feedback, please [send us an email.](mailto:feedback@cod
 ## Further reading
 
 * [Mozilla gradient tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients)
-* [Mozilla textPath documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/textPath)
+* [Mozilla `textPath` documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/textPath)
+* [Mozilla `marker` documentation](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/marker)
