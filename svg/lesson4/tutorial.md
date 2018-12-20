@@ -14,7 +14,6 @@ In this tutorial we are going to look at advanced SVG techniques:
 * Colour gradients
 * Fancy text styling
 * Markers
-* Animations
 
 ### Goal
 
