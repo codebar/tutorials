@@ -182,9 +182,21 @@ previous example with:
 
 Which should show this:
 
-<svg width="200px" height="200px">
+<svg id="example1" width="200px" height="200px">
     <rect x="50" y="50" width="120" height="80" stroke="black" stroke-width="3" fill="red" />
 </svg>
+
+You can draw rounded rectangles by adding `rx` and `ry` attributes:
+
+```html
+<rect x="50" y="50" width="120" height="80" stroke="black" stroke-width="3" fill="red" rx="20" ry="15" />
+```
+
+<svg id="example2" width="200px" height="200px">
+    <rect x="50" y="50" width="120" height="80" stroke="black" stroke-width="3" fill="red"
+        rx="20" ry="15" />
+</svg>
+
 
 ### Circles
 
@@ -202,7 +214,7 @@ Replace the previous `<rect>` tag with this:
 
 Considering we specified a fill colour, this is technically a disc:
 
-<svg width="200px" height="200px">
+<svg id="example3" width="200px" height="200px">
     <circle cx="100" cy="100" r="90" stroke="black" stroke-width="3" fill="green" />
 </svg>
 
@@ -222,7 +234,7 @@ Replace the previous `<circle>` tag with this:
 
 Which should show this:
 
-<svg width="200px" height="200px">
+<svg id="example4" width="200px" height="200px">
     <ellipse cx="100" cy="100" rx="90" ry="60" stroke="black" stroke-width="3" fill="blue" />
 </svg>
 
@@ -242,7 +254,7 @@ Replace the previous `<ellipse>` tag with this:
 
 Which is the first step to create a game of Tetris:
 
-<svg width="200px" height="200px">
+<svg id="example5" width="200px" height="200px">
     <polygon points="25,50 175,50 175,100 75,100 75,150 25,150" stroke="black" stroke-width="3" fill="purple" />
 </svg>
 
@@ -261,7 +273,7 @@ Replace the previous `<polygon>` tag with this:
 
 Which results in an open Tetris piece:
 
-<svg width="200px" height="200px">
+<svg id="example6" width="200px" height="200px">
     <polyline points="25,50 175,50 175,100 75,100 75,150 25,150" stroke="black" stroke-width="3" fill="yellow" />
 </svg>
 
@@ -275,7 +287,7 @@ text to display:
 <text x="50" y="50" font-size="30px" fill="black">Hello SVG!</text>
 ```
 
-<svg width="200px" height="200px">
+<svg id="example7" width="200px" height="200px">
     <text x="50" y="50" font-size="30px" fill="black">Hello SVG!</text>
 </svg>
 
@@ -286,7 +298,7 @@ You can also set the `stroke` property independently to outline the text:
 <text x="50" y="50" font-size="30px" fill="yellow" stroke="black">Hello SVG!</text>
 ```
 
-<svg width="200px" height="200px">
+<svg id="example8" width="200px" height="200px">
     <text x="50" y="50" font-size="30px" fill="yellow" stroke="black">Hello SVG!</text>
 </svg>
 
@@ -294,7 +306,7 @@ The `<text>` tag is designed to position independent pieces of text with no
 concept of layout. In particular, text will not wrap when it reaches the
 boundary of the SVG area, it will just be clipped:
 
-<svg width="200px" height="200px">
+<svg id="example9" width="200px" height="200px">
     <text x="30" y="50" font-size="30px" fill="yellow" stroke="black">Good day SVG!</text>
 </svg>
 
@@ -306,7 +318,7 @@ inside a parent `<text>` tag:
     <tspan x="50" dy="30">SVG!</tspan></text>
 ```
 
-<svg width="200px" height="200px">
+<svg id="example10" width="200px" height="200px">
     <text x="50" y="50" font-size="30px" fill="yellow" stroke="black">Good day
         <tspan x="50" dy="30">SVG!</tspan></text>
 </svg>
@@ -326,7 +338,7 @@ you need to specify the red rectangle first:
 </svg>
 ```
 
-<svg width="200px" height="200px">
+<svg id="example11" width="200px" height="200px">
     <rect x="50" y="50" width="120" height="80" stroke="black" stroke-width="3" fill="red" />
     <rect x="100" y="100" width="80" height="90" stroke="black" stroke-width="3" fill="green" />
 </svg>
@@ -341,7 +353,7 @@ come first:
 </svg>
 ```
 
-<svg width="200px" height="200px">
+<svg id="example12" width="200px" height="200px">
     <rect x="100" y="100" width="80" height="90" stroke="black" stroke-width="3" fill="green" />
     <rect x="50" y="50" width="120" height="80" stroke="black" stroke-width="3" fill="red" />
 </svg>
@@ -396,21 +408,21 @@ do what you expect:
 This results in the following drawing. Hover your mouse over the orange circles
 to see their colour change:
 
-<svg id="style1" width="200px" height="200px">
+<svg id="example13" width="200px" height="200px">
     <style>
-    #style1 circle {
+    #example13 circle {
         fill: orange;
         stroke: black;
         stroke-width: 2;
     }
-    #style1 circle.green {
+    #example13 circle.green {
         fill: green;
         stroke-width: 5;
     }
-    #style1 #red {
+    #example13 #red {
         fill: red;
     }
-    #style1 :hover {
+    #example13 :hover {
         fill: purple;
     }
     </style>
@@ -472,28 +484,28 @@ in particular the same font related properties as HTML text as well as the
 </html>
 ```
 
-<svg id="style2" width="200px" height="200px">
+<svg id="example14" width="200px" height="200px">
     <style>
-    #style2 line {
+    #example14 line {
         stroke: #ccc;
     }
-    #style2 circle {
+    #example14 circle {
         fill: red;
         stroke: none;
     }
-    #style2 text {
+    #example14 text {
         fill: black;
         text-anchor: middle;
         font-size: 2em;
         font-family: sans-serif;
     }
-    #style2 text.start {
+    #example14 text.start {
         fill: green;
         text-anchor: start;
         font-style: italic;
         font-family: serif;
     }
-    #style2 text.end {
+    #example14 text.end {
         fill: blue;
         text-anchor: end;
         font-weight: bold;
@@ -516,11 +528,6 @@ in particular the same font related properties as HTML text as well as the
 You can mix HTML and SVG CSS rules as you want. However, as the SVG is part of
 the same DOM as the HTMl document and if you have generic rules that apply to
 classes that you use both in HTML and SVG, they will apply to both.
-
-If you use relative font size units like `em`, those will be calculated based
-on the HTML element inside which the `<svg>` element is located. This is very
-useful to ensure that SVG text has a size that makes sense compared to its
-surroundings but can also lead to unexpected results.
 
 -----
 This ends our first SVG lesson, we hope you enjoyed it and learnt something.
