@@ -34,7 +34,7 @@ var context = canvas.getContext('2d');
 
 ### Controls
 
-Depending on if we are filling up a shape, or just drawing the outline, we can use `fillStyle` or `strokeStyle`to set the color of the element.
+Depending on if we are filling up a shape, or just drawing the outline, we can use `context.fillStyle` or `context.strokeStyle`to set the color of the element.
 
 ```js
   context.fillStyle = 'yellow';
@@ -44,7 +44,7 @@ Depending on if we are filling up a shape, or just drawing the outline, we can u
 To set the line width:
 
 ```js
-  context.lineWidth = '3';
+  context.lineWidth = 3;
 ```
 
 #### Drawing
@@ -68,7 +68,7 @@ Now let's add another rectangle, but this time only its outline.
 context.strokeRect(300, 100, 50, 100);
 ```
 
-**Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the screen. The **line width** of the rectangle should be 1.
+**Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the canvas. The **line width** of the rectangle should be 1.
 
 ### Reseting canvas
 
@@ -91,7 +91,7 @@ context.moveTo(0,300);
 context.lineTo(400,500);
 ```
 
-This won't do anything until we call the `stroke()`, which deals with the painting.
+This won't do anything until we call `context.stroke()`, which deals with the painting.
 
 You can also draw an join multiple paths together. Try this out by creating a rectangle with corners at (0, 0), (0, 200), (200, 300) and (200, 0).
 
@@ -112,7 +112,7 @@ context.stroke();
 
 ## Drawing circles
 
-To draw circles, you can use the `arc` method. `arc(x, y, radius, staging_angle, endingAngle, counterClockwise)`
+To draw circles, you can use the `arc` method. `arc(x, y, radius, startAngle, endAngle, counterClockwise)`. Angles are expressed in radians. In radians 2π equates to 360°.
 
 ```javascript
 context.beginPath();
@@ -122,7 +122,7 @@ context.lineWidth = 4;
 context.stroke();
 ```
 
-To fill in the circle, or any other joined elements, we use the `fill()` method after closing the path.
+To fill in the circle, or any other joined elements, we use the `context.fill()` method after closing the path.
 
 **Exercise** Create another circle and fill it with the color blue.
 
@@ -132,7 +132,7 @@ In canvas, we can also use transformations on the current matrix.
 
 ### `rotate()`
 
-First add the rotate method at the bottom of the `draw()` method.
+First add the rotate method at the bottom of the `draw()` function.
 
 ```javascript
 context.rotate(10*Math.PI/180);
@@ -152,7 +152,7 @@ context.restore()
 
 ### `translate()`
 
-Translate moves the current position. If we are at 10, 10 and we `translate(20, 15)`, then our new position is 30, 45.
+Translate moves the current position. If we are at 10, 10 and we `context.translate(20, 15)`, then our new position is 30, 45.
 
 ```javascript
 context.translate(45, 45);
@@ -160,7 +160,7 @@ context.translate(45, 45);
 
 ### `scale()`
 
-And finally, `scale(scaleWidth, scalewHeight)`. Scale changes the dimensions of the rendered items.
+And finally, `context.scale(scaleWidth, scaleHeight)`. Scale changes the dimensions of the rendered items.
 
 
 ```javascript
@@ -182,7 +182,7 @@ We have already created the functions to draw the individual parts, so you shoul
 > Use pen and paper to think about the position of each element. You already know that the top left is 0,0 and the bottom right 400, 500. Use a grid if you are finding it hard.
 
 
-> Don't forget `beginPath()` and `stroke()` before and after drawing elements.
+> Don't forget `context.beginPath()` and `context.stroke()` before and after drawing elements.
 
 Here is our version of [Hangman in Canvas](../../examples/hangman-canvas/index.html).
 
