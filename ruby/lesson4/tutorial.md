@@ -122,7 +122,7 @@ color = Color.new("purple", "#8824a4")
 color.update_hexcode("#9427b2")
 ```
 
-This should now throw a `NoMethodError`. Change **protected** to **private** and run the code again.
+This should now throw a `NoMethodError`. Change **protected** to **private** and run the code again. This should still throw a `NoMethodError` since the `update_hexcode` method is being called from outside of the class.  Think about how you could call the private method successfully.  Remember, the private method needs to be called from within the class.
 
 Let's now put into practise what we have learned so far.
 
