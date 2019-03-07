@@ -5,7 +5,7 @@ title: Introduction to version control and git
 
 ## What is version control?
 
-Version control is a way to manage and track any changes you make to your files. 
+Version control is a way to manage and track any changes you make to your files.  If you've been using online services such as Google Docs or Wikipedia, then you'll already have been working with documents and pages that use a version control system.
 
 ### Google docs revision history
 
@@ -38,21 +38,23 @@ Wikipedia also holds a history of all changes.
 
 ## Why do you need Version Control?
 
-- When used on a regular basis, version control helps you to store your files safely. It makes it easy to figure out what broke your code as you can roll back to a previous version and work out when things last worked as expected.
+- When used on a regular basis, version control helps you to store your files safely. It makes it easy to figure out what broke your code, as you can roll back to a previous version and work out when things last worked as expected.
+    - With no version control in place you'll only have one copy of your file, then when it breaks there's no way to get back to good code!
 
-- It is also helpful when working with other people as it combines all the changes together, and tracks who, why and when it changed.
+- It is also helpful when working with other people as it combines all the changes together and tracks who, why and when it changed.
+    - In the work environment this may be essential to know for example, what issue the change fixes or customer requirement it relates to.
 
 ## Code version control systems
 
-There are a number of different version control systems. The most popular ones are **svn** (or Subversion), **cvs**, **mercurial** and **git**.
+There are a number of different version control systems. The most popular ones are **svn** (or Subversion), **cvs**, **Mercurial** and **Git**.
 
-We will be using **git**.
+We will be using **Git**.
 
 ### Why Git?
 
-There are a number of reasons we chose git. To name some
+There are a number of reasons we chose Git, namely;
 
-- A lot of learning resources
+- A lot of learning resources are publicly available
 
 - Does not require you to be connected to the internet to use
 
@@ -62,7 +64,7 @@ There are a number of reasons we chose git. To name some
 
 - Github and online collaboration. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to them
 
-Some popular project using git:
+Some popular projects using Git:
 
 - Android
 
@@ -78,23 +80,25 @@ Some popular project using git:
 
 ## Terminology
 
-- repository: A repository is where code is stored
+As with any technology and related tool, there's a lot of terminollgy used. Here's some of the most common terms and their definitions:
 
-- checkout: When you retrieve code from a **repository**
+- **Repository**: A repository is where code is stored
 
-- commit: Applying any changes you have made to the **repository**
+- **Checkout**: When you retrieve code from a **repository**, to you local machine
+
+- **Commit**: Applying any changes you have made to the **repository**
 
 #### Aim for small and focused changes
 
-When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row, changing too many things and then committing them.
+When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row, changing too many things and then committing them is a great way to introduce issues that are hard to track down.
 
-For example, if you want to change the position of an element, the color of all the links on your page and the font size dimensions of all paragraphs, you should do three commits, using messages that describe what you are doing each time.
+For example, if you want to change the position of an element, the colour of all the links on your page and the font size dimensions of all paragraphs, you should do three commits, using messages that describe what you are doing each time.
 
-### Bad commit messages
+### Write meaningful commit messages
 
-Every time you commit a change use a message that describes your change clearly. In a few months time you will have difficulty remembering why you applied a change if your messages say _changing some CSS_, _another commit_, or _more changes_
+Every time you commit a change use a message that describes your change clearly. In a few months time you will have difficulty remembering why you applied a change if your messages say _changing some CSS_, _another commit_ or _more changes_
 
-Try using messages like _repositioned image to look better on page_, _resolved positioning issue for Firefox_.
+Try using messages such as _repositioned image to look better on page_ or _resolved positioning issue for Firefox_.
 
 # The next step!
 
@@ -104,17 +108,17 @@ Download [Github Desktop](https://desktop.github.com/) (for Mac or Windows).
 
 ## Now what?
 
-Now that you have the Github client setup on your machine, we will spend some time adding what you have created in the HTML & CSS lessons on the internet! Before you start make sure the Github client is running and you are signed in.
+Now that you have the Github client setup on your machine, we will spend some time adding what you have created in the HTML & CSS lessons to an internet repository! Before you start make sure the Github client is running and you are signed in.
 
-1. Create a new repository by clicking the Create New Repository button
+1. Create a new repository by clicking the `Create New Repository` button
 
 	![](images/create-new-repository.png)
 
-2. Open the directory you just created in your text editor and create a README.md file with the following content:
+2. In your text editor, open the directory you just created and create a README.md file with the following content:
 
 	_This is where I store the work I have done at codebar._
 
-3. Go back to the Github client and commit the file by filling out the Summary field and hitting the Commit to master button
+3. Go back to the Github client and commit the file by filling out the `Summary` field and hitting the `Commit to master` button
 	
 	![](images/add-readme.png)
 
@@ -135,11 +139,11 @@ Now that you have the Github client setup on your machine, we will spend some ti
 
 	![](images/commit-changes.png)
 
-8. Once you committed your changes publish your work by clicking the **Publish repository** button
+8. Once you committed your changes publish your work by clicking the `Publish repository` button
 
 	![](images/publish-repository.png)
 
-9. View your work on the internet!
+9. View your work on the web!
 
 	To access your work, go to `http://<username>.github.io/codebar`
 
