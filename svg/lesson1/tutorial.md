@@ -69,8 +69,9 @@ in an HTML document.
 
 A standalone SVG image is a file with the `.svg` extension that contains a
 single `<svg>` tag. The file needs to start with an XML processing instruction
-and the `xmlns` and `version` attributes of the `<svg>` tag are mandatory. It is
-better to include a `DOCTYPE` too, as shown below:
+and the `xmlns` attribute of the `<svg>` tag is mandatory. The `version`
+attribute of the `<svg>` tag is mandatory for SVG 1.x and deprecated in SVG 2.
+It is better to include a `DOCTYPE` too, as shown below:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -85,7 +86,9 @@ better to include a `DOCTYPE` too, as shown below:
 When embedding your images in an HTML document, you should not include the
 XML processing instruction and the only `DOCTYPE` should be the HTML one at the
 top of the document. The `xmlns` and `version` attributes are optional.
-You should provide at least a `width` attribute otherwise the image will attempt
+
+You should ensure the `svg` tag is explicitly given a width, either via CSS or
+by setting the `width` attribute. If this is not the case, the image will attempt
 to take as much space as possible, which is usually not what you want. Initially
 we will also provide a `height` argument to ensure our image is properly sized.
 We will see advanced sizing techniques in later lessons.
