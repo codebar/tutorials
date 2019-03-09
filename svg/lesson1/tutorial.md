@@ -62,7 +62,7 @@ programs:
 
 SVG images use tags just like [HTML elements](../../html/lesson1/tutorial.html#html-elements).
 The top-level tag is the `<svg>` tag. Mandatory attributes on this tag depend on
-whether your image is a standalong image, like the owl image above, or embedded
+whether your image is a standalone image, like the owl image above, or embedded
 in an HTML document.
 
 ### Standalone image
