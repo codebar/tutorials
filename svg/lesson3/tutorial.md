@@ -9,7 +9,7 @@ title: Groups and transforms
 
 In this tutorial we are going to look at:
 
-* Shape grous using the `<g>` element
+* Shape groups using the `<g>` element
 * Transforms: translate, scale, rotate, skew
 
 ### Goal
@@ -139,6 +139,10 @@ What can be done with SVG attributes can also be done with CSS:
 All SVG elements can take a `transform` attribute. This attribute takes the
 form of a list of transform function calls that modify the shape by applying
 translations, scaling, rotations or skews to it.
+
+Note that you can also use CSS transforms on SVG elements. CSS transforms are
+very similar to the SVG ones and add 3D capabilities so once you are
+comfortable with what SVG can do, you can go further with CSS.
 
 ### translate
 
@@ -606,3 +610,4 @@ or want to give us some feedback, please [send us an email.](mailto:feedback@cod
 ## Further reading
 
 * [Mozilla SVG transform tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform)
+* [Mozilla CSS transform documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
