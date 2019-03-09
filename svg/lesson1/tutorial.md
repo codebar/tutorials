@@ -390,7 +390,7 @@ do what you expect:
         #red {
             fill: red;
         }
-        :hover {
+        circle:hover {
             fill: purple;
         }
         </style>
@@ -425,7 +425,7 @@ to see their colour change:
     #example13 #red {
         fill: red;
     }
-    #example13 :hover {
+    #example13 circle:hover {
         fill: purple;
     }
     </style>
