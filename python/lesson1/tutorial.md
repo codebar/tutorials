@@ -6,6 +6,9 @@ title: Strings, Integers and Floats
 In this tutorial, we're going to start to work with the basic types of Python:
 strings (for text) and integers & floats (for numeric values).
 
+Notice that in this tutorial you are working in REPL (IDLE). You can find more information
+on REPL and how to start Python in your `cmd` or `terminal` in the [Installing Python tutorial](python/lesson0/tutorial.html) . 
+
 ## Hello, World!
 
 In keeping with tradition, we're going to start by printing "Hello, World!" to
@@ -121,6 +124,30 @@ multiple things at once, separated by a comma:
 
     >>> print('The result of 2 + 2 is', 2 + 2)
 
+### Saving Your Work
+
+In this tutorial you coded in the REPL (IDLE), but a lot of times you want
+to save your code instead. In such cases you can save your code to a file using a text editor. 
+We give some information on text editors in our [Getting started guide](general/setup/tutorial.html) .
+
+Open your text editor and write the code from the first exercise:
+
+    print("Hello, World!")
+
+Save the file as `ex1.py`. You can name your files as you like, 
+but they should end with `.py`, so python can read them easily.
+Reading your file into Python you will use your `cmd` or `terminal` shell again. 
+You can read your file with the following command (type without the $ sign):
+
+	$ python ex1.py
+
+If you have `>>>`in front of your code, you are still in REPL(IDLE) and need to exit
+it with:
+
+	>>> quit()
+
+Then you should be able to load the file. 
+	
 This concludes today's tutorial. In the next tutorial, we'll find out how to
 combine the results of multiple separate expressions using variables, get input
 from the user, and make decisions based on that information.
