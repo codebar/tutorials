@@ -7,7 +7,8 @@ In our previous lesson we learnt all about JavaScript variables, functions and o
 
 ## Before we start...
 
-Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/d46495ce986d1624af45/download).
+Download the files required to begin working through the tutorial from [here](https://gist.github.com/AniaMakes/d6b0edd5c7ca6ddbe9831616c766df84/download).
+
 
 In the first half of this tutorial we will be using the files **lesson2.html** and **script.js**, then files **london.html** and **london-script.js** for the second part.
 
