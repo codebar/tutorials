@@ -1,25 +1,25 @@
 ---
 layout: page
-title: Introduction to version control and git
+title: Introduction to Version Control and Git
 ---
 
 ## What is version control?
 
-Version control is a way to manage and track any changes you make to your files.  If you've been using online services such as Google Docs or Wikipedia, then you'll already have been working with documents and pages that use a version control system.
+Version control is a way to manage and track any changes you make to your files. If you've been using online services such as Google Docs or Wikipedia, then you'll already have been working with documents and pages that use a version control system.
 
-### Google docs revision history
+### Google Docs revision history
 
-Google docs, for example, keeps a revision history of any document you create and modify.
+Google Docs, for example, keeps a revision history of any document you create and modify.
 
 Have a look [at this Google document](https://docs.google.com/document/d/10kHJKXHLa-V8G6vVQoDiS6cTPvJoXnj_-SDvfQdziFk/edit?usp=sharing).
 
 - Select to see the revision history (you must be logged in with your Google account to do that!)
 
-![](images/see_revision_history.png)
+![See Revision History](images/see_revision_history.png)
 
 - And the more detailed version
 
-![](images/more_detailed.png)
+![More Detailed Revision History](images/more_detailed.png)
 
 Scroll through the revisions, from the bottom up. You should be able to see each set of changes highlighted in green.
 
@@ -29,17 +29,17 @@ Wikipedia also holds a history of all changes.
 - Go to [this document](https://en.wikipedia.org/wiki/Women_in_computing)
 - Click **view history**
 
-![](images/wikipedia-view-history.png)
+![Wikipedia View History](images/wikipedia-view-history.png)
 
 - Try and have a look at the first revision of the page, by going back. It's dated back to 2005!
 - Click **curr**, that will show you the [differences between the first and the latest entry](https://en.wikipedia.org/w/index.php?title=Women_in_computing&diff=583521812&oldid=19298328)
 
-![](images/wikipedia-diff.png)
+![Wikipedia Diff Example](images/wikipedia-diff.png)
 
 ## Why do you need Version Control?
 
 - When used on a regular basis, version control helps you to store your files safely. It makes it easy to figure out what broke your code, as you can roll back to a previous version and work out when things last worked as expected.
-    - With no version control in place you'll only have one copy of your file, then when it breaks there's no way to get back to good code!
+    - With no version control in place you'll only have one copy of your file, then when it breaks there's likely no way to get back to working code!
 
 - It is also helpful when working with other people as it combines all the changes together and tracks who, why and when it changed.
     - In the work environment this may be essential to know for example, what issue the change fixes or customer requirement it relates to.
@@ -49,6 +49,7 @@ Wikipedia also holds a history of all changes.
 There are a number of different version control systems. The most popular ones are **svn** (or Subversion), **cvs**, **Mercurial** and **Git**.
 
 We will be using **Git**.
+Git is a tool that makes sharing code and collaborating with other developers really easy. It also keeps our code tracked and safe.
 
 ### Why Git?
 
@@ -67,13 +68,9 @@ There are a number of reasons we chose Git, namely;
 Some popular projects using Git:
 
 - Android
-
 - Linux
-
 - Python
-
 - Ruby
-
 - PHP
 
 # A bit more about Git
@@ -84,7 +81,7 @@ As with any technology and related tool, there's a lot of terminollgy used. Here
 
 - **Repository**: A repository is where code is stored
 
-- **Checkout**: When you retrieve code from a **repository**, to you local machine
+- **Checkout**: When you retrieve code from a **repository**, to your local machine
 
 - **Commit**: Applying any changes you have made to the **repository**
 
@@ -102,17 +99,15 @@ Try using messages such as _repositioned image to look better on page_ or _resol
 
 # The next step!
 
-Sign up to [Github](https://github.com/)
-
-Download [Github Desktop](https://desktop.github.com/) (for Mac or Windows).
+Get set-up with [Git and GitHub](../set-up/tutorial.html).
 
 ## Now what?
 
-Now that you have the Github client setup on your machine, we will spend some time adding what you have created in the HTML & CSS lessons to an internet repository! Before you start make sure the Github client is running and you are signed in.
+Now that you have the Github client setup on your machine, we will spend some time adding what you have created in the HTML and CSS lessons to an internet repository! Before you start make sure the Github client is running and you are signed in.
 
 1. Create a new repository by clicking the `Create New Repository` button
 
-	![](images/create-new-repository.png)
+	![Create a new Repository](images/create-new-repository.png)
 
 2. In your text editor, open the directory you just created and create a README.md file with the following content:
 
@@ -120,11 +115,11 @@ Now that you have the Github client setup on your machine, we will spend some ti
 
 3. Go back to the Github client and commit the file by filling out the `Summary` field and hitting the `Commit to master` button
 	
-	![](images/add-readme.png)
+	![Add a Readme File](images/add-readme.png)
 
 4. Now, create a new branch called **gh-pages**
 
-	![](images/create-new-branch.png)
+	![Create a New Branch](images/create-new-branch.png)
 
 5. In the directory, create a subdirectory **lesson1** and move the **html** file you created at the first session and all the other relevant files and directories (e.g. /images)
 
@@ -137,11 +132,11 @@ Now that you have the Github client setup on your machine, we will spend some ti
 
 7. Commit your changes to the gh-pages branch
 
-	![](images/commit-changes.png)
+	![Commit Changes](images/commit-changes.png)
 
 8. Once you committed your changes publish your work by clicking the `Publish repository` button
 
-	![](images/publish-repository.png)
+	![Publish Repository](images/publish-repository.png)
 
 9. View your work on the web!
 
