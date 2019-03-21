@@ -46,60 +46,90 @@ Wikipedia also holds a history of all changes.
 
 ## Code version control systems
 
-There are a number of different version control systems. The most popular ones are **svn** (or Subversion), **cvs**, **Mercurial** and **Git**.
+There are a number of different version control systems. The most popular ones are **SVN** (or Subversion), **CVS**, **Mercurial** and **Git**. Some are paid for and others are free.
 
-We will be using **Git**.
-Git is a tool that makes sharing code and collaborating with other developers really easy. It also keeps our code tracked and safe.
+We will be using **Git** with **Github**:
 
-### Why Git?
+- **Git** is a tool that makes sharing code and collaborating with other developers easy. It also keeps our code tracked and safe.
+- **Github** is the web based hosting service for our code repositories that we interact with through the Github web pages.
 
-There are a number of reasons we chose Git, namely;
+We'll use Git installed on our system to manage code we work on and then push our code to Github hosted repositories. 
 
-- A lot of learning resources are publicly available
+### Why Git and Github?
 
-- Does not require you to be connected to the internet to use
+There are a number of reasons we chose Git and Github, namely;
 
-- All your tracked changes stay on your machine until you are happy with them, and want to make them part of your codebase
+- Lots of learning resources are publicly available
+
+- Git does not require you to be connected to the internet to use
+
+- All your tracked changes stay on your machine until you are happy with them, and want to make them part of your codebase on Github
 
 - Will tell you if someone has made changes since you last pushed code and urge you to update first and resolve issues
 
-- Github and online collaboration. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to them
+- Github makes online collaboration easy. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to them
 
-Some popular projects using Git:
+### Projects on Github
+Once you've worked through the Git and Github tutorials here at Codebase, there are an incredible amount of projects that you'll be able to access for free. These range from operating systems, games, programming languages, books and more.
 
-- Android
-- Linux
-- Python
-- Ruby
-- PHP
+- Go retro with a **Windows 95** simulation: [https://github.com/felixrieseberg/windows95](https://github.com/felixrieseberg/windows95)
 
-# A bit more about Git
+- Learn more with free **Programming Books**: [https://github.com/EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books)
 
-## Terminology
+- Grab some free **Games** kept on Github: [https://github.com/leereilly/games](https://github.com/leereilly/games)
 
-As with any technology and related tool, there's a lot of terminollgy used. Here's some of the most common terms and their definitions:
+- Amazing **Android Apps** and learning resources: [https://github.com/Mybridge/amazing-android-apps](https://github.com/Mybridge/amazing-android-apps)
 
-- **Repository**: A repository is where code is stored
+- Ideas for **cool projects** you can build or contribute to [https://github.com/open-source-ideas/open-source-ideas](https://github.com/open-source-ideas/open-source-ideas)
 
-- **Checkout**: When you retrieve code from a **repository**, to your local machine
 
-- **Commit**: Applying any changes you have made to the **repository**
+## Key Terms and Definitions for Git
 
-#### Aim for small and focused changes
+As with any technology and related tool, there's a lot of terminology realted to Git and Github. Here's some of the most common terms and their definitions:
 
-When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row, changing too many things and then committing them is a great way to introduce issues that are hard to track down.
+- **Repository**: A repository is where code is stored, it can be a local or remote repository. Also called a 'repo'
+
+- **Clone**: Copy a repository so you can pull it down to your local machine and start editing the code
+
+- **Pull**: Get the latest version of code from a reposity
+
+- **Push**: Send your code changes to the repository
+
+- **Add**: Adds your chosen changes to the local Stage area, ready for a commit
+
+- **Stage**: An index of changes you are preparing to commit to the repository
+
+- **Status**: Shows the state of the working directory and the Staging area
+
+- **Commit**: Applying any changes you have made into the repository
+
+
+
+## Good Practices when Working with Git
+
+### Aim for small and focused changes
+
+When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row, changing too many things and then committing them is a great way to introduce issues that are hard to track down. What's more, it makes it harder to review changes you made and need merging into the current code base.
 
 For example, if you want to change the position of an element, the colour of all the links on your page and the font size dimensions of all paragraphs, you should do three commits, using messages that describe what you are doing each time.
 
 ### Write meaningful commit messages
 
-Every time you commit a change use a message that describes your change clearly. In a few months time you will have difficulty remembering why you applied a change if your messages say _changing some CSS_, _another commit_ or _more changes_
+Every time you commit a change use a message that describes your change clearly. In a few months time you will have difficulty remembering why you applied a change if your messages say _changing some CSS_, _another commit_ or _more changes_.
 
 Try using messages such as _repositioned image to look better on page_ or _resolved positioning issue for Firefox_.
 
-# The next step!
+### Always check for updates by others
+When you come back to coding, be sure to `pull` any changes into your local repository that others may have committed to the repository since you last worked on the code. If there are changes you don't pull in you can get **Merge Conflicts**, where two sets of changes, the ones from other people and yours, need to be worked through to decide which change is kept. Resolving merge conflicts is notoriously tricky - small, frequent commits followed by a pull are a great way to avoid merge conflicts.
+
+
+
+## The next step
 
 Get set-up with [Git and GitHub](../set-up/tutorial.html).
+
+
+---------- REMOVE FROM HERE ONWARDS -----------
 
 ## Now what?
 
