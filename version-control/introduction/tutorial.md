@@ -70,7 +70,7 @@ There are a number of reasons we chose Git and Github, namely;
 - Github makes online collaboration easy. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to them
 
 ### Projects on Github
-Once you've worked through the Git and Github tutorials here at Codebase, there are an incredible amount of projects that you'll be able to access for free. These range from operating systems, games, programming languages, books and more.
+Once you've worked through the Git and Github tutorials here at Codebar, there are an incredible range of projects that you'll be able to access for free. These projects include operating systems, games, programming languages, books and more.
 
 - Go retro with a **Windows 95** simulation: [https://github.com/felixrieseberg/windows95](https://github.com/felixrieseberg/windows95)
 
@@ -81,6 +81,10 @@ Once you've worked through the Git and Github tutorials here at Codebase, there 
 - Amazing **Android Apps** and learning resources: [https://github.com/Mybridge/amazing-android-apps](https://github.com/Mybridge/amazing-android-apps)
 
 - Ideas for **cool projects** you can build or contribute to [https://github.com/open-source-ideas/open-source-ideas](https://github.com/open-source-ideas/open-source-ideas)
+
+- Grab a copy of an extensive **Git Cheatsheet** for reference [https://github.com/arslanbilal/git-cheat-sheet](https://github.com/arslanbilal/git-cheat-sheet)
+
+To find more projects, just enter a search in Github and see what comes back!
 
 
 ## Key Terms and Definitions for Git
