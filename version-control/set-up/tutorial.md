@@ -88,56 +88,7 @@ You can check what identities have been added to the ssh-agent by typing:
 ssh-add -l
 ```
 
-### aaaaaaa
-.
-
-[Instructions on how to generate an SSH key](https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key)
-
-
-.
-
-.
-
-.
-
-.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Adding the SSH Key to Github
 
 
 
