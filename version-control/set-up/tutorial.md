@@ -88,6 +88,18 @@ You can check what identities have been added to the ssh-agent by typing:
 ssh-add -l
 ```
 
+## Set-up and Connect to a Github Account
+Now that we have Git working on our local system and the SSH keys we'll need in order to connect to a remote service, let's set-up the Github account so we can then finish connecting the two.
+
+### Sign-up for a Github Account
+Navigate to [https://github.com/](https://github.com/) and from the home page sign-up for an account.
+
+![Sign-up for a Github account](images/setup-get-a-github-account.png)
+
+Be sure to choose the free pricing plan.
+
+![Github Free Pricing Plan](images/setup-choose-pricing-plan.png)
+
 ### Adding the SSH Key to Github
 
 
