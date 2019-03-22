@@ -15,14 +15,14 @@ The following set of examples will help you understand how to use Git via the co
 
 
 ### Create and add your project in Git
-To start, let's make a directory to store our files and initialise the directory as a Git repository on our local system.
+To start, let's make a directory to store our files and initialise the directory as a Git repository on our local system. This is the same as we did in the [Set-up tutorial]((../set-up/tutorial.html)) previously.
 
 ```bash
 $ mkdir practising-git
 $ cd practising-git
 $ git init
 ```
-> The first command above will make a new directory (`mkdir`) at the system location you're at within the terminal window. The second command will change directory (`cd`) into the new one you just made. The third command will call the Git program then initialise (`init`) your directory as a local Git repository.
+> You may recall this will make the directory, change directory so we're located in it, then initialise it as an empty Git repository.
 
 ### Create a file.
 We can create a new file in our local directory and add a line to it at the same time, with the below.
