@@ -97,9 +97,9 @@ As with any technology and related tool, there's a lot of terminology realted to
 
 - **Pull**: Get the latest version of code from a reposity
 
-- **Push**: Send your code changes to the repository
+- **Push**: Send your code changes to the remote repository
 
-- **Add**: Adds your chosen changes to the local Stage area, ready for a commit
+- **Add**: Adds your chosen changes to the local Stage area, ready for a commit and push
 
 - **Stage**: An index of changes you are preparing to commit to the repository
 
@@ -127,61 +127,10 @@ Try using messages such as _repositioned image to look better on page_ or _resol
 When you come back to coding, be sure to `pull` any changes into your local repository that others may have committed to the repository since you last worked on the code. If there are changes you don't pull in you can get **Merge Conflicts**, where two sets of changes, the ones from other people and yours, need to be worked through to decide which change is kept. Resolving merge conflicts is notoriously tricky - small, frequent commits followed by a pull are a great way to avoid merge conflicts.
 
 
-
 ## The next step
 
 Get set-up with [Git and GitHub](../set-up/tutorial.html).
 
-
----------- REMOVE FROM HERE ONWARDS -----------
-
-## Now what?
-
-Now that you have the Github client setup on your machine, we will spend some time adding what you have created in the HTML and CSS lessons to an internet repository! Before you start make sure the Github client is running and you are signed in.
-
-1. Create a new repository by clicking the `Create New Repository` button
-
-	![Create a new Repository](images/create-new-repository.png)
-
-2. In your text editor, open the directory you just created and create a README.md file with the following content:
-
-	_This is where I store the work I have done at codebar._
-
-3. Go back to the Github client and commit the file by filling out the `Summary` field and hitting the `Commit to master` button
-	
-	![Add a Readme File](images/add-readme.png)
-
-4. Now, create a new branch called **gh-pages**
-
-	![Create a New Branch](images/create-new-branch.png)
-
-5. In the directory, create a subdirectory **lesson1** and move the **html** file you created at the first session and all the other relevant files and directories (e.g. /images)
-
-6. Now, link the file from the root of your project by creating an `index.html` file and adding a link to the page
-
-	```
-	<a href='lesson1/index.html'>Lesson 1 - Introduction to HTML </a>
-	```
-	> Don't forget to rename index to whatever you have named your file!
-
-7. Commit your changes to the gh-pages branch
-
-	![Commit Changes](images/commit-changes.png)
-
-8. Once you committed your changes publish your work by clicking the `Publish repository` button
-
-	![Publish Repository](images/publish-repository.png)
-
-9. View your work on the web!
-
-	To access your work, go to `http://<username>.github.io/codebar`
-
-10. Repeat the process to list the rest of the tutorials you have worked on on the page as well.
-
-## Bonus
-
-This is your personal page. Use what you learned in the previous lessons to style it, make it look pretty, and what we learned today to commit and publish your changes.
-
 -----
 
-This ends our _Introduction to version control and git_ lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **Introduction to version control with Git** lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

@@ -3,6 +3,9 @@ layout: page
 title: Set-up Git and GitHub
 ---
 
+**PREREQUISITES:** 
+- Understanding of version control ([Introduction to Version Control and Git](../introduction/tutorial.html))
+
 ## Introduction to Git and GitHub
 -----
 Now that we know what Version Control is, let's get set-up with Git and Github. By the end of this tutorial we'll have installed Git, set-up a Github account, created SSH keys that we can use to authenticate between the two, then finally created and cloned a repository for us to start working on our own projects and contributing to others.
@@ -16,8 +19,6 @@ Once installed check Git commands works by typing the following in the terminal 
 $ git --version
 ```
 This will return the version of Git you've installed and prove it's up and running correctly.
-
-> Later in the tutorial we'll download [Github Desktop](https://desktop.github.com/).
 
 ### Create an empty Git repository
 Now create a directory where you will be storing all your projects, by typing the following lines and hitting enter after each. You can call the directory whatever you prefer, such as `code` or `projects`.
@@ -134,17 +135,31 @@ ssh -T git@github.com
 
 ![Authentication success](images/setup-success-authenticating.png)
 
-### Create a Github Repository
+## Create a Github Repository
 
-Now that we're all set-up, we just need to add a repository on Github that we can add files to once we've crerated them on our local system.
+Now that we're all set-up with Git and Github, and we've set-up a folder on our local system that's been initiliased as a Git repository - we just need to add a remote repository on Github that we can commit our local files to.
 
-![Create a respository](setup-create-a-repository.png)
+In your home page on Github, click on `Repository` and then `New` to start adding a new repository.
 
-### Clone a Github Respository
+![Add a respository](images/setup-add-a-repository.png)
 
-One last thing we can do for our set-up is to Clone a remote repository on Github, down to our local system.
+On the next page complete the details for the `Respository name` and a `Description`. Set the visibility to `Public` and initialise with a README file so you can easily add a description and notes about the repository. It's recommended that you choose a license type too, MIT License is fairly common for open source work. When you're done, hit the `Create Respository` button.
 
-![Clone a respository](setup-clone-a-repository.png)
+![Set up new Respository details](images/setup-new-repository-details.png)
 
+The respository will now be set-up with your readme and license files. It will also have a Github URL available to copy and use in Git when making a commit.
 
-This ends our _Set-up Git and GitHub_ lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+![Copy a respository URL](images/setup-copy-a-repository-url.png)
+
+For Git to know where we want files to go when we do a `git push` of items in our local respository, we need to add a reference to that repository. Enter the following command in a console window and be sure to add the URL you copied from Github.
+
+```bash
+$ git remote add origin <repository-url>
+```
+## The next step
+
+Learn more about the [Git Command Line](../command-line/tutorial.html).
+
+-----
+
+This ends our **Set-up Git and GitHub** lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

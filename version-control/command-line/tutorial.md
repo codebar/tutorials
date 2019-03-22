@@ -500,5 +500,9 @@ After typing a couple of commands in the terminal to generate some history, try 
 
 > You can see the entire history by running `history`
 
----
+## The next step
+
+Get learning JavaScript, HTML, CSS, Ruby and more on [Codebar](http://tutorials.codebar.io/).
+
+-----
 This ends **Introduction to the Git command line** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
