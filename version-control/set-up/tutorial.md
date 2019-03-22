@@ -100,13 +100,39 @@ Be sure to choose the free pricing plan.
 
 ![Github Free Pricing Plan](images/setup-choose-pricing-plan.png)
 
-### Adding the SSH Key to Github
+Once you've verified your email address the account will be active and you can go back to edit your profile later on.
 
+### Add the SSH Key to Github
 
+Now we have both Git and the SSH keys set-up on our local system and a Github account created so we can have access to hosted repositories, we need to link them together using the SSH keys.
 
+Navigate back to github.com and ensure you're signed-in to your account. Then in the top right corner click on your profile photo and select `settings`.
 
+![Github Settings](images/setup-github-settings.png)
 
+In the Settings sidebar, select the `SSH and GPG Keys` option.
 
+![SSH option is Settings](images/setup-ssh-key-option.png)
+
+On the right hand side, select `New SSH Key` which will present you with an area to paste your public SSH key text into.
+
+![Add new SSH Key to Github](images/setup-add-new-ssh-key.png)
+
+We need to copy to the clipboard the contents of the `id_rsa_pub` file we created earlier. In a console window type the following command.
+```bash
+pbcopy < ~/.ssh/id_rsa.pub
+```
+Now return back to the broswer where your Github account is open. Give the SSH key a `Title` and paste the file contents into the `Key` field. When done, hit the `Add SSH Key` button. You may be prompted for your password, if so enter it and hit `Confirm Password` to complete this step.
+
+![Adding Key text and title](images/setup-paste-key-text.png)
+
+You can check your connection to Github is set-up correctly by typing the following command, which should give you the message in the console window shown below.
+
+```bash
+ssh -T git@github.com
+```
+
+![Authentication success](images/setup-success-authenticating.png)
 
 
 .
