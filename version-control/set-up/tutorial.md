@@ -5,7 +5,7 @@ title: Set-up Git and GitHub
 
 ## Introduction to Git and GitHub
 -----
-Now that we know what Version Control is, let's get set-up with Git and Github on our system and make sure we're ready to start creating our own projects and contributing to others.
+Now that we know what Version Control is, let's get set-up with Git and Github. By the end of this tutorial we'll have installed Git, set-up a Github account, created SSH keys that we can use to authenticate between the two, then finally created and cloned a repository for us to start working on our own projects and contributing to others.
 
 ## Install and Set-up Git
 Install command line Git for your operating system ([OS X](https://sourceforge.net/projects/git-osx-installer/), [Windows](http://msysgit.github.io/) or [Linux](https://git-scm.com/download/linux)) and open a terminal / command prompt.
@@ -134,9 +134,17 @@ ssh -T git@github.com
 
 ![Authentication success](images/setup-success-authenticating.png)
 
+### Create a Github Repository
 
-.
+Now that we're all set-up, we just need to add a repository on Github that we can add files to once we've crerated them on our local system.
 
-.
+![Create a respository](setup-create-a-repository.png)
+
+### Clone a Github Respository
+
+One last thing we can do for our set-up is to Clone a remote repository on Github, down to our local system.
+
+![Clone a respository](setup-clone-a-repository.png)
+
 
 This ends our _Set-up Git and GitHub_ lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

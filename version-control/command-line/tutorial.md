@@ -64,7 +64,7 @@ $ git log
 
 ### Transferring files from our local project repository to an online service
 
-Before we can add files to a remote repository, we need to have created an account with a service that is hosting taht repository. If you've not done that yet, head over to our tutorial: Get set-up with [Git and GitHub](../set-up/tutorial.html).
+Before we can add files to a remote repository, we need to have created an account with a service that is hosting that repository. If you've not done that yet, head over to our tutorial: Get set-up with [Git and GitHub](../set-up/tutorial.html).
 
 If you've already done that, then great - simply run the commands below, adding in the correct remote repository URL, such as `https://github.com/codebar/tutorials.git`.
 
