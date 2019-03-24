@@ -57,6 +57,10 @@ programs:
   that uses SVG as its native data format.
 * [Adobe Illustrator](https://www.adobe.com/uk/products/illustrator.html) is the
   vector cousin of Photoshop and has a great SVG export function.
+* [Sketch](https://www.sketch.com/) can export to SVG.
+* [SVGOMG](https://jakearchibald.github.io/svgomg/) can optimise SVG code and
+  reduce its size. Note that SVGOMG will need the `xmlns` attribute set on the
+  `svg` tag to work properly (see below).
 
 ## SVG Structure
 
@@ -74,7 +78,7 @@ attribute of the `<svg>` tag is mandatory for SVG 1.x and deprecated in SVG 2.
 It is better to include a `DOCTYPE` too, as shown below:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">

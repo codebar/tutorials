@@ -397,7 +397,17 @@ markers on the polyline.
         marker-start="url(#MarkerSquare1)" marker-mid="url(#MarkerDot)" marker-end="url(#MarkerSquare2)" />
 </svg>
 
+## Beyond the tutorials
 
+This tutorial goes through the basics of creating images with SVG. If you want
+to go beyond this, here are a couple of articles that present advanced topics:
+- [Accessible SVGs](https://css-tricks.com/accessible-svgs/): one of the key
+  advantage of inline SVG is that the tags that form the image are part of the
+  main Document Object Model and can be made accessible to technologies like
+  screen readers.
+- [How to Scale SVG](https://css-tricks.com/scale-svg/): all examples in the
+  tutorial use hard-coded width and height but it doesn't have to be that way,
+  SVG is designed to scale and this article will show you how.
 
 -----
 This ends our fourth SVG lesson, we hope you enjoyed it and learnt something.
