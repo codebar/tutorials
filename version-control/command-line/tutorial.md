@@ -40,7 +40,7 @@ To check the state of our working directory and the Staging area (where we hold 
 $ git status
 ```
 
-> The above command will tell you which files in the current directory have been changed and stqged, which haven't and which files aren't being tracked by Git.
+> The above command will tell you which files in the current directory have been changed and staged, which haven't and which files aren't being tracked by Git.
 
 ### Add your file to the local repository and commit your changes
 When we create new files or change existing ones, we 'add' them to an index of items to be committed to the local repository. The 'commit' command saves our changes into the local repository.
@@ -51,10 +51,10 @@ $ git status
 $ git commit -m 'this is my first command-line commit!'
 ```
 
-> `.` will add **all** the files in the current directory and subdirectories. You should only use it when initialising your repository. The rest of the time you should specify the individual file names to be added.
+> `.` will add **all** the files in the current directory and subdirectories. You should only use it when initialising your repository. The rest of the time it's recommended that you specify the individual file names to be added.
 
 ### Check the Git commit history
-It's easy to check a list of commits in a repository by using the `log` command.
+To check a list of commits in a repository use the `log` command.
 
 ```bash
 $ git log
@@ -66,18 +66,19 @@ $ git log
 
 Before we can add files to a remote repository, we need to have created an account with a service that is hosting that repository. If you've not done that yet, head over to our tutorial: Get set-up with [Git and GitHub](../set-up/tutorial.html).
 
-If you've already done that, then great - simply run the commands below, adding in the correct remote repository URL, such as `https://github.com/codebar/tutorials.git`.
+If you've already done that, then great - just run the commands below, adding in the correct remote repository URL, such as `https://github.com/codebar/tutorials.git`.
 
 ```bash
 $ git remote add origin <repository-url>
 $ git push -u origin master
 ```
 
-> This is worth repeating: We first add the location of a remote repository, in our case the remote repo is on Github and we've callled it 'origin' as it's the original repository we cloned down to our system. Then we 'push' our changes to the origin's 'master' branch. When there, we can raise a new 'pull Request' (PR) to get the changes 'merged' into the live code. Check out 'Get set-up with [Git and GitHub]'(../set-up/tutorial.html) tutorial for full details around this.
+> This is worth repeating: We first add the location of a remote repository, in our case the remote repo is on Github and we've callled it 'origin' as it's the original repository we cloned down to our system. Then we 'push' our changes to the origin's 'master' branch. When there, we can raise a new 'Pull Request' (PR) to get the changes 'merged' into the live code. Check out 'Get set-up with [Git and GitHub]'(../set-up/tutorial.html) tutorial for full details around this.
 
 #### What is `remote`?
 
-`remote` is simply the URL of your repository in any online repository hosting service, such as GitHub. The command `git remote` lists all the remote repositories you have configured. You could have the same repository stored in many places like GitHub and GitLab or Heroku and in such cases you will add a remote repository reference to you local machine, as we did above, for each of the remote repositories you have.
+`remote` is the URL of your repository in any online repository hosting service, such as GitHub. The command `git remote` lists all the remote repositories you have configured. You could have the same repository stored in many places like GitHub and GitLab or Heroku and in such cases you will add a remote repository reference to you local machine, as we did above, for each of the remote repositories you have.
+`remote` is the URL of your repository in any online repository hosting service, such as GitHub. The command `git remote` lists all the remote repositories you have configured. You could have the same repository stored in many places like GitHub and GitLab or Heroku and in such cases you will add a remote repository reference to you local machine, as we did above, for each of the remote repositories you have.
 
 The structure of the command to add a new `remote` is `git remote <add|remove> <name of remote> <url of remote>`.
 
@@ -378,9 +379,9 @@ $ git push origin master
 
 
 ### Creating a Git Config file
+Git allows us to define configuration settings that affect either just the repository we're working with, such as the URL of the remote repository location, or global settings such as Aliases for common commands (see below). There's a great example over at [https://gist.github.com/pksunkara/988716](https://gist.github.com/pksunkara/988716)
 
-Create a file called `.gitconfig` in the root directory (parent folder) of your local Git repo by typing
-`git touch .gitconfig` in the terminal window. Now practise adding the following configuration items.
+Create a file called `.gitconfig` in the root directory (parent folder) of your local Git repo by typing `git touch .gitconfig` in the terminal window. Though it may look odd, this file doesn't have an extension such as `.txt` like typical files. Now let's practise modifying this file by adding the following configuration items.
 
 ### User name and email
 If you didn't add your name and email address in the Set-up tutorial, add them now. These are added to each Git commit so it's clear who made the commit to the repo.
@@ -390,7 +391,7 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email "name@domain"
 ```
 
-If you want to just edit the `.gitconfig` file directly then add the following:
+If you want to just edit the `.gitconfig` file directly then look for it in your root folder, open in your favourite text editing software add the following:
 
 ```
 [user]
@@ -487,7 +488,7 @@ Try it out by running `git lg` in a terminal window. If the log is very long, yo
 ## Bonus
 ### Store commands in your history
 
-On the commandline you can use the up and down arrows to cycle back over the Git commands you've typed before. This can save time when retrying certain commands or allow you to fix them without retyping the whole command. We can add Add HISTSIZE and HISTFILESIZE to your `.bashrc` file to make sure plenty of commands are stored beyond the default 500. 
+On the command line you can use the up and down arrows to cycle back over the Git commands you've typed before. This can save time when retrying certain commands or allow you to fix them without retyping the whole command. We can Add HISTSIZE and HISTFILESIZE to your `.bashrc` file to make sure plenty of commands are stored beyond the default 500. 
 - **HISTSIZE** is the number of commands stored in memory when you are using the terminal.
 - **HISTFILESIZE** is the number of commands stored in memory for future sessions.
 
@@ -502,7 +503,7 @@ After typing a couple of commands in the terminal to generate some history, try 
 
 ## The next step
 
-Get learning JavaScript, HTML, CSS, Ruby and more on [Codebar](http://tutorials.codebar.io/).
+Get learning JavaScript, HTML, CSS, Ruby and more on [codebar](http://tutorials.codebar.io/).
 
 -----
 This ends **Introduction to the Git command line** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

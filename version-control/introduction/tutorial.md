@@ -70,7 +70,7 @@ There are a number of reasons we chose Git and Github, namely;
 - Github makes online collaboration easy. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to them
 
 ### Projects on Github
-Once you've worked through the Git and Github tutorials here at Codebar, there are an incredible range of projects that you'll be able to access for free. These projects include operating systems, games, programming languages, books and more.
+Once you've worked through the Git and Github tutorials here at codebar, there are an incredible range of projects that you'll be able to access for free. These projects include operating systems, games, programming languages, books and more.
 
 - Go retro with a **Windows 95** simulation: [https://github.com/felixrieseberg/windows95](https://github.com/felixrieseberg/windows95)
 
@@ -89,7 +89,7 @@ To find more projects, just enter a search in Github and see what comes back!
 
 ## Key Terms and Definitions for Git
 
-As with any technology and related tool, there's a lot of terminology realted to Git and Github. Here's some of the most common terms and their definitions:
+As with any technology and related tool, there's a lot of terminology related to Git and Github. Here's some of the most common terms and their definitions:
 
 - **Repository**: A repository is where code is stored, it can be a local or remote repository. Also called a 'repo'
 
@@ -113,7 +113,7 @@ As with any technology and related tool, there's a lot of terminology realted to
 
 ### Aim for small and focused changes
 
-When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row, changing too many things and then committing them is a great way to introduce issues that are hard to track down. What's more, it makes it harder to review changes you made and need merging into the current code base.
+When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row. Changing too many things and then committing them is a common way to introduce issues that are hard to track down. What's more, it makes it harder to review changes you made and need merging into the current code base.
 
 For example, if you want to change the position of an element, the colour of all the links on your page and the font size dimensions of all paragraphs, you should do three commits, using messages that describe what you are doing each time.
 

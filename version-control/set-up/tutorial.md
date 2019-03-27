@@ -123,7 +123,7 @@ We need to copy to the clipboard the contents of the `id_rsa_pub` file we create
 ```bash
 pbcopy < ~/.ssh/id_rsa.pub
 ```
-Now return back to the broswer where your Github account is open. Give the SSH key a `Title` and paste the file contents into the `Key` field. When done, hit the `Add SSH Key` button. You may be prompted for your password, if so enter it and hit `Confirm Password` to complete this step.
+Now return back to the browser where your Github account is open. Give the SSH key a `Title` and paste the file contents into the `Key` field. When done, hit the `Add SSH Key` button. You may be prompted for your password, if so enter it and hit `Confirm Password` to complete this step.
 
 ![Adding Key text and title](images/setup-paste-key-text.png)
 
