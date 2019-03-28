@@ -3,42 +3,29 @@ layout: page
 title: Introduction to the Git command line
 ---
 
+**PREREQUISITES:** 
+- Basic understanding of the system command line ([Introduction to the Command Line](../../command-line/introduction/tutorial.html))
+- Git installed and GitHub account set-up ([Get set-up with Git and GitHub](../set-up/tutorial.html).)
+
 ## Introduction to the Git command line
 
-**PREREQUISITE:** Basic understanding of the command line.
-
-Git is a tool that makes sharing code and collaborating with other developers really easy. It also keeps our code tracked and safe. The following examples will help you understand how to use this tool on a daily basis.
-
-## Before you begin
-Install command line Git for your operating system ([OS X](https://sourceforge.net/projects/git-osx-installer/), [Windows](http://msysgit.github.io/) or [Linux](https://git-scm.com/download/linux)) and open your terminal / command prompt.
-
-Create a directory where you will be storing all your projects. You can call it `code` or `projects`.
-
-### Setup your Git details
-
-```bash
-$ git config --global user.name "Your Name"
-$ git config --global user.email "name@domain"
-```
-
-### Setup an SSH key
-
-An SSH key is used to identify trusted computers, without entering a password.
-[Instructions on how to generate an SSH key](https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key)
-
+The following set of examples will help you understand how to use Git via the command line, while carrying out common day-to-day tasks.
 
 ## Example 1: Everyday commands
 
 
 ### Create and add your project in Git
+To start, let's make a directory to store our files and initialise the directory as a Git repository on our local system. This is the same as we did in the [Set-up tutorial]((../set-up/tutorial.html)) previously.
 
 ```bash
 $ mkdir practising-git
 $ cd practising-git
 $ git init
 ```
+> You may recall this will make the directory, change directory so we're located in it, then initialise it as an empty Git repository.
 
-### Create a file
+### Create a file.
+We can create a new file in our local directory and add a line to it at the same time, with the below.
 
 ```bash
 $ echo "<h1>Learning git</h1>" > index.html
@@ -46,15 +33,17 @@ $ echo "<h1>Learning git</h1>" > index.html
 
 > The above command will output `<h1>Learning Git</h1>` and store it in `index.html`. Open up the file and have a look.
 
-### Check the Git repository status.
+### Check the Git repository status
+To check the state of our working directory and the Staging area (where we hold files until we commit them), we use the following command.
 
 ```bash
 $ git status
 ```
 
-> The above command will tell you which files in the current directory have been changed, which files have not yet been added to the Git repository and so on.
+> The above command will tell you which files in the current directory have been changed and staged, which haven't and which files aren't being tracked by Git.
 
-### Add your file on the repository and commit your changes.
+### Add your file to the local repository and commit your changes
+When we create new files or change existing ones, we 'add' them to an index of items to be committed to the local repository. The 'commit' command saves our changes into the local repository.
 
 ```bash
 $ git add .
@@ -62,29 +51,34 @@ $ git status
 $ git commit -m 'this is my first command-line commit!'
 ```
 
-> `.` will add all the files in the current directory and subdirectories. You should only use it when initialising your repository. Rest of the time you can specify the file names to be added.
+> `.` will add **all** the files in the current directory and subdirectories. You should only use it when initialising your repository. The rest of the time it's recommended that you specify the individual file names to be added.
 
-### Check the Git commit history.
+### Check the Git commit history
+To check a list of commits in a repository use the `log` command.
 
 ```bash
 $ git log
 ```
 
-### Transferring project repository to an online service
+> Don't forget, you can hit `q` to quit out of a log if it's too long.
 
-First you need to create an account to the service of your choice ([GitHub](https://github.com/join), [GitLab](https://gitlab.com/)). Then, create a new project (or repository).
+### Transferring files from our local project repository to an online service
 
-Copy the information about adding an existing project to the repository which should be something like the details below.
+Before we can add files to a remote repository, we need to have created an account with a service that is hosting that repository. If you've not done that yet, head over to our tutorial: Get set-up with [Git and GitHub](../set-up/tutorial.html).
 
+If you've already done that, then great - just run the commands below, adding in the correct remote repository URL, such as `https://github.com/codebar/tutorials.git`.
 
 ```bash
 $ git remote add origin <repository-url>
 $ git push -u origin master
 ```
 
-#### What is `remote`
+> This is worth repeating: We first add the location of a remote repository, in our case the remote repo is on Github and we've callled it 'origin' as it's the original repository we cloned down to our system. Then we 'push' our changes to the origin's 'master' branch. When there, we can raise a new 'Pull Request' (PR) to get the changes 'merged' into the live code. Check out 'Get set-up with [Git and GitHub]'(../set-up/tutorial.html) tutorial for full details around this.
 
-`remote` is simply the URL of your repository in any online repository hosting services. The `git remote` lists all the remote repositories you have configured. You could have the same repository stored in many places like GitHub and GitLab or Heroku and in such cases you will have a remote configured for each of the remote repository you have.
+#### What is `remote`?
+
+`remote` is the URL of your repository in any online repository hosting service, such as GitHub. The command `git remote` lists all the remote repositories you have configured. You could have the same repository stored in many places like GitHub and GitLab or Heroku and in such cases you will add a remote repository reference to you local machine, as we did above, for each of the remote repositories you have.
+`remote` is the URL of your repository in any online repository hosting service, such as GitHub. The command `git remote` lists all the remote repositories you have configured. You could have the same repository stored in many places like GitHub and GitLab or Heroku and in such cases you will add a remote repository reference to you local machine, as we did above, for each of the remote repositories you have.
 
 The structure of the command to add a new `remote` is `git remote <add|remove> <name of remote> <url of remote>`.
 
@@ -158,7 +152,7 @@ $ git push origin master
 $ git log
 ```
 
-### Check your code online (from the GitHub or GitLab website).
+### Check your code online (from the GitHub or GitLab website)
 
 
 # Example 3: Verifying changes before any commit
@@ -276,7 +270,7 @@ $ git commit -m 'Oops, I just deleted my list'
 
 > Can you explain the commands you just used?
 
-### Check the log history.
+### Check the log history
 
 ```bash
 $ git log
@@ -298,7 +292,7 @@ commit c0bb15bf9f75613930c66760b90b2ccc1af0d2d6
 ...
 ```
 
-### Resetting the last commit.
+### Resetting the last commit
 
 ```bash
 $ git reset HEAD^
@@ -327,7 +321,7 @@ $ git status
 > Do you remember how to discard the changes? Have a look earlier in the tutorial.
 
 
-# Example 6: Revert committed and pushed changes.
+# Example 6: Revert committed and pushed changes
 
 You can correct something you pushed accidentally by changing history. In the following example you will see how can you revert the last pushed commit.
 
@@ -375,89 +369,141 @@ commit c0bb15bf9f75613930c66760b90b2ccc1af0d2d6
 $ git revert f4d8d2c2ca851c73176641109172780487da9c1d
 ```
 
-After reverting the changes you have to push the code to the remote repo to apply them
+After reverting the changes, you have to push the code to the remote repo to apply them
 
 ```bash
-git push origin master
+$ git push origin master
 ```
 
 # Extras
 
-Following are some good resources to to help you set up Git.
-https://help.github.com/articles/set-up-git/
 
-## Configuring your Git environment
+### Creating a Git Config file
+Git allows us to define configuration settings that affect either just the repository we're working with, such as the URL of the remote repository location, or global settings such as Aliases for common commands (see below). There's a great example over at [https://gist.github.com/pksunkara/988716](https://gist.github.com/pksunkara/988716)
 
-Create the file `.gitconfig` in your root directory and add the following configuration
+Create a file called `.gitconfig` in the root directory (parent folder) of your local Git repo by typing `git touch .gitconfig` in the terminal window. Though it may look odd, this file doesn't have an extension such as `.txt` like typical files. Now let's practise modifying this file by adding the following configuration items.
+
+### User name and email
+If you didn't add your name and email address in the Set-up tutorial, add them now. These are added to each Git commit so it's clear who made the commit to the repo.
 
 ```bash
+$ git config --global user.name "Your Name"
+$ git config --global user.email "name@domain"
+```
+
+If you want to just edit the `.gitconfig` file directly then look for it in your root folder, open in your favourite text editing software add the following:
+
+```
 [user]
-  name = <Your name>
-  email = <Your email>
+    name = "Your Name"
+    email = "Your email address"
 ```
 
 ### Creating shortcuts (aliases)
+In order to save time and key strokes when working on the command line in a terminal window, you can create aliases for your most commonly used Git commands. Here are some examples.
+
+```bash
+$ git config --global alias.cm 'commit -m'
+$ git config --global alias.co checkout
+$ git config --global alias.st status
+````
+
+To use them just type `git cm "Message here"` or `git st` for example. Simply put, use the alias in place of the full text Git command, then add any switches on the end (such as a commit message) as you would normally. If you want to just edit the `.gitconfig` file directly then you would add the following section:
 
 ```
 [alias]
-  ci = commit
-  dc = diff --cached
+    cm = commit --message  
+    co = checkout
+    st = status
 ```
 
 > Can you think of another command that you would find handy to shorten down?
 
 ### Telling Git to try and fix whitespace issues before committing
+A common issue when editing files, especially if the file has been worked on using both Mac and Windows systems, is having a) a trailing whitespace at the end of a line of code, b) a line that is entirely whitespace or c) having a leading whitespace before a tab. When performing a commit where a file has these, Git will prompt you about how (and if) you'd like to fix them. We can tell Git to always fix whitespace issues by adding the following to our `.gitconfig` file:
+
+```bash
+$ git config --global apply.whitespace fix
+```
+
+If you prefer to just edit the `.gitconfig` file directly, then you would add the following section:
 
 ```
 [apply]
   whitespace = fix
 ```
 
-### Ignoring files across directories
+### Ignoring files across directories (.gitignore)
+Very often you have certain types of files or directories in the folder where your code and other assets are. When we commit our code to the Git repository every file will be commited and added to the repository. If you want to exclude certain files on your system from being included in the Git repository, we can add a `.gitignore` file to do this. Make sure this file is included in your repo, to share the ignore rules with others.
 
+Firstly, look for the `.gitignore` file in the root of the directory you're working in. If you have one, skip to the next step, if not let's make one now.
+
+```bash
+$ git touch .gitignore
+```
+
+To make a reference between the `.gitconfig` file we were working with and the `.gitignore` file we just made, execute the following command:
+```bash
+$ git config --global core.excludesfile ~/.gitignore
+```
+
+If you prefer, to just edit the `.gitignore` file directly, then you would add the following section:
 ```
 [core]
   excludesfile = ~/.gitignore
 ```
 
-To apply this you need to create a .gitignore file in your root path. There you can add either specific files or extensions that you always want excluded. This is a handy list to help you start
+Within the `.gitignore` file you can add specific files or extensions that you always want excluded. Here's some common examples that you may want to exclude.
 
 ```
-*.DS_Store
-*~
-*.log
-*.zip
-*.pkg
-*.rar
+    *.DS_Store
+    *~
+    *.log
+    *.zip
+    *.pkg
+    *.rar
 ```
 
 > Do you know what these files are? You normally wouldn't want to commit logs or packages.
+> For a more complete list of files you may want to exclude have a look at [https://gist.github.com/octocat/9257657](check out the list from Octocat).
 
 
-### Pimping your log history
+### Prettify your log history
+It's possible to make your Git logs easier to read by changing the colour and style of them.
 
-In your aliases add this as an alias for viewing Git logs
+On the command line, run the following:
+
+```bash
+$ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+```
+
+As previously, if you prefer to edit the `.gitconfig` file directly, add the following as an alias for viewing Git logs
 ```
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 ```
 
-Try it out by running `git lg`
+Try it out by running `git lg` in a terminal window. If the log is very long, you can quit out of the log by hitting `q` on the keyboard.
 
+
+## Bonus
 ### Store commands in your history
 
-Add HISTSIZE and HISTFILESIZE to your .bashrc file.  **HISTSIZE** is the number of commands stored in memory when you are using the terminal. **HISTFILESIZE** is the number of commands stored in memory when you are using the terminal
+On the command line you can use the up and down arrows to cycle back over the Git commands you've typed before. This can save time when retrying certain commands or allow you to fix them without retyping the whole command. We can Add HISTSIZE and HISTFILESIZE to your `.bashrc` file to make sure plenty of commands are stored beyond the default 500. 
+- **HISTSIZE** is the number of commands stored in memory when you are using the terminal.
+- **HISTFILESIZE** is the number of commands stored in memory for future sessions.
 
 ```bash
 HISTSIZE=10000
 HISTFILESIZE=20000
 ```
 
-After typing a couple of command in the terminal, try executing
-
-Ctrl+R followed by the command you want to run e.g. `git lg`
-
+After typing a couple of commands in the terminal to generate some history, try executing `Ctrl`+`R` followed by the command you want to run e.g. `git lg` or just use the arrows on the keyboard to cycle back through them.
 
 > You can see the entire history by running `history`
 
----
-This ends **Git: Introduction to command line** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+## The next step
+
+Get learning JavaScript, HTML, CSS, Ruby and more on [codebar](http://tutorials.codebar.io/).
+
+-----
+This ends **Introduction to the Git command line** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

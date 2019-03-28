@@ -1,25 +1,25 @@
 ---
 layout: page
-title: Introduction to version control and git
+title: Introduction to Version Control and Git
 ---
 
 ## What is version control?
 
-Version control is a way to manage and track any changes you make to your files.  If you've been using online services such as Google Docs or Wikipedia, then you'll already have been working with documents and pages that use a version control system.
+Version control is a way to manage and track any changes you make to your files. If you've been using online services such as Google Docs or Wikipedia, then you'll already have been working with documents and pages that use a version control system.
 
-### Google docs revision history
+### Google Docs revision history
 
-Google docs, for example, keeps a revision history of any document you create and modify.
+Google Docs, for example, keeps a revision history of any document you create and modify.
 
 Have a look [at this Google document](https://docs.google.com/document/d/10kHJKXHLa-V8G6vVQoDiS6cTPvJoXnj_-SDvfQdziFk/edit?usp=sharing).
 
 - Select to see the revision history (you must be logged in with your Google account to do that!)
 
-![](images/see_revision_history.png)
+![See Revision History](images/see_revision_history.png)
 
 - And the more detailed version
 
-![](images/more_detailed.png)
+![More Detailed Revision History](images/more_detailed.png)
 
 Scroll through the revisions, from the bottom up. You should be able to see each set of changes highlighted in green.
 
@@ -29,130 +29,108 @@ Wikipedia also holds a history of all changes.
 - Go to [this document](https://en.wikipedia.org/wiki/Women_in_computing)
 - Click **view history**
 
-![](images/wikipedia-view-history.png)
+![Wikipedia View History](images/wikipedia-view-history.png)
 
 - Try and have a look at the first revision of the page, by going back. It's dated back to 2005!
 - Click **curr**, that will show you the [differences between the first and the latest entry](https://en.wikipedia.org/w/index.php?title=Women_in_computing&diff=583521812&oldid=19298328)
 
-![](images/wikipedia-diff.png)
+![Wikipedia Diff Example](images/wikipedia-diff.png)
 
 ## Why do you need Version Control?
 
 - When used on a regular basis, version control helps you to store your files safely. It makes it easy to figure out what broke your code, as you can roll back to a previous version and work out when things last worked as expected.
-    - With no version control in place you'll only have one copy of your file, then when it breaks there's no way to get back to good code!
+    - With no version control in place you'll only have one copy of your file, then when it breaks there's likely no way to get back to working code!
 
 - It is also helpful when working with other people as it combines all the changes together and tracks who, why and when it changed.
     - In the work environment this may be essential to know for example, what issue the change fixes or customer requirement it relates to.
 
 ## Code version control systems
 
-There are a number of different version control systems. The most popular ones are **svn** (or Subversion), **cvs**, **Mercurial** and **Git**.
+There are a number of different version control systems. The most popular ones are **SVN** (or Subversion), **CVS**, **Mercurial** and **Git**. Some are paid for and others are free.
 
-We will be using **Git**.
+We will be using **Git** with **Github**:
 
-### Why Git?
+- **Git** is a tool that makes sharing code and collaborating with other developers easy. It also keeps our code tracked and safe.
+- **Github** is the web based hosting service for our code repositories that we interact with through the Github web pages.
 
-There are a number of reasons we chose Git, namely;
+We'll use Git installed on our system to manage code we work on and then push our code to Github hosted repositories. 
 
-- A lot of learning resources are publicly available
+### Why Git and Github?
 
-- Does not require you to be connected to the internet to use
+There are a number of reasons we chose Git and Github, namely;
 
-- All your tracked changes stay on your machine until you are happy with them, and want to make them part of your codebase
+- Lots of learning resources are publicly available
+
+- Git does not require you to be connected to the internet to use
+
+- All your tracked changes stay on your machine until you are happy with them, and want to make them part of your codebase on Github
 
 - Will tell you if someone has made changes since you last pushed code and urge you to update first and resolve issues
 
-- Github and online collaboration. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to them
+- Github makes online collaboration easy. Open source code is a big part of today's life. By being able to retrieve and help existing projects, you can also contribute to them
 
-Some popular projects using Git:
+### Projects on Github
+Once you've worked through the Git and Github tutorials here at codebar, there are an incredible range of projects that you'll be able to access for free. These projects include operating systems, games, programming languages, books and more.
 
-- Android
+- Go retro with a **Windows 95** simulation: [https://github.com/felixrieseberg/windows95](https://github.com/felixrieseberg/windows95)
 
-- Linux
+- Learn more with free **Programming Books**: [https://github.com/EbookFoundation/free-programming-books](https://github.com/EbookFoundation/free-programming-books)
 
-- Python
+- Grab some free **Games** kept on Github: [https://github.com/leereilly/games](https://github.com/leereilly/games)
 
-- Ruby
+- Amazing **Android Apps** and learning resources: [https://github.com/Mybridge/amazing-android-apps](https://github.com/Mybridge/amazing-android-apps)
 
-- PHP
+- Ideas for **cool projects** you can build or contribute to [https://github.com/open-source-ideas/open-source-ideas](https://github.com/open-source-ideas/open-source-ideas)
 
-# A bit more about Git
+- Grab a copy of an extensive **Git Cheatsheet** for reference [https://github.com/arslanbilal/git-cheat-sheet](https://github.com/arslanbilal/git-cheat-sheet)
 
-## Terminology
+To find more projects, just enter a search in Github and see what comes back!
 
-As with any technology and related tool, there's a lot of terminollgy used. Here's some of the most common terms and their definitions:
 
-- **Repository**: A repository is where code is stored
+## Key Terms and Definitions for Git
 
-- **Checkout**: When you retrieve code from a **repository**, to you local machine
+As with any technology and related tool, there's a lot of terminology related to Git and Github. Here's some of the most common terms and their definitions:
 
-- **Commit**: Applying any changes you have made to the **repository**
+- **Repository**: A repository is where code is stored, it can be a local or remote repository. Also called a 'repo'
 
-#### Aim for small and focused changes
+- **Clone**: Copy a repository so you can pull it down to your local machine and start editing the code
 
-When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row, changing too many things and then committing them is a great way to introduce issues that are hard to track down.
+- **Pull**: Get the latest version of code from a reposity
+
+- **Push**: Send your code changes to the remote repository
+
+- **Add**: Adds your chosen changes to the local Stage area, ready for a commit and push
+
+- **Stage**: An index of changes you are preparing to commit to the repository
+
+- **Status**: Shows the state of the working directory and the Staging area
+
+- **Commit**: Applying any changes you have made into the repository
+
+
+
+## Good Practices when Working with Git
+
+### Aim for small and focused changes
+
+When using version control, you should commit every time you do a small piece of work, rather than working for hours in a row. Changing too many things and then committing them is a common way to introduce issues that are hard to track down. What's more, it makes it harder to review changes you made and need merging into the current code base.
 
 For example, if you want to change the position of an element, the colour of all the links on your page and the font size dimensions of all paragraphs, you should do three commits, using messages that describe what you are doing each time.
 
 ### Write meaningful commit messages
 
-Every time you commit a change use a message that describes your change clearly. In a few months time you will have difficulty remembering why you applied a change if your messages say _changing some CSS_, _another commit_ or _more changes_
+Every time you commit a change use a message that describes your change clearly. In a few months time you will have difficulty remembering why you applied a change if your messages say _changing some CSS_, _another commit_ or _more changes_.
 
 Try using messages such as _repositioned image to look better on page_ or _resolved positioning issue for Firefox_.
 
-# The next step!
+### Always check for updates by others
+When you come back to coding, be sure to `pull` any changes into your local repository that others may have committed to the repository since you last worked on the code. If there are changes you don't pull in you can get **Merge Conflicts**, where two sets of changes, the ones from other people and yours, need to be worked through to decide which change is kept. Resolving merge conflicts is notoriously tricky - small, frequent commits followed by a pull are a great way to avoid merge conflicts.
 
-Sign up to [Github](https://github.com/)
 
-Download [Github Desktop](https://desktop.github.com/) (for Mac or Windows).
+## The next step
 
-## Now what?
-
-Now that you have the Github client setup on your machine, we will spend some time adding what you have created in the HTML & CSS lessons to an internet repository! Before you start make sure the Github client is running and you are signed in.
-
-1. Create a new repository by clicking the `Create New Repository` button
-
-	![](images/create-new-repository.png)
-
-2. In your text editor, open the directory you just created and create a README.md file with the following content:
-
-	_This is where I store the work I have done at codebar._
-
-3. Go back to the Github client and commit the file by filling out the `Summary` field and hitting the `Commit to master` button
-	
-	![](images/add-readme.png)
-
-4. Now, create a new branch called **gh-pages**
-
-	![](images/create-new-branch.png)
-
-5. In the directory, create a subdirectory **lesson1** and move the **html** file you created at the first session and all the other relevant files and directories (e.g. /images)
-
-6. Now, link the file from the root of your project by creating an `index.html` file and adding a link to the page
-
-	```
-	<a href='lesson1/index.html'>Lesson 1 - Introduction to HTML </a>
-	```
-	> Don't forget to rename index to whatever you have named your file!
-
-7. Commit your changes to the gh-pages branch
-
-	![](images/commit-changes.png)
-
-8. Once you committed your changes publish your work by clicking the `Publish repository` button
-
-	![](images/publish-repository.png)
-
-9. View your work on the web!
-
-	To access your work, go to `http://<username>.github.io/codebar`
-
-10. Repeat the process to list the rest of the tutorials you have worked on on the page as well.
-
-## Bonus
-
-This is your personal page. Use what you learned in the previous lessons to style it, make it look pretty, and what we learned today to commit and publish your changes.
+Get set-up with [Git and GitHub](../set-up/tutorial.html).
 
 -----
 
-This ends our _Introduction to version control and git_ lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **Introduction to version control with Git** lesson. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
