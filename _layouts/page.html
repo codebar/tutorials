@@ -27,8 +27,10 @@ layout: default
   ]{% endcapture %}
 {% endif %}
 
+{% if files %}
 <script>
   var Files = {
     all : {{ files }}
   }
 </script>
+{% endif %}
