@@ -82,6 +82,13 @@ If we want to see a few stats for each commit we can use the --stat command.
 $ git log --stat
 ```
 
+Even can do graphs with the --graph command. It will display an ASCII graph of the branch and merge history beside the log output. 
+We can use this command with the --oneline command to display the commits in an alternate format in one line. 
+
+```bash
+$ git log --graph --oneline
+```
+
 ### Transferring files from our local project repository to an online service
 
 Before we can add files to a remote repository, we need to have created an account with a service that is hosting that repository. If you've not done that yet, head over to our tutorial: Get set-up with [Git and GitHub](../set-up/tutorial.html).
