@@ -218,7 +218,7 @@ You can set a background image to any element on your page. To do this you decla
 
 `background: url(path/to/image)`
 
-You can also set multiple background images, specify their dimension, position and attachment. To set multiple backgrounds, you simple need to specify them separating them by commas.
+You can also set multiple background images, specify their dimension, position and attachment. To set multiple backgrounds, you simply need to specify them, separated by commas.
 
 
 `background: url(path/to/image), url(path/to/other/image), ...`
@@ -237,6 +237,8 @@ First let's set two background images, the first positioned on the right and the
 background: url('background-right.jpg') right top no-repeat,
             url('background-left.jpg') left no-repeat;
 ```
+
+> Which element should this property be in?
 
 By default, a background image repeats itself to fill in the container. We don't want that, that's where the **no-repeat** property we specified comes into place.
 
@@ -329,7 +331,7 @@ p.about {
 
 ### What is an em
 
-The name of an `em` stands for an ephemeral unit. It was originally used to describe that it was equal to the **M** character as it was commonly casted as the full-width of the square "block which are used in printing presses.
+The name of an `em` stands for an ephemeral unit. It was originally used to describe that it was equal to the **M** character as it was commonly casted as the full-width of the square "block" used in printing presses.
 
 By using `em` instead of `px` to set the font-size, we are keeping it relative to the default font size. So 0.9em is 0.9 times the size that would have otherwise applied to that container.
 
@@ -404,11 +406,9 @@ Let's make it look even better.
 
 In this part we will apply a different style to every second child element of our list.
 
-Thanks to the following great CSS selectors, this is quite simple to do.
+This is simple thanks to the great CSS selectors `:nth-child(odd)` and `:nth-child(even)`.
 
-`:nth-child(odd)` and `:nth-child(even)` to do that.
-
-In our case, we only want to change the style of every odd row. Achieving that is quite simple!
+In our case, we only want to change the style of every odd row.
 
 ```css
 .achievements li:nth-child(odd) {
