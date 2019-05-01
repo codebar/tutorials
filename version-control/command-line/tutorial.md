@@ -64,7 +64,7 @@ $ git log
 
 By default, with no arguments, git log shows the most recent commits first.
 
-If we want to limit the number of log entries displayed we can use the a number as an option, such as -3 to show only the last three entries. 
+If we want to limit the number of log entries displayed we can use a number as an option, such as -3 to show only the last three entries. 
 
 ```bash
 $ git log -3
@@ -82,7 +82,7 @@ If we want to see a few stats for each commit we can use the --stat command.
 $ git log --stat
 ```
 
-Even can do graphs with the --graph command. It will display an ASCII graph of the branch and merge history beside the log output. 
+With the --graph command we will be able to draw a graphical representation of the commits. It will display an ASCII graph of the branch and merge history beside the log output. 
 We can use this command with the --oneline command to display the commits in an alternate format in one line. 
 
 ```bash
