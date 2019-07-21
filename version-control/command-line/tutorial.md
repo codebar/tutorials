@@ -62,6 +62,33 @@ $ git log
 
 > Don't forget, you can hit `q` to quit out of a log if it's too long.
 
+By default, with no arguments, git log shows the most recent commits first.
+
+If we want to limit the number of log entries displayed we can use a number as an option, such as -3 to show only the last three entries. 
+
+```bash
+$ git log -3
+```
+
+A very useful option is the --patch or -p. This command shows the difference of each commit. This can be very helpful to see what has changed on the last commited changes.
+
+```bash
+$ git log -p
+```
+
+If we want to see a few stats for each commit we can use the --stat command.
+
+```bash
+$ git log --stat
+```
+
+With the --graph command we will be able to draw a graphical representation of the commits. It will display an ASCII graph of the branch and merge history beside the log output. 
+We can use this command with the --oneline command to display the commits in an alternate format in one line. 
+
+```bash
+$ git log --graph --oneline
+```
+
 ### Transferring files from our local project repository to an online service
 
 Before we can add files to a remote repository, we need to have created an account with a service that is hosting that repository. If you've not done that yet, head over to our tutorial: Get set-up with [Git and GitHub](../set-up/tutorial.html).
