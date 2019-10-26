@@ -30,7 +30,7 @@ outdated these days, so we need to upgrade:
    the Free software license as well as enter your administrator password. Just
    follow the prompts and you'll be fine.
 
-If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3](http://www.diveintopython3.net/installing-python.html#macosx).
+If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3](https://diveintopython3.problemsolving.io/installing-python.html#macosx).
 
 ### Windows:
 
@@ -44,7 +44,7 @@ If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3]
 5. Scroll down to the bottom and choose to *Add python.exe to PATH*.
 6. Continue clicking *Next* until it's installed.
 
-If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3](http://www.diveintopython3.net/installing-python.html#windows).
+If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3](https://diveintopython3.problemsolving.io/installing-python.html#windows).
 
 ### Linux
 
@@ -70,7 +70,7 @@ have to use the `scl` workaround:
 4. Run `scn enable python3 /bin/bash`.  This will put you into a shell that
    supports Python 3.
 
-For more information on this process, take a look at [this tutorial](https://devops.profitbricks.com/tutorials/install-python-3-in-centos-7/).
+For more information on this process, take a look at [this tutorial](https://devops.ionos.com/tutorials/install-python-3-on-centos-7/).
 
 #### Arch
 

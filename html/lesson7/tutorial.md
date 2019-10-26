@@ -199,7 +199,7 @@ Look at your changes in Chrome (Chrome has some great developer tools which are 
 
 <img src="images/inspect.png" alt="inspect tool">
 
-Click on the icon in your inspect tool to open up the <a href="https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports?hl=en" target="_blank">device toolbar</a>. This view will show you what your site will look like on a mobile device, it has a few different options for default device widths, or you can set it to responsive and drag the width and height about yourself. For now we'll set it to responsive and drop the width down to about 320, this is a very narrow screen.
+Click on the icon in your inspect tool to open up the <a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/?hl=en#device" target="_blank">device toolbar</a>. This view will show you what your site will look like on a mobile device, it has a few different options for default device widths, or you can set it to responsive and drag the width and height about yourself. For now we'll set it to responsive and drop the width down to about 320, this is a very narrow screen.
 
 <aside class="notice">
 You might notice that the white text in your header looks blocky and bolder than it should. This is caused by bad rendering of light fonts on dark backgrounds by chrome (and often other browsers) which tends to prioritise speed over beauty when rendering fonts. You can tell chrome to give you better looking text by putting `-webkit-font-smoothing: antialiased;` on the body selector.
