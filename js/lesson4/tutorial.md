@@ -227,6 +227,141 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 > Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
+## ~~Exercise 2 - Trivia!~~
+
+
+For this exercise, we will build a web app that generates trivia questions, using this open trivia questions api: https://opentdb.com/api_config.php
+
+### What we will be doing:
+
+1. Retrieve and log quiz questions `https://opentdb.com/api.php?amount=10`
+
+2. Write a function that displays each question
+
+3. **Bonus** Set the quiz difficulty, category or type using the API URL generator. Then display whatever you'd like with the API response data.
+
+4. **Bonus Bonus** Add a button to reveal the answers to the questions
+
+### Retrieve and render log questions
+
+Firstly, here is an introduction to fetch() from Google - [Introduction to fetch() by Matt Gaunt](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
+
+There is a whole lot of jargon in there but what the fetch() function does is simplify things for the developer when making a request to an api.
+
+Lets first create the fetch request to the trivia api:
+
+```js
+fetch('https://opentdb.com/api.php?amount=10')
+  .then(function(response) {
+    return response.json()
+  })
+  .then(function(data) {
+      //work with the json response data here
+      console.log(data)
+    })
+  })
+
+```
+We send a request with `fetch`, returning a Promise to us in the form of the response.  This response is passed into a
+`then()` function (a Promise) where we transform it into something readable - JSON. When that Promise is resolved _then_ (`then()`) we can use this `response.json()` how we want to use it in our code when that Promise is resolved (a `console.log()` in this example).
+For more information on Promises and asynchronous functions check out [javascript.info/promise-basics](https://javascript.info/promise-basics).  But we're here to play with APIs so let's get on with the tutorial.
+
+Now open the `index.html` file in a web browser and then inspect the page - here is an article on how to do so in every browser: [How to Inspect Web Page Elements](https://www.lifewire.com/get-inspect-element-tool-for-browser-756549).
+Once you have done so a panel will appear and it will show you the html elements on your page.  In this panel there is a 'Console' tab, click this and see what has been logged.
+
+You should see something that looks like this:
+```js
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "How many games in the Crash Bandicoot series were released on the original Playstation?",
+            "correct_answer": "5",
+            "incorrect_answers": [
+                "4",
+                "3",
+                "6"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "League of Legends, DOTA 2, Smite and Heroes of the Storm are all part of which game genre?",
+            "correct_answer": "Multiplayer Online Battle Arena (MOBA)",
+            "incorrect_answers": [
+                "Real Time Strategy (RTS)",
+                "First Person Shooter (FPS)",
+                "Role Playing Game (RPG)"
+            ]
+        },
+        ...
+    ]
+}
+```
+
+It is returning 10 questions because we asked the api to return 10 with the query parameter `?amount=10` on the end of the URL.
+
+Okay lets now put the fetch request inside a function:
+```js
+function fetchQuizQuestions() {
+  // add fetch function in here
+}
+```
+
+### Write a function that displays each question
+
+Now we need to render the questions onto our webpage.  We will add them in a list format, for that we use the <li> html tag. This will be going inside the <ul> tag that we have in `index.html`, it has the id "questions". Refer back to Lesson 2 on how to create html elements and add data to them.
+
+```js
+function renderQuizQuestions() {
+
+}
+```
+
+Put this into the second `then()` (Promise) of your fetch function, something like:
+
+```js
+fetch(...)
+.then(...)
+.then(function(data) {
+  renderQuizQuestions(data)
+})
+```
+
+Because fetch() is an asynchronous function the rest of the code in your file could run at the same time as the fetch
+function, meaning that the fetched data may not appear if used in an outside function, for example:
+
+```js
+function fetchQuizQuestions() {...}
+
+function renderQuizQuestions() {
+  const data = fetchQuizQuestions()
+
+  // render the data into UI components
+}
+```
+
+The `data` inside `renderQuizQuestions()` will come back as undefined as it is run before the asynchronous function has resolved.
+
+So now you should hopefully have some Questions rendered onto your webpage, if not please ask for help from a Codebar coach, a fellow Codebar attendee or checkout the Codebar Slack chatrooms.
+
+### **BONUS** Play around with the API URL generator
+
+The trivia api we're using is pretty cool and you can configure it in a few ways, check it out: [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php).
+If you select a few of the options and then generate an api, you could get something like this:
+
+`https://opentdb.com/api.php?amount=20&category=10&difficulty=medium`
+
+We have `amount=20`, this is the amount of questions. `category=10` this is the book category, so each category is mapped to a number in the API. And we have `difficulty=medium`, setting the difficulty of the questions.
+You can play around with this a lot but here let's set the difficulty to hard and generate an API URL with some general knowledge questions.
+
+
+There's a lot of data that comes with the response as well, we could set a new
+
 
 ## ~~Exercise 2 - BBC's tomorrow's TV schedule~~
 
