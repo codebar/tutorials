@@ -27,17 +27,17 @@ By the end of this tutorial you will have built:
 
 Every time the browser fetches data from a server (which could be a page, an image, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then sends back a **response**. An API is an easy way of fetching information from a remote service, in a way that's easy for a computer to understand.
 
-GitHub offers a [simple API](https://status.github.com/api) for viewing its current and historical server availability.
+GitHub offers a [simple API](https://www.githubstatus.com/api/) for viewing its current and historical server availability.
 
 > Availability means whether or not the GitHub website was accessible to users and accepting traffic. If your website is down, it is not available.
 
 You can access an API in your web browser. Just pop the following into the address bar:
 
-    https://status.github.com/api.json
+    https://www.githubstatus.com/api/v2/summary.json
 
 If you are on a mac or a linux/unix machine, you can access the API using curl:
 
-    curl https://status.github.com/api.json
+    curl https://www.githubstatus.com/api/v2/summary.json
 
 > Paste the following command into Terminal, which you can find in Finder - first go into the Applications folder, then Utilities.
 
