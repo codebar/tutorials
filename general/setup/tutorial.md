@@ -20,7 +20,7 @@ Programmers use **text editors** to write code. You could use [Notepad](https://
 - **Project navigation and tabs** helps you move between the different files in your project.
 - **Auto-completion** shows you keywords you could use to finish what you're typing, so you don't have to remember all the possible commands.
 
-We recommend you use **[Atom](https://atom.io/)** or **[Visual Studio Code](https://code.visualstudio.com/)** at codebar. Both are free, open source, and run on Windows, Mac, and Linux. **[Sublime Text 3](http://www.sublimetext.com/)** is another popular choice. It's free to download & use for as long as you like (though it will nag you intermittently to buy it when you save your work), and it runs on Windows, Mac and Linux.
+We recommend you use **[Atom](https://atom.io/)** or **[Visual Studio Code](https://code.visualstudio.com/)** at codebar. Both are free, open source, and run on Windows, Mac, and Linux. **[Sublime Text 3](http://www.sublimetext.com/)** is another popular choice. It's free to download and use for as long as you like (though it will nag you intermittently to buy it when you save your work), and it runs on Windows, Mac and Linux.
 
 
 ## A web browser (required)
