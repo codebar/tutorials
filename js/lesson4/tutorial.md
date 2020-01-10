@@ -231,6 +231,7 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 
 For this exercise, we will build a web app that generates trivia questions, using this open trivia questions api: https://opentdb.com/api_config.php
+[Download](https://gist.github.com/kyorkston/a2768287fe15fc693da3dc62e8a8d697/download) the exercise files or clone them directly from github `git clone https://gist.github.com/a2768287fe15fc693da3dc62e8a8d697.git`. Shoutout to [despo](https://gist.github.com/despo) for originially making these files!
 
 ### What we will be doing:
 
@@ -239,8 +240,6 @@ For this exercise, we will build a web app that generates trivia questions, usin
 2. Write a function that displays each question
 
 3. **Bonus** Set the quiz difficulty, category or type using the API URL generator. Then display whatever you'd like with the API response data.
-
-4. **Bonus Bonus** Add a button to reveal the answers to the questions
 
 ### Retrieve and render log questions
 
@@ -357,9 +356,11 @@ If you select a few of the options and then generate an api, you could get somet
 `https://opentdb.com/api.php?amount=20&category=10&difficulty=medium`
 
 We have `amount=20`, this is the amount of questions. `category=10` this is the book category, so each category is mapped to a number in the API. And we have `difficulty=medium`, setting the difficulty of the questions.
-You can play around with this a lot but here let's set the difficulty to hard and generate an API URL with some general knowledge questions.
+You can play around with this a lot and its a simple interface and you can make the questions as easy or as difficult as you want!
 
-There's a lot of data that comes with the response as well, we could set a new
+Now that you can render the questions how about now rendering the answers?
+Perhaps you could have a button to reveal the answer?
+Or if you select the multi-choice questions you could add some fun css to let the user know if they got the answer right or wrong!
 
 
 ---
