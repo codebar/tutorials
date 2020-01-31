@@ -13,13 +13,14 @@ In this tutorial we are going to look at:
 * JSON
 * Loading API data into web pages
 * Using jQuery AJAX functionality
+* Using the fetch() API
 
 ### Goal
 
 By the end of this tutorial you will have built:
 
 * A webpage that can retrieve information about a specified GitHub user
-* A webpage that can show the upcoming schedule for BBC shows
+* A webpage that can show random generated quiz questions
 
 # HTTP Requests
 
@@ -227,15 +228,15 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 > Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
-## ~~Exercise 2 - Trivia!~~
+## Exercise 2 - Trivia!
 
 
-For this exercise, we will build a web app that generates trivia questions, using this open trivia questions api: https://opentdb.com/api_config.php
+For this exercise, we will build a web app that generates trivia questions, using this open trivia questions api: https://opentdb.com/api_config.php.
 [Download](https://gist.github.com/kyorkston/a2768287fe15fc693da3dc62e8a8d697/download) the exercise files or clone them directly from github `git clone https://gist.github.com/a2768287fe15fc693da3dc62e8a8d697.git`. Shoutout to [despo](https://gist.github.com/despo) for originially making these files!
 
 ### What we will be doing:
 
-1. Retrieve and log quiz questions `https://opentdb.com/api.php?amount=10`
+1. Retrieve and log quiz questions usinf the quiz API: `https://opentdb.com/api.php?amount=10`
 
 2. Write a function that displays each question
 
@@ -243,11 +244,11 @@ For this exercise, we will build a web app that generates trivia questions, usin
 
 ### Retrieve and render log questions
 
-Firstly, here is an introduction to fetch() from Google - [Introduction to fetch() by Matt Gaunt](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
+Firstly, here is an introduction to the fetch() Web API - [Introduction to fetch() by Matt Gaunt](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
 
-There is a whole lot of jargon in there but what the fetch() function does is simplify things for the developer when making a request to an api.
+There is a whole lot of jargon in there but what the fetch() function does is simplify things for the developer when making a request to an API.
 
-Lets first create the fetch request to the trivia api:
+Lets first create the fetch request to the trivia API:
 
 ```js
 fetch('https://opentdb.com/api.php?amount=10')
@@ -257,18 +258,17 @@ fetch('https://opentdb.com/api.php?amount=10')
   .then(function(data) {
       //work with the json response data here
       console.log(data)
-    })
   })
 
 ```
-We send a request with `fetch`, returning a Promise to us in the form of the response.  This response is passed into a
-`then()` function (a Promise) where we transform it into something readable - JSON. When that Promise is resolved _then_ (`then()`) we can use this `response.json()` how we want to use it in our code when that Promise is resolved (a `console.log()` in this example).
-For more information on Promises and asynchronous functions check out [javascript.info/promise-basics](https://javascript.info/promise-basics).  But we're here to play with APIs so let's get on with the tutorial.
+We send a request with `fetch`, the reposnse returns a Promise. This response is passed into a
+`then()` function (a Promise) where we transform it into something readable and usable - a JSON object. When that Promise resolves _then_ (`then()`) we can use the response (`response.json()`) however we want to use it in our code when that Promise is resolved - in our case a `console.log()`.
+For more information on Promises and asynchronous functions check out [javascript.info/promise-basics](https://javascript.info/promise-basics).
 
 Now open the `index.html` file in a web browser and then inspect the page - here is an article on how to do so in every browser: [How to Inspect Web Page Elements](https://www.lifewire.com/get-inspect-element-tool-for-browser-756549).
-Once you have done so a panel will appear and it will show you the html elements on your page.  In this panel there is a 'Console' tab, click this and see what has been logged.
+Once you have inspected the page, a panel will appear and it will show you the html elements on your page.  In this panel there is a 'Console' tab, click this and see what has been logged.
 
-You should see something that looks like this:
+You should see printed out something that looks like this:
 ```js
 {
     "response_code": 0,
@@ -313,7 +313,10 @@ function fetchQuizQuestions() {
 
 ### Write a function that displays each question
 
-Now we need to render the questions onto our webpage.  We will add them in a list format, for that we use the <li> html tag. This will be going inside the <ul> tag that we have in `index.html`, it has the id "questions". Refer back to Lesson 2 on how to create html elements and add data to them.
+Now we need to render the questions onto our webpage.  We will add them in a list format, for that we use the `<li>` html tag. This will be going inside the `<ul>` tag that we have in `index.html`, it has the id "questions". Refer back to [Javascript Lesson 2](tutorials.codebar.io/js/lesson2/tutorial.html) on how to create html elements and add data to them.
+
+
+As the results come back in the form of an array we can run `results.map()` over the array and access the properties inside the result object.
 
 ```js
 function renderQuizQuestions() {
@@ -321,7 +324,7 @@ function renderQuizQuestions() {
 }
 ```
 
-Put this into the second `then()` (Promise) of your fetch function, something like:
+Put this into the second part of the Promise (`then()`) of your fetching function, something like:
 
 ```js
 fetch(...)
@@ -330,6 +333,8 @@ fetch(...)
       renderQuizQuestions(data)
     })
 ```
+
+To run your code you just have to call our fetch function like `fetchQuizQuestions()` at the bottom of the index.js file.  
 
 Because fetch() is an asynchronous function the rest of the code in your file could run at the same time as the fetch
 function, meaning that the fetched data may not appear if used in an outside function, for example:
@@ -344,9 +349,10 @@ function renderQuizQuestions() {
 }
 ```
 
-The `data` inside `renderQuizQuestions()` will come back as undefined as it is run before the asynchronous function has resolved.
+The `data` inside `renderQuizQuestions()` will come back as undefined as it is run before the asynchronous function has resolved/finished.
 
 So now you should hopefully have some Questions rendered onto your webpage, if not please ask for help from a Codebar coach, a fellow Codebar attendee or checkout the Codebar Slack chatrooms.
+
 
 ### **BONUS** Play around with the API URL generator
 
@@ -358,10 +364,29 @@ If you select a few of the options and then generate an api, you could get somet
 We have `amount=20`, this is the amount of questions. `category=10` this is the book category, so each category is mapped to a number in the API. And we have `difficulty=medium`, setting the difficulty of the questions.
 You can play around with this a lot and its a simple interface and you can make the questions as easy or as difficult as you want!
 
-Now that you can render the questions how about now rendering the answers?
-Perhaps you could have a button to reveal the answer?
-Or if you select the multi-choice questions you could add some fun css to let the user know if they got the answer right or wrong!
+Let's create a selector to choose what difficulty of questions we would like.
+There is 3 difficulty settings `['easy', 'medium', 'hard']` which we can create a html selector for.
+We would then inject the selected value into our `fetchQuizQuestions()` function.
 
+Create a function where we can loop through the list of difficulties, creating an `<option>` for each one and adding the options value.
+Then append this list of options to a `<select>` element.
+
+Now add an event listener to the selector's `'change'` event.  This will be triggered whenever a user selects a new option. In the listener we want to pass the value of the event into our `fetchQuizQuestions` function.
+
+We can expand the API call to look like this:
+
+```js
+fetchQuizQuestions(difficulty)  {
+    return fetch(`https://opentdb.com/api.php?amount=10&difficulty=${difficulty}`)
+```
+
+You've now got the tools to play around with this API as much as you want, where you can create an amazing quiz app!
+
+Here is our version of the [trivia quiz app](../../examples/trivia-quiz/index.html).
+
+Now that you can render the questions and the user can change the difficulty setting, how about now rendering the answers?
+Perhaps you could have a button to reveal the answer?
+Or if you select the multi-choice questions you could add some fun CSS styles to let the user know if they got the answer right or wrong!
 
 ---
 This ends our **HTTP Requests, AJAX and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

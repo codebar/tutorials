@@ -1,0 +1,40 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  border-top: 5px solid #4c4066;
+  margin: 0px auto;
+  font-size: 16px;
+}
+
+header {
+  text-align: center;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+#selector {
+  font-size: 16px;
+}
+
+#questions {
+  max-width: 750px;
+}
+
+#logo {
+  position: relative;
+  top: 2px;
+}
+
+#container {
+  width: 1040px;
+  padding-left: 8px;
+  min-height: 750px;
+}
+
+footer {
+  padding-bottom: 10px;
+  border-bottom: 5px solid #4c4066;
+  position: absolute;
+  width: 100%;
+}
