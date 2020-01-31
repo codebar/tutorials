@@ -263,6 +263,24 @@ fetch('https://opentdb.com/api.php?amount=10')
 ```
 We send a request with `fetch`, the reposnse returns a Promise. This response is passed into a
 `then()` function (a Promise) where we transform it into something readable and usable - a JSON object. When that Promise resolves _then_ (`then()`) we can use the response (`response.json()`) however we want to use it in our code when that Promise is resolved - in our case a `console.log()`.
+
+Since things can happen with API responses and its not always a 200 OK status, we can add a `.catch` to the fetch so we can log any issues when fetching data from the api.
+
+```js
+fetch('https://opentdb.com/api.php?amount=10')
+  .then(function(response) {
+    return response.json()
+  })
+  .then(function(data) {
+      //work with the json response data here
+      console.log(data)
+  })
+  .catch(function(error) {
+    console.error('Error: ', error)
+  })
+
+```
+
 For more information on Promises and asynchronous functions check out [javascript.info/promise-basics](https://javascript.info/promise-basics).
 
 Now open the `index.html` file in a web browser and then inspect the page - here is an article on how to do so in every browser: [How to Inspect Web Page Elements](https://www.lifewire.com/get-inspect-element-tool-for-browser-756549).

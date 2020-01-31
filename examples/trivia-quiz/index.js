@@ -1,12 +1,15 @@
 // As fetch() is an asynchronous function we can add the async/await keywords
 async function fetchQuizQuestions(difficulty)  {
   return await fetch(`https://opentdb.com/api.php?amount=10&difficulty=${difficulty}`)
-  .then((response) => {
+  .then(response => {
       return response.json()
   })
-  .then((data) => {
+  .then(data => {
       renderQuizQuestions(data)
-  })  
+  })
+  .catch(error => {
+    console.error('Error: ', error)
+  })
 }
 
 function renderQuizQuestions(data) {
