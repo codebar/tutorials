@@ -148,7 +148,7 @@ around with decision making and changing prints based on your answer. In Python
 is using an `if` statement. For example:
 
     >>> number = 4
-    ... if number > 3:
+    >>> if number > 3:
     ...     print("Bigger than three")
     ... elif number < 3:
     ...     print("Smaller than three")
