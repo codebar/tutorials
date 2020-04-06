@@ -4,9 +4,9 @@ title: How to use Discord for codebar
 ---
 # How to use Discord for codebar
 
-First of all, in case you missed it, you can find the invitation link to codebar's Discord server on your workshop invitation page. It should be available if you have succesfuly managed to secure a spot to the workshop.
+First of all, in case you missed it, you can find the invitation link to codebar's Discord server on your workshop invitation page. It should be available if you have succesfully managed to secure a spot to the workshop.
 
-After accepting the invitation, we suggest that you [download the Discord desktop app](https://discordapp.com/download). Even though Discord works well in the browser, it does not support video streaming which is an important aspect of the workshops and why you need the desktop client installed on your machine.
+After accepting the invitation, you should [download the Discord desktop app](https://discordapp.com/download). Even though Discord works well in the browser, it does not support video streaming which is an important aspect of the workshops and why you need the desktop client installed on your machine.
 
 When you open the Discord app it should look similar to the screenshot below:
 
@@ -14,8 +14,8 @@ When you open the Discord app it should look similar to the screenshot below:
 
 
 There is LOTS of information, but the most important parts are:
-1. List of available channels. Unlike Slack there are 2 types of channel: Text channels (which start with a **#**)  and Voice channels (which start with a :speaker:). All **text channels** are available to you but you need to switch to them to see what has been posted. When it comes to **voice channels** however, you can only be in *one* at a time. We will come back to this in a bit.
-2. The text channel you are currently in. As you can see it's also highlithed in the channels list (1).
+1. List of available channels. Unlike Slack there are 2 types of channels: Text channels (which start with a **#**)  and Voice channels (which start with a :speaker:). All **text channels** are available to you but you need to switch to them to see what has been posted. When it comes to **voice channels** however, you can only be in *one* at a time. We will come back to this in a bit.
+2. The text channel you are currently in. As you can see it's also highlighted in the channels list (1).
 3. A list of members that are online at the moment. Clicking on one of those will open a Direct Message with that person that no-one else can see.
 4. You!
 
