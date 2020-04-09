@@ -83,6 +83,16 @@ You will then be presented with a settings window where you can change the quali
 
 ![](how-to-use-discord/discord-stream-settings-2.png)
 
+## Troubleshooting
+
+**Having audio trouble when using Discord?**
+
+If you are having trouble with hearing any sound , go to your discord **Settings**, select **Voice & Video** and make sure you select a specific output device as the `Default device` option doesn't seem to pick the correct output for everyone.
+
+![](how-to-use-discord/amend-discord-voice-output-device.png)
+
+Can't find settings? Have a look at the first image of this tutorial, **Settings** is at area 4!
+
 
 ## Further questions
 
