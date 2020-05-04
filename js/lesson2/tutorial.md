@@ -552,16 +552,16 @@ var london = {
 ```js
 function displayPopulation() {
   // Make a new <p></p> for population. This is not attached to the DOM yet.
-  var population = document.createElement('p');
+  var paragraph = document.createElement('p');
 
   // Make some text content to put into your <p></p>
   var content = document.createTextNode('Population: ' + london.population);
 
   // Put the text content into the <p></p>.
-  population.appendChild(content);
+  paragraph.appendChild(content);
 
   // Finally the population can be appended to the body, and will become visible in the browser.
-  document.body.appendChild(population);
+  document.body.appendChild(paragraph);
 }
 ```
 
