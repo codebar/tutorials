@@ -148,7 +148,7 @@ around with decision making and changing prints based on your answer. In Python
 is using an `if` statement. For example:
 
     >>> number = 4
-    ... if number > 3:
+    >>> if number > 3:
     ...     print("Bigger than three")
     ... elif number < 3:
     ...     print("Smaller than three")
@@ -158,9 +158,9 @@ is bigger than three, we will receive a message telling us so. There is a
 different message if the number is smaller than three.
 
 Also, now that we are getting more in depth with Python, we should say that
-Python is very particular about indentation. With Python, if any lines are not
-indented correctly the code will not run. If you are running into bugs, this
-is a good place to start.
+Python is very particular about indentation (i.e. the spaces at the start of a 
+line of code). With Python, if any lines are not indented correctly the code 
+will not run. If you are running into bugs, this is a good place to start.
 
 In this final exercise we are going to ask you the number of coffees you have
 drunk today and then change the statement returned to you, depending on your
