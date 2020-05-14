@@ -12,3 +12,9 @@ footer {
   min-width: 680px;
   margin: 0 auto;
 }
+
+#notice {
+  background-color: #ff036a;
+  padding: 20px;
+  font-size: 1.2em;
+}
