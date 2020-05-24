@@ -19,9 +19,9 @@ outdated these days, so we need to upgrade:
    but it's worth noting this requirement here.
 2. Head to [the Python website](https://www.python.org/).
 3. Click "Downloads".
-4. There will be two options; one for Python 3 and one for Python 2. 
+4. There will be two options; one for Python 3 and one for Python 2.
    **Download Python 3**. At the time of writing, the version available is
-   3.5.2.
+   3.8.3.
 5. When the download's complete, your browser should automatically mount the
    disk image and open a Finder window of what's inside, but if that doesn't
    happen, you'll have to find the file `Python.mpkg` in your downloads folder
@@ -36,9 +36,9 @@ If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3]
 
 1. Head to [the Python website](https://www.python.org/).
 2. Click "Downloads".
-3. There will be two options; one for Python 3 and one for Python 2. 
+3. There will be two options; one for Python 3 and one for Python 2.
    **Download Python 3**. At the time of writing, the version available is
-   3.5.2.
+   3.8.3.
 4. Run the downloaded installer and click *Next* until you reach the
    *Customization* page.
 5. Scroll down to the bottom and choose to *Add python.exe to PATH*.
@@ -54,7 +54,7 @@ differently, so these instructions may need to be modified for your situation.
 
 #### Debian/Ubuntu
 
-Python 3 is available via apt, so you can install it with `apt install 
+Python 3 is available via apt, so you can install it with `apt install
 python3`.
 
 #### Redhat/CentOS
@@ -96,7 +96,7 @@ On Windows, open `cmd` or on Mac OS / GNU/Linux open `terminal` and type
 
 What you should see is:
 
-    $ python 3.5.2
+    $ python 3.8.3
 
 On Mac OS running `python --version` might run the outdated Python 2.7 which is bundled with the operating system.
 If this is your case, then you need to run `python3` instead of `python`.
@@ -109,9 +109,9 @@ Now, open the *REPL* by typing:
 
 And you should see something like this:
 
-    Python 3.5.2 (default, Aug  6 2016, 15:44:26) 
+    Python 3.8.3 (default, Aug  6 2016, 15:44:26)
     [GCC 5.4.0] on linux
     Type "help", "copyright", "credits" or "license" for more information.
-    >>> 
+    >>>
 
 Now you're all set!
