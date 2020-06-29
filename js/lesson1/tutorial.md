@@ -82,7 +82,7 @@ Let's move on to writing code in a file. Type the same `console.log`
 line into your `script.js` file. Save and reload the page in your browser so that it
 can read the change you made.
 
-This time, you should just see the line that says `Hello!`, and not
+This time, you should just see the line that says `Hello!` in the browser console, and not
 the lines that said `console.log('Hello!');` or `undefined` with
 arrows next to them. That's because you didn't type the JavaScript
 into the console this time.
