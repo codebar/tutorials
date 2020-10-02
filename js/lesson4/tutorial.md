@@ -236,7 +236,7 @@ For this exercise, we will build a web app that generates trivia questions, usin
 
 ### What we will be doing:
 
-1. Retrieve and log quiz questions usinf the quiz API: `https://opentdb.com/api.php?amount=10`
+1. Retrieve and log quiz questions using the quiz API: `https://opentdb.com/api.php?amount=10`
 
 2. Write a function that displays each question
 
