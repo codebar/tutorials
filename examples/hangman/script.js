@@ -1,7 +1,7 @@
 function newGame() {
   $.ajax({
     type: "POST",
-    url: "http://hangman-api.herokuapp.com/hangman",
+    url: "https://hangman-api.herokuapp.com/hangman",
   }).done(function(data) {
     $('.hangman-word').text(data.hangman);
     $('.token').text(data.token);
@@ -14,7 +14,7 @@ function guess(token, letter) {
   $.ajax({
     type: "PUT",
     dataType: 'json',
-    url: "http://hangman-api.herokuapp.com/hangman",
+    url: "https://hangman-api.herokuapp.com/hangman",
     data: { "token": token, "letter": letter},
     beforeSend: function() {
       $(".letter").prop('disabled', true);
@@ -42,7 +42,7 @@ function getSolution(token) {
   $.ajax({
     type: "GET",
     dataType: 'json',
-    url: "http://hangman-api.herokuapp.com/hangman",
+    url: "https://hangman-api.herokuapp.com/hangman",
     data: { "token": token },
   }).done(function(data) {
     var hangman_word = $('.hangman-word').text();
