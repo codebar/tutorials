@@ -13,3 +13,4 @@ exclude: [
   "node_modules"
 ]
 livereload: true
+exclude: [vendor]

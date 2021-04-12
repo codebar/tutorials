@@ -2,8 +2,8 @@
 
 body {
   padding: 25px;
-  font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #585858;
+  font: 16px Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #001c00;
   font-weight: 300;
 }
 
@@ -30,6 +30,14 @@ h2 {
 
 h3, h4, h5, h6 {
   color: #494949;
+}
+
+.language-heading {
+  background: #ff036a;
+  color: #fff;
+  padding: 15px 10px;
+  margin-top: 60px;
+  margin-bottom: 25px;
 }
 
 a {
