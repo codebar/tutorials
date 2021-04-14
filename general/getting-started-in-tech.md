@@ -3,7 +3,7 @@ layout: page
 title: Getting Started in Tech
 ---
 
-Technology is a vast subject. It can enable you to write a to-do list on your phone, sell goods online or send a space probe to Neptune. Software is built by developers and codebar is here to teach you how to write such software. Whether you want to make a career of it or use your skills on personal projects.
+Technology is a vast subject. It can enable you to write a to-do list on your phone, sell goods online or send a space probe to Neptune. Software is built by developers and codebar is here to teach you how to write such software. Whether you want to make a career of it or acquire some exta skills.
 
 Typically software can fall into two (very broad) categories:
 
@@ -18,13 +18,13 @@ Typically software can fall into two (very broad) categories:
 
 At codebar, we concentrate on web technologies for several reasons:
 
-- It doesn't need any initial investment: all the tools you need to learn about web technologies available online for free. And the computer you use doesn’t have to be new or a top of the range model, most computers will perform well, including shared computers in libraries.
+- No initial investment is needed: all the tools you need to learn about web technologies are available online for free. And the computer you use doesn’t have to be new or a top of the range model, most computers will perform well, including shared computers in libraries.
 - You can see results very fast.
 - They are ubiquitous: a lot of technologies that started on the web are now used in many other places. Even if you end up working in a domain that has nothing to do with the web, you will likely use or interact with web technologies.
 
 Web technologies are designed in such a way that they tend to more clearly separate user interface work from data processing work. As a result, web developer jobs typically fall into three broad categories:
-- Front-end: work that deals with user interfaces
-- Back-end: work that deals with data processing
+- Front end: work that deals with user interfaces
+- Back end: work that deals with data processing
 - Full stack: work that combines both aspects
 
 Both front-end and back-end have their own complexities and neither is easier than the other. So let’s have a look at what they both involve. Take this web page as an example. It is a page on the codebar.io website and you are reading it via a web browser on a computer or mobile device. The codebar website runs on a computer in a data center that runs a piece of software called a web server. Both talk to each other via the internet.
@@ -62,9 +62,9 @@ JavaScript is used to change what is displayed on a web page in response to user
 
 ## Back-end Development
 
-As a back-end developer you would be responsible for the code that runs on the server. This type of development usually consists of three parts: a server, an application, and a database. Many back end developers know front end languages such as HTML and CSS but need to use languages such as Ruby on Rails, Python, PHP, Java, and .Net to get the job done.
+As a back-end developer you would be responsible for the code that runs on the server. This type of development usually consists of three parts: a server, an application, and a database. Many back-end developers know front-end languages such as HTML and CSS but need to use languages such as Ruby on Rails, Python, PHP, Java, and .NET to get the job done.
 
-These two roles overlap a fair amount so starting in one role doesn’t close the other one should you decide to change later. They also have strong ties to other areas of technology. For instance, front-end development shares a lot with mobile app development; back-end development with data science.
+Front-end and Back-end development overlap a fair amount so starting in one role doesn’t mean that you can't switch or learn the other, should you change your mind further down the line. They also have strong ties to other areas of technology. For instance, front-end development shares a lot with mobile app development; back-end development with data science.
 
 #### Ruby
 LINE ABOUT RUBY
@@ -72,7 +72,7 @@ LINE ABOUT RUBY
 [Ruby Tutorials]()
 
 #### Python
-Python is the preferred option for data science thanks to scientific libraries like numpy and pandas.
+Python is the preferred option for data science thanks to scientific libraries like NumPy and pandas.
 
 [Python Tutorials]()
 
@@ -98,9 +98,9 @@ LINE ABOUT No-SQL
 
 [Tutorial Link]()
 
-## Full stack Development
+## Full-stack Development
 
-A full stack web developer is a person who can develop both client (front-end) and server (back-end) software. For this we suggest learning any of the languages under front-end development and back-end development. Below are some further subjects that relate to both:
+A full-stack web developer is a person who can develop both client (front-end) and server (back-end) software. For this we suggest learning any of the languages under front-end development and back-end development. Below are some further subjects that relate to both:
 
 #### Testing
 Why do you want to test and what different types of tests you can do:
