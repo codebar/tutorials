@@ -12,9 +12,7 @@ browsers. It is used to change what is displayed on a web page in
 response to user activity.
 
 This tutorial is intended to give you a very brief introduction to JavaScript. It
-barely scratches the surface of all the things that you can do with it - this
-one is intended to be just enough for you to understand our next
-tutorials that do more interesting things.
+barely scratches the surface of all the things that you can do with it - it is enough for you to understand our next tutorials that do more interesting things.
 
 Most words in programming have special meanings. We're going to take
 some time during this tutorial to explain what some of the commonly used words mean. Words which mean a specific thing will be marked in **bold**. Try to remember them, as it's important for you to understand what other programmers mean when they use them, and what the documentation means when you read it. You can always look back at this tutorial later to remind yourself.
@@ -109,10 +107,10 @@ value of two numbers with a `+` sign between them is those two numbers
 added together.
 
 
-> Now that you've learnt how to some simple maths, why not try out some more in your console?
+> Now that you've learnt how to do some simple maths, why not try out some more examples in your console?
 
 
-But, on websites we don't just see numbers so we want to do things with words too. A value containing letters is a **string**, and you write it in quotes. Try typing
+On websites however, we don't just see numbers so we want to do things with words too. A value containing letters is a **string**, and you write it in quotes. Try typing
 `'Hello'` on the console. Like before, you'll see it repeated back to you.
 
 Try `'Hello' + 'there'`. You should see it combine the two strings
@@ -120,7 +118,7 @@ into one. The value of two strings with a `+` sign between them is
 those two strings **concatenated**. You'll also see that it's missing a
 space - can you fix that?
 
-> Now that you've learnt how to concatenate 2 strings, trying practising a few more so you become more comfortable with it?
+> Now that you've learnt how to concatenate 2 strings, trying practising more so you become more comfortable with it
 
 Try typing `Hello` without any quotes around it. See how you get
 an error about `Hello` not being defined? Words that are not wrapped
