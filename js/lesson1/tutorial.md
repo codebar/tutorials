@@ -11,40 +11,35 @@ JavaScript is a programming language that runs in all modern web
 browsers. It is used to change what is displayed on a web page in
 response to user activity.
 
-This tutorial will give you your first introduction to JavaScript. It
-barely scratches the surface of all the things that you can do - this
+This tutorial is intended to give you a very brief introduction to JavaScript. It
+barely scratches the surface of all the things that you can do with it - this
 one is intended to be just enough for you to understand our next
 tutorials that do more interesting things.
 
-Some words in programming have special meanings. We're going to take
-some time during this tutorial to explain what some of the most
-commonly used words mean. Words which mean a specific thing will be
-marked in **bold**. Try to remember them, because it's important for
-you to understand what other programmers mean when they use these
-words, and what the documentation means when you read it. You can
-always look back at this tutorial later to remind yourself.
+Most words in programming have special meanings. We're going to take
+some time during this tutorial to explain what some of the commonly used words mean. Words which mean a specific thing will be marked in **bold**. Try to remember them, as it's important for you to understand what other programmers mean when they use them, and what the documentation means when you read it. You can always look back at this tutorial later to remind yourself.
 
 ## Getting started
 
 Download the files required to begin working through the tutorial from [here](https://gist.github.com/despo/0b674ec9d5ae9cb09704/download).
 
-We recommend that you use chrome for this tutorial, as the
+We recommend that you use Chrome for this tutorial, as the
 instructions are written to match it closely, but you should be able
 to do all the same things in any web browser.
 
 We've given you two files. One is `script.js`, which you should open
 in your text editor. This is where you're going to write your
 code. The other is `index.html`, which you should open in your web
-browser. This is a very short file that just tells your browser to run
+browser. This is a very small file that tells your browser to run
 the code in `script.js`.
 
 For this tutorial, you will also need to open the console. In
 Google Chrome, use `Ctrl + Shift + J` on Windows/Linux
-or `Alt + Cmd + I` on Mac. The console should look something like this:
+or `Alt + Cmd + I` on Mac. You can also right click with your mouse and press "Inspect". The console should look something like this:
 
-<img src="assets/images/console.png" alt="console example">
+<img src="assets/images/console.png" alt="google chrome console example">
 
-The console can appear in several different places. Below is the example of two of them: "docked to bottom", and "docked to right". You can change the location of the console by clicking on the three vertical dots located next to the cross (clicking on the cross will close the console). Their locations are indicated on the picture below.
+The console can appear in several different places. Below is the example of two of them, the first "docked to bottom", and the second "docked to right". You can change the location of the console by clicking on the three vertical dots located next to the cross (clicking on the cross will close the console). Their locations are indicated on the picture below.
 
 <img src="assets/images/console-locations.png" alt="console locations">
 
@@ -82,7 +77,7 @@ Let's move on to writing code in a file. Type the same `console.log`
 line into your `script.js` file. Save and reload the page in your browser so that it
 can read the change you made.
 
-This time, you should just see the line that says `Hello!` in the browser console, and not
+This time, you should only see the line that says `Hello!` in the browser console, and not
 the lines that said `console.log('Hello!');` or `undefined` with
 arrows next to them. That's because you didn't type the JavaScript
 into the console this time.
@@ -113,17 +108,21 @@ expression. As you've just seen, the value of `1` is just `1`, and the
 value of two numbers with a `+` sign between them is those two numbers
 added together.
 
-We want to do things with words as well as numbers. A value containing
-letters is a **string**, and you write it in quotes. Try typing
-`'Hello'` on the console. Like before, you'll see it repeated back to
-you.
+
+> Now that you've learnt how to some simple maths, why not try out some more in your console?
+
+
+But, on websites we don't just see numbers so we want to do things with words too. A value containing letters is a **string**, and you write it in quotes. Try typing
+`'Hello'` on the console. Like before, you'll see it repeated back to you.
 
 Try `'Hello' + 'there'`. You should see it combine the two strings
 into one. The value of two strings with a `+` sign between them is
-those two strings concatenated. You'll also see that it's missing a
+those two strings **concatenated**. You'll also see that it's missing a
 space - can you fix that?
 
-Try typing `Hello` without any quotes around it. See how you just get
+> Now that you've learnt how to concatenate 2 strings, trying practising a few more so you become more comfortable with it?
+
+Try typing `Hello` without any quotes around it. See how you get
 an error about `Hello` not being defined? Words that are not wrapped
 in quotes are not strings. There's a couple of things that they could
 be, which we'll discuss later, but the important thing to remember for
@@ -147,13 +146,11 @@ Try typing this on the console:
 var a = 17;
 ```
 
-You'll see that it returns the value as `undefined`. undefined just
+You'll see that it returns the value as `undefined`, undefined
 means that the thing you typed doesn't really have a value. However,
 this did something else: it created a **variable** named `a`.
 
-Now try typing `a` on the console. You should see that you get back
-17. Variables are a way of giving names to **values** so that you can
-use them later.
+Now try typing `a` on the console. You should see that you get back 17. Variables are a way of giving names to **values** so that you can use them later.
 
 Try typing these:
 
@@ -175,7 +172,7 @@ You can also change the value of a variable. That's why it's a
 b = 2;
 ```
 
-Notice that you don't have `var` this time. If you just have a
+Notice that you don't have `var` this time. If you have a
 variable name, an equals sign, and an expression, then this is a
 **variable assignment**, which changes the value of a variable that
 you defined earlier.
@@ -245,7 +242,7 @@ again.
 
 Let's move some of this into `script.js`. We wrote the function
 definition all on one line because that's all the space you have in
-the console, but the normal way to write one is like this:
+the console, but the typical way to write a function is like this:
 
 ```js
 function sayHello() {
@@ -253,7 +250,7 @@ function sayHello() {
 }
 ```
 
-Put that into `script.js` and reload the page. Now just try calling
+Put that into `script.js` and reload the page. Now try calling
 the `sayHello` function on the console, without doing anything else.
 You should see that it still works, using the definition that you put
 into `script.js`.
@@ -270,7 +267,7 @@ function conversation() {
 
 Try calling the `conversation()` function on the console. See how it
 did all three things in order? Functions are lists of things to
-do. When you call the function, it does all the things in its
+do. When you call the function, it will do all the things in its
 definition.
 
 Let's get a few words for these things before we move on:
@@ -306,10 +303,9 @@ function sayHello(person) {
 
 Now try calling it using `sayHello('Archibald')`.
 
-That probably isn't your name. Try calling the function again using
-your own name.
+> Try calling the function again using your own name?
 
-What you've done here is to add a **parameter** to the function. When
+What you've done here is added a **parameter** to the function. When
 you call the function, you put a string between the parentheses. In
 the definition, you put the word `person` between the
 parentheses. While the function runs, `person` is defined to be a new
@@ -340,7 +336,7 @@ far, this one has a value.
 `return` is another **keyword**: it means "return the value of this
 expression from this function". The value of a **function call** is
 the value that was given to `return`. If the function got to the end
-without ever seeing `return` then the value of the call will just be
+without ever seeing `return` then the value of the call will be
 `undefined`.
 
 Now change your `sayHello` function to use this new `greeting`
@@ -349,9 +345,8 @@ function, instead of having the message in it. Check that
 
 ## Multiple function parameters
 
-Functions can have as many parameters as you want. You separate them
-with commas. Try changing the first line of the definition of
-`conversation` to be:
+Functions can have as many parameters as you want, you separate them
+with commas. Change the first line of your `conversation` function to be:
 
 ```js
 function conversation(person, topic) {
@@ -366,7 +361,7 @@ Similarly, you call the function like this:
 conversation('Archibald', 'owls');
 ```
 
-Try it out for yourself.
+> Try it out for yourself.
 
 ### What you've learned so far
 
@@ -396,18 +391,17 @@ console.log(
 );
 ```
 
-Use spaces and newlines to make your program easy to read. When you're
-just starting out, it won't be immediately clear to you what makes
-things easier to read, so just try to follow the patterns that we use
-in the tutorials. As you read and write more programs this will start
+Use spaces and newlines to make your code easier to read. When you're
+starting out, it won't be immediately clear to you what makes
+things easier to read, so try to follow the patterns that we use
+in the tutorials. As you write more code this will start
 to make sense to you.
 
 ### Semicolons
 
 Semicolons are needed after any statement that does not end in a
 `}`. While it is sometimes possible to leave out semicolons and have
-the program still work, this is likely to break in surprising ways, so
-you should try to put them in the right places.
+the program still work, we suggest doing this when learning to make it more readable.
 
 One important exception to these rules is the `return` statement. You
 may not add a newline immediately after the word `return`, because if
@@ -437,8 +431,7 @@ We apologise for this quirk of the language.
 
 ## Objects
 
-Another type of **value** is an **object**. A way to create an object
-is like this:
+Another type of **value** in JavaScript is an **object**. An object looks like this:
 
 ```js
 var person = {
@@ -515,7 +508,7 @@ return to them in a later tutorial.
 
 ## Summary
 
-You now know what all of these words mean:
+You should now be familiar with these words and what they mean:
 
 * strings
 * expressions
