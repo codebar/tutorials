@@ -29,8 +29,6 @@ Web technologies are designed in such a way that they tend to more clearly separ
 
 Both front-end and back-end have their own complexities and neither is easier than the other. So let’s have a look at what they both involve. Take this web page as an example. It is a page on the codebar.io website and you are reading it via a web browser on a computer or mobile device. The codebar website runs on a computer in a data center that runs a piece of software called a web server. Both talk to each other via the internet.
 
-ADD GRAPHIC
-
 To build a website like this involves two pieces of code:
 - The front-end code that runs in the web browser
 - The back-end code that runs on the web server
@@ -45,20 +43,14 @@ As a front-end developer you would be responsible for the code that runs in the 
 
 HTML is the language used to build websites. All text and content that you see on the internet is built using HTML.
 
-[HTML Tutorials]()
-
 #### CSS (Cascading Style Sheets)
 
 CSS is used alongside HTML to style the page and make it look good.
-
-[CSS Tutorials]()
 
 
 #### JavaScript
 
 JavaScript is used to change what is displayed on a web page in response to user activity.
-
-[JavaScript Tutorials]()
 
 ## Back-end Development
 
@@ -67,36 +59,19 @@ As a back-end developer you would be responsible for the code that runs on the s
 Front-end and Back-end development overlap a fair amount so starting in one role doesn’t mean that you can't switch or learn the other, should you change your mind further down the line. They also have strong ties to other areas of technology. For instance, front-end development shares a lot with mobile app development; back-end development with data science.
 
 #### Ruby
-LINE ABOUT RUBY
-
-[Ruby Tutorials]()
+Ruby is an object oriented scripting programming language typically used for building web applications. The most common implementation of Ruby is Rails web, the development framework built with Ruby.
 
 #### Python
 Python is the preferred option for data science thanks to scientific libraries like NumPy and pandas.
 
-[Python Tutorials]()
-
 #### Node.js
 Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
 
-[Node Tutorials]()
-
 #### PHP
-LINE ABOUT PHP
-
-[PHP Tutorials]()
-
-### Databases
+PHP is a general-purpose scripting language especially suited to web development. It is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites. Also commonly used with WordPress so if custom WordPress themes interests you, then learn PHP.
 
 #### SQL
-LINE ABOUT SQL
-
-[SQP Tutorials]()
-
-#### No-SQL
-LINE ABOUT No-SQL
-
-[Tutorial Link]()
+SQL is a domain-specific language designed for managing data held in a relational database management system.
 
 ## Full-stack Development
 
