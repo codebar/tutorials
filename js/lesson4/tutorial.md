@@ -7,7 +7,7 @@ title: HTTP Requests, AJAX and APIs
 
 In this tutorial we are going to look at:
 
-* The HTTP protocol
+* HTTP Requests
 * APIs
 * AJAX
 * JSON
@@ -18,36 +18,28 @@ In this tutorial we are going to look at:
 
 By the end of this tutorial you will have built:
 
-* A webpage that can retrieve information about a specified GitHub user
-* A webpage that can show the upcoming schedule for BBC shows
+* A webpage that can retrieve information from a GitHub user
+* Sent yourself an SMS using the Vonage API
 
-# HTTP Requests
+## HTTP Requests
 
-## What are HTTP Requests?
+### What are HTTP Requests?
 
-Every time the browser fetches data from a server (which could be a page, an image, a script etc) it does it using HTTP. HTTP is the **H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol. The server then sends back a **response**. An API is an easy way of fetching information from a remote service, in a way that's easy for a computer to understand.
+**H**&#x200b;yper<strong>T</strong>ext **T**&#x200b;ransport **P**&#x200b;rotocol
 
-GitHub offers a [simple API](https://www.githubstatus.com/api/) for viewing its current and historical server availability.
+Every time the browser fetches data from a server (which could be a page, an image, a script etc) it does it using HTTP. The server then sends back a **response**. An API is an easy way of fetching information from a remote service, in a way that a computer can understand, typically in **JSON** format (we'll talk more about JSON later).
 
-> Availability means whether or not the GitHub website was accessible to users and accepting traffic. If your website is down, it is not available.
+GitHub offers a [simple API](https://www.githubstatus.com/api/) for viewing its current and historical server availability. Availability means whether or not the GitHub website was accessible to users and accepting traffic. If your website is down, it is not available.
 
-You can access an API in your web browser. Just pop the following into the address bar:
+You can access an API in your web browser. Pop the following into the address bar:
 
     https://www.githubstatus.com/api/v2/summary.json
 
-If you are on a mac or a linux/unix machine, you can access the API using curl:
-
-    curl https://www.githubstatus.com/api/v2/summary.json
-
-> Paste the following command into Terminal, which you can find in Finder - first go into the Applications folder, then Utilities.
-
-Here is an example of the **GET** requests issued by the [wishlist tutorial](https://tutorials.codebar.io/examples/wishlist/index.html).
-
-\*You can view any requests issued by a website by going to the Network (or Net) tab.
+You can view all requests issued by a website by going to the Network (or Net) tab.
 
 ![](assets/images/inspector_requests.png)
 
-As part of the response, a request gives back a **status code**. You can use this to identify if the request was successful or not.
+As part of the response, a request gives back a **status code**. You can use this to identify if the request was successful or not. Below is a list of the most common.
 
 | Status code | Message | Description |
 | ------------| ------- | ------------ |
@@ -56,23 +48,17 @@ As part of the response, a request gives back a **status code**. You can use thi
 |  400        |   Bad Request | The server did no understand the request |
 |  404        |   Not Found | The server could not find the requested resource |
 
-### HTTP Verbs
+### HTTP Methods
 
-HTTP verbs are sent by the browser or client, and along with the URL used and data transmitted form part of the instruction to the API. There are several verbs, but in this tutorial we will be primarily using GET. GET is used to fetch information from an API. Another common verb is POST, which is used to create a new object on the remote service.
+There are several HTTP Methods, but in this tutorial we will primarily be using **GET** and **POST**. GET is used to request data from your specified API, whereas POST is used to send data to your specified API.
 
 ## Exercise 1 - Retrieve GitHub user information
 
-We'll build a small application that gives us back information about a GitHub user - we want to show their username, information and their picture. [Download](https://gist.github.com/deniseyu/d1bc03b8091153b4b1a7/download) the exercise files or clone them directly from Github `https://gist.github.com/deniseyu/d1bc03b8091153b4b1a7`
+We are going to build a small application that requests information about a GitHub user - we want to show their username, information and picture.
 
-GitHub offers an API where you can request information for a given username. The verb to use is GET, and the url is `https://api.github.com/users/<username>`. For codebar, this would be: `https://api.github.com/users/codebar`. Again, to request this you can use curl:
+> Take a second to think about what HTTP Method we will use to retrieve this data. Is it GET or POST?
 
-    $  curl -XGET https://api.github.com/users/codebar
-
-or, as GET is the default verb, just:
-
-    $ curl https://api.github.com/users/codebar
-
-Again, you can simply access this URL in your web browser by inserting `https://api.github.com/users/codebar` into the address bar.
+If you guessed GET congrats! Now let's retrieve some data. See what happens when you put `https://api.github.com/users/codebar` into your address bar.
 
 The response will look something like the JSON data below, which we have shortened:
 
@@ -96,7 +82,11 @@ The response will look something like the JSON data below, which we have shorten
 
 This data is what's called key value pairs, meaning that the name of the field is displayed immediately before the value. As you can see, the URL for the avatar (user's icon) is in the `avatar_url` field, and is `https://avatars.githubusercontent.com/u/9906?v=2`.
 
+> Run the same URL but with your GitHub name.
+
 ### Getting started
+
+Now [Download](https://gist.github.com/deniseyu/d1bc03b8091153b4b1a7/download) the exercise files or clone them directly from Github `https://gist.github.com/deniseyu/d1bc03b8091153b4b1a7`.
 
 First, open the HTML page supplied in the download. As you can see, there is a box to type in a username. When the user has typed in the username, they should be able to trigger the API call to GitHub by pressing \<enter\>.
 
@@ -147,13 +137,13 @@ function getGithubInfo(username) {
 
 We create an `XMLHttpRequest` object and then call the `open` method, passing three arguments to the GitHub API.
 
-1. the `verb` - in this case, `'GET'`
+1. the `method` - in this case, `'GET'`
 2. the `url` - in this case the url eg https://api.github.com/users/codebar
 3. whether or not to run this request synchronously or asynchronously.
 
 In this case, we'll specify synchronously by passing `false`. This means the browser will wait for the call to the GitHub API to finish before continuing.
 
-> Making requests synchronously is not good practice, but we're doing it for now to keep things simple. Your browser may show a deprecation warning but the request will still work. We'll move onto asynchronous requests further down once we have the basics of APIs covered.
+Making requests synchronously is not good practice, but we're doing it for now to keep things simple. Your browser may show a deprecation warning but the request will still work. We'll move onto asynchronous requests further down once we have the basics of APIs covered.
 
 You can now call `getGithubInfo`, passing the username, from the `keypress` block above. That will log the data to the console. Next, we need to pass this back to the web page via the DOM.
 
@@ -234,7 +224,7 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 In the following Vonage API tutorial you will create an account, and send yourself an SMS. Just a heads up, it will involve you creating an account and giving your phone number.
 
-When signing up select NodeJS as you're language. NodeJS is a runtine enviroment that allows you to run JavaScript on the server than in the browser which is what you would've been doing if you've followed our first 2 tutorials.
+When signing up select NodeJS as your language. NodeJS is a runtine enviroment that allows you to run JavaScript on the server than in the browser which is what you would've been doing if you've followed our first 2 tutorials.
 
 (Send yourself an SMS with Vonage)[https://developer.nexmo.com/?utm_source=codebar&utm_campaign=Events&utm_medium=bitly&utm_source=Events]
 
