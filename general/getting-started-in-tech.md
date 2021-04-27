@@ -3,7 +3,7 @@ layout: page
 title: Getting Started in Tech
 ---
 
-Technology is a vast subject. It can enable you to write a to-do list on your phone, sell goods online or send a space probe to Neptune. Software is built by developers and codebar is here to teach you how to write such software. Whether you want to make a career of it or acquire some exta skills.
+Technology is a vast subject. It can enable you to write a to-do list on your phone, sell goods online or send a rover and a helicopter to Mars. Software is built by developers and codebar is here to teach you how to write such software. Whether you want to make a career of it or acquire some exta skills.
 
 Typically software can fall into two (very broad) categories:
 
@@ -33,67 +33,65 @@ To build a website like this involves two pieces of code:
 - The front-end code that runs in the web browser
 - The back-end code that runs on the web server
 
-Below we got into more depth about these roles, and what languages you would need to learn.
+Below we go into more depth about these roles, and what languages you would need to learn.
 
 ## Front-end Development
 
 As a front-end developer you would be responsible for the code that runs in the web browser and displays information to visitors. It is typically the practice of writing HTML, CSS and JavaScript.
 
-#### HTML (Hyper Text Markup Language)
+### HTML (Hyper Text Markup Language)
 
 HTML is the language used to build websites. All text and content that you see on the internet is built using HTML.
 
-#### CSS (Cascading Style Sheets)
+### CSS (Cascading Style Sheets)
 
 CSS is used alongside HTML to style the page and make it look good.
 
-
-#### JavaScript
+### JavaScript
 
 JavaScript is used to change what is displayed on a web page in response to user activity.
 
 ## Back-end Development
 
-As a back-end developer you would be responsible for the code that runs on the server. This type of development usually consists of three parts: a server, an application, and a database. Many back-end developers know front-end languages such as HTML and CSS but need to use languages such as Ruby on Rails, Python, PHP, Java, and .NET to get the job done.
+As a back-end developer you would be responsible for the code that runs on the server. This type of development usually consists of three parts: a server, an application, and a database. Many back-end developers know front-end languages such as HTML and CSS but need to use languages such as Ruby, Python, PHP, Java, and .NET to get the job done.
 
 Front-end and Back-end development overlap a fair amount so starting in one role doesn’t mean that you can't switch or learn the other, should you change your mind further down the line. They also have strong ties to other areas of technology. For instance, front-end development shares a lot with mobile app development; back-end development with data science.
 
-#### Ruby
-Ruby is an object oriented scripting programming language typically used for building web applications. The most common implementation of Ruby is Rails web, the development framework built with Ruby.
+### Ruby
+Ruby is an object oriented scripting programming language typically used for building web applications. It is most commonly used with Ruby on Rails, a web development framework built with Ruby.
 
-#### Python
+### Python
 Python is the preferred option for data science thanks to scientific libraries like NumPy and pandas.
 
-#### Node.js
-Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
+### Node.js
+Node.js is a development framework built with JavaScript. It allows you to write back-end components with the same technologies as the ones used in front-end work, which makes it particularly attractive when the same developers work on the front-end and back-end.
 
-#### PHP
+### PHP
 PHP is a general-purpose scripting language especially suited to web development. It is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites. Also commonly used with WordPress so if custom WordPress themes interests you, then learn PHP.
 
-#### SQL
-SQL is a domain-specific language designed for managing data held in a relational database management system.
+### SQL
+SQL is a domain-specific language designed for managing data held in a relational database management system. It is often combined with the technologies described above.
 
 ## Full-stack Development
 
 A full-stack web developer is a person who can develop both client (front-end) and server (back-end) software. For this we suggest learning any of the languages under front-end development and back-end development. Below are some further subjects that relate to both:
 
-#### Testing
+### Testing
 Why do you want to test and what different types of tests you can do:
 - Unit testing
 - Integration testing
 - End to end testing
-- Acceptance testing: Cucumber/Gherkin + shared understanding with business
+- Acceptance testing
 - Security testing
 - Performance testing
 
-
-#### REST API
+### REST API
 Basics on HTTP, JSON and how to put this together to use or build an API.
 
-#### Privacy
+### Privacy
 Basics on privacy, things like GDPR and overall principles.
 
 ### Accessibility
-We feel this is particularly important if you're wanting to be a front-end developer.
+How you use web technologies to build your websites has an impact on who can access and interact with the information you provide. Accessibility is a set of guidelines and techniques to ensure that your websites can be used by as wide a variety of people as possible, irrespective of whether they get on the web like you do or in a very different way.
 
 [MDN Article](https://developer.mozilla.org/en-US/docs/Learn/Accessibility)
