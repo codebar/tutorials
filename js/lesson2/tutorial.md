@@ -137,8 +137,7 @@ console.log('Apples and oranges are different: ' + notEqual);
 ```
 
 > You may also see `==` and `!=`, these are similar but have some quirks so it's generally recommended to avoid them.
-> You can simply use `===` and `!==` and they will
-> always do what you expect.
+> It is safer to use `===` and `!==` as they will always do what you expect.
 
 The `>` and `<` operators are "greater than" and "less than". You can
 use them to tell which of two numbers is bigger.
@@ -155,7 +154,7 @@ var lessStudents = students < pizzas;
 console.log('Are there fewer students than pizzas?' + lessStudents);
 
 ```
-> Play around with changing the `coaches`, `students` and `pizzas`  variable numbers to familiarise yourself with it more.
+> Play around with changing the `coaches`, `students` and `pizzas` variable numbers to familiarise yourself with operators.
 
 You can also combine operators.
 
@@ -210,9 +209,15 @@ if (totalPeople > pizzas) {
 
 #### Ternaries - Additional learning
 
-In the latest versions of JavaScript you may see if/else statements written slighlty differently. We believe teaching the above way first helps cement how they work, however if you're working with a code base that uses the latest JavaScript you will see it written this way.
+You may also see if/else statements written slightly differently.
 
-The condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:) and finally the expression to execute if the condition is falsy. For example:
+The condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:) and finally the expression to execute if the condition is falsy.
+
+```js
+condition ? expression1 : expression2
+```
+
+Using the people and pizza example we wrote above and using the Ternary Operator instead of if/else it would look like this:
 
 ```js
 totalPeople > pizzas
@@ -304,7 +309,7 @@ Even though `while` loops are simpler than `for` loops, it is more common to see
 
 An array is a simple *data structure*. It can hold a list of elements of the same or different types (e.g. strings, numbers, booleans). In an array each element can be accessed using the **index**.
 
-Confusingly, the first index of an array is 0, not 1.
+Confusingly, the first index of an array in JavaScript is 0, not 1.
 
 To understand this better, let's create an array of strings.
 
@@ -319,7 +324,7 @@ To retrieve an item from the array, we use **square bracket notation**
 
 To get the first item `animals[0]`, the second `animals[1]` etc.
 
-> Create an array that includes 5 names and then access the 3rd item in the array? (don't forget to access the third item in the array you won't be doing [3])
+> Create an array that includes 5 names and then access the 3rd item in the array. (don't forget to access the third item in the array you won't be doing [3])
 
 ### Properties -  `length`
 
