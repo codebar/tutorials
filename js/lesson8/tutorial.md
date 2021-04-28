@@ -1,97 +1,147 @@
 ---
 layout: page
-title: Building your own app
+title: Introduction to Testing
 ---
 
-Starting and finishing a project can at times be a hard task. Today, we will be helping you getting started with your own project. Working alone can get boring and at times unproductive so try to find someone else to work with.
+## Today's lesson
 
-Ask your coach for help on getting your project setup in Github and granting permissions to another user so you both have access to the codebase.
+### What is testing?
 
-Today's session is not aimed to teach you anything new programming-wise but to enable you to start building things on your own. You are not expected to produce a working application by the end of today's lesson but to structure your thoughts and figure out what you want to build.
+Testing is a way to ensure that the code you have written works correctly. It verifies the quality of your code and makes it easier to identify and fix problems.
 
-To get help outside of our sessions go to [the Slack channel here](https://codebar.slack.com/messages/general/details/). If you are not on Slack, use [this link](https://slack.codebar.io/) to get an invite.
+Today we will be briefly explaining how you can test-drive your code. Testing is not just a way to ensure that everything works well together, but also a means of improving the quality and keeping your code simple and readable.
 
-You can also send an email to [hello@codebar.io](mailto:hello@codebar.io).
+## JavaScript Testing Frameworks
 
-# Things to help you get started
+There are [a number](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) of libraries written to assist with testing JavaScript, but we will use [Jasmine](https://jasmine.github.io/). The syntax is quite simple and it doesn't require any additional configuration in order to use.
 
-There is an abundance of resources out there that can help you out, but all you need to get started is an idea. Over-thinking and over-engineering what you want to do, can make things a lot harder for you so always remember to keep things simple and evolve the project gradually.
+## Jasmine
 
-## Building your interface
+### Syntax
 
-Some tools out there that you can use are:
+In Jasmine, you can use `describe()` to describe the purpose of a suite of tests, and `it()` to describe a specific test.
 
-- [Balsamiq](https://balsamiq.com/)
-- [GoMockingbird](https://gomockingbird.com/home)
-- [Mockflow](https://mockflow.com/pricing/)
-
-However, using pen and paper is probably the easiest way, so try and choose whatever is easier for you!
-
-
-## Tracking your tasks
-
-It's important to keep organised and remember what you intend to build. Try and make a list of your tasks. You can keep track using [Github's issues](https://blog.github.com/2011-04-09-issues-2-0-the-next-generation/) or applications like [Trello](https://trello.com/) or [Pivotal Tracker](https://www.pivotaltracker.com/). You can use all these tools for free and it's an easy and efficient way of not just remembering everything but also of communicating to others that may be interested in helping you out what it is that you want to achieve.
-
-## Storing data
-
-Using JavaScript, you can store data in your browser that your application can retrieve when you get back to the page. This information will only be available on the user's machine, as we are not using a database or storing the data on the server at the moment.
-
-Most modern browsers support JavaScript's localStorage, but before you start using it, you can make sure it is available.
 
 ```javascript
-function supports_html5_storage() {
-  try {
-    return 'localStorage' in window && window['localStorage'] !== null;
-  } catch (e) {
-    return false;
-  }
-}
+describe('Calculator', function() {
+  describe('adding numbers', function() {
+    it('returns the sum of the numbers', function() {
+      expect(add(3,5)).toEqual(8);
+    });
+  });
+});
+```
+
+![](assets/images/calculator-test.png)
+
+When a test is no longer working you get a failure
+
+![](assets/images/calculator-test-fail.png)
+
+
+> Don't forget that you must refresh your browser when you update the tests!
+
+# Exercise 1: Unit Converter
+
+Using Jasmine to test drive our code, today we will implement a Unit Converter.
+
+To get started, download the code from [our Github repository](https://github.com/codebar/TestingJavascript).
+
+For Jasmine to work, it must know about our code and test files. So, before we begin using Jasmine to test, we must update the `SpecRunner.html` to include our files. The code is stored in the `src` directory (which stands for **source**), and our test files in `spec`.
+
+Update the head of the page to include the files.
+
+```html
+<!-- include source files here... -->
+<script type="text/javascript" src="src/Converter.js"></script>
+
+<!-- include spec files here... -->
+<script type="text/javascript" src="spec/ConverterSpec.js"></script>
 ```
 
 
-Storing and retrieving data is quite simple as localStorage stores key/value pairs.
+## Converting Fahrenheit to Celsius
+
+Now, open the SpecRunner in your browser. You will notice that the one test we have is failing.
+
+When we are writing code, it's ok to write a test that is failing before making it work. This way, instead of focusing on getting things to work, we focus on what we want to achieve and then gradually work around that.
+
+We have already added a method that will be handling the conversion of Fahrenheit to Celsius. We also know that the formula is
 
 ```javascript
-localStorage.setItem('name', 'Johannah');
-
-localStorage.getItem('name');
+celsius = (farenheit - 32)/1.8
 ```
 
-## Effects
+Try implementing the solution to make your test work.
 
-Everyone likes effects. Have a look at [jQuery's effects](http://api.jquery.com/category/effects/).
+### `toFixed()`
 
-## Tracking who visited your website
+You will notice that this doesn't quite work as we are getting back a number with multiple decimals. We can use the `toFixed(decimal_places)` method to round up the number to one decimal.
 
-[Google Analytics](https://marketingplatform.google.com/about/analytics/) is a free tool you can use to check who visited your site. To get an analytics id, you just need to create your own account and follow the information on the website.
+```javascript
+return celsius.toFixed(1);
+```
 
-> Adding analytics can be one of the tasks when planning your project.
+> Did you manage to get your test working?
 
-## Using version control
+> When you have a test passing, it's the right time to commit your code to git.
 
-Another important thing is to remember to commit your changes often and keep things contained. If you are working on improving the html of your website, try and get that done before moving on to integrating an API or plugging in some JavaScript.
+> Add another test using a different value for the temperature. Verify the result using google search `X Fahrenheit to Celsius`
 
-This way, if something goes wrong and things stop working you can always revert your local changes and start over again.
 
-When working with someone else it's also nice to do your work in branches so you can open pull requests and the other person can have a look at your changes before they are merged into the main repository. We briefly discussed creating branches in the [introduction to version control tutorial](https://tutorials.codebar.io/version-control/introduction/tutorial.html). Try to give your branches meaningful names and when they are merged into the main **master** branch, don't forget to update your local copy.
+## Converting Celsius to Fahrenheit
 
-## Useful APIs
+Now that we have that working, let's add another function that converts **Celsius** to **Fahrenheit** instead.
+First, don't forget to add your test and the expected solution. (You can use Google to figure out the result)
 
-In our previous tutorials we briefly introduced the [Github](https://developer.github.com/v3/) and [BBC](http://www.bbc.co.uk/developer/technology/apis.html) APIs. Most services that you have encountered are likely to have an API available, so just try searching Google for it.
+To reverse the result we can use this formula:
 
-Some popular API's that you may find useful
+```javascript
+fahrenheit = celsius * 1.8 + 32
+```
 
-- [Google Maps](https://cloud.google.com/maps-platform/) Get directions, map images, places of interest and a lot more information about places.
+## Converting other units
 
-- [Twilio](https://www.twilio.com/docs/usage/api) Initiate calls and send text messages.
+Now, add the tests and implement the conversion between the following units. Don't forget to commit first, after you write each of your tests and then when you get the test passing.
 
-- [Twitter](https://dev.twitter.com/docs/api/1.1) search Twitter, retrieve and send your tweets and a lot more.
-- [Spotify](https://developer.spotify.com/technologies/web-api/) Explore Spotify's music catalog and retrieve track, album and artist data.
+1. Pounds to kilos (Weight)
+```
+kilo = pound * 0.4536
+```
 
-- [Instagram](https://instagram.com/developer/endpoints/) Search and retrieve images from Instagram.
+2. Litre to Gallons (Volume)
+````
+gallons = litres * 0.22
+````
 
-> A lot of these API's require registering your application before you are able to use them, and some may take a while to respond. You can always read up and use fake data (by creating your own JSON objects, like we learned on the [Beginning JavaScript tutorial](https://tutorials.codebar.io/js/lesson2/tutorial.html).
+3. Miles to Km (distance)
+```
+kms = miles * 1.609
+```
 
+> Can you think of any other unit conversions you would find handy? Can you implement them?
+
+## Homework
+ Build an HTML page for your converter.
+
+# Test matchers
+
+Besides the `toEqual()` method, Jasmine has a big set of matchers that we can use to verify the results of our tests like `toBe()`, `not.toBe()`, `toBeNull()` and [a lot of others](https://jasmine.github.io/2.5/introduction#section-Included_Matchers)
+
+
+# Exercise 2: Calculator
+
+Download the [Testing JavaScript project again](https://github.com/codebar/TestingJavascript) and create a Calculator.js, under the `/src` directory, and a CalculatorSpec.js under the `/spec` directory. Don't forget to update the SpecRunner so it includes your tests and code files.
+
+1. Write a simple calculator that adds, subtracts, divides and multiplies two numbers together.
+2. Commit when you add a test, and after you make each test pass.
+3. Create a styled website for your calculator
+
+
+# Additional Resources
+
+You should now understand enough about JavaScript to create and test your own code.
+To gain a deeper understanding of JavaScript, we recommend reading [JavaScript, the good parts](https://www.amazon.co.uk/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742), by Douglas Crockford.
 
 ---
-This ends our **Building your own app** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **Introduction to Testing** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

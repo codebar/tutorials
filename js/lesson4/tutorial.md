@@ -1,6 +1,6 @@
 ---
 layout: page
-title: HTTP Requests, AJAX and APIs
+title: HTTP Requests and APIs
 ---
 
 ### Objectives
@@ -9,7 +9,6 @@ In this tutorial we are going to look at:
 
 * HTTP Requests
 * APIs
-* AJAX
 * JSON
 * Loading API data into web pages
 * Using jQuery AJAX functionality
@@ -19,7 +18,6 @@ In this tutorial we are going to look at:
 By the end of this tutorial you will have built:
 
 * A webpage that can retrieve information from a GitHub user
-* Sent yourself an SMS using the Vonage API
 
 ## HTTP Requests
 
@@ -218,17 +216,5 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 > Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
 
-## Exercise 2 - Vonage API
-
-<img src="./assets/images/VonageLogo.png" alt="Vonage Logo" width="250px">
-
-In the following Vonage API tutorial you will create an account, and send yourself an SMS. Just a heads up, it will involve you creating an account and giving your phone number.
-
-When signing up select NodeJS as your language. NodeJS is a runtine enviroment that allows you to run JavaScript on the server than in the browser which is what you would've been doing if you've followed our first 2 tutorials.
-
-(Send yourself an SMS with Vonage)[https://developer.nexmo.com/?utm_source=codebar&utm_campaign=Events&utm_medium=bitly&utm_source=Events]
-
-
-
 ---
-This ends our **HTTP Requests, AJAX and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **HTTP Requests and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

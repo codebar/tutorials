@@ -1,147 +1,195 @@
 ---
 layout: page
-title: Introduction to Testing
+title: Drawing in Canvas
 ---
 
-## Today's lesson
+## Todays lesson
 
-### What is testing?
+In this lesson we will be going over the **`<canvas>`** HTML element.
 
-Testing is a way to ensure that the code you have written works correctly. It verifies the quality of your code and makes it easier to identify and fix problems.
+Canvas is used to draw graphics using JavaScript. It has a number of methods for drawing circles, boxes, text and adding images.
 
-Today we will be briefly explaining how you can test-drive your code. Testing is not just a way to ensure that everything works well together, but also a means of improving the quality and keeping your code simple and readable.
+## Before we begin
 
-## JavaScript Testing Frameworks
+[Download](https://gist.github.com/despo/e4770ca5afeaf70c23bc/download) a canvas playground to practise the examples.
 
-There are [a number](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#JavaScript) of libraries written to assist with testing JavaScript, but we will use [Jasmine](https://jasmine.github.io/). The syntax is quite simple and it doesn't require any additional configuration in order to use.
+## Canvas
 
-## Jasmine
-
-### Syntax
-
-In Jasmine, you can use `describe()` to describe the purpose of a suite of tests, and `it()` to describe a specific test.
-
-
-```javascript
-describe('Calculator', function() {
-  describe('adding numbers', function() {
-    it('returns the sum of the numbers', function() {
-      expect(add(3,5)).toEqual(8);
-    });
-  });
-});
-```
-
-![](assets/images/calculator-test.png)
-
-When a test is no longer working you get a failure
-
-![](assets/images/calculator-test-fail.png)
-
-
-> Don't forget that you must refresh your browser when you update the tests!
-
-# Exercise 1: Unit Converter
-
-Using Jasmine to test drive our code, today we will implement a Unit Converter.
-
-To get started, download the code from [our Github repository](https://github.com/codebar/TestingJavascript).
-
-For Jasmine to work, it must know about our code and test files. So, before we begin using Jasmine to test, we must update the `SpecRunner.html` to include our files. The code is stored in the `src` directory (which stands for **source**), and our test files in `spec`.
-
-Update the head of the page to include the files.
+Canvas is specified using the HTML `<canvas>` element.
 
 ```html
-<!-- include source files here... -->
-<script type="text/javascript" src="src/Converter.js"></script>
-
-<!-- include spec files here... -->
-<script type="text/javascript" src="spec/ConverterSpec.js"></script>
+<canvas id="canvas-id" width="400" height="500"> </canvas>
 ```
 
+> Have a look in the `index.html`. Can you see the canvas definition?
 
-## Converting Fahrenheit to Celsius
+## JavaScript
 
-Now, open the SpecRunner in your browser. You will notice that the one test we have is failing.
+To render to the canvas, we must use the canvas drawing context, which handles all the nice stuff.
 
-When we are writing code, it's ok to write a test that is failing before making it work. This way, instead of focusing on getting things to work, we focus on what we want to achieve and then gradually work around that.
+```js
+var canvas = document.getElementById('canvas-id');
+var context = canvas.getContext('2d');
+```
 
-We have already added a method that will be handling the conversion of Fahrenheit to Celsius. We also know that the formula is
+### Controls
+
+Depending on if we are filling up a shape, or just drawing the outline, we can use `context.fillStyle` or `context.strokeStyle`to set the color of the element.
+
+```js
+  context.fillStyle = 'yellow';
+  context.strokeStyle = 'purple';
+```
+
+To set the line width:
+
+```js
+  context.lineWidth = 3;
+```
+
+#### Drawing
+
+Before we move on to drawing, let's try and understand how canvas is laid out.
+
+![](assets/images/canvas.png)
+
+The upper left corned for the canvas is (0,0) and the lower right (400,500), as our canvas is 400x500.
+
+Let's place a rectangle 100px away from the top left corner of the canvas.
+
+```
+context.fillRect(100, 100, 50, 100);
+```
+> Did you make sure you set the color using `context.fillStyle` before running this?
+
+Now let's add another rectangle, but this time only its outline.
+
+```
+context.strokeRect(300, 100, 50, 100);
+```
+
+**Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the canvas. The **line width** of the rectangle should be 1.
+
+### Reseting canvas
+
+Canvas does not have a reset function, but there is a function to clear a specified rectangle called `context.clearRect`. You can use it like so:
 
 ```javascript
-celsius = (farenheit - 32)/1.8
+context.clearRect(0, 0, canvas.width, canvas.height);
 ```
 
-Try implementing the solution to make your test work.
+**Exercise**
 
-### `toFixed()`
+Reset the canvas when the Reset button is clicked, by calling the `reset()` function.
 
-You will notice that this doesn't quite work as we are getting back a number with multiple decimals. We can use the `toFixed(decimal_places)` method to round up the number to one decimal.
+### Drawing paths
+
+Draw a line going from the middle left to the bottom right corner of the canvas.
 
 ```javascript
-return celsius.toFixed(1);
+context.moveTo(0,300);
+context.lineTo(400,500);
 ```
 
-> Did you manage to get your test working?
+This won't do anything until we call `context.stroke()`, which deals with the painting.
 
-> When you have a test passing, it's the right time to commit your code to git.
-
-> Add another test using a different value for the temperature. Verify the result using google search `X Fahrenheit to Celsius`
-
-
-## Converting Celsius to Fahrenheit
-
-Now that we have that working, let's add another function that converts **Celsius** to **Fahrenheit** instead.
-First, don't forget to add your test and the expected solution. (You can use Google to figure out the result)
-
-To reverse the result we can use this formula:
+You can also draw an join multiple paths together. Try this out by creating a rectangle with corners at (0, 0), (0, 200), (200, 300) and (200, 0).
 
 ```javascript
-fahrenheit = celsius * 1.8 + 32
+context.beginPath();
+
+context.lineWidth = 1;
+context.strokeStyle = 'purple';
+
+context.moveTo(0,0);
+context.lineTo(0,200);
+context.lineTo(200,200);
+context.lineTo(200,0);
+context.lineTo(0,0);
+
+context.stroke();
 ```
 
-## Converting other units
+## Drawing circles
 
-Now, add the tests and implement the conversion between the following units. Don't forget to commit first, after you write each of your tests and then when you get the test passing.
+To draw circles, you can use the `arc` method. `arc(x, y, radius, startAngle, endAngle, counterClockwise)`. Angles are expressed in radians. In radians 2π equates to 360°.
 
-1. Pounds to kilos (Weight)
-```
-kilo = pound * 0.4536
-```
-
-2. Litre to Gallons (Volume)
-````
-gallons = litres * 0.22
-````
-
-3. Miles to Km (distance)
-```
-kms = miles * 1.609
+```javascript
+context.beginPath();
+context.arc(200, 100, 50, 0, Math.PI*2, true);
+context.closePath();
+context.lineWidth = 4;
+context.stroke();
 ```
 
-> Can you think of any other unit conversions you would find handy? Can you implement them?
+To fill in the circle, or any other joined elements, we use the `context.fill()` method after closing the path.
 
-## Homework
- Build an HTML page for your converter.
+**Exercise** Create another circle and fill it with the color blue.
 
-# Test matchers
+## Transformations
 
-Besides the `toEqual()` method, Jasmine has a big set of matchers that we can use to verify the results of our tests like `toBe()`, `not.toBe()`, `toBeNull()` and [a lot of others](https://jasmine.github.io/2.5/introduction#section-Included_Matchers)
+In canvas, we can also use transformations on the current matrix.
+
+### `rotate()`
+
+First add the rotate method at the bottom of the `draw()` function.
+
+```javascript
+context.rotate(10*Math.PI/180);
+```
+If you try pressing the **Draw** button more than once, you will notice that everything keeps being at a rotated angle after the first time.
+
+To avoid this, when calling any transformation we must save and then restore the state of the canvas.
+
+```javascript
+context.save()
+context.rotate(10*Math.PI/180);
+
+// rotated changes
+
+context.restore()
+```
+
+### `translate()`
+
+Translate moves the current position. If we are at 10, 10 and we `context.translate(20, 15)`, then our new position is 30, 45.
+
+```javascript
+context.translate(45, 45);
+```
+
+### `scale()`
+
+And finally, `context.scale(scaleWidth, scaleHeight)`. Scale changes the dimensions of the rendered items.
 
 
-# Exercise 2: Calculator
+```javascript
+context.scale(2,2);
+```
 
-Download the [Testing JavaScript project again](https://github.com/codebar/TestingJavascript) and create a Calculator.js, under the `/src` directory, and a CalculatorSpec.js under the `/spec` directory. Don't forget to update the SpecRunner so it includes your tests and code files.
+> Try tweaking the scale properties. How can you make the shape 5 times bigger?
 
-1. Write a simple calculator that adds, subtracts, divides and multiplies two numbers together.
-2. Commit when you add a test, and after you make each test pass.
-3. Create a styled website for your calculator
+## Exercise - Drawing Hangman!
+
+![](assets/images/canvas-hangman.png)
+
+[Download](https://gist.github.com/despo/0dc7c874efa544475d66/download) the required files for this exercise or clone them directly from Github `git clone https://gist.github.com/despo/0dc7c874efa544475d66`
+
+Using what we've learned today, draw Hangman in Canvas.
+
+We have already created the functions to draw the individual parts, so you should be able to create the functions, uncomment them and see hangman being drawn.
+
+> Use pen and paper to think about the position of each element. You already know that the top left is 0,0 and the bottom right 400, 500. Use a grid if you are finding it hard.
 
 
-# Additional Resources
+> Don't forget `context.beginPath()` and `context.stroke()` before and after drawing elements.
 
-You should now understand enough about JavaScript to create and test your own code.
-To gain a deeper understanding of JavaScript, we recommend reading [JavaScript, the good parts](https://www.amazon.co.uk/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742), by Douglas Crockford.
+Here is our version of [Hangman in Canvas](../../examples/hangman-canvas/index.html).
+
+## Bonus
+
+Plug hangman in the game you created in the last session. You can use conditional statements to control when each part is drawn.
+
 
 ---
-This ends our **Introduction to Testing** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **Drawing in Canvas** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.

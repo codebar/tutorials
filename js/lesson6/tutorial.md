@@ -1,195 +1,104 @@
 ---
 layout: page
-title: Drawing in Canvas
+title: HTTP Requests, AJAX and APIs (part 2)
 ---
+
+This is the second tutorial on HTTP Requests, AJAX and APIs. You can find the [first part](../lesson4/tutorial.html) of the tutorial.
 
 ## Todays lesson
 
-In this lesson we will be going over the **`<canvas>`** HTML element.
+In the last lesson we learnt that an HTTP Request is when we ask the server for some information.
 
-Canvas is used to draw graphics using JavaScript. It has a number of methods for drawing circles, boxes, text and adding images.
+In the two earlier exercises we used the **GET** request. Today we will be building a Hangman game using an existing API that will handle the game logic for us.
 
-## Before we begin
+We will be using the **POST**, **PUT** and **GET** requests, and other things we've learned in the last couple of lessons.
 
-[Download](https://gist.github.com/despo/e4770ca5afeaf70c23bc/download) a canvas playground to practise the examples.
 
-## Canvas
+| Verb | Description |
+| ---- | ----------- |
+| **GET**  |  Fetching a resource (e.g. /index.html  will return the HTML of the page) |
+| **PUT**  |  Updating an existing resource. |
+| **POST** |  Create a new resource. |
 
-Canvas is specified using the HTML `<canvas>` element.
 
-```html
-<canvas id="canvas-id" width="400" height="500"> </canvas>
-```
+## Request using jQuery
 
-> Have a look in the `index.html`. Can you see the canvas definition?
+To use **POST** and **PUT** requests we must specify the `type` in the `ajax()` call that we introduced in the previous lesson.
 
-## JavaScript
-
-To render to the canvas, we must use the canvas drawing context, which handles all the nice stuff.
+You can also specify any `data` as a JSON object.
 
 ```js
-var canvas = document.getElementById('canvas-id');
-var context = canvas.getContext('2d');
+$.ajax({
+  type: request_type,
+  data: { field: 'value',  other_field: 'other value' }
+  ...
+});
 ```
 
-### Controls
+## Exercise - Hangman!
 
-Depending on if we are filling up a shape, or just drawing the outline, we can use `context.fillStyle` or `context.strokeStyle`to set the color of the element.
+![](assets/images/hangman.png)
 
-```js
-  context.fillStyle = 'yellow';
-  context.strokeStyle = 'purple';
-```
+[Download](https://gist.github.com/despo/c76a7bd0bef66713a9ac/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/c76a7bd0bef66713a9ac.git`
 
-To set the line width:
+### API
 
-```js
-  context.lineWidth = 3;
-```
+| Type | Resource | Parameters | Description |
+| ---- | -------- | ---------- | ----------- |
+| **POST**  | `http://hangman-api.herokuapp.com/hangman` | - | Create a new game |
+| **PUT**  | `http://hangman-api.herokuapp.com/hangman` | `{ token: game token, letter: guess }` | Guess a letter |
+| **GET**  | `http://hangman-api.herokuapp.com/hangman` | `{ token: game token }` | Get solution |
 
-#### Drawing
+### What we will be doing:
 
-Before we move on to drawing, let's try and understand how canvas is laid out.
+1. Create a new game
 
-![](assets/images/canvas.png)
+    1. Issue **POST** request
 
-The upper left corned for the canvas is (0,0) and the lower right (400,500), as our canvas is 400x500.
+    2. Update the displayed string on the page and store the token
+        - Use the hidden field with the class `token`
 
-Let's place a rectangle 100px away from the top left corner of the canvas.
+    3. Don't allow the user to start a new game, hide the **New game** bubtton
 
-```
-context.fillRect(100, 100, 50, 100);
-```
-> Did you make sure you set the color using `context.fillStyle` before running this?
+2. Interact with the API to try out different guesses
 
-Now let's add another rectangle, but this time only its outline.
+    1. Issue **PUT** request
+        - Use `data.correct` to check if the response was successful or not
 
-```
-context.strokeRect(300, 100, 50, 100);
-```
+    2. Update the displayed word
 
-**Bonus** Add a new rectangle outline with dimensions **120x150** at the bottom right of the canvas. The **line width** of the rectangle should be 1.
+    3. Update the stored token
 
-### Reseting canvas
+    4. Update remaining attempts and display all guesses
+        - Append each attempt to the `$('.attempts')` using a span
+        - If the attempt is successful, include the class `correct` in the span; if it is unsuccessful, include the class `wrong`
+        - You can then find out how many wrong attempts there were using `$('.wrong').length+1;`
 
-Canvas does not have a reset function, but there is a function to clear a specified rectangle called `context.clearRect`. You can use it like so:
+3. On the 7th failure, retrieve the solution using the **GET** request
 
-```javascript
-context.clearRect(0, 0, canvas.width, canvas.height);
-```
+    1. Display the solution, hide the input field and allow a user to start a new game
 
-**Exercise**
+4. **Bonus** don't process numbers, guesses that have already been attempted or empty space
 
-Reset the canvas when the Reset button is clicked, by calling the `reset()` function.
+    1. You can use jQuery's `$.isNumeric(character))` to check if a letter is a number
 
-### Drawing paths
+    2. `trim()` removes all space around a string. You can apply `trim()` and check for the length to make sure the guess is one character long
 
-Draw a line going from the middle left to the bottom right corner of the canvas.
+    3. All the attempted guesses are already in `.attempts`. You can use `indexOf(character)` to check if it's contained in a string.
 
-```javascript
-context.moveTo(0,300);
-context.lineTo(400,500);
-```
+    4. Add the class `error` to the letter field when the character is not allowed.
 
-This won't do anything until we call `context.stroke()`, which deals with the painting.
+### Other help
 
-You can also draw an join multiple paths together. Try this out by creating a rectangle with corners at (0, 0), (0, 200), (200, 300) and (200, 0).
+- Use `toLowerCase()` for comparing strings as `a` is not the same as `A`
 
-```javascript
-context.beginPath();
-
-context.lineWidth = 1;
-context.strokeStyle = 'purple';
-
-context.moveTo(0,0);
-context.lineTo(0,200);
-context.lineTo(200,200);
-context.lineTo(200,0);
-context.lineTo(0,0);
-
-context.stroke();
-```
-
-## Drawing circles
-
-To draw circles, you can use the `arc` method. `arc(x, y, radius, startAngle, endAngle, counterClockwise)`. Angles are expressed in radians. In radians 2π equates to 360°.
-
-```javascript
-context.beginPath();
-context.arc(200, 100, 50, 0, Math.PI*2, true);
-context.closePath();
-context.lineWidth = 4;
-context.stroke();
-```
-
-To fill in the circle, or any other joined elements, we use the `context.fill()` method after closing the path.
-
-**Exercise** Create another circle and fill it with the color blue.
-
-## Transformations
-
-In canvas, we can also use transformations on the current matrix.
-
-### `rotate()`
-
-First add the rotate method at the bottom of the `draw()` function.
-
-```javascript
-context.rotate(10*Math.PI/180);
-```
-If you try pressing the **Draw** button more than once, you will notice that everything keeps being at a rotated angle after the first time.
-
-To avoid this, when calling any transformation we must save and then restore the state of the canvas.
-
-```javascript
-context.save()
-context.rotate(10*Math.PI/180);
-
-// rotated changes
-
-context.restore()
-```
-
-### `translate()`
-
-Translate moves the current position. If we are at 10, 10 and we `context.translate(20, 15)`, then our new position is 30, 45.
-
-```javascript
-context.translate(45, 45);
-```
-
-### `scale()`
-
-And finally, `context.scale(scaleWidth, scaleHeight)`. Scale changes the dimensions of the rendered items.
-
-
-```javascript
-context.scale(2,2);
-```
-
-> Try tweaking the scale properties. How can you make the shape 5 times bigger?
-
-## Exercise - Drawing Hangman!
-
-![](assets/images/canvas-hangman.png)
-
-[Download](https://gist.github.com/despo/0dc7c874efa544475d66/download) the required files for this exercise or clone them directly from Github `git clone https://gist.github.com/despo/0dc7c874efa544475d66`
-
-Using what we've learned today, draw Hangman in Canvas.
-
-We have already created the functions to draw the individual parts, so you should be able to create the functions, uncomment them and see hangman being drawn.
-
-> Use pen and paper to think about the position of each element. You already know that the top left is 0,0 and the bottom right 400, 500. Use a grid if you are finding it hard.
-
-
-> Don't forget `context.beginPath()` and `context.stroke()` before and after drawing elements.
-
-Here is our version of [Hangman in Canvas](../../examples/hangman-canvas/index.html).
-
-## Bonus
-
-Plug hangman in the game you created in the last session. You can use conditional statements to control when each part is drawn.
-
+Here is our version of [Hangman](../../examples/hangman/index.html).
 
 ---
-This ends our **Drawing in Canvas** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **HTTP Requests, AJAX and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+## Extras
+
+Now that you are familiar with HTTP requests, AJAX and APIs, how about you go away and create a webpage that pulls in all instagram pictures with a certain hashtag.
+
+Or embed a google map onto a webpage with it pointing to a destination of your choice in London.
