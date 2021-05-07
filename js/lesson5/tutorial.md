@@ -1,27 +1,104 @@
 ---
 layout: page
-title: API's part 2 - Send yourself an SMS with Vonage
+title: HTTP Requests, AJAX and APIs (part 2)
 ---
 
-### Goal
+This is the second tutorial on HTTP Requests, AJAX and APIs. You can find the [first part](../lesson4/tutorial.html) of the tutorial.
 
-By the end of this tutorial you will have:
+## Todays lesson
 
-* Sent yourself an SMS using the Vonage API
+In the last lesson we learnt that an HTTP Request is when we ask the server for some information.
 
-## Refresh
+In the two earlier exercises we used the **GET** request. Today we will be building a Hangman game using an existing API that will handle the game logic for us.
 
-From the previous tutorial you learnt how HTTP requests work, the different between **GET** and **POST** and status codes. If you need a refresher pop back to the previous tutorial to remind yourself.
+We will be using the **POST**, **PUT** and **GET** requests, and other things we've learned in the last couple of lessons.
 
-## Exercise - Send yourself an SMS with the Vonage API
 
-<img src="./assets/images/VonageLogo.png" alt="Vonage Logo" width="350px">
+| Verb | Description |
+| ---- | ----------- |
+| **GET**  |  Fetching a resource (e.g. /index.html  will return the HTML of the page) |
+| **PUT**  |  Updating an existing resource. |
+| **POST** |  Create a new resource. |
 
-In the following Vonage API tutorial you will create an account, and send yourself an SMS. Just a heads up, it will involve you creating an account and giving your phone number.
 
-When signing up select NodeJS as your language. NodeJS is a runtine enviroment that allows you to run JavaScript on the server than in the browser which is what you would've been doing if you've followed our first few JavaScript tutorials.
+## Request using jQuery
 
-[Send yourself an SMS with the Vonage API](https://developer.nexmo.com/?utm_source=codebar&utm_campaign=Events&utm_medium=bitly&utm_source=Events)
+To use **POST** and **PUT** requests we must specify the `type` in the `ajax()` call that we introduced in the previous lesson.
+
+You can also specify any `data` as a JSON object.
+
+```js
+$.ajax({
+  type: request_type,
+  data: { field: 'value',  other_field: 'other value' }
+  ...
+});
+```
+
+## Exercise - Hangman!
+
+![](assets/images/hangman.png)
+
+[Download](https://gist.github.com/despo/c76a7bd0bef66713a9ac/download) the exercise files or clone them directly from Github `git clone https://gist.github.com/c76a7bd0bef66713a9ac.git`
+
+### API
+
+| Type | Resource | Parameters | Description |
+| ---- | -------- | ---------- | ----------- |
+| **POST**  | `http://hangman-api.herokuapp.com/hangman` | - | Create a new game |
+| **PUT**  | `http://hangman-api.herokuapp.com/hangman` | `{ token: game token, letter: guess }` | Guess a letter |
+| **GET**  | `http://hangman-api.herokuapp.com/hangman` | `{ token: game token }` | Get solution |
+
+### What we will be doing:
+
+1. Create a new game
+
+    1. Issue **POST** request
+
+    2. Update the displayed string on the page and store the token
+        - Use the hidden field with the class `token`
+
+    3. Don't allow the user to start a new game, hide the **New game** bubtton
+
+2. Interact with the API to try out different guesses
+
+    1. Issue **PUT** request
+        - Use `data.correct` to check if the response was successful or not
+
+    2. Update the displayed word
+
+    3. Update the stored token
+
+    4. Update remaining attempts and display all guesses
+        - Append each attempt to the `$('.attempts')` using a span
+        - If the attempt is successful, include the class `correct` in the span; if it is unsuccessful, include the class `wrong`
+        - You can then find out how many wrong attempts there were using `$('.wrong').length+1;`
+
+3. On the 7th failure, retrieve the solution using the **GET** request
+
+    1. Display the solution, hide the input field and allow a user to start a new game
+
+4. **Bonus** don't process numbers, guesses that have already been attempted or empty space
+
+    1. You can use jQuery's `$.isNumeric(character))` to check if a letter is a number
+
+    2. `trim()` removes all space around a string. You can apply `trim()` and check for the length to make sure the guess is one character long
+
+    3. All the attempted guesses are already in `.attempts`. You can use `indexOf(character)` to check if it's contained in a string.
+
+    4. Add the class `error` to the letter field when the character is not allowed.
+
+### Other help
+
+- Use `toLowerCase()` for comparing strings as `a` is not the same as `A`
+
+Here is our version of [Hangman](../../examples/hangman/index.html).
 
 ---
-This ends our sponsored Vonage tutorial **API's part 2 - Send yourself an SMS with Vonage**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+This ends our **HTTP Requests, AJAX and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+## Extras
+
+Now that you are familiar with HTTP requests, AJAX and APIs, how about you go away and create a webpage that pulls in all instagram pictures with a certain hashtag.
+
+Or embed a google map onto a webpage with it pointing to a destination of your choice in London.

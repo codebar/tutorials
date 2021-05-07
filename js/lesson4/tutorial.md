@@ -37,7 +37,7 @@ You can view all requests issued by a website by going to the Network (or Net) t
 
 ![](assets/images/inspector_requests.png)
 
-As part of the response, a request gives back a **status code**. You can use this to identify if the request was successful or not. Below is a list of the most common.
+As part of the response, a request gives back a **status code**. You can use this to identify if the request was successful or not. Below is a list of the most common status codes.
 
 | Status code | Message | Description |
 | ------------| ------- | ------------ |
