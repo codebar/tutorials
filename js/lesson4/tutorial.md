@@ -13,13 +13,14 @@ In this tutorial we are going to look at:
 * JSON
 * Loading API data into web pages
 * Using jQuery AJAX functionality
+* Using the fetch() API
 
 ### Goal
 
 By the end of this tutorial you will have built:
 
 * A webpage that can retrieve information about a specified GitHub user
-* A webpage that can show the upcoming schedule for BBC shows
+* A webpage that can show random generated quiz questions
 
 # HTTP Requests
 
@@ -227,214 +228,183 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 > Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
+## Exercise 2 - Trivia!
 
-## ~~Exercise 2 - BBC's tomorrow's TV schedule~~
 
-![](https://cdn0.iconfinder.com/data/icons/shift-free/32/Error-128.png)
-
-**Part 2 of this exercise is no longer possible as the API that it uses has been taken down by the BBC.**  
-**Sorry, we're working on fixing the exercise!**
-
-[Download](https://gist.github.com/despo/05cab2f0b38bc02318e7/download) the exercise files or clone them directly from github `git clone https://gist.github.com/05cab2f0b38bc02318e7.git`
-
-For the second exercise, we will build an application that retrieves tomorrow's TV schedule for each genre using BBC's API.
+For this exercise, we will build a web app that generates trivia questions, using this open trivia questions api: https://opentdb.com/api_config.php.
+[Download](https://gist.github.com/kyorkston/a2768287fe15fc693da3dc62e8a8d697/download) the exercise files or clone them directly from github `git clone https://gist.github.com/a2768287fe15fc693da3dc62e8a8d697.git`. Shoutout to [despo](https://gist.github.com/despo) for originially making these files!
 
 ### What we will be doing:
 
-1. Retrieve and render available genres using `http://www.bbc.co.uk/tv/programmes/genres.json`
+1. Retrieve and log quiz questions using the quiz API: `https://opentdb.com/api.php?amount=10`
 
-2. Write a function that retrieves tomorrow's TV schedule using a genre `http://www.bbc.co.uk/tv/programmes/genres/<genre>/schedules/tomorrow.json`
+2. Write a function that displays each question
 
-3. Write a function that displays each programme
+3. **Bonus** Set the quiz difficulty, category or type using the API URL generator. Then display whatever you'd like with the API response data.
 
-4. **Bonus** Retrieve all upcoming episodes of a programme
+### Retrieve and render log questions
 
-### Request using jQuery
+Firstly, here is an introduction to the fetch() Web API - [Introduction to fetch() by Matt Gaunt](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
 
-This time, let's use jQuery's `ajax()` method. Things are a bit easier when using jQuery as we can create different code blocks that handle successful or failed requests.
+There is a whole lot of jargon in there but what the fetch() function does is simplify things for the developer when making a request to an API.
 
-Also, jQuery isolates us from the differences between browser implementations of AJAX calls (for example, if we wanted to make the previous AJAX call work in Internet Explorer,  we will have to write [a much longer method](http://www.tutorialspoint.com/ajax/ajax_browser_support.htm)!)
+Lets first create the fetch request to the trivia API:
 
 ```js
-$.ajax({
-  url: request_url,
-  dataType: 'json',
-  beforeSend: function() {
-   // do something before running the request
-  }
-}).done(function(data) {
-  // process data
-}).fail(function() {
-  // code
-}).always(function() {
-  // code that runs regardless of request succeeding or failing
-});
+fetch('https://opentdb.com/api.php?amount=10')
+  .then(function(response) {
+    return response.json()
+  })
+  .then(function(data) {
+      //work with the json response data here
+      console.log(data)
+  })
+
+```
+We send a request with `fetch`, the reposnse returns a Promise. This response is passed into a
+`then()` function (a Promise) where we transform it into something readable and usable - a JSON object. When that Promise resolves _then_ (`then()`) we can use the response (`response.json()`) however we want to use it in our code when that Promise is resolved - in our case a `console.log()`.
+
+Since things can happen with API responses and its not always a 200 OK status, we can add a `.catch` to the fetch so we can log any issues when fetching data from the api.
+
+```js
+fetch('https://opentdb.com/api.php?amount=10')
+  .then(function(response) {
+    return response.json()
+  })
+  .then(function(data) {
+      //work with the json response data here
+      console.log(data)
+  })
+  .catch(function(error) {
+    console.error('Error: ', error)
+  })
+
 ```
 
-`datatype` defines the type of result we will be getting back. This avoids us having to parse the response to JSON.
+For more information on Promises and asynchronous functions check out [javascript.info/promise-basics](https://javascript.info/promise-basics).
 
-`beforeSend` can be used if we need to perform something before running the request.
+Now open the `index.html` file in a web browser and then inspect the page - here is an article on how to do so in every browser: [How to Inspect Web Page Elements](https://www.lifewire.com/get-inspect-element-tool-for-browser-756549).
+Once you have inspected the page, a panel will appear and it will show you the html elements on your page.  In this panel there is a 'Console' tab, click this and see what has been logged.
 
-`.done()` handles a response that returns a success status code
-
-`.fail()` is called when the request fails
-
-
-## Retrieving and displaying all available genres
-
-Write a function `retrieveGenres()` that does an AJAX call to the API.
-
-```javascript
-function retrieveGenres() {
-  // AJAX call using jQuery that retrieve and process the result
-}
-```
-> Try logging the resulted data and have a look in the console to see and explore the created objects
-
-> `<key>` is the genre format we need to retrieve results from the API
-
-> You can use `<title>` to display a humanly readable format of the Genre
-
-As you can see from the console, the resulting objects are returned inside an Array. We want to iterate over the list using the native Array `forEach( )` function and add each item to the `#genres` list, as a **list item**. As we need to have access to the `key` as well, we can set that as the list item's `id`.
-
-Now that we have all the available genres, we can move on to making calls to the API using the genre to retrieve tomorrow's schedule!!
-
-## Retrieve schedule
-
-Now, let's create a function that retrieves films using genre.
-
-```javascript
-function getTomorrowsSchedule(genre) {
-  // call to retrieve TV schedule
-}
-```
-
-The response you get back should look similar to this, with multiple objects in the broadcasts array.
-
-```json
+You should see printed out something that looks like this:
+```js
 {
-  "broadcasts": [
-    {
-      "is_repeat": false,
-      "is_blanked": false,
-      "schedule_date": "2014-01-15",
-      "start": "2014-01-15T00:10:00Z",
-      "end": "2014-01-15T01:50:00Z",
-      "duration": 6000,
-      "service": {
-        "type": "tv",
-        "id": "bbc_one",
-        "key": "bbcone",
-        "title": "BBC One",
-        "outlets": [
-          {
-            "id": "bbc_one_wales",
-            "key": "wales",
-            "title": "Wales"
-          },
-          {
-            "id": "bbc_one_wales_hd",
-            "key": "wales_hd",
-            "title": "Wales HD"
-          }
-        ]
-      },
-      "programme": {
-        "type": "episode",
-        "pid": "b00sbk03",
-        "position": null,
-        "title": "Disturbia",
-        "short_synopsis": "Thriller about a high school student convinced that his neighbour is a serial killer.",
-        "media_type": "audio_video",
-        "duration": 6000,
-        "image": {
-          "pid": "p01gqbj3"
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "How many games in the Crash Bandicoot series were released on the original Playstation?",
+            "correct_answer": "5",
+            "incorrect_answers": [
+                "4",
+                "3",
+                "6"
+            ]
         },
-        "display_titles": {
-          "title": "Disturbia",
-          "subtitle": ""
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "League of Legends, DOTA 2, Smite and Heroes of the Storm are all part of which game genre?",
+            "correct_answer": "Multiplayer Online Battle Arena (MOBA)",
+            "incorrect_answers": [
+                "Real Time Strategy (RTS)",
+                "First Person Shooter (FPS)",
+                "Role Playing Game (RPG)"
+            ]
         },
-        "first_broadcast_date": "2010-05-03T22:30:00+01:00",
-        "ownership": {
-          "service": {
-            "type": "tv",
-            "id": "bbc_three",
-            "key": "bbcthree",
-            "title": "BBC Three"
-          }
-        },
-        "is_available_mediaset_pc_sd": false,
-        "is_legacy_media": false
-      }
-      }]
-    }
-```
-
-To process the response, we want to iterate over the `response.broadcasts` array and add each item, to `#programmes` as a list item.
-
-To make this a bit easier, this is how you can access the values we need:
-
-* `item.programme.display_titles.title`
-* `item.programme.short_synopsis`
-* `item.programme.image.pid` _only if `item.programme.image` is set_
-* `item.start` and `item.end`
-* `item.duration`
-* `item.service.title`
-
-It would be easier to use string concatenation to construct the html, before appending each item to the list.
-Also, to make your code easier to read, try constructing the html in a method that you pass the response object.
-
-```javascript
-function processEpisode(episode) {
-  var item_html = '<li>';
-  item_html += '<h2>' + episode.programme.display_titles.title + '</h2>';
-  // display short short synopsis
-  // display image
-  // display date and time
-  // display duration (HINT: the duration is in seconds, convert that to minutes)
-  // display the channel (or service, as its called by the API) - add this in a span with the class `service`
-  ...
+        ...
+    ]
 }
 ```
 
-> To display the date formatted correctly, you can use the `formatDate( )` function as we won't be going into details about dates in this tutorial. If you want to know how it works, try going through the code and ask your coach any questions you have.
+It is returning 10 questions because we asked the api to return 10 with the query parameter `?amount=10` on the end of the URL.
 
-To display an image for a programme, we need to use `<img src=http://ichef.bbci.co.uk/images/ic/272x153/<pid>.jpg />`.  As not all programmes have an image, we can use an image placeholder when no image is set `<img src='http://placehold.it/272x153' />`
-
-### Binding the call to the click event
-
-Handle a `click` event on `#genres li` and make a call to `getTomorrowsSchedule(genre)`
-
-### Improving our function
-
-To make the genre we have just clicked active, we also want to add the CSS class `active` to the element that the event has been triggered from.  Don't forget to remove the class `active` from any other `#genres li` items.
-
-> Did you remember to commit your changes?
-
-### Using `beforeSend`
-
-Every time we issue a call to the API, we want to clear the `#programmes` list. We can do that using `empty()`.
-Also, as some of the requests take a while, we want to display a spinning image `<div class='spinner'><img src='spinner.gif' /></div>`.
-
-> Don't forget to remove the spinner, when the request is completed successfully.
-
-## Bonus: Retrieving all upcoming episodes of a programme
-
-To get back all the upcoming shows for an episode, we need to utilise the programme pid, that we can retrieve from the response using `episode.programme.programme.pid`. The URL for the request is `http://www.bbc.co.uk/programmes/<pid>/episodes/upcoming.json`
-
-> **Hint:** The programme `pid` is only available if `episode.programme.position` is set.
-
-
-```javascript
-function getUpcomingEpisodes(pid) {
-  // AJAX call to retrieve upcoming episodes
+Okay lets now put the fetch request inside a function:
+```js
+function fetchQuizQuestions() {
+  // add fetch function in here
 }
 ```
-Since the response structure is similar to the one for retrieving tomorrow's schedule, we should be able to re-use the `processEpisode( )` function to display each item from the broadcasts array.
 
-Handle the `click` event to retrieve and display the upcoming episodes!
+### Write a function that displays each question
 
-Here is our version of the [tv schedule app](../../examples/tv-schedule/index.html).
+Now we need to render the questions onto our webpage.  We will add them in a list format, for that we use the `<li>` html tag. This will be going inside the `<ul>` tag that we have in `index.html`, it has the id "questions". Refer back to [Javascript Lesson 2](tutorials.codebar.io/js/lesson2/tutorial.html) on how to create html elements and add data to them.
+
+
+As the results come back in the form of an array we can run `results.map()` over the array and access the properties inside the result object.
+
+```js
+function renderQuizQuestions() {
+
+}
+```
+
+Put this into the second part of the Promise (`then()`) of your fetching function, something like:
+
+```js
+fetch(...)
+    .then(...)
+    .then(function(data) {
+      renderQuizQuestions(data)
+    })
+```
+
+To run your code you just have to call our fetch function like `fetchQuizQuestions()` at the bottom of the index.js file.  
+
+Because fetch() is an asynchronous function the rest of the code in your file could run at the same time as the fetch
+function, meaning that the fetched data may not appear if used in an outside function, for example:
+
+```js
+function fetchQuizQuestions() {...}
+
+function renderQuizQuestions() {
+  const data = fetchQuizQuestions()
+
+  // render the data into UI components
+}
+```
+
+The `data` inside `renderQuizQuestions()` will come back as undefined as it is run before the asynchronous function has resolved/finished.
+
+So now you should hopefully have some Questions rendered onto your webpage, if not please ask for help from a Codebar coach, a fellow Codebar attendee or checkout the Codebar Slack chatrooms.
+
+
+### **BONUS** Play around with the API URL generator
+
+The trivia api we're using is pretty cool and you can configure it in a few ways, check it out: [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php).
+If you select a few of the options and then generate an api, you could get something like this:
+
+`https://opentdb.com/api.php?amount=20&category=10&difficulty=medium`
+
+We have `amount=20`, this is the amount of questions. `category=10` this is the book category, so each category is mapped to a number in the API. And we have `difficulty=medium`, setting the difficulty of the questions.
+You can play around with this a lot and its a simple interface and you can make the questions as easy or as difficult as you want!
+
+Let's create a selector to choose what difficulty of questions we would like.
+There is 3 difficulty settings `['easy', 'medium', 'hard']` which we can create a html selector for.
+We would then inject the selected value into our `fetchQuizQuestions()` function.
+
+Create a function where we can loop through the list of difficulties, creating an `<option>` for each one and adding the options value.
+Then append this list of options to a `<select>` element.
+
+Now add an event listener to the selector's `'change'` event.  This will be triggered whenever a user selects a new option. In the listener we want to pass the value of the event into our `fetchQuizQuestions` function.
+
+We can expand the API call to look like this:
+
+```js
+fetchQuizQuestions(difficulty)  {
+    return fetch(`https://opentdb.com/api.php?amount=10&difficulty=${difficulty}`)
+```
+
+You've now got the tools to play around with this API as much as you want, where you can create an amazing quiz app!
+
+Here is our version of the [trivia quiz app](../../examples/trivia-quiz/index.html).
+
+Now that you can render the questions and the user can change the difficulty setting, how about now rendering the answers?
+Perhaps you could have a button to reveal the answer?
+Or if you select the multi-choice questions you could add some fun CSS styles to let the user know if they got the answer right or wrong!
 
 ---
 This ends our **HTTP Requests, AJAX and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
