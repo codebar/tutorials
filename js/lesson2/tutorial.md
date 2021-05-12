@@ -42,7 +42,7 @@ var person = {
 console.log('Hello ' + person.first_name + '!');
 ```
 
-We're going to introduce one more important type: **booleans**. A
+We are now going to introduce one more important type: **booleans**. A
 boolean can only be `true` or `false`, for example:
 
 ```js
@@ -84,7 +84,7 @@ console.log('Division: x / y = ' + division); // Division: x / y = 2
 
 #### More maths
 
-Other basic but useful math operators are `%`, `**`, `++` and `--`:
+Other useful math operators are `%`, `**`, `++` and `--`:
 
 > The modulus `%` operator returns the remainder when dividing one operand by another.
 
@@ -137,8 +137,7 @@ console.log('Apples and oranges are different: ' + notEqual);
 ```
 
 > You may also see `==` and `!=`, these are similar but have some quirks so it's generally recommended to avoid them.
-> You can just use `===` and `!==` and they will
-> always do what you expect.
+> It is safer to use `===` and `!==` as they will always do what you expect.
 
 The `>` and `<` operators are "greater than" and "less than". You can
 use them to tell which of two numbers is bigger.
@@ -155,6 +154,7 @@ var lessStudents = students < pizzas;
 console.log('Are there fewer students than pizzas?' + lessStudents);
 
 ```
+> Play around with changing the `coaches`, `students` and `pizzas` variable numbers to familiarise yourself with operators.
 
 You can also combine operators.
 
@@ -176,6 +176,8 @@ if (codebarIsAwesome) {
   console.log('codebar is AWESOME!');
 }
 ```
+
+> Change the `codebarIsAwesome` variable to false, what happens now?
 
 You can use an expression inside an if statement.
 
@@ -205,6 +207,24 @@ if (totalPeople > pizzas) {
 }
 ```
 
+#### Ternaries - Additional learning
+
+You may also see if/else statements written slightly differently.
+
+The condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:) and finally the expression to execute if the condition is falsy.
+
+```js
+condition ? expression1 : expression2
+```
+
+Using the people and pizza example we wrote above and using the Ternary Operator instead of if/else it would look like this:
+
+```js
+totalPeople > pizzas
+  ? console.log('We have more people than pizzas.')
+  : console.log('We have waaay too much pizza. That can never be bad! :)')
+```
+
 ## Loops
 
 A loop is used to execute a set of statements repeatedly until a condition is met.
@@ -219,9 +239,9 @@ while (test) {
 }
 ```
 
-When the while loop starts, the test is checked. If it is false, then the while loop is skipped. If the test is true, then just like an `if` block the statements in the curly braces are executed.
+When the while loop starts, the test is checked. If it is false, then the while loop is skipped. If the test is true, then like an `if` block the statements in the curly braces are executed.
 
-The difference is in what happens after the statements in the block. With an `if`, everything is finished and the statements below the if block are executed. With a `while`, we go back up to the test. If the test is still true, the statements in the block are executed again, and so on until the test is false. This is why we call it a loop.
+The difference is what happens after the statements in the block. With an `if`, everything is finished and the statements below the if block are executed. With a `while`, we go back up to the test. If the test is still true, the statements in the block are executed again, and so on until the test is false. This is why we call it a loop.
 
 For example, if we wanted to set a timer on an online ticket outlet, we could count the timer down and while it hasn't reached zero, the option to buy the ticket could still be available.
 
@@ -263,7 +283,7 @@ for (/* before loop starts */; /* test before each iteration */; /* after each i
 
 The stuff in the round brackets is split into three parts by `;`. The first part is used once, before the loop begins. It's a good place to set an initial value for a counter (like `x = 1` in the `while` loop example).
 
-The second part is a test, and just like in the `while` loop it is checked before each iteration.
+The second part is a test, and like in the `while` loop it is checked before each iteration.
 
 The third part is executed after each loop iteration. It's useful for incrementing the loop counter.
 
@@ -283,13 +303,13 @@ console.log('Total: ' + total);
 ```
 > Another way to write the for loop is `for (var i = 1; i <= 10; i++)`. The `i++` is a short way of writing "increase i by one".
 
-Even though `while` loops are more simple than `for` loops, it is more common to see `for` loops. This is because loops are often used to do something with arrays, which are introduced in the next section.
+Even though `while` loops are simpler than `for` loops, it is more common to see `for` loops. This is because loops are often used to do something with arrays, which are introduced in the next section.
 
 ## Arrays
 
 An array is a simple *data structure*. It can hold a list of elements of the same or different types (e.g. strings, numbers, booleans). In an array each element can be accessed using the **index**.
 
-It may be a bit confusing, but the first index of an array is 0, not 1.
+Confusingly, the first index of an array in JavaScript is 0, not 1.
 
 To understand this better, let's create an array of strings.
 
@@ -303,6 +323,8 @@ var animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
 To retrieve an item from the array, we use **square bracket notation**
 
 To get the first item `animals[0]`, the second `animals[1]` etc.
+
+> Create an array that includes 5 names and then access the 3rd item in the array. (don't forget to access the third item in the array you won't be doing [3])
 
 ### Properties -  `length`
 
@@ -341,7 +363,7 @@ var animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
 animals.unshift('cow');
 animals.push('zebra');
 
-console.log(animals); 
+console.log(animals);
 
 // Expected output: ['cow', 'dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey', 'zebra']
 ```
