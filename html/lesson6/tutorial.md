@@ -165,5 +165,5 @@ Some of your users might be using screenreaders or keyboards to navigate across 
 - The [A11Y Project](http://a11yproject.com/) is an open source project on providing the most up to date and easy to access information regarding accessibility.
 
 #### These extensions are handy if you wish to check if your website meets the criteria and areas to improve:
-- Chrome: WAVE Evaluation Tool
+- Chrome: [WAVE Evaluation Tool](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh)
 - Firefox:[AInspector](https://addons.mozilla.org/en-US/firefox/addon/ainspector-sidebar/)

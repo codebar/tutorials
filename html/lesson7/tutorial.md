@@ -195,11 +195,11 @@ Have a go at styling these up, you can compare yours with the below example.
         color: white;
     }
 
-Look at your changes in Chrome (Chrome has some great developer tools which are going to help your responsive design). Open up the chrome inspect tool by right clicking and choosing 'inspect'. In the top left hand corner of the inspect tool you should see an icon that looks like a mobile in front of a monitor
+Look at your changes in Chrome (Chrome has some great developer tools which are going to help your responsive design). Open up the Chrome Inspect Tool by right clicking and choosing 'Inspect'. In the top left hand corner of the inspect tool you should see an icon that looks like a mobile in front of a monitor
 
 <img src="images/inspect.png" alt="inspect tool">
 
-Click on the icon in your inspect tool to open up the <a href="https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports?hl=en" target="_blank">device toolbar</a>. This view will show you what your site will look like on a mobile device, it has a few different options for default device widths, or you can set it to responsive and drag the width and height about yourself. For now we'll set it to responsive and drop the width down to about 320, this is a very narrow screen.
+Click on the icon in your inspect tool to open up the <a href="https://developer.chrome.com/docs/devtools/device-mode/#viewport" target="_blank">device toolbar</a>. This view will show you what your site will look like on a mobile device, it has a few different options for default device widths, or you can set it to responsive and drag the width and height about yourself. For now we'll set it to responsive and drop the width down to about 320, this is a very narrow screen.
 
 <aside class="notice">
 You might notice that the white text in your header looks blocky and bolder than it should. This is caused by bad rendering of light fonts on dark backgrounds by chrome (and often other browsers) which tends to prioritise speed over beauty when rendering fonts. You can tell chrome to give you better looking text by putting `-webkit-font-smoothing: antialiased;` on the body selector.
