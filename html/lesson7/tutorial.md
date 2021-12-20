@@ -195,7 +195,7 @@ Have a go at styling these up, you can compare yours with the below example.
         color: white;
     }
 
-Look at your changes in Chrome (Chrome has some great developer tools which are going to help your responsive design). Open up the chrome inspect tool by right clicking and choosing 'inspect'. In the top left hand corner of the inspect tool you should see an icon that looks like a mobile in front of a monitor
+Look at your changes in Chrome (Chrome has some great developer tools which are going to help your responsive design). Open up the Chrome Inspect Tool by right clicking and choosing 'Inspect'. In the top left hand corner of the inspect tool you should see an icon that looks like a mobile in front of a monitor
 
 <img src="images/inspect.png" alt="inspect tool">
 
