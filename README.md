@@ -123,7 +123,7 @@ Follow the [quick installation guide](https://rvm.io/rvm/install#quick-guided-in
 ```bash
 $ rvm install 2.2.1  # inside `codebar/tutorials` folder
 $ rvm gemset use codebar-tutorial --create
-$ gem install bundler
+$ gem install bundler -v 1.17.3
 $ bundle install
 $ jekyll serve  # go to http://127.0.0.1:4000/
 ```
