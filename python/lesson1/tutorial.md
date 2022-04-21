@@ -146,13 +146,15 @@ it with:
 
 	>>> quit()
 
-Then you should be able to load the file. 
-	
+Then you should be able to load the file.
+
 This concludes today's tutorial. In the next tutorial, we'll find out how to
 combine the results of multiple separate expressions using variables, get input
 from the user, and make decisions based on that information.
 
-### Further Reading
+### Further Learning
+
+We recommend watching Gaurav Pandey’s How to Get Started with Python video from codebar Festival 2022 over on our [YouTube](https://youtu.be/N0-op9-2eRU).
 
 There is a very good introductory article in [Google Developers Guide](https://developers.google.com/edu/python/introduction).
 

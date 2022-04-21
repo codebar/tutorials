@@ -602,3 +602,7 @@ Modify the JavaScript file we used in the first part of the lesson, and its HTML
 
 ---
 This ends our **Beginning JavaScript**. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
+
+### Further Learning
+
+If you want to learn how to Build a Random Phrase Generator in JavaScript, then watch this video on our [YouTube](https://youtu.be/PIEALPH8CE0).

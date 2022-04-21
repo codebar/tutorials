@@ -215,6 +215,10 @@ Well done, you've finished! For a bonus, switch your `getGithubInfo` method to r
 
 > Coach... explain the difference between synchronous and asynchronous requests. There's a good explanation on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests)
 
+### Further Learning
+
+If you want to continue your learning on API's, then watch this video with Kevin Lewis over on our [YouTube](https://youtu.be/66xLBqosPog), where he'll send himself a text message using the [Vonage API](http://tutorials.codebar.io/js/lesson4a/tutorial.html).
+
 
 ---
 This ends our **HTTP Requests and APIs** tutorial. Is there something you don't understand? Try and go through the provided resources with your coach. If you have any feedback, or can think of ways to improve this tutorial [send us an email](mailto:feedback@codebar.io) and let us know.
