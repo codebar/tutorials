@@ -113,7 +113,7 @@ Array
 ```
 Err, wasn't expecting that? The PHP echo command has to convert values to strings to display them. Most of the time it knows what to do, but it doesn't like to second guess you so wants you to be more specific. So actually it's outputted the string `Array` and warned you with the `PHP Notice` line why it's not what you expected. We can use a `var_dump`, or a string function that can tell it how to format the array items. Here's an example:
 ```php
-echo join(", ", [4, 5, 6]);
+echo implode(", ", [4, 5, 6]);
 ```
 This tells it to join each element in the array together with a comma, so the output becomes:
 ```
@@ -121,7 +121,7 @@ This tells it to join each element in the array together with a comma, so the ou
 ```
 You don't have to have items of just one type in an array, you can mix them up. E.g:
 ```php
-echo join(", ", ["odd", "squad", 4, true]);    // displays odd, squad, 4, 1
+echo implode(", ", ["odd", "squad", 4, true]);    // displays odd, squad, 4, 1
 ```
 
 #### Associative Arrays
