@@ -6,19 +6,19 @@ footer: true
 
 ## Introduction to CSS
 
-### Objectives 
- 
+### Objectives
+
 In this tutorial we are going to look at:
- 
-* What is CSS?
-* What you can do with CSS?
-* Introductions to selectors
-* Linking your CSS file
-* Cascading selectors
-* Pseudo classes
- 
+
+- What is CSS?
+- What you can do with CSS?
+- Introductions to selectors
+- Linking your CSS file
+- Cascading selectors
+- Pseudo classes
+
 ### Goal
- 
+
 Today we will be styling [this page](https://github.com/codebar/tutorials/blob/master/html/lesson2/example.html) so that it looks [like this example](https://tutorials.codebar.io/html/lesson2/example.html).
 
 ### Required files
@@ -33,7 +33,7 @@ It defines the visual representation of the content. For example colour, margins
 
 ### What does it stand for?
 
- **C**ascading **S**tyle **S**heets.
+**C**ascading **S**tyle **S**heets.
 
 ### What makes a website
 
@@ -42,7 +42,6 @@ HTML: structure of a website
 CSS: presentation
 
 _**CSS** works in conjunction with **HTML**_
-
 
 ## What can I do with CSS?
 
@@ -84,9 +83,7 @@ In the head of the html page define a style tag
 ```html
 <head>
   <title>I love owls</title>
-  <style type="text/css">
-
-  </style>
+  <style type="text/css"></style>
 </head>
 ```
 
@@ -102,7 +99,7 @@ Let's set the font that we want our page to use
 
 ```css
 body {
-   font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 ```
 
@@ -112,7 +109,7 @@ Let's also remove the bullet from the lists that we have defined
 
 ```css
 ul {
-   list-style: none;
+  list-style: none;
 }
 ```
 
@@ -120,12 +117,13 @@ and change the appearance of the links on our page
 
 ```css
 a {
-   color: #a369d5;
-   text-decoration: none;
-   border-bottom: 1px dotted #a369d5;
+  color: #a369d5;
+  text-decoration: none;
+  border-bottom: 1px dotted #a369d5;
 }
 ```
-**color**  defines the color of the text. `#a369d5` is the representation of the color in hex.
+
+**color** defines the color of the text. `#a369d5` is the representation of the color in hex.
 
 **text-decoration** specifies the decoration applied to the text. Some other options you can try out are _underline_, _overline_ and _line-through_. As links by default have an underline text decoration applied to them, by setting this to none, we reset that property.
 
@@ -139,7 +137,7 @@ a {
 
 **#a369d5** defines the color of the border
 
-How about changing the border thickness to 5px to see what happens? 
+How about changing the border thickness to 5px to see what happens?
 
 #### Selector: class
 
@@ -147,8 +145,8 @@ A class selector selects all elements that use the specified class.
 
 ```css
 .pictures {
-   margin: 10px auto;
-   width: 900px;
+  margin: 10px auto;
+  width: 900px;
 }
 ```
 
@@ -172,8 +170,8 @@ Selects the element with the id logo.
 
 ```css
 #logo {
-   margin: 0 auto 30px;
-   width: 200px;
+  margin: 0 auto 30px;
+  width: 200px;
 }
 ```
 
@@ -185,14 +183,58 @@ Selects all list elements that are nested within a **class** pictures
 
 ```css
 .pictures li {
-   display: inline;
-   margin: 3px;
+  display: inline;
+  margin: 3px;
 }
 ```
 
 **display** specifies how the elements are displayed. **li** is a block element. By changing its display property, we make sure that it displays as an inline element.
 
 > Change inline to inline-block, and to block. Can you notice the difference?
+
+#### Selector: child selector
+
+Another common selector that allows you to select only the immediate child inside the parent element.
+
+Let's use the markup for a layered store menu that needs to style the `<li>` tags in the list with the `menu` class, but not the `submenu`.
+
+```html
+<ul class="menu">
+  <li>
+    History books
+    <ul class="submenu">
+      <li>Rome</li>
+      <li>Egypt</li>
+      <li>UK</li>
+    </ul>
+  </li>
+  <li>
+    Technical books
+    <ul class="submenu">
+      <li>CSS</li>
+      <li>JavaScript</li>
+    </ul>
+  </li>
+</ul>
+```
+
+If you use a nested (contextual) selector, then the CSS rule will be applied to all `<li>` tags, and each will have a red border.
+
+```css
+/* ❌ note solve task */
+.menu li {
+  border: 1px solid tomato;
+}
+```
+
+The child selector helps solve this problem by selecting only the children of the <li> that are the children (first nesting) of the `ul.menu` list.
+
+```css
+/* ✅  Exactly what we need */
+.menu > li {
+  border: 1px solid tomato;
+}
+```
 
 ## Ways of connecting CSS to HTML
 
@@ -203,14 +245,11 @@ At the beginning of the tutorial we described how to connect the CSS to our page
 ```html
 <head>
   <title>I love owls</title>
-  <style type="text/css">
-
-  </style>
+  <style type="text/css"></style>
 </head>
 ```
 
 This method of using CSS, by defining it within our HTML page is called **embedded**. The problem with this, is that it cannot be reused across other pages and it also makes it a bit harder to work.
-
 
 ### Linked CSS
 
@@ -221,7 +260,7 @@ To achieve this, let's move our CSS outside of the head of the page and into a n
 ```html
 <head>
   <title>I love owls</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 ```
 
@@ -252,7 +291,6 @@ We can change the styling of some of these images by defining a more specific se
 
 So far we have explained some selectors and presented others with more self explanatory names. Knowing every selector, is not an easy task, but don't let this put you off. The internet is your friend. [Here you can find a list of all CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
 
-
 ## Styling our page further
 
 ### line-height
@@ -277,6 +315,7 @@ In the HTML page you will notice a div element with the id **main**. Let's use t
   padding: 0;
 }
 ```
+
 To achieve centering of a container, we must define its width. If you remove the width property you will notice that it won't be in the center of the page.
 
 We have also used another type of _shorthand_ to define the margin. The long version looks like this
@@ -292,8 +331,7 @@ margin-left: auto;
 
 **padding** is the area around an element but within its border.
 
->  Don't confuse padding with margin, have a look using an inspector to see how the padding and margin of an element differ.
-
+> Don't confuse padding with margin, have a look using an inspector to see how the padding and margin of an element differ.
 
 ### Floating elements
 
@@ -352,13 +390,13 @@ h2 {
 }
 
 h4 {
-  color: #6D6A6A;
+  color: #6d6a6a;
   font-size: 19px;
   padding: 27px 25px 15px;
 }
 
 small {
-  color: #6D6A6A;
+  color: #6d6a6a;
   font-size: 15px;
   margin: 0 30px 10px;
   text-align: right;
@@ -370,7 +408,7 @@ ol {
 }
 
 ol li {
-  background-color: #F6F4F8;
+  background-color: #f6f4f8;
   color: #663095;
   font-size: 16px;
   font-weight: 400;
@@ -387,7 +425,7 @@ ol li {
 ### A bit more styling
 
 ```css
-#the-quote{
+#the-quote {
   border-bottom: 1px solid #f6f4f8;
   border-top: 1px solid #f6f4f8;
   margin: 40px auto;
@@ -407,7 +445,6 @@ ol li {
 #text-block {
   height: 370px;
 }
-
 ```
 
 ### More cascading selectors
@@ -416,13 +453,12 @@ ol li {
 .pictures li img {
   border: 2px solid #b9b1bf;
 }
-
 ```
 
 ### Some extra touches
 
 ```css
-.bigimg{
+.bigimg {
   display: inline;
 }
 ```
@@ -443,7 +479,6 @@ Let's add the code below to make sure we only apply a margin to the _first li el
 
 > What happens when you remove _:first-child_ from your selector?
 
-
 ### Bonus - Resetting styles
 
 You've probably noticed that pages look quite different when loading them in different browsers. To try and avoid these browser inconsistencies a common technique is **CSS resetting**
@@ -451,7 +486,24 @@ You've probably noticed that pages look quite different when loading them in dif
 Let's apply this to the elements used within our page
 
 ```css
-html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+small,
+b,
+i,
+ol,
+ul,
+li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -460,13 +512,13 @@ html, body, div, h1, h2, h3, h4, h5, h6, p, a, img, small, b, i, ol, ul, li {
 }
 ```
 
-If you have some time how about you go back through the tutorial making little amends to your CSS to see what things you can change. 
+If you have some time how about you go back through the tutorial making little amends to your CSS to see what things you can change.
 
------
+---
+
 This ends our second lesson, we hope you enjoyed it and learnt something. If you have some spare time how about going back through this tutorial and, by yourself, make some amendments. If there is something you did not understand or want to give us some feedback please [send us an email.](mailto:feedback@codebar.io)
 
 ## Further reading
 
-* [CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
-* [More CSS](https://learn.shayhowe.com/html-css/)
-
+- [CSS Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference?redirectlocale=en-US&redirectslug=CSS%2FCSS_Reference)
+- [More CSS](https://learn.shayhowe.com/html-css/)
