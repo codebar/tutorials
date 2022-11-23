@@ -12,7 +12,7 @@ Today we will be building a website and learning more about CSS layouts and form
 
 ### Goal
 
-The page we will build will look similar to this [example page]( https://tutorials.codebar.io/html/lesson4/example.html "Grace Hopper")
+The page we will build will look similar to this [example page](https://tutorials.codebar.io/html/lesson4/example.html "Grace Hopper")
 
 ### Required files
 
@@ -350,6 +350,232 @@ Add space around the images so there is some separation between them and the tex
 }
 ```
 
+## Flexible Box Layout
+
+It is a CSS module that defines a set of properties for positioning, aligning, and distributing space between elements in a container, even if their size is unknown or dynamic.
+
+The basic idea is to separate items into a block container (`flex container`) and its children (`flex items`).
+
+![](assets/images/flex-container.svg)
+
+![](assets/images/flex-items.svg)
+
+A Flexbox container can change the width and height of its children, as well as the direction of their arrangement - alignment in a column or line, the order in which elements are displayed and the distance between them. A container expands elements to best fit the available space, or shrinks them to prevent overflow.
+
+> In a flex container, most of the rules for arranging elements according to their type and document flow are overridden.
+
+> Elements lose their "type", stop being inline or block.
+> Block elements no longer go vertically under each other.
+> Margins at the junction with the border of the parent do not fall out.
+> Elements' vertical padding does not collapse.
+> Automatic vertical indents work.
+
+### Terminology
+
+The normal order of elements is determined by the document flow and their type (block or inline). In the Flexbox model, the direction in which items are laid out is determined by the direction axes of the container, along which the items line up.
+
+- **main axis** - the main axis of the flex container, along which the elements are located. It doesn't have to be horizontal, its direction is controlled by the `flex-direction` property.
+- **main-start** and main-end - elements in a container are always located from `main-start` (the start of the main axis) to `main-end` (the end of the main axis).
+- **cross axis** - the cross axis, which is always perpendicular to the main axis. Its direction depends on the main axis and is not explicitly set.
+- **cross-start** and cross-end - the beginning and end of the transverse axis along which the lines of the element are located
+
+### Container Properties
+
+A flex `container` is the parent of a group of elements that need to be reordered. It is the container properties that control the direction of the axes, multiline and positioning of elements in the line.
+
+![](assets/images/flex-container.svg)
+
+#### `display` property
+
+```css
+display: flex | inline-flex;
+```
+
+Creates a flex container, block or inline-block, depending on the given value, and sets the flex context for all children (not descendants) of the container, turning them into flex items.
+
+```html
+<ul class="menu">
+  <li class="item"><a href="" class="link">Home</a></li>
+  <li class="item"><a href="" class="link">Blog</a></li>
+  <li class="item"><a href="" class="link">Podcasts</a></li>
+  <li class="item"><a href="" class="link">Contacts</a></li>
+</ul>
+```
+
+Let's create a horizontal menu by turning `ul.menu` into a flex container. Then its children, `li.item` elements, will be located along the main axis, which by default goes from left to right.
+
+```css
+.menu {
+  display: flex;
+}
+```
+
+The flex container `ul.menu` has no effect on `a.link` inside the list items, because they are its children, not children. It is the children that become flex items, in our case, the `li.item` elements.
+
+#### `flex-direction` property
+
+Flexbox is a system for laying out elements in one specific direction - either horizontally or vertically. The `flex-direction` property sets the direction of the main axis, defining the direction of the elements in the container.
+
+```css
+flex-direction: row | row-reverse | column | column-reverse;
+```
+
+- `row` - the axis starts on the left and ends on the right. This is the default value.
+- `row-reverse` - the axis starts on the right and ends on the left.
+- `column` - the main axis becomes vertical, starting at the top and ending at the bottom.
+- `column-reverse` - the main axis becomes vertical, starting at the bottom and ending at the top.
+
+  ![](assets/images/flex-direction.svg)
+
+By default, `flex-direction` is set to `row`, so the top menu items start lining up from left to right. The bottom menu is set to `row-reverse`, the main axis is reversed 180 degrees, and the items line up from right to left.
+
+#### `justify-content` property
+
+Controls the positioning of elements on the main axis, from `main-start` to `main-end`.
+
+```css
+justify-content: flex-start | flex-end | center | space-between | space-around |
+  space-evenly;
+```
+
+- `flex-start` - items are pressed to the start of the axis. This is the default value.
+- `flex-end` - elements are pressed to the end of the axis.
+- `center` - elements are centered on the axis.
+- `space-between` - elements are evenly distributed on the main axis. The first element is set to the beginning of the axis, and the last element to the end.
+- `space-around` - elements are distributed evenly, but the left and right elements lag behind the container borders by half the gap between the other elements.
+- `space-evenly` - the elements are distributed so that the distance between the elements, and from the outermost elements to the borders of the container, is the same
+
+  ![](assets/images/justify-content.jpeg)
+
+The most commonly used values, including the default value, are shown in the example. These include shifting content to the right (`flex-end`), centering (`center`), and evenly distributing space between elements (`space-between`).
+
+#### `align-items` property
+
+Controls the arrangement of elements along the transverse axis. This is the equivalent of `justify-content` for the main axis.
+
+```css
+align-items: stretch | flex-start | flex-end | center | baseline;
+```
+
+- `stretch` - elements are stretched to the full length of the axis. This is the default value.
+- `flex-start` - elements are pressed to the start of the axis.
+- `flex-end` - elements are pressed against the end of the axis.
+- `center` - elements are centered on the axis.
+- `baseline` - elements are aligned to the baseline of their text content.
+
+![](assets/images/align-items.svg)
+
+Probably the most common use is to vertically center elements in a row, especially if the elements are of different heights. Let's add a header with a logo to our markup and nest the menu in the header so that the logo and the menu are neighbors.
+
+```html
+<header class="page-header">
+  <a href="" class="logo">Logo</a>
+
+  <ul class="menu">
+    <li class="item"><a href="" class="link">Home</a></li>
+    <li class="item"><a href="" class="link">Blog</a></li>
+    <li class="item"><a href="" class="link">Podcasts</a></li>
+    <li class="item"><a href="" class="link">Contacts</a></li>
+  </ul>
+</header>
+```
+
+The first thing to do is to put the `a.logo` logo and the `ul.menu` menu in the line, for this we turn the `header.page-header` into a flex container.
+
+```css
+.page-header {
+  display: flex;
+}
+```
+
+The menu is taller than the logo (with all the styles from the example), so it stretches vertically to the full length of the cross axis, due to the default `align-items` set to `stretch`. To fix this and align the logo and menu vertically to the center, set the value to `center`.
+
+```css
+.page-header {
+  display: flex;
+  align-items: center;
+}
+```
+
+The last step is to move the logo and menu to the corners of the header by setting `justify-content` to `space-between`. Since there are only two elements in the line (logo and menu), they are pressed against the edges of the main axis, and all the free space is between them.
+
+```css
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+```
+
+### Item Properties
+
+Flex items are the children of the flex container, the first level of nesting. Flex-elements cease to obey the standard flow of the document, lose their type (block, inline, etc.) and follow the rules of the Flexbox positioning model.
+
+![](assets/images/flex-items.svg)
+
+#### `flex-basis` property
+
+Specifies the initial size of the element before allocating free space. The value can be any valid value: pixels, percentages, rem, etc. For flex items, this is a replacement for the `width` property, but with some peculiarities. In the examples in this lesson, `flex-basis` was set for all flex items, not `width`.
+
+```css
+flex-basis: auto | значение;
+```
+
+- If both `flex-basis` and `width` are specified, then the `width` property is ignored.
+- The `flex-basis` property is not the final size of the element, but the size before the free space is allocated.
+- The `min-width` and `max-width` properties work as constraints on the size of an element, even if it has `flex-basis` and not `width`.
+- The `flex-basis` property can define the height rather than the width of an element. This happens when the main axis is vertical.
+
+#### `flex-grow` property
+
+Determines the ability of an element to take up more space (grow) as needed than its initial size. The value is specified as a proportion (share) of free space in the container.s
+
+```css
+flex-grow: share;
+```
+
+By default, all elements are set to `0`, which means that elements do not try to take up additional free space, even if there is one. Negative values cannot be specified.
+
+![](assets/images/flex-grow.svg)
+
+For example, if all elements have the same value for this property, they will take up the same amount of space in the container. But if you set everything to `1`, and one element to `2`, then it will try to take up twice as much space as any other element.
+
+#### `flex-shrink` property
+
+Specifies the ability of an element to take up less space (shrink) as needed than its initial size. The value is given as a proportion (share).
+
+```css
+flex-shrink: share;
+```
+
+By default, all elements are set to `1`, which means that elements will shrink when necessary. Negative values cannot be specified. Used quite rarely.
+
+#### `align-self` property
+
+Allows an element to change its position on the cross axis by overriding the value of the container's `align-items` property for itself. There is no analogue for the main axis, the element can only move itself on the transverse axis.
+
+```css
+align-self: auto | flex-start | flex-end | center | baseline | stretch;
+```
+
+![](assets/images/align-self.svg)
+
+#### `order` property
+
+```css
+# By default, all elements are set to 0
+order: position;
+```
+
+This property is not often used, due to the fact that it breaks the relationship between the visual order of elements and how the browser and assistive technologies see them.
+
+![](assets/images/flex-order.svg)
+
+### Useful Links
+
+- [Flexbox Playground](https://flexbox.tech/)
+- [Flexbox froggy game](https://flexboxfroggy.com/)
+
 ## Positioning
 
 By default, all HTML elements have a position of **static**. This means that they are positioned within the normal flow of the page and ignore any `top`, `bottom`, `right` or `left` properties defined  in the CSS.
@@ -435,7 +661,7 @@ Before we do some more cool things, let's add a footer to our page
 
 and style it
 
-```html
+```css
 footer {
   height: 60px;
   padding-top: 20px;
