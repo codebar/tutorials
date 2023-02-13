@@ -82,3 +82,10 @@ $ php -S 0.0.0.0:8080
 * `-S` means built-in WebServer
 * `0.0.0.0` is the IP that the WebServer should listen on. By using `0` it will listen on everything - fine for development
 * `:8080` sets the port to listen on - fine for development but in production the default port is `80` and therefore not required when accessing a URL. The colon character is used after a hostname or IP address to indicate that you wish to specify the port number on that host
+
+
+## Advanced setups
+
+PHP has been designed to work primarily in integrated server environments (also known as LAMP stacks, where LAMP stands for Linux, Apache, MySQL, PHP) where flexibility and performance are top requirements.
+
+If you are more advanced with your programming abilities, you may wish to also look at this [advanced guide](advanced.html). This goes into more detail about using PHP in other environments such as docker and virtual machines to create an environment that's closer to a production environment.
