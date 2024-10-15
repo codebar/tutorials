@@ -14,9 +14,9 @@ PHP has two main ways of operating - as a command-line tool (CLI), or as part of
 
 You should be able to try out most things in the PHP tutorials with any online PHP tool. Some are limited by whether you have full control of the HTML, or whether other features are available, like a filesystem or database.
 
-### Using PHPFiddle
+### Using PHPHub sandbox
 
-[PHPFiddle.org](https://phpfiddle.org/) is a simple and well featured way to try out PHP. It is able to serve a full web page, and even provides MySQL database access if you set up a login.
+[https://phphub.net/sandbox/](https://phphub.net/sandbox/) is a simple and feature-rich way to try out PHP. It even provides MySQL database access (click the example button).
 
 
 ## Installing on your machine
