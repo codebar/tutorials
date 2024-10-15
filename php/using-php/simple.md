@@ -16,7 +16,7 @@ You should be able to try out most things in the PHP tutorials with any online P
 
 ### Using PHPHub sandbox
 
-[https://phphub.net/sandbox/](https://phphub.net/sandbox/) is a simple and feature-rich way to try out PHP. It even provides MySQL database access (click the example button).
+[https://phphub.net/sandbox/](https://phphub.net/sandbox/) is a simple and feature-rich way to try out PHP. It even provides MySQL database access.
 
 
 ## Installing on your machine
