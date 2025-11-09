@@ -7,7 +7,7 @@ In this tutorial, we're going to start to work with the basic types of Python:
 strings (for text) and integers & floats (for numeric values).
 
 Notice that in this tutorial you are working in REPL (IDLE). You can find more information
-on REPL and how to start Python in your `cmd` or `terminal` in the [Installing Python tutorial](python/lesson0/tutorial.html) . 
+on REPL and how to start Python in your `cmd` or `terminal` in the [Installing Python tutorial](/python/lesson0/tutorial.html) . 
 
 ## Hello, World!
 
