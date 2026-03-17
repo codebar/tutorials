@@ -215,7 +215,7 @@ will be the `<li>`.
 So, begin your new event handler with this line:
 
 ```js
-var li_node = $(this).parent();
+const li_node = $(this).parent();
 ```
 
 Now that you have the right list item, use `.append()` to add a new
@@ -447,7 +447,7 @@ For this next part, we're going to use a function that belongs to arrays.
 Open the javascript console. Start by defining an array:
 
 ```js
-var words = ['these', 'are', 'some', 'words'];
+const words = ['these', 'are', 'some', 'words'];
 ```
 
 We're going to use your array's `forEach` function. You can use it to call another function once for each thing in the array. Try this:
@@ -485,7 +485,7 @@ $(document).ready(function() {
 Pick a few colour codes you like and store them in an array:
 
 ```js
-var colors = [ '22ac5e', 'd68236', '770077' ];
+const colors = [ '22ac5e', 'd68236', '770077' ];
 ```
 
 Now you can use a `colors.forEach` inside your `ready` function to call
@@ -616,7 +616,7 @@ Make a new variable, outside your event handler functions. You're
 going to use this to store the original colour:
 
 ```js
-var previewColor;
+let previewColor;
 ```
 
 In the `mouseenter` event, get the current `background-color` of the
