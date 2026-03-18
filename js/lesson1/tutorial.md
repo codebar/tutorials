@@ -164,7 +164,7 @@ A line starting with `let` is a **variable definition**. You should
 use this whenever you are creating a new variable.
 
 > In previous versions of JavaScript, `var` was used for all
-**variable defintions**, but `let` is now considered better to use.
+**variable definitions**, but `let` is now considered better to use.
 [You can read more about why on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#description).
 
 You can also change the value of a variable. That's why it's a

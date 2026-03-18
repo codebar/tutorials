@@ -99,7 +99,7 @@ This means that we have loaded our very first object into our REPL! Without exit
 const cat = new Cat ();
 ```
 
-(It doesn't really matter what you call the variable. Variable names are arbitrary in all programming languages, so we could say ```const ginger = new Cat ();``` or ```var luciferTheEvilCat = new Cat ();```. However, it is good practice to pick variable names that are clear and intuitive.)
+(It doesn't really matter what you call the variable. Variable names are arbitrary in all programming languages, so we could say 
 
 This creates a new Cat object. Think about the Cat function as a blueprint for how every new Cat object ought to be made. However, a blueprint of a cat is not a cat! Using JavaScript, we created an "instance" of a cat based on the blueprint.
 
