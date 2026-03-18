@@ -98,7 +98,7 @@ wrote on the console earlier, but instead of adding 'My first item',
 we want to add the parameter to this function:
 
 ```js
-'<li>' + item + '</li>'
+`<li>${item}</li>`
 ```
 
 Once you've done that, reload `index.html` in your browser, and try
@@ -257,8 +257,7 @@ Store those lengths in two variables called `pending` and `completed`.
 
 Now let's display them on the page. Look at `index.html` and find the
 span that comes just below the `<ol>` element. Write a jQuery selector
-for that element, and then call `.text('Pending: ' + pending + '
-Completed: ' + completed)` on it.
+for that element, and then call `` `.text(`Pending: ${pending} Completed: ${completed}`)` `` on it.
 
 ### Write some code
 
@@ -425,7 +424,7 @@ method to add something to the start of an element, and something like
 this to make the new box:
 
 ```js
-'<div class="item" style="background-color: ' + color + ';"></div>'
+`<div class="item" style="background-color: ${color};"></div>`
 ```
 
 > Run `addBox('FF0033')` from the console to make sure your code works.

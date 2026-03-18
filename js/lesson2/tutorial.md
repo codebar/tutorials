@@ -21,7 +21,7 @@ In the first tutorial, we learnt all about **values**.
 ```js
 const name = 'codebar';
 
-console.log(name + ' is amazing!'); // this is an expression
+console.log(`${name} is amazing!`); // this is an expression
 ```
 
 **Numbers**:
@@ -29,7 +29,7 @@ console.log(name + ' is amazing!'); // this is an expression
 ```js
 const pi = 3.14;
 
-console.log('The value of pi: ' + pi);
+console.log(`The value of pi: ${pi}`);
 ```
 
 and **Objects**:
@@ -39,7 +39,7 @@ const person = {
   first_name: 'Archibald'
 };
 
-console.log('Hello ' + person.first_name + '!');
+console.log(`Hello ${person.first_name}!`);
 ```
 
 We are now going to introduce one more important type: **booleans**. A
@@ -49,8 +49,8 @@ boolean can only be `true` or `false`, for example:
 const codebarIsAwesome = true;
 const weatherIsAmazing = false;
 
-console.log('Is codebar AWESOME? ' + codebarIsAwesome);
-console.log('Is the weather in London amazing? ' + weatherIsAmazing);
+console.log(`Is codebar AWESOME? ${codebarIsAwesome}`);
+console.log(`Is the weather in London amazing? ${weatherIsAmazing}`);
 ```
 
 ## Expressions
@@ -65,19 +65,19 @@ const x = 6;
 const y = 3;
 const addition = x + y;
 
-console.log('Addition: x + y = ' + addition); // Addition: x + y = 9
+console.log(`Addition: x + y = ${addition}`); // Addition: x + y = 9
 
 const subtraction = x - y;
 
-console.log('Subtraction: x - y = ' + subtraction); // Subtraction: x - y = 3
+console.log(`Subtraction: x - y = ${subtraction}`); // Subtraction: x - y = 3
 
 const multiplication = x * y;
 
-console.log('Multiplication: x * y = ' + multiplication); // Multiplication: x * y = 18
+console.log(`Multiplication: x * y = ${multiplication}`); // Multiplication: x * y = 18
 
 const division = x / y;
 
-console.log('Division: x / y = ' + division); // Division: x / y = 2
+console.log(`Division: x / y = ${division}`); // Division: x / y = 2
 ```
 
 > Why not try some other maths problem using the `x` and `y` variables?
@@ -97,19 +97,19 @@ let x = 5;
 let y = 3;
 const modulus = x % y;
 
-console.log('Remainder: x % y = ' + modulus);
+console.log(`Remainder: x % y = ${modulus}`);
 
 const exponentiation = x ** y;
 
-console.log('Exponentiation: x ** y = ' + exponentiation);
+console.log(`Exponentiation: x ** y = ${exponentiation}`);
 
 const increment = x++;
 
-console.log('Increment: x++ = ' + increment);
+console.log(`Increment: x++ = ${increment}`);
 
 const decrement = y--;
 
-console.log('Decrement: y-- = ' + decrement);
+console.log(`Decrement: y-- = ${decrement}`);
 ```
 
 #### Comparisons
@@ -122,7 +122,7 @@ const oranges = 'oranges';
 
 const equal = apples === oranges;
 
-console.log('Apples and oranges are the exactly same: ' + equal);
+console.log(`Apples and oranges are the exactly same: ${equal}`);
 ```
 
 The opposite of `===` is `!==`. It returns `true` if they are not equal, and `false` if they are.
@@ -133,7 +133,7 @@ const oranges = 'oranges';
 
 const notEqual = apples !== oranges;
 
-console.log('Apples and oranges are different: ' + notEqual);
+console.log(`Apples and oranges are different: ${notEqual}`);
 ```
 
 > You may also see `==` and `!=`, these are similar but have some quirks so it's generally recommended to avoid them.
@@ -148,10 +148,10 @@ const students = 24;
 const pizzas = 25;
 
 const moreStudents = students > coaches;
-console.log('Are there more students than coaches?' + moreStudents);
+console.log(`Are there more students than coaches? ${moreStudents}`);
 
 const lessStudents = students < pizzas;
-console.log('Are there fewer students than pizzas?' + lessStudents);
+console.log(`Are there fewer students than pizzas? ${lessStudents}`);
 
 ```
 > Play around with changing the `coaches`, `students` and `pizzas` variable numbers to familiarise yourself with operators.
@@ -160,7 +160,7 @@ You can also combine operators.
 
 ```js
 const enoughPizzas = (coaches + students) < pizzas;
-console.log('Do we have enough pizzas for everybody? ' + enoughPizzas);
+console.log(`Do we have enough pizzas for everybody? ${enoughPizzas}`);
 ```
 > Now sit with your coach and create 2 variables, one is your age and one is the
 > minimum driving age. Then console log whether you are old enough to drive.
@@ -256,7 +256,7 @@ while (i <= 10) {
   i = i + 1;
 }
 
-console.log('Total: ' + total);
+console.log(`Total: ${total}`);
 ```
 
 > We can also express `<= 10` using `< 11`
@@ -299,7 +299,7 @@ for (i = 1; i <= 10; i = i + 1) {
   total = total + i;
 }
 
-console.log('Total: ' + total);
+console.log(`Total: ${total}`);
 ```
 > Another way to write the for loop is `for (let i = 1; i <= 10; i++)`. The `i++` is a short way of writing "increase i by one".
 
@@ -577,7 +577,7 @@ function displayPopulation() {
   const paragraph = document.createElement('p');
 
   // Make some text content to put into your <p></p>
-  const content = document.createTextNode('Population: ' + london.population);
+  const content = document.createTextNode(`Population: ${london.population}`);
 
   // Put the text content into the <p></p>.
   paragraph.appendChild(content);

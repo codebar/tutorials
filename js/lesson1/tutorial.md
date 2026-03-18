@@ -308,9 +308,14 @@ Change your `sayHello` function definition to look like this:
 
 ```js
 function sayHello(person) {
-  console.log('Hello ' + person + '!');
+  console.log(`Hello ${person}!`);
 }
 ```
+
+This is a **template literal** string and is denoted with the backtick
+`` ` `` symbol instead of `'`. Inside of a template literal, you can
+include **variables** with the `${variable}` syntax. This is called a
+**string interpolation**.
 
 Now try calling it using `sayHello('Archibald')`.
 
@@ -337,7 +342,7 @@ like the others.
 In the body of this new function, write this line:
 
 ```js
-return 'Hello ' + person + '!';
+return `Hello ${person}!`;
 ```
 
 Try calling this function from the console. Look carefully at the
@@ -363,8 +368,8 @@ with commas. Change the first line of your `conversation` function to be:
 function conversation(person, topic) {
 ```
 
-Now add another line to the function that prints `"Do you like " +
-topic + "?"` on the console.
+Now add another line to the function that prints
+`` `Do you like ${topic}?` `` on the console.
 
 Similarly, you call the function like this:
 
@@ -536,7 +541,8 @@ You also know how to do all these things:
 
 * Use the javascript console
 * Store values in variables
-* Add numbers and combine strings with `+`
+* Add numbers with `+`
+* Combine strings with template literals (`` ` ``) and `${}`
 * Define and call functions
 * Access object properties
 * Call object methods

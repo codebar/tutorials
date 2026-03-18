@@ -109,7 +109,7 @@ $(document).ready(function() {
       const input = $(this);
       const username = input.val();
 
-      console.log('username was: ' + username);
+      console.log(`username was: ${username}`);
     }
   });
 });
@@ -119,7 +119,7 @@ Now we're ready to pass this through to GitHub. Let's make another function, som
 
 ```js
 function getGithubInfo(username) {
-  const url = 'https://api.github.com/users/' + username;
+  const url = `https://api.github.com/users/${username}`;
 
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.open('GET', url, false);
@@ -152,7 +152,7 @@ Our `getGithubInfo` method will return the response from the server, including t
 
 ```js
 function getGithubInfo(username) {
-  const url = 'https://api.github.com/users/' + username;
+  const url = `https://api.github.com/users/${username}`;
 
   const xmlhttp = new XMLHttpRequest();
   xmlhttp.open('GET', url, false);
