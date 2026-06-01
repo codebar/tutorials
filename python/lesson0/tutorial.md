@@ -21,7 +21,7 @@ outdated these days, so we need to upgrade:
 3. Click "Downloads".
 4. There will be two options; one for Python 3 and one for Python 2.
    **Download Python 3**. At the time of writing, the version available is
-   3.8.3.
+   3.14.5.
 5. When the download's complete, your browser should automatically mount the
    disk image and open a Finder window of what's inside, but if that doesn't
    happen, you'll have to find the file `Python.mpkg` in your downloads folder
@@ -38,7 +38,7 @@ If you get lost, have a look at this [tutorial with pictures on DiveIntoPython3]
 2. Click "Downloads".
 3. There will be two options; one for Python 3 and one for Python 2.
    **Download Python 3**. At the time of writing, the version available is
-   3.8.3.
+   3.14.5.
 4. Run the downloaded installer and click *Next* until you reach the
    *Customization* page.
 5. Scroll down to the bottom and choose to *Add python.exe to PATH*.
@@ -96,7 +96,7 @@ On Windows, open `cmd` or on Mac OS / GNU/Linux open `terminal` and type
 
 What you should see is:
 
-    $ python 3.8.3
+    $ python 3.14.5
 
 On Mac OS running `python --version` might run the outdated Python 2.7 which is bundled with the operating system.
 If this is your case, then you need to run `python3` instead of `python`.
@@ -109,7 +109,7 @@ Now, open the *REPL* by typing:
 
 And you should see something like this:
 
-    Python 3.8.3 (default, Aug  6 2016, 15:44:26)
+    Python 3.14.5 (default, Jun 1 2026, 15:44:26)
     [GCC 5.4.0] on linux
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
