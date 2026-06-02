@@ -28,8 +28,8 @@ Canvas is specified using the HTML `<canvas>` element.
 To render to the canvas, we must use the canvas drawing context, which handles all the nice stuff.
 
 ```js
-var canvas = document.getElementById('canvas-id');
-var context = canvas.getContext('2d');
+const canvas = document.getElementById('canvas-id');
+const context = canvas.getContext('2d');
 ```
 
 ### Controls

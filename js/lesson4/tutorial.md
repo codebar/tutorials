@@ -106,8 +106,8 @@ We will need to pass the username to GitHub, so we need to extract it from the i
 $(document).ready(function() {
   $(document).on('keypress', '#username', function(event) {
     if (event.which === 13) { // check the key was <enter>
-      var input = $(this);
-      var username = input.val();
+      const input = $(this);
+      const username = input.val();
 
       console.log('username was: ' + username);
     }
@@ -119,13 +119,13 @@ Now we're ready to pass this through to GitHub. Let's make another function, som
 
 ```js
 function getGithubInfo(username) {
-  var url = 'https://api.github.com/users/' + username;
+  const url = 'https://api.github.com/users/' + username;
 
-  var xmlhttp = new XMLHttpRequest();
+  const xmlhttp = new XMLHttpRequest();
   xmlhttp.open('GET', url, false);
   xmlhttp.send();
 
-  var data = xmlhttp.responseText;
+  const data = xmlhttp.responseText;
 
   console.log(data);
 }
@@ -152,9 +152,9 @@ Our `getGithubInfo` method will return the response from the server, including t
 
 ```js
 function getGithubInfo(username) {
-  var url = 'https://api.github.com/users/' + username;
+  const url = 'https://api.github.com/users/' + username;
 
-  var xmlhttp = new XMLHttpRequest();
+  const xmlhttp = new XMLHttpRequest();
   xmlhttp.open('GET', url, false);
   xmlhttp.send();
 
@@ -182,8 +182,8 @@ Once we've checked the status, we need to decode the data which is stored in `xm
 function showUser(xmlhttp) {
   if(xmlhttp.status === 200) {
     // show the user details
-    var json = xmlhttp.responseText;
-    var user = JSON.parse(json);
+    const json = xmlhttp.responseText;
+    const user = JSON.parse(json);
   } else {
     // show an error
   }
