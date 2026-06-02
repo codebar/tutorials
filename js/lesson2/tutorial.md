@@ -19,38 +19,38 @@ In the first tutorial, we learnt all about **values**.
 **Strings**:
 
 ```js
-var name = 'codebar';
+const name = 'codebar';
 
-console.log(name + ' is amazing!'); // this is an expression
+console.log(`${name} is amazing!`); // this is an expression
 ```
 
 **Numbers**:
 
 ```js
-var pi = 3.14;
+const pi = 3.14;
 
-console.log('The value of pi: ' + pi);
+console.log(`The value of pi: ${pi}`);
 ```
 
 and **Objects**:
 
 ```js
-var person = {
+const person = {
   first_name: 'Archibald'
 };
 
-console.log('Hello ' + person.first_name + '!');
+console.log(`Hello ${person.first_name}!`);
 ```
 
 We are now going to introduce one more important type: **booleans**. A
 boolean can only be `true` or `false`, for example:
 
 ```js
-var codebarIsAwesome = true;
-var weatherIsAmazing = false;
+const codebarIsAwesome = true;
+const weatherIsAmazing = false;
 
-console.log('Is codebar AWESOME? ' + codebarIsAwesome);
-console.log('Is the weather in London amazing? ' + weatherIsAmazing);
+console.log(`Is codebar AWESOME? ${codebarIsAwesome}`);
+console.log(`Is the weather in London amazing? ${weatherIsAmazing}`);
 ```
 
 ## Expressions
@@ -61,23 +61,23 @@ In the first tutorial, we learnt about expressions using the `+` operator. The
 other basic math operators are `-`, `*`, and `/`:
 
 ```js
-var x = 6;
-var y = 3;
-var addition = x + y;
+const x = 6;
+const y = 3;
+const addition = x + y;
 
-console.log('Addition: x + y = ' + addition); // Addition: x + y = 9
+console.log(`Addition: x + y = ${addition}`); // Addition: x + y = 9
 
-var subtraction = x - y;
+const subtraction = x - y;
 
-console.log('Subtraction: x - y = ' + subtraction); // Subtraction: x - y = 3
+console.log(`Subtraction: x - y = ${subtraction}`); // Subtraction: x - y = 3
 
-var multiplication = x * y;
+const multiplication = x * y;
 
-console.log('Multiplication: x * y = ' + multiplication); // Multiplication: x * y = 18
+console.log(`Multiplication: x * y = ${multiplication}`); // Multiplication: x * y = 18
 
-var division = x / y;
+const division = x / y;
 
-console.log('Division: x / y = ' + division); // Division: x / y = 2
+console.log(`Division: x / y = ${division}`); // Division: x / y = 2
 ```
 
 > Why not try some other maths problem using the `x` and `y` variables?
@@ -93,23 +93,23 @@ Other useful math operators are `%`, `**`, `++` and `--`:
 > The increment `++` and decrement `--` operators return the result of adding one and subtracting one from an operand respectively.
 
 ```js
-var x = 5;
-var y = 3;
-var modulus = x % y;
+let x = 5;
+let y = 3;
+const modulus = x % y;
 
-console.log('Remainder: x % y = ' + modulus);
+console.log(`Remainder: x % y = ${modulus}`);
 
-var exponentiation = x ** y;
+const exponentiation = x ** y;
 
-console.log('Exponentiation: x ** y = ' + exponentiation);
+console.log(`Exponentiation: x ** y = ${exponentiation}`);
 
-var increment = x++;
+const increment = x++;
 
-console.log('Increment: x++ = ' + increment);
+console.log(`Increment: x++ = ${increment}`);
 
-var decrement = y--;
+const decrement = y--;
 
-console.log('Decrement: y-- = ' + decrement);
+console.log(`Decrement: y-- = ${decrement}`);
 ```
 
 #### Comparisons
@@ -117,23 +117,23 @@ console.log('Decrement: y-- = ' + decrement);
 The `===` operator compares two values, it returns the boolean `true` if they are equal and `false` if they are not.
 
 ```js
-var apples = 'apples';
-var oranges = 'oranges';
+const apples = 'apples';
+const oranges = 'oranges';
 
-var equal = apples === oranges;
+const equal = apples === oranges;
 
-console.log('Apples and oranges are the exactly same: ' + equal);
+console.log(`Apples and oranges are the exactly same: ${equal}`);
 ```
 
 The opposite of `===` is `!==`. It returns `true` if they are not equal, and `false` if they are.
 
 ```js
-var apples = 'apples';
-var oranges = 'oranges';
+const apples = 'apples';
+const oranges = 'oranges';
 
-var notEqual = apples !== oranges;
+const notEqual = apples !== oranges;
 
-console.log('Apples and oranges are different: ' + notEqual);
+console.log(`Apples and oranges are different: ${notEqual}`);
 ```
 
 > You may also see `==` and `!=`, these are similar but have some quirks so it's generally recommended to avoid them.
@@ -143,15 +143,15 @@ The `>` and `<` operators are "greater than" and "less than". You can
 use them to tell which of two numbers is bigger.
 
 ```js
-var coaches = 20;
-var students = 24;
-var pizzas = 25;
+const coaches = 20;
+const students = 24;
+const pizzas = 25;
 
-var moreStudents = students > coaches;
-console.log('Are there more students than coaches?' + moreStudents);
+const moreStudents = students > coaches;
+console.log(`Are there more students than coaches? ${moreStudents}`);
 
-var lessStudents = students < pizzas;
-console.log('Are there fewer students than pizzas?' + lessStudents);
+const lessStudents = students < pizzas;
+console.log(`Are there fewer students than pizzas? ${lessStudents}`);
 
 ```
 > Play around with changing the `coaches`, `students` and `pizzas` variable numbers to familiarise yourself with operators.
@@ -159,8 +159,8 @@ console.log('Are there fewer students than pizzas?' + lessStudents);
 You can also combine operators.
 
 ```js
-var enoughPizzas = (coaches + students) < pizzas;
-console.log('Do we have enough pizzas for everybody? ' + enoughPizzas);
+const enoughPizzas = (coaches + students) < pizzas;
+console.log(`Do we have enough pizzas for everybody? ${enoughPizzas}`);
 ```
 > Now sit with your coach and create 2 variables, one is your age and one is the
 > minimum driving age. Then console log whether you are old enough to drive.
@@ -170,7 +170,7 @@ console.log('Do we have enough pizzas for everybody? ' + enoughPizzas);
 An if statement lets you run a piece of code if an expression is `true`.
 
 ```js
-var codebarIsAwesome = true;
+let codebarIsAwesome = true;
 
 if (codebarIsAwesome) {
   console.log('codebar is AWESOME!');
@@ -182,11 +182,11 @@ if (codebarIsAwesome) {
 You can use an expression inside an if statement.
 
 ```js
-var coaches = 20;
-var students = 24;
-var pizzas = 25;
+const coaches = 20;
+const students = 24;
+const pizzas = 25;
 
-var totalPeople = coaches + students;
+const totalPeople = coaches + students;
 
 if (totalPeople > pizzas) {
   console.log('We have more people than pizzas!');
@@ -248,15 +248,15 @@ For example, if we wanted to set a timer on an online ticket outlet, we could co
 We can use this to sum all numbers from 1 to 10:
 
 ```js
-var i = 1;
-var total = 0;
+let i = 1;
+let total = 0;
 
 while (i <= 10) {
   total = total + i;
   i = i + 1;
 }
 
-console.log('Total: ' + total);
+console.log(`Total: ${total}`);
 ```
 
 > We can also express `<= 10` using `< 11`
@@ -292,16 +292,16 @@ For example, if we had an online shopping basket, we could loop over the items i
 The `while` loop above can be rewritten as a `for` loop:
 
 ```js
-var total = 0;
-var i;
+let total = 0;
+let i;
 
 for (i = 1; i <= 10; i = i + 1) {
   total = total + i;
 }
 
-console.log('Total: ' + total);
+console.log(`Total: ${total}`);
 ```
-> Another way to write the for loop is `for (var i = 1; i <= 10; i++)`. The `i++` is a short way of writing "increase i by one".
+> Another way to write the for loop is `for (let i = 1; i <= 10; i++)`. The `i++` is a short way of writing "increase i by one".
 
 Even though `while` loops are simpler than `for` loops, it is more common to see `for` loops. This is because loops are often used to do something with arrays, which are introduced in the next section.
 
@@ -314,7 +314,7 @@ Confusingly, the first index of an array in JavaScript is 0, not 1.
 To understand this better, let's create an array of strings.
 
 ```js
-var animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
+const animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
 ```
 
 ![](assets/images/animals_array.png)
@@ -337,10 +337,10 @@ animals.length
 The length property is extremely useful when you want to do something with every element in an array. For example, to log each entry of the `animals` array, you can use `animals.length` with a `for` loop:
 
 ```js
-var i;
+let i;
 
 for (i = 0; i < animals.length; i = i + 1) {
-  var animal = animals[i];
+  const animal = animals[i];
   console.log(animal);
 }
 ```
@@ -358,7 +358,7 @@ The word `method` is usually used to mean a function that belongs to an object. 
 `array.unshift(object)` adds an element to the beginning of the array
 
 ```js
-var animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
+const animals = ['dog', 'cat', 'rabbit', 'horse', 'elephant', 'monkey'];
 
 animals.unshift('cow');
 animals.push('zebra');
@@ -387,7 +387,7 @@ animals.sort();
 Try this out on an array of strings.
 
 ```js
-var names = ['Jane', 'Barry', 'Helen', 'David', 'Sam'];
+const names = ['Jane', 'Barry', 'Helen', 'David', 'Sam'];
 
 names.sort();
 
@@ -403,7 +403,7 @@ function sortNumbersAscending(a, b) {
     return a - b;
 }
 
-var nums = [1, 5, 3, 19, 2, 10];
+const nums = [1, 5, 3, 19, 2, 10];
 
 nums.sort(sortNumbersAscending);
 
@@ -424,9 +424,9 @@ nums.sort(sortNumbersAscending).reverse();
 Now that we know what arrays are, we can use that to understand loops better. Let's try out another example:
 
 ```js
-var fruitAndVeg = ['apple', 'orange', 'banana', 'kiwi', 'avocado', 'celery', 'aubergine'];
-var noAvocados = [];
-var i = 0;
+const fruitAndVeg = ['apple', 'orange', 'banana', 'kiwi', 'avocado', 'celery', 'aubergine'];
+const noAvocados = [];
+let i = 0;
 
 while (i < fruitAndVeg.length) {
   if (fruitAndVeg[i] !== 'avocado') {
@@ -441,10 +441,10 @@ while (i < fruitAndVeg.length) {
 There is a counter here though, so a better way to write this would be:
 
 ```js
-var fruitAndVeg = ['apple', 'orange', 'banana', 'kiwi', 'avocado', 'celery', 'aubergine'];
-var noAvocados = [];
+const fruitAndVeg = ['apple', 'orange', 'banana', 'kiwi', 'avocado', 'celery', 'aubergine'];
+const noAvocados = [];
 
-for (var i = 0; i < fruitAndVeg.length; i = i + 1) {
+for (let i = 0; i < fruitAndVeg.length; i = i + 1) {
   if (fruitAndVeg[i] !== 'avocado') {
     noAvocados.push(fruitAndVeg[i]);
   }
@@ -495,8 +495,8 @@ Write a function that lists all DOM children elements.
 
 ```js
 function listDomElements() {
-  var children = document.body.childNodes;
-  var i;
+  const children = document.body.childNodes;
+  let i;
 
   for (i = 0; i <  children.length; i = i + 1) {
     console.log(children[i]);
@@ -526,7 +526,7 @@ The most common way, is by retrieving elements by id.
 Add an id `description`to the paragraph element.
 
 ```js
-var description = document.getElementById('description');
+const description = document.getElementById('description');
 console.log(description.innerHTML);
 ```
 
@@ -552,7 +552,7 @@ document.appendChild('<node>');
 Try this out using the london object we declared previously
 
 ```js
-var london = {
+const london = {
   name: 'London',
   population: 8308369,
   tallestBuilding: {
@@ -574,10 +574,10 @@ var london = {
 ```js
 function displayPopulation() {
   // Make a new <p></p> for population. This is not attached to the DOM yet.
-  var paragraph = document.createElement('p');
+  const paragraph = document.createElement('p');
 
   // Make some text content to put into your <p></p>
-  var content = document.createTextNode('Population: ' + london.population);
+  const content = document.createTextNode(`Population: ${london.population}`);
 
   // Put the text content into the <p></p>.
   paragraph.appendChild(content);

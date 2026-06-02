@@ -141,7 +141,7 @@ Remember:
 Try typing this on the console:
 
 ```js
-var a = 17;
+let a = 17;
 ```
 
 You'll see that it returns the value as `undefined`, undefined
@@ -153,15 +153,19 @@ Now try typing `a` on the console. You should see that you get back 17. Variable
 Try typing these:
 
 ```js
-var b = 12;
-var c = a + b;
+let b = 12;
+let c = a + b;
 ```
 
 Now look at the values of b and c. See how it's storing the values of
 these expressions?
 
-A line starting with `var` is a **variable definition**. You should
+A line starting with `let` is a **variable definition**. You should
 use this whenever you are creating a new variable.
+
+> In previous versions of JavaScript, `var` was used for all
+**variable definitions**, but `let` is now considered better to use.
+[You can read more about why on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#description).
 
 You can also change the value of a variable. That's why it's a
 "variable": because its value can vary. Try this:
@@ -170,7 +174,7 @@ You can also change the value of a variable. That's why it's a
 b = 2;
 ```
 
-Notice that you don't have `var` this time. If you have a
+Notice that you don't have `let` this time. If you have a
 variable name, an equals sign, and an expression, then this is a
 **variable assignment**, which changes the value of a variable that
 you defined earlier.
@@ -187,16 +191,25 @@ c = a + b;
 See that it's changed this time? This is because the **expression**
 `a + b` is converted into its **value** immediately when it is used.
 
+If you want a **value** that cannot be changed, you would use
+**const**. These types of variables are called **constants**.
+
+```js
+const tryChangingMe = 1;
+tryChangingMe = 2; // Error! "invalid assignment to const"
+```
+
+
 ### Keywords, identifiers, and strings
 
-The word `var` is a **keyword**: a word that means something special
-to the language. `var` means "create a new variable".
+The word `let` is a **keyword**: a word that means something special
+to the language. `let` means "create a new variable".
 
 Earlier in this tutorial, we had you try typing `Hello` on the console
 without quotes, and you got an error about it not being defined. You
 can put anything you like into a string, but things that aren't in a
 string need to be defined to mean something before you can use
-them. The `var` keyword defines a new word to be a variable. In this
+them. The `let` keyword defines a new word to be a variable. In this
 section you created the variables `a`, `b`, and `c`, so you could use
 those.
 
@@ -209,11 +222,11 @@ used in identifiers.
 
 The other important rule is that you can't write an identifier that is
 the same as a keyword, so you cannot create a variable called
-`var`. If you try writing this then you will get a fairly obscure
+`let`. If you try writing this then you will get a fairly obscure
 error message:
 
 ```js
-var var = 1;
+let let = 1;
 ```
 
 ## Functions
@@ -295,9 +308,14 @@ Change your `sayHello` function definition to look like this:
 
 ```js
 function sayHello(person) {
-  console.log('Hello ' + person + '!');
+  console.log(`Hello ${person}!`);
 }
 ```
+
+This is a **template literal** string and is denoted with the backtick
+`` ` `` symbol instead of `'`. Inside of a template literal, you can
+include **variables** with the `${variable}` syntax. This is called a
+**string interpolation**.
 
 Now try calling it using `sayHello('Archibald')`.
 
@@ -324,7 +342,7 @@ like the others.
 In the body of this new function, write this line:
 
 ```js
-return 'Hello ' + person + '!';
+return `Hello ${person}!`;
 ```
 
 Try calling this function from the console. Look carefully at the
@@ -350,8 +368,8 @@ with commas. Change the first line of your `conversation` function to be:
 function conversation(person, topic) {
 ```
 
-Now add another line to the function that prints `"Do you like " +
-topic + "?"` on the console.
+Now add another line to the function that prints
+`` `Do you like ${topic}?` `` on the console.
 
 Similarly, you call the function like this:
 
@@ -432,7 +450,7 @@ We apologise for this quirk of the language.
 Another type of **value** in JavaScript is an **object**. An object looks like this:
 
 ```js
-var person = {
+const person = {
     first_name: "Archibald",
     likes: "owls"
 };
@@ -461,11 +479,11 @@ variable". This is important because you can, and often will, have
 several variables that refer to the same object. Try this:
 
 ```js
-var person_a = {
+const person_a = {
     first_name: "Archibald",
     likes: "owls"
 };
-var person_b = person_a;
+const person_b = person_a;
 
 console.log("Before");
 console.log(person_a.first_name);
@@ -523,7 +541,8 @@ You also know how to do all these things:
 
 * Use the javascript console
 * Store values in variables
-* Add numbers and combine strings with `+`
+* Add numbers with `+`
+* Combine strings with template literals (`` ` ``) and `${}`
 * Define and call functions
 * Access object properties
 * Call object methods

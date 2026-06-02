@@ -98,7 +98,7 @@ wrote on the console earlier, but instead of adding 'My first item',
 we want to add the parameter to this function:
 
 ```js
-'<li>' + item + '</li>'
+`<li>${item}</li>`
 ```
 
 Once you've done that, reload `index.html` in your browser, and try
@@ -215,7 +215,7 @@ will be the `<li>`.
 So, begin your new event handler with this line:
 
 ```js
-var li_node = $(this).parent();
+const li_node = $(this).parent();
 ```
 
 Now that you have the right list item, use `.append()` to add a new
@@ -257,8 +257,7 @@ Store those lengths in two variables called `pending` and `completed`.
 
 Now let's display them on the page. Look at `index.html` and find the
 span that comes just below the `<ol>` element. Write a jQuery selector
-for that element, and then call `.text('Pending: ' + pending + '
-Completed: ' + completed)` on it.
+for that element, and then call `` `.text(`Pending: ${pending} Completed: ${completed}`)` `` on it.
 
 ### Write some code
 
@@ -425,7 +424,7 @@ method to add something to the start of an element, and something like
 this to make the new box:
 
 ```js
-'<div class="item" style="background-color: ' + color + ';"></div>'
+`<div class="item" style="background-color: ${color};"></div>`
 ```
 
 > Run `addBox('FF0033')` from the console to make sure your code works.
@@ -447,7 +446,7 @@ For this next part, we're going to use a function that belongs to arrays.
 Open the javascript console. Start by defining an array:
 
 ```js
-var words = ['these', 'are', 'some', 'words'];
+const words = ['these', 'are', 'some', 'words'];
 ```
 
 We're going to use your array's `forEach` function. You can use it to call another function once for each thing in the array. Try this:
@@ -485,7 +484,7 @@ $(document).ready(function() {
 Pick a few colour codes you like and store them in an array:
 
 ```js
-var colors = [ '22ac5e', 'd68236', '770077' ];
+const colors = [ '22ac5e', 'd68236', '770077' ];
 ```
 
 Now you can use a `colors.forEach` inside your `ready` function to call
@@ -616,7 +615,7 @@ Make a new variable, outside your event handler functions. You're
 going to use this to store the original colour:
 
 ```js
-var previewColor;
+let previewColor;
 ```
 
 In the `mouseenter` event, get the current `background-color` of the

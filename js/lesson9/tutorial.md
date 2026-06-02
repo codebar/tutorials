@@ -96,10 +96,10 @@ If you don't have Node, refer to the top of this tutorial for how to load files 
 This means that we have loaded our very first object into our REPL! Without exiting the REPL, now try typing:
 
 ```
-var cat = new Cat ();
+const cat = new Cat ();
 ```
 
-(It doesn't really matter what you call the variable. Variable names are arbitrary in all programming languages, so we could say ```var ginger = new Cat ();``` or ```var luciferTheEvilCat = new Cat ();```. However, it is good practice to pick variable names that are clear and intuitive.)
+(It doesn't really matter what you call the variable. Variable names are arbitrary in all programming languages, so we could say 
 
 This creates a new Cat object. Think about the Cat function as a blueprint for how every new Cat object ought to be made. However, a blueprint of a cat is not a cat! Using JavaScript, we created an "instance" of a cat based on the blueprint.
 
@@ -124,7 +124,7 @@ Remember how when we created a new Cat, we got an `undefined` value?
 You will need to reload the file into your Node REPL each time you change the source code. Now, try creating a new Cat object, and calling `meow` on it:
 
 ```
-var fluffy = new Cat();
+const fluffy = new Cat();
 fluffy.meow();
 ```
 
@@ -161,7 +161,7 @@ function Cat (initialHunger) {
 If using this approach, we will have to supply the correct number of arguments to the constructor function every time a new cat is created. (See what happens if you don't!)
 
 ```
-var hungryCat = new Cat("starving");
+const hungryCat = new Cat("starving");
 ```
 
 Let's give him two new methods that will affect his hunger levels:
