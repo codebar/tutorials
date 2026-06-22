@@ -9,7 +9,7 @@ This is the second tutorial on HTTP Requests, AJAX and APIs. You can find the [f
 
 In the last lesson we learnt that an HTTP Request is when we ask the server for some information.
 
-In the two earlier exercises we used the **GET** request. Today we will be building a Hangman game using an existing API that will handle the game logic for us.
+In the two earlier exercises we used the **GET** request. Today we will be building a Hangman game using an existing API that will handle the game logic for us. Additionally, we will explore modern methods like the Fetch API for making HTTP requests in JavaScript.
 
 We will be using the **POST**, **PUT** and **GET** requests, and other things we've learned in the last couple of lessons.
 
@@ -34,6 +34,60 @@ $.ajax({
   ...
 });
 ```
+
+## Modern Approach: Fetch API
+
+The Fetch API is a modern way to make HTTP requests in JavaScript. Unlike $.ajax(), Fetch API uses Promises to handle responses, making it more readable and flexible.
+
+So Why Use Fetch?
+
+✔ Uses Promises, making it easier to handle responses. ✔ More readable and modern compared to older methods. ✔ Supports asynchronous operations efficiently.
+
+```js
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+```
+
+## Interactive Example: Fetch GitHub User Data 
+
+You can paste the code below into online editors like JSFiddle or CodePen.
+For example, you can search username codebar in the input bar.
+
+
+```html
+<input type="text" id="username" placeholder="Enter GitHub username" />
+<button id="fetchButton">Get User Info</button>
+<div id="userInfo"></div>
+```
+
+```js
+document.getElementById('fetchButton').addEventListener('click', () => {
+  const username = document.getElementById('username').value;
+  const url = `https://api.github.com/users/${username}`;
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('User not found');
+      }
+      return response.json();
+    })
+    .then(data => {
+      document.getElementById('userInfo').innerHTML = `
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Public Repos:</strong> ${data.public_repos}</p>
+        <p><strong>Followers:</strong> ${data.followers}</p>
+        <img src="${data.avatar_url}" alt="Avatar" width="100" />
+      `;
+    })
+    .catch(error => {
+      document.getElementById('userInfo').innerHTML = `<p>${error.message}</p>`;
+    });
+});
+```
+
 
 ## Exercise - Hangman!
 
