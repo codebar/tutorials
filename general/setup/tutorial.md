@@ -25,7 +25,7 @@ We recommend you use **[Atom](https://atom.io/)** or **[Visual Studio Code](http
 
 ## A web browser (required)
 
-Windows comes with [Internet Explorer](https://support.microsoft.com/internet-explorer), and OS X comes with [Safari](https://www.apple.com/uk/safari/). Most Linux distributions come with [Firefox](https://www.mozilla.org/en-US/firefox/), which is also available for Windows and OS X. You can also download [Chrome](https://www.google.com/chrome/) which is a popular alternative. You can get started with whatever you currently use, but when you reach the later tutorials the powerful developer tools in Chrome and Firefox will be useful. Your coach will show you how to use them while you work through the tutorials.
+Windows comes with [Microsoft Edge](https://www.microsoft.com/edge), and OS X comes with [Safari](https://www.apple.com/uk/safari/). Most Linux distributions come with [Firefox](https://www.mozilla.org/en-US/firefox/), which is also available for Windows and OS X. You can also download [Chrome](https://www.google.com/chrome/) which is a popular alternative. You can get started with whatever you currently use, but when you reach the later tutorials the powerful developer tools in Chrome and Firefox will be useful. Your coach will show you how to use them while you work through the tutorials.
 
 ## A compression utility (handy on Windows)
 
