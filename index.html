@@ -4,168 +4,458 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>codebar - Tutorials by codebar</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/custom.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+		<script>document.documentElement.classList.add('js');</script>
+    <link rel="stylesheet" href="stylesheets/tutorials-main-styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <div class="wrapper">
+	
+	<!-- HEADER -->
+    <header>
+			<div class="header-inner">
+				<img src="assets/codebar_logo.png" class="logo" alt="codebar logo">
+				<div>
+					<h1>codebar tutorials</h1>
+					<p class="intro">Pick a career path, follow the steps. Each roadmap takes you from your first line of code to the point where you can choose a specialism.</p>
+					<div class="header-links">
+						<a href="https://github.com/codebar/tutorials">View our tutorials on GitHub</a>
+						<span>•</span>
+						<a href="https://slack.codebar.io/" target="_blank">Get help on the codebar community Slack</a>
+					</div>
+				</div>
+			</div>
+		</header>
+	
+	<main>
+	
+		<!-- STARTER GUIDES BUTTONS -->
+	  <section class="starter-guides">
+			<ul class="guides-grid">
+				<li><a href="https://tutorials.codebar.io/general/getting-started-in-tech.html"><strong>Getting started in Tech</strong><span>Not sure where to begin? Start here.</span></a></li>
+				<li><a href="https://tutorials.codebar.io/general/setup/tutorial.html"><strong>Set up your laptop</strong><span>New to codebar? Follow this first.</span></a></li>
+				<li><a href="https://tutorials.codebar.io/coaches/lesson-guide.html"><strong>Lesson guide for coaches</strong><span>How to run a tutorial session.</span></a></li>
+				<li><a href="https://tutorials.codebar.io/general/setup/how-to-use-discord.html"><strong>Using Discord</strong><span>For codebar's virtual workshops.</span></a></li>
+	    </ul>
+	  </section>
+	
+		<!-- ROADMAP TOGGLE BUTTONS -->
+		<section class="toggles">
+			<div class="roadmap-toggle">
+				<div class="tab" role="tablist" aria-label="Roadmaps">
+					<button role="tab" id="tab-web" aria-controls="roadmap-web" aria-selected="true">Web development</button>
+					<button role="tab" id="tab-app" aria-controls="roadmap-app" aria-selected="false">App development</button>
+				</div>
+			</div>
+		</section>
+	
+			<!-- WEB PROGRAMMING SECTION -->
+		<section class="roadmap" id="roadmap-web" role="tabpanel" aria-labelledby="tab-web">
+			<div class="roadmap-head">
+				<h2>Web development roadmap</h2>
+				<p class="roadmap-desc">Learn the three core languages of the web, then choose to specialise in what users see (frontend) or what powers it behind the scenes (backend).</p>	
+			</div>
+			<p class="stage-label"><span>Foundations</span></p>
+			
+			<ol class="chain">
+      <li class="node" data-status="live">
+        <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-tools">
+          <span class="step">0</span>
+          <span class="node-title">Tools of the trade</span>
+          <span class="badge">4 guides</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="node-panel" id="p-tools">
+          <p>Get comfortable with the terminal and Git before you write much code. You'll use both every day as a developer.</p>
+          <ul class="lessons">
+            <li><a href="https://tutorials.codebar.io/general/setup/tutorial.html">Getting your laptop set up for codebar</a></li>
+            <li><a href="https://tutorials.codebar.io/command-line/introduction/tutorial.html">Introduction to the command line</a></li>
+            <li><a href="https://tutorials.codebar.io/version-control/introduction/tutorial.html">Introduction to version control</a></li>
+            <li><a href="https://tutorials.codebar.io/version-control/command-line/tutorial.html">Introduction to the git command line</a></li>
+          </ul>
+        </div>
+      </li>
 
-      <header>
-        <h1>codebar tutorials</h1>
-        <img src="assets/codebar_logo.png" class="logo" alt="codebar logo">
-        <p class="view"><a href="https://github.com/codebar/tutorials">View our tutorials on GitHub</a></p>
-      </header>
+      <li class="node" data-status="live">
+        <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-html">
+          <span class="step">1</span>
+          <span class="node-title">HTML</span>
+          <span class="badge">3 lessons</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="node-panel" id="p-html">
+          <p>The structure of every web page: headings, links, images, forms and semantic markup.</p>
+          <ul class="lessons">
+            <li><a href="https://tutorials.codebar.io/html/lesson1/tutorial.html">Lesson 1 - Introducing HTML</a></li>
+            <li><a href="https://tutorials.codebar.io/html/lesson5/tutorial.html">Lesson 5 - Dive into HTML5 &amp; CSS3</a></li>
+            <li><a href="https://tutorials.codebar.io/html/lesson6/tutorial.html">Lesson 6 - Advanced HTML5</a></li>
+          </ul>
+        </div>
+      </li>
 
-      <section>
-        <p class="lead">
-          Are you working on the tutorials on your own time?
-          <a href="https://slack.codebar.io/" target="_blank">Join the codebar community on Slack</a>
-          to get help and discuss anything with students or coaches!
-        </p>
+      <li class="node" data-status="live">
+        <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-css">
+          <span class="step">2</span>
+          <span class="node-title">CSS</span>
+          <span class="badge">4 lessons</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="node-panel" id="p-css">
+          <p>Make it look good: styling, layouts, and pages that work on any screen size.</p>
+          <ul class="lessons">
+            <li><a href="https://tutorials.codebar.io/html/lesson2/tutorial.html">Lesson 2 - Introducing CSS</a></li>
+            <li><a href="https://tutorials.codebar.io/html/lesson3/tutorial.html">Lesson 3 - Beyond the basics</a></li>
+            <li><a href="https://tutorials.codebar.io/html/lesson4/tutorial.html">Lesson 4 - CSS, layouts and formatting</a></li>
+            <li><a href="https://tutorials.codebar.io/html/lesson7/tutorial.html">Lesson 7 - Media queries and responsive design</a></li>
+          </ul>
+        </div>
+      </li>
 
-        <h2>Guides</h2>
+      <li class="node" data-status="live">
+        <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-js">
+          <span class="step">3</span>
+          <span class="node-title">JavaScript</span>
+          <span class="badge">9 lessons</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="node-panel" id="p-js">
+          <p>Add behaviour to your pages, talk to APIs, and build your first complete app.</p>
+          <ul class="lessons">
+            <li><a href="https://tutorials.codebar.io/js/lesson1/tutorial.html">Lesson 1 - Introduction to JavaScript</a></li>
+            <li><a href="https://tutorials.codebar.io/js/lesson2/tutorial.html">Lesson 2 - Expressions, Loops and Arrays</a></li>
+            <li><a href="https://tutorials.codebar.io/js/lesson3/tutorial.html">Lesson 3 - Introduction to jQuery</a></li>
+            <li><a href="https://tutorials.codebar.io/js/lesson4/tutorial.html">Lesson 4 - Introduction to HTTP Requests and APIs</a></li>
+            <li><a href="https://tutorials.codebar.io/js/lesson4a/tutorial.html">Lesson 4a - API's part 2 - Send yourself an SMS with Vonage</a></li>
+            <li><a href="https://tutorials.codebar.io/js/lesson5/tutorial.html">Lesson 5 - HTTP Requests, AJAX and APIs (part 2)</a></li>
+            <li><a href="https://tutorials.codebar.io/js/lesson6/tutorial.html">Lesson 6 - Drawing in Canvas</a></li>
+            <li><a href="https://tutorials.codebar.io/js/lesson7/tutorial.html">Lesson 7 - Introduction to Testing</a></li>
+            <li><a href="https://tutorials.codebar.io/js/lesson8/tutorial.html">Lesson 8 - Building your own app</a></li>
+          </ul>
+        </div>
+      </li>
+    </ol>
 
-        <ul>
-          <li><a href="general/getting-started-in-tech.html">Getting started in Tech</a></li>
-          <li><a href="general/setup/tutorial.html">Getting your laptop set up for codebar</a>
-            <br>(If you're new to codebar, follow this to set up your computer.)</li>
-          <li><a href="coaches/lesson-guide.html">Lesson guide for coaches</a></li>
-          <li><a href="general/setup/how-to-use-discord.html">How to use Discord for codebar's virtual workshops</a></li>
-        </ul>
-
-        <h2 class="language-heading">Frontend</h2>
-
-        <h3>HTML &amp; CSS</h3>
-        <ul>
-          <li><a href="html/lesson1/tutorial.html">Lesson 1 - Introducing HTML</a></li>
-          <li><a href="html/lesson2/tutorial.html">Lesson 2 - Introducing CSS</a></li>
-          <li><a href="html/lesson3/tutorial.html">Lesson 3 - Beyond the basics</a></li>
-          <li><a href="html/lesson4/tutorial.html">Lesson 4 - CSS, layouts and formatting</a></li>
-          <li><a href="html/lesson5/tutorial.html">Lesson 5 - Dive into HTML5 &amp; CSS3</a></li>
-          <li><a href="html/lesson6/tutorial.html">Lesson 6 - Advanced HTML5</a></li>
-          <li><a href="html/lesson7/tutorial.html">Lesson 7 - Media queries and responsive design</a></li>
-        </ul>
-
-        <h3>JavaScript</h3>
-        <ul>
-          <li><a href="js/lesson1/tutorial.html">Lesson 1 - Introduction to JavaScript</a></li>
-          <li><a href="js/lesson2/tutorial.html">Lesson 2 - Expressions, Loops and Arrays</a></li>
-          <li><a href="js/lesson3/tutorial.html">Lesson 3 - Introduction to jQuery</a></li>
-          <li><a href="js/lesson4/tutorial.html">Lesson 4 - Introduction to HTTP Requests and APIs</a></li>
-          <li><a href="js/lesson4a/tutorial.html">Lesson 4a - API's part 2 - Send yourself an SMS with Vonage</a></li>
-          <li><a href="js/lesson5/tutorial.html">Lesson 5 - HTTP Requests, AJAX and APIs (part 2)</a></li>
-          <li><a href="js/lesson6/tutorial.html">Lesson 6 - Drawing in Canvas</a></li>
-          <li><a href="js/lesson7/tutorial.html">Lesson 7 - Introduction to Testing</a></li>
-          <li><a href="js/lesson8/tutorial.html">Lesson 8 - Building your own app</a></li>
-        </ul>
-
-        <h2 class="language-heading">Backend</h2>
-
-        <h3>Ruby</h3>
-        <ul>
-          <li><a href="ruby/lesson1/tutorial.html">Lesson 1 - Introduction to Ruby</a></li>
-          <li><a href="ruby/lesson2/tutorial.html">Lesson 2 - Ruby Basics</a></li>
-          <li><a href="ruby/lesson3/tutorial.html">Lesson 3 - Ruby Basics (part 2)</a></li>
-          <li><a href="ruby/lesson4/tutorial.html">Lesson 4 - Object Oriented Ruby and Inheritance</a></li>
-          <li><a href="ruby/lesson5/tutorial.html">Lesson 5 - Object Oriented Ruby and Inheritance (part 2)</a></li>
-        </ul>
-
-        <h3>Python</h3>
-        <ul>
-          <li><a href="python/lesson0/tutorial.html">Installing Python</a></li>
-          <li><a href="python/lesson1/tutorial.html">Lesson 1 - Strings, Integers and Floats</a></li>
-          <li><a href="python/lesson2/tutorial.html">Lesson 2 - Playing with variables</a></li>
-          <li><a href="python/lesson3/tutorial.html">Lesson 3 - Lists, Tuples and Dictionaries</a></li>
-          <li><a href="python/lesson4/tutorial.html">Lesson 4 - Fun with Functions</a></li>
-        </ul>
-
-        <h4>Other Recommended Python Resources</h4>
-        <ul>
-          <li><a href="https://pymbook.readthedocs.io/en/latest/">Python For You and Me</a></li>
-          <li><a href="https://learnpythonthehardway.org/book/">Learn Python The Hard Way</a></li>
-        </ul>
-
-        <h3>PHP</h3>
-        <p class="lead">Getting your PHP environment set up can be complicated. We've summarized the
-          simplest solutions in our <a href="php/using-php/simple.html">simple guide to using PHP</a></p>
-
-        <ul>
-          <li><a href="php/lesson1/tutorial.html">Lesson 1 - Introduction to PHP</a></li>
-          <li><a href="php/lesson2/tutorial.html">Lesson 2 - Values and Variables</a></li>
-        </ul>
-
-        <h2 class="language-heading">Apps</h2>
-
-        <h3>Android</h3>
-        <p>Available only at special codebar android workshops! Materials over at
-          <a target="_blank" href="https://codebar.github.io/android-tutorials/">
-            https://codebar.github.io/android-tutorials/</a></p>
-        </ul>
-
-        <h3>iOS</h3>
-        <p>Available only at special codebar iOS workshops! Materials over at
-          <a target="_blank" href="https://codebar.github.io/ios-tutorials/">
-            https://codebar.github.io/ios-tutorials/</a></p>
-        </ul>
-
-        <h2 class="language-heading">General</h2>
-
-        <h3>Version Control</h3>
-        <ul>
-          <li><a href="version-control/introduction/tutorial.html">Introduction to version control</a></li>
-          <li><a href="version-control/command-line/tutorial.html">Introduction to the git command line</a></li>
-        </ul>
-
-        <h3>Command Line</h3>
-        <ul>
-          <li><a href="command-line/introduction/tutorial.html">Lesson 1 - Introduction to the command line</a></li>
-        </ul>
-
-        <h3>Other Useful Resources</h3>
-        <p>The following resources can be helpful to continue learning. They all have content related to the topics listed above.</p>
-        <ul>
-          <li><a href="https://www.youtube.com/channel/UCEYz232agE47GHUq8wneBCA">codebar Youtube Channel</a> - we have lots of additional content on our YouTube channel from <a href="https://youtube.com/playlist?list=PLfJjhFVOvESLRpBl92nIbhxuYLrJ0PoUy" target="_blank">career panels</a>, <a href="https://youtu.be/kil8OLotEnw" target="_blank">An Introduction to Go</a>, <a href="https://youtu.be/6FnOiIW7LB8" target="_blank">An Introduction to Rust</a> and an <a href="https://youtu.be/itoKrNnVHzs" target="_blank">Introduction to Kotlin</a>. As well as videos on <a href="https://youtu.be/aTDJsiEzWwE" target="_blank">Technical Writing</a>, <a href="https://youtu.be/-xpPg6TPgK0" target="_blank">Landing Your First Developer Job</a> and <a href="https://youtu.be/k6MdHWm2Qg0" target="_blank">Open Source.</a></li>
-          <li><a href="https://www.codewars.com/">Codewars</a></li>
-          <li><a href="https://www.codecademy.com/">Codecademy</a></li>
-          <li><a href="https://coddy.tech/">Coddy</a></li>
-        </ul>
-
-      </section>
+    <!-- Fork -->
+    <div class="fork-label">
+      <p class="stage-label"><span>Choose your route</span></p>
+      <div class="route-toggle" role="group" aria-label="Highlight a route">
+        <button type="button" data-route="all" aria-pressed="true">Both</button>
+        <button type="button" data-route="frontend" aria-pressed="false">Frontend</button>
+        <button type="button" data-route="backend" aria-pressed="false">Backend</button>
+      </div>
     </div>
 
-    <footer>
-      <div class="donation-box">
-        <p>Looking for a way to support codebar? Please consider making a donation</p>
-        <a href="https://codebar.enthuse.com/donate/#!/">Donate</a>
+    <div class="fork" data-route="all">
+      <div class="fork-connector" aria-hidden="true"></div>
+
+      <div class="lanes">
+        <!-- FRONTEND -->
+        <div class="lane lane-frontend">
+          <h3 class="lane-title">Frontend</h3>
+          <p class="lane-desc">Build the interfaces people see and use.</p>
+
+          <ol class="chain">
+            <li class="node" data-status="soon">
+              <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-ts">
+                <span class="step">4</span>
+                <span class="node-title">TypeScript</span>
+                <span class="badge badge-soon">Coming soon</span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="node-panel" id="p-ts">
+                <p>JavaScript with types, which catches bugs before your users do. Tutorials are planned for this step.</p>
+              </div>
+            </li>
+
+            <li class="group">
+              <p class="group-label">Choose a framework</p>
+              <ul class="group-list">
+                <li class="node" data-status="soon">
+                  <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-react">
+                    <span class="node-title">React</span>
+                    <span class="badge badge-soon">Coming soon</span>
+                    <span class="chev" aria-hidden="true"></span>
+                  </button>
+                  <div class="node-panel" id="p-react"><p>Component-based UIs. The most widely used frontend library.</p></div>
+                </li>
+                <li class="node" data-status="soon">
+                  <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-vue">
+                    <span class="node-title">Vue</span>
+                    <span class="badge badge-soon">Coming soon</span>
+                    <span class="chev" aria-hidden="true"></span>
+                  </button>
+                  <div class="node-panel" id="p-vue"><p>A gentle learning curve and excellent documentation.</p></div>
+                </li>
+                <li class="node" data-status="soon">
+                  <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-angular">
+                    <span class="node-title">Angular</span>
+                    <span class="badge badge-soon">Coming soon</span>
+                    <span class="chev" aria-hidden="true"></span>
+                  </button>
+                  <div class="node-panel" id="p-angular"><p>A full framework with batteries included, common in larger organisations.</p></div>
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <!-- BACKEND -->
+        <div class="lane lane-backend">
+          <h3 class="lane-title">Backend</h3>
+          <p class="lane-desc">Build the servers, logic and data behind the scenes.</p>
+
+          <ol class="chain">
+            <li class="group">
+              <p class="group-label">Choose a language</p>
+              <ul class="group-list">
+                <li class="node" data-status="live">
+                  <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-python">
+                    <span class="node-title">Python</span>
+                    <span class="badge">5 lessons</span>
+                    <span class="chev" aria-hidden="true"></span>
+                  </button>
+                  <div class="node-panel" id="p-python">
+                    <p>Readable and versatile. Also the gateway to data science and machine learning.</p>
+                    <ul class="lessons">
+                      <li><a href="https://tutorials.codebar.io/python/lesson0/tutorial.html">Installing Python</a></li>
+                      <li><a href="https://tutorials.codebar.io/python/lesson1/tutorial.html">Lesson 1 - Strings, Integers and Floats</a></li>
+                      <li><a href="https://tutorials.codebar.io/python/lesson2/tutorial.html">Lesson 2 - Playing with variables</a></li>
+                      <li><a href="https://tutorials.codebar.io/python/lesson3/tutorial.html">Lesson 3 - Lists, Tuples and Dictionaries</a></li>
+                      <li><a href="https://tutorials.codebar.io/python/lesson4/tutorial.html">Lesson 4 - Fun with Functions</a></li>
+                    </ul>
+                    <p class="extras-label">Further reading</p>
+                    <ul class="lessons lessons-ext">
+                      <li><a href="https://pymbook.readthedocs.io/en/latest/">Python For You and Me</a></li>
+                      <li><a href="https://learnpythonthehardway.org/book/">Learn Python The Hard Way</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="node" data-status="live">
+                  <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-ruby">
+                    <span class="node-title">Ruby</span>
+                    <span class="badge">5 lessons</span>
+                    <span class="chev" aria-hidden="true"></span>
+                  </button>
+                  <div class="node-panel" id="p-ruby">
+                    <p>Friendly, expressive and the language behind Rails.</p>
+                    <ul class="lessons">
+                      <li><a href="https://tutorials.codebar.io/ruby/lesson1/tutorial.html">Lesson 1 - Introduction to Ruby</a></li>
+                      <li><a href="https://tutorials.codebar.io/ruby/lesson2/tutorial.html">Lesson 2 - Ruby Basics</a></li>
+                      <li><a href="https://tutorials.codebar.io/ruby/lesson3/tutorial.html">Lesson 3 - Ruby Basics (part 2)</a></li>
+                      <li><a href="https://tutorials.codebar.io/ruby/lesson4/tutorial.html">Lesson 4 - Object Oriented Ruby and Inheritance</a></li>
+                      <li><a href="https://tutorials.codebar.io/ruby/lesson5/tutorial.html">Lesson 5 - Object Oriented Ruby and Inheritance (part 2)</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="node" data-status="live">
+                  <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-php">
+                    <span class="node-title">PHP</span>
+                    <span class="badge">2 lessons</span>
+                    <span class="chev" aria-hidden="true"></span>
+                  </button>
+                  <div class="node-panel" id="p-php">
+                    <p>Powers a huge share of the web, including WordPress. Environment setup can be fiddly, so start with the simple guide.</p>
+                    <ul class="lessons">
+                      <li><a href="https://tutorials.codebar.io/php/using-php/simple.html">Simple guide to using PHP</a></li>
+                      <li><a href="https://tutorials.codebar.io/php/lesson1/tutorial.html">Lesson 1 - Introduction to PHP</a></li>
+                      <li><a href="https://tutorials.codebar.io/php/lesson2/tutorial.html">Lesson 2 - Values and Variables</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="node" data-status="soon">
+                  <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-node">
+                    <span class="node-title">Node.js</span>
+                    <span class="badge badge-soon">Coming soon</span>
+                    <span class="chev" aria-hidden="true"></span>
+                  </button>
+                  <div class="node-panel" id="p-node"><p>Use the JavaScript you already know on the server.</p></div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="node" data-status="soon">
+              <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-db">
+                <span class="step">5</span>
+                <span class="node-title">Databases &amp; APIs</span>
+                <span class="badge badge-soon">Coming soon</span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="node-panel" id="p-db">
+                <p>Store data and expose it to other apps. New tutorials are planned; in the meantime these JavaScript lessons cover the API fundamentals.</p>
+                <ul class="lessons">
+                  <li><a href="https://tutorials.codebar.io/js/lesson4/tutorial.html">Introduction to HTTP Requests and APIs</a></li>
+                  <li><a href="https://tutorials.codebar.io/js/lesson5/tutorial.html">HTTP Requests, AJAX and APIs (part 2)</a></li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
       </div>
-      <p class="small">Registered UK and Wales charity no. 1187776 © codebar 2024</p>
-    </footer>
-    <script src="javascripts/scale.fix.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0FT1QYKXP"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    </div>
+			
+		</section>
+	
+	  <!-- APP PROGRAMMING SECTION -->
+		<section class="roadmap" id="roadmap-app" role="tabpanel" aria-labelledby="tab-app" hidden>
 
-      gtag('config', 'G-T0FT1QYKXP');
-    </script>
-    <!-- <script type="text/javascript">
-      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script type="text/javascript">
-        try {
-          var pageTracker = _gat._getTracker("UA-45098414-1");
-          pageTracker._trackPageview();
-        } catch(err) {}
-</script> -->
+    <div class="roadmap-head">
+      <h2>App development roadmap</h2>
+      <p>Learn to program first, then build native apps for the phone in your pocket. Android and iOS materials are taught at dedicated codebar workshops.</p>
+    </div>
 
+    <p class="stage-label"><span>Foundations</span></p>
+
+    <ol class="chain">
+      <li class="node" data-status="live">
+        <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-appsetup">
+          <span class="step">0</span>
+          <span class="node-title">Tools of the trade</span>
+          <span class="badge">4 guides</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="node-panel" id="p-appsetup">
+          <p>The same toolkit as the web path: a working laptop, the terminal and Git.</p>
+          <ul class="lessons">
+            <li><a href="https://tutorials.codebar.io/general/setup/tutorial.html">Getting your laptop set up for codebar</a></li>
+            <li><a href="https://tutorials.codebar.io/command-line/introduction/tutorial.html">Introduction to the command line</a></li>
+            <li><a href="https://tutorials.codebar.io/version-control/introduction/tutorial.html">Introduction to version control</a></li>
+            <li><a href="https://tutorials.codebar.io/version-control/command-line/tutorial.html">Introduction to the git command line</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="node" data-status="live">
+        <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-appbasics">
+          <span class="step">1</span>
+          <span class="node-title">Programming fundamentals</span>
+          <span class="badge">Pick one language</span>
+          <span class="chev" aria-hidden="true"></span>
+        </button>
+        <div class="node-panel" id="p-appbasics">
+          <p>Variables, loops, functions and data structures transfer to every language. Work through whichever of these feels friendlier.</p>
+          <p class="extras-label">Option A: JavaScript</p>
+          <ul class="lessons">
+            <li><a href="https://tutorials.codebar.io/js/lesson1/tutorial.html">Lesson 1 - Introduction to JavaScript</a></li>
+            <li><a href="https://tutorials.codebar.io/js/lesson2/tutorial.html">Lesson 2 - Expressions, Loops and Arrays</a></li>
+          </ul>
+          <p class="extras-label">Option B: Python</p>
+          <ul class="lessons">
+            <li><a href="https://tutorials.codebar.io/python/lesson1/tutorial.html">Lesson 1 - Strings, Integers and Floats</a></li>
+            <li><a href="https://tutorials.codebar.io/python/lesson2/tutorial.html">Lesson 2 - Playing with variables</a></li>
+            <li><a href="https://tutorials.codebar.io/python/lesson3/tutorial.html">Lesson 3 - Lists, Tuples and Dictionaries</a></li>
+            <li><a href="https://tutorials.codebar.io/python/lesson4/tutorial.html">Lesson 4 - Fun with Functions</a></li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+    <div class="fork-label">
+      <p class="stage-label"><span>Choose your platform</span></p>
+      <div class="route-toggle" role="group" aria-label="Highlight a platform">
+        <button type="button" data-route="all" aria-pressed="true">Both</button>
+        <button type="button" data-route="android" aria-pressed="false">Android</button>
+        <button type="button" data-route="ios" aria-pressed="false">iOS</button>
+      </div>
+    </div>
+
+    <div class="fork" data-route="all">
+      <div class="fork-connector" aria-hidden="true"></div>
+
+      <div class="lanes">
+        <div class="lane lane-android">
+          <h3 class="lane-title">Android</h3>
+          <p class="lane-desc">Apps for the world's most popular mobile platform.</p>
+          <ol class="chain">
+            <li class="node" data-status="live">
+              <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-kotlin">
+                <span class="step">2</span>
+                <span class="node-title">Kotlin</span>
+                <span class="badge">1 video</span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="node-panel" id="p-kotlin">
+                <p>Android's preferred language. Start with this introduction.</p>
+                <ul class="lessons">
+                  <li><a href="https://youtu.be/itoKrNnVHzs" target="_blank" rel="noopener">An Introduction to Kotlin</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="node" data-status="live">
+              <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-android">
+                <span class="step">3</span>
+                <span class="node-title">Android workshops</span>
+                <span class="badge">Special workshops</span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="node-panel" id="p-android">
+                <p>Available only at special codebar Android workshops.</p>
+                <ul class="lessons">
+                  <li><a href="https://codebar.github.io/android-tutorials/" target="_blank" rel="noopener">Android tutorials</a></li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="lane lane-ios">
+          <h3 class="lane-title">iOS</h3>
+          <p class="lane-desc">Apps for iPhone and iPad.</p>
+          <ol class="chain">
+            <li class="node" data-status="soon">
+              <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-swift">
+                <span class="step">2</span>
+                <span class="node-title">Swift</span>
+                <span class="badge badge-soon">Coming soon</span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="node-panel" id="p-swift">
+                <p>Apple's modern, safe and fast language. Tutorials are planned for this step.</p>
+              </div>
+            </li>
+            <li class="node" data-status="live">
+              <button class="node-btn" type="button" aria-expanded="false" aria-controls="p-ios">
+                <span class="step">3</span>
+                <span class="node-title">iOS workshops</span>
+                <span class="badge">Special workshops</span>
+                <span class="chev" aria-hidden="true"></span>
+              </button>
+              <div class="node-panel" id="p-ios">
+                <p>Available only at special codebar iOS workshops.</p>
+                <ul class="lessons">
+                  <li><a href="https://codebar.github.io/ios-tutorials/" target="_blank" rel="noopener">iOS tutorials</a></li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+	
+		<!-- RESOURCES -->
+		<section class="resources">
+			<h2>Other useful resources</h2>
+			<p>The following can help you keep learning alongside the roadmaps.</p>
+			<ul>
+				<li><a href="https://www.youtube.com/channel/UCEYz232agE47GHUq8wneBCA">codebar YouTube channel</a>: We have lots of additional content on our YouTube channel from <a href="https://www.youtube.com/playlist?list=PLfJjhFVOvESLRpBl92nIbhxuYLrJ0PoUy">career panels</a>, <a href="https://www.youtube.com/watch?v=kil8OLotEnw">An Introduction to Go</a>, <a href="https://www.youtube.com/watch?v=6FnOiIW7LB8">An Introduction to Rust</a> and an <a href="https://www.youtube.com/watch?v=itoKrNnVHzs">Introduction to Kotlin</a>. As well as videos on <a href="https://www.youtube.com/watch?v=aTDJsiEzWwE">Technical Writing</a>, <a href="https://www.youtube.com/watch?v=-xpPg6TPgK0">Landing Your First Developer Job</a> and <a href="https://www.youtube.com/watch?v=k6MdHWm2Qg0">Open Source</a>.</li>
+				<li><a href="https://www.codewars.com/">Codewars</a></li>
+				<li><a href="https://www.codecademy.com/">Codecademy</a></li>
+				<li><a href="https://coddy.tech/">Coddy</a></li>
+			</ul>
+		</section>
+	
+	</main>
+	
+	<!-- FOOTER -->
+	<footer>
+		<div class="inner-footer">
+			<div class="donation-box">
+				<p>Looking for a way to support codebar? Please consider making a donation.</p>
+				<a class="btn-donate" href="https://codebar.enthuse.com/donate/#!">Donate</a>
+			</div>
+			<p class="small">Registered UK and Wales charity no. 1187776 © codebar 2026</p>
+		</div>
+	</footer>
+	
+	<script src="javascripts/script.js"></script>
   </body>
 </html>
